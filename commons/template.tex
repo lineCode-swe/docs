@@ -1,0 +1,49 @@
+% Direttive per la creazione del titolo tramite comando maketitle
+\title{\huge \textsc{\phTitle{}} \\
+	\vspace{11pt} \large \textsc{\phDate{}}}
+
+\author{} % Non toccare
+\date{} % Non toccare
+
+%--------------------
+% Frontespizio
+%--------------------
+
+% Logo del gruppo
+\begin{figure}[t!]
+	\centering
+	\includegraphics[width=20em]{lclong}
+\end{figure}
+
+% Titolo / Nome
+\maketitle
+\thispagestyle{empty}
+
+% Dati specifici sul doc in forma tabulare
+\begin{table}[ht]
+	\begin{center}
+		\label{tab:Dati sul documento}
+		\begin{tabular}{r|l}
+			\multicolumn{2}{c}{ \textsc{Dati sul documento} } \\
+			\hline
+			\textbf{Versione} & \versione{} \\
+			\textbf{Uso} & \uso{}  \\
+			\textbf{Redattori} & \redattori{} \\
+			\textbf{Verificatori} & \verificatori{} \\
+			\textbf{Responsabile} & \responsabile{} \\
+		\end{tabular}
+	\end{center}
+\end{table}
+
+\newpage
+
+\renewcommand{\arraystretch}{2} % allarga le righe con dello spazio sotto e sopra
+\begin{longtable}[H]{>{\centering\bfseries}m{2cm} >{\centering}m{3.5cm} >{\centering}m{2.5cm} >{\centering}m{3cm} >{\centering\arraybackslash}m{5cm}}
+	\rowcolor{lightgray}
+	{\textbf{Versione}} & {\textbf{Nominativo}} & {\textbf{Ruolo}} & {\textbf{Data}} & {\textbf{Descrizione}}  \\
+	\endfirsthead%
+	\rowcolor{lightgray}
+	{\textbf{Versione}} & {\textbf{Nominativo}}  & {\textbf{Ruolo}} & {\textbf{Data}} & {\textbf{Descrizione}}  \\
+	\endhead%
+	\modifiche{}%
+\end{longtable}

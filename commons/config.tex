@@ -1,0 +1,84 @@
+\usepackage[italian]{babel}
+\usepackage[margin=20mm, footskip = 20pt]{geometry}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{graphicx}
+\usepackage{subfiles}
+\usepackage{hyperref}
+\usepackage{nameref}
+\usepackage{titlesec}
+\usepackage{longtable}
+\usepackage[table]{xcolor}
+\usepackage{titling}
+\usepackage{lastpage}
+\usepackage{ifthen}
+\usepackage{calc}
+\usepackage{soulutf8}
+\usepackage{contour}
+\usepackage{float}
+\usepackage{fancyhdr}
+\usepackage{multirow}
+\usepackage{pgfgantt}
+\usepackage{lscape}
+
+\newcommand{\hr}{\par\vspace{-.1\ht\strutbox}\noindent\hrulefill\par}
+
+\graphicspath{ {./}
+	{./commons/res}
+}
+
+%--------------------------------------------------
+% Comandi per inserire contenuto del documento
+%--------------------------------------------------
+\makeatletter
+
+\newcommand\appendToGraphicsPath[1]{%
+	\g@addto@macro\Ginput@path{{#1}}%
+}
+
+\newcommand{\setTitle}[1]{%
+	\newcommand{\@phTitle}{#1}%
+}
+\newcommand{\phTitle}{\@phTitle}
+
+\newcommand{\setDate}[1]{%
+	\newcommand{\@phDate}{#1}%
+}
+\newcommand{\phDate}{\@phDate}
+
+\newcommand{\setUso}[1]{%
+	\newcommand{\@uso}{#1}%
+}
+\newcommand{\uso}{\@uso}
+
+\newcommand{\setVersione}[1]{%
+	\newcommand{\@versione}{#1}%
+}
+\newcommand{\versione}{\@versione}
+
+\newcommand{\disabilitaVersione}{%
+	\renewcommand{\setVersione}[1]{}%
+	\renewcommand{\versione}{DISABILITATA}
+}
+
+\newcommand{\setResponsabile}[1]{%
+	\newcommand{\@responsabile}{#1}%
+}
+\newcommand{\responsabile}{\@responsabile}
+
+\newcommand{\setRedattori}[1]{%
+	\newcommand{\@redattori}{#1}%
+}
+\newcommand{\redattori}{\@redattori}
+
+\newcommand{\setVerificatori}[1]{%
+	\newcommand{\@verificatori}{#1}%
+}
+\newcommand{\verificatori}{\@verificatori}
+
+\newcommand{\setModifiche}[1]{%
+	\newcommand{\@modifiche}{#1}%
+}
+\newcommand{\modifiche}{\@modifiche}
+
+\makeatother 
