@@ -1,0 +1,170 @@
+\documentclass[]{article}
+
+\input{../../commons/config}
+
+\appendToGraphicsPath{../../commons/res/}
+
+%------------------------------
+%
+% COMANDI DI CONFIGURAZIONE
+%
+%------------------------------
+
+\setTitle{Studio di Fattibilità}
+
+\setVersione{0.1.0}
+
+\setDate{12-12-2020}
+
+\setResponsabile{Paolo Scanferlato}
+
+\setRedattori{Alessandro Chimetto}
+
+\setVerificatori{Giacomo Bulbarelli}
+
+\setUso{Interno}
+
+\setModifiche{
+%%	Vers.	&	Nome				&	Ruolo		&	Data		&	Desrizione					\\%
+%	M1		&	M2					&	M3			&	M3			&	M4							\\%
+	0.1.0	&	Alessandro Chimetto	&	Redattore	&	12-12-2020	&	Stesura iniziale + studio C1}
+
+\begin{document}
+
+	\input{../../commons/template}
+
+	\newpage
+
+	%--------------------------------
+	%
+	% IL CONTENUTO INIZIA DA QUI
+	%
+	%--------------------------------
+
+	%! INDICE
+
+	\section{Introduzione}
+		\subsection{Scopo del documento}
+		Questo documento riporta lo studio svolto su ogni \glock{capitolato} proposto,
+		enunciando per ognuno: finalità, tecnologie e caratteristiche ritenute
+		negative o positive dai membri del gruppo.
+
+		\subsection{Altri Documenti e Glossario}
+		Terminologie specifiche all'interno del documento saranno scritte in \textsc{maiuscoletto} per evitare ambiguità e avranno a pedice:
+		\begin{itemize}
+			\item \textit{D} se indicano un documento specifico;
+			\item \textit{G} se incluse nel \dext{glossario}.
+		\end{itemize}
+
+		\subsection{Riferimenti}
+			\subsubsection{Normativi}
+			\begin{itemize}
+				\item \textbf{\dext{Norme di Progetto}}
+			\end{itemize}
+
+			\subsubsection{Informativi}
+			\begin{itemize}
+				\item \textbf{\glock{Capitolato} C1 - BlockCOVID: supporto digitale al contrasto della pandemia} \\
+				(https://www.math.unipd.it/~tullio/IS-1/2020/Progetto/C1.pdf);
+
+				\item \textbf{\glock{Capitolato} C2 - EmporioLambda: piattaforma di e-commerce in stile Serverless} \\
+				(https://www.math.unipd.it/~tullio/IS-1/2020/Progetto/C2.pdf);
+
+				\item \textbf{\glock{Capitolato} C3 - GDP: Gathering Detection Platform} \\ (https://www.math.unipd.it/~tullio/IS-1/2020/Progetto/C3.pdf);
+
+				\item \textbf{\glock{Capitolato} C4 - HD Viz: visualizzazione di dati multidimensionali} \\
+				(https://www.math.unipd.it/~tullio/IS-1/2020/Progetto/C4.pdf);
+
+				\item \textbf{\glock{Capitolato} C5 - PORTACS: piattaforma di controllo mobilità autonoma} \\
+				(https://www.math.unipd.it/~tullio/IS-1/2020/Progetto/C5.pdf);
+
+				\item \textbf{\glock{Capitolato} C6 - RGP: Realtime Gaming Platform} \\
+				(https://drive.google.com/file/d/1MQ8j4plXMsKjBfLPrUfHCv\_6pfnjcU5T/view?usp=sharing);
+
+				\item \textbf{\glock{Capitolato} C7 - SSD: soluzioni di sincronizzazione desktop} \\
+				(https://www.math.unipd.it/~tullio/IS-1/2020/Progetto/C7.pdf)
+			\end{itemize}
+
+	\newpage
+
+	\section{Valutazione capitolato scelto}
+		\subsection{C5 - PORTACS}
+		%! AGGIUNGERE CAPITOLATO C5
+
+	\newpage
+
+	\section{Valutazione capitolati non scelti}
+		\subsection{C1 - BlockCOVID}
+			\subsubsection{Informazioni generali}
+			\begin{itemize}
+				\item \textbf{Titolo:} BlockCOVID;
+				\item \textbf{Sottotitolo:} Supporto digitale al contrasto della pandemia;
+				\item \textbf{Proponente:} Imola Informatica;
+				\item \textbf{Committente:} Prof. Tullio Vardanega e Prof. Riccardo Cardin.
+			\end{itemize}
+
+			\subsubsection{Descrizione}
+			Vista la corrente pandemia di SARS-CoV-2 e conseguenti accordi fra sindacati e imprese, si vuole creare un'applicazione in grado di tracciare la presenza del personale di un organizzazione (es. scuola o azienda) nelle proprie postazioni di lavoro e di tracciare l'igienizzazione di quest'ultime da parte dell'utente o un'azienda specializzata.
+
+			\subsubsection{Finalità}
+			Si vuole creare un'applicazione mobile che permetta all'utente di:
+			\begin{itemize}
+				\item segnalare, tramite tag \glock{RFID}, l'occupazione di una postazione di lavoro ad un server dedicato;
+				\item prenotare una postazione libera ed igienizzata;
+				\item segnalare se la postazione è stata pulita autonomamente alla fine dell'utilizzo.
+			\end{itemize}
+			L'azienda esterna specializzata deve poter utilizzare l'applicazione per:
+			\begin{itemize}
+				\item ricevere una lista delle postazioni da igienizzare;
+				\item marcare la stanza come igienizzata.
+			\end{itemize}
+			Il server dedicato deve tenere traccia delle informazioni in una struttura dati di tipo \glock{blockchain} e deve mettere a disposizione dell'amministratore:
+			\begin{itemize}
+				\item un'interfaccia che consenta di creare, modificare o eliminare postazioni e stanze;
+				\item la gestione del calendario delle prenotazioni;
+				\item la possibilità di eseguire ricerche e creare report su personale addetto e igienizzazioni.
+			\end{itemize}
+
+			\subsubsection{Tecnologie}
+			Parte dell'interesse di ricerca dell'azienda è l'esplorazione di nuove soluzioni tecnologiche dunque quasi tutte le tecnologie da essa proposte non sono obbligatorie ma solamente consigliate sulla base dell'esperienza:
+			\begin{itemize}
+				\item \textsc{\glock{API Rest} o \glock{gRPC}:} tecnologie di comunicazione asincrona fra applicazione e server;
+				\item \textsc{\glock{Ethereum}:} tecnologia \glock{blockchain} per immagazzinare dati con opponibilità a terzi;
+				\item \textsc{\glock{Kubernetes}, \glock{Openshift} o \glock{Rancher}:} orchestratori per gestire \glock{deploy} e scalabilità delle componenti server.
+			\end{itemize}
+
+			\subsubsection{Linguaggi di Programmazione}
+			\begin{itemize}
+				\item \textsc{\glock{Java}, \glock{Python} o \glock{Node.js}:} linguaggi molto diffusi, consigliati (ma non obbligatori) per lo sviluppo delle componenti \glock{back-end};
+				\item \textsc{\glock{Kotlin} o \glock{Swift}:} linguaggi per lo sviluppo di applicazioni mobile rispettivamente su piattaforme \glock{Android} e \glock{iOS};
+				\item \textsc{\glock{Solidity} o \glock{Vyper}:} linguaggi per lo sviluppo di \glock{smart contract} per la piattaforma \glock{Ethereum}.
+			\end{itemize}
+
+			\subsubsection{Vincoli di Progetto}
+			\begin{itemize}
+				\item Per la comunicazione asincrona fra applicazione e server, si richiede di utilizzare \glock{API Rest} o in alternativa \glock{gRPC};
+				\item scansione dei codici nel tempo sufficiente a certificare la presenza della persona in postazione;
+				\item presentazione di un resoconto su scelte e test effettuati per garantire una buona durata della batteria del dispositivo mobile nonostante l'utilizzo del lettore \glock{RFID};
+			\end{itemize}
+
+			\subsubsection{Aspetti positivi}
+			\begin{itemize}
+				\item Si sta affrontando un tema di grande attualità e la sua realizzazione, potenzialmente, implicherebbe un contributo anche a livello sociale;
+				\item il \glock{capitolato} è fortemente politematico in quanto spazia dall'uso di hardware specializzato all'uso di linguaggi di programmazione attuali e strumenti rilevanti nell'ambito \glock{DevOps} per non parlare dell'utilizzo della struttura dati \glock{blockchain}; tutto ciò rende il lavoro proposto molto stimolante.
+			\end{itemize}
+
+			\subsubsection{Criticità}
+			\begin{itemize}
+				\item Il fatto che questo \glock{capitolato} sia estremamente politematico implica che la mole di lavoro nel progetto da esso derivato sia imponente. Ci sono molte tecnologie nuove da imparare in poco tempo e al fine di soddisfare i soli requisiti obbligatori si richiede lo sviluppo di due applicazioni di più che modeste dimensioni (mobile e server) che implementino tutte le tecnologie;
+				\item non è chiaro se l'hardware specifico per tag \glock{RFID} venga fornito dall'azienda e in che quantità; ciò potrebbe diventare un problema nel momento in cui le unità a disposizione fossero poche in quanto poche persone ne avrebbero accesso e, vista la mancanza di contatti causa pandemia, non ci sarebbe la possibilità di scambiarle con altri membri del gruppo.
+			\end{itemize}
+
+			\subsubsection{Conclusioni}
+			Nonostante il questo \glock{capitolato} abbia suscitato un forte interesse in tutti i membri del gruppo per questioni sia tecnologiche che sociali, si teme che la mole di lavoro sia troppo ampia e di conseguenza che non si riesca a consegnare il prodotto in tempi accettabili per il gruppo.
+
+		\newpage
+
+		\subsection{C2 - EmporioLambda}
+		%! AGGIUNGERE RESTANTI CAPITOLATI E CONCLUSIONE FINALE
+\end{document}
+
