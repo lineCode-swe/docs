@@ -164,7 +164,66 @@
 
 		\newpage
 
-		\subsection{C2 - EmporioLambda}
+		\subsection{C2 - Emporio Lambda}
+		
+		\subsubsection{Informazioni generali}
+			\begin{itemize}
+				\item \textbf{Titolo:} Emporio Lambda;
+				\item \textbf{Proponente:} Red Babel;
+				\item \textbf{Committente:} Prof. Tullio Vardanega e Prof. Riccardo Cardin.
+			\end{itemize}
+
+			\subsubsection{Descrizione}
+			Le piattaforme di e-commerce possono essere triviali, come pure complesse, in base alle funzionalità che si vogliono garantire. Inoltre i bisogni delle aziende possono variare ampiamente nel tempo e si scopre quindi la necessità di appoggiarsi a tecnologie affidabili per l'uso richiesto, e che garantiscano adattabilità a cambiamenti futuri.
+
+			\subsubsection{Finalità}
+			Emporio Lambda mira ad essere una piattaforma di e-commerce con architettura serverless appoggiandosi ad \glock{AWS}. Si vogliono garantire le funzionalità tipiche di una piattaforma commerciale, che permetta agli amministratori un'adeguata gestione degli ordini e dell'inventario, ed agli utenti un'adeguata esperienza di ricerca ed acquisto dei prodotti disponibili. 
+			\\
+			Il sito dovrà essere performante e garantire agli utenti un accesso immediato alla ricerca dei prodotti. Sarà importante l'uso di tecniche di \glock{SEO} soprattutto per le pagine dei prodotti in vendita. 
+			\\
+			Dovrà essere disponibile uno strumento di autenticazione, che potrà essere realizzato appoggiandosi ad \glock{Amazon Cognito}.
+
+			\subsubsection{Tecnologie}
+			\begin{itemize}
+				\item \textsc{AWS Lambda:} piattaforma di calcolo serverless, fornita come parte di \glock{AWS} che si occupa della gestione \glock{back-end} di applicazioni web;
+				\item \textsc{Amazon CloudWatch:} servizio di monitoraggio e osservabilità che raccoglie dati di monitoraggio e operativi sotto forma di log, parametri ed eventi, fornendo una visualizzazione unificata delle risorse;
+				\item \textsc{Amazon Cognito:} servizio la gestione di registrazione e controllo degli accessi a piattaforme web.
+			\end{itemize}
+
+			\subsubsection{Linguaggi di Programmazione}
+			\begin{itemize}
+				\item \textsc{\glock{Next.js}:} framework per lo sviluppo \glock{front-end} di siti web;
+				\item \textsc{\glock{Typescript}:} linguaggio che va ad estendere \glock{Javascript} dotandolo di tipizzazione;
+				\item \textsc{\glock{Node.js}:} linguaggio molto diffuso, per lo sviluppo delle componenti \glock{back-end} da appoggiare ad \glock{AWS}.
+			\end{itemize}
+			
+
+			\subsubsection{Vincoli di Progetto}
+			Il sito deve permettere il supporto ai ruoli di: 
+			\begin{itemize}
+			    \item amministratore di sistema: per la configurazione ed  amministrazione del sito;
+			    \item venditore: per l'organizzazione e la gestione dei prodotti e delle loro informazioni;
+			    \item cliente: utente generico del sito che può visualizzare ed acquistare i prodotti.
+			\end{itemize}				
+		A livello di funzionalità per il cliente, devono essere previste le seguenti pagine:  homepage, profilo utente, elenco prodotti, dettagli prodotti, carrello, checkout.\\
+		Si deve poi garantire un'adeguata integrazione con i servizi amministrativi tipici di questo ambiente, come: supporto utenti, tracciamento delle operazioni, inventario magazzino.\\
+
+			\subsubsection{Aspetti positivi}
+			\begin{itemize}
+				\item le tecnologie richieste per la realizzazione del \glock{capitolato} sono state giudicate di interesse;
+				\item la difficoltà generale dei requisiti è considerata adeguata per i componenti del gruppo.
+			\end{itemize}
+
+			\subsubsection{Criticità}
+			\begin{itemize}
+			    \item l'e-commerce è stato considerato come un target non stimolante da parte del gruppo;
+				\item il materiale reso disponibile dal proponente è stato giudicato non molto chiaro, e si ha il timore che ci potrebbero essere problemi di cooperazione in futuro.
+			\end{itemize}
+
+			\subsubsection{Conclusioni}
+			Nonostante le tecnologie che si andrebbero ad usare sembrino interessanti, nel complesso il \glock{capitolato} non ha suscitato interesse sufficiente rispetto alle altre opzioni disponibili al gruppo.
+		
+		\newpage
 		%! AGGIUNGERE RESTANTI CAPITOLATI E CONCLUSIONE FINALE
 \end{document}
 
