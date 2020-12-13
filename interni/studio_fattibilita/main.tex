@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 \documentclass[]{article}
 
 \input{../../commons/config}
@@ -27,7 +28,8 @@
 \setModifiche{
 %%	Vers.	&	Nome				&	Ruolo		&	Data		&	Desrizione					\\%
 %	M1		&	M2					&	M3			&	M3			&	M4							\\%
-	0.1.0	&	Alessandro Chimetto	&	Redattore	&	12-12-2020	&	Stesura iniziale + studio C1}
+	0.1.0	&	Alessandro Chimetto	&	Redattore	&	12-12-2020	&	Stesura iniziale + studio C1\\%
+	0.2.0   &   Giacomo Bulbarelli  &   Redattore   &   14-12-2002  &   Aggiunto studio C5 \\%} 
 
 \begin{document}
 
@@ -89,8 +91,106 @@
 
 	\section{Valutazione capitolato scelto}
 		\subsection{C5 - PORTACS}
-		%! AGGIUNGERE CAPITOLATO C5
+			\subsubsection{Informazioni generali}
+				\begin{itemize}
+					\item \textbf{Titolo:} PORTACS;
+					\item \textbf{Sottotitolo:} Piattaforma di controllo mobilità autonoma;
+					\item \textbf{Proponente:} SanMarco Informatica;
+					\item \textbf{Committente:} Prof. Tullio Vardanega e Prof. Riccardo Cardin.
+				\end{itemize}
+			
+			\subsubsection{Descrizione}
+			Il capitolato consiste nella creazione di un applicativo \glock{Real-Time} in grado di guidare delle unità dotate di mobilità autonoma in ambienti specifici, partendo dal presupposto che queste si muovano in ambienti in cui sono presenti altre unità (autonome o meno). In sede di presentazione sono stati riportati alcuni esempi di contesti in cui l'applicativo richiesto trova un senso di essere:
+			\begin{itemize}
+				\item Automobili a guida autonoma; 
+				\item Mezzi di per lo stock di merci all'interno di grandi magazzini, anch'essi dotati di guida autonoma;
+				\item Robot autonomi per il servizio al tavolo nel contesto della ristorazione;  
+			\end{itemize}
+	
+			\subsubsection{Finalità}
+			Si vuole creare un applicativo che risulta diviso in:
+			\begin{itemize}
+				\item Unità
+				\item Sistema Centrale
+			\end{itemize}
+			Un unità rappresenta un singolo mezzo dotato di mobilità autonoma che si muove nel contesto, definito da una serie di dati quali:
+			 \begin{itemize}
+			 	\item ID di sistema
+			 	\item Velocità massima
+			 	\item Posizione iniziale
+			 	\item Lista ordinata dei \glock{POI} da visitare
+			 \end{itemize}
+			 
+			Il Sistema-centrale si occupa di coordinare le singole unità, assicurandosi che ciascuna raggiunga la propria destinazione e che, nel farlo, non avvengano collisioni e siano rispettati dei vincoli imposti dall'ambiente in cui queste si muovono.
+			Esso sarà definito una mappatura dell'ambiente, potenzialmente partizionata in segmenti di dimensione fissa, e specificherà:
+			\begin{itemize}
+				\item Percorrenze e relativi vincoli (sensi unici, numero massimo di unità contemporanee)
+				\item Definizione di \glock{POI}
+			\end{itemize}
+			
+			\subsubsection{Tecnologie}
+			L'azienda non impone alcuna tecnologia specifica al gruppo da utilizzare in fase di sviluppo.
+			In fase di consegna viene però richiesto l'impiego di:
+			\begin{itemize}
+				\item \textsc{\glock{Docker}}: software per la creazione di \glock{Container} istanziabili
+				\item \textsc{\glock{GitHub}}: piattaforma per lo sviluppo asincrono attraverso il tool di versionamento \glock{Git}
+			\end{itemize}
+			
+			\subsubsection{Linguaggi di programmazione}
+			L'azienda non impone alcun linguaggio di programmazione al gruppo da utilizzare durante la fase di sviluppo.
+			
+			%---------------------------------------------------------------------------
+			% Se in riunione ci danno istruzioni più precise/consigli, allora aggiornerò
+			%---------------------------------------------------------------------------
+	
+			\subsubsection{Vincoli di progetto}
+			Il progetto impone dei vincoli sia per le singole unità, sia per il sistema-centrale. \\
+			\subsubsection{Vincoli di progetto: Unità}
+			Per quanto concerne le unità, queste dovranno essere caratterizzate da un insieme di elementi quali:
+			\begin{itemize}
+				\item Punto di partenza nella griglia che rappresenta l'ambiente in cui l'unità si muove
+				\item Velocità massima che l'unità può raggiungere
+				\item Lista dei \glock{POI} che l'unità dovrà raggiungere
+			\end{itemize}		 
+		
+			Saranno poi dotate di una \glock{user-interface} cosi strutturata:
+			\begin{itemize}
+				\item Indicatore della direzione dell'unità, rappresentante la direzione suggerita dal sistema centrale
+				\item Indicatore della velocità corrente dell'unità, che non dovrà mai superare una soglia massima definita per ciascuna unità 
+				\item Pulsante per l'accensione/spegnimento dell'unità
+			\end{itemize}
+			
+			\subsubsection{Vincoli di progetto: Sistema-centrale}
+			Il sistema centrale sarà composto da una mappa dell'ambiente in cui le unità si muovono (considerando anche i vincoli dimensionali dello stesso) e sarà incaricato di indicare ad ognuna la prossima azione da intraprendere, in funzione di:
+			\begin{itemize}
+				\item Prossimo \glock{POI} da raggiungere
+				\item Posizione delle altre unità, consapevoli che:
+					\begin{itemize}
+						\item Devono essere evitate collisioni
+						\item Devono essere rispettati dei vincoli dimensionali definiti a priori
+						\item Devono essere evitate collisione con agenti che non fanno parte dell'insieme delle unità (OPZIONALE)
+					\end{itemize}
+			\end{itemize}
+			
+			Sarà poi dotato anch'esso di una \glock{user-interface}, che permetterà di visualizzare:
+			\begin{itemize}
+				\item Posizione \glock{real-time} delle singole unità
+				\item Stato \glock{real-time} della mappa
+			\end{itemize}
 
+			\subsubsection{Aspetti positivi}
+			\begin{itemize}
+				\item Il capitolato richiede l'utilizzo di \glock{Docker} tra le tecnologie obbligatorie, che risulta essere molto interessante per il gruppo
+				\item Viene lasciata grande libertà rispetto alle tecnologie da impiegare in fase di sviluppo
+				\item In sede di presentazione è stata data molta importanza alla presentazione del problema da affrontare, che si è tradotta in una maggiore comprensibilità dello stesso
+				\item Molti membri del gruppo apprezzano il tema affrontato
+			\end{itemize}
+			\subsubsection{Criticità}
+				\item Non tutti gli elementi del gruppo conoscono \glock{Docker}
+				\item La grande libertà lasciata, se non gestita correttamente, potrebbe risultare un problema più che un vantaggio			
+			\subsubsection{Conclusioni}
+				La scelta del gruppo è ricaduta su questo capitolato vista l'attualità dei temi trattati e alla luce di un esposizione del problema chiara e convincente da parte dell'azienda proponente.
+	
 	\newpage
 
 	\section{Valutazione capitolati non scelti}
@@ -226,4 +326,3 @@
 		\newpage
 		%! AGGIUNGERE RESTANTI CAPITOLATI E CONCLUSIONE FINALE
 \end{document}
-
