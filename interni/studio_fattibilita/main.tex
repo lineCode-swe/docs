@@ -12,26 +12,40 @@
 
 \setTitle{Studio di Fattibilità}
 
-\setVersione{0.2.0}
+\setVersione{0.4.0}
 
 \setDate{14-12-2020}
 
 \setResponsabile{Paolo Scanferlato}
 
-\setRedattori{Alessandro Chimetto}
+\setRedattori{
+	Giacomo Bulbarelli \\&
+	Alessandro Chimetto \\&
+	Valton Tahiraj \\&
+	Alessandro Dindinelli
+}
 
-\setVerificatori{Giacomo Bulbarelli}
+\setVerificatori{
+	Giacomo Bulbarelli \\&
+	Alessandro Chimetto \\&
+	Valton Tahiraj \\&
+	Alessandro Dindinelli
+}
 
 \setUso{Interno}
 
 \setModifiche{
-%%	Vers.	&	Nome				&	Ruolo		&	Data		&	Desrizione					\\%
-
-%	M1		&	M2					&	M3			&	M3			&	M4							\\%
-	0.2.0   &   Valton Tahiraj      &   Redattore	&	14-12-2020	&   Aggiunto C7\\
-	0.1.0	&	Alessandro Chimetto	&	Redattore	&	12-12-2020	&	Stesura iniziale + studio C1}
-
-
+%%	Vers.	&	Nome					&	Ruolo		&	Data		&	Desrizione		  \\
+	0.4.0	&	Alessandro Chimetto		&	Verificatore&	14-12-2020	&	Verifica studio C5\\
+	0.4.0   &   Giacomo Bulbarelli  	&   Redattore   &   14-12-2020  &   Aggiunto studio C5\\
+	0.3.0	&	Giacomo Bulbarelli		&	Verificatore&	14-12-2020	&	Verifica studio C7\\
+	0.3.0   &   Valton Tahiraj  		&   Redattore   &   14-12-2020  &   Aggiunto studio C7\\
+	0.2.0	&	Valton Tahiraj			&	Verificatore&	14-12-2020	&	Verifica studio C2\\
+	0.2.0	&	Alessandro Dindinelli	&	Redattore	&	13-12-2020	&	Aggiunto studio C2\\
+	0.1.0	&	Alessandro Dindinelli	&	Verificatore&	13-12-2020	&	Verifica studio C1\\
+	0.1.0	&	Alessandro Chimetto		&	Redattore	&	12-12-2020	&	Stesura iniziale + studio C1
+	%
+}
 
 \begin{document}
 
@@ -93,8 +107,108 @@
 
 	\section{Valutazione capitolato scelto}
 		\subsection{C5 - PORTACS}
-		%! AGGIUNGERE CAPITOLATO C5
+			\subsubsection{Informazioni generali}
+				\begin{itemize}
+					\item \textbf{Titolo:} PORTACS;
+					\item \textbf{Sottotitolo:} Piattaforma di controllo mobilità autonoma;
+					\item \textbf{Proponente:} SanMarco Informatica;
+					\item \textbf{Committente:} Prof. Tullio Vardanega e Prof. Riccardo Cardin.
+				\end{itemize}
 
+			\subsubsection{Descrizione}
+			Il capitolato consiste nella creazione di un applicativo \glock{Real-Time} in grado di guidare delle unità dotate di mobilità autonoma in ambienti specifici, partendo dal presupposto che queste si muovano in ambienti in cui sono presenti altre unità (autonome o meno). In sede di presentazione sono stati riportati alcuni esempi di contesti in cui l'applicativo richiesto trova un senso di essere:
+			\begin{itemize}
+				\item Automobili a guida autonoma;
+				\item Mezzi di per lo stock di merci all'interno di grandi magazzini, anch'essi dotati di guida autonoma;
+				\item Robot autonomi per il servizio al tavolo nel contesto della ristorazione;
+			\end{itemize}
+
+			\subsubsection{Finalità}
+			Si vuole creare un applicativo che risulta diviso in:
+			\begin{itemize}
+				\item Unità
+				\item Sistema Centrale
+			\end{itemize}
+			Un unità rappresenta un singolo mezzo dotato di mobilità autonoma che si muove nel contesto, definito da una serie di dati quali:
+			 \begin{itemize}
+			 	\item ID di sistema
+			 	\item Velocità massima
+			 	\item Posizione iniziale
+			 	\item Lista ordinata dei \glock{POI} da visitare
+			 \end{itemize}
+
+			Il Sistema-centrale si occupa di coordinare le singole unità, assicurandosi che ciascuna raggiunga la propria destinazione e che, nel farlo, non avvengano collisioni e siano rispettati dei vincoli imposti dall'ambiente in cui queste si muovono.
+			Esso sarà definito una mappatura dell'ambiente, potenzialmente partizionata in segmenti di dimensione fissa, e specificherà:
+			\begin{itemize}
+				\item Percorrenze e relativi vincoli (sensi unici, numero massimo di unità contemporanee)
+				\item Definizione di \glock{POI}
+			\end{itemize}
+
+			\subsubsection{Tecnologie}
+			L'azienda non impone alcuna tecnologia specifica al gruppo da utilizzare in fase di sviluppo.
+			In fase di consegna viene però richiesto l'impiego di:
+			\begin{itemize}
+				\item \textsc{\glock{Docker}}: software per la creazione di \glock{Container} istanziabili
+				\item \textsc{\glock{GitHub}}: piattaforma per lo sviluppo asincrono attraverso il tool di versionamento \glock{Git}
+			\end{itemize}
+
+			\subsubsection{Linguaggi di programmazione}
+			L'azienda non impone alcun linguaggio di programmazione al gruppo da utilizzare durante la fase di sviluppo.
+
+			%---------------------------------------------------------------------------
+			% Se in riunione ci danno istruzioni più precise/consigli, allora aggiornerò
+			%---------------------------------------------------------------------------
+
+			\subsubsection{Vincoli di progetto}
+			Il progetto impone dei vincoli sia per le singole unità, sia per il sistema-centrale. \\
+			\subsubsection{Vincoli di progetto: Unità}
+			Per quanto concerne le unità, queste dovranno essere caratterizzate da un insieme di elementi quali:
+			\begin{itemize}
+				\item Punto di partenza nella griglia che rappresenta l'ambiente in cui l'unità si muove
+				\item Velocità massima che l'unità può raggiungere
+				\item Lista dei \glock{POI} che l'unità dovrà raggiungere
+			\end{itemize}
+
+			Saranno poi dotate di una \glock{user-interface} così strutturata:
+			\begin{itemize}
+				\item Indicatore della direzione dell'unità, rappresentante la direzione suggerita dal sistema centrale
+				\item Indicatore della velocità corrente dell'unità, che non dovrà mai superare una soglia massima definita per ciascuna unità
+				\item Pulsante per l'accensione/spegnimento dell'unità
+			\end{itemize}
+
+			\subsubsection{Vincoli di progetto: Sistema-centrale}
+			Il sistema centrale sarà composto da una mappa dell'ambiente in cui le unità si muovono (considerando anche i vincoli dimensionali dello stesso) e sarà incaricato di indicare ad ognuna la prossima azione da intraprendere, in funzione di:
+			\begin{itemize}
+				\item Prossimo \glock{POI} da raggiungere
+				\item Posizione delle altre unità, consapevoli che:
+					\begin{itemize}
+						\item Devono essere evitate collisioni
+						\item Devono essere rispettati dei vincoli dimensionali definiti a priori
+						\item Devono essere evitate collisione con agenti che non fanno parte dell'insieme delle unità (OPZIONALE)
+					\end{itemize}
+			\end{itemize}
+
+			Sarà poi dotato anch'esso di una \glock{user-interface}, che permetterà di visualizzare:
+			\begin{itemize}
+				\item Posizione \glock{real-time} delle singole unità
+				\item Stato \glock{real-time} della mappa
+			\end{itemize}
+
+			\subsubsection{Aspetti positivi}
+			\begin{itemize}
+				\item Il capitolato richiede l'utilizzo di \glock{Docker} tra le tecnologie obbligatorie, che risulta essere molto interessante per il gruppo
+				\item Viene lasciata grande libertà rispetto alle tecnologie da impiegare in fase di sviluppo
+				\item In sede di presentazione è stata data molta importanza alla presentazione del problema da affrontare, che si è tradotta in una maggiore comprensibilità dello stesso
+				\item Molti membri del gruppo apprezzano il tema affrontato
+			\end{itemize}
+			\subsubsection{Criticità}
+			\begin{itemize}
+				\item Non tutti gli elementi del gruppo conoscono \glock{Docker}
+				\item La grande libertà lasciata, se non gestita correttamente, potrebbe risultare un problema più che un vantaggio
+			\end{itemize}
+
+			\subsubsection{Conclusioni}
+				La scelta del gruppo è ricaduta su questo capitolato vista l'attualità dei temi trattati e alla luce di un esposizione del problema chiara e convincente da parte dell'azienda proponente.
 	\newpage
 
 	\section{Valutazione capitolati non scelti}
@@ -169,7 +283,7 @@
 		\newpage
 
 		\subsection{C2 - Emporio Lambda}
-		
+
 		\subsubsection{Informazioni generali}
 			\begin{itemize}
 				\item \textbf{Titolo:} Emporio Lambda;
@@ -181,9 +295,9 @@
 			Le piattaforme di e-commerce possono essere triviali, come pure complesse, in base alle funzionalità che si vogliono garantire. Inoltre i bisogni delle aziende possono variare ampiamente nel tempo e si scopre quindi la necessità di appoggiarsi a tecnologie affidabili per l'uso richiesto, e che garantiscano adattabilità a cambiamenti futuri.
 
 			\subsubsection{Finalità}
-			Emporio Lambda mira ad essere una piattaforma di e-commerce con architettura serverless appoggiandosi ad \glock{AWS}. Si vogliono garantire le funzionalità tipiche di una piattaforma commerciale, che permetta agli amministratori un'adeguata gestione degli ordini e dell'inventario, ed agli utenti un'adeguata esperienza di ricerca ed acquisto dei prodotti disponibili. 
+			Emporio Lambda mira ad essere una piattaforma di e-commerce con architettura serverless appoggiandosi ad \glock{AWS}. Si vogliono garantire le funzionalità tipiche di una piattaforma commerciale, che permetta agli amministratori un'adeguata gestione degli ordini e dell'inventario, ed agli utenti un'adeguata esperienza di ricerca ed acquisto dei prodotti disponibili.
 			\\
-			Il sito dovrà essere performante e garantire agli utenti un accesso immediato alla ricerca dei prodotti. Sarà importante l'uso di tecniche di \glock{SEO} soprattutto per le pagine dei prodotti in vendita. 
+			Il sito dovrà essere performante e garantire agli utenti un accesso immediato alla ricerca dei prodotti. Sarà importante l'uso di tecniche di \glock{SEO} soprattutto per le pagine dei prodotti in vendita.
 			\\
 			Dovrà essere disponibile uno strumento di autenticazione, che potrà essere realizzato appoggiandosi ad \glock{Amazon Cognito}.
 
@@ -200,15 +314,15 @@
 				\item \textsc{\glock{Typescript}:} linguaggio che va ad estendere \glock{Javascript} dotandolo di tipizzazione;
 				\item \textsc{\glock{Node.js}:} linguaggio molto diffuso, per lo sviluppo delle componenti \glock{back-end} da appoggiare ad \glock{AWS}.
 			\end{itemize}
-			
+
 
 			\subsubsection{Vincoli di Progetto}
-			Il sito deve permettere il supporto ai ruoli di: 
+			Il sito deve permettere il supporto ai ruoli di:
 			\begin{itemize}
 			    \item amministratore di sistema: per la configurazione ed  amministrazione del sito;
 			    \item venditore: per l'organizzazione e la gestione dei prodotti e delle loro informazioni;
 			    \item cliente: utente generico del sito che può visualizzare ed acquistare i prodotti.
-			\end{itemize}				
+			\end{itemize}
 		A livello di funzionalità per il cliente, devono essere previste le seguenti pagine:  homepage, profilo utente, elenco prodotti, dettagli prodotti, carrello, checkout.\\
 		Si deve poi garantire un'adeguata integrazione con i servizi amministrativi tipici di questo ambiente, come: supporto utenti, tracciamento delle operazioni, inventario magazzino.\\
 
@@ -226,69 +340,68 @@
 
 			\subsubsection{Conclusioni}
 			Nonostante le tecnologie che si andrebbero ad usare sembrino interessanti, nel complesso il \glock{capitolato} non ha suscitato interesse sufficiente rispetto alle altre opzioni disponibili al gruppo.
-		
+
 		\newpage
+
+        \subsection{C7 - SSD}
+            \subsubsection{Informazioni generali}
+            \begin{itemize}
+                \item \textbf{Titolo:} SSD;
+                \item \textbf{Sottotitolo:} soluzioni di sincronizzazione desktop;
+                \item \textbf{Proponente:} ZEXTRAS;
+                \item \textbf{Committente:} Prof. Tullio Vardanega e Prof. Riccardo Cardin.
+            \end{itemize}
+
+            \subsubsection{Descrizione}
+            Si vuole approfondire il mondo degli algoritmi di sincronizzazione desktop, essendo la piattaforma principale per molti utenti professionali, in un modo non triviale che non si limiti a permettere il lavoro in un dispositivo mantenendo una copia del lavoro salvata su \glock{Cloud}.
+
+            \subsubsection{Finalità}
+            I principali obbiettivi di questo progetto sono:
+            \begin{itemize}
+                \item Sviluppo di un algoritmo solido ed efficiente in grado di garantire il salvataggio in \glock{Cloud} del lavoro e contemporaneamente la sincronizzazione dei cambiamenti presenti in   \glock{Cloud};
+                \item Sviluppo di un'interfaccia multipiattaforma per l'uso dell'algoritmo nei più importanti sistemi operativi desktop esistenti(\glock{MacOs},\glock{Windows},\glock{Linux})
+                \item Utilizzo dell'algoritmo sviluppato per richiedere e fornire i cambiamenti ai contenuti in sincronizzazione verso il prodotto del proponente \glock{Zextras Drive}.
+            \end{itemize}
+            Le principali funzioni richieste sono:
+            \begin{itemize}
+                \item Configurazione ed autenticazione dell'utente;
+                \item Gestione di cosa sincronizzare e di cosa ignorare nelle cartelle \glock{Cloud};
+                \item Gestione di cosa sincronizzare e di cosa ignorare nelle cartelle locali;
+                \item Sincronizzazione costante dei cambiamenti, siano essi locali o remoti;
+                \item Possibilità di modifica delle preferenze a posteriori;
+                \item Sistema di notifica utente dei cambiamenti;
+            \end{itemize}
+            Con l'aggiunta di funzionalità avanzate quali:
+            \begin{itemize}
+                \item Gestione delle condivisioni;
+                \item Integrazione protocollo \glock{MAPI};
+                \item Integrazione con il prodotto Web;
+            \end{itemize}
+
+            \subsubsection{Tecnologie}
+            Il proponente sancisce che la soluzione sviluppata non dipenda da installazione di \glock{Framework} terzi per funzionare.
+            Consiglia quindi l'uso dei seguenti \glock{Framework}:
+            \begin{itemize}
+                \item \glock{Qt Framework}: \glock{Framework} consigliato per lo sviluppo dell'interfaccia e del controller d'architettura;
+                \item \glock{Python}: Linguaggio consigliato per lo sviluppo della Backend Business Logic;
+            \end{itemize}
+
+
+            \subsubsection{Aspetti positivi}
+            \begin{itemize}
+                \item Le tecnologie sono conosciute dalla maggior parte dei membri del gruppo.
+            \end{itemize}
+
+            \subsubsection{Criticità}
+            \begin{itemize}
+                \item La documentazione del \glock{capitolato} risulta scritta in modo approssimato facendo perdere al gruppo l'entusiasmo di lavorare con questo proponente;
+                \item L'idea risulta poco innovativa.
+            \end{itemize}
+
+            \subsubsection{Conclusioni}
+            Questo \glock{capitolato} non ha suscitato interesse in nessun membro del gruppo. Il gruppo ha quindi deciso di  concentrarsi su altri \glock{capitolati}.
+
+        \newpage
 		%! AGGIUNGERE RESTANTI CAPITOLATI E CONCLUSIONE FINALE
-		
-		
-		\subsection{C7 - SSD}
-		\subsubsection{Informazioni generali}
-		\begin{itemize}
-			\item \textbf{Titolo:} SSD;
-			\item \textbf{Sottotitolo:} soluzioni di sincronizzazione desktop;
-			\item \textbf{Proponente:} ZEXTRAS;
-			\item \textbf{Committente:} Prof. Tullio Vardanega e Prof. Riccardo Cardin.
-		\end{itemize}
-		
-		\subsubsection{Descrizione}
-		Si vuole approfondire il mondo degli algoritmi di sincronizzazione desktop, essendo la piattaforma principale per molti utenti professionali, in un modo non triviale che non si limiti a permettere il lavoro in un dispositivo mantenendo una copia del lavoro salvata su \glock{Cloud}.
-		
-		\subsubsection{Finalità}
-		I principali obbiettivi di questo progetto sono:
-		\begin{itemize}
-			\item Sviluppo di un algoritmo solido ed efficiente in grado di garantire il salvataggio in \glock{Cloud} del lavoro e contemporaneamente la sincronizzazione dei cambiamenti presenti in   \glock{Cloud};
-			\item Sviluppo di un'interfaccia multipiattaforma per l'uso dell'algoritmo nei più importanti sistemi operativi desktop esistenti(\glock{MacOs},\glock{Windows},\glock{Linux})
-			\item Utilizzo dell'algoritmo sviluppato per richiedere e fornire i cambiamenti ai contenuti in sincronizzazione verso il prodotto del proponente \glock{Zextras Drive}.
-		\end{itemize}
-		Le principali funzioni richieste sono:
-		\begin{itemize}
-			\item Configurazione ed autenticazione dell'utente;
-			\item Gestione di cosa sincronizzare e di cosa ignorare nelle cartelle \glock{Cloud};
-			\item Gestione di cosa sincronizzare e di cosa ignorare nelle cartelle locali;
-			\item Sincronizzazione costante dei cambiamenti, siano essi locali o remoti;
-			\item Possibilità di modifica delle preferenze a posteriori;
-			\item Sistema di notifica utente dei cambiamenti;
-		\end{itemize}
-		Con l'aggiunta di funzionalità avanzate quali:
-		\begin{itemize}
-			\item Gestione delle condivisioni;
-			\item Integrazione protocollo \glock{MAPI}; 
-			\item Integrazione con il prodotto Web;
-		\end{itemize} 	
-		\subsubsection{Tecnologie}
-		Il proponente sancisce che la soluzione sviluppata non dipenda da installazione di \glock{Framework} terzi per funzionare.
-		Consiglia quindi l'uso dei seguenti \glock{Framework}: 
-		\begin{itemize}
-			\item \textsc{\glock{Qt Framework}}: \glock{Framework} consigliato per lo sviluppo dell'interfaccia e del controller d'architettura;
-			\item \textsc{\glock{Python}}: Linguaggio consigliato per lo sviluppo della Backend Business Logic;
-			
-		\end{itemize}
-		
-		
-		\subsubsection{Aspetti positivi}
-		\begin{itemize}
-			\item Le tecnologie sono conosciute dalla maggior parte dei membri del gruppo.
-		\end{itemize}
-		
-		\subsubsection{Criticità}
-		\begin{itemize}
-			\item La documentazione del \glock{capitolato} risulta scritta in modo approssimato facendo perdere al gruppo l'entusiasmo di lavorare con questo proponente;
-			\item L'idea risulta poco innovativa.
-		\end{itemize}
-		
-		\subsubsection{Conclusioni}
-		Questo \glock{capitolato} non ha suscitato interesse in nessun membro del gruppo. Il gruppo ha quindi deciso di  concentrarsi su altri \glock{capitolati}. 
-		
-		\newpage
 \end{document}
 
