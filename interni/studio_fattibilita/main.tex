@@ -12,33 +12,36 @@
 
 \setTitle{Studio di Fattibilità}
 
-\setVersione{0.5.0}
+\setVersione{0.6.0}
 
-\setDate{14-12-2020}
+\setDate{16-12-2020}
 
 \setResponsabile{Paolo Scanferlato}
 
 \setRedattori{
 	Giacomo Bulbarelli \\&
 	Alessandro Chimetto \\&
-	Valton Tahiraj \\&
 	Alessandro Dindinelli\\&
-    Lucia Fenu
+    Lucia Fenu\\&
+    Paolo Scanferlato\\&
+	Valton Tahiraj
 }
 
 \setVerificatori{
 	Giacomo Bulbarelli \\&
 	Alessandro Chimetto \\&
-	Valton Tahiraj \\&
-	Alessandro Dindinelli
+	Alessandro Dindinelli\\&
+	Valton Tahiraj
 }
 
 \setUso{Interno}
 
 \setModifiche{
 %%	Vers.	&	Nome					&	Ruolo		&	Data		&	Desrizione		  \\
-    0.5.0   &   Valton Tahiraj          &   Verificatore &  14-12-2020  &   Verifica studio C6 \\
-	0.5.0	&	Lucia Fenu	            &	Redattore	&	14-12-2020	&	Aggiunto studio C6 \\
+	0.6.0	&	Alessandro Chimetto		&	Verificatore&	17-12-2020	&	Verifica studio C4\\
+    0.6.0   &   Paolo Scanferlato       &   Redattore   &   16-12-2020  &   Aggiunto studio C4\\
+    0.5.0   &   Valton Tahiraj          &   Verificatore &  14-12-2020  &   Verifica studio C6\\
+	0.5.0	&	Lucia Fenu	            &	Redattore	&	14-12-2020	&	Aggiunto studio C6\\
 	0.4.0	&	Alessandro Chimetto		&	Verificatore&	14-12-2020	&	Verifica studio C5\\
 	0.4.0   &   Giacomo Bulbarelli  	&   Redattore   &   14-12-2020  &   Aggiunto studio C5\\
 	0.3.0	&	Giacomo Bulbarelli		&	Verificatore&	14-12-2020	&	Verifica studio C7\\
@@ -345,6 +348,74 @@
 			Nonostante le tecnologie che si andrebbero ad usare sembrino interessanti, nel complesso il \glock{capitolato} non ha suscitato interesse sufficiente rispetto alle altre opzioni disponibili al gruppo.
 
 		\newpage
+
+		\subsection{C4 - HD Viz}
+		\subsubsection{Informazioni generali}
+		\begin{itemize}
+			\item \textbf{Titolo:} HD Viz;
+			\item \textbf{Sottotitolo:} Visualizzazione di dati multidimensionali;
+			\item \textbf{Proponente:} Zucchetti;
+			\item \textbf{Committente:} Prof. Tullio Vardanega e Prof. Riccardo Cardin.
+		\end{itemize}
+
+		\subsubsection{Descrizione}
+		Nella gestione di grandi volumi di dati si distinguono quattro fasi fondamentali:
+		\begin{itemize}
+			\item acquisizione;
+			\item pulizia;
+			\item analisi;
+			\item interpretazione.
+		\end{itemize}
+		L'ultima, l'interpretazione, si suddivide in due ulteriori fasi: la prima esplorazione, chiamata \glock{Exploratory Data Analysis} (EDA), e la modellazione dei fenomeni rilevati.
+		Il capitolato in questione prende in considerazione proprio l'esplorazione tramite la visualizzazione grafica del dato in molte dimensioni.
+
+		\subsubsection{Finalità}
+		Si vuole quindi creare un'applicazione di visualizzazione grafica di dati con molte dimensioni a supporto della fase esplorativa dell’analisi dei dati.
+		Il software dovrà poter visualizzare i dati in almeno 15 dimensioni e utilizzando questi metodi:
+		\begin{itemize}
+			\item \glock{Scatter plot Matrix} (fino ad un massimo di 5 dimensioni);
+			\item \glock{Force Field};
+			\item \glock{Heat Map};
+			\item \glock{Proiezione Lineare Multi Asse}.
+		\end{itemize}
+
+		\subsubsection{Tecnologie e Linguaggi di Programmazione}
+		L’applicazione “HD Viz” di visualizzazione dei dati a molte dimensioni dovrà essere sviluppata prevalentemente in tecnologia \glock{HTML}/\glock{CSS}/\glock{JavaScript} utilizzando la libreria \glock{D3.js}.
+		La parte server di supporto alla presentazione nel browser e alle query ad un database \glock{SQL} o \glock{NoSQL} potrà essere sviluppata in \glock{Java} con server \glock{Tomcat} o in \glock{Javascript} con server \glock{Node.js}.
+		Per lo sviluppo di algoritmi di preparazione del dato per la visualizzazione (requisito opzionale del capitolato), l'azienda mette a disposizione alcune librerie per gli algoritmi:
+		\begin{itemize}
+			\item \glock{t-SNE};
+			\item \glock{UMAP};
+			\item \glock{Self Organizing Map};
+			\item \glock{Learning Vector Quantization}.
+		\end{itemize}
+
+		\subsubsection{Vincoli di Progetto}
+		Il capitolato prevede dei requisiti obbligatori e opzionali:
+		\begin{itemize}
+			\item i dati da prendere in esame dovranno poter avere almeno fino a 15 dimensioni, ma deve essere possibile visualizzarne anche con meno;
+			\item il sistema di visualizzazione accetterà i dati da un file in formato \glock{CSV} o da una \glock{query} ad un database;
+			\item devono essere implementate almeno 4 metodologie di visualizzazione: \glock{Scatter Plot Matrix} (max 5 dimensioni), \glock{Force Field}, \glock{Heat Map}, \glock{Proiezione lineare Multi Asse};
+			\item nel grafico \glock{Heat Map} i punti dovranno essere ordinati;
+			\item sviluppare altri metodi di visualizzazione con più di tre dimensioni (opzionale);
+			\item utilizzare funzioni di calcolo della distanza diverse dalla distanza “Euclidea” in tutte le visualizzazioni che dipendono da tale concetto (opzionale);
+			\item utilizzare funzioni di “forza” diverse da quelle previste in automatico dal grafico \glock{force based} di \glock{D3} (opzionale);
+			\item implementare analisi automatiche per evidenziare situazioni di particolare interesse. Esempi di questa possibilità si possono vedere in \glock{ggobi} e \glock{Orange Canvas} (opzionale);
+			\item sviluppare algoritmi di preparazione del dato per la visualizzazione, cioè anziché eseguire la trasformazione direttamente nella visualizzazione far precedere un passo di trasformazione (opzionale).
+		\end{itemize}
+		Inoltre, l'azienda fa sapere che valuterà altre proposte e se verranno ritenute valide saranno considerate come requisito opzionale.
+
+		\subsubsection{Aspetti positivi}
+		Da qualche anno ormai i \glock{Big Data} sono una componente fondamentale di molte aziende e probabilmente con il passare del tempo il fenomeno aumenterà. L'analisi di questi dati è quindi importantissima e di stretta attualità e la possibilità di imparare a sfruttare le tecnologie utilizzate in questo campo rende il capitolato molto interessante. Inoltre permetterebbe il richiamo ad alcune affascinanti discipline studiate negli anni passati come le basi di dati, la statistica e ovviamente la programmazione.
+
+		\subsubsection{Criticità}
+		Contesto troppo monotematico. Buona parte dello sviluppo in \glock{javascript}.
+
+		\subsubsection{Conclusioni}
+		Si teme che una buona parte del lavoro sia monotematica visto che sarà realizzata con un ristretto insieme di tecnologie e quindi ritenuta poco stimolante dalla maggioranza del gruppo.
+
+		\newpage
+
 
         \subsection{C6 - Realtime Gaming Platform }
 		\subsubsection{Informazioni generali}
