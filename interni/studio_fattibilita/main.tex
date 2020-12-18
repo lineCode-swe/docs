@@ -12,13 +12,14 @@
 
 \setTitle{Studio di Fattibilità}
 
-\setVersione{0.6.0}
+\setVersione{0.8.0}
 
-\setDate{16-12-2020}
+\setDate{18-12-2020}
 
 \setResponsabile{Paolo Scanferlato}
 
 \setRedattori{
+    Matteo Alba\\&
 	Giacomo Bulbarelli \\&
 	Alessandro Chimetto \\&
 	Alessandro Dindinelli\\&
@@ -38,6 +39,8 @@
 
 \setModifiche{
 %%	Vers.	&	Nome					&	Ruolo		&	Data		&	Desrizione		  \\
+	0.7.0	&	Alessandro Chimetto	&	Verificatore&	18-12-2020	&	Verificato studio C3\\
+	0.7.0	&	Matteo Alba			&	Redattore	&	18-12-2020	&	Aggiunto studio C3\\
 	0.6.0	&	Alessandro Chimetto		&	Verificatore&	17-12-2020	&	Verifica studio C4\\
     0.6.0   &   Paolo Scanferlato       &   Redattore   &   16-12-2020  &   Aggiunto studio C4\\
     0.5.0   &   Valton Tahiraj          &   Verificatore &  14-12-2020  &   Verifica studio C6\\
@@ -50,9 +53,7 @@
 	0.2.0	&	Alessandro Dindinelli	&	Redattore	&	13-12-2020	&	Aggiunto studio C2\\
 	0.1.0	&	Alessandro Dindinelli	&	Verificatore&	13-12-2020	&	Verifica studio C1\\
 	0.1.0	&	Alessandro Chimetto		&	Redattore	&	12-12-2020	&	Stesura iniziale + studio C1
-	%
 }
-
 \begin{document}
 
 	\input{../../commons/template}
@@ -160,10 +161,6 @@
 
 			\subsubsection{Linguaggi di programmazione}
 			L'azienda non impone alcun linguaggio di programmazione al gruppo da utilizzare durante la fase di sviluppo.
-
-			%---------------------------------------------------------------------------
-			% Se in riunione ci danno istruzioni più precise/consigli, allora aggiornerò
-			%---------------------------------------------------------------------------
 
 			\subsubsection{Vincoli di progetto}
 			Il progetto impone dei vincoli sia per le singole unità, sia per il sistema-centrale. \\
@@ -316,9 +313,9 @@
 
 			\subsubsection{Linguaggi di Programmazione}
 			\begin{itemize}
-				\item \textsc{\glock{Next.js}:} framework per lo sviluppo \glock{front-end} di siti web;
-				\item \textsc{\glock{Typescript}:} linguaggio che va ad estendere \glock{Javascript} dotandolo di tipizzazione;
-				\item \textsc{\glock{Node.js}:} linguaggio molto diffuso, per lo sviluppo delle componenti \glock{back-end} da appoggiare ad \glock{AWS}.
+				\item \glock{Next.js}: framework per lo sviluppo \glock{front-end} di siti web;
+				\item \glock{Typescript}: linguaggio che va ad estendere \glock{Javascript} dotandolo di tipizzazione;
+				\item \glock{Node.js}: linguaggio molto diffuso, per lo sviluppo delle componenti \glock{back-end} da appoggiare ad \glock{AWS}.
 			\end{itemize}
 
 
@@ -346,6 +343,55 @@
 
 			\subsubsection{Conclusioni}
 			Nonostante le tecnologie che si andrebbero ad usare sembrino interessanti, nel complesso il \glock{capitolato} non ha suscitato interesse sufficiente rispetto alle altre opzioni disponibili al gruppo.
+
+		\newpage
+
+		\subsection{C3 - GDP}
+		\subsubsection{Informazioni generali}
+		\begin{itemize}
+			\item \textbf{Titolo:} GDP;
+			\item \textbf{Sottotitolo:} Gathering Detection Platform;
+			\item \textbf{Proponente:} Sync Lab;
+			\item \textbf{Committente:} Prof. Tullio Vardanega e Prof. Riccardo Cardin.
+		\end{itemize}
+
+		\subsubsection{Descrizione}
+		In seguito alla pandemia del virus COVID-19 scoppiata negli ultimi mesi sono sorti numerosi problemi. Dopo un periodo di quarantena forzata la vita doveva ripartire ed ai cittadini è stata permessa la circolazione. Durante la vita quotidiana si generano spesso assembramenti in numerosi luoghi e per non aggravare la situazione bisogna cercare di prevenire questo problema. Grazie all’informatica possiamo quindi scongiurare l’aggravarsi della situazione dovuta ai problemi sociali legati all’affollamento.
+
+		\subsubsection{Finalità}
+
+		Si vuole creare un’applicazione web che permetta di:
+		\begin{itemize}
+		\item misurare tramite dei contapersone e date le immagini/stream delle videocamere di contare le persone a bordo dei mezzi pubblici;
+		\item poter acquisire continuativamente nel tempo e in modalità a bassa latenza delle informazioni raccolte da dispositivi di flussi dati;
+		\item elaborare in tempo reale i dati acquisiti per rappresentare le variazioni nel tempo dei dati monitorati, come ad esempio la variazione dei flussi delle persone in ambienti urbani. Confrontare e correlare tra loro dati provenienti da flussi diversi, ad esempio correlando i dati raccolti a bordo dei mezzi di trasporto di interesse con i dati raccolti in prossimità delle aree di interesse quali ad esempio fermate di autobus, strade dedicate al traffico veicolare, zone urbane. È poi fondamentale archiviare tutti i dati acquisiti ed i risultati delle loro elaborazioni affinché siano conservati nel tempo e comunque disponibili in qualunque caso sia richiesto il loro utilizzo;
+		\item identificazione, a partire dai dati acquisiti ed elaborati, di eventi che nel tempo sono risultati aver concorso ad esempio all’insorgere di alterazioni significative del flusso di utenti;
+		\item previsione dell’insorgenza futura di variazioni significative di flussi di persone al fine di poter fornire degli indicatori automatici in grado di fornire supporto alle decisioni da parte del personale tecnico specializzato preposto a tale scopo.
+		\end{itemize}
+
+		\subsubsection{Tecnologie}
+		Ci sono alcune scelte preferenziali per lo svolgimento del progetto:
+		\begin{itemize}
+		\item utilizzo di \glock{Java} e \glock{Angular} per lo sviluppo delle parti di \glock{Back-end} e \glock{Front-end} della componente Application del sistema;
+		\item il framework \glock{Leaflet} (https://leafletjs.com) per la gestione delle mappe (heatmap);
+		\item utilizzo di protocolli asincroni per le comunicazioni tra diverse componenti;
+		\item utilizzo del pattern Publisher/Subscriber e adozione del protocollo \glock{MQTT}(‘MQ Telemetry Transport or Message Queue Telemetry Transport’).
+		\end{itemize}
+
+		\subsubsection{Aspetti positivi}
+		Il progetto risultava secondo il gruppo uno dei tre capitolati più interessanti e stimolanti:
+		\begin{itemize}
+		\item il problema da affrontare è qualcosa che riguarda la vita di tutti i giorni e che potrebbe portare a miglioramenti anche fuori da una situazione di emergenza COVID-19;
+		\item le tecnologie richieste per risolvere il problema e la componente di IA rappresenta un’ottima occasione per ampliare il bagaglio di conoscenze.
+		\end{itemize}
+
+		\subsubsection{Criticità}
+		\begin{itemize}
+		\item La parte di IA e la problematica da risolvere sembrava meno interessante rispetto al capitolato scelto.
+		\end{itemize}
+
+		\subsubsection{Conclusioni}
+		Dopo aver preso ampiamente in considerazione il capitolato in questione ed aver seguito la presentazione ed il seminario tecnologico il gruppo ha preferito orientarsi verso un’altra scelta che sembrava più stimolante.
 
 		\newpage
 
