@@ -26,8 +26,8 @@
 
 \setModifiche{
 %%	Vers.	&	Nome				&	Ruolo		&	Data		&	Desrizione					\\%
-
-%	M1		&	M2					&	M3			&	M3			&	M4							\\%
+	0.3.0	&	Alessandro Chimetto	&	Verificatore&	18-12-2020	&	Verificato studio C3\\
+	0.3.0	&	Matteo Alba			&	Redattore	&	15-12-2020	&	Aggiunto studio C3\\
 	0.2.0   &   Valton Tahiraj      &   Redattore	&	14-12-2020	&   Aggiunto C7\\
 	0.1.0	&	Alessandro Chimetto	&	Redattore	&	12-12-2020	&	Stesura iniziale + studio C1}
 
@@ -169,7 +169,7 @@
 		\newpage
 
 		\subsection{C2 - Emporio Lambda}
-		
+
 		\subsubsection{Informazioni generali}
 			\begin{itemize}
 				\item \textbf{Titolo:} Emporio Lambda;
@@ -181,9 +181,9 @@
 			Le piattaforme di e-commerce possono essere triviali, come pure complesse, in base alle funzionalità che si vogliono garantire. Inoltre i bisogni delle aziende possono variare ampiamente nel tempo e si scopre quindi la necessità di appoggiarsi a tecnologie affidabili per l'uso richiesto, e che garantiscano adattabilità a cambiamenti futuri.
 
 			\subsubsection{Finalità}
-			Emporio Lambda mira ad essere una piattaforma di e-commerce con architettura serverless appoggiandosi ad \glock{AWS}. Si vogliono garantire le funzionalità tipiche di una piattaforma commerciale, che permetta agli amministratori un'adeguata gestione degli ordini e dell'inventario, ed agli utenti un'adeguata esperienza di ricerca ed acquisto dei prodotti disponibili. 
+			Emporio Lambda mira ad essere una piattaforma di e-commerce con architettura serverless appoggiandosi ad \glock{AWS}. Si vogliono garantire le funzionalità tipiche di una piattaforma commerciale, che permetta agli amministratori un'adeguata gestione degli ordini e dell'inventario, ed agli utenti un'adeguata esperienza di ricerca ed acquisto dei prodotti disponibili.
 			\\
-			Il sito dovrà essere performante e garantire agli utenti un accesso immediato alla ricerca dei prodotti. Sarà importante l'uso di tecniche di \glock{SEO} soprattutto per le pagine dei prodotti in vendita. 
+			Il sito dovrà essere performante e garantire agli utenti un accesso immediato alla ricerca dei prodotti. Sarà importante l'uso di tecniche di \glock{SEO} soprattutto per le pagine dei prodotti in vendita.
 			\\
 			Dovrà essere disponibile uno strumento di autenticazione, che potrà essere realizzato appoggiandosi ad \glock{Amazon Cognito}.
 
@@ -200,15 +200,15 @@
 				\item \textsc{\glock{Typescript}:} linguaggio che va ad estendere \glock{Javascript} dotandolo di tipizzazione;
 				\item \textsc{\glock{Node.js}:} linguaggio molto diffuso, per lo sviluppo delle componenti \glock{back-end} da appoggiare ad \glock{AWS}.
 			\end{itemize}
-			
+
 
 			\subsubsection{Vincoli di Progetto}
-			Il sito deve permettere il supporto ai ruoli di: 
+			Il sito deve permettere il supporto ai ruoli di:
 			\begin{itemize}
 			    \item amministratore di sistema: per la configurazione ed  amministrazione del sito;
 			    \item venditore: per l'organizzazione e la gestione dei prodotti e delle loro informazioni;
 			    \item cliente: utente generico del sito che può visualizzare ed acquistare i prodotti.
-			\end{itemize}				
+			\end{itemize}
 		A livello di funzionalità per il cliente, devono essere previste le seguenti pagine:  homepage, profilo utente, elenco prodotti, dettagli prodotti, carrello, checkout.\\
 		Si deve poi garantire un'adeguata integrazione con i servizi amministrativi tipici di questo ambiente, come: supporto utenti, tracciamento delle operazioni, inventario magazzino.\\
 
@@ -226,10 +226,9 @@
 
 			\subsubsection{Conclusioni}
 			Nonostante le tecnologie che si andrebbero ad usare sembrino interessanti, nel complesso il \glock{capitolato} non ha suscitato interesse sufficiente rispetto alle altre opzioni disponibili al gruppo.
-		
+
 		\newpage
-		%! AGGIUNGERE RESTANTI CAPITOLATI E CONCLUSIONE FINALE
-		
+
 		\subsection{C3 - GDP}
 		\subsubsection{Informazioni generali}
 		\begin{itemize}
@@ -238,48 +237,48 @@
 			\item \textbf{Proponente:} Sync Lab;
 			\item \textbf{Committente:} Prof. Tullio Vardanega e Prof. Riccardo Cardin.
 		\end{itemize}
-		
+
 		\subsubsection{Descrizione}
 		In seguito alla pandemia del virus COVID-19 scoppiata negli ultimi mesi sono sorti numerosi problemi. Dopo un periodo di quarantena forzata la vita doveva ripartire ed ai cittadini è stata permessa la circolazione. Durante la vita quotidiana si generano spesso assembramenti in numerosi luoghi e per non aggravare la situazione bisogna cercare di prevenire questo problema. Grazie all’informatica possiamo quindi scongiurare l’aggravarsi della situazione dovuta ai problemi sociali legati all’affollamento.
-		
+
 		\subsubsection{Finalità}
-		
+
 		Si vuole creare un’applicazione web che permetta di:
-		\begin{itemize}		
+		\begin{itemize}
 		\item misurare tramite dei contapersone e date le immagini/stream delle videocamere di contare le persone a bordo dei mezzi pubblici;
-		\item poter acquisire continuativamente nel tempo e in modalità a bassa latenza delle informazioni raccolte da dispositivi di flussi dati;	
-		\item elaborare in tempo reale i dati acquisiti per rappresentare le variazioni nel tempo dei dati monitorati, come ad esempio la variazione dei flussi delle persone in ambienti urbani. Confrontare e correlare tra loro dati provenienti da flussi diversi, ad esempio correlando i dati raccolti a bordo dei mezzi di trasporto di interesse con i dati raccolti in prossimità delle aree di interesse quali ad esempio fermate di autobus, strade dedicate al traffico veicolare, zone urbane. E' poi fondamentale archiviare tutti i dati acquisiti, ed i risultati delle loro elaborazioni affinché siano conservati nel tempo e comunque disponibili in qualunque caso sia richiesto il loro utilizzo; 
-		\item \textsc identificazione, a partire dai dati acquisiti ed elaborati, di eventi che nel tempo sono risultati aver concorso ad esempio all’insorgere di alterazioni significative del flusso di utenti;
-		\item \textsc previsione dell’insorgenza futura di variazioni significative di flussi di persone al fine di poter fornire degli indicatori automatici in grado di fornire supporto alle decisioni da parte del personale tecnico specializzato preposto a tale scopo.
+		\item poter acquisire continuativamente nel tempo e in modalità a bassa latenza delle informazioni raccolte da dispositivi di flussi dati;
+		\item elaborare in tempo reale i dati acquisiti per rappresentare le variazioni nel tempo dei dati monitorati, come ad esempio la variazione dei flussi delle persone in ambienti urbani. Confrontare e correlare tra loro dati provenienti da flussi diversi, ad esempio correlando i dati raccolti a bordo dei mezzi di trasporto di interesse con i dati raccolti in prossimità delle aree di interesse quali ad esempio fermate di autobus, strade dedicate al traffico veicolare, zone urbane. È poi fondamentale archiviare tutti i dati acquisiti ed i risultati delle loro elaborazioni affinché siano conservati nel tempo e comunque disponibili in qualunque caso sia richiesto il loro utilizzo;
+		\item identificazione, a partire dai dati acquisiti ed elaborati, di eventi che nel tempo sono risultati aver concorso ad esempio all’insorgere di alterazioni significative del flusso di utenti;
+		\item previsione dell’insorgenza futura di variazioni significative di flussi di persone al fine di poter fornire degli indicatori automatici in grado di fornire supporto alle decisioni da parte del personale tecnico specializzato preposto a tale scopo.
 		\end{itemize}
-		 	
+
 		\subsubsection{Tecnologie}
 		Ci sono alcune scelte preferenziali per lo svolgimento del progetto:
-		\begin{itemize}		
+		\begin{itemize}
 		\item utilizzo di \glock{Java} e \glock{Angular} per lo sviluppo delle parti di \glock{Back-end} e \glock{Front-end} della componente Application del sistema;
 		\item il framework \glock{Leaflet} (https://leafletjs.com) per la gestione delle mappe (heatmap);
 		\item utilizzo di protocolli asincroni per le comunicazioni tra diverse componenti;
 		\item utilizzo del pattern Publisher/Subscriber e adozione del protocollo \glock{MQTT}(‘MQ Telemetry Transport or Message Queue Telemetry Transport’).
 		\end{itemize}
-		
+
 		\subsubsection{Aspetti positivi}
 		Il progetto risultava secondo il gruppo uno dei tre capitolati più interessanti e stimolanti:
-		\begin{itemize}			
+		\begin{itemize}
 		\item il problema da affrontare è qualcosa che riguarda la vita di tutti i giorni e che potrebbe portare a miglioramenti anche fuori da una situazione di emergenza COVID-19;
-		\item le tecnologie richieste per risolvere il problema e la componente di IA rappresenta un’ottima occasione per ampliare il bagaglio di conoscenze.	
+		\item le tecnologie richieste per risolvere il problema e la componente di IA rappresenta un’ottima occasione per ampliare il bagaglio di conoscenze.
 		\end{itemize}
-		
+
 		\subsubsection{Criticità}
 		\begin{itemize}
 		\item La parte di IA e la problematica da risolvere sembrava meno interessante rispetto al capitolato scelto.
 		\end{itemize}
-		
+
 		\subsubsection{Conclusioni}
-		Dopo aver preso ampiamente in considerazione il capitolato in questione ed aver seguito la presentazione ed il seminario tecnologico il gruppo ha preferito orientarsi verso un’altra scelta che sembrava più stimolante. 
-		
-		\newpage 
-		
-		
+		Dopo aver preso ampiamente in considerazione il capitolato in questione ed aver seguito la presentazione ed il seminario tecnologico il gruppo ha preferito orientarsi verso un’altra scelta che sembrava più stimolante.
+
+		\newpage
+
+
 		\subsection{C7 - SSD}
 		\subsubsection{Informazioni generali}
 		\begin{itemize}
@@ -288,10 +287,10 @@
 			\item \textbf{Proponente:} ZEXTRAS;
 			\item \textbf{Committente:} Prof. Tullio Vardanega e Prof. Riccardo Cardin.
 		\end{itemize}
-		
+
 		\subsubsection{Descrizione}
 		Si vuole approfondire il mondo degli algoritmi di sincronizzazione desktop, essendo la piattaforma principale per molti utenti professionali, in un modo non triviale che non si limiti a permettere il lavoro in un dispositivo mantenendo una copia del lavoro salvata su \glock{Cloud}.
-		
+
 		\subsubsection{Finalità}
 		I principali obbiettivi di questo progetto sono:
 		\begin{itemize}
@@ -311,33 +310,33 @@
 		Con l'aggiunta di funzionalità avanzate quali:
 		\begin{itemize}
 			\item Gestione delle condivisioni;
-			\item Integrazione protocollo \glock{MAPI}; 
+			\item Integrazione protocollo \glock{MAPI};
 			\item Integrazione con il prodotto Web;
-		\end{itemize} 	
+		\end{itemize}
 		\subsubsection{Tecnologie}
 		Il proponente sancisce che la soluzione sviluppata non dipenda da installazione di \glock{Framework} terzi per funzionare.
-		Consiglia quindi l'uso dei seguenti \glock{Framework}: 
+		Consiglia quindi l'uso dei seguenti \glock{Framework}:
 		\begin{itemize}
 			\item \textsc{\glock{Qt Framework}}: \glock{Framework} consigliato per lo sviluppo dell'interfaccia e del controller d'architettura;
 			\item \textsc{\glock{Python}}: Linguaggio consigliato per lo sviluppo della Backend Business Logic;
-			
+
 		\end{itemize}
-		
-		
+
+
 		\subsubsection{Aspetti positivi}
 		\begin{itemize}
 			\item Le tecnologie sono conosciute dalla maggior parte dei membri del gruppo.
 		\end{itemize}
-		
+
 		\subsubsection{Criticità}
 		\begin{itemize}
 			\item La documentazione del \glock{capitolato} risulta scritta in modo approssimato facendo perdere al gruppo l'entusiasmo di lavorare con questo proponente;
 			\item L'idea risulta poco innovativa.
 		\end{itemize}
-		
+
 		\subsubsection{Conclusioni}
-		Questo \glock{capitolato} non ha suscitato interesse in nessun membro del gruppo. Il gruppo ha quindi deciso di  concentrarsi su altri \glock{capitolati}. 
-		
+		Questo \glock{capitolato} non ha suscitato interesse in nessun membro del gruppo. Il gruppo ha quindi deciso di  concentrarsi su altri \glock{capitolati}.
+
 		\newpage
 \end{document}
 
