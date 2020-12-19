@@ -67,9 +67,152 @@
 				\item \textbf{Piano di Qualifica}: ;
 				\item \textbf{Piano di Progetto}: .
 			\end{itemize}
+	
+	\newpage	
+	
+	\section{Verifica}
+		\subsection{Scopo}
+		Il processo di \textbf{Verifica} mira a garantire la correttezza del prodotto stabilendo dei criteri precisi con cui giudicarlo. \\ Esso verrà garantito:
+		\begin{itemize}
+			\item definendo criteri di accettazione;
+			\item prescrivendo attività di verifica (accompagnate dalla relativa documentazione);
+			\item eseguendo dei test di verifica
+			\item correggendo potenziali difetti riscontrati
+		\end{itemize}
 
+		\subsection{Descrizione}
+		La verifica ha lo scopo di individuare e correggere potenziali difetti nel prodotto, e precede l'attuazione del processo di validazione.
+		
+		\subsection{Attività}
+		Il processo di verifica prevede due attività principali:
+		\begin{itemize}
+			\item \glock{Analisi statica}
+			\item \glock{Analisi dinamica}
+		\end{itemize}
+		
+		Si rende necessaria una classificazione dei test previsti dall'attività di \glock{Analisi dinamica}.\\ Di seguito verrà esposta la nomenclatura relativa ai suddetti \glock{test} che verranno effettuati sul prodotto.
+		
+		\subsection{Test}
+		
+		Per rappresentare le specifiche dei \glock{test} si è deciso di utilizzare una forma tabellare che contiene:
+		\begin{itemize}
+			\item Codice identificativo del componente da testare
+			\item Descrizione del test
+			\item Stato di avanzamento, identificato nel modo seguente:
+				\begin{itemize}
+					\item \textbf{NI}: non implementato;
+					\item \textbf{I}: implementato.						
+				\end{itemize}		
+			\item Risultato del test, identificato nel modo seguente:
+				\begin{itemize}
+					\item \textbf{S}: superato;
+					\item \textbf{F}: fallito.
+				\end{itemize}
+				\textbf{N.B.}: il parametro relativo al risultato viene momentaneamente omesso in quanto superfluo.						 
+		\end{itemize}				
+		
+		\subsubsection{Test di sistema}
+		I \glock{test di sistema} vengono classificati nella maniera seguente:
+		\begin{center}
+			\textbf{TS[Priorità]-[Tipologia]-[Identificativo]}
+		\end{center}		 
+		dove:\\
+		\begin{itemize}
+			\item \textbf{Priorità}: indica la priorità del requisito associato al test, e può assumere valori quali:
+			\begin{itemize}
+				\item \textbf{A}: obbligatorio;
+				\item \textbf{B}: desiderabile;
+				\item \textbf{C}: relativamente utile, eventualmente trascurabile.
+			\end{itemize}
+			\item \textbf{Tipologia}: indica la tipologia di requisito associato al test, e può assumere valori quali:
+			\begin{itemize}
+				\item \textbf{F}: funzionale;
+				\item \textbf{P}: prestazionale;
+				\item \textbf{Q}: qualitativo;
+				\item \textbf{V}: vincolo.
+			\end{itemize}
+			\item \textbf{Identificativo}: intero positivo che identifica il singolo componente da testare. Ha valore di default 1.
+		\end{itemize}
+		 
+		\subsubsection{Test di integrazione}
+		I \glock{test di integrazione} vengono classificati nella maniera seguente:
+		\begin{center}
+			\textbf{TI[Identificativo]}
+		\end{center}	
+		dove:\\
+		\begin{itemize}
+			\item \textbf{Identificativo}: intero positivo che identifica il singolo componente da testare. Ha valore di default 1.
+		\end{itemize}		 
+		
+		\subsubsection{Test di unità}
+		I \glock{Test di unità} vengono classificati nella maniera seguente:
+		\begin{center}
+			\textbf{TU[Identificativo]}
+		\end{center}		
+		dove:\\
+		\begin{itemize}
+			\item \textbf{Identificativo}: intero positivo che identifica il singolo componente da testare. Ha valore di default 1.
+		\end{itemize}
+		
+		\subsubsection{Test di regressione}
+		I \glock{Test di regressione} consistono nell'esecuzione di tutti i test già effettuati in precedenza sulle unità in relazione con quella che ha subito una modifica. Non risulta dunque necessaria una nomenclatura specifica per essi.
+		
+		\subsection{Strumenti}
+		Si utilizzano le funzionalità di \glock{correzione automatica} e di \glock{controllo ortografico} degli \glock{IDE} utilizzati dal gruppo, che sono:
+		\begin{itemize}
+			\item Tex Studio;
+			\item Tex Maker.
+		\end{itemize}		 		
 
-
-
+		\section{Validazione}
+		\subsection{Scopo}
+		Il processo di \textbf{Validazione} mira a garantire che il prodotto rispetta le specifiche del committente. Esso consiste nell'esecuzione di test che producono dei risultati da confrontare con dei valori attesi.
+		
+		\subsection{Descrizione}
+		A seguito dell'esecuzione dei test su ciascuna delle componenti del prodotto, è possibile stabilire se il prodotto rispetta le specifiche, dipendentemente dal fatto che i risultati ottenuti corrispondano a quelli attesi o meno. 
+	
+		\subsection{Attività}
+		\subsubsection{Test}
+		Per rappresentare le specifiche dei \glock{test} si è deciso di utilizzare una forma tabellare che contiene:
+				\begin{itemize}
+					\item Codice identificativo del componente da testare
+					\item Descrizione del test
+					\item Stato di avanzamento, identificato nel modo seguente:
+						\begin{itemize}
+							\item \textbf{NI}: non implementato;
+							\item \textbf{I}: implementato.						
+						\end{itemize}		
+					\item Risultato del test, identificato nel modo seguente:
+						\begin{itemize}
+							\item \textbf{S}: superato;
+							\item \textbf{F}: fallito.
+						\end{itemize}
+						\textbf{N.B.}: il parametro relativo al risultato viene momentaneamente omesso in quanto superfluo.						 
+				\end{itemize}		
+		
+		\subsubsection{Test di accettazione}
+		I \glock{Test di accettazione} vengono classificati nella maniera seguente:
+				\begin{center}
+			\textbf{TA[Priorità]-[Tipologia]-[Identificativo]}
+		\end{center}		 
+		dove:\\
+		\begin{itemize}
+			\item \textbf{Priorità}: indica la priorità del requisito associato al test, e può assumere valori quali:
+			\begin{itemize}
+				\item \textbf{A}: obbligatorio;
+				\item \textbf{B}: desiderabile;
+				\item \textbf{C}: relativamente utile, eventualmente trascurabile.
+			\end{itemize}
+			\item \textbf{Tipologia}: indica la tipologia di requisito associato al test, e può assumere valori quali:
+			\begin{itemize}
+				\item \textbf{F}: funzionale;
+				\item \textbf{P}: prestazionale;
+				\item \textbf{Q}: qualitativo;
+				\item \textbf{V}: vincolo.
+			\end{itemize}
+			\item \textbf{Identificativo}: intero positivo che identifica il singolo componente da testare. Ha valore di default 1.
+		\end{itemize}				
+						
+		
 \end{document}
 
