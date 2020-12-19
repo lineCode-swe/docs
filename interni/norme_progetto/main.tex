@@ -12,13 +12,19 @@
 
 \setTitle{Norme di Progetto}
 
-\setVersione{0.1.0}
+\setVersione{0.2.0}
 
 \setDate{15-12-2020}
 
 \setResponsabile{Paolo Scanferlato}
 
-\setRedattori{Valton Tahiraj}
+\setRedattori{Alessandro Chimetto
+	\\& Alessandro Dindinelli
+	\\& Giacomo Bulbarelli
+	\\& Lucia Fenu
+	\\& Matteo Alba
+	\\& Paolo Scanferlato
+	\\& Valton Tahiraj}
 
 \setVerificatori{Alessandro Chimetto}
 
@@ -89,13 +95,68 @@
 				\end{itemize}
 				\subsubsection{Attività}
 					\paragraph{Analisi dei requisiti} %! COME MAI NON C'E L'INDICE?
-						\subparagraph{Scopo} %! COME MAI E' FORAMTTATO MALE?
+						\subparagraph{Scopo} %! COME MAI E' FORAMATTATO MALE?
 						Il compito degli analisti è quello di redigere il documento di Analisi dei Requisiti, che andrà ad elencare e definire i requisiti del \glock{capitolato}. Lo scopo dei requisiti è quello di:
 						\begin{itemize}
 							\item descrivere il prodotto da realizzare;
-							\item ;
-							\item .
+							\item rendere disponibili ai progettisti riferimenti precisi;
+							\item esprimere casi d'uso e requisiti concordati;
+							\item rendere disponibili ai verificatori riferimenti per il controllo dei test;
+							\item ragionare sul lavoro richiesto per produrre una stima dei costi.
 						\end{itemize}
+						\subparagraph{Classificazione dei requisiti} %! COME MAI E' FORAMATTATO MALE?
+						Ogni requisito sarà associato ad un codice che rispetterà il seguente formato:
+						\begin{center}
+							\textbf{R[Priorità]-[Categoria]-[Codice]}
+						\end{center}
+						\begin{itemize}
+							\item \textbf{R:} requisito;
+							\item \textbf{Priorità:}
+								\begin{itemize}
+									\item \textbf{M:} mandatory/obbligatorio, quindi necessario a garantire le funzioni base del prodotto;
+									\item \textbf{D:} desirable/desiderabile, cioè non strettamente necessario, ma che porta alla completezza del prodotto;
+									\item \textbf{O:} optional/opzionale, quindi non pregiudica la funzionalità del prodotto finale.
+								\end{itemize}
+							\item \textbf{Categoria:}
+								\begin{itemize}
+									\item \textbf{F:} functional/funzionale;
+									\item \textbf{P:} performance/prestazionale;
+									\item \textbf{Q:} qualitative/qualitativo;
+									\item \textbf{C:} constraint/vincolo.
+								\end{itemize}
+							\item \textbf{Codice:} numero progressivo per riconoscere univocamente il requisito.
+						\end{itemize}
+						\subparagraph{Classificazione dei casi d'uso} %! COME MAI E' FORAMATTATO MALE?
+						Come per i requisiti, si prevede di identificare univocamente i casi d'uso con il seguente formato:
+						\begin{center}
+							\textbf{UC[Codice]}
+						\end{center}
+						\begin{itemize}
+							\item \textbf{UC:} use case/caso d'uso;
+							\item \textbf{Codice:} serie di cifre divise tra loro da ’.’ in modo da poter dividere in modo gerarchico i casi e sotto casi.
+						\end{itemize}
+						Oltre all'identificativo, ogni caso d'uso verrà descritto dai seguenti campi:
+						\begin{itemize}
+							\item \textbf{Descrizione:} breve spiegazione della situazione modellata;
+							\item \textbf{Grafici UML:} diagrammi realizzati usando la versione 2.0 del linguaggio, ed il software \glock{StarUML};
+							\item \textbf{Attori:} gli attori primari e secondari coinvolti;
+							\item \textbf{Scenario Principale:} elenco numerato degli eventi descritti dal caso d'uso;
+							\item \textbf{Precondizione:} condizioni che si assumono vere prima che si verifichino gli eventi descritti dal caso d'uso;
+							\item \textbf{Postcondizione:} condizioni che si assumono vere dopo che si sono verificati gli eventi descritti dal caso d'uso;
+							\item eventuali estensioni ed inclusioni coinvolte.
+						\end{itemize}
+					\paragraph{Progettazione} %! COME MAI NON C'E L'INDICE?
+						\subparagraph{Scopo} %! COME MAI E' FORAMATTATO MALE?
+						Mentre l'Analisi dei Requisiti divide il problema in parti per capirne completamente il dominio applicativo, la Progettazione rimette insieme tali parti specificandone le funzionalità in modo da realizzare l'architettura che il prodotto finale dovrà seguire. Questa dovrà seguire i seguenti principi:
+						\begin{itemize}
+							\item rispetto di tutti i requisiti;
+							\item affidabilità nello svolgere i propri compiti;
+							\item possibilità e facilità di garantire la manutenzione nel tempo;
+							\item essere sicura rispetto ad intrusioni e malfunzionamenti;
+							\item avere componenti coese, incapsulate e con scarse dipendenze tra loro.
+						\end{itemize}
+					\paragraph{Codifica} %! COME MAI NON C'E L'INDICE?
+					\subparagraph{Scopo} %! COME MAI E' FORAMATTATO MALE?
 
 
 \end{document}
