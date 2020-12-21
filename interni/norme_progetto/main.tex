@@ -12,9 +12,9 @@
 
 \setTitle{Norme di Progetto}
 
-\setVersione{0.2.0}
+\setVersione{0.2.1}
 
-\setDate{20-12-2020}
+\setDate{21-12-2020}
 
 \setResponsabile{Paolo Scanferlato}
 
@@ -26,11 +26,11 @@
 
 \setModifiche{
 	0.2.0 & Alessandro Chimetto		& Verificatore	& 21-12-2020 & Verificato Processo di Fornitura\\
-	0.2.0 & Valton Tahiraj 			& Redattore 	& 20-12-2020 & Aggiunto Processo di Fornitura \\
+	0.2.0 & Valton Tahiraj 			& Amministratore& 20-12-2020 & Aggiunto Processo di Fornitura \\
 	0.1.0 & Alessandro Chimetto		& Verificatore	& 15-12-2020 & Verificata Introduzione\\
-	0.1.0 & Valton Tahiraj 			& Redattore 	& 14-12-2020 & Aggiunto Introduzione \\
+	0.1.0 & Valton Tahiraj 			& Amministratore& 14-12-2020 & Aggiunto Introduzione \\
 	0.0.0 & Alessandro Chimetto		& Verificatore	& 14-12-2020 & Verifica prima stesura\\
-	0.0.0 & Valton Tahiraj 			& Redattore 	& 14-12-2020 & Prima stesura
+	0.0.0 & Valton Tahiraj 			& Amministratore& 14-12-2020 & Prima stesura
 }
 
 \begin{document}
@@ -41,79 +41,39 @@
 	% IL CONTENUTO INIZIA DA QUI
 	%
 	%--------------------------------
+
 	\section{Introduzione}
-		\subsection{Scopo del documento}
-		Il documento ha lo scopo di definire le guidelines del way of working adottato dal team lineCode. Le attività presenti in questo documento sono redatte da processi contenuti nello standard ISO/IEC 12207:1995. Risulta quindi necessario che tutti i membri del gruppo prendano visione di questo documento ai fini di coesione e uniformità all'interno del progetto.
+	\input{res/sez1_intro.tex}
+	\newpage
 
-		\subsection{Scopo del Prodotto}
-		Il \glock{capitolato} C5 ha come obbiettivo la realizzazione di un applicativo \glock{Real-Time} in grado di guidare delle unità dotate di mobilità autonoma in ambienti specifici, partendo dal presupposto che queste si muovano in ambienti in cui sono presenti altre unità (autonome o meno).
+	\section{Processi primari}
+	\input{res/sez2_1_fornitura.tex}
+	\newpage
 
-		\subsection{Glossario e documenti esterni}
-		In supporto alla documentazione viene fornito un glossario per chiarire, con una definizione, eventuali termini specifici contenuti in questo documento.
-		Saranno adottati quindi questi due simboli a pedice:
-		\begin{itemize}
-			\item \textit{D} se indicano un documento specifico;
-			\item \textit{G} se incluse nel \dext{glossario}.
-		\end{itemize}
+	\input{res/sez2_2_sviluppo.tex}
+	\newpage
 
-		\subsection{Riferimenti}
-			\subsubsection{Riferimenti Normativi}
-			\begin{itemize}
-				\item \textbf{{\glock{capitolato} C5 - PORTACS}}: \url{https://www.math.unipd.it/~tullio/IS-1/2020/Progetto/C5.pdf};
-			\end{itemize}
-			\subsubsection{Rifermenti informativi}
-			\begin{itemize}
-				\item \textbf{ISO/IEC 12207:1995}: \url{https://www.math.unipd.it/~tullio/IS-1/2009/Approfondimenti/ISO_12207-1995.pdf}
-				\item \textbf{Studio di Fattibilità}: ; %! da completare
-				\item \textbf{Piano di Qualifica}: ;
-				\item \textbf{Piano di Progetto}: .
-			\end{itemize}
+	\section{Processi di Supporto}
+	\input{res/sez3_1_documentazione.tex}
+	\newpage
 
+	\input{res/sez3_2_configurazione.tex}
+	\newpage
 
-			\newpage
+	\input{res/sez3_3_qualita.tex}
+	\newpage
 
-			\section{Processi primari}
+	\input{res/sez3_4_verifica.tex}
+	\newpage
 
-				\subsection{Fornitura}
+	\input{res/sez3_5_validazione.tex}
+	\newpage
 
-					\subsubsection{Obbiettivi}
-					L'obiettivo di questa sezione è descrivere le norme che il gruppo lineCode si impegna a rispettare per potersi proporre come fornitore nei confronti di Sanmarco Informatica SpA e dei committenti Prof. Tullio Vardanega e Prof. Riccardo Cardin per la progettazione, sviluppo e consegna del progetto \glock{portacs}
+	\section{Processi Organizzativi}
+	\input{res/sez4_1_gestione_processi.tex}
+	\newpage
 
-					\subsubsection{Attività}
-						\paragraph{Studio di fattibilità}
-					    	Documento che riporta lo studio svolto dagli analisti sui \glock{capitolati} proposti. Per ciascun \glock{capitolato} viene riportato:
-						 \begin{itemize}
-						 	\item \textbf{Descrizione:} sintesi del prodotto richiesto da sviluppare presentato nel \glock{capitolato};
-						 	\item \textbf{Finalità:} ambito di utilizzo del prodotto da sviluppare;
-						 	\item \textbf{Tecnologie interessate:} lista di tutte le tecnologie interessate nello sviluppo del prodotto;
-						 	\item \textbf{Analisi motivazione, criticità e rischi:} racchiude le motivazioni, le criticità e i rischi risultati dall'analisi del \glock{capitolato};
-						 	\item \textbf{Valutazione finale:} indica le motivazioni per le quali il \glock{capitolato} è stato respinto o accettato.
-						 \end{itemize}
-
-
-						\paragraph{Documentazione esterna}
-						 Il gruppo lineCode si impegna a fornire al proponente Sanmarco Informatica SpA e ai committenti Prof. Tullio Vardanega e Prof. Riccardo Cardin i seguenti documenti:
-						 \begin{itemize}
-						 	\item \textbf{Piano di progetto:} documento che descrive le metodologie di pianificazione, consegna e completamento del progetto;
-						 	\item \textbf{Piano di qualifica:} documento che contiene le attività di verifica, validazione e garantisce la qualità dei processi e di prodotto;
-						 	\item \textbf{Analisi dei requisiti:} documento contenente l'analisi dei requisiti e dei casi d'uso del gruppo.
-						 \end{itemize}
-
-					\subsubsection{Rapporto con il proponente}
-						Il gruppo intende instaurare un dialogo costante ed un profondo rapporto di collaborazione con il proponente Sanmarco Informatica SpA, al fine di:
-						\begin{itemize}
-							\item determinare i bisogni del proponente;
-							\item stabilire vincoli e  requisiti dei processi;
-							\item stabilire vincoli e requisiti del prodotto;
-							\item stimare tempistiche e costi del lavoro;
-							\item accordarsi sulla qualifica di prodotto;
-							\item chiarire eventuali dubbi emersi.
-						\end{itemize}
-
-
-
-
-
-
+	\input{res/sez4_2_formazione.tex}
+	\newpage
 \end{document}
 
