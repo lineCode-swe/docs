@@ -12,9 +12,9 @@
 
 \setTitle{Norme di Progetto}
 
-\setVersione{0.1.0}
+\setVersione{0.2.1}
 
-\setDate{15-12-2020}
+\setDate{21-12-2020}
 
 \setResponsabile{Paolo Scanferlato}
 
@@ -28,11 +28,13 @@
 \setUso{Interno}
 
 \setModifiche{
-	0.2.0 & Alessandro Chimetto		& Amministratore& 20-12-2020 & Aggiunto processo: Gestione della Configurazione\\
+	0.3.0 & Alessandro Chimetto		& Amministratore& 20-12-2020 & Aggiunto processo di Gestione della Configurazione\\
+	0.2.0 & Alessandro Chimetto		& Verificatore	& 21-12-2020 & Verificato Processo di Fornitura\\
+	0.2.0 & Valton Tahiraj 			& Amministratore& 20-12-2020 & Aggiunto Processo di Fornitura \\
 	0.1.0 & Alessandro Chimetto		& Verificatore	& 15-12-2020 & Verificata Introduzione\\
-	0.1.0 & Valton Tahiraj 			& Redattore 	& 14-12-2020 & Aggiunto Introduzione \\
+	0.1.0 & Valton Tahiraj 			& Amministratore& 14-12-2020 & Aggiunto Introduzione \\
 	0.0.0 & Alessandro Chimetto		& Verificatore	& 14-12-2020 & Verifica prima stesura\\
-	0.0.0 & Valton Tahiraj 			& Redattore 	& 14-12-2020 & Prima stesura
+	0.0.0 & Valton Tahiraj 			& Amministratore& 14-12-2020 & Prima stesura
 }
 
 \begin{document}
@@ -43,115 +45,38 @@
 	% IL CONTENUTO INIZIA DA QUI
 	%
 	%--------------------------------
+
 	\section{Introduzione}
-		\subsection{Scopo del documento}
-		Il documento ha lo scopo di definire le guidelines del way of working adottato dal team lineCode. Le attività presenti in questo documento sono redatte da processi contenuti nello standard ISO/IEC 12207:1995. Risulta quindi necessario che tutti i membri del gruppo prendano visione di questo documento ai fini di coesione e uniformità all'interno del progetto.
+	\input{res/sez1_intro.tex}
+	\newpage
 
-		\subsection{Scopo del Prodotto}
-		Il \glock{capitolato} C5 ha come obbiettivo la realizzazione di un applicativo \glock{Real-Time} in grado di guidare delle unità dotate di mobilità autonoma in ambienti specifici, partendo dal presupposto che queste si muovano in ambienti in cui sono presenti altre unità (autonome o meno).
+	\section{Processi primari}
+	\input{res/sez2_1_fornitura.tex}
+	\newpage
 
-		\subsection{Glossario e documenti esterni}
-		In supporto alla documentazione viene fornito un glossario per chiarire, con una definizione, eventuali termini specifici contenuti in questo documento.
-		Saranno adottati quindi questi due simboli a pedice:
-		\begin{itemize}
-			\item \textit{D} se indicano un documento specifico;
-			\item \textit{G} se incluse nel \dext{glossario}.
-		\end{itemize}
-
-		\subsection{Riferimenti}
-			\subsubsection{Riferimenti Normativi}
-			\begin{itemize}
-				\item \textbf{{\glock{capitolato} C5 - PORTACS}}: \url{https://www.math.unipd.it/~tullio/IS-1/2020/Progetto/C5.pdf};
-			\end{itemize}
-			\subsubsection{Rifermenti informativi}
-			\begin{itemize}
-				\item \textbf{ISO/IEC 12207:1995}: \url{https://www.math.unipd.it/~tullio/IS-1/2009/Approfondimenti/ISO_12207-1995.pdf}
-				\item \textbf{Semantic Versioning 2.0.0}: \url{https://semver.org/spec/v2.0.0.html}.
-				\item \textbf{\dext{Studio di Fattibilità}};
-				\item \textbf{\dext{Piano di Qualifica}};
-				\item \textbf{\dext{Piano di Progetto}}.
-			\end{itemize}
-
+	\input{res/sez2_2_sviluppo.tex}
 	\newpage
 
 	\section{Processi di Supporto}
-		\subsection{Gestione della Configurazione}
-			\subsubsection{Obiettivi}
-			Si vuole creare un ambiente di lavoro che sia comune a tutti i partecipanti al progetto e che permetta di applicare procedure amministrative e tecniche per tutta la durata del ciclo di vita del software. Più nello specifico si vuole consentire al programmatore di apportare modifiche al software e alla documentazione in modo asincrono rispetto agli altri membri del gruppo di lavoro. Per avere memoria storica delle modifiche effettuate, si vuole che queste vengano tracciate dall'ambiente di lavoro. In particolare, è d'interesse conoscere per ogni modifica:
-			\begin{itemize}
-				\item quale modifica è stata apportata;
-				\item perché la modifica è stata apportata;
-				\item quando è avvenuta la modifica;
-				\item chi ha effettuato la modifica;
-				\item in che parte del documento la modifica agisce.
-			\end{itemize}
-			Si vuole, inoltre, fare in modo che la modifica venga apportata solo se prima verificata da un verificatore di cui dovrà essere tracciata l'attività di verifica dall'ambiente di lavoro. Si vuole, infine, fare in modo che il responsabile possa monitorare l'andamento del progetto tramite sistemi di reportistica.
+	\input{res/sez3_1_documentazione.tex}
+	\newpage
 
-			\subsubsection{Documentazione come Software}
-			Per favorire la tracciabilità delle modifiche alla documentazione, quest'ultima sarà costruita in linguaggio \glock{\LaTeX}\ e dunque le norme applicate a questo processo concernenti il software saranno applicate in egual modo alla documentazione tranne dove specificato diversamente in modo esplicito.
+	\input{res/sez3_2_configurazione.tex}
+	\newpage
 
-			\subsubsection{Strumenti di supporto}
-			Gli strumenti utilizzati per garantire il \glock{workflow} sono:
-			\begin{itemize}
-				\item \textbf{\glock{git}}: come \glock{DVCS};
-				\item \textbf{\glock{GitHub}}: per \glock{repository} remota, \glock{pull-request}, \glock{code-review} e \glock{CI} tramite \glock{GitHub Action};
-				\item \textbf{\glock{GitKraken}}: come client git locale utilizzato da tutti i membri del gruppo;
-				\item \textbf{\glock{Discord}}: come sistema di messaggistica e videoconferenza fra i membri del gruppo;
-				\item \textbf{\glock{Zapier}}: per implementare automazioni fra \glock{GitHub} e \glock{Discord}.
-			\end{itemize}
+	\input{res/sez3_3_qualita.tex}
+	\newpage
 
-			\subsubsection{\glock{Workflow}}
-			L'amministratore configura e mantiene un Distributed Version Control System (o \glock{DVCS}) che metta a disposizione una \glock{repository} remota in cui sarà presente il software. Sulla repository verrà effettuato un ciclo tale per cui ad ogni iterazione corrisponda l'integrazione di una nuova modifica. Ogni iterazione si compone dei seguenti passi:
-			\begin{enumerate}
-			\item il programmatore apporta la modifica in un \glock{branch} separato dal ramo principale, in modo asincrono rispetto ai colleghi; ogni \glock{commit} traccia le modifiche in modo conforme agli obiettivi;
-			\item completata la modifica, il programmatore crea una \glock{pull-request} per richiedere l'integrazione della sua modifica;
-			\item un'automazione (impostata inizialmente dall'amministratore) invia un messaggio nel sistema di messaggistica utilizzato dal gruppo di lavoro per avvisare i verificatori dell'avvenuta \glock{pull-request};
-			\item il verificatore prende in carico la \glock{pull-request} rispondendo al messaggio inviato dall'automazione ed eseguendo l'attività di verifica della modifica proposta; il programmatore non può aggiungere \glock{commit} al proprio \glock{branch} una volta che il verificatore comunica l'inizio della sua attività rispondendo al messaggio automatico (a meno di un accordo fra di essi);
-			\item nel caso in cui la modifica proposta non venga accettata, il verificatore utilizzerà il sistema di \glock{code-review} messo a disposizione dal \glock{VCS} per informare il programmatore sui cambiamenti da effettuare al fine di rendere la modifica adatta all'integrazione; il programmatore risponderà apportando i cambiamenti richiesti in un nuovo \glock{commit} sullo stesso \glock{branch};
-			\item qualora la modifica proposta sia ritenuta accettabile dal verificatore, questo effettuerà la procedura di \glock{merge} nel ramo principale ed eliminerà il ramo creato dal programmatore (entrambe le operazioni vengono tracciate dal \glock{VCS});
-			\item un'automazione, parte del sistema di Continuous Integration (o \glock{CI}), specifica per il prodotto contenuto nella repository, verrà eseguita automaticamente sul ramo principale per verificare che l'integrazione tramite \glock{merge} sia andata a buon fine con controlli automatici e report.
-			\end{enumerate}
+	\input{res/sez3_4_verifica.tex}
+	\newpage
 
-			\subsubsection{Codice di Versionamento}
-			Si utilizza il seguente codice:
-			\[
-				\text{v}[\alpha].[\beta].[\gamma]
-			\]
-			\begin{itemize}
-				\item \([\alpha]\): parte da 0 e non si resetta mai;
-				\item \([\beta]\): parte da 0 e si resetta solo ad incrementi di \([\alpha]\);
-				\item \([\gamma]\): parte da 0 e si resetta solo ad incrementi di \([\alpha]\) o \([\beta]\).
-			\end{itemize}
-			Il codice assume significato diverso in caso si tratti di documentazione o software:
-			\begin{itemize}
-				\item documentazione:
-				\begin{itemize}
-					\item \([\alpha]\): numero identificativo del rilascio del documento; viene incrementato solo dal responsabile a seguito di una approvazione quando il documento è pronto per essere rilasciato;
-					\item \([\beta]\): avanzamento rispetto alle sezioni; viene incrementato dal programmatore quando aggiunge una nuova sezione al documento;
-					\item \([\gamma]\): avanzamento rispetto a piccole migliorie; viene incrementato dal programmatore quando svolge piccole correzioni ortografiche o di sintassi in \LaTeX.
-				\end{itemize}
+	\input{res/sez3_5_validazione.tex}
+	\newpage
 
-				\item software:
-				\begin{itemize}
-					\item \([\alpha]\): numero identificativo della \glock{major release}; viene incrementato solo dopo aver implementato tutti i requisiti obbligatori;
-					\item \([\beta]\): numero identificativo della \glock{minor release}; viene incrementato solo dopo l'implementazione di uno o più requisiti;
-					\item \([\gamma]\): numero identificativo della \glock{patch}; viene incrementato in seguito a piccole modifiche (es. risoluzione di piccoli errori).
-					\end{itemize}
-			\end{itemize}
+	\section{Processi Organizzativi}
+	\input{res/sez4_1_gestione_processi.tex}
+	\newpage
 
-			\subsubsection{\glock{Repository} e relativa struttura}
-			Ogni repository, sulla propria \glock{root}, contiene:
-			\begin{itemize}
-				\item \verb!.gitignore!: vi sono specificati tutti i file (o tipi di file) che non devono essere tracciati dal sistema di versionamento (es. file eseguibili);
-				\item \verb!.github!: contiene file di configurazione specifici per \glock{GitHub} come le configurazioni per \glock{GitHub Action}.
-			\end{itemize}
-			Specifiche repository possiedono una struttura specifica:
-				\paragraph{docs}
-				Contiene la documentazione del progetto e si compone delle seguenti cartelle:
-				\begin{itemize}
-					\item \verb!commons/!: contiene configurazioni e risorse comuni a tutti i documenti;
-					\item \verb!esterni/!: contiene tutta la documentazione esterna;
-					\item \verb!interni/!: contiene tutta la documentazione interna.
-				\end{itemize}
-
+	\input{res/sez4_2_formazione.tex}
+	\newpage
 \end{document}

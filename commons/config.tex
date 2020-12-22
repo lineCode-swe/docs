@@ -91,3 +91,18 @@
 \newcommand{\dext}[1]{\textsc{#1\textsubscript{\textit{D}}}}
 
 \newcommand{\glock}[1]{\textsc{#1\textsubscript{\textit{G}}}}
+
+%--------------------------------------------------
+% Comandi per impostare sottotitoli di quarto e quinto livello
+%--------------------------------------------------
+
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{4}
+
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}{0pt}{2.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+\titleformat{\subparagraph}
+{\normalfont\normalsize\bfseries}{\thesubparagraph}{1em}{}
+\titlespacing*{\subparagraph}{0pt}{1.75ex plus 1ex minus .2ex}{.75ex plus .1ex}
