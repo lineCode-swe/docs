@@ -1,0 +1,115 @@
+\subsection{Sviluppo}
+
+	\subsubsection{Scopo}
+	Questa sezione raccoglie le linee guida per i compiti e le attività da svolgere al fine di ottenere il prodotto finale richiesto dal proponente. \\
+	Per implementare correttamente il processo si devono stabilire i seguenti punti:
+	\begin{itemize}
+		\item obbiettivi di sviluppo;
+		\item vincoli tecnologici e di design.
+	\end{itemize}
+	Il prodotto finale deve rispettare i requisiti, superare i test definiti e soddisfare le richieste del proponente.
+	\subsubsection{Descrizione}
+	Secondo lo standard ISO/IEC 12207:1995, il processo di sviluppo si divide in:
+	\begin{itemize}
+		\item Analisi dei Requisiti;
+		\item Progettazione;
+		\item Codifica.
+	\end{itemize}
+			
+	\subsubsection{Attività}
+				
+		\paragraph{Analisi dei requisiti}
+			\subparagraph{Scopo}
+			Il compito degli analisti è quello di redigere il documento di Analisi dei Requisiti, che andrà ad elencare e definire i requisiti del \glock{capitolato}. Lo scopo dei requisiti è quello di:
+			\begin{itemize}
+				\item descrivere il prodotto da realizzare;
+				\item rendere disponibili ai progettisti riferimenti precisi;
+				\item esprimere casi d'uso e requisiti concordati;
+				\item rendere disponibili ai verificatori riferimenti per il controllo dei test;
+				\item ragionare sul lavoro richiesto per produrre una stima dei costi.
+			\end{itemize}
+			\subparagraph{Classificazione dei requisiti}
+			Ogni requisito sarà associato ad un identificativo che rispetterà il seguente formato:
+			\begin{center}
+				\textbf{R[Priorità]-[Categoria]-[Codice]}
+			\end{center}
+			\begin{itemize}
+				\item \textbf{R:} requisito;
+				\item \textbf{Priorità:}
+				\begin{itemize}
+					\item \textbf{M:} mandatory/obbligatorio, quindi necessario a garantire le funzioni base del prodotto;
+					\item \textbf{D:} desirable/desiderabile, cioè non strettamente necessario, ma che porta alla completezza del prodotto;
+					\item \textbf{O:} optional/opzionale, quindi che non pregiudica la funzionalità del prodotto finale.
+				\end{itemize}
+				\item \textbf{Categoria:}
+				\begin{itemize}
+					\item \textbf{F:} functional/funzionale;
+					\item \textbf{P:} performance/prestazionale;
+					\item \textbf{Q:} qualitative/qualitativo;
+					\item \textbf{C:} constraint/vincolo.
+				\end{itemize}
+				\item \textbf{Codice:} numero progressivo per riconoscere univocamente il requisito.
+			\end{itemize}
+			\subparagraph{Classificazione dei casi d'uso}
+			Come per i requisiti, si prevede di identificare univocamente i casi d'uso con il seguente formato:
+			\begin{center}
+				\textbf{UC[Codice]}
+			\end{center}
+			\begin{itemize}
+				\item \textbf{UC:} use case/caso d'uso;
+				\item \textbf{Codice:} serie di cifre separate da ’.’ così da poter dividere in modo gerarchico i casi e sotto casi.
+			\end{itemize}
+			Oltre all'identificativo, ogni caso d'uso verrà approfondito dai seguenti campi:
+			\begin{itemize}
+				\item \textbf{Descrizione:} breve spiegazione della situazione modellata;
+				\item \textbf{Grafici UML:} diagrammi realizzati usando la versione 2.0 del linguaggio;
+				\item \textbf{Attori:} gli attori primari e secondari coinvolti;
+				\item \textbf{Scenario Principale:} elenco numerato degli eventi descritti dal caso d'uso;
+				\item \textbf{Precondizione:} condizioni che si assumono vere prima che si verifichino gli eventi descritti dal caso d'uso;
+				\item \textbf{Postcondizione:} condizioni che si assumono vere dopo che si sono verificati gli eventi descritti dal caso d'uso;
+				\item eventuali estensioni ed inclusioni coinvolte.
+			\end{itemize}
+					
+			\paragraph{Progettazione}
+			\subparagraph{Scopo}
+			Mentre l'Analisi dei Requisiti divide il problema in parti per capirne completamente il dominio applicativo, la Progettazione rimette insieme tali parti specificandone le funzionalità in modo da realizzare l'architettura che il prodotto finale dovrà seguire. Questa dovrà seguire i seguenti principi:
+			\begin{itemize}
+				\item rispetto di tutti i requisiti;
+				\item affidabilità nello svolgere i propri compiti;
+				\item possibilità e facilità di garantire la manutenzione nel tempo;
+				\item essere sicura rispetto ad intrusioni e malfunzionamenti;
+				\item avere componenti coese, incapsulate e con scarse dipendenze tra loro.
+			\end{itemize}
+			\subparagraph{Descrizione}
+			Possiamo dividere questa fase in due istanze principali:
+			\begin{itemize}
+				\item \textbf{Technology Baseline:} contenente le specifiche della progettazione ad alto livello del prodotto, i diagrammi UML utilizzati per la realizzazione dell'architettura ed i test di verifica;
+				\item \textbf{Product Baseline:} approfondisce ulteriormente l'attività di progettazione, integrando la Technology Baseline, inoltre a definire i test necessari alla verifica.
+			\end{itemize}
+			\subparagraph{Technology Baseline}
+			Le componenti principali che individuiamo sono:
+			\begin{itemize}
+				\item diagrammi UML, utilizzati per rendere più chiare le soluzioni progettuali utilizzate, possono essere diagrammi di classi, package, attività o sequenza;
+				\item descrizione delle tecnologie adottate, specificandone l'utilizzo nel progetto, i vantaggi e gli svantaggi;
+				\item design patterns per adottare opportune soluzioni progettuali a problemi ricorrenti;
+				\item test di integrazione, per verificare che ogni componente del sistema funzioni nella maniera voluta.
+			\end{itemize} 
+			\subparagraph{Product Baseline}
+			Gli aspetti principali su cui soffermarsi sono:
+			\begin{itemize}
+				\item definizione delle classi e loro descrizione per scopo e funzionalità;
+				\item tracciamento delle classi, in modo che ogni per requisito esista una classe che lo soddisfa;
+				\item test di unità, definiti in modo da verificare che le parti funzionino individualmente nel modo stabilito.
+			\end{itemize} 
+					
+			\paragraph{Codifica}
+			\subparagraph{Scopo}
+			Questa fase ha lo scopo di realizzare il prodotto software richiesto. I programmatori dovranno attenersi a queste norme durante la fase di programmazione ed implementazione.
+			\subparagraph{Descrizione}
+			La scrittura del codice dovrà rispettare delle linee guida in modo da ottenere codice leggibile ed uniforme per i programmatori, ed agevolare poi le fasi di manutenzione, verifica e validazione. \\
+			Le convenzioni principali comprendono:
+			\begin{itemize}
+				\item regole per la dichiarazione e la denominazione di variabili e funzioni;
+				\item definizione degli standard di indentazione, spazi e commenti;
+				\item prassi e principi di programmazione.
+			\end{itemize}
