@@ -1,0 +1,441 @@
+
+Nelle varie sezioni di questo capitolo è riportato il preventivo suddiviso per le fasi di lavoro del progetto con un riepilogo finale.\\
+\\Le 5 fasi previste sono:
+\begin{enumerate}
+	\item Analisi dei requisiti;
+	\item Analisi di dettaglio;
+	\item Progettazione architetturale;
+	\item Progettazione di dettaglio e codifica;
+	\item Validazione.
+\end{enumerate}
+Ognuna di esse è specificata come segue:
+\begin{itemize}
+	\item tabella riepilogativa delle ore per ruolo/persona;
+	\item grafico a barre delle ore svolte dai membri del gruppo nei vari ruoli;
+	\item tabella del prospetto economico suddiviso per ruoli;
+	\item grafico a torta del costo suddiviso per ruoli.
+\end{itemize}
+In molte delle tabelle e figure proposte, i ruoli sono stati abbreviati in questo modo:
+\begin{itemize}
+	\item \textbf{Re}: Responsabile;
+	\item \textbf{Am}: Amministratore;
+	\item \textbf{An}: Analista;
+	\item \textbf{Pg}: Progettista;
+	\item \textbf{Pr}: Programmatore;
+	\item \textbf{Ve}: Verificatore.
+\end{itemize}
+
+\newpage
+
+\subsection{Analisi dei requisiti}
+	
+	\subsubsection{Prospetto orario}
+			
+		\begin{table} [h!]
+			\rowcolors{2}{gray!25}{gray!6}
+			\begin{center}
+				\begin{tabular} { m{3.5cm} c c c c c c c }
+					\rowcolor{lightgray}
+					\textbf{Nome} & \textbf{Re} & \textbf{Am} & \textbf{An} & \textbf{Pg} & \textbf{Pr} & \textbf{Ve} & \textbf{Totale} \\
+					Matteo Alba & & 8 & 8 & & & 10 & \textbf{26} \\
+					Giacomo Bulbarelli & 7 & 6 & 8 & & & 5 & \textbf{26} \\
+					Alessandro Chimetto & 7 & & 11 & & & 8 & \textbf{26} \\
+					Alessandro Dindinelli & & 4 & 12 & & & 10 & \textbf{26} \\
+					Lucia Fenu & 5 & 6 & 5 & & & 10 & \textbf{26} \\
+					Paolo Scanferlato & & 7 & 11 & & & 8 & \textbf{26} \\
+					Valton Tahiraj & 6 & 5 & 7 & & & 8 & \textbf{26} \\
+					\textbf{Ore totali Ruolo} & \textbf{25} & \textbf{36} & \textbf{62} & \textbf{} & \textbf{}& \textbf{59} & \textbf{182}
+				\end{tabular}
+				\caption{Analisi dei requisiti - ore per persona/ruolo}
+			\end{center}
+		\end{table}
+
+		\begin{figure} [h!]
+			\centering
+			\includegraphics[width=0.8\textwidth]{res/img/grafici/analisi_dei_requisiti_ore_ruolo.jpg}
+			\caption{Analisi dei requisiti - ore di suddivisione dei ruoli} 
+		\end{figure}
+
+	\newpage
+
+	\subsubsection{Prospetto economico}
+
+		\begin{table} [h!] % QUESTA RICHIEDE \usepackage{eurosym} IN config.tex
+			\rowcolors{2}{gray!25}{gray!6}
+			\begin{center}
+				\begin{tabular} { m{3cm} >{\centering}m{1.5cm} c }
+					\rowcolor{lightgray}
+					\textbf{Ruolo} & \textbf{Ore} & \textbf{Costo in \euro} \\
+					Responsabile & 25 & 750,00 \\
+					Amministratore & 36 & 720,00 \\
+					Analista & 62 & 1550,00 \\
+					Progettista & & \\
+					Programmatore & & \\
+					Verificatore & 59 & 885,00 \\
+					\textbf{Totale} & \textbf{182} & \textbf{3905,00} \\
+				\end{tabular}
+				\caption{Analisi dei requisiti - costo per ruolo}
+			\end{center}
+		\end{table}
+	
+		\begin{figure} [h!]
+			\centering
+			\includegraphics[width=0.8\textwidth]{res/img/grafici/analisi_dei_requisiti_costi.jpg}
+			\caption{Analisi dei requisiti - costo per ruolo} 
+		\end{figure}
+
+\newpage
+
+\subsection{Analisi di dettaglio}
+
+	\subsubsection{Prospetto orario}
+	
+		\begin{table} [h!]
+			\rowcolors{2}{gray!25}{gray!6}
+			\begin{center}
+				\begin{tabular} { m{3.5cm} c c c c c c c }
+					\rowcolor{lightgray}
+					\textbf{Nome} & \textbf{Re} & \textbf{Am} & \textbf{An} & \textbf{Pg} & \textbf{Pr} & \textbf{Ve} & \textbf{Totale} \\
+					Matteo Alba & 2 & & & & & 4 & \textbf{6} \\
+					Giacomo Bulbarelli & & 2 & 4 & & & & \textbf{6} \\
+					Alessandro Chimetto & & 5 & 1 & & & & \textbf{6} \\
+					Alessandro Dindinelli & 3 & & 1 & & & 2 & \textbf{6} \\
+					Lucia Fenu & & & 4 & & & 2 & \textbf{6} \\
+					Paolo Scanferlato & 1 & & 1 & & & 4 & \textbf{6} \\
+					Valton Tahiraj & & & 3 & & & 3 & \textbf{6} \\
+					\textbf{Ore totali Ruolo} & \textbf{6} & \textbf{7} & \textbf{14} & \textbf{} & \textbf{}& \textbf{15} & \textbf{42}
+				\end{tabular}
+				\caption{Analisi di dettaglio - ore per persona/ruolo}
+			\end{center}
+		\end{table}
+	
+		\begin{figure} [h!]
+			\centering
+			\includegraphics[width=0.8\textwidth]{res/img/grafici/consolidamento_dei_requisiti_ore_ruolo.jpg}
+			\caption{Analisi di dettaglio - ore di suddivisione dei ruoli} 
+		\end{figure}
+		
+	\newpage
+
+	\subsubsection{Prospetto economico}
+	
+		\begin{table} [h!] % QUESTA RICHIEDE \usepackage{eurosym} IN config.tex
+			\rowcolors{2}{gray!25}{gray!6}
+			\begin{center}
+				\begin{tabular} { m{3cm} >{\centering}m{1.5cm} c }
+					\rowcolor{lightgray}
+					\textbf{Ruolo} & \textbf{Ore} & \textbf{Costo in \euro} \\
+					Responsabile & 6 & 180,00 \\
+					Amministratore & 7 & 140,00 \\
+					Analista & 14 & 350,00 \\
+					Progettista & & \\
+					Programmatore & & \\
+					Verificatore & 15 & 225,00 \\
+					\textbf{Totale} & \textbf{42} & \textbf{895,00} \\
+				\end{tabular}
+				\caption{Analisi di dettaglio - costo per ruolo}
+			\end{center}
+		\end{table}
+	
+		\begin{figure} [h!]
+			\centering
+			\includegraphics[width=0.8\textwidth]{res/img/grafici/consolidamento_dei_requisiti_costi.jpg}
+			\caption{Analisi di dettaglio - costo per ruolo} 
+		\end{figure}
+
+\newpage
+
+\subsection{Progettazione Architetturale}
+
+	\subsubsection{Prospetto orario}
+
+		\begin{table} [h!]
+			\rowcolors{2}{gray!25}{gray!6}
+			\begin{center}
+				\begin{tabular} { m{3.5cm} c c c c c c c }
+					\rowcolor{lightgray}
+					\textbf{Nome} & \textbf{Re} & \textbf{Am} & \textbf{An} & \textbf{Pg} & \textbf{Pr} & \textbf{Ve} & \textbf{Totale} \\
+					Matteo Alba & 8 & & 5 & 3 & 5 & 6 & \textbf{27} \\
+					Giacomo Bulbarelli & 3 & & 5 & 7 & 5 & 7 & \textbf{27} \\
+					Alessandro Chimetto & & 2 & 4 & 6 & 6 & 9 & \textbf{27} \\
+					Alessandro Dindinelli & 2 & 4 & & 7 & 7 & 7 & \textbf{27} \\
+					Lucia Fenu & & 2 & 2 & 7 & 7 & 9 & \textbf{27} \\
+					Paolo Scanferlato & 2 & 3 & 3 & 6 & 4 & 9 & \textbf{27} \\
+					Valton Tahiraj & & 3 & 4 & 3 & 6 & 11 & \textbf{27} \\
+					\textbf{Ore totali Ruolo} & \textbf{15} & \textbf{14} & \textbf{23} & \textbf{39} & \textbf{40}& \textbf{58} & \textbf{189}
+				\end{tabular}
+				\caption{Progettazione architetturale - ore per persona/ruolo}
+			\end{center}
+		\end{table}
+		
+		\begin{figure} [h!]
+			\centering
+			\includegraphics[width=0.8\textwidth]{res/img/grafici/progettazione_architetturale_ore_ruolo.jpg}
+			\caption{Progettazione architetturale - ore di suddivisione dei ruoli} 
+		\end{figure}
+		
+	\newpage
+	
+	\subsubsection{Prospetto economico}
+	
+		\begin{table} [h!] % QUESTA RICHIEDE \usepackage{eurosym} IN config.tex
+			\rowcolors{2}{gray!25}{gray!6}
+			\begin{center}
+				\begin{tabular} { m{3cm} >{\centering}m{1.5cm} c }
+					\rowcolor{lightgray}
+					\textbf{Ruolo} & \textbf{Ore} & \textbf{Costo in \euro} \\
+					Responsabile & 15 & 450,00 \\
+					Amministratore & 14 & 280,00 \\
+					Analista & 23 & 575,00 \\
+					Progettista & 39 & 858,00 \\
+					Programmatore & 40 & 600,00 \\
+					Verificatore & 58 & 870,00 \\
+					\textbf{Totale} & \textbf{189} & \textbf{3633,00} \\
+				\end{tabular}
+				\caption{Progettazione architetturale - costo per ruolo}
+			\end{center}
+		\end{table}
+	
+		\begin{figure} [h!]
+			\centering
+			\includegraphics[width=0.8\textwidth]{res/img/grafici/progettazione_architetturale_costi.jpg}
+			\caption{Progettazione architetturale - costo per ruolo} 
+		\end{figure}
+	
+\newpage
+
+\subsection{Progettazione di dettaglio e Codifica}
+
+	\subsubsection{Prospetto orario}
+
+		\begin{table} [h!]
+			\rowcolors{2}{gray!25}{gray!6}
+			\begin{center}
+				\begin{tabular} { m{3.5cm} c c c c c c c }
+					\rowcolor{lightgray}
+					\textbf{Nome} & \textbf{Re} & \textbf{Am} & \textbf{An} & \textbf{Pg} & \textbf{Pr} & \textbf{Ve} & \textbf{Totale} \\
+					Matteo Alba & & 6 & & 17 & 17 & 11 & \textbf{51} \\
+					Giacomo Bulbarelli & & 6 & & 14 & 17 & 14 & \textbf{51} \\
+					Alessandro Chimetto & & 7 & & 14 & 17 & 13 & \textbf{51} \\
+					Alessandro Dindinelli & 5 & & 4 & 13 & 15 & 14 & \textbf{51} \\
+					Lucia Fenu & 5 & & 3 & 13 & 17 & 13 & \textbf{51} \\
+					Paolo Scanferlato & 4 & & 2 & 14 & 17 & 14 & \textbf{51} \\
+					Valton Tahiraj & 4 & & & 17 & 17 & 13 & \textbf{51} \\
+					\textbf{Ore totali Ruolo} & \textbf{18} & \textbf{19} & \textbf{9} & \textbf{102} & \textbf{117}& \textbf{92} & \textbf{357}
+				\end{tabular}
+				\caption{Progettazione di dettaglio e codifica - ore per persona/ruolo}
+			\end{center}
+		\end{table}
+	
+		\begin{figure} [h!]
+			\centering
+			\includegraphics[width=0.8\textwidth]{res/img/grafici/progettazione_di_dettaglio_e_codifica_ore_ruolo.jpg}
+			\caption{Progettazione di dettaglio e codifica - ore di suddivisione dei ruoli} 
+		\end{figure}
+	
+	\newpage
+	
+	\subsubsection{Prospetto economico}
+	
+		\begin{table} [h!] % QUESTA RICHIEDE \usepackage{eurosym} IN config.tex
+			\rowcolors{2}{gray!25}{gray!6}
+			\begin{center}
+				\begin{tabular} { m{3cm} >{\centering}m{1.5cm} c }
+					\rowcolor{lightgray}
+					\textbf{Ruolo} & \textbf{Ore} & \textbf{Costo in \euro} \\
+					Responsabile & 18 & 540,00 \\
+					Amministratore & 19 & 380,00 \\
+					Analista & 9 & 225,00 \\
+					Progettista & 102 & 2244,00 \\
+					Programmatore & 117 & 1755,00 \\
+					Verificatore & 92 & 1380,00 \\
+					\textbf{Totale} & \textbf{357} & \textbf{6524,00} \\
+				\end{tabular}
+				\caption{Progettazione di dettaglio e codifica - costo per ruolo}
+			\end{center}
+		\end{table}
+	
+		\begin{figure} [h!]
+			\centering
+			\includegraphics[width=0.8\textwidth]{res/img/grafici/progettazione_di_dettaglio_e_codifica_costi.jpg}
+			\caption{Progettazione di dettaglio e codifica - costo per ruolo} 
+		\end{figure}
+	
+\newpage
+
+\subsection{Validazione e Collaudo}
+
+	\subsubsection{Prospetto orario}
+
+		\begin{table} [h!]
+			\rowcolors{2}{gray!25}{gray!6}
+			\begin{center}
+				\begin{tabular} { m{3.5cm} c c c c c c c }
+					\rowcolor{lightgray}
+					\textbf{Nome} & \textbf{Re} & \textbf{Am} & \textbf{An} & \textbf{Pg} & \textbf{Pr} & \textbf{Ve} & \textbf{Totale} \\
+					Matteo Alba & & & & 5 & 5 & 13 & \textbf{23} \\
+					Giacomo Bulbarelli & 4 & & & 3 & 8 & 8 & \textbf{23} \\
+					Alessandro Chimetto & 7 & & & 5 & 5 & 6 & \textbf{23} \\
+					Alessandro Dindinelli & & 4 & & 5 & 5 & 9 & \textbf{23} \\
+					Lucia Fenu & 2 & 6 & & 3 & 2 & 10 & \textbf{23} \\
+					Paolo Scanferlato & 2 & 4 & & 5 & 6 & 6 & \textbf{23} \\
+					Valton Tahiraj & & 8 & & 5 & 6 & 4 & \textbf{23} \\
+					\textbf{Ore totali Ruolo} & \textbf{15} & \textbf{22} & \textbf{} & \textbf{31} & \textbf{37}& \textbf{56} & \textbf{161}
+				\end{tabular}
+				\caption{Validazione e collaudo - ore per persona/ruolo}
+			\end{center}
+		\end{table}
+	
+		\begin{figure} [h!]
+			\centering
+			\includegraphics[width=0.8\textwidth]{res/img/grafici/validazione_e_collaudo_ore_ruolo.jpg}
+			\caption{Validazione e collaudo - ore di suddivisione dei ruoli} 
+		\end{figure}
+	
+	\newpage
+	
+	\subsubsection{Prospetto economico}
+	
+		\begin{table} [h!] % QUESTA RICHIEDE \usepackage{eurosym} IN config.tex
+			\rowcolors{2}{gray!25}{gray!6}
+			\begin{center}
+				\begin{tabular} { m{3cm} >{\centering}m{1.5cm} c }
+					\rowcolor{lightgray}
+					\textbf{Ruolo} & \textbf{Ore} & \textbf{Costo in \euro} \\
+					Responsabile & 15 & 450,00 \\
+					Amministratore & 22 & 440,00 \\
+					Analista & & \\
+					Progettista & 31 & 682,00 \\
+					Programmatore & 37 & 555,00 \\
+					Verificatore & 56 & 840,00 \\
+					\textbf{Totale} & \textbf{161} & \textbf{2967,00} \\
+				\end{tabular}
+				\caption{Validazione e Collaudo - costo per ruolo}
+			\end{center}
+		\end{table}
+	
+		\begin{figure} [h!]
+			\centering
+			\includegraphics[width=0.8\textwidth]{res/img/grafici/validazione_e_collaudo_costi.jpg}
+			\caption{Validazione e Collaudo - costo per ruolo} 
+		\end{figure}
+	
+\newpage
+
+\subsection{Riepilogo}
+
+	\subsubsection{Prospetto orario totale di investimento}
+
+		\begin{table} [h!]
+			\rowcolors{2}{gray!25}{gray!6}
+			\begin{center}
+				\begin{tabular} { m{3.5cm} c c c c c c c }
+					\rowcolor{lightgray}
+					\textbf{Nome} & \textbf{Re} & \textbf{Am} & \textbf{An} & \textbf{Pg} & \textbf{Pr} & \textbf{Ve} & \textbf{Totale} \\
+					Matteo Alba & 10 & 14 & 13 & 25 & 27 & 44 & \textbf{133} \\
+					Giacomo Bulbarelli & 14 & 14 & 17 & 24 & 30 & 34 & \textbf{133} \\
+					Alessandro Chimetto & 14 & 14 & 16 & 25 & 28 & 36 & \textbf{133} \\
+					Alessandro Dindinelli & 10 & 12 & 17 & 25 & 27 & 42 & \textbf{133} \\
+					Lucia Fenu & 12 & 14 & 14 & 23 & 26 & 44 & \textbf{133} \\
+					Paolo Scanferlato & 9 & 14 & 17 & 25 & 27 & 41 & \textbf{133} \\
+					Valton Tahiraj & 10 & 16 & 14 & 25 & 29 & 39 & \textbf{133} \\
+					\textbf{Ore totali Ruolo} & \textbf{79} & \textbf{98} & \textbf{108} & \textbf{172} & \textbf{194}& \textbf{280} & \textbf{931}
+				\end{tabular}
+				\caption{Ore totali per persona/ruolo}
+			\end{center}
+		\end{table}
+	
+		\begin{figure} [h!]
+			\centering
+			\includegraphics[width=0.8\textwidth]{res/img/grafici/ore_totali_di_investimento.jpg}
+			\caption{Ore totali di suddivisione dei ruoli} 
+		\end{figure}
+	
+	\newpage
+	
+	\subsubsection{Prospetto economico totale di investimento}
+	
+		\begin{table} [h!] % QUESTA RICHIEDE \usepackage{eurosym} IN config.tex
+			\rowcolors{2}{gray!25}{gray!6}
+			\begin{center}
+				\begin{tabular} { m{3cm} >{\centering}m{1.5cm} c }
+					\rowcolor{lightgray}
+					\textbf{Ruolo} & \textbf{Ore} & \textbf{Costo in \euro} \\
+					Responsabile & 79 & 2370,00 \\
+					Amministratore & 98 & 1960,00 \\
+					Analista & 108 & 2700,00 \\
+					Progettista & 172 & 3784,00 \\
+					Programmatore & 194 & 2910,00 \\
+					Verificatore & 280 & 4200,00 \\
+					\textbf{Totale} & \textbf{931} & \textbf{17924,00} \\
+				\end{tabular}
+				\caption{Costo totale per ruolo}
+			\end{center}
+		\end{table}
+	
+		\begin{figure} [h!]
+			\centering
+			\includegraphics[width=0.8\textwidth]{res/img/grafici/costi_totali_di_investimento.jpg}
+			\caption{Costi totali per ruolo} 
+		\end{figure}
+	
+	\newpage
+	
+	\subsubsection{Prospetto orario rendicontato}
+
+		\begin{table} [h!]
+			\rowcolors{2}{gray!25}{gray!6}
+			\begin{center}
+				\begin{tabular} { m{3.5cm} c c c c c c c }
+					\rowcolor{lightgray}
+					\textbf{Nome} & \textbf{Re} & \textbf{Am} & \textbf{An} & \textbf{Pg} & \textbf{Pr} & \textbf{Ve} & \textbf{Totale} \\
+					Matteo Alba & 8 & 6 & 5 & 25 & 27 & 30 & \textbf{101} \\
+					Giacomo Bulbarelli & 7 & 6 & 5 & 24 & 30 & 29 & \textbf{101} \\
+					Alessandro Chimetto & 7 & 9 & 4 & 25 & 28 & 28 & \textbf{101} \\
+					Alessandro Dindinelli & 7 & 8 & 4 & 25 & 27 & 30 & \textbf{101} \\
+					Lucia Fenu & 7 & 8 & 5 & 23 & 26 & 32 & \textbf{101} \\
+					Paolo Scanferlato & 8 & 7 & 5 & 25 & 27 & 29 & \textbf{101} \\
+					Valton Tahiraj & 4 & 11 & 4 & 25 & 29 & 28 & \textbf{101} \\
+					\textbf{Ore totali Ruolo} & \textbf{48} & \textbf{55} & \textbf{32} & \textbf{172} & \textbf{194}& \textbf{206} & \textbf{707}
+				\end{tabular}
+				\caption{Ore totali rendicontate per persona/ruolo}
+			\end{center}
+		\end{table}
+	
+		\begin{figure} [h!]
+			\centering
+			\includegraphics[width=0.8\textwidth]{res/img/grafici/ore_rendicontate.jpg}
+			\caption{Ore rendicontate di suddivisione dei ruoli} 
+		\end{figure}
+	
+	\newpage
+	
+	\subsubsection{Prospetto economico rendicontato}
+	
+		\begin{table} [h!] % QUESTA RICHIEDE \usepackage{eurosym} IN config.tex
+			\rowcolors{2}{gray!25}{gray!6}
+			\begin{center}
+				\begin{tabular} { m{3cm} >{\centering}m{1.5cm} c }
+					\rowcolor{lightgray}
+					\textbf{Ruolo} & \textbf{Ore} & \textbf{Costo in \euro} \\
+					Responsabile & 48 & 1440,00 \\
+					Amministratore & 55 & 1100,00 \\
+					Analista & 32 & 800,00 \\
+					Progettista & 172 & 3784,00 \\
+					Programmatore & 194 & 2910,00 \\
+					Verificatore & 206 & 3090,00 \\
+					\textbf{Totale} & \textbf{707} & \textbf{13124,00} \\
+				\end{tabular}
+				\caption{Prospetto economico rendicontato per ruolo}
+			\end{center}
+		\end{table}
+	
+		\begin{figure} [h!]
+			\centering
+			\includegraphics[width=0.8\textwidth]{res/img/grafici/costi_rendicontati.jpg}
+			\caption{Costi rendicontati per ruolo} 
+		\end{figure}
+	
+	\subsubsection{Conclusioni}
+	
+	Il costo totale a carico della Proponente è di \textbf{\euro \ 13124,00}.
