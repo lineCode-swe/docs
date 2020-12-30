@@ -1,0 +1,97 @@
+\subsection{Documentazione}
+
+	\subsubsection{Descrizione}
+	Questo capitolo descrive le linee guida decise dal gruppo per redigere, verificare e approvare tutti i documenti ufficiali, interni ed esterni, rilasciati durante tutto il ciclo di vita del prodotto software da sviluppare.
+
+	\subsubsection{Classificazione}
+	I documenti ufficiali prodotti saranno suddivisi in due classi principali relative all'uso che ne viene fatto:
+	\begin{enumerate}
+		\item \textbf{Interni}: possono essere visualizzati solo all'interno del gruppo;
+		\item \textbf{Esterni}: documenti ufficiali redatti a favore anche di chi non è parte del gruppo, come la Proponente ed i Committenti.
+	\end{enumerate}
+
+	\subsubsection{Ciclo di vita}
+	Tutti i documenti ufficiali dovranno attraversare 4 fasi:
+	\begin{enumerate}
+		\item \textbf{Creazione}: il documento viene creato utilizzando il template \textbf{template.tex} presente nella cartella dedicata della \glock{repository} remota e salvato con un nome che rispetti la regolamentazione descritta alla sezione Nomenclatura;
+		\item \textbf{Sviluppo}: i Redattori del documento, utilizzando il software \glock{TeXstudio}, aggiungono i contenuti assegnati in maniera incrementale modificando anche il numero di versione;
+		\item \textbf{Verifica}: i Verificatori controllano la correttezza dei contenuti e, se necessario, richiedono modifiche e/o integrazioni ai Redattori. Una volta terminata la fase di verifica sottopongono al Responsabile di Progetto il documento verificato;
+		\item \textbf{Approvazione}: il Responsabile di Progetto ratifica il completamento del documento aggiornando la versione alla major release successiva rendendolo pronto al rilascio.
+	\end{enumerate}
+
+	\subsubsection{Nomenclatura}
+	Ogni documento, durante le fasi di sviluppo e verifica, sarà all'interno di una cartella specifica e suddiviso in diversi file in formato \LaTeX:
+	\begin{itemize}
+		\item un file principale main.tex contente il frontespizio, il diario delle modifiche, l'indice e la struttura già suddivisa nelle varie sezioni previste del documento;
+		\item un file per ogni sezione pronto per essere importato nella posizione prevista del file principale.
+	\end{itemize}
+	Dopo l'approvazione del Responsabile di Progetto verrà convertito in formato \glock{PDF} e rinominato secondo le seguenti regole:
+	\begin{itemize}
+		\item \textbf{nome\_del\_documento\_}: ogni parola del nome, compresa l'ultima, verrà seguita dal carattere \glock{underscore} e verranno utilizzate solo lettere minuscole senza eventuali accenti;
+		\item \textbf{vX.Y.Z}: il carattere "v" sarà sempre presente e precederà il numero di versione del documento.
+	\end{itemize}
+	Per esempio, il nome di questo file potrebbe essere: norme\_di\_progetto\_v1.0.0\\	
+
+	\subsubsection{Norme strutturali}
+	I Redattori saranno obbligati ad utilizzare il template \textbf{template.tex} disponibile nella repository che preimposta il documento da produrre come segue:
+	\begin{itemize}
+		\item \textbf{Frontespizio}: la prima pagina di ogni documento contenente:
+			\begin{itemize}
+				\item logo del gruppo;
+				\item titolo del documento;
+				\item data di ultima modifica;
+				\item versione attuale;
+				\item classificazione, tipo d'uso (interno o esterno);
+				\item Redattori (in ordine alfabetico per cognome);
+				\item Verificatori (in ordine alfabetico per cognome);
+				\item Responsabile;
+			\end{itemize}
+		\item \textbf{Diario delle modifiche}: inizia nella seconda pagina di ogni documento; in formato tabellare specifica tutti gli aggiornamenti di versione (con data e autore) del documento in ordine cronologico inverso;
+		\item \textbf{Indice}: posto nella pagina successiva al diario delle modifiche, indica le varie sezioni del documento, numerando i capitoli e specificandone il numero di pagina in cui ognuno di essi inizia;
+		\item \textbf{Contenuto}: gli argomenti trattati dai redattori;
+		\item \textbf{Numero di pagina}: è presente al centro di ogni piè di pagina, tranne che nella prima.
+	\end{itemize}
+		
+	\subsubsection{Norme tipografiche}
+	Oltre alla struttura dei documenti, andranno rispettate anche le seguenti norme tipografiche:
+	\begin{itemize}
+		\item \textbf{Date}: scritte nel formato italiano, 2 cifre per il giorno, 2 cifre per il mese e 4 cifre per l'anno separati tra di loro dal carattere "-" (GG-MM-AAAA, esempio: 19-12-2020);
+		\item \textbf{Elenchi puntati e numerati}: ogni elemento termina con il ";", tranne l'ultimo, che conclude l'elenco con il ".";
+		\item \textbf{Termini nel Glossario}: tutti i termini presenti nel Glossario sono scritti in \textsc{maiuscoletto} e hanno a pedice una G maiuscola \glock{};
+		\item \textbf{Riferimento a documenti}: tutti i riferimenti a documenti sono scritti in \textsc{maiuscoletto} e hanno a pedice una D maiuscola \dext{};
+		\item \textbf{Link a pagine internet}: sono contornati da un riquadro azzurro e direttamente cliccabili nel documento.
+	\end{itemize}
+
+	\subsubsection{Lista documenti ufficiali}
+	La documentazione ufficiale del progetto è composta da 6 documenti di seguito descritti:
+	\begin{itemize}
+		\item \textbf{Analisi dei requisiti}(analisi\_dei\_requisiti\_vX.Y.Z.pdf, uso esterno): analizza ed espone i requisiti del prodotto richiesto dalla Proponente, classificandoli in \textbf{obbligatori}, \textbf{desiderabili} ed \textbf{opzionali}.
+		\item \textbf{Glossario}(glossario\_vX.Y.Z.pdf, uso esterno): un'unica raccolta dei termini presenti in tutti i documenti che potrebbero essere di difficile comprensione. È un documento esterno in quanto semplifica la lettura, da parte della Proponente e dei Committenti, della documentazione relativa al progetto;
+		\item \textbf{Norme di progetto}(norme\_di\_progetto\_vX.Y.Z.pdf, uso interno): specifica tutte le norme tenute dal gruppo di lavoro per l'intero sviluppo delle attività del progetto;
+		\item \textbf{Piano di progetto}(piano\_di\_progetto\_vX.Y.Z.pdf, uso esterno): descrive ai Committenti ed alla Proponente le modalità con cui vengono utilizzate le risorse umane e temporali nello svolgimento del progetto;
+		\item \textbf{Piano di qualifica}(piano\_di\_qualifica\_vX.Y.Z.pdf, uso esterno): illustra le modalità di lavoro del gruppo per il raggiungimento della qualità del progetto richiesta dalla Proponente;
+		\item \textbf{Studio di fattibilità}(studio\_di\_fattibilita\_vX.Y.Z.pdf, uso interno): mette in luce tutte le caratteristiche dei vari capitolati proposti, specificando il pensiero del gruppo su ognuno di questi e focalizzando le motivazioni della scelta finale. Non essendo utile alla Proponente, è un documento interno.
+	\end{itemize}
+
+	\subsubsection{Verbali delle riunioni}
+	All'inizio di ogni riunione il gruppo nominerà un redattore incaricato di redigere il verbale della stessa.
+	Come per gli altri documenti verrà utilizzato il template a disposizione e rispettate le norme tipografiche e strutturali alle quali si aggiunge il contenuto suddiviso nei seguenti tre punti:
+	\begin{enumerate}
+		\item \textbf{Introduzione}: comprende i dettagli tecnici della riunione:
+		\begin{itemize}
+			\item luogo dell'incontro o in caso di modalità telematica specifica la tecnologia utilizzata;
+			\item data;
+			\item ora di inizio e di fine;
+			\item presenti e assenti del gruppo (in ordine alfabetico per cognome);
+			\item eventuali ospiti come la Proponente o i Committenti suddivisi per ruolo e/o azienda;
+			\item ordine del giorno concordato nella riunione precedente ed eventuali integrazioni.
+		\end{itemize}
+		\item \textbf{Svolgimento}: specifica suddividendo in punti numerati gli argomenti discussi;
+		\item \textbf{Decisioni prese}: una tabella che riassume le decisioni prese dal gruppo assegnando ad ognuna di esse un identificativo univoco aggiungendo al nome del verbale un "." e un numero progressivo a partire da 1.
+	\end{enumerate}
+	Riguardo alla loro nomenclatura, saranno semplicemente nominati con una V maiuscola seguita da un numero progressivo di due cifre che partirà da 01 (esempi: V07 sarà il nome del settimo verbale, V07.2 sarà la seconda decisione presa durante la settima riunione svolta).\\
+	\\Questi particolari documenti saranno classificati come interni e una volta verificati ed approvati non potranno più essere aggiornati a nuove versioni trattando, nello specifico, eventi accaduti in un determinato momento e che non possono quindi cambiare.
+		
+	\subsubsection{Strumenti}
+	Per la stesura di tutti i documenti verrà utilizzato il formato \LaTeX\ v2e (\url{https://www.latex-project.org/})\\
+	Il software di editing sarà TeXstudio v3.0.1 (\url{https://texstudio.org/}), software \glock{open-source} compatibile con tutti i sistemi operativi utilizzati dal gruppo.\\Sarà, inoltre, obbligatorio attivare il correttore ortografico in italiano del software per ridurre al minimo gli eventuali errori di digitazione.
