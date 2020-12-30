@@ -12,3 +12,4 @@ Documents*
 
 ## File nascosti di macOS
 .DS_Store
+*.toc

@@ -1,0 +1,27 @@
+Il modello di ciclo di vita utilizzato è fortemente ispirato al modello
+incrementale. Lo sviluppo avviene per incrementi dove ogni incremento rilascia parte delle funzionalità richieste.
+\\\\
+I requisiti vengono inizialmente classificati in base alla loro priorità e viene
+creata un'architettura che permetta la successiva aggiunta di molteplici
+incrementi. Ciò permette di sviluppare fin da subito un insieme di funzionalità
+fondamentali e stabili. Segue il soddisfacimento di requisiti meno importanti e
+meno chiari che, nel tempo, riescono a stabilizzarsi ed integrarsi con quanto già
+realizzato.
+\\\\
+Il modello presenta i seguenti vantaggi:
+\begin{itemize}
+    \item ogni incremento può essere verificato prima dell'integrazione rendendo la verifica economica perché la parte già realizzata è stata precedentemente verificata;
+    \item ogni incremento rende disponibili nuove funzionalità e chiarisce i requisiti per incrementi successivi;
+    \item ad ogni incremento è possibile ricevere un feedback da committente o proponente;
+    \item una volta realizzato ed integrato, ogni incremento riduce la probabilità che il progetto fallisca.
+\end{itemize}
+
+\noindent
+Nonostante il modello incrementale non preveda che gli incrementi già realizzati
+possano subire successivi interventi correttivi o di raffinamento (come invece
+accadrebbe in un modello iterativo) e vista la mancanza di sufficiente esperienza
+in progetti software di tali dimensioni, il gruppo si riserva il diritto di
+effettuare iterazioni potenzialmente distruttive sul prodotto già realizzato.
+Questa pratica, che comunque viene considerata non desiderabile, verrà messa in
+atto solo dopo un eventuale feedback negativo da parte del proponente durante il
+confronto che segue la realizzazione di un iterazione.

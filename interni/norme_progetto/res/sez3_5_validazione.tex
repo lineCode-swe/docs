@@ -1,0 +1,48 @@
+		\section{Validazione}
+		\subsection{Scopo}
+		Il processo di \textbf{Validazione} mira a garantire che il prodotto rispetta le specifiche del committente. Esso consiste nell'esecuzione di test che producono dei risultati da confrontare con dei valori attesi.
+		
+		\subsection{Descrizione}
+		A seguito dell'esecuzione dei test su ciascuna delle componenti del prodotto, è possibile stabilire se il prodotto rispetta le specifiche, dipendentemente dal fatto che i risultati ottenuti corrispondano a quelli attesi o meno. 
+	
+		\subsection{Attività}
+		\subsubsection{Test}
+		Per rappresentare le specifiche dei \glock{test} si è deciso di utilizzare una forma tabellare che contiene:
+				\begin{itemize}
+					\item Codice identificativo del componente da testare
+					\item Descrizione del test
+					\item Stato di avanzamento, identificato nel modo seguente:
+						\begin{itemize}
+							\item \textbf{NI}: non implementato;
+							\item \textbf{I}: implementato.						
+						\end{itemize}		
+					\item Risultato del test, identificato nel modo seguente:
+						\begin{itemize}
+							\item \textbf{S}: superato;
+							\item \textbf{F}: fallito.
+						\end{itemize}
+						\textbf{N.B.}: il parametro relativo al risultato viene momentaneamente omesso in quanto superfluo.						 
+				\end{itemize}		
+		
+		\subsubsection{Test di accettazione}
+		I \glock{Test di accettazione} vengono classificati nella maniera seguente:
+		\begin{center}
+			\textbf{TA[Priorità]-[Categoria]-[Codice]}
+		\end{center}		 
+		dove:\\
+		\begin{itemize}
+			\item \textbf{Priorità}: indica la priorità del requisito associato al test, e può assumere valori quali:
+			\begin{itemize}
+				\item \textbf{M}: mandatory/obbligatorio;
+				\item \textbf{D}: desirable/desiderabile;
+				\item \textbf{O}: optional/opzionale, relativamente utile ed eventualmente trascurabile.
+			\end{itemize}
+			\item \textbf{Categoria}: indica la tipologia di requisito associato al test, e può assumere valori quali:
+			\begin{itemize}
+				\item \textbf{F}: functional/funzionale;
+				\item \textbf{P}: performance/prestazionale;
+				\item \textbf{Q}: qualitative/qualitativo;
+				\item \textbf{C}: constraint/vincolo.
+			\end{itemize}
+			\item \textbf{Codice}: intero positivo che identifica il singolo componente da testare. Ha valore di default 1.
+		\end{itemize}
