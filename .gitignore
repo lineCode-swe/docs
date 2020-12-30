@@ -1,6 +1,15 @@
-*.DS_Store
+## File risultanti dalla compilazione LaTeX
 *.aux
 *.log
 *.out
 *.pdf
 *.gz
+
+## File e cartelle risultanti dalla CI
+*.fls
+*.fdb_latexmk
+Documents*
+
+## File nascosti di macOS
+.DS_Store
+*.toc

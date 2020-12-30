@@ -1,0 +1,80 @@
+\documentclass[]{article}
+
+\input{../../commons/config}
+
+\appendToGraphicsPath{../../commons/res/}
+
+%------------------------------
+%
+% COMANDI DI CONFIGURAZIONE
+%
+%------------------------------
+
+\setTitle{Piano di Progetto}
+
+\setVersione{0.2.0}
+
+\setDate{26-12-2020}
+
+\setResponsabile{Paolo Scanferlato}
+
+\setRedattori{Alessandro Chimetto \\&
+	Alessandro Dindinelli}
+
+\setVerificatori{Alessandro Chimetto \\&
+	Alessandro Dindinelli}
+
+\setUso{Esterno}
+
+\setModifiche{
+	0.2.0 & Alessandro Dindinelli & Verificatore   & 27-12-2020 & Verificato Modello di Ciclo di Vita \\
+  	0.2.0 & Alessandro Chimetto   & Amministratore & 26-12-2020 & Aggiunto Modello di Ciclo di Vita \\
+  	0.1.0 & Alessandro Chimetto   & Verificatore   & 26-12-2020 & Verificata introduzione \\
+	0.1.0 & Alessandro Dindinelli & Amministratore & 26-12-2020 & Aggiunta Introduzione \\
+  	0.0.1 & Alessandro Chimetto   & Verificatore   & 24-12-2020 & Verifica prima stesura \\
+	0.0.1 & Alessandro Dindinelli & Amministratore & 22-12-2020 & Prima stesura}
+
+\begin{document}
+
+	\input{../../commons/template}
+	\newpage
+
+	%--------------------------------
+	%
+	% IL CONTENUTO INIZIA DA QUI
+	%
+	%--------------------------------
+
+	\section{Introduzione}
+	\input{res/sez1_intro.tex}
+	\newpage
+
+	\section{Analisi dei rischi}
+	\input{res/sez2_analisi_rischi.tex}
+	\newpage
+
+	\section{Modello di Sviluppo}
+	\input{res/sez3_modello_sviluppo.tex}
+	\newpage
+
+	\section{Pianificazione}
+	\input{res/sez4_pianificazione.tex}
+	\newpage
+
+	\section{Preventivo}
+	\input{res/sez5_preventivo.tex}
+	\newpage
+
+	\section{Consuntivo}
+	\input{res/sez6_consuntivo.tex}
+	\newpage
+
+	\section{Riscontro rischi}
+	\input{res/sez7_riscontro_rischi.tex}
+	\newpage
+
+	\section{Organigramma}
+	\input{res/sez8_organigramma.tex}
+	\newpage
+
+\end{document}
