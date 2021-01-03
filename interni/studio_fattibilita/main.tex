@@ -12,11 +12,11 @@
 
 \setTitle{Studio di Fattibilità}
 
-\setVersione{0.8.0}
+\setVersione{1.0.0}
 
-\setDate{18-12-2020}
+\setDate{03-01-2020}
 
-\setResponsabile{Paolo Scanferlato}
+\setResponsabile{Alessandro Chimetto}
 
 \setRedattori{
     Matteo Alba\\&
@@ -39,6 +39,7 @@
 
 \setModifiche{
 %%	Vers.	&	Nome					&	Ruolo		&	Data		&	Desrizione		  \\
+    1.0.0   &   Alessandro Chimetto &   Responsabile&   03-01-2020  &   Approvazione Documento\\
 	0.7.0	&	Alessandro Chimetto	&	Verificatore&	18-12-2020	&	Verificato studio C3\\
 	0.7.0	&	Matteo Alba			&	Redattore	&	18-12-2020	&	Aggiunto studio C3\\
 	0.6.0	&	Alessandro Chimetto		&	Verificatore&	17-12-2020	&	Verifica studio C4\\
@@ -66,7 +67,8 @@
 	%
 	%--------------------------------
 
-	%! INDICE
+	\tableofcontents
+    \newpage
 
 	\section{Introduzione}
 		\subsection{Scopo del documento}
@@ -84,30 +86,30 @@
 		\subsection{Riferimenti}
 			\subsubsection{Normativi}
 			\begin{itemize}
-				\item \textbf{\dext{Norme di Progetto}}
+				\item \textbf{\dext{Norme di Progetto v1.0.0}}
 			\end{itemize}
 
 			\subsubsection{Informativi}
 			\begin{itemize}
-				\item \textbf{\glock{Capitolato} C1 - BlockCOVID: supporto digitale al contrasto della pandemia} \\
-				(https://www.math.unipd.it/~tullio/IS-1/2020/Progetto/C1.pdf);
+				\item \textbf{\glock{Capitolato} C1 - BlockCOVID: supporto digitale al contrasto della pandemia}\\
+				(\url{https://www.math.unipd.it/~tullio/IS-1/2020/Progetto/C1.pdf});
 
-				\item \textbf{\glock{Capitolato} C2 - EmporioLambda: piattaforma di e-commerce in stile Serverless} \\
-				(https://www.math.unipd.it/~tullio/IS-1/2020/Progetto/C2.pdf);
+				\item \textbf{\glock{Capitolato} C2 - EmporioLambda: piattaforma di e-commerce in stile Serverless}\\
+				(\url{https://www.math.unipd.it/\~tullio/IS-1/2020/Progetto/C2.pdf});
 
-				\item \textbf{\glock{Capitolato} C3 - GDP: Gathering Detection Platform} \\ (https://www.math.unipd.it/~tullio/IS-1/2020/Progetto/C3.pdf);
+				\item \textbf{\glock{Capitolato} C3 - GDP: Gathering Detection Platform}\\ (\url{https://www.math.unipd.it/~tullio/IS-1/2020/Progetto/C3.pdf});
 
-				\item \textbf{\glock{Capitolato} C4 - HD Viz: visualizzazione di dati multidimensionali} \\
-				(https://www.math.unipd.it/~tullio/IS-1/2020/Progetto/C4.pdf);
+				\item \textbf{\glock{Capitolato} C4 - HD Viz: visualizzazione di dati multidimensionali}\\
+				(\url{https://www.math.unipd.it/~tullio/IS-1/2020/Progetto/C4.pdf});
 
-				\item \textbf{\glock{Capitolato} C5 - PORTACS: piattaforma di controllo mobilità autonoma} \\
-				(https://www.math.unipd.it/~tullio/IS-1/2020/Progetto/C5.pdf);
+				\item \textbf{\glock{Capitolato} C5 - PORTACS: piattaforma di controllo mobilità autonoma}\\
+				(\url{https://www.math.unipd.it/~tullio/IS-1/2020/Progetto/C5.pdf});
 
-				\item \textbf{\glock{Capitolato} C6 - RGP: Realtime Gaming Platform} \\
-				(https://drive.google.com/file/d/1MQ8j4plXMsKjBfLPrUfHCv\_6pfnjcU5T/view?usp=sharing);
+				\item \textbf{\glock{Capitolato} C6 - RGP: Realtime Gaming Platform}\\
+				(\url{https://drive.google.com/file/d/1MQ8j4plXMsKjBfLPrUfHCv\_6pfnjcU5T/view?usp=sharing});
 
-				\item \textbf{\glock{Capitolato} C7 - SSD: soluzioni di sincronizzazione desktop} \\
-				(https://www.math.unipd.it/~tullio/IS-1/2020/Progetto/C7.pdf)
+				\item \textbf{\glock{Capitolato} C7 - SSD: soluzioni di sincronizzazione desktop}\\
+				(\url{https://www.math.unipd.it/~tullio/IS-1/2020/Progetto/C7.pdf}).
 			\end{itemize}
 
 	\newpage
@@ -125,89 +127,92 @@
 			\subsubsection{Descrizione}
 			Il capitolato consiste nella creazione di un applicativo \glock{Real-Time} in grado di guidare delle unità dotate di mobilità autonoma in ambienti specifici, partendo dal presupposto che queste si muovano in ambienti in cui sono presenti altre unità (autonome o meno). In sede di presentazione sono stati riportati alcuni esempi di contesti in cui l'applicativo richiesto trova un senso di essere:
 			\begin{itemize}
-				\item Automobili a guida autonoma;
-				\item Mezzi di per lo stock di merci all'interno di grandi magazzini, anch'essi dotati di guida autonoma;
-				\item Robot autonomi per il servizio al tavolo nel contesto della ristorazione;
+				\item automobili a guida autonoma;
+				\item mezzi di per lo stock di merci all'interno di grandi magazzini, anch'essi dotati di guida autonoma;
+				\item robot autonomi per il servizio al tavolo nel contesto della ristorazione.
 			\end{itemize}
 
 			\subsubsection{Finalità}
-			Si vuole creare un applicativo che risulta diviso in:
+			Si vuole creare un applicativo che risulti diviso in:
 			\begin{itemize}
-				\item Unità
-				\item Sistema Centrale
+				\item unità;
+				\item sistema centrale.
 			\end{itemize}
 			Un unità rappresenta un singolo mezzo dotato di mobilità autonoma che si muove nel contesto, definito da una serie di dati quali:
 			 \begin{itemize}
-			 	\item ID di sistema
-			 	\item Velocità massima
-			 	\item Posizione iniziale
-			 	\item Lista ordinata dei \glock{POI} da visitare
+			 	\item ID di sistema;
+			 	\item velocità massima;
+			 	\item posizione iniziale;
+			 	\item lista ordinata dei \glock{POI} da visitare.
 			 \end{itemize}
 
 			Il Sistema-centrale si occupa di coordinare le singole unità, assicurandosi che ciascuna raggiunga la propria destinazione e che, nel farlo, non avvengano collisioni e siano rispettati dei vincoli imposti dall'ambiente in cui queste si muovono.
-			Esso sarà definito una mappatura dell'ambiente, potenzialmente partizionata in segmenti di dimensione fissa, e specificherà:
+			Esso sarà definito tramite una mappatura dell'ambiente, potenzialmente partizionata in segmenti di dimensione fissa, e specificherà:
 			\begin{itemize}
-				\item Percorrenze e relativi vincoli (sensi unici, numero massimo di unità contemporanee)
-				\item Definizione di \glock{POI}
+				\item percorrenze e relativi vincoli (sensi unici, numero massimo di unità contemporanee);
+				\item definizione di \glock{POI}.
 			\end{itemize}
 
 			\subsubsection{Tecnologie}
 			L'azienda non impone alcuna tecnologia specifica al gruppo da utilizzare in fase di sviluppo.
 			In fase di consegna viene però richiesto l'impiego di:
 			\begin{itemize}
-				\item \textsc{\glock{Docker}}: software per la creazione di \glock{Container} istanziabili
-				\item \textsc{\glock{GitHub}}: piattaforma per lo sviluppo asincrono attraverso il tool di versionamento \glock{Git}
+				\item \textsc{\glock{Docker}}: software per la creazione di \glock{Container} istanziabili;
+				\item \textsc{\glock{GitHub}}: piattaforma per lo sviluppo asincrono attraverso il tool di versionamento \glock{Git}.
 			\end{itemize}
 
 			\subsubsection{Linguaggi di programmazione}
 			L'azienda non impone alcun linguaggio di programmazione al gruppo da utilizzare durante la fase di sviluppo.
 
 			\subsubsection{Vincoli di progetto}
-			Il progetto impone dei vincoli sia per le singole unità, sia per il sistema-centrale. \\
-			\subsubsection{Vincoli di progetto: Unità}
+			Il progetto impone dei vincoli sia per le singole unità, sia per il Sistema-centrale.
+
+			\paragraph{Vincoli di progetto: Unità}
 			Per quanto concerne le unità, queste dovranno essere caratterizzate da un insieme di elementi quali:
 			\begin{itemize}
-				\item Punto di partenza nella griglia che rappresenta l'ambiente in cui l'unità si muove
-				\item Velocità massima che l'unità può raggiungere
-				\item Lista dei \glock{POI} che l'unità dovrà raggiungere
+				\item punto di partenza nella griglia che rappresenta l'ambiente in cui l'unità si muove;
+				\item velocità massima che l'unità può raggiungere;
+				\item lista dei \glock{POI} che l'unità dovrà raggiungere.
 			\end{itemize}
 
+            \noindent
 			Saranno poi dotate di una \glock{user-interface} così strutturata:
 			\begin{itemize}
-				\item Indicatore della direzione dell'unità, rappresentante la direzione suggerita dal sistema centrale
-				\item Indicatore della velocità corrente dell'unità, che non dovrà mai superare una soglia massima definita per ciascuna unità
-				\item Pulsante per l'accensione/spegnimento dell'unità
+				\item indicatore della direzione dell'unità, rappresentante la direzione suggerita dal sistema centrale;
+				\item indicatore della velocità corrente dell'unità, che non dovrà mai superare una soglia massima definita per ciascuna unità;
+				\item pulsante per l'accensione/spegnimento dell'unità.
 			\end{itemize}
 
-			\subsubsection{Vincoli di progetto: Sistema-centrale}
+			\paragraph{Vincoli di progetto: Sistema-centrale}
 			Il sistema centrale sarà composto da una mappa dell'ambiente in cui le unità si muovono (considerando anche i vincoli dimensionali dello stesso) e sarà incaricato di indicare ad ognuna la prossima azione da intraprendere, in funzione di:
 			\begin{itemize}
-				\item Prossimo \glock{POI} da raggiungere
-				\item Posizione delle altre unità, consapevoli che:
+				\item prossimo \glock{POI} da raggiungere;
+				\item posizione delle altre unità, consapevoli che:
 					\begin{itemize}
-						\item Devono essere evitate collisioni
-						\item Devono essere rispettati dei vincoli dimensionali definiti a priori
-						\item Devono essere evitate collisione con agenti che non fanno parte dell'insieme delle unità (OPZIONALE)
+						\item devono essere evitate collisioni;
+						\item devono essere rispettati dei vincoli dimensionali definiti a priori;
+						\item devono essere evitate collisione con agenti che non fanno parte dell'insieme delle unità (OPZIONALE).
 					\end{itemize}
 			\end{itemize}
 
+            \noindent
 			Sarà poi dotato anch'esso di una \glock{user-interface}, che permetterà di visualizzare:
 			\begin{itemize}
-				\item Posizione \glock{real-time} delle singole unità
-				\item Stato \glock{real-time} della mappa
+				\item posizione \glock{real-time} delle singole unità;
+				\item stato \glock{real-time} della mappa.
 			\end{itemize}
 
 			\subsubsection{Aspetti positivi}
 			\begin{itemize}
-				\item Il capitolato richiede l'utilizzo di \glock{Docker} tra le tecnologie obbligatorie, che risulta essere molto interessante per il gruppo
-				\item Viene lasciata grande libertà rispetto alle tecnologie da impiegare in fase di sviluppo
-				\item In sede di presentazione è stata data molta importanza alla presentazione del problema da affrontare, che si è tradotta in una maggiore comprensibilità dello stesso
-				\item Molti membri del gruppo apprezzano il tema affrontato
+				\item Il capitolato richiede l'utilizzo di \glock{Docker} tra le tecnologie obbligatorie, che risulta essere molto interessante per il gruppo;
+				\item viene lasciata grande libertà rispetto alle tecnologie da impiegare in fase di sviluppo;
+				\item in sede di presentazione è stata data molta importanza alla presentazione del problema da affrontare, che si è tradotta in una maggiore comprensibilità dello stesso;
+				\item molti membri del gruppo apprezzano il tema affrontato.
 			\end{itemize}
 			\subsubsection{Criticità}
 			\begin{itemize}
-				\item Non tutti gli elementi del gruppo conoscono \glock{Docker}
-				\item La grande libertà lasciata, se non gestita correttamente, potrebbe risultare un problema più che un vantaggio
+				\item Non tutti gli elementi del gruppo conoscono \glock{Docker};
+				\item la grande libertà lasciata, se non gestita correttamente, potrebbe risultare un problema più che un vantaggio.
 			\end{itemize}
 
 			\subsubsection{Conclusioni}
@@ -364,7 +369,7 @@
 		\begin{itemize}
 		\item misurare tramite dei contapersone e date le immagini/stream delle videocamere di contare le persone a bordo dei mezzi pubblici;
 		\item poter acquisire continuativamente nel tempo e in modalità a bassa latenza delle informazioni raccolte da dispositivi di flussi dati;
-		\item elaborare in tempo reale i dati acquisiti per rappresentare le variazioni nel tempo dei dati monitorati, come ad esempio la variazione dei flussi delle persone in ambienti urbani. Confrontare e correlare tra loro dati provenienti da flussi diversi, ad esempio correlando i dati raccolti a bordo dei mezzi di trasporto di interesse con i dati raccolti in prossimità delle aree di interesse quali ad esempio fermate di autobus, strade dedicate al traffico veicolare, zone urbane. È poi fondamentale archiviare tutti i dati acquisiti ed i risultati delle loro elaborazioni affinché siano conservati nel tempo e comunque disponibili in qualunque caso sia richiesto il loro utilizzo;
+		\item elaborare in tempo reale i dati acquisiti per rappresentare le variazioni nel tempo dei dati monitorati, come ad esempio la variazione dei flussi delle persone in ambienti urbani; confrontare e correlare tra loro dati provenienti da flussi diversi, ad esempio correlando i dati raccolti a bordo dei mezzi di trasporto di interesse con i dati raccolti in prossimità delle aree di interesse quali ad esempio fermate di autobus, strade dedicate al traffico veicolare, zone urbane; è poi fondamentale archiviare tutti i dati acquisiti ed i risultati delle loro elaborazioni affinché siano conservati nel tempo e comunque disponibili in qualunque caso sia richiesto il loro utilizzo;
 		\item identificazione, a partire dai dati acquisiti ed elaborati, di eventi che nel tempo sono risultati aver concorso ad esempio all’insorgere di alterazioni significative del flusso di utenti;
 		\item previsione dell’insorgenza futura di variazioni significative di flussi di persone al fine di poter fornire degli indicatori automatici in grado di fornire supporto alle decisioni da parte del personale tecnico specializzato preposto a tale scopo.
 		\end{itemize}
@@ -539,26 +544,26 @@
             Si vuole approfondire il mondo degli algoritmi di sincronizzazione desktop, essendo la piattaforma principale per molti utenti professionali, in un modo non triviale che non si limiti a permettere il lavoro in un dispositivo mantenendo una copia del lavoro salvata su \glock{Cloud}.
 
             \subsubsection{Finalità}
-            I principali obbiettivi di questo progetto sono:
+            I principali obiettivi di questo progetto sono:
             \begin{itemize}
-                \item Sviluppo di un algoritmo solido ed efficiente in grado di garantire il salvataggio in \glock{Cloud} del lavoro e contemporaneamente la sincronizzazione dei cambiamenti presenti in   \glock{Cloud};
-                \item Sviluppo di un'interfaccia multipiattaforma per l'uso dell'algoritmo nei più importanti sistemi operativi desktop esistenti(\glock{MacOs},\glock{Windows},\glock{Linux})
-                \item Utilizzo dell'algoritmo sviluppato per richiedere e fornire i cambiamenti ai contenuti in sincronizzazione verso il prodotto del proponente \glock{Zextras Drive}.
+                \item sviluppo di un algoritmo solido ed efficiente in grado di garantire il salvataggio in \glock{Cloud} del lavoro e contemporaneamente la sincronizzazione dei cambiamenti presenti in \glock{Cloud};
+                \item sviluppo di un'interfaccia multipiattaforma per l'uso dell'algoritmo nei più importanti sistemi operativi desktop esistenti(\glock{MacOs}, \glock{Windows}, \glock{Linux});
+                \item utilizzo dell'algoritmo sviluppato per richiedere e fornire i cambiamenti ai contenuti in sincronizzazione verso il prodotto del proponente \glock{Zextras Drive}.
             \end{itemize}
             Le principali funzioni richieste sono:
             \begin{itemize}
-                \item Configurazione ed autenticazione dell'utente;
-                \item Gestione di cosa sincronizzare e di cosa ignorare nelle cartelle \glock{Cloud};
-                \item Gestione di cosa sincronizzare e di cosa ignorare nelle cartelle locali;
-                \item Sincronizzazione costante dei cambiamenti, siano essi locali o remoti;
-                \item Possibilità di modifica delle preferenze a posteriori;
-                \item Sistema di notifica utente dei cambiamenti;
+                \item configurazione ed autenticazione dell'utente;
+                \item gestione di cosa sincronizzare e di cosa ignorare nelle cartelle \glock{Cloud};
+                \item gestione di cosa sincronizzare e di cosa ignorare nelle cartelle locali;
+                \item sincronizzazione costante dei cambiamenti, siano essi locali o remoti;
+                \item possibilità di modifica delle preferenze a posteriori;
+                \item sistema di notifica utente dei cambiamenti.
             \end{itemize}
             Con l'aggiunta di funzionalità avanzate quali:
             \begin{itemize}
-                \item Gestione delle condivisioni;
-                \item Integrazione protocollo \glock{MAPI};
-                \item Integrazione con il prodotto Web;
+                \item gestione delle condivisioni;
+                \item integrazione protocollo \glock{MAPI};
+                \item integrazione con il prodotto Web.
             \end{itemize}
 
             \subsubsection{Tecnologie}
@@ -566,7 +571,7 @@
             Consiglia quindi l'uso dei seguenti \glock{Framework}:
             \begin{itemize}
                 \item \glock{Qt Framework}: \glock{Framework} consigliato per lo sviluppo dell'interfaccia e del controller d'architettura;
-                \item \glock{Python}: Linguaggio consigliato per lo sviluppo della Backend Business Logic;
+                \item \glock{Python}: linguaggio consigliato per lo sviluppo della Backend Business Logic.
             \end{itemize}
 
 
@@ -578,7 +583,7 @@
             \subsubsection{Criticità}
             \begin{itemize}
                 \item La documentazione del \glock{capitolato} risulta scritta in modo approssimato facendo perdere al gruppo l'entusiasmo di lavorare con questo proponente;
-                \item L'idea risulta poco innovativa.
+                \item l'idea risulta poco innovativa.
             \end{itemize}
 
             \subsubsection{Conclusioni}
