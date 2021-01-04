@@ -1,0 +1,38 @@
+name: Continuos Integration for LaTeX
+
+on:
+  push:
+    branches:
+      - master
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository contents
+      uses: actions/checkout@v1
+
+    - name: Latex compiler
+      uses: Jatus93/Latex-multicompiler@master
+      with:
+        path_to_list: .github/files_to_compile
+        artifact: true
+
+    - name: Spell Check
+      uses: Jatus93/spellCheck@master
+      with:
+        directory: ./Documents
+        languages: "en_GB;en_US;italiano"
+
+    - name: Gulpease
+      uses: Jatus93/GulpeaseAction@master
+      with:
+        directory: ./Documents
+
+    - name: Upload artifact
+      if: ${{ !env.ACT }}
+      uses: actions/upload-artifact@v1
+      with:
+        name: Documents
+        path: ./Documents
