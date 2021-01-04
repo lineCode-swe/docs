@@ -1,0 +1,61 @@
+
+I requisiti strutturati nel seguente modo:
+
+\begin{itemize}
+	
+	\item \textbf{codice identificativo:} i codici identificativi sono univoci e conformi alla seguente codifica:
+	\begin{center}
+		\textbf{R[Priorità]-[Categoria]-[Codice]}
+	\end{center}
+	dove: 
+		\begin{itemize}
+			\item \textbf{R:} requisito;
+			\item \textbf{Priorità:}
+			\begin{itemize}
+				\item \textbf{M:} mandatory/obbligatorio, quindi necessario a garantire le funzioni base del prodotto;
+				\item \textbf{D:} desirable/desiderabile, cioè non strettamente necessario, ma che porta alla completezza del prodotto;
+				\item \textbf{O:} optional/opzionale, quindi che non pregiudica la funzionalità del prodotto finale.
+			\end{itemize}
+			\item \textbf{Categoria:}
+			\begin{itemize}
+				\item \textbf{F:} functional/funzionale;
+				\item \textbf{P:} performance/prestazionale;
+				\item \textbf{Q:} qualitative/qualitativo;
+				\item \textbf{C:} constraint/vincolo.
+			\end{itemize}
+			\item \textbf{Codice:} numero progressivo per riconoscere univocamente il requisito.
+		\end{itemize}
+	
+	\item \textbf{Priorità:} priorità del requisito. Informazione ridondante che però semplifica la lettura.
+	
+	\item \textbf{Descrizione:} breve ma completa descrizione del requisito, il meno ambigua possibile. 
+	
+	\item \textbf{Fonti:} ogni requisito è derivato da una o più delle seguenti opzioni:
+		\begin{itemize}
+			\item \glock{capitolato}: requisito individuato in seguito all'analisi del \glock{capitolato};
+			\item interno: requisito individuato dagli analisti e che si è ritenuto opportuno da aggiungere;
+			\item caso d'uso: requisito derivato da uno o più casi d'uso. Viene riportato il codice univoco del caso d'uso.
+			\item verbale: requisiti individuati durante incontri con il proponente.			
+		\end{itemize}	
+\end{itemize}
+ \newpage
+\subsection{Requisiti funzionali}
+	
+	\begin{table} [h!]
+		\caption{Tabella del requisiti funzionali}
+		\begin{center}
+			\renewcommand{\arraystretch}{4}
+			\begin{tabular} { c c c c}
+				\rowcolor{lightgray}
+				\textbf{Requisito} & \textbf{Priorità} & \textbf{Descrizione}  & \textbf{Fonti} \\
+				RMF2   & Mandatory & Un utente può effettuare il login & Interno UC2 \\
+				RMF2.1 & Mandatory & Per effettuare il login l'utente deve inserire il suo nome utente & Interno UC2.1 \\
+				RMF2.2 & Mandatory & Per effettuare il login l'utente deve inserire la sua password & Interno UC2.2 \\
+				RMF2.3 & Mandatory & Il processo di login si interrompe se viene fornito un nome utente non esistente & Interno UC2.3 \\
+				RMF2.4 & Mandatory & Il processo di login si interrompe se viene fornita una password errata & Interno UC2.4 \\
+				
+			\end{tabular}
+		
+	\end{center}
+\end{table}
+
