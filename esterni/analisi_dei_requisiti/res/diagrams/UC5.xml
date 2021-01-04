@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" modified="2021-01-04T17:43:48.922Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0.2 Safari/605.1.15" etag="JmxDaa89d-m9O4jKtPo2" version="14.1.8" pages="3">
+  <diagram id="RiXbCBi6e9mE_kFzGSvT" name="UC5">
+    <mxGraphModel dx="1426" dy="842" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="7a5nW2-sYTwodmJX5F5I-3" value="&lt;br&gt;UC5 - Controllo delle unità" style="verticalAlign=top;align=center;overflow=fill;fontSize=12;fontFamily=Helvetica;imageAspect=1;html=1;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="340" y="230" width="290" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="7a5nW2-sYTwodmJX5F5I-4" value="&lt;b&gt;Utente&lt;br&gt;Autenticato&lt;/b&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;strokeColor=#000000;fontSize=12;align=center;" vertex="1" parent="1">
+          <mxGeometry x="220" y="335" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7a5nW2-sYTwodmJX5F5I-5" value="&lt;b&gt;UC5.1 - Visualizzazione stato unità&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;strokeColor=#000000;fontSize=12;align=center;" vertex="1" parent="1">
+          <mxGeometry x="383.75" y="280" width="202.5" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="7a5nW2-sYTwodmJX5F5I-6" value="&lt;b&gt;UC5.2 - Gestione stato unità&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;strokeColor=#000000;fontSize=12;align=center;" vertex="1" parent="1">
+          <mxGeometry x="396.87" y="340" width="176.25" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="7a5nW2-sYTwodmJX5F5I-7" value="&lt;b&gt;UC5.3 - Visualizzazione ordini assegnati&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;strokeColor=#000000;fontSize=12;align=center;" vertex="1" parent="1">
+          <mxGeometry x="366.87" y="400" width="236.25" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="7a5nW2-sYTwodmJX5F5I-8" value="&lt;b&gt;UC5.4 - Gestione ordini assegnati&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;strokeColor=#000000;fontSize=12;align=center;" vertex="1" parent="1">
+          <mxGeometry x="383.74" y="460" width="202.5" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="7a5nW2-sYTwodmJX5F5I-9" value="" style="endArrow=none;html=1;fontSize=12;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" target="7a5nW2-sYTwodmJX5F5I-6">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="250" y="365" as="sourcePoint" />
+            <mxPoint x="440" y="390" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7a5nW2-sYTwodmJX5F5I-11" value="" style="endArrow=none;html=1;fontSize=12;" edge="1" parent="1" target="7a5nW2-sYTwodmJX5F5I-5">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="280" y="305" as="sourcePoint" />
+            <mxPoint x="440" y="390" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7a5nW2-sYTwodmJX5F5I-13" value="" style="endArrow=none;html=1;fontSize=12;" edge="1" parent="1" target="7a5nW2-sYTwodmJX5F5I-7">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="280" y="425" as="sourcePoint" />
+            <mxPoint x="330" y="420" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7a5nW2-sYTwodmJX5F5I-14" value="" style="endArrow=none;html=1;fontSize=12;" edge="1" parent="1" target="7a5nW2-sYTwodmJX5F5I-8">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="280" y="485" as="sourcePoint" />
+            <mxPoint x="440" y="390" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7a5nW2-sYTwodmJX5F5I-15" value="" style="endArrow=none;html=1;fontSize=12;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="280" y="450" as="sourcePoint" />
+            <mxPoint x="280" y="305" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7a5nW2-sYTwodmJX5F5I-16" value="" style="endArrow=none;html=1;fontSize=12;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="280" y="484" as="sourcePoint" />
+            <mxPoint x="280" y="305" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="SdqJQVWZXn_l6kzaTl9B" name="UC5.2">
+    <mxGraphModel dx="1426" dy="842" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="jgi-2qX8h14njn_xmItS-0" />
+        <mxCell id="jgi-2qX8h14njn_xmItS-1" parent="jgi-2qX8h14njn_xmItS-0" />
+        <mxCell id="1YbTNn4FEYsqfPAwU1XE-0" value="&lt;br&gt;&lt;b&gt;UC5.2 - Gestione stato unità&lt;/b&gt;" style="verticalAlign=top;align=center;overflow=fill;fontSize=12;fontFamily=Helvetica;imageAspect=1;html=1;fontStyle=1" vertex="1" parent="jgi-2qX8h14njn_xmItS-1">
+          <mxGeometry x="340" y="230" width="290" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="1YbTNn4FEYsqfPAwU1XE-1" value="&lt;b&gt;Utente&lt;br&gt;Autenticato&lt;/b&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;strokeColor=#000000;fontSize=12;align=center;" vertex="1" parent="jgi-2qX8h14njn_xmItS-1">
+          <mxGeometry x="220" y="335" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="1YbTNn4FEYsqfPAwU1XE-2" value="&lt;b&gt;UC5.2.1 - Comando &quot;Start&quot;&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;strokeColor=#000000;fontSize=12;align=center;" vertex="1" parent="jgi-2qX8h14njn_xmItS-1">
+          <mxGeometry x="383.75" y="280" width="202.5" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="1YbTNn4FEYsqfPAwU1XE-3" value="&lt;b&gt;UC5.2.2 - Comando &quot;Stop&quot;&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;strokeColor=#000000;fontSize=12;align=center;" vertex="1" parent="jgi-2qX8h14njn_xmItS-1">
+          <mxGeometry x="396.87" y="340" width="176.25" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="1YbTNn4FEYsqfPAwU1XE-4" value="&lt;b&gt;UC5.2.3 - Comando &quot;Finish&quot;&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;strokeColor=#000000;fontSize=12;align=center;" vertex="1" parent="jgi-2qX8h14njn_xmItS-1">
+          <mxGeometry x="398.43" y="400" width="173.13" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="1YbTNn4FEYsqfPAwU1XE-5" value="&lt;b&gt;UC5.2.4 - Comando &quot;Emergency Shutdown&quot;&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;strokeColor=#000000;fontSize=12;align=center;" vertex="1" parent="jgi-2qX8h14njn_xmItS-1">
+          <mxGeometry x="376.88" y="460" width="216.24" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="1YbTNn4FEYsqfPAwU1XE-6" value="" style="endArrow=none;html=1;fontSize=12;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="jgi-2qX8h14njn_xmItS-1" target="1YbTNn4FEYsqfPAwU1XE-3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="250" y="365" as="sourcePoint" />
+            <mxPoint x="440" y="390" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1YbTNn4FEYsqfPAwU1XE-7" value="" style="endArrow=none;html=1;fontSize=12;" edge="1" parent="jgi-2qX8h14njn_xmItS-1" target="1YbTNn4FEYsqfPAwU1XE-2">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="280" y="305" as="sourcePoint" />
+            <mxPoint x="440" y="390" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1YbTNn4FEYsqfPAwU1XE-8" value="" style="endArrow=none;html=1;fontSize=12;" edge="1" parent="jgi-2qX8h14njn_xmItS-1" target="1YbTNn4FEYsqfPAwU1XE-4">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="280" y="425" as="sourcePoint" />
+            <mxPoint x="330" y="420" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1YbTNn4FEYsqfPAwU1XE-9" value="" style="endArrow=none;html=1;fontSize=12;" edge="1" parent="jgi-2qX8h14njn_xmItS-1" target="1YbTNn4FEYsqfPAwU1XE-5">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="280" y="485" as="sourcePoint" />
+            <mxPoint x="440" y="390" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1YbTNn4FEYsqfPAwU1XE-10" value="" style="endArrow=none;html=1;fontSize=12;" edge="1" parent="jgi-2qX8h14njn_xmItS-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="280" y="485" as="sourcePoint" />
+            <mxPoint x="280" y="305" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="9VD6RxS7e6_2ASZcaRbT" name="UC5.4">
+    <mxGraphModel dx="1426" dy="842" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="h9NllxH9gJMEHX6rnkmN-0" />
+        <mxCell id="h9NllxH9gJMEHX6rnkmN-1" parent="h9NllxH9gJMEHX6rnkmN-0" />
+        <mxCell id="hEAiTtX9u_KMMkXXbpdZ-0" value="&lt;br&gt;UC5.4 - Gestione ordini assegnati" style="verticalAlign=top;align=center;overflow=fill;fontSize=12;fontFamily=Helvetica;imageAspect=1;html=1;fontStyle=1" vertex="1" parent="h9NllxH9gJMEHX6rnkmN-1">
+          <mxGeometry x="180" y="200" width="630" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="hEAiTtX9u_KMMkXXbpdZ-1" value="&lt;b&gt;Utente&lt;br&gt;Autenticato&lt;/b&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;strokeColor=#000000;fontSize=12;align=center;" vertex="1" parent="h9NllxH9gJMEHX6rnkmN-1">
+          <mxGeometry x="60" y="320" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="hEAiTtX9u_KMMkXXbpdZ-2" value="&lt;b&gt;UC5.4.1 - Assegnazione nuovo ordine&lt;/b&gt;&lt;hr&gt;&lt;b&gt;Extention points:&lt;br&gt;&lt;/b&gt;visualizzazione errore ordine duplicato" style="ellipse;whiteSpace=wrap;html=1;strokeColor=#000000;fontSize=12;align=center;" vertex="1" parent="h9NllxH9gJMEHX6rnkmN-1">
+          <mxGeometry x="190" y="255" width="246.4" height="125" as="geometry" />
+        </mxCell>
+        <mxCell id="hEAiTtX9u_KMMkXXbpdZ-3" value="UC5.4.2 - Eliminazione ordine assegnato" style="ellipse;whiteSpace=wrap;html=1;strokeColor=#000000;fontSize=12;align=center;fontStyle=1" vertex="1" parent="h9NllxH9gJMEHX6rnkmN-1">
+          <mxGeometry x="200.00000000000003" y="415" width="246.56" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="hEAiTtX9u_KMMkXXbpdZ-6" value="" style="endArrow=none;html=1;fontSize=12;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="h9NllxH9gJMEHX6rnkmN-1" target="hEAiTtX9u_KMMkXXbpdZ-3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="120" y="440" as="sourcePoint" />
+            <mxPoint x="280" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="hEAiTtX9u_KMMkXXbpdZ-7" value="" style="endArrow=none;html=1;fontSize=12;" edge="1" parent="h9NllxH9gJMEHX6rnkmN-1" target="hEAiTtX9u_KMMkXXbpdZ-2">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="120" y="315" as="sourcePoint" />
+            <mxPoint x="280" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="hEAiTtX9u_KMMkXXbpdZ-10" value="" style="endArrow=none;html=1;fontSize=12;" edge="1" parent="h9NllxH9gJMEHX6rnkmN-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="120" y="440" as="sourcePoint" />
+            <mxPoint x="120" y="315" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="hEAiTtX9u_KMMkXXbpdZ-11" value="" style="endArrow=none;html=1;fontSize=12;" edge="1" parent="h9NllxH9gJMEHX6rnkmN-1" source="hEAiTtX9u_KMMkXXbpdZ-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="230" y="460" as="sourcePoint" />
+            <mxPoint x="120" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nw9h8N1WYt_rJ43K3BeU-0" value="&lt;b&gt;UC5.4.3 - Errore ordine duplicato&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;strokeColor=#000000;fontSize=12;align=center;" vertex="1" parent="h9NllxH9gJMEHX6rnkmN-1">
+          <mxGeometry x="590" y="290" width="200" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="nw9h8N1WYt_rJ43K3BeU-1" value="&amp;lt;&amp;lt;extend&amp;gt;&amp;gt;" style="endArrow=open;endSize=12;dashed=1;html=1;fontSize=12;" edge="1" parent="h9NllxH9gJMEHX6rnkmN-1" source="nw9h8N1WYt_rJ43K3BeU-0" target="hEAiTtX9u_KMMkXXbpdZ-2">
+          <mxGeometry x="0.0535" y="-15" width="160" relative="1" as="geometry">
+            <mxPoint x="330" y="380" as="sourcePoint" />
+            <mxPoint x="490" y="380" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nw9h8N1WYt_rJ43K3BeU-2" value="" style="endArrow=none;dashed=1;html=1;fontSize=12;" edge="1" parent="h9NllxH9gJMEHX6rnkmN-1" target="nw9h8N1WYt_rJ43K3BeU-3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="512" y="315" as="sourcePoint" />
+            <mxPoint x="440" y="360" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nw9h8N1WYt_rJ43K3BeU-3" value="&lt;b&gt;Condition:&lt;/b&gt;&amp;nbsp;viene inserito un ordine già presente in coda.&lt;br&gt;&lt;b&gt;Extention point:&amp;nbsp;&lt;/b&gt;&lt;span style=&quot;text-align: center&quot;&gt;visualizzazione errore ordine duplicato.&lt;/span&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;size=10;align=left;verticalAlign=top;" vertex="1" parent="h9NllxH9gJMEHX6rnkmN-1">
+          <mxGeometry x="540" y="360" width="180" height="70" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
