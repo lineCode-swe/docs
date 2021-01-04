@@ -101,19 +101,25 @@
 		\item \textbf{Libreoffice Calc v6.4.6.2} (\url{https://it.libreoffice.org/}): per i calcoli sulle varie tabelle di ore  e prezzi e la creazione dei relativi grafici.
 	\end{itemize}
 
-	\subsection{Metriche}
-	Ogni documento in fase di verifica dovrà essere monitorato tramite queste due metriche che ne testano la qualità di comprensione:
+	\subsubsection{Metriche}
+	Ogni documento verrà analizzato automaticamente da una \glock{GitHub Actions} per la verifica delle seguenti due metriche che ne testano la qualità di comprensione:
 	\begin{enumerate}
 		\item \textbf{Indice di \glock{Gulpease}}: è un valore quantificabile con una formula tarata direttamente sulla lingua italiana. Per ottenerlo, dal testo di interesse, si estrapolano i seguenti dati:
 		\begin{itemize}
-			\item \textbf{Numero delle frasi};
-			\item \textbf{Numero delle parole};
-			\item \textbf{Numero delle lettere}.
+			\item numero delle frasi;
+			\item numero delle parole;
+			\item numero delle lettere.
 		\end{itemize}
-		Misurati i dati, si applica la formula:\\
-		L'indice ottenuto sarà compreso tra 0 e 100 e verrà interpretata in questo modo:
+		Una volta misurati i dati, si applica la formula:
+		\begin{equation}\label{Formula per il calcolo dell'indice di Gulpease}
+		Gulpease = 89 + {{(300 \cdot numeroFrasi)} - {(10 \cdot numeroLettere)} \over {numeroParole}}
+		\end{equation}
+		\\L'indice ottenuto andrà interpretato in questo modo:
 		\begin{itemize}
-			\item \textbf{Inferiore a 80}: difficilmente comprensibile per un lettore con licenza elementare;
-			\item \textbf{Inferiore a 60}: difficilmente comprensibile per un lettore con licenza media;
+			\item \textbf{minore di 40}: difficilmente comprensibile per un lettore con diploma superiore; 
+			\item \textbf{tra 40 e 60}: difficilmente comprensibile per un lettore con licenza media;
+			\item \textbf{tra 60 e 80}: difficilmente comprensibile per un lettore con licenza elementare;
+			\item \textbf{maggiore di 80}: comprensibile per tutti;
 		\end{itemize}
+		\item \textbf{Correttezza ortografica}: oltre alla verifica automatizzata è comunque necessario fare attenzione mentre si scrivono i testi, tenendo sempre i correttori ortografici attivati in modo da correggere subito eventuali errori.\\In fase di revisione, ai verificatori, è richiesta la lettura dello stesso documento più volte.
 	\end{enumerate}
