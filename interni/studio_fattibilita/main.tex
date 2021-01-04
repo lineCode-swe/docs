@@ -138,7 +138,7 @@
 				\item unità;
 				\item sistema centrale.
 			\end{itemize}
-			Un unità rappresenta un singolo mezzo dotato di mobilità autonoma che si muove nel contesto, definito da una serie di dati quali:
+			Un'unità rappresenta un singolo mezzo dotato di mobilità autonoma che si muove nel contesto, definito da una serie di dati quali:
 			 \begin{itemize}
 			 	\item ID di sistema;
 			 	\item velocità massima;
@@ -162,10 +162,10 @@
 			\end{itemize}
 
 			\subsubsection{Linguaggi di programmazione}
-			L'azienda non impone alcun linguaggio di programmazione al gruppo da utilizzare durante la fase di sviluppo.
+			L'azienda non rende necessario l'uso di alcun linguaggio di programmazione al gruppo da utilizzare durante la fase di sviluppo.
 
 			\subsubsection{Vincoli di progetto}
-			Il progetto impone dei vincoli sia per le singole unità, sia per il Sistema-centrale.
+			Il progetto presenta dei vincoli sia per le singole unità, sia per il Sistema-centrale.
 
 			\paragraph{Vincoli di progetto: Unità}
 			Per quanto concerne le unità, queste dovranno essere caratterizzate da un insieme di elementi quali:
@@ -184,7 +184,7 @@
 			\end{itemize}
 
 			\paragraph{Vincoli di progetto: Sistema-centrale}
-			Il sistema centrale sarà composto da una mappa dell'ambiente in cui le unità si muovono (considerando anche i vincoli dimensionali dello stesso) e sarà incaricato di indicare ad ognuna la prossima azione da intraprendere, in funzione di:
+			Il sistema centrale presenterà una mappa dell'ambiente in cui le unità si muovono (considerando anche i vincoli dimensionali dello stesso) e sarà incaricato di indicare ad ognuna la prossima azione da intraprendere, in funzione di:
 			\begin{itemize}
 				\item prossimo \glock{POI} da raggiungere;
 				\item posizione delle altre unità, consapevoli che:
@@ -216,7 +216,7 @@
 			\end{itemize}
 
 			\subsubsection{Conclusioni}
-				La scelta del gruppo è ricaduta su questo capitolato vista l'attualità dei temi trattati e alla luce di un esposizione del problema chiara e convincente da parte dell'azienda proponente.
+				La scelta del gruppo è ricaduta su questo capitolato vista l'attualità dei temi trattati e alla luce di un'esposizione del problema chiara e convincente da parte dell'azienda proponente.
 	\newpage
 
 	\section{Valutazione capitolati non scelti}
@@ -300,10 +300,10 @@
 			\end{itemize}
 
 			\subsubsection{Descrizione}
-			Le piattaforme di e-commerce possono essere triviali, come pure complesse, in base alle funzionalità che si vogliono garantire. Inoltre i bisogni delle aziende possono variare ampiamente nel tempo e si scopre quindi la necessità di appoggiarsi a tecnologie affidabili per l'uso richiesto, e che garantiscano adattabilità a cambiamenti futuri.
+			Le piattaforme di \glock{e-commerce} possono essere triviali, come pure complesse, in base alle funzionalità che si vogliono garantire. Inoltre i bisogni delle aziende possono variare ampiamente nel tempo e si scopre quindi la necessità di appoggiarsi a tecnologie affidabili per l'uso richiesto, e che garantiscano adattabilità a cambiamenti futuri.
 
 			\subsubsection{Finalità}
-			Emporio Lambda mira ad essere una piattaforma di e-commerce con architettura serverless appoggiandosi ad \glock{AWS}. Si vogliono garantire le funzionalità tipiche di una piattaforma commerciale, che permetta agli amministratori un'adeguata gestione degli ordini e dell'inventario, ed agli utenti un'adeguata esperienza di ricerca ed acquisto dei prodotti disponibili.
+			Emporio Lambda mira ad essere una piattaforma di \glock{e-commerce} con architettura \glock{serverless} appoggiandosi ad \glock{AWS}. Si vogliono garantire le funzionalità tipiche di una piattaforma commerciale, che permetta agli amministratori un'adeguata gestione degli ordini e dell'inventario, ed agli utenti un'ottima esperienza di ricerca ed acquisto dei prodotti disponibili.
 			\\
 			Il sito dovrà essere performante e garantire agli utenti un accesso immediato alla ricerca dei prodotti. Sarà importante l'uso di tecniche di \glock{SEO} soprattutto per le pagine dei prodotti in vendita.
 			\\
@@ -311,9 +311,9 @@
 
 			\subsubsection{Tecnologie}
 			\begin{itemize}
-				\item \textsc{AWS Lambda:} piattaforma di calcolo serverless, fornita come parte di \glock{AWS} che si occupa della gestione \glock{back-end} di applicazioni web;
-				\item \textsc{Amazon CloudWatch:} servizio di monitoraggio e osservabilità che raccoglie dati di monitoraggio e operativi sotto forma di log, parametri ed eventi, fornendo una visualizzazione unificata delle risorse;
-				\item \textsc{Amazon Cognito:} servizio la gestione di registrazione e controllo degli accessi a piattaforme web.
+				\item \textsc{\glock{AWS Lambda}:} piattaforma di calcolo serverless, fornita come parte di \glock{AWS} che si occupa della gestione \glock{back-end} di applicazioni web;
+				\item \textsc{\glock{Amazon CloudWatch}:} servizio di monitoraggio e osservabilità che raccoglie dati di monitoraggio e operativi sotto forma di log, parametri ed eventi, fornendo una visualizzazione unificata delle risorse;
+				\item \textsc{\glock{Amazon Cognito}:} servizio la gestione di registrazione e controllo degli accessi a piattaforme web.
 			\end{itemize}
 
 			\subsubsection{Linguaggi di Programmazione}
@@ -327,22 +327,35 @@
 			\subsubsection{Vincoli di Progetto}
 			Il sito deve permettere il supporto ai ruoli di:
 			\begin{itemize}
-			    \item amministratore di sistema: per la configurazione ed  amministrazione del sito;
+			    \item amministratore di sistema: per la configurazione ed amministrazione del sito;
 			    \item venditore: per l'organizzazione e la gestione dei prodotti e delle loro informazioni;
 			    \item cliente: utente generico del sito che può visualizzare ed acquistare i prodotti.
 			\end{itemize}
-		A livello di funzionalità per il cliente, devono essere previste le seguenti pagine:  homepage, profilo utente, elenco prodotti, dettagli prodotti, carrello, checkout.\\
-		Si deve poi garantire un'adeguata integrazione con i servizi amministrativi tipici di questo ambiente, come: supporto utenti, tracciamento delle operazioni, inventario magazzino.\\
+		A livello di funzionalità per il cliente, devono essere previste le seguenti pagine:
+        \begin{itemize}
+            \item homepage;
+            \item profilo utente;
+            \item elenco prodotti;
+            \item dettagli prodotti;
+            \item carrello;
+            \item checkout.
+        \end{itemize}
+		Si deve poi garantire un'adeguata integrazione con i servizi amministrativi tipici di questo ambiente, come:
+        \begin{itemize}
+            \item supporto utenti;
+            \item tracciamento delle operazioni;
+            \item inventario magazzino.
+        \end{itemize}
 
 			\subsubsection{Aspetti positivi}
 			\begin{itemize}
-				\item le tecnologie richieste per la realizzazione del \glock{capitolato} sono state giudicate di interesse;
+				\item Le tecnologie richieste per la realizzazione del \glock{capitolato} sono state giudicate di interesse;
 				\item la difficoltà generale dei requisiti è considerata adeguata per i componenti del gruppo.
 			\end{itemize}
 
 			\subsubsection{Criticità}
 			\begin{itemize}
-			    \item l'e-commerce è stato considerato come un target non stimolante da parte del gruppo;
+			    \item L'\glock{e-commerce} è stato considerato come un target non stimolante da parte del gruppo;
 				\item il materiale reso disponibile dal proponente è stato giudicato non molto chiaro, e si ha il timore che ci potrebbero essere problemi di cooperazione in futuro.
 			\end{itemize}
 
@@ -364,10 +377,9 @@
 		In seguito alla pandemia del virus COVID-19 scoppiata negli ultimi mesi sono sorti numerosi problemi. Dopo un periodo di quarantena forzata la vita doveva ripartire ed ai cittadini è stata permessa la circolazione. Durante la vita quotidiana si generano spesso assembramenti in numerosi luoghi e per non aggravare la situazione bisogna cercare di prevenire questo problema. Grazie all’informatica possiamo quindi scongiurare l’aggravarsi della situazione dovuta ai problemi sociali legati all’affollamento.
 
 		\subsubsection{Finalità}
-
 		Si vuole creare un’applicazione web che permetta di:
 		\begin{itemize}
-		\item misurare tramite dei contapersone e date le immagini/stream delle videocamere di contare le persone a bordo dei mezzi pubblici;
+		\item misurare tramite dei contapersone e date le immagini/video delle videocamere di contare le persone a bordo dei mezzi pubblici;
 		\item poter acquisire continuativamente nel tempo e in modalità a bassa latenza delle informazioni raccolte da dispositivi di flussi dati;
 		\item elaborare in tempo reale i dati acquisiti per rappresentare le variazioni nel tempo dei dati monitorati, come ad esempio la variazione dei flussi delle persone in ambienti urbani; confrontare e correlare tra loro dati provenienti da flussi diversi, ad esempio correlando i dati raccolti a bordo dei mezzi di trasporto di interesse con i dati raccolti in prossimità delle aree di interesse quali ad esempio fermate di autobus, strade dedicate al traffico veicolare, zone urbane; è poi fondamentale archiviare tutti i dati acquisiti ed i risultati delle loro elaborazioni affinché siano conservati nel tempo e comunque disponibili in qualunque caso sia richiesto il loro utilizzo;
 		\item identificazione, a partire dai dati acquisiti ed elaborati, di eventi che nel tempo sono risultati aver concorso ad esempio all’insorgere di alterazioni significative del flusso di utenti;
@@ -378,21 +390,21 @@
 		Ci sono alcune scelte preferenziali per lo svolgimento del progetto:
 		\begin{itemize}
 		\item utilizzo di \glock{Java} e \glock{Angular} per lo sviluppo delle parti di \glock{Back-end} e \glock{Front-end} della componente Application del sistema;
-		\item il framework \glock{Leaflet} (https://leafletjs.com) per la gestione delle mappe (heatmap);
+		\item il framework \glock{Leaflet} per la gestione delle mappe \glock{heatmap};
 		\item utilizzo di protocolli asincroni per le comunicazioni tra diverse componenti;
-		\item utilizzo del pattern Publisher/Subscriber e adozione del protocollo \glock{MQTT}(‘MQ Telemetry Transport or Message Queue Telemetry Transport’).
+		\item utilizzo del pattern \glock{Publisher/Subscriber} e adozione del protocollo \glock{MQTT}(‘MQ Telemetry Transport or Message Queue Telemetry Transport’).
 		\end{itemize}
 
 		\subsubsection{Aspetti positivi}
 		Il progetto risultava secondo il gruppo uno dei tre capitolati più interessanti e stimolanti:
 		\begin{itemize}
 		\item il problema da affrontare è qualcosa che riguarda la vita di tutti i giorni e che potrebbe portare a miglioramenti anche fuori da una situazione di emergenza COVID-19;
-		\item le tecnologie richieste per risolvere il problema e la componente di IA rappresenta un’ottima occasione per ampliare il bagaglio di conoscenze.
+		\item le tecnologie richieste per risolvere il problema e la componente di \glock{IA} rappresenta un’ottima occasione per ampliare il bagaglio di conoscenze.
 		\end{itemize}
 
 		\subsubsection{Criticità}
 		\begin{itemize}
-		\item La parte di IA e la problematica da risolvere sembrava meno interessante rispetto al capitolato scelto.
+		\item La parte di \glock{IA} e la problematica da risolvere sembrava meno interessante rispetto al capitolato scelto.
 		\end{itemize}
 
 		\subsubsection{Conclusioni}
@@ -432,7 +444,7 @@
 
 		\subsubsection{Tecnologie e Linguaggi di Programmazione}
 		L’applicazione “HD Viz” di visualizzazione dei dati a molte dimensioni dovrà essere sviluppata prevalentemente in tecnologia \glock{HTML}/\glock{CSS}/\glock{JavaScript} utilizzando la libreria \glock{D3.js}.
-		La parte server di supporto alla presentazione nel browser e alle query ad un database \glock{SQL} o \glock{NoSQL} potrà essere sviluppata in \glock{Java} con server \glock{Tomcat} o in \glock{Javascript} con server \glock{Node.js}.
+		La parte server di supporto alla presentazione nel \glock{browser} e alle \glock{query} ad un database \glock{SQL} o \glock{NoSQL} potrà essere sviluppata in \glock{Java} con server \glock{Tomcat} o in \glock{Javascript} con server \glock{Node.js}.
 		Per lo sviluppo di algoritmi di preparazione del dato per la visualizzazione (requisito opzionale del capitolato), l'azienda mette a disposizione alcune librerie per gli algoritmi:
 		\begin{itemize}
 			\item \glock{t-SNE};
@@ -480,7 +492,7 @@
 		Sviluppo e progettazione di un videogioco a scorrimento verticale fruibili su dispositivi mobile con la possibilità di giocare anche in \glock{multiplayer} oltre alla campagna in \glock{singleplayer}.
 
 		\subsubsection{Finalità}
-		Il fulcro è la progettazione di un sistema \glock{multiplayer} “fantasma” in cui i giocatori non possano interagire tra loro, ma solo controllare in real-time le mosse dell'avversario senza poter intervenire.
+		Il fulcro è la progettazione di un sistema \glock{multiplayer} “fantasma” in cui i giocatori non possano interagire tra loro, ma solo controllare in \glock{real-time} le mosse dell'avversario senza poter intervenire.
 		La modalità \glock{singleplayer} sarà di tipo infinito, con difficoltà crescente, fino a che il giocatore non avrà esaurito le vite o i \glock{power-up} in suo possesso.
 		Al termine della progettazione, dovranno essere forniti i seguenti materiali:
 		\begin{itemize}
@@ -490,7 +502,7 @@
 		\end{itemize}
 
 		\subsubsection{Tecnologie}
-		Le tecnologie consigliate dall'azienda riguardano principalmente \glock{AWS},  che fornisce servizi di \glock{cloud} computing; dando libertà di scelta sull'uso dei servizi offerti da tale tecnologia, motivandone poi la scelta.
+		Le tecnologie consigliate dall'azienda riguardano principalmente \glock{AWS}, che fornisce servizi di \glock{cloud} computing; dando libertà di scelta sull'uso dei servizi offerti da tale tecnologia, motivandone poi la scelta.
 		Su consiglio:
 		\begin{itemize}
 			\item \glock{AWS Gamelift}: servizio specializzato in giochi \glock{multiplayer};
@@ -562,8 +574,7 @@
             Con l'aggiunta di funzionalità avanzate quali:
             \begin{itemize}
                 \item gestione delle condivisioni;
-                \item integrazione protocollo \glock{MAPI};
-                \item integrazione con il prodotto Web.
+                \item integrazione protocollo \glock{MAPI}.
             \end{itemize}
 
             \subsubsection{Tecnologie}
@@ -587,6 +598,6 @@
             \end{itemize}
 
             \subsubsection{Conclusioni}
-            Questo \glock{capitolato} non ha suscitato interesse in nessun membro del gruppo. Il gruppo ha quindi deciso di  concentrarsi su altri \glock{capitolati}.
+            Questo \glock{capitolato} non ha suscitato interesse in nessun membro del gruppo. Il gruppo ha quindi deciso di concentrarsi su altri \glock{capitolati}.
 \end{document}
 
