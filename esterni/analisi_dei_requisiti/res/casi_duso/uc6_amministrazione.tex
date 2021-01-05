@@ -95,10 +95,10 @@
 		\item \textbf{Descrizione:} l'amministratore inserisce il nome utente del nuovo utente che ha intenzione di creare;
 		\item \textbf{Scenario principale:} l'amministratore esegue l'input del nome utente;
 		\item \textbf{Precondizione:} l'amministratore sta compilando i dati del nuovo utente;
-		\item \textbf{Postcondizione:} il nome dell'utente risulta inserito nel sistema.
+		\item \textbf{Postcondizione:} il nome dell'utente risulta inserito.
 		\item \textbf{Estensione:}
 		\begin{itemize}
-			\item \textbf{UC6.1.7:} se si tenta di usare un nome utente già esistente, viene visualizzato un apposito messaggio di errore.
+			\item \textbf{UC6.1.8:} se si tenta di usare un nome utente già esistente, viene visualizzato un apposito messaggio di errore.
 		\end{itemize}
 	\end{itemize}
 
@@ -108,14 +108,23 @@
 		\item \textbf{Descrizione:} l'amministratore inserisce la password del nuovo utente che ha intenzione di creare;
 		\item \textbf{Scenario principale:} l'amministratore esegue l'input della password;
 		\item \textbf{Precondizione:} l'amministratore sta compilando i dati del nuovo utente;
-		\item \textbf{Postcondizione:} la password dell'utente risulta inserita nel sistema.
+		\item \textbf{Postcondizione:} la password dell'utente risulta inserita.
 		\item \textbf{Estensione:}
 		\begin{itemize}
-			\item \textbf{UC6.1.8:} se si tenta di creare una password che non rispetta le regole di formattazione stabilite, viene visualizzato un apposito messaggio di errore.
+			\item \textbf{UC6.1.9:} se si tenta di creare una password che non rispetta le regole di formattazione stabilite, viene visualizzato un apposito messaggio di errore.
 		\end{itemize}
 	\end{itemize}
 
-\subsubsection{UC6.1.7 - Visualizzazione errore causa nome utente già esistente}
+\subsubsection{UC6.1.7 - Input status}
+\begin{itemize}
+	\item \textbf{Attori primari:} utente amministratore;
+	\item \textbf{Descrizione:} l'amministratore sceglie se assegnare all'utente interessato lo status di amministratore oppure di utente autenticato;
+	\item \textbf{Scenario principale:} l'amministratore specifica, tra le opzioni disponibili, lo status da assegnare all'utente;
+	\item \textbf{Precondizione:} l'amministratore sta compilando i dati del nuovo utente;
+	\item \textbf{Postcondizione:} lo status dell'utente risulta inserito.
+\end{itemize}
+
+\subsubsection{UC6.1.8 - Visualizzazione errore causa nome utente già esistente}
 	\begin{itemize}
 		\item \textbf{Attori primari:} utente amministratore;
 		\item \textbf{Descrizione:} l'amministratore visualizza un errore, relativo al fatto che il nome utente che ha tentato di assegnare all'utente è già in uso;
@@ -124,7 +133,7 @@
 		\item \textbf{Postcondizione:} viene visualizzato un errore per informare l'utente che è necessario scegliere un altro nome utente.
 	\end{itemize}
 
-\subsubsection{UC6.1.8 - Visualizzazione errore causa password non valida}
+\subsubsection{UC6.1.9 - Visualizzazione errore causa password non valida}
 	\begin{itemize}
 		\item \textbf{Attori primari:} utente amministratore;
 		\item \textbf{Descrizione:} l'amministratore visualizza un errore, relativo al fatto che la password che ha tentato di assegnare all'utente non è valida;
