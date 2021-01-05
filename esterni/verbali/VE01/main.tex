@@ -10,28 +10,27 @@
 %
 %------------------------------
 
-\setTitle{Verbale riunione \#1}
+\setTitle{Verbale esterno \#1}
 
 \setVersione{1.0.0}
 
-\setDate{30-12-2020}
+\setDate{14-12-2020}
 
 \setResponsabile{Paolo Scanferlato}
 
 \setRedattori{Lucia Fenu}
 
-\setVerificatori{}
+\setVerificatori{Alessandro Chimetto}
 
 \setUso{Esterno}
 
 \setModifiche{
-
-	1.0.0 & Lucia Fenu & Redattore & 30-12-2020 & Stesura iniziale\\}
+    1.0.0 & Alessandro Chimetto & Verificatore & 16-12-2020 & Verifica stesura iniziale\\
+	1.0.0 & Lucia Fenu & Redattore & 15-12-2020 & Stesura iniziale}
 
 \begin{document}
 
 	\input{../../../commons/template}
-
 	\newpage
 
 	%--------------------------------
@@ -76,58 +75,58 @@
 		\subsection{Ordine del giorno}
 		\begin{enumerate}
 			\item Tecnologie consigliate;
-			\item Entità esterne al sistema;
-			\item Implementazione guida semi-automatica;
-			\item Le collisioni;
-			\item \glock{Applicazioni real-time};
-			\item Disponibiltà nell'approffondire lo studio.
+			\item entità esterne al sistema;
+			\item emplementazione guida semi-automatica;
+			\item le collisioni;
+			\item applicazioni \glock{real-time};
+			\item disponibiltà nell'approffondire lo studio.
 		\end{enumerate}
 
 	\newpage
 
 	\section{Svolgimento}
 		\subsection{Tecnologie consigliate}
-	Il committente lascia libera scelta sulle tecnologie da utilizzare, motivandone poi la scelta. Alcuni esempi e consigli:
+	Il committente lascia libera scelta sulle tecnologie da utilizzare a patto che sia motivata. Alcuni esempi e consigli:
 	\begin{itemize}
-		\item per il motore di calcolo, sviluppabile con la gestione a più \glock{thred} è possibile utilizzare:
+		\item per il motore di calcolo, sviluppabile con la gestione a più \glock{thread} è possibile utilizzare:
 		\begin{itemize}
-			\item \bfseries{\glock{Java}}.
+			\item \bfseries{\glock{Java}};
 		\end{itemize}
-		\item dal punto di vista del  monitor real time, un applicativo puramente web che eventualmente dialoghi  tramite web service con il motore scelto o che rielabori i dati. Ad esempio:
+		\item dal punto di vista del  monitor real time, un applicativo puramente web che eventualmente dialoghi tramite web service con il motore scelto o che rielabori i dati; ad esempio:
 		\begin{itemize}
-			\item \bfseries{\glock{AngularJS}}: 
+			\item \bfseries{\glock{AngularJS}}:
 			\item \bfseries{\glock{Angular 2+}};
 			\item \bfseries{\glock{React}};
-			\item \bfseries{\glock{PHP}}.
+			\item \bfseries{\glock{PHP}};
 		\end{itemize}
 		\item 	per i simulatori di entità che girano e inviano segnali, essendo mono \glock{thread}, si può scendere su linguaggi come:
 		\begin{itemize}
-			\item \bfseries{\glock{Node.js}}: 
-			\item \bfseries{\glock{Java}}: 
+			\item \bfseries{\glock{Node.js}};
+			\item \bfseries{\glock{Java}};
 		\end{itemize}
-		\item 	un uso di linguaggi compilati come \glock{C} e \glock{C++}, meglio se utilizzato all'interno del motore di calcolo per motivi di performance. \\
+		\item 	un uso di linguaggi compilati come \glock{C} e \glock{C++}, meglio se effettuato all'interno del motore di calcolo per motivi di performance.
 	\end{itemize}
-	
+
 		\subsection{Entità esterne al sistema}
 		Tutto ciò che è esterno al sistema e che si muove in modo casuale, non prevedibile, è riconducibile al caso dei pedoni.
-	
+
 		\subsection{Implementazione guida semi-automatica}
-		La guida semi-automatica, come quella autonoma, prevede l'uso (base) di quattro frecce direzionali ed un pulsante start and stop.
+		La guida semi-automatica, come quella autonoma, prevede l'uso (base) di quattro frecce direzionali ed un pulsante start-and-stop.
 		Nel primo caso, in particolare, è prevista una doppia interfaccia:
 		\begin{itemize}
-			\item del sistema: il consiglio che il sistema offre al guidatore in riferimento ai calcoli di percorso con ostacoli; 
+			\item del sistema: il consiglio che il sistema offre al guidatore in riferimento ai calcoli di percorso con ostacoli;
 			\item del guidatore: la direzione che deciderà di intraprendere sulla base del consiglio di sistema e che verrà eseguita.
 		\end{itemize}
-	
-	
+
+
 		\subsection{Collisioni}
 		Nel caso di una guida semi-automatica, Il sistema non avrà mai il totale controllo del veicolo.\\
 		Nel caso di una possibile collisione, il sistema consiglierà sempre il guidatore senza interferire con la reale decisione di quest'ultimo. \\
 		Al contrario, in un sistema autonomo come i robot, questo avrà totale controllo sulla strada da percorrere poiché sprovvisto di un guidatore.
-	
+
 		\subsection{\glock{Applicazioni real-time}}
 		Prima di tutto è importante definire il contesto in cui verrà applicato il sistema.\\
-		Infatti i tempi di risposta variano in base all'ambiente considerato, ad esempio: in un magazzino i tempi di risposta saranno più lunghi 
+		Infatti i tempi di risposta variano in base all'ambiente considerato, ad esempio: in un magazzino i tempi di risposta saranno più lunghi
 		rispetto a quelli richiesti su strada, in cui i veicoli hanno velocità maggiore e dunque un tempo di risposta quasi immediato.
 
 		\subsection{Disponibiltà nell'approffondire lo studio.}
@@ -137,6 +136,6 @@
 			\item \bfseries{\glock{Canva}};
 			\item \bfseries{\glock{Angular}}.
 		\end{itemize}
-		
+
 \end{document}
 
