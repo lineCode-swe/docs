@@ -33,29 +33,26 @@ I requisiti strutturati nel seguente modo:
 	\item \textbf{Fonti:} ogni requisito è derivato da una o più delle seguenti opzioni:
 		\begin{itemize}
 			\item \glock{capitolato}: requisito individuato in seguito all'analisi del \glock{capitolato};
-			\item interno: requisito individuato dagli analisti e che si è ritenuto opportuno da aggiungere;
-			\item caso d'uso: requisito derivato da uno o più casi d'uso. Viene riportato il codice univoco del caso d'uso.
-			\item verbale: requisiti individuati durante incontri con il proponente.			
+			\item \textit{interno:} requisito individuato dagli analisti e che si è ritenuto opportuno da aggiungere;
+			\item \textit{caso d'uso:} requisito derivato da uno o più casi d'uso. Viene riportato il codice univoco del caso d'uso.
+			\item \textit{verbale:} requisiti individuati durante incontri con il proponente.			
 		\end{itemize}	
 \end{itemize}
+
  \newpage
+ 
 \subsection{Requisiti funzionali}
-	
-	\begin{table} [h!]
-		\caption{Tabella del requisiti funzionali}
-		\begin{center}
-			\renewcommand{\arraystretch}{4}
-			\begin{tabular} { c c c c}
-				\rowcolor{lightgray}
-				\textbf{Requisito} & \textbf{Priorità} & \textbf{Descrizione}  & \textbf{Fonti} \\
-				RMF2   & Obbligatorio & Un utente può effettuare il login & Interno UC2 \\
-				RMF2.1 & Obbligatorio & Per effettuare login l'utente deve inserire il suo nome utente & Interno UC2.1 \\
-				RMF2.2 & Obbligatorio & Per effettuare login l'utente deve inserire la sua password & Interno UC2.2 \\
-				RMF2.3 & Obbligatorio & Viene visualizzato un errore se viene fornito un nome utente non esistente & Interno UC2.3 \\
-				RMF2.4 & Obbligatorio & Viene visualizzato un errore se se viene fornita una password errata & Interno UC2.4 \\
-				
-			\end{tabular}
+
+	\newcommand*{\thead}[1]{\multicolumn{1}{c}{\bfseries #1}}	
+	\rowcolors{2}{gray!6}{gray!25}
+	\setlength{\tabcolsep}{10pt}
+	\begin{longtable}[h!] { c c m{8.5cm} c}
+		\caption{Tabella dei requisiti funzionali} \\
+		\rowcolor{lightgray}
+		\thead{Requisito} & \thead{Priorità} & \thead{Descrizione} & \thead{Fonti} \\ \endhead%
 		
-	\end{center}
-\end{table}
+		RMFX   & Obbligatorio & Blabla blablablabl ablablabla bl abla bla blablablablabla blabla blablabla & Interno UCX \\
+
+	\end{longtable}
+
 
