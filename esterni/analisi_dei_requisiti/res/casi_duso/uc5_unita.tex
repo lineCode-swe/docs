@@ -95,7 +95,7 @@
 \subsubsection{UC5.4 - Gestione ordini assegnati}
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=18cm]{images/uc5.4.png}
+    \includegraphics[width=10cm]{images/uc5.4.png}
     \caption{Diagramma UC5.4}
 \end{figure}
 \begin{itemize}
@@ -104,8 +104,7 @@
     \item \textbf{Scenario principale:} l'utente modifica la coda degli ordini assegnati nei modi seguenti:
     \begin{itemize}
         \item assegnazione nuovo ordine (UC5.4.1);
-        \item modifica ordine assegnato (UC5.4.2);
-        \item eliminazione ordine assegnato (UC5.4.3).
+        \item eliminazione ordine assegnato (UC5.4.2).
     \end{itemize}
     \item \textbf{Precondizione:} l'unità ha una coda di ordini;
     \item \textbf{Postcondizione:} la coda degli ordini è modificata.
@@ -115,12 +114,8 @@
 \begin{itemize}
     \item \textbf{Attori primari:} utente autenticato;
     \item \textbf{Descrizione:} l'utente intende accodare un nuovo ordine;
-    \item \textbf{Scenario principale:} l'utente inserisce l'identificativo del POI da visitare per consegnare l'ordine;
-    \item \textbf{Estensioni:}
-    \begin{itemize}
-        \item se l'utente inserisce un POI già presente, viene visualizzato un errore (UC5.4.3);
-    \end{itemize}
-    \item \textbf{Precondizione:} l'unità ha una coda degli ordini e si trova alla base;
+    \item \textbf{Scenario principale:} l'utente inserisce l'identificativo del POI da visitare per effettuare la consegna;
+    \item \textbf{Precondizione:} l'unità ha una coda degli ordini che non contiene l'ordine che vuole inserire e si trova alla base;
     \item \textbf{Postcondizione:} l'unità ha la precedente coda degli ordini con accodato il nuovo ordine.
 \end{itemize}
 
@@ -130,14 +125,5 @@
     \item \textbf{Descrizione:} l'utente intende eliminare un ordine in coda;
     \item \textbf{Scenario principale:} l'utente elimina l'ordine dalla coda indipendentemente dalla sua posizione all'interno di essa;
     \item \textbf{Precondizione:} l'unità ha una coda degli ordini con almeno un elemento e si trova alla base;
-    \item \textbf{Postcondizione:} l'unità ha la precedente coda degli ordini con un ordine in meno.
-\end{itemize}
-
-\subsubsection{UC5.4.3 - Errore ordine duplicato}
-\begin{itemize}
-    \item \textbf{Attori primari:} utente autenticato;
-    \item \textbf{Descrizione:} l'utente riceve un messaggio d'errore;
-    \item \textbf{Scenario principale:} l'utente riceve un messaggio d'errore in cui si segnala che l'ordine è già presente in coda;
-    \item \textbf{Precondizione:} l'unità ha una coda degli ordini e si trova alla base;
-    \item \textbf{Postcondizione:} viene visualizzato un errore e la coda degli ordini rimane invariata.
+    \item \textbf{Postcondizione:} l'unità ha la precedente coda degli ordini senza l'ordine selezionato.
 \end{itemize}
