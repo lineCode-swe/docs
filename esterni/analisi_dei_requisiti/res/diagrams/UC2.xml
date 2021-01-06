@@ -1,1 +1,103 @@
-<mxfile host="app.diagrams.net" modified="2021-01-04T15:24:52.991Z" agent="5.0 (Windows)" etag="ZDy87Ecsud3-4zu-Vpng" version="14.1.8" type="device"><diagram id="vI4q1NPKN6q_inJBfMYB" name="Page-1">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</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2021-01-06T10:01:52.368Z" agent="5.0 (Windows)" etag="Q27LtoXS23musZXC0taS" compressed="false" version="14.1.8" type="device">
+  <diagram id="vI4q1NPKN6q_inJBfMYB" name="Page-1">
+    <mxGraphModel dx="1038" dy="547" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="lYwdYuOHTBJzQkcBYz90-1" value="&lt;b&gt;Utente non autenticato&lt;/b&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" parent="1" vertex="1">
+          <mxGeometry x="110" y="250" width="60" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="lYwdYuOHTBJzQkcBYz90-6" value="&lt;p style=&quot;margin: 0px ; margin-top: 4px ; text-align: center&quot;&gt;&lt;br&gt;&lt;b&gt;UC2 - Login&lt;/b&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;" parent="1" vertex="1">
+          <mxGeometry x="220" y="80" width="590" height="500" as="geometry" />
+        </mxCell>
+        <mxCell id="lYwdYuOHTBJzQkcBYz90-8" value="&lt;b&gt;UC2.2&lt;br&gt;Inserimento password&lt;/b&gt;&lt;hr&gt;&lt;b&gt;Extension Point&lt;/b&gt;&lt;br&gt;Visualizzazione errore nome &lt;br&gt;utente non registrato" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="290" y="342.5" width="190" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="lYwdYuOHTBJzQkcBYz90-9" value="&lt;b&gt;UC2.3&lt;br&gt;Visualizzazione messaggio di errore relativo a utente non registrato&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="650" y="120" width="140" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="lYwdYuOHTBJzQkcBYz90-11" value="&lt;b&gt;UC2.4 &lt;br&gt;Visualizzazione messaggio di errore relativo a password errata&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="650" y="362.5" width="140" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="lYwdYuOHTBJzQkcBYz90-13" value="" style="endArrow=open;endSize=12;dashed=1;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="lYwdYuOHTBJzQkcBYz90-9" target="u-Cp-yj2koVRB4g7qhNy-1" edge="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="430" y="160" as="sourcePoint" />
+            <mxPoint x="470" y="175" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lYwdYuOHTBJzQkcBYz90-15" value="&amp;lt;&amp;lt;extend&amp;gt;&amp;gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="lYwdYuOHTBJzQkcBYz90-13" vertex="1" connectable="0">
+          <mxGeometry x="-0.103" y="2" relative="1" as="geometry">
+            <mxPoint y="-20.02" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lYwdYuOHTBJzQkcBYz90-18" value="" style="endArrow=open;endSize=12;dashed=1;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="lYwdYuOHTBJzQkcBYz90-11" target="lYwdYuOHTBJzQkcBYz90-8" edge="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="660" y="314.58" as="sourcePoint" />
+            <mxPoint x="500" y="314.58" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lYwdYuOHTBJzQkcBYz90-19" value="&amp;lt;&amp;lt;extend&amp;gt;&amp;gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="lYwdYuOHTBJzQkcBYz90-18" vertex="1" connectable="0">
+          <mxGeometry x="-0.103" y="2" relative="1" as="geometry">
+            <mxPoint y="-22" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lYwdYuOHTBJzQkcBYz90-20" value="&lt;div&gt;&lt;b&gt;Condition&lt;/b&gt;: l&#39;utente ha inserito un nome utente non registrato&lt;/div&gt;&lt;div&gt;&lt;b&gt;Extension Point&lt;/b&gt;:&lt;/div&gt;&lt;div&gt;visualizzazione errore nome utente non registrato&lt;/div&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;size=11;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" parent="1" vertex="1">
+          <mxGeometry x="490" y="210" width="160" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="lYwdYuOHTBJzQkcBYz90-21" value="&lt;div&gt;&lt;b&gt;Condition&lt;/b&gt;: l&#39;utente ha inserito una password errata&lt;/div&gt;&lt;div&gt;&lt;b&gt;Extension Point&lt;/b&gt;:&lt;/div&gt;&lt;div&gt;visualizzazione errore password errata&lt;/div&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;size=11;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" parent="1" vertex="1">
+          <mxGeometry x="500" y="460" width="150" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="lYwdYuOHTBJzQkcBYz90-23" value="" style="endArrow=none;dashed=1;html=1;" parent="1" target="lYwdYuOHTBJzQkcBYz90-21" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="575" y="420" as="sourcePoint" />
+            <mxPoint x="550" y="140" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lYwdYuOHTBJzQkcBYz90-26" value="" style="endArrow=none;dashed=1;html=1;" parent="1" source="lYwdYuOHTBJzQkcBYz90-20" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="558" y="415" as="sourcePoint" />
+            <mxPoint x="571" y="176" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="u-Cp-yj2koVRB4g7qhNy-1" value="&lt;b&gt;UC2.1&lt;br&gt;Inserimento utente&lt;/b&gt;&lt;hr&gt;&lt;b&gt;Extension Point&lt;/b&gt;:&lt;br&gt;Visualizzazione errore nome utente non registrato" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="290" y="100" width="190" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="u-Cp-yj2koVRB4g7qhNy-3" value="" style="endArrow=none;html=1;edgeStyle=orthogonalEdgeStyle;curved=1;" parent="1" target="lYwdYuOHTBJzQkcBYz90-8" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="240" y="340" as="sourcePoint" />
+            <mxPoint x="120" y="280" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="240" y="417" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="u-Cp-yj2koVRB4g7qhNy-4" value="" style="endArrow=none;html=1;edgeStyle=orthogonalEdgeStyle;curved=1;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="240" y="280" as="sourcePoint" />
+            <mxPoint x="290" y="174.75" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="240" y="175" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="u-Cp-yj2koVRB4g7qhNy-9" value="" style="endArrow=none;html=1;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="240" y="340" as="sourcePoint" />
+            <mxPoint x="240" y="280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="u-Cp-yj2koVRB4g7qhNy-8" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;endArrow=none;endFill=0;" parent="1" source="lYwdYuOHTBJzQkcBYz90-1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="240" y="305" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="240" y="305" />
+              <mxPoint x="240" y="305" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
