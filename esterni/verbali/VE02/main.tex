@@ -72,7 +72,7 @@
 		
 		\subsection{Ordine del giorno}
 		\begin{enumerate}
-			\item analisi attori;
+			\item Analisi attori;
 			\item autenticazione;
 			\item ostacoli;
 			\item mappa modificabile.
@@ -80,7 +80,7 @@
 \newpage	
 	\section{Svolgimento}
 		\subsection{Analisi attori}
-		Alcuni suggerimenti da parte del committente:
+		Alcuni suggerimenti da parte del proponente:
 		\begin{itemize}
 			\item l'amministratore del sistema, ha la possibilità di aggiungere operatori ed unità e di modificare la mappa;
 			\item l'operatore, è l'utente nella quotidianità che usufruisce del sistema;
@@ -91,7 +91,7 @@
 		
 	
 		\subsection{Autenticazione}
-		L'autenticazione è necessaria. \\
+		L'autenticazione per gli utenti ed amministratori è necessaria. \\
 		Ogni utente ed ogni entità deve essere registrata.
 			
 		\subsection{Ostacoli}
@@ -107,7 +107,28 @@
 			\item tramite inserimento di un file che dovrà essere validato dal sistema per verificare se la mappa inserita è effettivamente utilizzabile;
 			\item tramite interfaccia grafica.
 		\end{itemize}
+	
+	\newpage
+	
+	\section{Tabella delle decisioni}
 
-  
+\begin{table} [h!]
+	\rowcolors{2}{gray!25}{gray!6}
+	\begin{center}
+		\begin{tabular} { m{2cm} m{14cm} }
+			\rowcolor{lightgray}
+			\textbf{ID} & \textbf{Decisione}\\
+			VE02.1 & Attore: amministratore di sistema, necessario.\\
+			VE02.2 & Attore: operatore, necessario. \\
+			VE02.3 & Attore: ospite, utente non registrato, necessario. \\
+			VE02.4 & Registrazione di ogni unità ed utente. \\
+			VE02.5 & Autenticazione degli utenti, necessario. \\
+			VE02.6 & Il robot ha dei sensori propri con raggio decisionale. \\
+			VE02.7 & Il robot comunica costantemente con il sistema.\\
+			VE02.8 & Il pedone può comunicare con il sistema tramite \glock{Bluetooth}.\\
+			VE02.9 & La mappa è modificabile tramite inserimento di file da validare.
+		\end{tabular}
+	\end{center}
+\end{table}
 \end{document}
 
