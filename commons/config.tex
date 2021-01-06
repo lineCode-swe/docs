@@ -19,8 +19,11 @@
 \usepackage{fancyhdr}
 \usepackage{multirow}
 \usepackage{pgfgantt}
-\usepackage{lscape}
+\usepackage{pdflscape}
 \usepackage{eurosym}
+\usepackage{amsmath}
+\usepackage{ifthen}
+
 
 \newcommand{\hr}{\par\vspace{-.1\ht\strutbox}\noindent\hrulefill\par}
 
@@ -106,3 +109,9 @@
 \titleformat{\subparagraph}
 {\normalfont\normalsize\bfseries}{\thesubparagraph}{1em}{}
 \titlespacing*{\subparagraph}{0pt}{1.75ex plus 1ex minus .2ex}{.75ex plus .1ex}
+
+%--------------------------------------------------
+% Comando per togliere i box rossi dai link del table of contents
+%--------------------------------------------------
+
+\hypersetup{pdfborder = {0 0 0}}

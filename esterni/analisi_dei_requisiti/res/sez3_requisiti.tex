@@ -1,0 +1,58 @@
+
+I requisiti strutturati nel seguente modo:
+
+\begin{itemize}
+	
+	\item \textbf{codice identificativo:} i codici identificativi sono univoci e conformi alla seguente codifica:
+	\begin{center}
+		\textbf{R[Priorità]-[Categoria]-[Codice]}
+	\end{center}
+	dove: 
+		\begin{itemize}
+			\item \textbf{R:} requisito;
+			\item \textbf{Priorità:}
+			\begin{itemize}
+				\item \textbf{M:} mandatory/obbligatorio, quindi necessario a garantire le funzioni base del prodotto;
+				\item \textbf{D:} desirable/desiderabile, cioè non strettamente necessario, ma che porta alla completezza del prodotto;
+				\item \textbf{O:} optional/opzionale, quindi che non pregiudica la funzionalità del prodotto finale.
+			\end{itemize}
+			\item \textbf{Categoria:}
+			\begin{itemize}
+				\item \textbf{F:} functional/funzionale;
+				\item \textbf{P:} performance/prestazionale;
+				\item \textbf{Q:} qualitative/qualitativo;
+				\item \textbf{C:} constraint/vincolo.
+			\end{itemize}
+			\item \textbf{Codice:} numero progressivo per riconoscere univocamente il requisito.
+		\end{itemize}
+	
+	\item \textbf{Priorità:} priorità del requisito. Informazione ridondante che però semplifica la lettura.
+	
+	\item \textbf{Descrizione:} breve ma completa descrizione del requisito, il meno ambigua possibile. 
+	
+	\item \textbf{Fonti:} ogni requisito è derivato da una o più delle seguenti opzioni:
+		\begin{itemize}
+			\item \glock{capitolato}: requisito individuato in seguito all'analisi del \glock{capitolato};
+			\item \textit{interno:} requisito individuato dagli analisti e che si è ritenuto opportuno da aggiungere;
+			\item \textit{caso d'uso:} requisito derivato da uno o più casi d'uso. Viene riportato il codice univoco del caso d'uso.
+			\item \textit{verbale:} requisiti individuati durante incontri con il proponente.			
+		\end{itemize}	
+\end{itemize}
+
+ \newpage
+ 
+\subsection{Requisiti funzionali}
+
+	\newcommand*{\thead}[1]{\multicolumn{1}{c}{\bfseries #1}}	
+	\rowcolors{2}{gray!6}{gray!25}
+	\setlength{\tabcolsep}{10pt}
+	\begin{longtable}[h!] { c c m{8.5cm} c}
+		\caption{Tabella dei requisiti funzionali} \\
+		\rowcolor{lightgray}
+		\thead{Requisito} & \thead{Priorità} & \thead{Descrizione} & \thead{Fonti} \\ \endhead%
+		
+		RMFX   & Obbligatorio & Blabla blablablabl ablablabla bl abla bla blablablablabla blabla blablabla & Interno UCX \\
+
+	\end{longtable}
+
+
