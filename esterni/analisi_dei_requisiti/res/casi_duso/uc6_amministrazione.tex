@@ -249,7 +249,7 @@
 \subsubsection{UC6.3.2 - Modifica lista unità}
 	\begin{figure}[H]
 		\centering
-		\includegraphics[width=16cm]{images/UC6.3.2.png}
+		\includegraphics[width=17cm]{images/UC6.3.2.png}
 		\caption{Diagramma UC6.3.2 - Modifica lista unità}
 	\end{figure}
 	\begin{itemize}
@@ -274,7 +274,7 @@
 		\item \textbf{Postcondizione:} la lista delle unità risulta aggiornata con l'aggiunta dell'unità interessata.
 		\item \textbf{Inclusione:} 
 		\begin{itemize}
-			\item \textbf{UC6.3.6:} viene eseguito l'input dei dati dell'unità.
+			\item \textbf{UC6.3.6:} viene eseguito l'input dell'ID dell'unità.
 		\end{itemize}
 	\end{itemize}
 
@@ -287,7 +287,7 @@
 		\item \textbf{Postcondizione:} le proprietà dell'unità interessata risultano aggiornate come voluto.
 		\item \textbf{Inclusione:} 
 		\begin{itemize}
-			\item \textbf{UC6.3.6:} viene eseguito l'input dei dati dell'unità.
+			\item \textbf{UC6.3.6:} viene eseguito l'input dell'ID dell'unità.
 		\end{itemize}
 	\end{itemize}
 
@@ -300,41 +300,24 @@
 		\item \textbf{Postcondizione:} la lista delle unità risulta aggiornata con la rimozione dell'unità interessata.
 	\end{itemize}
 
-\subsubsection{UC6.3.6 - Input dati unità}
-	\begin{figure}[H]
-		\centering
-		\includegraphics[width=16cm]{images/UC6.3.6.png}
-		\caption{Diagramma UC6.3.6 - Input dati unità}
-	\end{figure}
-	\begin{itemize}
-		\item \textbf{Attori primari:} utente amministratore;
-		\item \textbf{Descrizione:} l'amministratore inserisce i dati dell'unità interessata;
-		\item \textbf{Scenario principale:} 
-			\begin{itemize}
-				\item l'amministratore esegue l'input dell'ID dell'unità (UC6.3.7).
-			\end{itemize}
-		\item \textbf{Precondizione:} l'amministratore sta inserendo i dati dell'unità interessata;
-		\item \textbf{Postcondizione:} i dati dell'unità risultano inseriti nel sistema.
-	\end{itemize}
-
-\subsubsection{UC6.3.7 - Input ID unità}
+\subsubsection{UC6.3.6 - Input ID unità}
 	\begin{itemize}
 		\item \textbf{Attori primari:} utente amministratore;
 		\item \textbf{Descrizione:} l'amministratore inserisce l'ID da assegnare all'unità interessata;
 		\item \textbf{Scenario principale:} l'amministratore esegue l'input dell'ID unità;
-		\item \textbf{Precondizione:} l'amministratore sta compilando i dati dell'unità interessata;
+		\item \textbf{Precondizione:} l'amministratore sta inserendo i dati dell'unità interessata;
 		\item \textbf{Postcondizione:} l'ID dell'unità risulta inserito.
 		\item \textbf{Estensione:}
 		\begin{itemize}
-			\item \textbf{UC6.3.8:} se si tenta di usare l'ID di un'unità già esistente, viene visualizzato un apposito messaggio di errore.
+			\item \textbf{UC6.3.7:} se si tenta di usare l'ID di un'unità già esistente, viene visualizzato un apposito messaggio di errore.
 		\end{itemize}
 	\end{itemize}
 
-\subsubsection{UC6.3.8 - Visualizzazione errore causa ID unità già esistente}
+\subsubsection{UC6.3.7 - Visualizzazione errore causa ID unità già esistente}
 	\begin{itemize}
 		\item \textbf{Attori primari:} utente amministratore;
 		\item \textbf{Descrizione:} l'amministratore visualizza un errore, relativo al fatto che l'ID che si è cercato di usare è già assegnato ad un'unità esistente;
 		\item \textbf{Scenario principale:} l'amministratore tenta di inserire un ID non valido in quanto assegnato ad un'altra unità, ed il sistema risponde con un apposito errore;
-		\item \textbf{Precondizione:} l'ID scelto è già in uso ad un altra unità;
+		\item \textbf{Precondizione:} l'ID scelto è già in uso ad un'altra unità;
 		\item \textbf{Postcondizione:} viene visualizzato un errore per informare l'utente che è necessario scegliere un altro ID per l'unità.
 	\end{itemize}
