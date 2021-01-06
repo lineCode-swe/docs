@@ -14,7 +14,7 @@
 
 \setVersione{1.0.0}
 
-\setDate{05-01-2020}
+\setDate{05-01-2021}
 
 \setResponsabile{Paolo Scanferlato}
 
@@ -85,7 +85,7 @@
 			\item l'amministratore del sistema, ha la possibilità di aggiungere operatori ed unità e di modificare la mappa;
 			\item l'operatore, è l'utente nella quotidianità che usufruisce del sistema;
 			\item l'ospite, utente non registrato che accede in sola lettura;
-			\item i robot, invece, fanno parte del sistema ma solo a livello comunicativo coi serve; dunque non considerabili come attori;
+			\item l'unità, invece, fanno parte del sistema ma solo a livello comunicativo coi server; dunque non considerabili come attori;
 			\item i pedoni sono un elemento facoltativo e possono essere considerati come attori.
 		\end{itemize}
 		
@@ -95,9 +95,9 @@
 		Ogni utente ed ogni entità deve essere registrata.
 			
 		\subsection{Ostacoli}
-		Il robot ha dei sensori e di base se questo trova uno ostacolo deve avere la capacità di fermarsi o di poterlo aggirare. \\
+		L'unità ha dei sensori e di base se questo trova uno ostacolo deve avere la capacità di fermarsi o di poterlo aggirare. \\
 		Il raggio del sensore è importante poiché determina la tempistica su come l'entità deve gestire l'ostacolo.\\
-		Oltre al sensore, il robot comunica costantemente con il sistema sulla sua posizione. \\
+		Oltre al sensore, l'unità comunica costantemente con il sistema sulla sua posizione. \\
 		Un ostacolo imprevisto come i pedoni, è facoltativo, in quanto i pedoni lo sono.
 		Il pedone può comunicare col sistema sulla loro posizione, ad esempio tramite tecnologia \glock{Bluetooth}.
 		
@@ -123,8 +123,8 @@
 			VE02.3 & Attore: ospite, utente non registrato, necessario. \\
 			VE02.4 & Registrazione di ogni unità ed utente. \\
 			VE02.5 & Autenticazione degli utenti, necessario. \\
-			VE02.6 & Il robot ha dei sensori propri con raggio decisionale. \\
-			VE02.7 & Il robot comunica costantemente con il sistema.\\
+			VE02.6 & L'unità ha dei sensori propri con raggio decisionale. \\
+			VE02.7 & L'unità comunica costantemente con il sistema.\\
 			VE02.8 & Il pedone può comunicare con il sistema tramite \glock{Bluetooth}.\\
 			VE02.9 & La mappa è modificabile tramite inserimento di file da validare.
 		\end{tabular}
