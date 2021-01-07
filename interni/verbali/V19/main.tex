@@ -1,0 +1,117 @@
+\documentclass[]{article}
+
+\input{../../../commons/config}
+
+\appendToGraphicsPath{../../../commons/res/}
+
+%------------------------------
+%
+% COMANDI DI CONFIGURAZIONE
+%
+%------------------------------
+
+\setTitle{Verbale riunione \#19}
+
+\setVersione{1.0.0}
+
+\setDate{03-01-2021}
+
+\setResponsabile{Alessandro Chimetto}
+
+\setRedattori{Alessandro Dindinelli}
+
+\setVerificatori{Giacomo Bulbarelli}
+
+\setUso{Interno}
+
+\setModifiche{
+	1.0.0 & Giacomo Bulbarelli & Verificatore & 04-01-2021 & Verifica documento\\
+	1.0.0 & Alessandro Dindinelli & Redattore & 03-01-2021 & Stesura iniziale}
+
+\begin{document}
+
+	\input{../../../commons/template}
+
+	\newpage
+
+	\section{Introduzione}
+		\subsection{Luogo e data dell'incontro}
+		\begin{itemize}
+			\item \textbf{Modalità}: Telematica;
+			\item \textbf{Software utilizzato}: Discord;
+			\item \textbf{Data}: 03 Gennaio 2021;
+			\item \textbf{Ora di inizio}: 10:00;
+			\item \textbf{Ora di fine}: 12:00;
+		\end{itemize}
+
+		\subsection{Presenze}
+		\begin{itemize}
+			\item \textbf{Presenti}:
+		\begin{itemize}
+			\item Matteo Alba
+			\item Giacomo Bulbarelli
+			\item Alessandro Chimetto
+			\item Alessandro Dindinelli
+			\item Lucia Fenu
+			\item Paolo Scanferlato
+			\item Valton Tahiraj
+		\end{itemize}
+			\item \textbf{Assenti}:
+			\begin{itemize}
+				\item Nessuno
+			\end{itemize}
+		\end{itemize}
+
+		\subsection{Ordine del giorno}
+		\begin{enumerate}
+            \item discussione sullo stato dei lavori per la redazione del documento \dext{Analisi dei Requisiti};
+            \item discussione su dettagli implementativi del sistema per la redazione dei casi d'uso;
+            \item suddivisione lavori per i prossimi documenti da produrre;
+            \item varie ed eventuali.
+		\end{enumerate}
+
+	\newpage
+
+	\section{Svolgimento}
+		\subsection{Discussione sullo stato dei lavori}
+        Ogni componente ha specificato il proprio stato di avanzamento per i compiti che gli erano stati assegnati, e si è passati poi ha decidere un ordine numerico assoluto da dare ai casi d'uso.
+
+        \subsection{Discussione dettagli implementativi del sistema}
+        Si è discusso sui principi di come implementare la coda degli ordini che sarà poi assegnata ad ogni unità robot, decidendo di permetterne una modifica solo in caso l'unità sia alla base. Per quanto riguarda la creazione e modifica della mappa si è deciso di implementarla tramite file testuale da importare nel sistema.
+        
+        \subsection{Suddivisione lavori prossimi documenti}
+        Si è deciso di iniziare uno sviluppo parallelo per il documento \dext{Piano di Qualifica} che verrà portato avanti inizialmente dai membri del gruppo che non hanno attualmente compiti legati al redigere il documento \dext{Analisi dei Requisiti}. \\
+        I componenti del gruppo che si stanno occupando dei casi d'uso avranno poi il compito di redigere anche i requisiti che ne derivano.
+
+		\subsection{Fissata riunione successiva}
+		Riunione successiva fissata in:
+		\begin{itemize}
+			\item \textbf{Data}: 05-01-2021;
+			\item \textbf{Ora}: 10:00;
+			\item \textbf{Modalità}: Telematica: Discord.
+		\end{itemize}
+
+	\newpage
+
+	\section{Tabella delle decisioni}
+
+		\begin{table} [h!]
+			\rowcolors{2}{gray!25}{gray!6}
+			\begin{center}
+				\begin{tabular} { m{2cm} m{14cm} }
+					\rowcolor{lightgray}
+					\textbf{ID} & \textbf{Decisione}\\
+					V19.1 & Si è scelta una numerazione progressiva per i casi d'uso, partendo da quelli che non richiedono autenticazione al sistema, aumentando poi al crescere dei privilegi utente richieste, terminando quindi con quelli legati all'amministrazione di sistema.\\
+					V19.2 & Le unità robot saranno implementate con una lista di ordini da soddisfare, che potrà essere modificata solo quando queste si troveranno alla base.\\
+					V19.3 & La realizzazione e modifica della mappatura dell'ambiente verrà realizzata tramite importazione di un file testuale formattato appositamente.\\
+					V19.4 & Per la redazione parallela di altri documenti i compiti sono stati suddivisi nel seguente modo:
+					\begin{itemize}
+						\item l'impostazione iniziale del \dext{Glossario} è stata affidata a Paolo Scanferlato;
+						\item la redazione della prima parte del \dext{Piano di Qualifica} è stata divisa tra Matteo Alba e Lucia Fenu.
+					\end{itemize}\\
+				\end{tabular}
+			\end{center}
+		\end{table}
+
+\end{document}
+
