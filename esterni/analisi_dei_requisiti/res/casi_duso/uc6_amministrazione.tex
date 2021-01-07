@@ -204,23 +204,23 @@
 	\subsubsection{UC6.2.2 - Modifica mappatura}
 	\begin{itemize}
 		\item \textbf{Attori primari:} utente amministratore;
-		\item \textbf{Descrizione:} l'amministratore applica le modifiche volute alla mappa tramite l'uso di un file appositamente formattato;
-		\item \textbf{Scenario principale:} l'amministratore importa il file di impostazione della mappa, ed applica le modifiche volute;		
+		\item \textbf{Descrizione:} l'amministratore applica le modifiche volute alla mappa;
+		\item \textbf{Scenario principale:} l'amministratore formatta la mappa nella maniera voluta;		
 		\item \textbf{Precondizione:} l'amministratore ha accesso allo stato attuale della mappa;
 		\item \textbf{Postcondizione:} la mappa risulta modificata come voluto.
 		\item \textbf{Estensione:}
 		\begin{itemize}
-			\item \textbf{UC6.2.3:} se si tenta di usare un file non valido per l'impostazione della mappa, viene visualizzato un apposito messaggio di errore.
+			\item \textbf{UC6.2.3:} se si tenta di formattare la mappa erratamente, viene visualizzato un apposito messaggio di errore.
 		\end{itemize}
 	\end{itemize}
 
-\subsubsection{UC6.2.3 - Visualizzazione errore causa file non valido}
+\subsubsection{UC6.2.3 - Visualizzazione errore causa formattazione mappa mal formattata}
 	\begin{itemize}
 		\item \textbf{Attori primari:} utente amministratore;
-		\item \textbf{Descrizione:} l'amministratore visualizza un errore, relativo al fatto che il file che si è cercato di usare per impostare la mappa non è stato formattato correttamente;
-		\item \textbf{Scenario principale:} l'amministratore tenta di importare un file non valido per l'impostazione della mappa;
+		\item \textbf{Descrizione:} l'amministratore visualizza un errore, relativo al fatto che la mappa è stata formattata erratamente;
+		\item \textbf{Scenario principale:} l'amministratore tenta di formattare erratamente la mappa;
 		\item \textbf{Precondizione:} l'amministratore tenta di modificare lo stato della mappa;
-		\item \textbf{Postcondizione:} viene visualizzato un errore per informare l'utente che le modifiche alla mappa sono fallite a causa di errori nel file di importazione.
+		\item \textbf{Postcondizione:} viene visualizzato un errore per informare l'utente che la mappa è stata mal formattata.
 	\end{itemize}
 
 \subsubsection{UC6.3 - Gestione lista unità}

@@ -1,10 +1,10 @@
-<mxfile host="app.diagrams.net" modified="2021-01-06T16:17:22.353Z" agent="5.0 (Windows)" etag="xf0X1i0ZUVztLlymcKbZ" compressed="false" version="14.1.8" type="device">
+<mxfile host="app.diagrams.net" modified="2021-01-07T16:24:03.518Z" agent="5.0 (Windows)" etag="iDO7Zlgc29QFa7-p4Ia9" compressed="false" version="14.1.8" type="device">
   <diagram id="wfCkVK3dqM-HPfIbjC9x" name="Page-1">
     <mxGraphModel dx="1888" dy="547" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="wLQVFGbRgOYmbaqB3V8P-28" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="wLQVFGbRgOYmbaqB3V8P-28" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry y="3410" width="860" height="310" as="geometry" />
         </mxCell>
         <mxCell id="nuNiZpRjIvuJcx9dURVO-136" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;" parent="1" vertex="1">
@@ -331,10 +331,10 @@
             <mxPoint x="150" y="500.0000000000001" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="nuNiZpRjIvuJcx9dURVO-105" value="&lt;div&gt;&lt;b&gt;UC6.2.2 - Modifica mappatura&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;hr&gt;&lt;b&gt;Extension Point: &lt;/b&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 10px&quot;&gt;Visualizzazione errore causa file non valido.&lt;br&gt;&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+        <mxCell id="nuNiZpRjIvuJcx9dURVO-105" value="&lt;div&gt;&lt;b&gt;UC6.2.2 - Modifica mappatura&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;hr&gt;&lt;b&gt;Extension Point: &lt;/b&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 10px&quot;&gt;Visualizzazione errore causa mappa mal formattata.&lt;br&gt;&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="200" y="1700" width="290" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="nuNiZpRjIvuJcx9dURVO-106" value="UC6.2.1 - Visualizzazione errore causa file non valido" style="ellipse;whiteSpace=wrap;html=1;fontStyle=1" parent="1" vertex="1">
+        <mxCell id="nuNiZpRjIvuJcx9dURVO-106" value="UC6.2.1 - Visualizzazione errore causa mappa mal formattata" style="ellipse;whiteSpace=wrap;html=1;fontStyle=1" parent="1" vertex="1">
           <mxGeometry x="580" y="1715" width="210" height="70" as="geometry" />
         </mxCell>
         <mxCell id="nuNiZpRjIvuJcx9dURVO-107" value="" style="endArrow=open;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;dashed=1;endFill=0;" parent="1" source="nuNiZpRjIvuJcx9dURVO-106" target="nuNiZpRjIvuJcx9dURVO-105" edge="1">
@@ -346,7 +346,7 @@
         <mxCell id="nuNiZpRjIvuJcx9dURVO-108" value="&amp;lt;&amp;lt; extend &amp;gt;&amp;gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;" parent="1" vertex="1">
           <mxGeometry x="500" y="1750" width="80" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="nuNiZpRjIvuJcx9dURVO-109" value="&lt;div style=&quot;font-size: 9px&quot;&gt;&lt;b style=&quot;font-size: 9px&quot;&gt;Condition:&lt;/b&gt; il file usato per l&#39;impostazione della mappa non è valido.&lt;/div&gt;&lt;div style=&quot;font-size: 9px&quot;&gt;&lt;b style=&quot;font-size: 9px&quot;&gt;Extension Point:&lt;/b&gt; visualizzazione errore causa file non formattato correttamente.&lt;/div&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fontSize=9;align=center;verticalAlign=middle;size=17;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" parent="1" vertex="1">
+        <mxCell id="nuNiZpRjIvuJcx9dURVO-109" value="&lt;div style=&quot;font-size: 9px&quot;&gt;&lt;b style=&quot;font-size: 9px&quot;&gt;Condition:&lt;/b&gt; il file usato per l&#39;impostazione della mappa non è valido.&lt;/div&gt;&lt;div style=&quot;font-size: 9px&quot;&gt;&lt;b style=&quot;font-size: 9px&quot;&gt;Extension Point:&lt;/b&gt; visualizzazione errore causa mappa non formattata correttamente.&lt;/div&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fontSize=9;align=center;verticalAlign=middle;size=17;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" parent="1" vertex="1">
           <mxGeometry x="470" y="1630" width="160" height="80" as="geometry" />
         </mxCell>
         <mxCell id="nuNiZpRjIvuJcx9dURVO-110" value="" style="endArrow=none;dashed=1;html=1;fontSize=9;entryX=0.374;entryY=1.013;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" target="nuNiZpRjIvuJcx9dURVO-109" edge="1">
@@ -550,115 +550,115 @@
             <mxPoint x="1020" y="2390" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="wLQVFGbRgOYmbaqB3V8P-1" value="&lt;div&gt;&lt;b&gt;UC6.3.7 - Input ID unità&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;hr&gt;&lt;b&gt;Extension Point: &lt;/b&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 11px&quot;&gt;&lt;font style=&quot;font-size: 10px&quot;&gt;Visualizzazione errore causa ID già esistente.&lt;/font&gt;&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="wLQVFGbRgOYmbaqB3V8P-1" value="&lt;div&gt;&lt;b&gt;UC6.3.7 - Input ID unità&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;hr&gt;&lt;b&gt;Extension Point: &lt;/b&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 11px&quot;&gt;&lt;font style=&quot;font-size: 10px&quot;&gt;Visualizzazione errore causa ID già esistente.&lt;/font&gt;&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="1280" y="2430" width="270" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="wLQVFGbRgOYmbaqB3V8P-2" value="&lt;div style=&quot;font-size: 9px&quot;&gt;&lt;b style=&quot;font-size: 9px&quot;&gt;Condition:&lt;/b&gt; l&#39;ID scelto è già in uso ad un altra unità.&lt;/div&gt;&lt;div style=&quot;font-size: 9px&quot;&gt;&lt;b style=&quot;font-size: 9px&quot;&gt;Extension Point:&lt;/b&gt; visualizzazione errore causa ID già esistente.&lt;/div&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fontSize=9;align=center;verticalAlign=middle;size=17;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" vertex="1" parent="1">
+        <mxCell id="wLQVFGbRgOYmbaqB3V8P-2" value="&lt;div style=&quot;font-size: 9px&quot;&gt;&lt;b style=&quot;font-size: 9px&quot;&gt;Condition:&lt;/b&gt; l&#39;ID scelto è già in uso ad un altra unità.&lt;/div&gt;&lt;div style=&quot;font-size: 9px&quot;&gt;&lt;b style=&quot;font-size: 9px&quot;&gt;Extension Point:&lt;/b&gt; visualizzazione errore causa ID già esistente.&lt;/div&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fontSize=9;align=center;verticalAlign=middle;size=17;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" parent="1" vertex="1">
           <mxGeometry x="1515" y="2360" width="150" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="wLQVFGbRgOYmbaqB3V8P-3" value="&lt;div&gt;UC6.3.8 - Visualizzazione errore&lt;/div&gt;&lt;div&gt;ID unità già esistente&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;fontStyle=1" vertex="1" parent="1">
+        <mxCell id="wLQVFGbRgOYmbaqB3V8P-3" value="&lt;div&gt;UC6.3.8 - Visualizzazione errore&lt;/div&gt;&lt;div&gt;ID unità già esistente&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;fontStyle=1" parent="1" vertex="1">
           <mxGeometry x="1620" y="2440" width="210" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="wLQVFGbRgOYmbaqB3V8P-4" value="" style="endArrow=open;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;dashed=1;endFill=0;" edge="1" parent="1" source="wLQVFGbRgOYmbaqB3V8P-3" target="wLQVFGbRgOYmbaqB3V8P-1">
+        <mxCell id="wLQVFGbRgOYmbaqB3V8P-4" value="" style="endArrow=open;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;dashed=1;endFill=0;" parent="1" source="wLQVFGbRgOYmbaqB3V8P-3" target="wLQVFGbRgOYmbaqB3V8P-1" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="1975" y="2755" as="sourcePoint" />
             <mxPoint x="1624.9999999999993" y="2525" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="wLQVFGbRgOYmbaqB3V8P-5" value="&amp;lt;&amp;lt; extend &amp;gt;&amp;gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;" vertex="1" parent="1">
+        <mxCell id="wLQVFGbRgOYmbaqB3V8P-5" value="&amp;lt;&amp;lt; extend &amp;gt;&amp;gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;" parent="1" vertex="1">
           <mxGeometry x="1550" y="2480" width="80" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="wLQVFGbRgOYmbaqB3V8P-6" value="" style="endArrow=none;dashed=1;html=1;fontSize=9;entryX=0.374;entryY=1.013;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1">
+        <mxCell id="wLQVFGbRgOYmbaqB3V8P-6" value="" style="endArrow=none;dashed=1;html=1;fontSize=9;entryX=0.374;entryY=1.013;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="1589.99" y="2480" as="sourcePoint" />
             <mxPoint x="1589.8300000000002" y="2441.04" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="wLQVFGbRgOYmbaqB3V8P-7" value="&lt;div&gt;UC6.3.8 - Visualizzazione errore&lt;/div&gt;&lt;div&gt;ID unità già esistente&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;fontStyle=1" vertex="1" parent="1">
+        <mxCell id="wLQVFGbRgOYmbaqB3V8P-7" value="&lt;div&gt;UC6.3.8 - Visualizzazione errore&lt;/div&gt;&lt;div&gt;ID unità già esistente&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;fontStyle=1" parent="1" vertex="1">
           <mxGeometry x="1620" y="2440" width="210" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="wLQVFGbRgOYmbaqB3V8P-8" value="&lt;div&gt;Amministratore&lt;/div&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontStyle=1" vertex="1" parent="1">
+        <mxCell id="wLQVFGbRgOYmbaqB3V8P-8" value="&lt;div&gt;Amministratore&lt;/div&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontStyle=1" parent="1" vertex="1">
           <mxGeometry x="-70" y="3560" width="30" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="wLQVFGbRgOYmbaqB3V8P-9" value="&lt;div&gt;UC6.3.3 - Inserimento unità&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;fontStyle=1" vertex="1" parent="1">
+        <mxCell id="wLQVFGbRgOYmbaqB3V8P-9" value="&lt;div&gt;UC6.3.3 - Inserimento unità&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;fontStyle=1" parent="1" vertex="1">
           <mxGeometry x="45" y="3480" width="185" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="wLQVFGbRgOYmbaqB3V8P-10" value="UC6.3.5 - Rimozione unità" style="ellipse;whiteSpace=wrap;html=1;fontStyle=1" vertex="1" parent="1">
+        <mxCell id="wLQVFGbRgOYmbaqB3V8P-10" value="UC6.3.5 - Rimozione unità" style="ellipse;whiteSpace=wrap;html=1;fontStyle=1" parent="1" vertex="1">
           <mxGeometry x="45" y="3640" width="185" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="wLQVFGbRgOYmbaqB3V8P-11" value="" style="endArrow=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="wLQVFGbRgOYmbaqB3V8P-8" target="wLQVFGbRgOYmbaqB3V8P-18">
+        <mxCell id="wLQVFGbRgOYmbaqB3V8P-11" value="" style="endArrow=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="wLQVFGbRgOYmbaqB3V8P-8" target="wLQVFGbRgOYmbaqB3V8P-18" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="-60" y="3855" as="sourcePoint" />
             <mxPoint x="50" y="3560" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="wLQVFGbRgOYmbaqB3V8P-12" value="" style="endArrow=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" target="wLQVFGbRgOYmbaqB3V8P-10">
+        <mxCell id="wLQVFGbRgOYmbaqB3V8P-12" value="" style="endArrow=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" target="wLQVFGbRgOYmbaqB3V8P-10" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="20" y="3670" as="sourcePoint" />
             <mxPoint x="50" y="3650" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="wLQVFGbRgOYmbaqB3V8P-13" value="" style="endArrow=none;html=1;" edge="1" parent="1">
+        <mxCell id="wLQVFGbRgOYmbaqB3V8P-13" value="" style="endArrow=none;html=1;" parent="1" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="20" y="3670" as="sourcePoint" />
             <mxPoint x="20" y="3510" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="wLQVFGbRgOYmbaqB3V8P-14" value="UC6.3.2 - Modifica lista unità" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1" vertex="1" parent="1">
+        <mxCell id="wLQVFGbRgOYmbaqB3V8P-14" value="UC6.3.2 - Modifica lista unità" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1" parent="1" vertex="1">
           <mxGeometry x="270" y="3410" width="180" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="wLQVFGbRgOYmbaqB3V8P-15" value="" style="endArrow=none;html=1;dashed=1;endFill=0;entryX=0.997;entryY=0.527;entryDx=0;entryDy=0;entryPerimeter=0;startArrow=open;startFill=0;" edge="1" parent="1" target="wLQVFGbRgOYmbaqB3V8P-18">
+        <mxCell id="wLQVFGbRgOYmbaqB3V8P-15" value="" style="endArrow=none;html=1;dashed=1;endFill=0;entryX=0.997;entryY=0.527;entryDx=0;entryDy=0;entryPerimeter=0;startArrow=open;startFill=0;" parent="1" target="wLQVFGbRgOYmbaqB3V8P-18" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="302.5145930171416" y="3569.8486491126055" as="sourcePoint" />
             <mxPoint x="289.9999999999993" y="3590" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="wLQVFGbRgOYmbaqB3V8P-16" value="&amp;lt;&amp;lt; include &amp;gt;&amp;gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;rotation=15;" vertex="1" parent="1">
+        <mxCell id="wLQVFGbRgOYmbaqB3V8P-16" value="&amp;lt;&amp;lt; include &amp;gt;&amp;gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;rotation=15;" parent="1" vertex="1">
           <mxGeometry x="230" y="3500" width="80" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="wLQVFGbRgOYmbaqB3V8P-17" value="&amp;lt;&amp;lt; include &amp;gt;&amp;gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;rotation=-15;" vertex="1" parent="1">
+        <mxCell id="wLQVFGbRgOYmbaqB3V8P-17" value="&amp;lt;&amp;lt; include &amp;gt;&amp;gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;rotation=-15;" parent="1" vertex="1">
           <mxGeometry x="230" y="3580" width="80" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="wLQVFGbRgOYmbaqB3V8P-18" value="&lt;div&gt;UC6.3.4 - Modifica unità&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;fontStyle=1" vertex="1" parent="1">
+        <mxCell id="wLQVFGbRgOYmbaqB3V8P-18" value="&lt;div&gt;UC6.3.4 - Modifica unità&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;fontStyle=1" parent="1" vertex="1">
           <mxGeometry x="45" y="3560" width="185" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="wLQVFGbRgOYmbaqB3V8P-19" value="" style="endArrow=none;html=1;dashed=1;endFill=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;startArrow=open;startFill=0;" edge="1" parent="1" target="wLQVFGbRgOYmbaqB3V8P-9">
+        <mxCell id="wLQVFGbRgOYmbaqB3V8P-19" value="" style="endArrow=none;html=1;dashed=1;endFill=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;startArrow=open;startFill=0;" parent="1" target="wLQVFGbRgOYmbaqB3V8P-9" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="301.6669057871309" y="3530.4762587963232" as="sourcePoint" />
             <mxPoint x="354" y="3519" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="wLQVFGbRgOYmbaqB3V8P-20" value="" style="endArrow=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" target="wLQVFGbRgOYmbaqB3V8P-9">
+        <mxCell id="wLQVFGbRgOYmbaqB3V8P-20" value="" style="endArrow=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" target="wLQVFGbRgOYmbaqB3V8P-9" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="20" y="3510" as="sourcePoint" />
             <mxPoint x="30" y="3460" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="wLQVFGbRgOYmbaqB3V8P-21" value="&lt;div&gt;&lt;b&gt;UC6.3.6 - Input ID unità&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;hr&gt;&lt;b&gt;Extension Point: &lt;/b&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 11px&quot;&gt;&lt;font style=&quot;font-size: 10px&quot;&gt;Visualizzazione errore causa ID già esistente.&lt;/font&gt;&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="wLQVFGbRgOYmbaqB3V8P-21" value="&lt;div&gt;&lt;b&gt;UC6.3.6 - Input ID unità&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;hr&gt;&lt;b&gt;Extension Point: &lt;/b&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 11px&quot;&gt;&lt;font style=&quot;font-size: 10px&quot;&gt;Visualizzazione errore causa ID già esistente.&lt;/font&gt;&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="290" y="3500" width="270" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="wLQVFGbRgOYmbaqB3V8P-22" value="&lt;div style=&quot;font-size: 9px&quot;&gt;&lt;b style=&quot;font-size: 9px&quot;&gt;Condition:&lt;/b&gt; l&#39;ID scelto è già in uso ad un altra unità.&lt;/div&gt;&lt;div style=&quot;font-size: 9px&quot;&gt;&lt;b style=&quot;font-size: 9px&quot;&gt;Extension Point:&lt;/b&gt; visualizzazione errore causa ID già esistente.&lt;/div&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fontSize=9;align=center;verticalAlign=middle;size=17;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" vertex="1" parent="1">
+        <mxCell id="wLQVFGbRgOYmbaqB3V8P-22" value="&lt;div style=&quot;font-size: 9px&quot;&gt;&lt;b style=&quot;font-size: 9px&quot;&gt;Condition:&lt;/b&gt; l&#39;ID scelto è già in uso ad un altra unità.&lt;/div&gt;&lt;div style=&quot;font-size: 9px&quot;&gt;&lt;b style=&quot;font-size: 9px&quot;&gt;Extension Point:&lt;/b&gt; visualizzazione errore causa ID già esistente.&lt;/div&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fontSize=9;align=center;verticalAlign=middle;size=17;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" parent="1" vertex="1">
           <mxGeometry x="525" y="3430" width="150" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="wLQVFGbRgOYmbaqB3V8P-23" value="&lt;div&gt;UC6.3.8 - Visualizzazione errore&lt;/div&gt;&lt;div&gt;ID unità già esistente&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;fontStyle=1" vertex="1" parent="1">
+        <mxCell id="wLQVFGbRgOYmbaqB3V8P-23" value="&lt;div&gt;UC6.3.8 - Visualizzazione errore&lt;/div&gt;&lt;div&gt;ID unità già esistente&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;fontStyle=1" parent="1" vertex="1">
           <mxGeometry x="630" y="3510" width="210" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="wLQVFGbRgOYmbaqB3V8P-24" value="" style="endArrow=open;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;dashed=1;endFill=0;" edge="1" parent="1" source="wLQVFGbRgOYmbaqB3V8P-23" target="wLQVFGbRgOYmbaqB3V8P-21">
+        <mxCell id="wLQVFGbRgOYmbaqB3V8P-24" value="" style="endArrow=open;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;dashed=1;endFill=0;" parent="1" source="wLQVFGbRgOYmbaqB3V8P-23" target="wLQVFGbRgOYmbaqB3V8P-21" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="985" y="3825" as="sourcePoint" />
             <mxPoint x="634.9999999999993" y="3595" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="wLQVFGbRgOYmbaqB3V8P-25" value="&amp;lt;&amp;lt; extend &amp;gt;&amp;gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;" vertex="1" parent="1">
+        <mxCell id="wLQVFGbRgOYmbaqB3V8P-25" value="&amp;lt;&amp;lt; extend &amp;gt;&amp;gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;" parent="1" vertex="1">
           <mxGeometry x="560" y="3550" width="80" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="wLQVFGbRgOYmbaqB3V8P-26" value="" style="endArrow=none;dashed=1;html=1;fontSize=9;entryX=0.374;entryY=1.013;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1">
+        <mxCell id="wLQVFGbRgOYmbaqB3V8P-26" value="" style="endArrow=none;dashed=1;html=1;fontSize=9;entryX=0.374;entryY=1.013;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="599.9899999999993" y="3550" as="sourcePoint" />
             <mxPoint x="599.8299999999999" y="3511.0400000000004" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="wLQVFGbRgOYmbaqB3V8P-27" value="&lt;div&gt;UC6.3.7 - Visualizzazione errore&lt;/div&gt;&lt;div&gt;ID unità già esistente&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;fontStyle=1" vertex="1" parent="1">
+        <mxCell id="wLQVFGbRgOYmbaqB3V8P-27" value="&lt;div&gt;UC6.3.7 - Visualizzazione errore&lt;/div&gt;&lt;div&gt;ID unità già esistente&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;fontStyle=1" parent="1" vertex="1">
           <mxGeometry x="630" y="3510" width="210" height="80" as="geometry" />
         </mxCell>
       </root>
