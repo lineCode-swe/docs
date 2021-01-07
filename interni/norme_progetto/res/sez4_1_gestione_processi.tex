@@ -153,19 +153,27 @@
 		 \begin{itemize}
 		 	\item nuovi rischi individuati;
 		 	\item ridefinizione, all'occorrenza, di nuove strategie sulla gestione dei rischi;
-		 	\item monitoraggio dei rischi pervenuti. \\ 
+		 	\item monitoraggio dei rischi pervenuti.
 		 \end{itemize}
 	 	\noindent
-	 	I rischi sono così suddivisi:
+	 	I rischi sono così classificati: 
+	 	\begin{center}
+	 			{\bfseries RS[Categoria][Codice]}
+	 	\end{center}
+	 	dove:
 	 	\begin{itemize}
-	 		\item {\bfseries RS-O}: rischio Organizzativo;
-	 		\item {\bfseries RS-T}: rischio Tecnologico;
-	 		\item {\bfseries RS-P}: rischio di carattere Privato/Personale. \\
+	 		\item \textbf{Categoria}: indica la tipologia a cui appartiene il rischio con i seguenti valori:	 
+	 	\begin{itemize}
+	 		\item {\bfseries O}: rischio Organizzativo;
+	 		\item {\bfseries T}: rischio Tecnologico;
+	 		\item {\bfseries P}: rischio di carattere Privato/Personale. \\
 	 	\end{itemize}
-	 	
+ 			\item \textbf{Codice}: intero positivo che identifica il singolo rischio. Il valore parte da 01.
+	 	\end{itemize}
+ 	\newpage	
 	 \subsubsection{Metriche di Qualità}
 	 Durante la realizzazione del processo verranno utilizzate le seguenti metriche di qualità sulla gestione ed il tracciamento di processi e rischi; al fine di ottenere efficacia ed efficienza.  
-	 \paragraph{Schedule Variance - SV}
+	 \paragraph{ MP01 - Schedule Variance - SV}
 	 La Schedule Variance (SV) indica quanto si è in linea, in anticipo o in ritardo rispetto alla schedulazione delle attività di progetto pianificate. \\
 	 È un indicatore di efficacia soprattutto nei confronti del cliente.\\
 	 Il valore è espresso in percentuale, secondo la formula:
@@ -175,7 +183,7 @@
 	Dove:
 
 		\begin{itemize}
-			\item {\bfseries BCWP}: {\itshape Budgeted Cost of Work Performed} o {\itshape
+			\item {\bfseries MP02 - BCWP}: {\itshape Budgeted Cost of Work Performed} o {\itshape
 			Earned Value}, è  il valore (in giorni o EURO) delle attività realizzate alla data corrente.\\
 			Il suo valore è una stima approssimata, secondo i seguenti procedimenti:
 			\begin{displaymath}
@@ -194,7 +202,7 @@
 				\item BCA: {\itshape Budget at Completion}, è il valore inizialmente previsto per la realizzazione del progetto.
 			\end{itemize}
 			\end{itemize}
-			\item {\bfseries BCWS}: {\itshape Budgeted Cost of Work Scheduled}, è il costo pianificato (in giorni o EURO) per realizzare le attività di progetto alla data corrente. \\
+			\item {\bfseries MP03 - BCWS}: {\itshape Budgeted Cost of Work Scheduled}, è il costo pianificato (in giorni o EURO) per realizzare le attività di progetto alla data corrente. \\
 		\end{itemize} 
 		
 		{\bfseries Sul risultato:}
@@ -202,7 +210,7 @@
 		\item {\bfseries Positivo}: indica che si è avanti rispetto alla schedulazione;
 		\item {\bfseries Negativo}: indica che si è indietro rispetto alla schedulazione.\\
 		\end{itemize}
-	 \paragraph{Cost Variance - CV}
+	 \paragraph{MP04 - Cost Variance - CV}
 	 La Cost variance, indica se il valore del costo realmente maturato è maggiore, uguale o minore rispetto al costo effettivo; ovvero quanto sia il livello di efficienza del gruppo rispetto a quanto pianificato. \\
 	 Viene usato come indicatore di produttività o efficienza soprattutto nei confronti del {\itshape Management} dell'azienda. \\
 	 Il suo valore è espresso in percentuale, secondo la seguente formula:
@@ -211,20 +219,20 @@
 	 \end{displaymath}
  		dove:
  		\begin{itemize}
- 			\item {\bfseries BCWP}: {\itshape Budgeted Cost of Work Performed} o {\itshape
+ 			\item {\bfseries MP02 - BCWP}: {\itshape Budgeted Cost of Work Performed} o {\itshape
  				Earned Value}, è il valore (in giorni o EURO) delle attività realizzate alla data corrente;
- 			\item {\bfseries ACWP}: {\itshape Actual Cost of Work Performed},è il costo effettivamente sostenuto (in giorni o EURO) alla data corrente.
+ 			\item {\bfseries MP05 - ACWP}: {\itshape Actual Cost of Work Performed},è il costo effettivamente sostenuto (in giorni o EURO) alla data corrente.
  		\end{itemize}
- 		La differenza tra BCWP e ACWP è che se l'attuale costo (ACWP) alla data corrente è più alto rispetto a quello guadagnato (BCWP) alla data corrente; sappiamo che l'appaltatore sta attualmente superando i costi previsti nella stima al completamento, sforando il budget.
- 		\\ \\
+ 		La differenza tra BCWP e ACWP è che se l'attuale costo (ACWP) alla data corrente è più alto rispetto a quello guadagnato (BCWP) alla data corrente; sappiamo che l'appaltatore sta attualmente superando i costi previsti nella stima al completamento, sforando il budget.	\\
+ 	
  		{\bfseries Sul risultato}:
  		\begin{itemize}
  			\item {\bfseries Positivo}: indica che il progetto viene sviluppato con un costo minore rispetto a quanto preventivato;
  			\item {\bfseries Negativo}:  indica che il progetto viene sviluppato con un costo maggiore rispetto a quanto preventivato;
- 			\item {\bfseries Uguale a zero}: indica che il progetto viene sviluppato con un costo in linea rispetto a quanto preventivato;
+ 			\item {\bfseries Uguale a zero}: indica che il progetto viene sviluppato con un costo in linea rispetto a quanto preventivato;\\
  		\end{itemize} 
 	
-	 \paragraph{Unbudgeted Risks - UR}
+	 \paragraph{MP06 - Unbudgeted Risks - UR}
 	 L'Unbudgeted Risks, indica il numero di rischi non rilevati in fase di analisi, in modo incrementale. Per ogni rischio non preventivato che viene rilevato, si incrementa di una unità (partendo dallo zero) il numero di rischi rilevati dall'inizio del progetto fino a data corrente; secondo la formula:
 	 \begin{displaymath}
 	 	UR = UR + 1 
@@ -234,7 +242,7 @@
  		\item {\bfseries pari a zero}: non sono stati rilevati rischi in fase di progetto;
  		\item {\bfseries maggiore di zero}: sono stati trovati rischi in fase di progetto.\\
  	\end{itemize}
-	 \paragraph{Defects Removal Efficiency - DRE}
+	 \paragraph{MP07 - Defects Removal Efficiency - DRE}
 	 La Defects Removal Efficiency è una metrica utile sia a livello di processo che di progetto. Indica la misura della capacità del team di rimuovere i difetti prima del rilascio, secondo la formula:
 	 \begin{displaymath}
 	 DRE = \frac{DI}{DI+DE}\times100
