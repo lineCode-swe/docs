@@ -14,21 +14,21 @@ I requisiti strutturati nel seguente modo:
 			\begin{itemize}
 				\item \textbf{M:} mandatory/obbligatorio, quindi necessario a garantire le funzioni base del prodotto;
 				\item \textbf{D:} desirable/desiderabile, cioè non strettamente necessario, ma che porta alla completezza del prodotto;
-				\item \textbf{O:} optional/opzionale, quindi che non pregiudica la funzionalità del prodotto finale.
+				\item \textbf{O:} optional/opzionale, quindi che non pregiudica la funzionalità del prodotto finale;
 			\end{itemize}
 			\item \textbf{Categoria:}
 			\begin{itemize}
 				\item \textbf{F:} functional/funzionale;
 				\item \textbf{P:} performance/prestazionale;
 				\item \textbf{Q:} qualitative/qualitativo;
-				\item \textbf{C:} constraint/vincolo.
+				\item \textbf{C:} constraint/vincolo;
 			\end{itemize}
-			\item \textbf{Codice:} numero progressivo per riconoscere univocamente il requisito.
+			\item \textbf{Codice:} numero progressivo per riconoscere univocamente il requisito;
 		\end{itemize}
 	
-	\item \textbf{Priorità:} priorità del requisito. Informazione ridondante che però semplifica la lettura.
+	\item \textbf{Priorità:} priorità del requisito. Informazione ridondante che però semplifica la lettura;
 	
-	\item \textbf{Descrizione:} breve ma completa descrizione del requisito, il meno ambigua possibile. 
+	\item \textbf{Descrizione:} breve ma completa descrizione del requisito, il meno ambigua possibile;
 	
 	\item \textbf{Fonti:} ogni requisito è derivato da una o più delle seguenti opzioni:
 		\begin{itemize}
@@ -241,7 +241,7 @@ I requisiti strutturati nel seguente modo:
 	\rowcolor{lightgray}
 	\thead{Requisito} & \thead{Priorità} & \thead{Descrizione} & \thead{Fonti} \\ \endhead%
 	
-	RMQ1 & Obbligatorio & Il prodotto va rilasciato con la licenza \glock{open-source} più aperta possibile in base alle librerie utilizzate & VE01 \\
+	RMQ1 & Obbligatorio & Il prodotto va rilasciato con la licenza \glock{open-source} più aperta possibile in base alle librerie utilizzate & VE01.4 \\
 	
 	RMQ2 & Obbligatorio & Il prodotto deve essere conforme con quanto dichiarato nel documento \dext{Piano di Qualifica v1.0.0} e successivi aggiornamenti del medesimo & Interno \\
 	
@@ -260,11 +260,11 @@ I requisiti strutturati nel seguente modo:
 	\rowcolor{lightgray}
 	\thead{Requisito} & \thead{Priorità} & \thead{Descrizione} & \thead{Fonti} \\ \endhead%
 	
-	RMP1 & Obbligatorio & Il tempo di aggiornamento della mappatura rispetto alla posizione delle unità nell'ambiente deve essere $\leq$ 5 secondi & Interno \& VE01 \\ 
+	RMP1 & Obbligatorio & Il tempo di aggiornamento della mappatura rispetto alla posizione delle unità nell'ambiente deve essere $\leq$ 5 secondi & Interno \& VE01.2 \\ 
 	
-	RDP1.1 & Desiderabile & Il tempo di aggiornamento della mappatura rispetto alla posizione delle unità nell'ambiente deve essere $\leq$ 2.5 secondi & Interno \& VE01 \\
+	RDP1.1 & Desiderabile & Il tempo di aggiornamento della mappatura rispetto alla posizione delle unità nell'ambiente deve essere $\leq$ 2.5 secondi & Interno \& VE01.2 \\
 	
-	ROP1.2 & Opzionale & Il tempo di aggiornamento della mappatura rispetto alla posizione delle unità nell'ambiente deve essere $\leq$ 1 secondi & Interno \& VE01 \\
+	ROP1.2 & Opzionale & Il tempo di aggiornamento della mappatura rispetto alla posizione delle unità nell'ambiente deve essere $\leq$ 1 secondi & Interno \& VE01.2 \\
 	
 	RMP2 & Obbligatorio & Il servizio non deve mai essere interrotto secondo una logica di \glock{zero downtime} & Capitolato \\
 	
@@ -445,10 +445,11 @@ I requisiti strutturati nel seguente modo:
 	 \tabularnewline
 	 UC6.3.7 & RMF8.5
 	 \tabularnewline
-	 VE01 & RMP1 \\
+	 VE01.2 & RMP1 \\
 	 RDP1.1 \\
-	 ROP1.2 \\
-	 RMQ1
+	 ROP1.2 
+	 \tabularnewline
+	 VE01.4 & RMQ1
 	 \tabularnewline
 	 VE02.4 & RMF6\\
 	 RMF6.3 \\
@@ -627,15 +628,15 @@ I requisiti strutturati nel seguente modo:
 	\tabularnewline
 	RDF21.2 & Capitolato
 	\tabularnewline
-	RMP1 & Interno\\VE01
+	RMP1 & Interno\\VE01.2
 	\tabularnewline
-	RDP1.1 & Interno\\VE01
+	RDP1.1 & Interno\\VE01.2
 	\tabularnewline
-	ROP1.2 & Interno\\VE01
+	ROP1.2 & Interno\\VE01.2
 	\tabularnewline
 	RMP2 & Capitolato
 	\tabularnewline
-	RMQ1 & VE01
+	RMQ1 & VE01.4
 	\tabularnewline
 	RMQ2 & Interno
 	\tabularnewline
