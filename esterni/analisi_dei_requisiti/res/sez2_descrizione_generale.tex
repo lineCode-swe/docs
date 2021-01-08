@@ -1,0 +1,32 @@
+\subsection{Obiettivi del Prodotto}
+Il progetto \textit{PORTACS} pone come obiettivo lo studio di problematiche trasversali al mondo della logistica fra cui analisi, monitoraggio, predittività e capacità decisionale in ambito \glock{real-time}. In particolare, il \glock{capitolato} enuncia una serie di contesti con punti in comune rilevanti come il movimento di veicoli a guida (semi-)autonoma che devono raggiungere dei \glock{POI} ed evitare le collisioni.
+\\\\
+Data la vastità del mondo della logistica, il proponente richiede che venga preso in considerazione uno specifico contesto fra quelli (o similare a quelli) proposti nella documentazione del capitolato. Su di esso, andranno tarati i requisiti in modo da garantire che il servizio sia sempre disponibile e il più possibile privo di collisioni.
+
+\subsection{Contesto e Funzioni del Prodotto}
+Il contesto scelto per questo progetto è quello del ristorante dotato di camerieri robot (da qui in poi "unità").
+    \subsubsection{Unità}
+    Le unità si trovano all'interno del ristorante rappresentato da una griglia suddivisa in celle quadrate di dimensione predefinita. Ogni unità svolge ciclicamente determinate operazioni:
+    \begin{enumerate}
+        \item l'unità si trova ferma in una base di ricarica comunicante con la cucina dove riceve il cibo da consegnare;
+        \item l'operatore si autentica al sistema e inserisce, nella coda degli ordini dell'unità, tutti i \glock{POI} su cui si dovrà effettuare la consegna;
+        \item l'unità, ricevuta l'autorizzazione a partire, riceve dal sistema i dati sul percorso da seguire per consegnare tutti gli ordini;
+        \item terminate le consegne, l'unità torna alla base dove potrà ricevere nuovi ordini da consegnare.
+    \end{enumerate}
+    L'unità comunica costantemente al sistema i suoi dati, compresi quelli che riguardano la sua sensoristica interna, in modo da ricevere istruzioni su eventuali cambi di percorso.
+
+    \subsubsection{Cliente}
+    Il cliente dispone di una vista sulla mappa del ristorante e sulle unità che si muovono in essa. La sua interfaccia risulta \glock{user-friendly}, utilizzabile senza precedente formazione.
+
+    \subsubsection{Utente autenticato}
+    È un operatore che usufruisce quotidianamente del sistema (per esempio un cuoco o un caposervizio) gestendo le unità con le rispettive code degli ordini. La sua interfaccia è sufficientemente \glock{user-friendly} da poter essere utilizzata immediatamente dopo una breve spiegazione.
+
+    \subsubsection{Amministratore}
+    Gestisce la mappa del locale e l'associazione delle unità al sistema. Conosce approfonditamente il sistema.
+
+\subsection{Macro-architetture del Prodotto}
+    \subsubsection{\glock{Back-end}}
+    Il \glock{back-end} è composto da più server che interagiscono fra loro per garantire ridondanza ed evitare interruzioni del servizio secondo una logica di \glock{zero downtime}.
+
+    \subsubsection{\glock{Front-end}}
+    Il \glock{front-end} mette a disposizione di tutti gli utenti una mappa con le unità che si muovono in essa e delle apposite interfacce di gestione per operatori ed amministratori.
