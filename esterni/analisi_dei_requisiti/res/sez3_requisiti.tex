@@ -39,31 +39,31 @@ I requisiti strutturati nel seguente modo:
 		\end{itemize}	
 \end{itemize}
 
-\newpage
+\vspace{0.5cm}
 
 \subsection{Requisiti funzionali}
 
 	\newcommand*{\thead}[1]{\multicolumn{1}{c}{\bfseries #1}}	
 	\rowcolors{2}{gray!6}{gray!25}
 	\setlength{\tabcolsep}{10pt}
-	\begin{longtable}[h!] { c c m{8.5cm} c}
+	\begin{longtable}[h!] { c c m{8cm} c}
 		\caption{Tabella dei requisiti funzionali} \\
 		\rowcolor{lightgray}
 		\thead{Requisito} & \thead{Priorità} & \thead{Descrizione} & \thead{Fonti} \\ \endhead%
 		
-		RMF1 & Obbligatorio & Deve essere disponibile per l'utente generico una mappatura dell'ambiente in cui le unità operano. & Interno UC1 \\
+		RMF1 & Obbligatorio & Deve essere disponibile per l'utente generico una mappatura dell'ambiente in cui le unità operano & Interno UC1 \\
 		
-		RMF1.1 & Obbligatorio & Deve essere disponibile per l'utente generico una legenda esplicativa della simbologia utilizzata all'interno della mappatura. & Interno UC1 \\
+		RMF1.1 & Obbligatorio & Deve essere disponibile per l'utente generico una legenda esplicativa della simbologia utilizzata all'interno della mappatura & Interno UC1 \\
 		
-		RMF1.2 & Obbligatorio & La mappatura deve essere aggiornata periodicamente, garantendo che i dati siano coerenti con l'ambiente descritto. & Interno UC1 \\
+		RMF1.2 & Obbligatorio & La mappatura deve essere aggiornata periodicamente, garantendo che i dati siano coerenti con l'ambiente descritto & Interno UC1 \\
 		
-		RMF1.3 & Obbligatorio & La mappatura deve fornire informazioni sul movimento di unità facenti parte del sistema. & Interno UC1 \\
+		RMF1.3 & Obbligatorio & La mappatura deve fornire informazioni sul movimento di unità facenti parte del sistema & Interno UC1 \\
 		
-		RDF1.4 & Desiderabile & La mappatura deve fornire informazioni sul movimento di pedoni presenti nell'ambiente. & Interno UC1 \\
+		RDF1.4 & Desiderabile & La mappatura deve fornire informazioni sul movimento di pedoni presenti nell'ambiente & Interno UC1 \\
 		
-		RMF1.5 & Obbligatorio & La sezione dedicata alla mappatura deve essere sempre disponibile all'utente. & Interno UC1 \\
+		RMF1.5 & Obbligatorio & La sezione dedicata alla mappatura deve essere sempre disponibile all'utente & Interno UC1 \\
 		
-		RMF2 & Obbligatorio & Un utente può effettuare il login. & VE02.5 UC2 \\
+		RMF2 & Obbligatorio & Un utente può effettuare il login & VE02.5 UC2 \\
 		
 		RMF2.1 & Obbligatorio & Per effettuare login l'utente deve inserire il suo nome utente & VE02.5 UC2.1 \\
 		
@@ -75,15 +75,15 @@ I requisiti strutturati nel seguente modo:
 		
 		RMF3 & Obbligatorio & Un utente autenticato può effettuare logout & VE02.5 UC3 \\
 		
-		RMF4 & Obbligatorio & Deve essere disponibile una guida utente che contiene le istruzioni operative di utilizzo per un utente autenticato. & Interno UC4 \\
+		RMF4 & Obbligatorio & Deve essere disponibile una guida utente che contiene le istruzioni operative di utilizzo per un utente autenticato & Interno UC4 \\
 		
-		RMF4.1 & Obbligatorio & La guida utente deve contenere tutte le istruzioni relative alle operazioni elementari che un utente può svolgere all'interno dell'applicativo. & Interno UC4 \\
+		RMF4.1 & Obbligatorio & La guida utente deve contenere tutte le istruzioni relative alle operazioni elementari che un utente può svolgere all'interno dell'applicativo & Interno UC4 \\
 		
 		RMF4.2 & Obbligatorio & La guida utente deve essere accessibile a tutti e soli gli utenti registrati & Interno UC4 \\
 		
 		RMF5 & Obbligatorio & L'utente autenticato può visualizzare e gestire la lista di unità attive & Capitolato UC5 \\
 		
-		RMF5.1 & Obbligatorio & Ogni elemento della lista di unità fornisce l'identificativo dell'unità & Interno UC5 \\
+		RMF5.1 & Obbligatorio & Ogni elemento della lista di unità fornisce l'ID dell'unità & Interno UC5 \\
 		
 		RMF5.2 & Obbligatorio & Ogni elemento della lista di unità mette a disposizione un ambiente grafico dedicato per visualizzazione e gestione delle proprietà dell'unità & Interno UC5 \\
 		
@@ -133,9 +133,9 @@ I requisiti strutturati nel seguente modo:
 		
 		RMF6.8 & Obbligatorio & L'input delle credenziali utente richiede lo status & VE02.4 UC6.1.9 \\
 		
-		RMF6.9 & Obbligatorio & Viene visualizzato un errore se è stato fornito un nome utente già assegnato ad un utente esistente & VE02.4 UC6.01.10 \\
+		RMF6.9 & Obbligatorio & Viene visualizzato un errore se è stato fornito un nome utente già assegnato ad un utente esistente & VE02.4 UC6.1.10 \\
 		
-		RMF6.10 & Obbligatorio & Viene visualizzato un errore se viene fornita una password non formattata correttamente & VE02.4 UC6.01.11 \\
+		RMF6.10 & Obbligatorio & Viene visualizzato un errore se viene fornita una password non formattata correttamente & VE02.4 UC6.1.11 \\
 		
 		RMF7 & Obbligatorio & L'amministratore deve poter modificare la mappa formattandola opportunamente & Capitolato UC6.2.2 \\
 		
@@ -255,16 +255,16 @@ I requisiti strutturati nel seguente modo:
 	
 \rowcolors{2}{gray!6}{gray!25}
 \setlength{\tabcolsep}{10pt}
-\begin{longtable}[h!] { c c m{8.5cm} c}
+\begin{longtable}[h!] { c c m{8.5cm} c }
 	\caption{Tabella dei requisiti prestazionali} \\
 	\rowcolor{lightgray}
 	\thead{Requisito} & \thead{Priorità} & \thead{Descrizione} & \thead{Fonti} \\ \endhead%
 	
-	RMP1 & Obbligatorio & Il tempo di aggiornamento della mappatura rispetto alla posizione delle unità nell'ambiente deve essere <= 5 secondi & Interno VE01 \\
+	RMP1 & Obbligatorio & Il tempo di aggiornamento della mappatura rispetto alla posizione delle unità nell'ambiente deve essere $\leq$ 5 secondi & Interno VE01 \\ 
 	
-	RDP1.1 & Desiderabile & Il tempo di aggiornamento della mappatura rispetto alla posizione delle unità nell'ambiente deve essere <= 2.5 secondi & Interno VE01 \\
+	RDP1.1 & Desiderabile & Il tempo di aggiornamento della mappatura rispetto alla posizione delle unità nell'ambiente deve essere $\leq$ 2.5 secondi & Interno VE01 \\
 	
-	ROP1.2 & Opzionale & Il tempo di aggiornamento della mappatura rispetto alla posizione delle unità nell'ambiente deve essere <= 1 secondi & Interno VE01 \\
+	ROP1.2 & Opzionale & Il tempo di aggiornamento della mappatura rispetto alla posizione delle unità nell'ambiente deve essere $\leq$ 1 secondi & Interno VE01 \\
 	
 	RMP2 & Obbligatorio & Il servizio non deve mai essere interrotto secondo una logica di \glock{zero downtime} & Capitolato \\
 	
@@ -422,9 +422,9 @@ I requisiti strutturati nel seguente modo:
 	 \tabularnewline
 	 UC6.1.9 & RMF6.8
 	 \tabularnewline
-	 UC6.01.10 & RMF6.9
+	 UC6.1.10 & RMF6.9
 	 \tabularnewline
-	 UC6.01.11 & RMF6.10
+	 UC6.1.11 & RMF6.10
 	 \tabularnewline
 	 UC6.2.2 & RMF7
 	 \tabularnewline
@@ -471,18 +471,17 @@ I requisiti strutturati nel seguente modo:
 	 \tabularnewline
 	 VE02.8 & RDF21.1
 	 \tabularnewline
-		 
 	
 \end{longtable}
 
 \newpage
 
-\subsubsection{Requisiti - Fonte}
+\subsubsection{Requisito - Fonti}
 
 \rowcolors{2}{gray!6}{gray!25}
 \setlength{\tabcolsep}{10pt}
 \begin{longtable}[h!] { >{\centering}m{5cm} >{\centering}m{5cm} }
-	\caption{Tabella di tracciamento requisiti-fonte} \\
+	\caption{Tabella di tracciamento requisito-fonti} \\
 	\rowcolor{lightgray}
 	\thead{Requisito} & \thead{Fonti} \\ \endhead%
 	
@@ -568,9 +567,9 @@ I requisiti strutturati nel seguente modo:
 	\tabularnewline
 	RMF6.8 & VE02.4\\UC6.1.9
 	\tabularnewline
-	RMF6.9 & VE02.4\\UC6.01.10
+	RMF6.9 & VE02.4\\UC6.1.10
 	\tabularnewline
-	RMF6.10 & VE02.4\\UC6.01.11
+	RMF6.10 & VE02.4\\UC6.1.11
 	\tabularnewline
 	RMF7 & Capitolato\\UC6.2.2
 	\tabularnewline
