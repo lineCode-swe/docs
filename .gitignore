@@ -4,6 +4,10 @@
 *.out
 *.pdf
 *.gz
+*.lof
+*.lot
+*.synctex(busy)
+*.toc
 
 ## File e cartelle risultanti dalla CI
 *.fls
@@ -12,4 +16,3 @@ Documents*
 
 ## File nascosti di macOS
 .DS_Store
-*.toc
