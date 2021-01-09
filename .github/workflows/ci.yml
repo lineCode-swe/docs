@@ -11,7 +11,7 @@ jobs:
 
     steps:
     - name: Checkout repository contents
-      uses: actions/checkout@v1
+      uses: actions/checkout@v2
 
     - name: Latex compiler
       uses: Jatus93/Latex-multicompiler@master
@@ -26,13 +26,14 @@ jobs:
         languages: "en_GB;en_US;italiano"
 
     - name: Gulpease
-      uses: Jatus93/GulpeaseAction@master
+      uses: achimett/GulpeaseTex@master
       with:
-        directory: ./Documents
+        files-to-evaluate: .github/files_to_compile
+        directory: Documents/Gulpease
 
     - name: Upload artifact
       if: ${{ !env.ACT }}
-      uses: actions/upload-artifact@v1
+      uses: actions/upload-artifact@v2
       with:
         name: Documents
         path: ./Documents
