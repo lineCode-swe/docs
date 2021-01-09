@@ -12,9 +12,9 @@
 
 \setTitle{Norme di Progetto}
 
-\setVersione{0.8.1}
+\setVersione{1.0.0}
 
-\setDate{04-01-2021}
+\setDate{09-01-2021}
 
 \setResponsabile{Paolo Scanferlato}
 
@@ -28,11 +28,15 @@
 
 \setVerificatori{Alessandro Chimetto \\&
 	Alessandro Dindinelli \\&
+	Lucia Fenu \\&
   	Valton Tahiraj}
 
 \setUso{Interno}
 
 \setModifiche{
+	1.0.0 & Paolo Scanferlato		& Responsabile	 & 09-01-2021 & Approvazione \\
+	0.9.0 & Lucia Fenu			  	& Verificatore   & 04-01-2021 & Verificato Qualità\\
+	0.9.0 & Matteo Alba				& Amministratore & 04-01-2021 & Aggiunto Qualità \\
 	0.8.1 & Alessandro Dindinelli	& Verificatore   & 04-01-2021 & Verificato Documentazione\\
 	0.8.1 & Paolo Scanferlato		& Amministratore & 04-01-2021 & Modificato Documentazione\\
 	0.8.0 & Alessandro Dindinelli	& Verificatore   & 30-12-2020 & Verificato Documentazione\\
@@ -58,11 +62,9 @@
 \begin{document}
 	\input{../../commons/template}
 	\newpage
-	%--------------------------------
-	%
-	% IL CONTENUTO INIZIA DA QUI
-	%
-	%--------------------------------
+	
+	\tableofcontents
+	\newpage
 
 	\section{Introduzione}
 	\input{res/sez1_intro.tex}
@@ -75,86 +77,9 @@
 	\input{res/sez2_2_sviluppo.tex}
 	\newpage
 
-<<<<<<< Updated upstream
 	\section{Processi di Supporto}
 	\input{res/sez3_1_documentazione.tex}
 	\newpage
-=======
-					\subsubsection{Rapporto con il proponente}
-						Il gruppo intende instaurare un dialogo costante ed un profondo rapporto di collaborazione con il proponente Sanmarco Informatica SpA, al fine di:
-						\begin{itemize}
-							\item determinare i bisogni del proponente;
-							\item stabilire vincoli e  requisiti dei processi;
-							\item stabilire vincoli e requisiti del prodotto;
-							\item stimare tempistiche e costi del lavoro;
-							\item accordarsi sulla qualifica di prodotto;
-							\item chiarire eventuali dubbi emersi.
-						\end{itemize}
-					
-					\newpage
-					
-					\section{Garanzia della Qualità}
-					
-					\subsection{Scopo}
-					Effettuare delle scrupolose classificazioni e stabilire metriche precise nell'ambito della verifica e della validazione mantenendo un livello di qualità che rimanga uniforme e quantificabile durante l'intero ciclo di vita del software.
-					
-					\subsection{Descrizione}
-					La garanzia della qualità comprende diverse tipologie di controlli che devono essere effettuati su:
-					\begin{itemize}
-					\item software;
-					\item documentazione;
-					\item processi atti a produrre il software e la documentazione.						
-					\end{itemize}	
-				
-					\subsection{Obiettivi di qualità del prodotto}	
-					Per garantire una buona qualità del prodotto si attuano dei processi di verifica e validazione basati su fondamenti normativi:
-					\begin{itemize}
-					\item \textbf{verifica}: processo di controllo che assicura la qualità dei processi di fornitura del prodotto;
-					\item \textbf{validazione}: processo di controllo del prodotto predisposto a garantire le aspettative, i requisiti e le funzionalità decise.
-					\end{itemize}
-					Tutti questi processi devono portare ad una migliore qualità del prodotto sottoposto agli standard del \textit{way of working}.
-					
-					
-					\subsection{Obiettivi di qualità del processo}
-					La qualità del prodotto deve soddisfare attraverso il ciclo di vita del software i principi di efficacia ed efficienza mirati al prodotto:
-					\begin{itemize}
-					\item \textbf{efficacia}: il prodotto deve soddisfare le richieste del proponente;
-					\item \textbf{efficienza}: i processi devono mantenere costi ridotti in termini di risorse a parità di qualità del prodotto.
-					\end{itemize}
-					Durante tutta la produzione del prodotto i processi vanno migliorati attraverso dei monitoraggi che permettono di ottenere, attraverso l'esperienza  una risposta critica relativa alla qualità stessa del prodotto.							
-					
-					\subsection{Conformità del contratto}
-					Deve essere garantito che l'acquirente e le altre parti ricevano il supporto e la
-					cooperazione richiesta, in conformità con il contratto.					
-					
-					\subsection{Personale assegnato}
-					Si deve garantire che il personale assegnato abbia le capacità e le conoscenze necessarie per soddisfare il requisiti del progetto e ricevere la formazione necessaria.
-					
-					\subsection{Garanzia del prodotto}
-					Deve essere assicurato che tutti i termini richiesti dal contratto siano documentati, conformi a
-					suddetto contratto, reciprocamente coerenti e vengano eseguiti come richiesto. E' quindi fondamentale che il contenuto dei suddetti documenti rifletta in maniera chiara gli estremi concordati. 				
-					
-					\subsection{Garanzia del processo}
-					Deve essere garantito che i processi durante il ciclo di vita del software (fornitura, sviluppo, funzionamento, manutenzione, processi di supporto e garanzia della qualità) impiegati per il progetto siano conformi con il contratto e aderiscano a quanto indicato all'interno di esso.
-					
-					\subsection{Classificazione delle metriche}
-					Per indicare la qualità di processo e prodotto raggiunte sono state utilizzate delle metriche, seguendo la notazione \textbf{M[id][int]}, dove:
-					\begin{itemize}					
-						\item \textbf{M}: è l’abbreviazione di metrica;
-						\item \textbf{id}: è il codice identificativo associato alla tipologia di metrica e può assumere i seguenti valori:
-						\begin{itemize}
-							\item \textbf{P}: indica una metrica di processo;
-							\item \textbf{D}: indica una metrica di documento;
-							\item \textbf{S}: indica una metrica del prodotto software;
-							\item \textbf{T}: indica una metrica di test.
-						\end{itemize}
-						\item \textbf{int}: rappresenta un numero incrementale a due cifre a partire da 01.
-					\end{itemize}
-					
-					
-					
-	\newpage		
-					
 					
 	\input{res/sez3_2_configurazione.tex}
 	\newpage
