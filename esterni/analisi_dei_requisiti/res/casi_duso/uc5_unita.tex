@@ -2,7 +2,7 @@
 \begin{figure}[h!]
     \centering
     \includegraphics[width=10cm]{images/uc5.png}
-    \caption{Diagramma UC5}
+    \caption{Diagramma UC5 - Controllo delle unità}
 \end{figure}
 \begin{itemize}
     \item \textbf{Attori primari:} utente autenticato;
@@ -11,18 +11,18 @@
     Per una singola unità presente nella lista, l'utente in tempo reale può:
     \begin{itemize}
         \item visualizzare in dettaglio le proprietà dell'unità (UC5.1);
-        \item gestire in dettaglio il comportamento dell'unità (UC5.2);
+        \item gestire in dettaglio il comportamento dell'unità (UC5.2).
     \end{itemize}
     il tutto all'interno di un unico ambiente grafico dedicato.
     \item \textbf{Precondizione:} l'utente ha effettuato l'accesso al sistema;
     \item \textbf{Postcondizione:} l'utente visualizza le proprietà e modifica il comportamento di un'unità.
 \end{itemize}
-
+\newpage
     \subsubsection{UC5.1 - Visualizzazione unità}
     \begin{figure}[h!]
         \centering
         \includegraphics[width=10cm]{images/uc5.1.png}
-        \caption{Diagramma UC5.2}
+        \caption{Diagramma UC5.1 - Visualizzazione unità}
     \end{figure}
     \begin{itemize}
         \item \textbf{Attori primari:} utente autenticato;
@@ -30,7 +30,7 @@
         \item \textbf{Scenario principale:} l'utente visualizza:
         \begin{itemize}
             \item le caratteristiche dell'unità (UC5.1.1);
-            \item la coda degli ordini assegnati all'unità (UC5.1.2);
+            \item la coda degli ordini assegnati all'unità (UC5.1.2).
         \end{itemize}
         \item \textbf{Precondizione:} l'utente accede all'ambiente grafico dedicato alle proprietà dell'unità;
         \item \textbf{Postcondizione:} l'utente visualizza in tempo reale le proprietà dell'unità.
@@ -52,7 +52,7 @@
                     \item \underline{Disconnected}: il sistema non rileva l'unità che potrebbe essere spenta o disconnessa per motivazioni impreviste;
                 \end{itemize}
                 \item velocità attuale;
-                \item direzione (suggerita dal sistema) del prossimo passo;
+                \item direzione (suggerita dal sistema) del prossimo passo.
             \end{itemize}
             \item \textbf{Scenario principale:} l'utente prende visione dello stato dell'unità;
             \item \textbf{Precondizione:} l'utente naviga nell'ambiente grafico dedicato alle proprietà dell'unità;
@@ -73,7 +73,7 @@
     \begin{figure}[h!]
         \centering
         \includegraphics[width=10cm]{images/uc5.2.png}
-        \caption{Diagramma UC5.2}
+        \caption{Diagramma UC5.2 - Gestione unità}
     \end{figure}
     \begin{itemize}
         \item \textbf{Attori primari:} utente autenticato;
@@ -83,7 +83,7 @@
             \item Start (UC5.2.1);
             \item Stop (UC5.2.2);
             \item Go Back (UC5.2.3);
-            \item Shutdown (UC5.2.4);
+            \item Shutdown (UC5.2.4).
         \end{itemize}
         l'utente, inoltre, assegna (UC5.2.5) o elimina (UC5.2.6) ordini dalla coda degli ordini dell'unità;
         \item \textbf{Precondizione:} l'unità si trova in un determinato stato con una determinata coda degli ordini;
