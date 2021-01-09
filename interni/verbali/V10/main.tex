@@ -16,7 +16,7 @@
 
 \setDate{11-12-2020}
 
-\setResponsabile{Paolo Scanferlato}
+\setResponsabile{Alessandro Chimetto}
 
 \setRedattori{Alessandro Chimetto}
 
@@ -45,10 +45,10 @@
 		\subsection{Luogo e data dell'incontro}
 		\begin{itemize}
 			\item \textbf{Modalità}: Telematica;
-			\item \textbf{Software utilizzato}: Discord;
+			\item \textbf{Software utilizzato}: \glock{Discord};
 			\item \textbf{Data}: 11 Dicembre 2020;
 			\item \textbf{Ora di inizio}: 21:00;
-			\item \textbf{Ora di fine}: 22:30;
+			\item \textbf{Ora di fine}: 22:30.
 		\end{itemize}
 
 		\subsection{Presenze}
@@ -79,25 +79,46 @@
 	\newpage
 
 	\section{Svolgimento}
+	
 		\subsection{Stesura documentazione}
-		Impostato template dei documenti pubblicato temporaneamente su \textsc{/interni/V00} della repo \textsc{docs}.
+		Impostato template dei documenti pubblicato temporaneamente su \textsc{/interni/V00} della repo \textsc{docs}.\\
 
 		\subsection{Amministrazione GitHub}
 		Impostato diritto di lettura e scrittura per ogni membro dell'organizzazione lineCode su \glock{GitHub} per favorire la rotazione dei ruoli. Impostata, inoltre, un'automazione tramite \glock{Zapier} che, successivamente alla creazione di una pull-request su \glock{GitHub}, invia un messaggio ad un apposto canale testuale del server \glock{Discord} di gruppo. Ne conseguono delle norme di progetto:
 		\begin{itemize}
 			\item ogni facente funzione di programmatore che volesse aggiungere una nuova funzionalità deve creare un nuovo branch nel quale implementarla;
 			\item terminata l'implementazione della nuova funzionalità non si fa merge sul ramo master direttamente (nonostante i diritti di scrittura lo permettano), ma si crea una pull-request che verrà verificata da un facente funzione di verificatore;
-			\item il verificatore che volesse prendersi in carico la verifica di una pull-request, risponde su \glock{Discord} al messaggio automatico della pull-request corrispondente.
+			\item il verificatore che volesse prendersi in carico la verifica di una pull-request, risponde su \glock{Discord} al messaggio automatico della pull-request corrispondente.\\
 		\end{itemize}
 
 		\subsection{Fissata riunione successiva}
 		Si terrà un incontro con Alex Beggiato di SanMarco Informatica (proponente del nostro capitolato d'interesse) in data:
 		\begin{itemize}
-			\item \textbf{Data}: Lunedì 14 Dicembre
-			\item \textbf{Ora}: 16:00
+			\item \textbf{Data}: Lunedì 14 Dicembre;
+			\item \textbf{Ora}: 16:00;
 			\item \textbf{Modalità}: Telematica (Google Meet).
 		\end{itemize}
 		Seguirà subito dopo una riunione interna per discutere di quanto detto all'incontro con il proponente.
+		
+	\newpage
+	
+	\section{Tabella delle decisioni}
+	
+	\begin{table} [h!]
+		\rowcolors{2}{gray!25}{gray!6}
+		\begin{center}
+			\begin{tabular} { m{2cm} m{14cm} }
+				\rowcolor{lightgray}
+				\textbf{ID} & \textbf{Decisione}\\
+				V10.1 & Decisa organizzazione del lavoro tramite \glock{GitHub}:
+				\begin{itemize}
+					\item per ogni funzionalità da implementare verrà creato un branch apposito;
+					\item verrà effettuata una pull-request quando si intende richiedere il merge del branch sul ramo master;
+					\item il verificatore che intende verificare la pull-request dovrà rispondere nell'apposito canale \glock{Discord}.
+				\end{itemize}
+			\end{tabular}
+		\end{center}
+	\end{table}
 
 \end{document}
 
