@@ -13,14 +13,14 @@
 
 \setTitle{Piano di Qualifica}
 
-\setVersione{0.0.4}
+\setVersione{0.5.1}
 
-\setDate{04-01-2021}
+\setDate{10-01-2021}
 
-\setResponsabile{Valton Tahiraj}
+\setResponsabile{Giacomo Bulbarelli}
 
 \setRedattori{
-    AMatteo Alba\\&
+    Matteo Alba\\&
     Lucia Fenu
 }
 
@@ -31,12 +31,18 @@
 \setUso{Esterno}
 
 \setModifiche{
-	0.0.4 & Matteo Alba & Verificatore & 04-01-2021 & Verificata qualità di processo\\
-	0.0.4 & Lucia Fenu & Amministratore & 04-01-2021 & Aggiunta qualità di processo\\
-	0.0.3 & Lucia Fenu & Verificatore & 03-01-2021 & Verificata qualità di prodotto\\
-    0.0.3 & Matteo Alba & Amministratore & 03-01-2021 & Aggiunta qualità di prodotto\\
-    0.0.2 & Lucia Fenu & Verificatore & 02-01-2021 & Verificata introduzione \\
-    0.0.2 & Matteo Alba & Amministratore & 01-01-2021 & Aggiunta introduzione \\
+	0.5.1 & Lucia Fenu & Verificatore & 10-01-2021 & Correzioni Generali\\
+	0.5.0 & Matteo Alba & Verificatore & 09-01-2021 & Verificato test\\
+	0.5.0 & Lucia Fenu & Amministratore & 09-01-2021 & Aggiunti test\\
+	0.4.0 & Lucia Fenu & Verificatore & 07-01-2021 & Verificato appendici\\
+	0.4.0 & Matteo Alba & Amministratore & 07-01-2021 & Aggiunti appendici\\
+	0.3.0 & Matteo Alba & Verificatore & 04-01-2021 & Verificata qualità di processo\\
+	0.3.0 & Lucia Fenu & Amministratore & 04-01-2021 & Aggiunta qualità di processo\\
+	0.2.0 & Lucia Fenu & Verificatore & 03-01-2021 & Verificata qualità di prodotto\\
+    0.2.0 & Matteo Alba & Amministratore & 03-01-2021 & Aggiunta qualità di prodotto\\
+    0.1.0 & Lucia Fenu & Verificatore & 02-01-2021 & Verificata introduzione \\
+    0.1.0 & Matteo Alba & Amministratore & 01-01-2021 & Aggiunta introduzione \\
+    0.0.1 & Lucia Fenu & Verificatore & 31-12-2020 & Verifica \\
 	0.0.1 & Matteo Alba & Amministratore & 31-12-2020 & Prima stesura 
 }
 
@@ -44,7 +50,11 @@
 
 	\input{../../commons/template}
 	\newpage
-
+	\tableofcontents  % DA AGGIUNGERE
+	\newpage
+	\listoffigures    % DA AGGIUNGERE
+	\listoftables     % DA AGGIUNGERE
+	\newpage        
 	%--------------------------------
 	%
 	% IL CONTENUTO INIZIA DA QUI
@@ -67,6 +77,7 @@
 	\input{res/sez4_test.tex}
 	\newpage
 	
+	\appendix
 	\section{Resoconto di verifica}
 	\input{res/sez_A_resoconto_verifica.tex}
 	\newpage
