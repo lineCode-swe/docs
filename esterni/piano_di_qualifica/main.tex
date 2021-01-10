@@ -13,7 +13,7 @@
 
 \setTitle{Piano di Qualifica}
 
-\setVersione{0.5.1}
+\setVersione{1.0.0}
 
 \setDate{10-01-2021}
 
@@ -24,14 +24,18 @@
     Lucia Fenu
 }
 
-\setVerificatori{ Matteo Alba \\&
+\setVerificatori{
+    Matteo Alba\\&
+    Paolo Scanferlato\\&
 	Lucia Fenu
 }
 
 \setUso{Esterno}
 
 \setModifiche{
-	0.5.1 & Lucia Fenu & Verificatore & 10-01-2021 & Correzioni Generali\\
+    1.0.0 & Giacomo Bulbarelli & Responsabile & 10-01-2021 & Approvazione documento\\
+    0.5.1 & Paolo Scanferlato & Verificatore & 10-01-2021 & Verificate correzioni\\
+	0.5.1 & Lucia Fenu & Amministratore & 10-01-2021 & Correzioni Generali\\
 	0.5.0 & Matteo Alba & Verificatore & 09-01-2021 & Verificato test\\
 	0.5.0 & Lucia Fenu & Amministratore & 09-01-2021 & Aggiunti test\\
 	0.4.0 & Lucia Fenu & Verificatore & 07-01-2021 & Verificato appendici\\
@@ -43,18 +47,18 @@
     0.1.0 & Lucia Fenu & Verificatore & 02-01-2021 & Verificata introduzione \\
     0.1.0 & Matteo Alba & Amministratore & 01-01-2021 & Aggiunta introduzione \\
     0.0.1 & Lucia Fenu & Verificatore & 31-12-2020 & Verifica \\
-	0.0.1 & Matteo Alba & Amministratore & 31-12-2020 & Prima stesura 
+	0.0.1 & Matteo Alba & Amministratore & 31-12-2020 & Prima stesura
 }
 
 \begin{document}
 
 	\input{../../commons/template}
 	\newpage
-	\tableofcontents  
+	\tableofcontents
 	\newpage
-	\listoffigures    
-	\listoftables     
-	\newpage        
+	\listoffigures
+	\listoftables
+	\newpage
 	%--------------------------------
 	%
 	% IL CONTENUTO INIZIA DA QUI
@@ -62,7 +66,7 @@
 	%--------------------------------
 
 	\section{Introduzione}
-	\input{res/sez1_intro.tex}	
+	\input{res/sez1_intro.tex}
 	\newpage
 
 	\section{Qualità di processo}
@@ -76,12 +80,12 @@
 	\section{Test}
 	\input{res/sez4_test.tex}
 	\newpage
-	
+
 	\appendix
 	\section{Resoconto di verifica}
 	\input{res/sez_A_resoconto_verifica.tex}
 	\newpage
-	
+
 	\section{Valutazioni di miglioramento}
 	\input{res/sez_B_valutazioni_miglioramento.tex}
 	\newpage
