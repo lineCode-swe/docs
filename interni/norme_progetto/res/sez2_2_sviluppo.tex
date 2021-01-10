@@ -7,7 +7,12 @@
 		\item obiettivi di sviluppo;
 		\item vincoli tecnologici e di design.
 	\end{itemize}
-	Il prodotto finale deve rispettare i requisiti, superare i test definiti e soddisfare le richieste del proponente.
+	Il prodotto finale deve:
+	\begin{itemize}
+		\item rispettare i requisiti;
+		\item superare i test definiti;
+		\item soddisfare le richieste del proponente.
+	\end{itemize}
 	\subsubsection{Descrizione}
 	Secondo lo standard ISO/IEC 12207:1995, il processo di sviluppo si divide in:
 	\begin{itemize}
@@ -20,7 +25,7 @@
 
 		\paragraph{Analisi dei requisiti}
 			\subparagraph{Scopo}
-			Il compito degli analisti è quello di redigere il documento di Analisi dei Requisiti, che andrà ad elencare e definire i requisiti del \glock{capitolato}. Lo scopo dei requisiti è quello di:
+			Il compito degli analisti è quello di redigere il documento \dext{Analisi dei Requisiti}, che andrà ad elencare e definire i requisiti del \glock{capitolato}. Lo scopo dei requisiti è quello di:
 			\begin{itemize}
 				\item descrivere il prodotto da realizzare;
 				\item rendere disponibili ai progettisti riferimenti precisi;
@@ -72,7 +77,7 @@
 
 			\paragraph{Progettazione}
 			\subparagraph{Scopo}
-			Mentre l'Analisi dei Requisiti divide il problema in parti per capirne completamente il dominio applicativo, la Progettazione rimette insieme tali parti specificandone le funzionalità in modo da realizzare l'architettura che il prodotto finale dovrà seguire. Questa dovrà seguire i seguenti principi:
+			Mentre l'\dext{Analisi dei Requisiti} divide il problema in parti per capirne completamente il dominio applicativo, la Progettazione rimette insieme tali parti specificandone le funzionalità in modo da realizzare l'architettura che il prodotto finale dovrà seguire. Questa dovrà seguire i seguenti principi:
 			\begin{itemize}
 				\item rispetto di tutti i requisiti;
 				\item affidabilità nello svolgere i propri compiti;
@@ -83,22 +88,22 @@
 			\subparagraph{Descrizione}
 			Possiamo dividere questa fase in due istanze principali:
 			\begin{itemize}
-				\item \textbf{Technology Baseline:} contenente le specifiche della progettazione ad alto livello del prodotto, i diagrammi UML utilizzati per la realizzazione dell'architettura ed i test di verifica;
-				\item \textbf{Product Baseline:} approfondisce ulteriormente l'attività di progettazione, integrando la Technology Baseline, inoltre a definire i test necessari alla verifica.
+				\item \textbf{Technology Baseline}: contiene le specifiche della progettazione ad alto livello del prodotto, i diagrammi \glock{UML} utilizzati per la realizzazione dell'architettura ed i test di verifica;
+				\item \textbf{Product Baseline}: approfondisce ulteriormente l'attività di progettazione integrando la Technology Baseline e definisce i test necessari alla verifica.
 			\end{itemize}
 			\subparagraph{Technology Baseline}
 			Le componenti principali che individuiamo sono:
 			\begin{itemize}
-				\item diagrammi UML, utilizzati per rendere più chiare le soluzioni progettuali utilizzate, possono essere diagrammi di classi, package, attività o sequenza;
+				\item diagrammi \glock{UML}, utilizzati per rendere più chiare le soluzioni progettuali utilizzate, possono essere diagrammi di classi, package, attività o sequenza;
 				\item descrizione delle tecnologie adottate, specificandone l'utilizzo nel progetto, i vantaggi e gli svantaggi;
-				\item design patterns per adottare opportune soluzioni progettuali a problemi ricorrenti;
+				\item \glock{design patterns} per adottare opportune soluzioni progettuali a problemi ricorrenti;
 				\item test di integrazione, per verificare che ogni componente del sistema funzioni nella maniera voluta.
 			\end{itemize}
 			\subparagraph{Product Baseline}
 			Gli aspetti principali su cui soffermarsi sono:
 			\begin{itemize}
 				\item definizione delle classi e loro descrizione per scopo e funzionalità;
-				\item tracciamento delle classi, in modo che ogni per requisito esista una classe che lo soddisfa;
+				\item tracciamento delle classi, in modo che per ogni requisito esista una classe che lo soddisfa;
 				\item test di unità, definiti in modo da verificare che le parti funzionino individualmente nel modo stabilito.
 			\end{itemize}
 
