@@ -12,19 +12,24 @@
 
 \setTitle{Glossario}
 
-\setVersione{0.1.0}
+\setVersione{1.0.0}
 
-\setDate{06-01-2021}
+\setDate{10-01-2021}
 
-\setResponsabile{Paolo Scanferlato}
+\setResponsabile{Alessandro Chimetto}
 
 \setRedattori{Paolo Scanferlato}
 
-\setVerificatori{Valton Tahiraj}
+\setVerificatori{Matteo Alba\\&
+	Valton Tahiraj}
 
 \setUso{Esterno}
 
 \setModifiche{
+	1.0.0 & Alessandro Chimetto & Responsabile & 10-01-2021 & Revisione e approvazione\\
+	0.2.1 & Matteo Alba       & Verificatore   & 10-01-2021 & Verifica completa\\
+	0.2.1 & Paolo Scanferlato & Amministratore & 10-01-2021 & Modificati alcuni termini\\
+	0.2.0 & Paolo Scanferlato & Amministratore & 09-01-2021 & Aggiunti termini norme di progetto e verbali\\
 	0.1.0 & Valton Tahiraj    & Verificatore   & 06-01-2021 & Verifica termini studio di fattibilità \\
 	0.1.0 & Paolo Scanferlato & Amministratore & 06-01-2021 & Aggiunti termini studio di fattibilità\\
 	0.0.1 & Valton Tahiraj    & Verificatore   & 04-01-2021 & Verifica prima stesura\\
@@ -34,13 +39,17 @@
 	\input{../../commons/template}
 	\newpage
 
-	%--------------------------------
-	%
-	% IL CONTENUTO INIZIA DA QUI
-	%
-	%--------------------------------
+	\tableofcontents
+
+	\newpage
+	\phantomsection
+	\addcontentsline{toc}{section}{A}
 
 	\section*{A}
+
+	
+	\paragraph*{Act}
+	Tool per utilizzare le Github Actions in locale.
 	
 	\paragraph*{Amazon CloudWatch}
 	Servizio di monitoraggio e osservabilità delle risorse e applicazioni AWS su AWS e sui server locali. Fornisce dati e analisi concrete per monitorare le applicazioni, rispondere ai cambiamenti di prestazioni a livello di sistema, ottimizzare l'utilizzo delle risorse e ottenere una visualizzazione unificata dello stato di integrità operativa.
@@ -52,10 +61,13 @@
 	È una soluzione di hosting di server di giochi che distribuisce, gestisce e dimensiona i server cloud per giochi multigiocatore.
 	
 	\paragraph*{Amazon Web Service}
-	Vedi AWS.
+	Vedere AWS.
 	
-	\paragraph*{Angular}
+	\paragraph*{Angular o Angular2+}
 	Framework open source per lo sviluppo di applicazioni web con licenza MIT, evoluzione di AngularJS.
+	
+	\paragraph*{AngularJS}
+	Prima versione di un Framework open source per lo sviluppo di applicazioni web. Nel 2016 si è evoluto in Angular2+.
 	
 	\paragraph*{API}
 	Con Application Programming Interface si intende un insieme di procedure e funzioni offerte ai programmatori per facilitare lo sviluppo. Le API espongono blocchi di codice delle librerie di cui fanno parte, per permetterne il riuso.
@@ -65,6 +77,9 @@
 	
 	\paragraph*{Android}
 	Sistema operativo per dispositivi mobili sviluppato da Google Inc., basato su kernel Linux in cui la quasi totalità delle utilità sono costituite da software Java.
+	
+	\paragraph*{Automated Kanban}
+	Bacheca in stile Kanban con trigger integrati per spostare automaticamente gli issue e sistemarli nelle colonne To do, In progress e Done.
 		
 	\paragraph*{AWS}
 	Amazon Web Services, è una collezione di servizi di cloud computing che compongono la piattaforma on-demand di servizi, offerta da Amazon.	Comprende servizi di calcolo, di rete e di storage di basi di dati oltre a molti altri servizi.
@@ -76,6 +91,9 @@
 	Servizio di elaborazione che consente di eseguire il codice senza gestire i server o effettuarne il provisioning.
 	
 	\newpage
+	\phantomsection
+	\addcontentsline{toc}{section}{B}
+	
 	
 	\section*{B}
 	
@@ -86,20 +104,46 @@
 	Una raccolta di dati molto estesa in termini di	volume, velocità e varietà da richiedere tecnologie e metodi analitici specifici per l'estrazione di valore o conoscenza.
 	
 	\paragraph*{Blockchain}
-	È una struttura dati condivisa e immutabile. È definita come un registro digitale le cui voci sono raggruppate in blocchi, concatenati in ordine cronologico, e la cui integrità è garantita dall'uso della crittografia.
+	Struttura dati condivisa e immutabile. È definita come un registro digitale le cui voci sono raggruppate in blocchi, concatenati in ordine cronologico, e la cui integrità è garantita dall'uso della crittografia.
+	
+	\paragraph*{Bluetooth}
+	Standard tecnico-industriale di trasmissione dati per reti personali senza fili.
+	
+	\paragraph*{Branch}
+	Indica un ramo di sviluppo in un Version Control System.
 	
 	\paragraph*{Browser}
 	Applicazione per l'acquisizione, la presentazione e la navigazione di risorse sul web.
 	
 	\newpage
+	\phantomsection
+	\addcontentsline{toc}{section}{C}
 	
 	\section*{C}
+	
+	\paragraph*{C}
+	Linguaggio di programmazione imperativo di natura procedurale; i programmi scritti in questo linguaggio sono composti da espressioni matematiche e da istruzioni imperative raggruppate in procedure parametrizzate in grado di manipolare vari tipi di dati.
+
+	\paragraph*{C++}
+	Linguaggio di programmazione general-purpose, sviluppato come evoluzione del linguaggio C inserendo la programmazione orientata agli oggetti, col tempo ha avuto notevoli evoluzioni, come l'introduzione dell'astrazione rispetto al tipo.
+	
+	\paragraph*{Canva}
+	Strumento di progettazione grafica.
 	
 	\paragraph*{Capitolato}
 	Documento tecnico redatto dal cliente in cui vengono specificati i vincoli contrattuali	(prezzo e scadenze) per lo sviluppo di un determinato prodotto software. Viene presentato in un bando d'appalto per trovare qualcuno che possa svolgere il lavoro richiesto.
 	
+	\paragraph*{CI}
+	Continuous Integration, è una pratica che si applica in contesti in cui lo sviluppo del software avviene attraverso un sistema di controllo versione.
+	
 	\paragraph*{Cloud}
 	Indica un paradigma di erogazione di servizi offerti on-demand da un fornitore ad un cliente finale attraverso la rete Internet.
+	
+	\paragraph*{Code-review}
+	Attività di garanzia della qualità del software in cui una o più persone controllano un programma principalmente visualizzando e leggendo parti del suo codice sorgente e lo fanno dopo l'implementazione o come interruzione dell'implementazione.
+	
+	\paragraph*{Commit}
+	In questo contesto si riferisce ad una o più modifiche effettuate in una repository, a cui viene associato un nome e un codice identificativo per il tracciamento.
 	
 	\paragraph*{CSS}
 	Cascaded Style Sheet, è un linguaggio che permette di definire tutte le proprietà di stile e formattazione di una pagina web in maniera modulare, tenendo questa parte della progettazione di un sito separata da quella relativa al contenuto.
@@ -108,26 +152,46 @@
 	Comma-Separated Values, è un formato di file basato su file di testo utilizzato per l'importazione ed esportazione (ad esempio da fogli elettronici o database) di una tabella di dati.
 
 	\newpage
+	\phantomsection
+	\addcontentsline{toc}{section}{D}
 
 	\section*{D}
 	
 	\paragraph*{D3.js}
-	È una libreria JavaScript per creare visualizzazioni dinamiche ed interattive partendo da dati organizzati, visibili attraverso un comune browser.
+	Libreria JavaScript per creare visualizzazioni dinamiche ed interattive partendo da dati organizzati, visibili attraverso un comune browser.
 	
-	\paragraph*{Deploy} **** DA VERIFICARE **** Deployment
+	\paragraph*{Deploy}
+	In informatica è la consegna o rilascio al cliente, con relativa installazione e messa in funzione o esercizio, di una applicazione o di un sistema software tipicamente all’interno di un sistema informatico aziendale.
+	
+	\paragraph*{Design Pattern}
+	Soluzione progettuale generale a un problema ricorrente. È la descrizione di un modello da applicare per risolvere un problema, il quale può presentarsi in diverse situazioni durante la progettazione e lo sviluppo del software. Ogni design pattern ha il suo campo applicativo in base alle precondizioni del problema, coi suoi pregi e difetti.
 	
 	\paragraph*{DevOps}
 	Metodo di sviluppo del software che punta alla comunicazione, collaborazione e integrazione tra sviluppatori e addetti alle operations della Information Technology.
 	
+	\paragraph*{Diagrams}
+	Software on-line per la creazione di diagrammi.
+	
+	\paragraph*{Discord}
+	Applicazione VoIP originariamente progettata per le comunità di videogiocatori.
+	
 	\paragraph*{Docker}
 	Progetto open-source che automatizza la distribuzione di applicazioni all'interno di contenitori software, fornendo un'astrazione aggiuntiva grazie alla virtualizzazione a livello di sistema operativo di Linux.
 	
+	\paragraph*{Dockerfile}
+	In Docker, è un documento di testo che contiene tutti i comandi che un utente può chiamare sulla riga di comando per assemblare un'immagine.
+	
+	\paragraph*{DVCS}
+	Distributed Version Control Systems, è una tipologia di controllo di versione che permette di tenere traccia delle modifiche e delle versioni apportate al codice sorgente del software.
+	
 	\newpage
+	\phantomsection
+	\addcontentsline{toc}{section}{E}
 	
 	\section*{E}
 	
 	\paragraph*{E-commerce}
-	È una pratica commerciale che mette in contatto commercianti e acquirenti tramite Internet. Le transazioni di beni e/o servizi vengono effettuate da un negozio online, da un'applicazione mobile e da altri canali di vendita come social network, marketplace, piattaforme di affiliazione, siti di compravendita, ecc.
+	Pratica commerciale che mette in contatto commercianti e acquirenti tramite Internet. Le transazioni di beni e/o servizi vengono effettuate da un negozio online, da un'applicazione mobile e da altri canali di vendita come social network, marketplace, piattaforme di affiliazione, siti di compravendita, ecc.
 	
 	\paragraph*{Ethereum}
 	Ethereum è una piattaforma decentralizzata per la creazione e pubblicazione peer-to-peer di contratti intelligenti (smart contracts).
@@ -135,12 +199,17 @@
 	\paragraph*{Exploratory Data Analysis}
 	Spesso abbreviato in EDA, è una tecnica usata nel campo della Data Science per approfondire la conoscenza del dataset su cui si intende lavorare, operazione cruciale per svolgere su di esso qualsiasi tipo di attività.
 	
-	
 	\newpage
+	\phantomsection
+	\addcontentsline{toc}{section}{F}
 	
 	\section*{F}
 	
-	\paragraph*{Force Field} **** DA VERIFICARE ****
+	\paragraph*{Feature Branch}
+	I Feature Branch nei sistemi di VCS consentono di lavorare su una funzionalità indipendentemente dallo sviluppo principale e di eseguire il commit di tutte le modifiche per la funzionalità nel branch, unendo le modifiche nel branch principale quando la funzionalità è completa.
+	
+	\paragraph*{Force Field}
+	Tipologia di rappresentazione grafica di dati.
 	
 	\paragraph*{Framework}
 	Architettura logica di supporto (spesso un'implementazione logica di un particolare design pattern) su cui un software può essere progettato e realizzato, spesso facilitandone lo sviluppo da parte del programmatore.
@@ -149,17 +218,37 @@
 	Indica generalmente l'interfaccia utente di un applicativo o sito web.
 	
 	\newpage
+	\phantomsection
+	\addcontentsline{toc}{section}{G}
 
 	\section*{G}
 	
+	\paragraph*{Gantt}
+	Il diagramma di Gantt è uno strumento di supporto alla gestione dei progetti, così chiamato in ricordo dell'ingegnere statunitense Henry Lawrence Gantt (1861-1919), che si occupava di scienze sociali e che lo ideò nel 1917.
+	
+	\paragraph*{GanttProject}
+	Software Open Source per la realizzazione dei diagrammi di Gantt.
+	
 	\paragraph*{GGobi}
-	È uno strumento software statistico gratuito per la visualizzazione interattiva dei dati.
+	Strumento software statistico gratuito per la visualizzazione interattiva dei dati.
 	
 	\paragraph*{Git}
 	Software di controllo versione distribuito utilizzabile da interfaccia a riga di comando.
 	
+	\paragraph*{Gitflow}
+	Insieme di strategie sul come utilizzare Git e i suoi branch.
+	
 	\paragraph*{GitHub}
 	Servizio web di hosting per lo sviluppo di progetti software che usa il sistema di controllo di versione Git.
+	
+	\paragraph*{GitHub Actions}
+	Strumento fornito da GitHub che permette l’automazione di compiti di varia natura.
+	
+	\paragraph*{GitKraken}
+	Client Git semplice e intuitivo che rende il più semplice possibile aprire, creare e clonare repository, creare filiali e condividere il codice.
+	
+	\paragraph*{Gmail}
+	Servizio gratuito di posta elettronica fornito da Google.
 	
 	\paragraph*{GraphQL}
 	Linguaggio di interrogazione lato server per interfacce di programmazione delle applicazioni, in grado di fornire ai client unicamente i dati di cui hanno bisogno.
@@ -167,7 +256,12 @@
 	\paragraph*{gRPC}
 	Sistema di chiamata di procedura remota open source sviluppato inizialmente da Google.
 	
+	\paragraph*{Gulpease}
+	L'Indice Gulpease è un indice di leggibilità di un testo tarato sulla lingua italiana. Rispetto ad altri ha il vantaggio di utilizzare la lunghezza delle parole in lettere anziché in sillabe, semplificandone il calcolo automatico.
+	
 	\newpage
+	\phantomsection
+	\addcontentsline{toc}{section}{H}
 	
 	\section*{H}
 	
@@ -178,16 +272,32 @@
 	Linguaggio di markup per la strutturazione delle pagine web.
 	
 	\newpage
+	\phantomsection
+	\addcontentsline{toc}{section}{I}
 	
 	\section*{I}
 	
 	\paragraph*{IA}
 	L'Intelligenza Artificiale è una disciplina appartenente all'informatica che studia i fondamenti teorici, le metodologie e le tecniche che consentono la progettazione di sistemi hardware e sistemi di programmi software capaci di fornire all'elaboratore elettronico prestazioni che, a un osservatore comune, sembrerebbero essere di pertinenza esclusiva dell'intelligenza umana.
 	
+	\paragraph*{IDE}
+	Integrated Development Environment, è un ambiente di sviluppo ovvero un software che, in fase di programmazione, supporta i programmatori nello sviluppo e debugging del codice sorgente di un programma.
+	
+	\paragraph*{Inspection}
+	Metodo di verifica che prevede la rilevazione di difetti eseguendo una lettura mirata (tramite check-list) dell'oggetto di verifica.
+	
 	\paragraph*{iOS}
 	Sistema operativo mobile sviluppato da Apple per iPhone, iPod touch e iPad.
+	
+	\paragraph*{Issue}
+	È una qualsiasi richiesta o azione da svolgere in un Issue Tracking System.
+		
+	\paragraph*{Issue Tracking System}
+	Software utilizzato per gestire in modo organizzato i problemi di prodotti o servizi segnalati dall’utente e giungere alla loro risoluzione.
 		
 	\newpage
+	\phantomsection
+	\addcontentsline{toc}{section}{J}
 	
 	\section*{J}
 	
@@ -198,6 +308,8 @@
 	Linguaggio di scripting orientato agli oggetti e agli eventi, utilizzato nella programmazione Web sia lato client che server.
 	
 	\newpage
+	\phantomsection
+	\addcontentsline{toc}{section}{K}
 	
 	\section*{K}
 	
@@ -207,9 +319,14 @@
 	\paragraph*{Kubernetes}
 	Sistema open source di orchestrazione e gestione di container.
 	
-	\newpage 
+	\newpage
+	\phantomsection
+	\addcontentsline{toc}{section}{L} 
 	
 	\section*{L}
+	
+	\paragraph*{LaTeX}
+	Linguaggio di markup per la preparazione di testi, basato sul programma di composizione tipografica TEX.
 	
 	\paragraph*{Leaflet}
 	Libreria JavaScript per sviluppare mappe geografiche interattive.
@@ -217,18 +334,41 @@
 	\paragraph*{Learning Vector Quantization}
 	Algoritmo di classificazione supervisionato basato su prototipo.
 	
+	\paragraph*{Libreoffice Calc}
+	Un foglio elettronico, simile a Microsoft Excel o Lotus 1-2-3. Ha un certo numero di caratteristiche uniche, tra cui un sistema che definisce automaticamente la serie di grafici, sulla base delle informazioni disponibili per l'utente.
+	
 	\paragraph*{Linux}
 	Famiglia di sistemi operativi open source di tipo Unix-like, pubblicati in varie distribuzioni, aventi la caratteristica comune di utilizzare come nucleo il kernel Linux.
 	
 	\newpage
+	\phantomsection
+	\addcontentsline{toc}{section}{M}
 	
 	\section*{M}
 	
-	\paragraph*{MacOs}
+	\paragraph*{macOS}
 	Sistema operativo desktop distribuito da Apple Inc. per	computer Macintosh che fornisce l'interfaccia utente caratteristica dei sistemi	MacOS ad un sistema operativo di derivazione Unix.
+	
+	\paragraph*{Major release}
+	Con major release si intende una versione di un prodotto che si discosta sostanzialmente dalla versione precedente.
 	
 	\paragraph*{MAPI}
 	Architettura di messaggistica basata sulle API per Microsoft Windows.
+	
+	\paragraph*{Meet}
+	Uno strumento delle Google Suite per tenere riunioni video con persone interne o esterne all'organizzazione.
+	
+	\paragraph*{Merge}
+	In un VCS è l'attività che unisce più versioni dello stesso software.
+	
+	\paragraph*{Milestone}
+	Termine utilizzato nella pianificazione e gestione di progetti complessi per indicare il raggiungimento di obiettivi stabiliti in fase di definizione del progetto stesso.
+	
+	\paragraph*{Minor release}
+	Con minor release, si intende una specifica versione di un prodotto nella quale le differenze con la versione precedente riguardano principalmente correzioni.
+	
+	\paragraph*{Modello a V}
+	Modello di sviluppo del software, estensione del modello a cascata. Il modello invece di discendere lungo una linea retta, dopo la fase di programmazione risale con una tipica forma a V.
 	
 	\paragraph*{MQTT}
 	Protocollo ISO standard di messaggistica leggero di tipo publish-subscribe posizionato in cima a TCP/IP. 
@@ -237,6 +377,8 @@
 	Modalità di utilizzo in cui più persone partecipano al gioco nello stesso tempo, per mezzo di un solo apparecchio (computer, console, dispositivo mobile, ecc.) con più periferiche oppure usando diversi apparecchi in connessione.
 	
 	\newpage
+	\phantomsection
+	\addcontentsline{toc}{section}{N}
 	
 	\section*{N}
 	
@@ -250,6 +392,8 @@
 	Movimento che promuove sistemi software dove la persistenza dei dati è in generale caratterizzata dal fatto di non utilizzare il modello relazionale, di solito usato dalle basi di dati tradizionali.
 	
 	\newpage
+	\phantomsection
+	\addcontentsline{toc}{section}{O}
 	
 	\section*{O}
 	
@@ -257,31 +401,50 @@
 	Piattaforma container per le imprese basata su Kubernetes, che offre operazioni automatizzate in tutto lo stack per gestire deployment di cloud ibridi e multicloud.
 	
 	\paragraph*{Open Source}
-	Software non protetto da copyright e liberamente modificabile dall'utente.
+	Software non protetto da copyright, che segue la filosofia della produzione collaborativa e dell'accesso pubblico al codice sorgente.
 	
 	\paragraph*{Orange Canvas}
-	*** DA VERIFICARE ***
+	Toolkit di visualizzazione dati, machine learning e data mining open source.
 	
 	\newpage
+	\phantomsection
+	\addcontentsline{toc}{section}{P}
 	
 	\section*{P}
+	
+	\paragraph*{Patch}
+	Piccola parte di software utilizzata per aggiornare o migliorare un programma e correggere un problema di vulnerabilità di sicurezza, di solito chiamato bug, all'interno di un sistema operativo o di un programma software.
+	
+	\paragraph*{PDF}
+	Portable Document Format, è un formato di file basato su un linguaggio di descrizione di pagina sviluppato da Adobe negli anni 1990 per rappresentare documenti di testo e immagini in modo indipendente dall'hardware e dal software utilizzati per generarli o per visualizzarli.
+	
+	\paragraph*{PHP}
+	Hypertext Preprocessor, è un linguaggio di scripting interpretato, originariamente concepito per la programmazione di pagine web dinamiche.
 	
 	\paragraph*{POI}
 	Point Of Interest, è un punto specifico che qualcuno potrebbe trovare utile o interessante.
 	
+	\paragraph*{Product Baseline}
+	Baseline del progetto di ingegneria del software in cui il prodotto è stato realizzato e funziona, ma non è ancora pronto per il rilascio.
+	
+	\paragraph*{Proiezione Lineare Multi Asse}
+	Tipologia di rappresentazione grafica di dati.
+	
+	\paragraph*{Power-up}
+	Nei videogiochi, è un oggetto mostrato a video che conferisce una particolare abilità temporanea (limitata nel tempo) al giocatore o ne incrementa le statistiche quando raccolto.
+	
+	\paragraph*{Publisher/Subscriber}
+	Stile architetturale utilizzato per la comunicazione asincrona fra diversi processi, oggetti o altri agenti.
+	
+	\paragraph*{Pull-Request}
+	Richiesta di salvataggio delle modifiche in un branch del Version Control System.
+	
 	\paragraph*{Python}
 	Linguaggio di programmazione di più "alto livello" rispetto alla maggior parte degli altri linguaggi, orientato a oggetti, adatto, tra gli altri usi, a sviluppare applicazioni distribuite, scripting, computazione numerica e system testing.
 	
-	\paragraph*{Proiezione Lineare Multi Asse}
-	*** DA VERIFICARE ***
-	
-	\paragraph*{Power-up}
-	*** DA VERIFICARE ***
-	
-	\paragraph*{Publisher}
-	*** DA VERIFICARE ***
-	
 	\newpage
+	\phantomsection
+	\addcontentsline{toc}{section}{Q}
 	
 	\section*{Q}
 	
@@ -292,27 +455,40 @@
 	Indica l'interrogazione da parte di un utente su un database, strutturato tipicamente secondo il modello relazionale, per compiere determinate operazioni sui dati.
 	
 	\newpage
+	\phantomsection
+	\addcontentsline{toc}{section}{R}
 	
 	\section*{R}
 	
 	\paragraph*{Rancher}
-	*** DA VERIFICARE ***
+	Piattaforma di orchestrazione open source che permette il rilascio e la gestione di Kubernetes.
+	
+	\paragraph*{React}
+	Libreria JavaScript per la creazione di interfacce utente.
 	
 	\paragraph*{Real-Time}
-	*** DA VERIFICARE ***
+	Un sistema real-time è un calcolatore in cui la correttezza del risultato delle sue computazioni dipende non solo dalla correttezza logica ma anche dalla correttezza temporale.
+	
+	\paragraph*{Release}
+	Ciascuna nuova versione di un software, messa in commercio o comunque diffusa, contraddistinta da un numero.
 	
 	\paragraph*{Repository}
 	Ambiente di un sistema informativo, in cui vengono gestiti i metadati, attraverso tabelle relazionali.
 	
 	\paragraph*{RFID}
 	Radio-Frequency IDentification, è la tecnologia di identificazione automatica basata sulla propagazione nell'aria di onde elettro-magnetiche, consentendo la rilevazione univoca, automatica (hand free), massiva e a distanza di oggetti, animali e persone sia statici che in movimento.
+	
+	\paragraph*{Root}
+	Il punto iniziale del file system. Il nome deriva dal riferimento alla sua organizzazione ad albero (quindi alla sua radice) comune a molti file system.
 		
-	\newpage	
+	\newpage
+	\phantomsection
+	\addcontentsline{toc}{section}{S}
 	
 	\section*{S}
 	
-	\paragraph*{Scatter plot Matrix}
-	*** DA VERIFICARE ***
+	\paragraph*{Scatter Plot Matrix}
+	È una griglia (o matrice) di grafici a dispersione utilizzati per visualizzare le relazioni di una coppia di variabili tra combinazioni di variabili.
 	
 	\paragraph*{Self Organizing Map}
 	Tipo di organizzazione di processi di informazione in rete analoghi alle reti neurali artificiali.
@@ -332,15 +508,26 @@
 	\paragraph*{SQL}
 	Linguaggio standardizzato per database basati sul modello relazionale, progettato per creare e modificare schemi di database; inserire, modificare e gestire dati memorizzati; interrogare i dati memorizzati; creare e gestire strumenti di controllo e accesso ai dati.
 	
-	\paragraph*{Subscriber}
-	*** DA VERIFICARE ***
-	
 	\paragraph*{Swift}
 	Linguaggio di programmazione orientato agli oggetti per sistemi macOS, iOS, watchOS, tvOS e Linux. È concepito per coesistere con il linguaggio Objective-C, tipico degli sviluppi per i sistemi operativi Apple, semplificando la scrittura del codice.
 	
 	\newpage
+	\phantomsection
+	\addcontentsline{toc}{section}{T}
 	
 	\section*{T}
+	
+	\paragraph*{Technology Baseline}
+	Definisce le tecnologie, i framework e le librerie selezionate per lo sviluppo del prodotto.
+	
+	\paragraph*{Texmaker}
+	Editor LaTeX open source multipiattaforma.
+
+	\paragraph*{TeXstudio}
+	Editor LaTeX open source multipiattaforma.
+	
+	\paragraph*{Thread}
+	È una suddivisione di un processo in due o più filoni o sottoprocessi che vengono eseguiti concorrentemente da un sistema di elaborazione monoprocessore o multiprocessore o multicore.
 	
 	\paragraph*{Tomcat}
 	Apache Tomcat è un server web open source sviluppato dalla Apache Software Foundation.
@@ -352,8 +539,16 @@
 	Linguaggio di programmazione open source sviluppato da Microsoft.
 	
 	\newpage
+	\phantomsection
+	\addcontentsline{toc}{section}{U}
 	
 	\section*{U}
+	
+	\paragraph*{Underscore}
+	Il trattino basso è il carattere "\_".
+	
+	\paragraph*{User-friendly}
+	Indica qualcosa che è stata progettata per essere estremamente facile da usare, anche per chi non è molto pratico.
 	
 	\paragraph*{User-interface}
 	Interfaccia uomo-macchina, ovvero ciò che si frappone tra una macchina e un utente, consentendone l'interazione reciproca.
@@ -361,33 +556,49 @@
 	\paragraph*{UMAP}
 	Piattaforma che fornisce una interfaccia grafica di semplice utilizzo per personalizzare mappe e geolocalizzare dataset appositamente creati o recuperati negli archivi Open Data.
 	
+	\paragraph*{UML}
+	Unified Modeling Language, è un vero e proprio linguaggio grafico che serve per spiegare la struttura delle classi di un progetto, o più in generale del progetto stesso, in modo rapido, formale e astratto.
+		
 	\newpage
+	\phantomsection
+	\addcontentsline{toc}{section}{V}
 	
 	\section*{V}
 	
+	\paragraph*{VCS}
+	Version Control System, è un sistema per la gestione delle versioni di un prodotto.
+	
 	\paragraph*{Vyper}
-	*** DA VERIFICARE ***
+	Linguaggio di programmazione, basato su Python, orientato al contratto che prende di mira la Ethereum Virtual Machine (EVM).
 	
 	\newpage
+	\phantomsection
+	\addcontentsline{toc}{section}{W}
 	
 	\section*{W}
+	
+	\paragraph*{Walkthrough}
+	Metodo di verifica che prevede la rilevazione di difetti attraverso una lettura critica ad ampio spettro del prodotto in esame.
 	
 	\paragraph*{Windows}
 	Famiglia di ambienti operativi e sistemi operativi prodotta da Microsoft Corporation dal 1985, orientato a personal computer, workstation, server e smartphone; prende il nome dall'interfaccia di programmazione di un'applicazione a finestre, detta File Explorer.
 	
-	\newpage
+	\paragraph*{Workflow}
+	Rappresenta un insieme di compiti e di diversi attori coinvolti nella realizzazione di un processo lavorativo.
 	
-	\section*{X}
-
 	\newpage
-	
-	\section*{Y}
-
-	\newpage
+	\phantomsection
+	\addcontentsline{toc}{section}{Z}
 	
 	\section*{Z}
 	
+	\paragraph*{Zapier}
+	Tool di automation erogato online come servizio dalla Zapier INC.
+	
+	\paragraph*{Zero downtime}
+	Si intende un hardware o un software che non ha tempi di inattività.
+	
 	\paragraph*{Zextras Drive}
-	*** DA VERIFICARE ***
+	Tecnologia della Zextras Suite che permette l'archiviazione di file nel cloud Zextras.
 
 \end{document}
