@@ -1,4 +1,4 @@
-\subsection{Gestione della Configurazione}
+\subsection{Gestione della configurazione}
     \subsubsection{Obiettivi}
     Si vuole creare un ambiente di lavoro che sia comune a tutti i partecipanti al progetto e che permetta di applicare procedure amministrative e tecniche per tutta la durata del ciclo di vita del software. Più nello specifico si vuole consentire al programmatore di apportare modifiche al software e alla documentazione in modo asincrono rispetto agli altri membri del gruppo di lavoro. Per avere memoria storica delle modifiche effettuate, si vuole che queste vengano tracciate dall'ambiente di lavoro. In particolare, è d'interesse conoscere per ogni modifica:
     \begin{itemize}
@@ -10,8 +10,8 @@
     \end{itemize}
     Si vuole, inoltre, fare in modo che la modifica venga apportata solo se prima verificata da un verificatore di cui dovrà essere tracciata l'attività di verifica dall'ambiente di lavoro. Si vuole, infine, fare in modo che il responsabile possa monitorare l'andamento del progetto tramite sistemi di reportistica.
 
-    \subsubsection{Documentazione come Software}
-    Per favorire la tracciabilità delle modifiche alla documentazione, quest'ultima sarà costruita in linguaggio \glock{\LaTeX}\ e dunque le norme applicate a questo processo concernenti il software saranno applicate in egual modo alla documentazione tranne dove specificato diversamente in modo esplicito.
+    \subsubsection{Documentazione come software}
+    Per favorire la tracciabilità delle modifiche alla documentazione, quest'ultima sarà costruita in linguaggio \glock{\LaTeX} e dunque le norme applicate a questo processo concernenti il software saranno applicate in egual modo alla documentazione tranne dove specificato diversamente in modo esplicito.
 
     \subsubsection{Strumenti di supporto}
     Gli strumenti utilizzati per garantire il \glock{workflow} sono:
@@ -35,7 +35,7 @@
     \item qualora la modifica proposta sia ritenuta accettabile dal verificatore, questo effettuerà la procedura di \glock{merge} nel \glock{branch} principale ed eliminerà il \glock{branch} creato dal programmatore (entrambe le operazioni vengono tracciate dal \glock{VCS});
     \item un'automazione, parte del sistema di Continuous Integration (o \glock{CI}), specifica per il prodotto contenuto nella \glock{repository}, verrà eseguita automaticamente sul \glock{branch} principale per verificare che l'integrazione tramite \glock{merge} sia andata a buon fine con controlli automatici e report.
     \end{enumerate}
-		\paragraph{Workflow per Software}
+		\paragraph{Workflow per software}
 		Specificatamente per lo sviluppo software, la procedura sopra enunciata viene integrata in un workflow di tipo \glock{Gitflow}:
 		\begin{enumerate}
 			\item in prossimità di una \glock{milestone}, l'amministratore crea un \glock{branch} di \glock{release} a partire dal \glock{branch} principale;
@@ -43,7 +43,7 @@
 			\item quando il software viene valutato come sufficientemente stabile dal responsabile, si procede al rilascio effettivo in un \glock{branch} apposito.
 		\end{enumerate}
 
-    \subsubsection{Codice di Versionamento}
+    \subsubsection{Codice di versionamento}
     Si utilizza il seguente codice:
     \[
         \text{v}[\alpha].[\beta].[\gamma]
