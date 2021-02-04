@@ -262,8 +262,7 @@
 		\item \textbf{Scenario principale:} 
 		\begin{itemize}
 			\item l'amministratore inserisce un'unità (UC6.3.3);
-			\item l'amministratore modifica un'unità (UC6.3.4);
-			\item l'amministratore elimina un'unità (UC6.3.5).
+			\item l'amministratore elimina un'unità (UC6.3.4).
 		\end{itemize}
 		\item \textbf{Precondizione:} l'amministratore ha accesso all'elenco delle unità esistenti;
 		\item \textbf{Postcondizione:} la lista delle unità risulta modificata come voluto rispetto allo stato iniziale.
@@ -282,20 +281,7 @@
 		\end{itemize}
 	\end{itemize}
 
-\subsubsection{UC6.3.4 - Modifica unità}
-	\begin{itemize}
-		\item \textbf{Attori primari:} utente amministratore;
-		\item \textbf{Descrizione:} l'amministratore intende modificare le proprietà di un'unità già esistente;
-		\item \textbf{Scenario principale:} l'amministratore modifica i dati dell'unità interessata;
-		\item \textbf{Precondizione:} l'amministratore ha accesso all'elenco delle unità esistenti;
-		\item \textbf{Postcondizione:} le proprietà dell'unità interessata risultano aggiornate come voluto;
-		\item \textbf{Inclusione:} 
-		\begin{itemize}
-			\item \textbf{UC6.3.6:} viene eseguito l'input dell'ID dell'unità.
-		\end{itemize}
-	\end{itemize}
-
-\subsubsection{UC6.3.5 - Rimozione unità}
+\subsubsection{UC6.3.4 - Rimozione unità}
 	\begin{itemize}
 		\item \textbf{Attori primari:} utente amministratore;
 		\item \textbf{Descrizione:} l'amministratore intende eliminare un'unità, dalla lista di quelle gestite dal sistema;
@@ -304,7 +290,7 @@
 		\item \textbf{Postcondizione:} la lista delle unità risulta aggiornata con la rimozione dell'unità interessata.
 	\end{itemize}
 
-\subsubsection{UC6.3.6 - Input ID unità}
+\subsubsection{UC6.3.5 - Input ID unità}
 	\begin{itemize}
 		\item \textbf{Attori primari:} utente amministratore;
 		\item \textbf{Descrizione:} l'amministratore inserisce l'ID da assegnare all'unità interessata;
@@ -317,7 +303,7 @@
 		\end{itemize}
 	\end{itemize}
 
-\subsubsection{UC6.3.7 - Visualizzazione errore causa ID unità già esistente}
+\subsubsection{UC6.3.6 - Visualizzazione errore causa ID unità già esistente}
 	\begin{itemize}
 		\item \textbf{Attori primari:} utente amministratore;
 		\item \textbf{Descrizione:} l'amministratore visualizza un errore, relativo al fatto che l'ID che si è cercato di usare è già assegnato ad un'unità esistente;
