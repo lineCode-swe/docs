@@ -6,7 +6,7 @@
 \end{figure}
 \begin{itemize}
     \item \textbf{Attori primari:} utente autenticato;
-    \item \textbf{Descrizione:} l'utente intende visualizzare e/o modificare le proprietà delle unità;
+    \item \textbf{Descrizione:} l'utente intende visualizzare le proprietà e modificare il comportamento delle unità;
     \item \textbf{Scenario principale:} l'utente si trova in un area riservata nella quale viene presentata una lista delle unità collegate al sistema mediante il loro codice identificativo.\\
     Per una singola unità presente nella lista, l'utente in tempo reale può:
     \begin{itemize}
@@ -26,13 +26,13 @@
     \end{figure}
     \begin{itemize}
         \item \textbf{Attori primari:} utente autenticato;
-        \item \textbf{Descrizione:} l'utente intende visualizzare in dettaglio e in tempo reale le proprietà di un'unità;
+        \item \textbf{Descrizione:} l'utente intende visualizzare in dettaglio ed in tempo reale le proprietà di un'unità;
         \item \textbf{Scenario principale:} l'utente visualizza:
         \begin{itemize}
             \item le caratteristiche dell'unità (UC5.1.1);
             \item la coda degli ordini assegnati all'unità (UC5.1.2).
         \end{itemize}
-        \item \textbf{Precondizione:} l'utente accede all'ambiente grafico dedicato alle proprietà dell'unità;
+        \item \textbf{Precondizione:} l'utente accede all'ambiente dedicato alle proprietà dell'unità;
         \item \textbf{Postcondizione:} l'utente visualizza in tempo reale le proprietà dell'unità.
     \end{itemize}
 
@@ -55,8 +55,8 @@
                 \item direzione (suggerita dal sistema) del prossimo passo.
             \end{itemize}
             \item \textbf{Scenario principale:} l'utente prende visione dello stato dell'unità;
-            \item \textbf{Precondizione:} l'utente naviga nell'ambiente grafico dedicato alle proprietà dell'unità;
-            \item \textbf{Postcondizione:} l'utente visualizza in tempo reale le caratteristiche dell'unità.
+            \item \textbf{Precondizione:} l'utente accede all'ambiente dedicato alle proprietà dell'unità;
+            \item \textbf{Postcondizione:} l'utente visualizza in tempo reale le proprietà dell'unità.
         \end{itemize}
 
         \subsubsection{UC5.1.2 - Visualizzazione ordini assegnati}
@@ -64,8 +64,8 @@
             \item \textbf{Attori primari:} utente autenticato;
             \item \textbf{Descrizione:} l'utente intende visualizzare la coda degli ordini assegnati;
             \item \textbf{Scenario principale:} l'utente visualizza la coda degli ordini assegnati ovvero la lista dei \glock{POI} a cui effettuare la consegna prima di tornare alla base;
-            \item \textbf{Precondizione:} l'utente naviga nell'ambiente grafico dedicato alle proprietà dell'unità;
-            \item \textbf{Postcondizione:} l'utente visualizza in tempo reale la coda degli ordini assegnati all'unità.
+            \item \textbf{Precondizione:} l'utente accede all'ambiente dedicato alle proprietà dell'unità;
+            \item \textbf{Postcondizione:} l'utente visualizza in tempo reale le proprietà dell'unità.
         \end{itemize}
 
 
@@ -86,7 +86,7 @@
             \item Shutdown (UC5.2.4).
         \end{itemize}
         l'utente, inoltre, assegna (UC5.2.5) o elimina (UC5.2.6) ordini dalla coda degli ordini dell'unità;
-        \item \textbf{Precondizione:} l'unità si trova in un determinato stato con una determinata coda degli ordini;
+        \item \textbf{Precondizione:} l'utente accede all'ambiente dedicato alla gestione dell'unità;
         \item \textbf{Postcondizione:} l'utente modifica in tempo reale lo stato dell'unità e la coda degli ordini.
     \end{itemize}
 
@@ -94,52 +94,52 @@
         \begin{itemize}
             \item \textbf{Attori primari:} utente autenticato;
             \item \textbf{Descrizione:} l'utente intende impostare lo stato dell'unità in modo che consegni tutti gli ordini assegnati per poi tornare alla base;
-            \item \textbf{Scenario principale:} l'utente rende \underline{Going to X} il nuovo stato dell'unità;
-            \item \textbf{Precondizione:} l'unità ha stato \underline{Base}, \underline{Stop} o un errore reversibile e la coda degli ordini contiene almeno un ordine;
-            \item \textbf{Postcondizione:} l'unità ha stato \underline{Going to X}.
+            \item \textbf{Scenario principale:} partendo da un'unità con stato \underline{Base} o \underline{Stop}, l'utente rende \underline{Going to X} il nuovo stato dell'unità;
+            \item \textbf{Precondizione:} l'utente accede all'ambiente dedicato alla gestione dell'unità;
+            \item \textbf{Postcondizione:} l'utente modifica in tempo reale lo stato dell'unità.
         \end{itemize}
 
         \subsubsection{UC5.2.2 - Comando Stop}
         \begin{itemize}
             \item \textbf{Attori primari:} utente autenticato;
-            \item \textbf{Descrizione:} l'utente intende impostare lo stato dell'unità in modo che, pur rimanendo accesa e connessa, si fermi nella posizione attuale;
+            \item \textbf{Descrizione:} l'utente intende impostare lo stato dell'unità in modo che, pur rimanendo accesa e connessa, rimanga nella posizione attuale;
             \item \textbf{Scenario principale:} l'utente rende \underline{Stop} il nuovo stato dell'unità;
-            \item \textbf{Precondizione:} l'unità ha stato \underline{Going to X};
-            \item \textbf{Postcondizione:} l'unità ha stato \underline{Stop}.
+            \item \textbf{Precondizione:} l'utente accede all'ambiente dedicato alla gestione dell'unità;
+            \item \textbf{Postcondizione:} l'utente modifica in tempo reale lo stato dell'unità.
         \end{itemize}
 
         \subsubsection{UC5.2.3 - Comando Go Back}
         \begin{itemize}
             \item \textbf{Attori primari:} utente autenticato;
             \item \textbf{Descrizione:} l'utente intende impostare lo stato dell'unità in modo che, indipendentemente dalla situazione attuale della coda degli ordini, ritorni alla base;
-            \item \textbf{Scenario principale:} l'utente rende \underline{Going to B} il nuovo stato dell'unità, dove B è la base;
-            \item \textbf{Precondizione:} l'unità ha stato \underline{Start}, \underline{Stop} o un errore reversibile;
-            \item \textbf{Postcondizione:} l'unità ha stato \underline{Going to B} con B corrispondente alla base.
+            \item \textbf{Scenario principale:} partendo da un'unità con stato \underline{Start} o \underline{Stop}, l'utente rende \underline{Going to B} il nuovo stato dell'unità, dove B è la base;
+            \item \textbf{Precondizione:} l'utente accede all'ambiente dedicato alla gestione dell'unità;
+            \item \textbf{Postcondizione:} l'utente modifica in tempo reale lo stato dell'unità.
         \end{itemize}
 
         \subsubsection{UC5.2.4 - Comando Shutdown}
         \begin{itemize}
             \item \textbf{Attori primari:} utente autenticato;
-            \item \textbf{Descrizione:} l'utente intende spegnere l'unità in modo immediato;
-            \item \textbf{Scenario principale:} l'utente spegne l'unità in modo immediato ignorando stato attuale e qualsiasi ordine ancora assegnato;
-            \item \textbf{Precondizione:} l'unità è accesa e connessa al sistema;
-            \item \textbf{Postcondizione:} l'unità è spenta e per il sistema ha stato \underline{Disconnected}.
+            \item \textbf{Descrizione:} l'utente intende spegnere l'unità attualmente connessa, in modo immediato;
+            \item \textbf{Scenario principale:} Ignorando stato attuale e qualsiasi ordine ancora assegnato, l'utente spegne l'unità in modo immediato portandola in stato \underline{Disconnected};
+            \item \textbf{Precondizione:} l'utente accede all'ambiente dedicato alla gestione dell'unità;
+            \item \textbf{Postcondizione:} l'utente modifica in tempo reale lo stato dell'unità.
         \end{itemize}
 
-        \subsubsection{UC5.4.5 - Assegnazione nuovo ordine}
+        \subsubsection{UC5.2.5 - Assegnazione nuovo ordine}
         \begin{itemize}
             \item \textbf{Attori primari:} utente autenticato;
             \item \textbf{Descrizione:} l'utente intende accodare un nuovo ordine;
-            \item \textbf{Scenario principale:} l'utente inserisce l'identificativo del \glock{POI} da visitare per effettuare la consegna;
-            \item \textbf{Precondizione:} l'unità ha una coda degli ordini che non contiene l'ordine da inserire e si trova alla base;
-            \item \textbf{Postcondizione:} l'unità ha la precedente coda degli ordini con accodato il nuovo ordine.
+            \item \textbf{Scenario principale:} l'utente assegna il nuovo ordine all'unità, ed inserisce l'identificativo del \glock{POI} da visitare per effettuare la consegna;
+            \item \textbf{Precondizione:} l'utente accede all'ambiente dedicato alla gestione dell'unità;
+            \item \textbf{Postcondizione:} l'utente modifica in tempo reale la coda degli ordini.
         \end{itemize}
 
-        \subsubsection{UC5.4.6 - Eliminazione ordine assegnato}
+        \subsubsection{UC5.2.6 - Eliminazione ordine assegnato}
         \begin{itemize}
             \item \textbf{Attori primari:} utente autenticato;
-            \item \textbf{Descrizione:} l'utente intende eliminare un ordine in coda;
+            \item \textbf{Descrizione:} l'utente intende eliminare un ordine in coda ad un'unità che si trova alla base;
             \item \textbf{Scenario principale:} l'utente elimina l'ordine dalla coda indipendentemente dalla sua posizione all'interno di essa;
-            \item \textbf{Precondizione:} l'unità ha una coda degli ordini con almeno un elemento e si trova alla base;
-            \item \textbf{Postcondizione:} l'unità ha la precedente coda degli ordini ma senza l'ordine eliminato.
+            \item \textbf{Precondizione:} l'utente accede all'ambiente dedicato alla gestione dell'unità;
+            \item \textbf{Postcondizione:} l'utente modifica in tempo reale la coda degli ordini.
         \end{itemize}
