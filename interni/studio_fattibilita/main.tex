@@ -41,19 +41,19 @@
 %%	Vers.	&	Nome					&	Ruolo		&	Data		&	Desrizione		  \\
     1.0.0   &   Alessandro Chimetto &   Responsabile&   03-01-2020  &   Approvazione Documento\\
 	0.7.0	&	Alessandro Chimetto	&	Verificatore&	18-12-2020	&	Verificato studio C3\\
-	0.7.0	&	Matteo Alba			&	Redattore	&	18-12-2020	&	Aggiunto studio C3\\
+	0.6.0	&	Matteo Alba			&	Redattore	&	18-12-2020	&	Aggiunto studio C3\\
 	0.6.0	&	Alessandro Chimetto		&	Verificatore&	17-12-2020	&	Verifica studio C4\\
-    0.6.0   &   Paolo Scanferlato       &   Redattore   &   16-12-2020  &   Aggiunto studio C4\\
+    0.5.0   &   Paolo Scanferlato       &   Redattore   &   16-12-2020  &   Aggiunto studio C4\\
     0.5.0   &   Valton Tahiraj          &   Verificatore &  14-12-2020  &   Verifica studio C6\\
-	0.5.0	&	Lucia Fenu	            &	Redattore	&	14-12-2020	&	Aggiunto studio C6\\
+	0.4.0	&	Lucia Fenu	            &	Redattore	&	14-12-2020	&	Aggiunto studio C6\\
 	0.4.0	&	Alessandro Chimetto		&	Verificatore&	14-12-2020	&	Verifica studio C5\\
-	0.4.0   &   Giacomo Bulbarelli  	&   Redattore   &   14-12-2020  &   Aggiunto studio C5\\
+	0.3.0   &   Giacomo Bulbarelli  	&   Redattore   &   14-12-2020  &   Aggiunto studio C5\\
 	0.3.0	&	Giacomo Bulbarelli		&	Verificatore&	14-12-2020	&	Verifica studio C7\\
-	0.3.0   &   Valton Tahiraj  		&   Redattore   &   14-12-2020  &   Aggiunto studio C7\\
+	0.2.0   &   Valton Tahiraj  		&   Redattore   &   14-12-2020  &   Aggiunto studio C7\\
 	0.2.0	&	Valton Tahiraj			&	Verificatore&	14-12-2020	&	Verifica studio C2\\
-	0.2.0	&	Alessandro Dindinelli	&	Redattore	&	13-12-2020	&	Aggiunto studio C2\\
+	0.1.0	&	Alessandro Dindinelli	&	Redattore	&	13-12-2020	&	Aggiunto studio C2\\
 	0.1.0	&	Alessandro Dindinelli	&	Verificatore&	13-12-2020	&	Verifica studio C1\\
-	0.1.0	&	Alessandro Chimetto		&	Redattore	&	12-12-2020	&	Stesura iniziale + studio C1
+	0.0.0	&	Alessandro Chimetto		&	Redattore	&	12-12-2020	&	Stesura iniziale + studio C1
 }
 \begin{document}
 
@@ -76,11 +76,11 @@
 		enunciando per ognuno: finalità, tecnologie e caratteristiche ritenute
 		negative o positive dai membri del gruppo.
 
-		\subsection{Altri Documenti e Glossario}
+		\subsection{Altri documenti e glossario}
 		Terminologie specifiche all'interno del documento saranno scritte in \textsc{maiuscoletto} per evitare ambiguità e avranno a pedice:
 		\begin{itemize}
 			\item \textit{D} se indicano un documento specifico;
-			\item \textit{G} se incluse nel \dext{glossario}.
+			\item \textit{G} se incluse nel \dext{Glossario v1.0.0}.
 		\end{itemize}
 
 		\subsection{Riferimenti}
@@ -157,7 +157,7 @@
 			L'azienda non impone alcuna tecnologia specifica al gruppo da utilizzare in fase di sviluppo.
 			In fase di consegna viene però richiesto l'impiego di:
 			\begin{itemize}
-				\item \textsc{\glock{Docker}}: software per la creazione di \glock{Container} istanziabili;
+				\item \textsc{\glock{Docker}}: software per la creazione di \glock{container} istanziabili;
 				\item \textsc{\glock{GitHub}}: piattaforma per lo sviluppo asincrono attraverso il tool di versionamento \glock{Git}.
 			\end{itemize}
 
@@ -167,7 +167,7 @@
 			\subsubsection{Vincoli di progetto}
 			Il progetto presenta dei vincoli sia per le singole unità, sia per il Sistema-centrale.
 
-			\paragraph{Vincoli di progetto: Unità}
+			\paragraph{Vincoli di progetto: unità}
 			Per quanto concerne le unità, queste dovranno essere caratterizzate da un insieme di elementi quali:
 			\begin{itemize}
 				\item punto di partenza nella griglia che rappresenta l'ambiente in cui l'unità si muove;
@@ -183,7 +183,7 @@
 				\item pulsante per l'accensione/spegnimento dell'unità.
 			\end{itemize}
 
-			\paragraph{Vincoli di progetto: Sistema-centrale}
+			\paragraph{Vincoli di progetto: sistema-centrale}
 			Il sistema centrale presenterà una mappa dell'ambiente in cui le unità si muovono (considerando anche i vincoli dimensionali dello stesso) e sarà incaricato di indicare ad ognuna la prossima azione da intraprendere, in funzione di:
 			\begin{itemize}
 				\item prossimo \glock{POI} da raggiungere;
@@ -259,14 +259,14 @@
 				\item \textsc{\glock{Kubernetes}, \glock{Openshift} o \glock{Rancher}:} orchestratori per gestire \glock{deploy} e scalabilità delle componenti server.
 			\end{itemize}
 
-			\subsubsection{Linguaggi di Programmazione}
+			\subsubsection{Linguaggi di programmazione}
 			\begin{itemize}
 				\item \textsc{\glock{Java}, \glock{Python} o \glock{Node.js}:} linguaggi molto diffusi, consigliati (ma non obbligatori) per lo sviluppo delle componenti \glock{back-end};
 				\item \textsc{\glock{Kotlin} o \glock{Swift}:} linguaggi per lo sviluppo di applicazioni mobile rispettivamente su piattaforme \glock{Android} e \glock{iOS};
 				\item \textsc{\glock{Solidity} o \glock{Vyper}:} linguaggi per lo sviluppo di \glock{smart contract} per la piattaforma \glock{Ethereum}.
 			\end{itemize}
 
-			\subsubsection{Vincoli di Progetto}
+			\subsubsection{Vincoli di progetto}
 			\begin{itemize}
 				\item Per la comunicazione asincrona fra applicazione e server, si richiede di utilizzare \glock{API Rest} o in alternativa \glock{gRPC};
 				\item scansione dei codici nel tempo sufficiente a certificare la presenza della persona in postazione;
@@ -316,7 +316,7 @@
 				\item \textsc{\glock{Amazon Cognito}:} servizio la gestione di registrazione e controllo degli accessi a piattaforme web.
 			\end{itemize}
 
-			\subsubsection{Linguaggi di Programmazione}
+			\subsubsection{Linguaggi di programmazione}
 			\begin{itemize}
 				\item \glock{Next.js}: framework per lo sviluppo \glock{front-end} di siti web;
 				\item \glock{Typescript}: linguaggio che va ad estendere \glock{Javascript} dotandolo di tipizzazione;
@@ -324,7 +324,7 @@
 			\end{itemize}
 
 
-			\subsubsection{Vincoli di Progetto}
+			\subsubsection{Vincoli di progetto}
 			Il sito deve permettere il supporto ai ruoli di:
 			\begin{itemize}
 			    \item amministratore di sistema: per la configurazione ed amministrazione del sito;
@@ -442,7 +442,7 @@
 			\item \glock{Proiezione Lineare Multi Asse}.
 		\end{itemize}
 
-		\subsubsection{Tecnologie e Linguaggi di Programmazione}
+		\subsubsection{Tecnologie}
 		L’applicazione “HD Viz” di visualizzazione dei dati a molte dimensioni dovrà essere sviluppata prevalentemente in tecnologia \glock{HTML}/\glock{CSS}/\glock{JavaScript} utilizzando la libreria \glock{D3.js}.
 		La parte server di supporto alla presentazione nel \glock{browser} e alle \glock{query} ad un database \glock{SQL} o \glock{NoSQL} potrà essere sviluppata in \glock{Java} con server \glock{Tomcat} o in \glock{Javascript} con server \glock{Node.js}.
 		Per lo sviluppo di algoritmi di preparazione del dato per la visualizzazione (requisito opzionale del capitolato), l'azienda mette a disposizione alcune librerie per gli algoritmi:
@@ -453,7 +453,7 @@
 			\item \glock{Learning Vector Quantization}.
 		\end{itemize}
 
-		\subsubsection{Vincoli di Progetto}
+		\subsubsection{Vincoli di progetto}
 		Il capitolato prevede dei requisiti obbligatori e opzionali:
 		\begin{itemize}
 			\item i dati da prendere in esame dovranno poter avere almeno fino a 15 dimensioni, ma deve essere possibile visualizzarne anche con meno;
@@ -510,7 +510,7 @@
 
 		\end{itemize}
 
-		\subsubsection{Linguaggi di Programmazione}
+		\subsubsection{Linguaggi di programmazione}
 		\begin{itemize}
 			\item \glock{Node.js}: linguaggio per lo sviluppo delle componenti \glock{back-end};
 			\item \glock{Kotlin}: linguaggio per lo sviluppo di applicazioni mobile per piattaforme \glock{Android} (richiesta minima Android 8);
@@ -518,7 +518,7 @@
 			\item \glock{GraphQL}: linguaggio di manipolazione e \glock{query} di dati \glock{Open Source} per \glock{API} e un runtime per la realizzazione di \glock{query} con dati esistenti.
 		\end{itemize}
 
-		\subsubsection{Vincoli di Progetto}
+		\subsubsection{Vincoli di progetto}
 		\begin{itemize}
 			\item Svolgere un'analisi preliminare sulle tecnologie \glock{AWS}, motivandone la scelta;
 			\item l'architettura server dovrà essere scalabile, che sarà una delle caratteristiche che influenzeranno la scelta dell'\glock{AWS}.
@@ -577,7 +577,7 @@
                 \item integrazione protocollo \glock{MAPI}.
             \end{itemize}
 
-            \subsubsection{Tecnologie}
+            \subsubsection{Linguaggi di programmazione}
             Il proponente sancisce che la soluzione sviluppata non dipenda da installazione di \glock{Framework} terzi per funzionare.
             Consiglia quindi l'uso dei seguenti \glock{Framework}:
             \begin{itemize}

@@ -14,8 +14,8 @@
 	Tutti i documenti ufficiali dovranno attraversare 4 fasi:
 	\begin{enumerate}
 		\item \textbf{creazione}: il documento viene creato utilizzando il template \textbf{template.tex} presente nella cartella dedicata della \glock{repository} remota;
-		\item \textbf{sviluppo}: i Redattori del documento, utilizzando il software \glock{TeXstudio}, aggiungono i contenuti assegnati in maniera incrementale aggiornando anche il numero di versione;
-		\item \textbf{verifica}: i Verificatori controllano la correttezza dei contenuti e, se necessario, richiedono modifiche e/o integrazioni ai Redattori. Una volta terminata la fase di verifica, il documento, viene sottoposto al Responsabile di Progetto;
+		\item \textbf{sviluppo}: i Redattori del documento, utilizzando il software \glock{TeXstudio}, aggiungono i contenuti assegnati in maniera incrementale, ed aggiornano la tabella delle modifiche senza modificare l'indice di versione del documento;
+		\item \textbf{verifica}: i Verificatori controllano la correttezza dei contenuti e, se necessario, richiedono modifiche e/o integrazioni ai Redattori. L'approvazione delle modifiche da parte del verificatore, porta ad un apposito incremento dell'indice di versione del documento. Una volta terminata la fase di verifica, il documento, viene sottoposto al Responsabile di Progetto;
 		\item \textbf{approvazione}: il Responsabile di Progetto ratifica il completamento del documento aggiornando la versione alla \glock{major release} successiva rendendolo pronto al rilascio.
 	\end{enumerate}
 
@@ -47,7 +47,7 @@
 				\item Responsabile;
                 \item destinatari;
 			\end{itemize}
-		\item \textbf{diario delle modifiche}: inizia nella seconda pagina di ogni documento; in formato tabellare specifica tutti gli aggiornamenti di versione (con data e autore) del documento in ordine cronologico inverso;
+		\item \textbf{diario delle modifiche}: inizia nella seconda pagina di ogni documento; in formato tabellare specifica tutti gli aggiornamenti (con data e autore) del documento in ordine cronologico inverso;
 		\item \textbf{indice}: posto nella pagina successiva al diario delle modifiche, indica le varie sezioni del documento, numerando i capitoli e specificandone il numero di pagina in cui ognuno di essi inizia;
 		\item \textbf{contenuto}: gli argomenti trattati nel documento;
 		\item \textbf{numero di pagina}: è presente al centro di ogni piè di pagina, tranne che nella prima.
@@ -56,9 +56,10 @@
 	\subsubsection{Norme tipografiche}
 	Oltre alla struttura dei documenti, andranno rispettate anche le seguenti norme tipografiche:
 	\begin{itemize}
+		\item \textbf{titoli}: solo l'iniziale in maiuscolo, tranne se sono presenti sigle particolari come nei titoli dei casi d'uso (esempio: UC2 - Login);
 		\item \textbf{date}: scritte nel formato italiano, 2 cifre per il giorno, 2 cifre per il mese e 4 cifre per l'anno separati tra di loro dal carattere "-" (GG-MM-AAAA, esempio: 19-12-2020);
 		\item \textbf{elenchi puntati e numerati}: ogni elemento termina con il ";", tranne l'ultimo, che conclude l'elenco con il ".";
-		\item \textbf{termini nel Glossario}: tutti i termini presenti nel \dext{Glossario} sono scritti in \textsc{maiuscoletto} e hanno a pedice una G maiuscola \glock{};
+		\item \textbf{termini nel Glossario}: tutti i termini presenti nel \dext{Glossario v1.0.0} sono scritti in \textsc{maiuscoletto} e hanno a pedice una G maiuscola \glock{};
 		\item \textbf{riferimento a documenti}: tutti i riferimenti a documenti sono scritti in \textsc{maiuscoletto} e hanno a pedice una D maiuscola \dext{};
 		\item \textbf{link a pagine internet}: sono direttamente cliccabili nel documento.
 	\end{itemize}
@@ -95,7 +96,8 @@
 	\\In caso di riunioni in cui saranno presenti ospiti prenderanno il nome di \dext{Verbale Esterno} e saranno nominati con VE, mentre le altre regole (numero progressivo a partire da 1 e classificazione decisioni prese) rimarranno invariate.
 
 	\subsubsection{Strumenti}
-	La documentazione prodotta sarà in formato \LaTeX\ v2e (\url{https://www.latex-project.org/}) e per la stesura saranno utilizzati i seguenti software:	\begin{itemize}
+	La documentazione prodotta sarà in formato \LaTeX\ v2e (\url{https://www.latex-project.org/}) e per la stesura saranno utilizzati i seguenti software:	
+	\begin{itemize}
 		\item \textbf{\glock{TeXstudio} v3.0.1} (\url{https://texstudio.org/}): per l'editing dei documenti \LaTeX\ v2e, compatibile con tutte i sistemi operativi utilizzati dal gruppo (\glock{Mac OS}, \glock{Windows}, \glock{Linux}). Sarà, inoltre, obbligatorio attivare il correttore ortografico in italiano del software per ridurre al minimo gli eventuali errori di digitazione;
 		\item \textbf{\glock{Texmaker} v5.0.4}: altro editor \LaTeX come \glock{TeXstudio};
 		\item \textbf{\glock{GanttProject} v2.8.11} (\url{https://www.ganttproject.biz/}): per la creazione dei diagrammi di \glock{Gantt};
