@@ -116,3 +116,94 @@
 				\item definizione degli standard di indentazione, spazi e commenti;
 				\item prassi e principi di programmazione.
 			\end{itemize}
+		
+		\subsubsection{Metriche di affidabilità}
+			\subparagraph{Scopo}
+			Durante lo sviluppo si vuole monitorare l’affidabilità e la correttezza del codice prodotto.\\
+			Il software deve tendere ad evitare il verificarsi di errori e malfunzionamenti durante l'esecuzione, mantenendo comunque un livello minimo di prestazioni qualora questi dovessero verificarsi.
+			Si è deciso di utilizzare le seguenti metriche:
+			\\
+			\textit{\underline{\textbf{CORREGGERE SIGLE}}}
+			\begin{itemize}
+				\item QM-PROD-6 Numero di bug rilevati (BUGR);
+				\item QM-PROD-7 Tempo stimato risoluzione bug (TBUG).
+			\end{itemize}
+			\subparagraph{QM-PROD-6 Numero di bug rilevati (BUGR)}
+			\begin{itemize}
+				\item \textbf{Descrizione}: la metrica serve a rilevare il numero di bug che sono stati scoperti, per un componente software;
+				\item \textbf{Unità di misura}: numero intero positivo, a partire da 0;
+				\item \textbf{Fonte}: il dato viene recuperato attraverso le statistiche di \textbf{\textit{\underline{SONARCLOUD myabe cambiare?}}};
+				\item \textbf{Risultato}:
+				\begin{itemize}
+					\item se è 0 allora non sono stati rilevati bug;
+					\item se è maggiore di 0 allora sono stati rilevati dei bug.
+				\end{itemize}
+			\end{itemize}
+			\subparagraph{QM-PROD-7 Tempo stimato risoluzione bug (TBUG)}
+			\begin{itemize}
+				\item \textbf{Descrizione}: la metrica serve a rilevare il tempo stimato per la risoluzione dei bug che sono stati scoperti, per un componente software;
+				\item \textbf{Unità di misura}: minuti;
+				\item \textbf{Fonte}: il dato viene recuperato attraverso le statistiche di \textbf{\textit{\underline{SONARCLOUD myabe cambiare?}}};
+				\item \textbf{Risultato}:
+				\begin{itemize}
+					\item se è 0 allora non sono stati rilevati bug;
+					\item se è maggiore di 0 allora sono stati rilevati dei bug che hanno un tempo di risoluzione stimato pari a quello riportato.
+				\end{itemize}
+			\end{itemize}
+		
+		\subsubsection{Metriche di completamento}
+			\subparagraph{Scopo}
+			Durante lo sviluppo, si vuole monitorare la capacità del prodotto di soddisfare tutti i requisiti richiesti dal proponente per determinare il grado di completamento.
+			Si è deciso di utilizzare le seguenti metriche:
+			\\
+			\textit{\underline{\textbf{CORREGGERE SIGLE}}}
+			\begin{itemize}
+				\item QM-PROC-7 Requisiti obbligatori soddisfatti (ROBS);
+				\item QM-PROC-8 Requisiti desiderabili soddisfatti (RDS);
+				\item QM-PROC-9 Requisiti opzionali soddisfatti (ROPS);
+			\end{itemize}
+			\subparagraph{QM-PROC-7 Requisiti obbligatori soddisfatti (ROBS)}
+			\begin{itemize}
+				\item \textbf{Descrizione}: la metrica indica il quantitativo di requisiti obbligatori soddisfatti (progettati, sviluppati e verificati) fino alla data corrente. Ciò permette, sia al gruppo che al committente, di comprendere la percentuale di completezza base del prodotto;
+				\item \textbf{Unità di misura}: percentuale;
+				\item \textbf{Fonte}: la formula usata per il calcolo della metrica è la seguente:
+				\[
+				ROBS = \frac{requisiti\ obbligatori\ soddisfatti}{requisiti\ obbligatori\ totali} \times 100
+				\]
+				\item \textbf{Risultato}:
+				\begin{itemize}
+					\item se è 0, non è stato soddisfatto ancora alcun requisito obbligatorio;
+					\item se è maggiore di 0 ma inferiore a 100, alcuni requisiti obbligatori sono stati soddisfatti;
+					\item se è 100, sono stati soddisfatti tutti i requisiti obbligatori.
+				\end{itemize}
+			\end{itemize}
+			\subparagraph{QM-PROC-8 Requisiti desiderabili soddisfatti (RDS)}
+			\begin{itemize}
+				\item \textbf{Descrizione}: la metrica indica il quantitativo di requisiti desiderabili soddisfatti (progettati, sviluppati e verificati) fino alla data corrente. Ciò permette, sia al gruppo che al committente, di comprendere la percentuale di di valore aggiunto del prodotto;
+				\item \textbf{Unità di misura}: percentuale;
+				\item \textbf{Fonte}: la formula usata per il calcolo della metrica è la seguente:
+				\[
+				RDS = \frac{requisiti\ desiderabili\ soddisfatti}{requisiti\ desiderabili\ totali} \times 100
+				\]
+				\item \textbf{Risultato}:
+				\begin{itemize}
+					\item se è 0, non è stato soddisfatto ancora alcun requisito desiderabile;
+					\item se è maggiore di 0 ma inferiore a 100, alcuni requisiti desiderabili sono stati soddisfatti;
+					\item se è 100, sono stati soddisfatti tutti i requisiti desiderabili.
+				\end{itemize}
+			\end{itemize}
+			\subparagraph{QM-PROC-9 Requisiti opzionali soddisfatti (ROPS)}
+			\begin{itemize}
+				\item \textbf{Descrizione}: la metrica indica il quantitativo di requisiti opzionali soddisfatti (progettati, sviluppati e verificati) fino alla data corrente;
+				\item \textbf{Unità di misura}: percentuale;
+				\item \textbf{Fonte}: la formula usata per il calcolo della metrica è la seguente:
+				\[
+				ROPS = \frac{requisiti\ opzionali\ soddisfatti}{requisiti\ opzionali\ totali} \times 100
+				\]
+				\item \textbf{Risultato}:
+				\begin{itemize}
+					\item se è 0, non è stato soddisfatto ancora alcun requisito opzionale;
+					\item se è maggiore di 0 ma inferiore a 100, alcuni requisiti opzionali sono stati soddisfatti;
+					\item se è 100, sono stati soddisfatti tutti i requisiti opzionali.
+				\end{itemize}
+			\end{itemize}
