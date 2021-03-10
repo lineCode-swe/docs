@@ -1,0 +1,112 @@
+\documentclass[]{article}
+
+\input{../../../commons/config}
+
+\appendToGraphicsPath{../../../commons/res/}
+
+%------------------------------
+%
+% COMANDI DI CONFIGURAZIONE
+%
+%------------------------------
+
+\setTitle{Verbale esterno \#5}
+
+\setVersione{0.0.0}
+
+\setDate{08-03-2021}
+
+\setResponsabile{Valton Tahiraj}
+
+\setRedattori{Lucia Fenu}
+
+\setVerificatori{}
+
+\setUso{Esterno}
+
+\setModifiche{
+	0.0.0 & Lucia Fenu & Redattore & 10-03-2021 & Stesura iniziale}
+
+\begin{document}
+	
+	\input{../../../commons/template}
+	
+	\newpage
+	
+	%--------------------------------
+	%
+	% IL CONTENUTO INIZIA DA QUI
+	%
+	%--------------------------------
+	
+	\section{Introduzione}
+	\subsection{Luogo e data dell'incontro}
+	\begin{itemize}
+		\item \textbf{Modalità}: Telematica;
+		\item \textbf{Software utilizzato}: Google Meet;
+		\item \textbf{Data}: 8 Marzo 2021;
+		\item \textbf{Ora di inizio}: 16:00;
+		\item \textbf{Ora di fine}: 16:30.
+	\end{itemize}
+	
+	\subsection{Presenze}
+	\begin{itemize}
+		\item \textbf{Presenti}: 
+		\begin{itemize}
+			\item Matteo Alba
+			\item Giacomo Bulbarelli
+			\item Alessandro Chimetto
+			\item Alessandro Dindinelli
+			\item Lucia Fenu
+			\item Paolo Scanferlato
+			
+		\end{itemize}
+		\item \textbf{Assenti}:
+		\begin{itemize}
+			\item Valton Tahiraj
+			
+		\end{itemize}
+		\item \textbf{Partecipanti esterni}:
+		\begin{itemize}
+			\item Alex Beggiato (referente, Sanmarco Informatica)
+		\end{itemize}	
+	\end{itemize}
+	
+	\subsection{Ordine del giorno}
+	\begin{enumerate}
+		\item Discussione \glock{PoC}.
+	\end{enumerate}
+	\newpage	
+	\section{Svolgimento}
+	
+	
+	\subsection{Discussione \glock{PoC}}
+	Il \glock{PoC} è stato mostrato al referente per formalità sull'andamento dei lavori. \\
+	Durante la dimostrazione, sono stati forniti diversi feedback importanti su quello che sarà lo sviluppo futuro del software, tra cui:
+	\begin{itemize}
+		\item Utilizzo \glock{Atmosphere}, per sviluppo in Real-Time che supporta \glock{WebSocket};
+		\item utilizzo \glock{WebSocket}, per sfruttare \glock{Atmosphere}.\\
+	\end{itemize}
+	
+	Ci è stato fatto notare infatti, come una continua richiesta al server di più unità avrebbe potuto costituire un problema di comunicazione in un tempo utile; ed i consigli che ci sono stati forniti prevengono tale problema. \\
+	In generale, la realizzazione come \glock{PoC}, è stata apprezzata.
+	
+	
+	
+	\newpage
+	
+	\section{Tabella delle decisioni}
+	
+	\begin{table} [h!]
+		\rowcolors{2}{gray!25}{gray!6}
+		\begin{center}
+			\begin{tabular} { m{2cm} m{14cm} }
+				\rowcolor{lightgray}
+				\textbf{ID} & \textbf{Decisione}\\
+				VE04.1 & Consultazione \glock{Atmosphere}.\\
+				
+			\end{tabular}
+		\end{center}
+	\end{table}
+\end{document}
+
