@@ -1,29 +1,52 @@
-Per garantire e valutare la qualità del prodotto, il gruppo ha deciso di fare riferimento allo standard ISO/IEC 9126, il quale definisce i parametri per produrre un prodotto di buona qualità ed il raggiungimento di tale caratteristica. \\
-Oltre alle qualità presenti nello standard sopra citato, il gruppo ha deciso di utilizzare altri parametri per quantificare la qualità della documentazione fornita con il prodotto software; le quali, riportate di seguito.
+Per garantire e valutare la qualità del prodotto, il gruppo ha deciso di fare riferimento allo standard ISO/IEC 9126, il quale definisce i parametri per produrre un prodotto di buona qualità ed il raggiungimento di tale caratteristica.
 
 \subsection{Qualità dei documenti}
+Oltre alle qualità presenti nello standard sopra citato, il gruppo ha deciso di utilizzare altri parametri per quantificare la qualità della documentazione fornita con il prodotto software; le quali, riportate di seguito.
 
-\subsubsection{Comprensione}
-Tutti i documenti devono essere leggibili e comprensibili.\\
-Queste qualità derivano dalla correttezza lessicografica, grammaticale e semantica.
+    \subsubsection{Comprensione}
+    Tutti i documenti devono essere leggibili e comprensibili.\\
+    Queste qualità derivano dalla correttezza lessicografica, grammaticale e semantica.
 
-\subsubsection{Obiettivi}
-\begin{itemize}
-    \item \textbf{leggibilità:} per garantire la leggibilità dei documenti si è deciso di utilizzare l'\glock{indice di gulpease} come indicatore per questa caratteristica;
-    \item \textbf{correttezza:} i documenti presentati non devono contenere errori ortografici di alcun genere.
-\end{itemize}
+    \subsubsection{Obiettivi}
+    \begin{itemize}
+        \item \textbf{leggibilità:} per garantire la leggibilità dei documenti si è deciso di utilizzare l'\glock{indice di gulpease} come indicatore per questa caratteristica;
+        \item \textbf{correttezza:} i documenti presentati non devono contenere errori ortografici di alcun genere.
+    \end{itemize}
 
-\subsubsection{Metriche}
+    \subsubsection{Metriche}
+    \begin{table} [h!]
+    	\rowcolors{2}{gray!25}{gray!6}
+    	\begin{center}
+    		\begin{tabular} {m{2 cm} m{7 cm} c c }
+    			\rowcolor{lightgray}
+    			\textbf{ID} & \textbf{Nome}           & \textbf{Valore Accettabile} & \textbf{Valore Ottimale}\\
+    			MD01        & Indice di Gulpease      & $\geq$ 40                   & $\geq$ 60\\
+    			MD02        & Correttezza ortografica & 0                           & 0
+    		\end{tabular}
+    	\caption{Metriche qualità dei documenti}
+    	\end{center}
+    \end{table}
 
-\begin{table} [h!]
-	\rowcolors{2}{gray!25}{gray!6}
-	\begin{center}
-		\begin{tabular} {m{2 cm} m{7 cm} c c }
-			\rowcolor{lightgray}
-			\textbf{ID} & \textbf{Nome}& \textbf{Valore Accettabile} & \textbf{Valore Ottimale}\\
-			MD01 & Indice di Gulpease  		 & $\geq$ 40   			& $\geq$ 60 \\
-			MD02 & Correttezza ortografica 				&0						&0
-		\end{tabular}
-	\caption{Metriche qualità di prodotto}
-	\end{center}
-\end{table}
+\subsection{Qualità del software}
+Le seguenti metriche sono state scelte al fine di garantire affidabilità, sicurezza, manutenibilità e semplicità del prodotto software.
+
+    \subsubsection{Metriche}
+    \begin{table} [h!]
+        \rowcolors{2}{gray!25}{gray!6}
+        \begin{center}
+            \begin{tabular} {m{2 cm} m{7 cm} c c }
+                \rowcolor{lightgray}
+                \textbf{ID} & \textbf{Nome}           & \textbf{Valore Accettabile} & \textbf{Valore Ottimale}\\
+                MS01        & Numero Bug Rilevati     & 0                           & 0\\
+                MS02        & Vulnerabilità           & 0                           & 0\\
+                MS03        & Code Smells             & 25                          & 5\\
+                MS04        & Debito Tecnico          & h 24                        & h 0,5\\
+                MS05        & Code Coverage           & 60\%                        & 80\%\\
+                MS06        & Complessità Ciclomatica & 30                          & 10\\
+                MS07        & Requisiti Sbbligatori Soddisfatti & 100\%             & 100\%\\
+                MS08        & Requisiti Desiderabili Soddisfatti & 0\%              & 70\%\\
+                MS09        & Requisiti Opzionali Soddisfatti & 0\%                 & 20\%\\
+            \end{tabular}
+            \caption{Metriche qualità del prodotto software}
+        \end{center}
+    \end{table}
