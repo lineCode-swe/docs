@@ -1,6 +1,6 @@
 \subsection{Gestione processi}
 
-	\subsubsection{Descrizione}
+	\subsubsection{Scopo}
 	L'utilizzo di una gestione dei processi ha lo scopo di:
 	\begin{itemize}
 		\item identificare e gestire i rischi;
@@ -20,7 +20,7 @@
 		\item tenere sotto controllo l'andamento, al fine di ottimizzare l'efficienza del lavoro.
 	\end{itemize}
 
-	\subsubsection{Attività}
+	\subsubsection{Descrizione}
 	Le attività previste secondo il \dext{Piano di Progetto v1.0.0} sono:
 	\begin{itemize}
 		\item analisi e classificazione dei rischi;
@@ -131,21 +131,57 @@
 		 Dopodiché si trattano gli argomenti del giorno che sono stati tracciati alla riunione precedente o durante comunicazioni interne.
 
 		 \subsubsection{Strumenti di coordinamento}
-		 Per la gestione della attività è previsto l'uso delle \glock{Issue Tracking System} fornito da \glock{GitHub}. \\
-		 Le \glock{Issue} create vengono automatizzate tramite il Project, \glock{template Automated Kanban}, che permette una visualizzazione più pratica sul tracciamento delle attività. \\
-		 Ogni \glock{Issue} ha le seguenti informazioni:
-		 \begin{itemize}
-		 	\item {\bfseries titolo}: nome del compito da eseguire;
-		 	\item {\bfseries descrizione}: una descrizione breve e concisa su come svolgere il compito;
-		 	\item {\bfseries scadenza}: tramite l'uso di \glock{Milestone}, si definisce la scadenza secondo la quale si dovrebbe terminare il compito.
-		 \end{itemize}
-		 La lavagna è divisa nel seguente modo:
-		 \begin{itemize}
-		 	\item {\bfseries to do}: compiti ancora svolgere;
-		 	\item {\bfseries in progress}: compiti in fase di svolgimento;
-		 	\item {\bfseries done}: compiti svolti.
-		 	\end{itemize}
-	 	L'\glock{Issue Tracking System} in quanto completamente integrato con il \glock{repository} del progetto, è semplice da usare e da gestire.
+%		 Per la gestione della attività è previsto l'uso delle \glock{Issue Tracking System} fornito da \glock{GitHub}. \\
+%		 Le \glock{Issue} create vengono automatizzate tramite il Project, \glock{template Automated Kanban}, che permette una visualizzazione più pratica sul tracciamento delle attività. \\
+%		 Ogni \glock{Issue} ha le seguenti informazioni:
+%		 \begin{itemize}
+%		 	\item {\bfseries titolo}: nome del compito da eseguire;
+%		 	\item {\bfseries descrizione}: una descrizione breve e concisa su come svolgere il compito;
+%		 	\item {\bfseries scadenza}: tramite l'uso di \glock{Milestone}, si definisce la scadenza secondo la quale si dovrebbe terminare il compito.
+%		 \end{itemize}
+%		 La lavagna è divisa nel seguente modo:
+%		 \begin{itemize}
+%		 	\item {\bfseries to do}: compiti ancora svolgere;
+%		 	\item {\bfseries in progress}: compiti in fase di svolgimento;
+%		 	\item {\bfseries done}: compiti svolti.
+%		 	\end{itemize}
+%	 	L'\glock{Issue Tracking System} in quanto completamente integrato con il \glock{repository} del progetto, è semplice da usare e da gestire.
+		Per la gestione delle attività viene utilizzato il sistema di \glock{board} integrato con il servizio \glock{GitKraken}.\\
+		Le \glock{board} sono configurate nella maniera seguente:
+		\begin{itemize}
+			\item Ad ogni \glock{task} identificato dal gruppo viene associata una \glock{card} nella \glock{board};
+			\item Ad ogni \glock{task} vengono associati dei \glock{label} che aggiungono contenuto informativo sul \glock{task} stesso e che si presentano con la seguente struttura: 
+			\begin{center}
+	 			{\bfseries Lettera - Specifica}
+	 		\end{center}
+dove Lettera può assumere i seguenti valori:
+			\begin{itemize}
+				\item \textbf{A}: identifica il target del task con campo Specifica che può assumere valori:
+				\begin{itemize}
+					\item Documentazione;
+					\item Codice.
+				\end{itemize}
+				\item \textbf{B}: identifica il tipo di operazione che il task richiede con campo Specifica che può assumere valori:
+				\begin{itemize}
+					\item Incremento;
+					\item Correzione.
+				\end{itemize}
+				\item \textbf{C}: identifica la priorità del task con campo Specifica che può assumere valori:
+				\begin{itemize}
+					\item Urgente;
+					\item Neutra;
+					\item Bassa.
+				\end{itemize}
+			\end{itemize}
+			\item Ad ogni \glock{card} che corrisponde a un \glock{task} preso a carico da uno o più membri del gruppo vengono associati gli assegnatari che si occuperanno di svolgere il suddetto task e tale assegnazione sarà visibile all'interno della card stessa per facilitare il tracciamento dei membri che hanno a carico un determinato incarico;  
+			\item Le \glock{card} possono trovarsi in 1 di 4 colonne che ne identificano lo stato di completamento, divise in:
+			\begin{itemize}
+				\item \textbf{To Do}: \glock{task} da svolgere e non ancora cominciati;
+				\item \textbf{In progress} \glock{task} in fase di svolgimento presi a carico da uno o più membri del gruppo;
+				\item \textbf{Pending review}: \glock{task} che sono stati completati e in attesa di verifica;
+				\item \textbf{Done}: \glock{task} che sono stati completati e verificati.
+			\end{itemize}			 
+		\end{itemize}
 		 \subsubsection{Gestione dei rischi}
 		 I rischi che verranno rilevati e conseguentemente classificati, sono descritti dettagliatamente nel \dext{Piano di Progetto v1.0.0} che sarà sempre aggiornato su:
 		 \begin{itemize}
