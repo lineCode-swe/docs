@@ -1,20 +1,15 @@
 \subsection{Sviluppo}
 
-	\subsubsection{Scopo}
-	Questa sezione raccoglie le linee guida per i compiti e le attività da svolgere al fine di ottenere il prodotto finale richiesto dal proponente. \\
-	Per implementare correttamente il processo si devono stabilire i seguenti punti:
-	\begin{itemize}
-		\item obiettivi di sviluppo;
-		\item vincoli tecnologici e di design.
-	\end{itemize}
+	\subsubsection{Descrizione}
+	Questa sezione raccoglie le linee guida per i compiti e le attività da svolgere al fine di ottenere il prodotto finale richiesto dal proponente.
+    \\\\
 	Il prodotto finale deve:
 	\begin{itemize}
 		\item rispettare i requisiti;
 		\item superare i test definiti;
-		\item soddisfare le richieste del proponente.
+		\item rispettare i vincoli imposti dal proponente.
 	\end{itemize}
-	\subsubsection{Descrizione}
-	Secondo lo standard ISO/IEC 12207:1995, il processo di sviluppo si divide in:
+	Istanziando lo standard ISO/IEC 12207:1995 per renderlo conforme alle nostre esigenze, il processo di sviluppo si divide in:
 	\begin{itemize}
 		\item Analisi dei Requisiti;
 		\item Progettazione;
@@ -22,8 +17,7 @@
 	\end{itemize}
 
 	\subsubsection{Attività}
-
-		\paragraph{Analisi dei requisiti}
+        \paragraph{Analisi dei requisiti}
 			\subparagraph{Scopo}
 			Il compito degli analisti è quello di redigere il documento \dext{Analisi dei Requisiti v1.0.0}, che andrà ad elencare e definire i requisiti del \glock{capitolato}. Lo scopo dei requisiti è quello di:
 			\begin{itemize}
@@ -33,6 +27,7 @@
 				\item rendere disponibili ai verificatori riferimenti per il controllo dei test;
 				\item ragionare sul lavoro richiesto per produrre una stima dei costi.
 			\end{itemize}
+
 			\subparagraph{Classificazione dei requisiti}
 			Ogni requisito sarà associato ad un identificativo che rispetterà il seguente formato:
 			\begin{center}
@@ -42,79 +37,135 @@
 				\item \textbf{R:} requisito;
 				\item \textbf{Priorità:}
 				\begin{itemize}
-					\item \textbf{M:} mandatory/obbligatorio, quindi necessario a garantire le funzioni base del prodotto;
-					\item \textbf{D:} desirable/desiderabile, cioè non strettamente necessario, ma che porta alla completezza del prodotto;
-					\item \textbf{O:} optional/opzionale, quindi che non pregiudica la funzionalità del prodotto finale.
+					\item \textbf{M}: mandatory/obbligatorio, quindi necessario a garantire le funzioni base del prodotto;
+					\item \textbf{D}: desirable/desiderabile, cioè non strettamente necessario, ma che porta alla completezza del prodotto;
+					\item \textbf{O}: optional/opzionale, quindi che non pregiudica la funzionalità del prodotto finale.
 				\end{itemize}
 				\item \textbf{Categoria:}
 				\begin{itemize}
-					\item \textbf{F:} functional/funzionale;
-					\item \textbf{P:} performance/prestazionale;
-					\item \textbf{Q:} qualitative/qualitativo;
-					\item \textbf{C:} constraint/vincolo.
+					\item \textbf{F}: functional/funzionale;
+					\item \textbf{P}: performance/prestazionale;
+					\item \textbf{Q}: qualitative/qualitativo;
+					\item \textbf{C}: constraint/vincolo.
 				\end{itemize}
 				\item \textbf{Codice:} numero progressivo per riconoscere univocamente il requisito.
 			\end{itemize}
+
 			\subparagraph{Classificazione dei casi d'uso}
 			Come per i requisiti, si prevede di identificare univocamente i casi d'uso con il seguente formato:
 			\begin{center}
 				\textbf{UC[Codice]}
 			\end{center}
 			\begin{itemize}
-				\item \textbf{UC:} use case/caso d'uso;
-				\item \textbf{Codice:} serie di cifre separate da ’.’ così da poter dividere in modo gerarchico i casi e sotto casi.
+				\item \textbf{UC}: use case/caso d'uso;
+				\item \textbf{Codice}: serie di cifre separate da ’.’ così da poter dividere in modo gerarchico i casi e sotto casi.
 			\end{itemize}
 			Oltre all'identificativo, ogni caso d'uso verrà approfondito dai seguenti campi:
 			\begin{itemize}
-				\item \textbf{Descrizione:} breve spiegazione della situazione modellata;
-				\item \textbf{Grafici \glock{UML}:} diagrammi realizzati usando la versione 2.0 del linguaggio;
-				\item \textbf{Attori:} gli attori primari e secondari coinvolti;
-				\item \textbf{Scenario Principale:} elenco numerato degli eventi descritti dal caso d'uso;
-				\item \textbf{Precondizione:} condizioni che si assumono vere prima che si verifichino gli eventi descritti dal caso d'uso;
-				\item \textbf{Postcondizione:} condizioni che si assumono vere dopo che si sono verificati gli eventi descritti dal caso d'uso;
+				\item \textbf{Descrizione}: breve spiegazione della situazione modellata;
+				\item \textbf{Grafici \glock{UML}}: diagrammi realizzati usando la versione 2.0 del linguaggio;
+				\item \textbf{Attori}: gli attori primari e secondari coinvolti;
+				\item \textbf{Scenario Principale}: elenco numerato degli eventi descritti dal caso d'uso;
+				\item \textbf{Precondizione}: condizioni che si assumono vere prima che si verifichino gli eventi descritti dal caso d'uso;
+				\item \textbf{Postcondizione}: condizioni che si assumono vere dopo che si sono verificati gli eventi descritti dal caso d'uso;
 				\item eventuali estensioni ed inclusioni coinvolte.
 			\end{itemize}
 
-			\paragraph{Progettazione}
-			\subparagraph{Scopo}
-			Mentre l'\dext{Analisi dei Requisiti v1.0.0} divide il problema in parti per capirne completamente il dominio applicativo, la Progettazione rimette insieme tali parti specificandone le funzionalità in modo da realizzare l'architettura che il prodotto finale dovrà seguire. Questa dovrà seguire i seguenti principi:
-			\begin{itemize}
-				\item rispetto di tutti i requisiti;
-				\item affidabilità nello svolgere i propri compiti;
-				\item possibilità e facilità di garantire la manutenzione nel tempo;
-				\item essere sicura rispetto ad intrusioni e malfunzionamenti;
-				\item avere componenti coese, incapsulate e con scarse dipendenze tra loro.
-			\end{itemize}
-			\subparagraph{Descrizione}
-			Possiamo dividere questa fase in due istanze principali:
-			\begin{itemize}
-				\item \textbf{Technology baseline}: contiene le specifiche della progettazione ad alto livello del prodotto, i diagrammi \glock{UML} utilizzati per la realizzazione dell'architettura ed i test di verifica;
-				\item \textbf{Product baseline}: approfondisce ulteriormente l'attività di progettazione integrando la technology baseline e definisce i test necessari alla verifica.
-			\end{itemize}
-			\subparagraph{Technology baseline}
-			Le componenti principali che individuiamo sono:
-			\begin{itemize}
-				\item diagrammi \glock{UML}, utilizzati per rendere più chiare le soluzioni progettuali utilizzate, possono essere diagrammi di classi, package, attività o sequenza;
-				\item descrizione delle tecnologie adottate, specificandone l'utilizzo nel progetto, i vantaggi e gli svantaggi;
-				\item \glock{design patterns} per adottare opportune soluzioni progettuali a problemi ricorrenti;
-				\item test di integrazione, per verificare che ogni componente del sistema funzioni nella maniera voluta.
-			\end{itemize}
-			\subparagraph{Product baseline}
-			Gli aspetti principali su cui soffermarsi sono:
-			\begin{itemize}
-				\item definizione delle classi e loro descrizione per scopo e funzionalità;
-				\item tracciamento delle classi, in modo che per ogni requisito esista una classe che lo soddisfa;
-				\item test di unità, definiti in modo da verificare che le parti funzionino individualmente nel modo stabilito.
-			\end{itemize}
+		\paragraph{Progettazione}
+   			\subparagraph{Scopo}
+   			Mentre l'\dext{Analisi dei Requisiti v2.0.0} divide il problema in parti per capirne completamente il dominio applicativo, la Progettazione rimette insieme tali parti specificandone le funzionalità in modo da realizzare l'architettura che il prodotto finale dovrà seguire. Questa dovrà seguire i seguenti principi:
+   			\begin{itemize}
+   				\item rispetto di tutti i requisiti;
+   				\item affidabilità nello svolgere i propri compiti;
+   				\item possibilità e facilità di garantire la manutenzione nel tempo;
+   				\item essere sicura rispetto ad intrusioni e malfunzionamenti;
+   				\item avere componenti coese, incapsulate e con scarse dipendenze tra loro.
+   			\end{itemize}
+   			Parte della Progettazione implica la creazione di due sottoprodotti fondamentali per l'andamento del progetto:
+   			\begin{itemize}
+   				\item \textbf{Technology baseline}: software eseguibile utilizzato come dimostrazione della bontà delle scelte effettuate sulle tecnologie per la realizzazione del prodotto;
+   				\item \textbf{Product baseline}: parte del prodotto finale che implementi il design definitivo e funga da baseline sulla quale si baseranno i successivi incrementi.
+            \end{itemize}
 
-			\paragraph{Codifica}
-			\subparagraph{Scopo}
-			Questa parte ha lo scopo di realizzare il prodotto software richiesto. I programmatori dovranno attenersi a queste norme durante la fase di programmazione ed implementazione.
-			\subparagraph{Descrizione}
-			La scrittura del codice dovrà rispettare delle linee guida in modo da ottenere codice leggibile ed uniforme per i programmatori, ed agevolare poi le fasi di manutenzione, verifica e validazione. \\
-			Le convenzioni principali comprendono:
-			\begin{itemize}
-				\item regole per la dichiarazione e la denominazione di variabili e funzioni;
-				\item definizione degli standard di indentazione, spazi e commenti;
-				\item prassi e principi di programmazione.
-			\end{itemize}
+		\paragraph{Codifica}
+   			\subparagraph{Scopo}
+   			In questa attività i programmatori, sulla base dell'architettura proposta dai progettisti, realizzano il prodotto software richiesto.
+
+            \subparagraph{Regole}
+   			La scrittura del codice dovrà rispettare le seguenti regole in modo da ottenere codice leggibile, uniforme ed agevolare verifica e manutenzione:
+   			\begin{enumerate}
+                \item tutta la nomenclatura (es. variabili, classi, ecc.) deve essere in lingua inglese;
+                \item ogni file sorgente deve cominciare con un commento multi-riga dove sono indicati i diritti d'autore e un riferimento al file di licenza;
+                \item il codice \glock{Java} dovrà seguire tutte le convenzioni stilistiche indicate nelle \dext{Java Code Conventions} tranne quelle in contrasto con quanto indicato in questo documento;
+                \item il codice \glock{TypeScript} dovrà seguire le convenzioni stilistiche indicate nella \dext{Angular coding style guide} tranne quelle in contrasto con quanto indicato in questo documento.
+            \end{enumerate}
+
+    \subsubsection{Strumenti}
+    \begin{itemize}
+        \item \textbf{\glock{sonarcloud}}: Utilizzato per rilevare le metriche di qualità.
+    \end{itemize}
+
+
+	\subsubsection{Metriche}
+		\paragraph{MS01 - Numero Bug Rilevati}
+		\begin{itemize}
+			\item \textbf{Descrizione}: metrica di affidabilità; indica il numero di bug che sono stati scoperti in un componente software;
+			\item \textbf{Unità di misura}: numero intero maggiore o uguale a 0.
+		\end{itemize}
+
+        \paragraph{MS02 - Vulnerabilità}
+        \begin{itemize}
+            \item \textbf{Descrizione}: metrica di sicurezza; indica il numero di vulnerabilità nel prodotto software facendo intendere quanto il software sia sicuro nel suo complesso;
+            \item \textbf{Unità di misura}: numero intero maggiore o uguale a 0.
+        \end{itemize}
+
+        \paragraph{MS03 - Code Smells}
+        \begin{itemize}
+            \item \textbf{Descrizione}: metrica di manutenibilità; indica il numero di parti di codice in cui questo risulta, per sua stesura, confusionario e difficile da mantenere;
+            \item \textbf{Unità di misura}: numero intero maggiore o uguale a 0.
+        \end{itemize}
+
+        \paragraph{MS04 - Debito Tecnico}
+        \begin{itemize}
+            \item \textbf{Descrizione}: metrica di manutenibilità; indica una stima del tempo necessario ad un programmatore per risolvere tutti i Code Smells sulla base della loro difficoltà;
+            \item \textbf{Unità di misura}: ore.
+        \end{itemize}
+
+        \paragraph{MS05 - Code Coverage}
+        \begin{itemize}
+            \item \textbf{Descrizione}: indica quante linee di codice del prodotto software sono coperte da test;
+            \item \textbf{Unità di misura}: percentuale.
+        \end{itemize}
+
+        \paragraph{MS06 - Complessità Ciclomatica}
+        \begin{itemize}
+            \item \textbf{Descrizione}: metrica di complicatezza del software; misura il numero di cammini linearmente indipendenti attraverso il grafo di controllo di flusso del programma; minore è il suo valore, minore è il rischio di bug in caso di modifiche e maggiore è la leggibilità; in termini più pragmatici, indica il numero minimo di test per ottenere Code Coverage completa;
+            \item \textbf{Unità di misura}: numero intero maggiore o uguale a 1.
+        \end{itemize}
+
+		\paragraph{MS07 - Requisiti Obbligatori Soddisfatti}
+		\begin{itemize}
+			\item \textbf{Descrizione}: la metrica indica il quantitativo di requisiti obbligatori soddisfatti (progettati, sviluppati e verificati) fino alla data corrente; ciò permette, sia al gruppo che al committente, di comprendere la percentuale di completezza base del prodotto; la formula usata per il calcolo della metrica è la seguente:
+            \[
+            MS07 = \frac{requisiti\ obbligatori\ soddisfatti}{requisiti\ obbligatori\ totali} \times 100
+            \]
+			\item \textbf{Unità di misura}: percentuale.
+		\end{itemize}
+
+		\paragraph{MS08 - Requisiti Desiderabili Soddisfatti}
+		\begin{itemize}
+			\item \textbf{Descrizione}: la metrica indica il quantitativo di requisiti desiderabili soddisfatti (progettati, sviluppati e verificati) fino alla data corrente; ciò permette, sia al gruppo che al committente, di comprendere la percentuale di valore aggiunto del prodotto; la formula usata per il calcolo della metrica è la seguente:
+            \[
+            MS08 = \frac{requisiti\ desiderabili\ soddisfatti}{requisiti\ desiderabili\ totali} \times 100
+            \]
+			\item \textbf{Unità di misura}: percentuale.
+		\end{itemize}
+
+		\paragraph{MS09 - Requisiti Opzionali Soddisfatti}
+		\begin{itemize}
+			\item \textbf{Descrizione}: la metrica indica il quantitativo di requisiti opzionali soddisfatti (progettati, sviluppati e verificati) fino alla data corrente; la formula usata per il calcolo della metrica è la seguente:
+            \[
+            MS09 = \frac{requisiti\ opzionali\ soddisfatti}{requisiti\ opzionali\ totali} \times 100
+            \]
+			\item \textbf{Unità di misura}: percentuale.
+		\end{itemize}
