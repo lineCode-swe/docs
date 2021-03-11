@@ -29,6 +29,29 @@
 		\item calcolo del bilancio.
 	\end{itemize}
 
+		\paragraph{Gestione dei rischi}
+		I rischi che verranno rilevati e conseguentemente classificati, sono descritti dettagliatamente nel \dext{Piano di Progetto v1.0.0} che sarà sempre aggiornato su:
+		\begin{itemize}
+			\item nuovi rischi individuati;
+			\item ridefinizione, all'occorrenza, di nuove strategie sulla gestione dei rischi;
+			\item monitoraggio dei rischi pervenuti.
+		\end{itemize}
+		\noindent
+		I rischi sono così classificati:
+		\begin{center}
+			{\bfseries RS[Categoria][Codice]}
+		\end{center}
+		dove:
+		\begin{itemize}
+			\item \textbf{Categoria}: indica la tipologia a cui appartiene il rischio con i seguenti valori:
+			\begin{itemize}
+				\item {\bfseries O}: rischio Organizzativo;
+				\item {\bfseries T}: rischio Tecnologico;
+				\item {\bfseries P}: rischio di carattere Privato/Personale. \\
+			\end{itemize}
+			\item \textbf{Codice}: intero positivo che identifica il singolo rischio. Il valore parte da 01.
+		\end{itemize}
+
 	\subsubsection{Ruoli di progetto}
 	Tutti i membri del gruppo dovranno assumere diversi ruoli a rotazione e, per ognuno di essi, saranno previsti compiti specializzati. Di seguito sono riportate, in linea generale, gli aspetti caratterizzanti di ogni ruolo che verrà ricoperto.
 
@@ -128,7 +151,7 @@
 		 La trascrizione sarà a rotazione.\\
 		 Dopodiché si trattano gli argomenti del giorno che sono stati tracciati alla riunione precedente o durante comunicazioni interne.
 
-		 \subsubsection{Strumenti di coordinamento}
+		 \subsubsection{Strumenti}
 		 Per la gestione della attività è previsto l'uso delle \glock{Issue Tracking System} fornito da \glock{GitHub}. \\
 		 Le \glock{Issue} create vengono automatizzate tramite il Project, \glock{template Automated Kanban}, che permette una visualizzazione più pratica sul tracciamento delle attività. \\
 		 Ogni \glock{Issue} ha le seguenti informazioni:
@@ -144,120 +167,118 @@
 		 	\item {\bfseries done}: compiti svolti.
 		 	\end{itemize}
 	 	L'\glock{Issue Tracking System} in quanto completamente integrato con il \glock{repository} del progetto, è semplice da usare e da gestire.
-		 \subsubsection{Gestione dei rischi}
-		 I rischi che verranno rilevati e conseguentemente classificati, sono descritti dettagliatamente nel \dext{Piano di Progetto v1.0.0} che sarà sempre aggiornato su:
-		 \begin{itemize}
-		 	\item nuovi rischi individuati;
-		 	\item ridefinizione, all'occorrenza, di nuove strategie sulla gestione dei rischi;
-		 	\item monitoraggio dei rischi pervenuti.
-		 \end{itemize}
-	 	\noindent
-	 	I rischi sono così classificati:
-	 	\begin{center}
-	 			{\bfseries RS[Categoria][Codice]}
-	 	\end{center}
-	 	dove:
-	 	\begin{itemize}
-	 		\item \textbf{Categoria}: indica la tipologia a cui appartiene il rischio con i seguenti valori:
-	 	\begin{itemize}
-	 		\item {\bfseries O}: rischio Organizzativo;
-	 		\item {\bfseries T}: rischio Tecnologico;
-	 		\item {\bfseries P}: rischio di carattere Privato/Personale. \\
-	 	\end{itemize}
- 			\item \textbf{Codice}: intero positivo che identifica il singolo rischio. Il valore parte da 01.
-	 	\end{itemize}
- 	\newpage
-	 \subsubsection{Metriche di qualità}
+ 	
+	 \subsubsection{Metriche}
 	 Durante la realizzazione del processo verranno utilizzate le seguenti metriche di qualità sulla gestione ed il tracciamento di processi e rischi; al fine di ottenere efficacia ed efficienza.
-	 \paragraph{MP01 - Schedule Variance - SV}
-	 La Schedule Variance (SV) indica quanto si è in linea, in anticipo o in ritardo rispetto alla schedulazione delle attività di progetto pianificate. \\
-	 È un indicatore di efficacia soprattutto nei confronti del cliente.\\
-	 Il valore è espresso in percentuale, secondo la formula:
-	\begin{displaymath}
-		SV = \frac{BCWP-BCWS}{BCWP}\times100
-	\end{displaymath}
-	Dove:
-
-		\begin{itemize}
-			\item {\bfseries MP02 - BCWP}: {\itshape Budgeted Cost of Work Performed} o {\itshape
-			Earned Value}, è  il valore (in giorni o EURO) delle attività realizzate alla data corrente.\\
-			Il suo valore è una stima approssimata, secondo i seguenti procedimenti:
-			\begin{displaymath}
-				BCWP_t = \sum BCWP_s
-			\end{displaymath}
-			dove:
-			\begin{itemize}
-				\item {\bfseries $BCWP_t$}: è il BCWP totale del progetto;
-				\item {\bfseries $BCWP_s$}: è il BCWP della singola attività, secondo la formula:
-				\begin{displaymath}
-					BCWP_s = CA\times BAC
-				\end{displaymath}
-			dove:
-			\begin{itemize}
-				\item  CA: {\itshape Completamento Attività}, espresso in percentuale;
-				\item BCA: {\itshape Budget at Completion}, è il valore inizialmente previsto per la realizzazione del progetto.
-			\end{itemize}
-			\end{itemize}
-			\item {\bfseries MP03 - BCWS}: {\itshape Budgeted Cost of Work Scheduled}, è il costo pianificato (in giorni o EURO) per realizzare le attività di progetto alla data corrente. \\
-		\end{itemize}
-
-		Sul risultato:
-		\begin{itemize}
-		\item {\bfseries Positivo}: indica che si è avanti rispetto alla schedulazione;
-		\item {\bfseries Negativo}: indica che si è in ritardo rispetto alla schedulazione.\\
-		\end{itemize}
-	 \paragraph{MP04 - Cost Variance - CV}
-	 La Cost variance, indica se il valore del costo realmente maturato è maggiore, uguale o minore rispetto al costo effettivo; ovvero quanto sia il livello di efficienza del gruppo rispetto a quanto pianificato. \\
-	 Viene usato come indicatore di produttività o efficienza soprattutto nei confronti del {\itshape Management} dell'azienda. \\
-	 Il suo valore è espresso in percentuale, secondo la seguente formula:
-	 \begin{displaymath}
-	 	CV = \frac{BCWP - ACWP}{BCWP}\times100
-	 \end{displaymath}
- 		dove:
+	 
+		
+	 	\paragraph{MP01 - Schedule Variance - SV} 
+	 	\begin{itemize}
+	 		\item \textbf{Descrizione}: 
+	 			La Schedule Variance (SV) indica quanto si è in linea, in anticipo o in ritardo rispetto alla schedulazione delle attività di progetto pianificate. \\
+	 			È un indicatore di efficacia soprattutto nei confronti del cliente.\\
+	 			Il valore è espresso in percentuale, secondo la formula:
+	 			\begin{displaymath}
+	 				SV = \frac{BCWP-BCWS}{BCWP}\times100
+	 			\end{displaymath}
+	 			Dove:
+	 			\begin{itemize}
+	 				\item {\bfseries MP02 - Budgeted Cost of Work Performed - BCWP}
+	 				\begin{itemize}
+	 					\item \textbf{Descrizione}: 
+	 					è  il valore (in giorni o EURO) delle attività realizzate alla data corrente.\\
+	 					Il suo valore è una stima approssimata, secondo i seguenti procedimenti:
+	 					\begin{displaymath}
+	 						BCWP_t = \sum BCWP_s
+	 					\end{displaymath}
+	 					dove:
+	 					\begin{itemize}
+	 						\item {\bfseries $BCWP_t$}: è il BCWP totale del progetto;
+	 						\item {\bfseries $BCWP_s$}: è il BCWP della singola attività, secondo la formula:
+	 						\begin{displaymath}
+	 							BCWP_s = CA\times BAC
+	 						\end{displaymath}
+	 						dove:
+	 						\item  CA: {\itshape Completamento Attività}, espresso in percentuale;
+	 						\item BCA: {\itshape Budget at Completion}, è il valore inizialmente previsto per la realizzazione del progetto.
+	 					\end{itemize}
+	 					\item \textbf{Unità di misura}: numero; 
+	 				\end{itemize}
+	 				\item {\bfseries MP03 - Budgeted Cost of Work Scheduled - BCWS}
+	 				\begin{itemize}
+	 					\item \textbf{Descrizione}: è il costo pianificato (in giorni o EURO) per realizzare le attività di progetto alla data corrente;
+	 					\item \textbf{Unità di misura}: numero;
+	 				\end{itemize}
+	 			\end{itemize}
+	 		\item \textbf{Unità di misura}: numero;
+	 		\item \textbf{Risultato}:
+	 			\begin{itemize}
+	 				\item positivo: indica che si è avanti rispetto alla schedulazione;
+	 				\item negativo: indica che si è in ritardo rispetto alla schedulazione;
+	 				\item uguale a zero: indica che il progetto è in linea con i tempi rispetto a quanto preventivato. \\
+	 			\end{itemize} 
+	 	\end{itemize}
+ 	
+ 		\paragraph{MP04 - Cost Variance - CV}
  		\begin{itemize}
- 			\item {\bfseries MP02 - BCWP}: {\itshape Budgeted Cost of Work Performed} o {\itshape
- 				Earned Value}, è il valore (in giorni o EURO) delle attività realizzate alla data corrente;
- 			\item {\bfseries MP05 - ACWP}: {\itshape Actual Cost of Work Performed},è il costo effettivamente sostenuto (in giorni o EURO) alla data corrente.
+ 			\item \textbf{Descrizione}: 
+ 			La Cost variance, indica se il valore del costo realmente maturato è maggiore, uguale o minore rispetto al costo effettivo; ovvero quanto sia il livello di efficienza del gruppo rispetto a quanto pianificato. \\
+ 			Viene usato come indicatore di produttività o efficienza soprattutto nei confronti del {\itshape Management} dell'azienda. \\
+ 			Il suo valore è espresso in percentuale, secondo la seguente formula:
+ 			\begin{displaymath}
+ 				CV = \frac{BCWP - ACWP}{BCWP}\times100
+ 			\end{displaymath}
+ 			dove:
+ 			\begin{itemize}
+ 				\item {\bfseries MP02 - Budgeted Cost of Work Performed - BCWP}: è il valore (in giorni o EURO) delle attività realizzate alla data corrente;
+ 				\item {\bfseries MP05 - Actual Cost of Work Performed - ACWP}: è il costo effettivamente sostenuto (in giorni o EURO) alla data corrente.
+ 			\end{itemize}
+ 			La differenza tra BCWP e ACWP è che se l'attuale costo (ACWP) alla data corrente è più alto rispetto al guadagno (BCWP) alla data corrente, allora sappiamo che l'appaltatore sta attualmente superando i costi previsti nella stima al completamento, sforando il budget.
+ 			\item \textbf{Unità di misura}: numero;
+ 			\item \textbf{Risultato}:
+ 			\begin{itemize}
+ 				\item positivo: indica che il progetto viene sviluppato con un costo minore rispetto a quanto preventivato;
+ 				\item negativo:  indica che il progetto viene sviluppato con un costo maggiore rispetto a quanto preventivato;
+ 				\item uguale a zero: indica che il progetto viene sviluppato con un costo in linea rispetto a quanto preventivato. \\
+ 			\end{itemize}
  		\end{itemize}
- 		La differenza tra BCWP e ACWP è che se l'attuale costo (ACWP) alla data corrente è più alto rispetto a quello guadagnato (BCWP) alla data corrente; sappiamo che l'appaltatore sta attualmente superando i costi previsti nella stima al completamento, sforando il budget.	\\
-
- 		{\bfseries Sul risultato}:
+ 		
+ 		\paragraph{MP06 - Unbudgeted Risks - UR}
  		\begin{itemize}
- 			\item {\bfseries positivo}: indica che il progetto viene sviluppato con un costo minore rispetto a quanto preventivato;
- 			\item {\bfseries negativo}:  indica che il progetto viene sviluppato con un costo maggiore rispetto a quanto preventivato;
- 			\item {\bfseries uguale a zero}: indica che il progetto viene sviluppato con un costo in linea rispetto a quanto preventivato;\\
+ 			\item \textbf{Descrizione}: 
+ 			L'Unbudgeted Risks, indica il numero di rischi non rilevati in fase di analisi, in modo incrementale. Per ogni rischio non preventivato che viene rilevato, si incrementa di una unità (partendo dallo zero) il numero di rischi rilevati dall'inizio del progetto fino a data corrente; secondo la formula:
+ 			\begin{displaymath}
+ 				UR = UR + 1
+ 			\end{displaymath}
+ 			\item \textbf{Unità di misura}: numero intero maggiore o uguale a 0;
+ 			\item \textbf{Risultato}:
+ 			\begin{itemize}
+ 				\item maggiore di zero: sono stati trovati rischi in fase di progetto;
+ 				\item uguale a zero: non sono stati rilevati rischi in fase di progetto. \\
+ 			\end{itemize}
  		\end{itemize}
-
-	 \paragraph{MP06 - Unbudgeted Risks - UR}
-	 L'Unbudgeted Risks, indica il numero di rischi non rilevati in fase di analisi, in modo incrementale. Per ogni rischio non preventivato che viene rilevato, si incrementa di una unità (partendo dallo zero) il numero di rischi rilevati dall'inizio del progetto fino a data corrente; secondo la formula:
-	 \begin{displaymath}
-	 	UR = UR + 1
-	 \end{displaymath}
- 	{\bfseries Sul risultato}:
+ 		
+ 		\paragraph{MP07 - Defects Removal Efficiency - DRE}
+ 		\begin{itemize}
+ 			\item \textbf{Descrizione}:
+ 			La Defects Removal Efficiency è una metrica utile sia a livello di processo che di progetto. Indica la misura della capacità del team di rimuovere i difetti prima del rilascio, secondo la formula:
+ 			\begin{displaymath}
+ 				DRE = \frac{DI}{DI+DE}\times100
+ 			\end{displaymath}
+ 			dove:
+ 			\begin{itemize}
+ 				\item {\bfseries DI}: numero dei difetti interni, rilevati dai test in fase di sviluppo;
+ 				\item {\bfseries DE}: numero di difetti esterni, rilevati dal consumatore. 
+ 			\end{itemize}
+ 			\item \textbf{Unità di misura}: numero intero maggiore o uguale a 0; \\
+ 		\end{itemize}
+ 	
+ 	\subsubsection{Strumenti}
+ 	Per permettere l'attuazione delle procedure sopra citate, sono utilizzati i seguenti strumenti:
  	\begin{itemize}
- 		\item {\bfseries pari a zero}: non sono stati rilevati rischi in fase di progetto;
- 		\item {\bfseries maggiore di zero}: sono stati trovati rischi in fase di progetto.\\
+ 		\item {\bfseries \glock{Discord}}: strumento per comunicazioni e incontri interni al gruppo;
+ 		\item {\bfseries \glock{GitHub}}: strumento per il versionamento remoto dei file condivisibili a tutti i membri del gruppo;
+ 		\item {\bfseries \glock{GitKraken}}: strumento collegato alla \glock{Repository} \glock{GitHub}, per gestire in modo più semplice ed intuitivo i branch, commit e pull request;
+ 		\item {\bfseries \glock{GMail}}: servizio di posta elettronica per le comunicazioni esterne;
+ 		\item {\bfseries \glock{Issue Tracking System}}: strumento fornito da \glock{GitHub} per la gestione e il tracciamento dei compiti assegnati.
  	\end{itemize}
-	 \paragraph{MP07 - Defects Removal Efficiency - DRE}
-	 La Defects Removal Efficiency è una metrica utile sia a livello di processo che di progetto. Indica la misura della capacità del team di rimuovere i difetti prima del rilascio, secondo la formula:
-	 \begin{displaymath}
-	 DRE = \frac{DI}{DI+DE}\times100
-	 \end{displaymath}
- 	dove:
- 	\begin{itemize}
- 		\item {\bfseries DI}: numero dei difetti interni, rilevati dai test in fase di sviluppo;
- 		\item {\bfseries DE}: numero di difetti esterni, rilevati dal consumatore.\\
-
- 	\end{itemize}
-
-
-
-		 \subsubsection{Strumenti}
-		 Per permettere l'attuazione delle procedure sopra citate, sono utilizzati i seguenti strumenti:
-		 \begin{itemize}
-		 	\item {\bfseries \glock{Discord}}: strumento per comunicazioni e incontri interni al gruppo;
-		 	\item {\bfseries \glock{GitHub}}: strumento per il versionamento remoto dei file condivisibili a tutti i membri del gruppo;
-		 	\item {\bfseries \glock{GitKraken}}: strumento collegato alla \glock{Repository} \glock{GitHub}, per gestire in modo più semplice ed intuitivo i branch, commit e pull request;
-		 	\item {\bfseries \glock{GMail}}: servizio di posta elettronica per le comunicazioni esterne;
-		 	\item {\bfseries \glock{Issue Tracking System}}: strumento fornito da \glock{GitHub} per la gestione e il tracciamento dei compiti assegnati.
-		 \end{itemize}
