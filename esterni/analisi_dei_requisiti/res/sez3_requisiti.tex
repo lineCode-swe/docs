@@ -207,27 +207,15 @@ I requisiti strutturati nel seguente modo:
 	\rowcolor{lightgray}
 	\thead{Requisito} & \thead{Priorità} & \thead{Descrizione} & \thead{Fonti} \\ \endhead%
 	
-	RMC1 & Obbligatorio & Deve essere fornito un documento con i casi d'uso in formato UML & Capitolato \\
+	RMC1 & Obbligatorio & Ogni entità sviluppata facente parte del sistema dovrà essere contenuta in un container \glock{Docker} del quale andrà fornito il \glock{Dockerfile} & Capitolato \\
 	
-	RMC2 & Obbligatorio & Deve essere consegnato uno schema relativo al design della base di dati & Capitolato \\
+	RMC1.1 & Obbligatorio & Deve essere fornito un \glock{Dockerfile} con il motore di calcolo & Capitolato \\
 	
-	RMC3 & Obbligatorio & Deve essere consegnata la documentazione delle \glock{API} realizzate & Capitolato \\
+	RMC1.2 & Obbligatorio & Deve essere fornito un \glock{Dockerfile} con il visualizzatore \glock{real-time} & Capitolato \\
 	
-	RMC4 & Obbligatorio & Deve essere consegnata una lista di bug risolti durante lo sviluppo & Capitolato \\
+	RMC1.3 & Obbligatorio & Deve essere fornito un \glock{Dockerfile} per la singola unità & Capitolato \\
 	
-	RMC5 & Obbligatorio & Il codice sorgente del prodotto dovrà essere versionato con \glock{GitHub} & Capitolato \\
-	
-	RMC6 & Obbligatorio & Ogni entità sviluppata facente parte del sistema dovrà essere contenuta in un container \glock{Docker} del quale andrà fornito il \glock{Dockerfile} & Capitolato \\
-	
-	RMC6.1 & Obbligatorio & Deve essere fornito un \glock{Dockerfile} con il motore di calcolo & Capitolato \\
-	
-	RMC6.2 & Obbligatorio & Deve essere fornito un \glock{Dockerfile} con il visualizzatore \glock{real-time} & Capitolato \\
-	
-	RMC6.3 & Obbligatorio & Deve essere fornito un \glock{Dockerfile} per la singola unità & Capitolato \\
-	
-	RDC6.4 & Desiderabile & Deve essere fornito un \glock{Dockerfile} per il singolo pedone & Capitolato \\
-	
-	RMC7 & Obbligatorio & L'astrazione della mappatura dell'ambiente dovrà rispettare una struttura a griglia con divisione in celle & Capitolato \\
+	RDC1.4 & Desiderabile & Deve essere fornito un \glock{Dockerfile} per il singolo pedone & Capitolato \\
 	
 \end{longtable}
 
@@ -303,16 +291,10 @@ I requisiti strutturati nel seguente modo:
 	 RDF21.2 \\
 	 RMP2 \\
 	 RMC1 \\
-	 RMC2 \\
-	 RMC3 \\
-	 RMC4 \\
-	 RMC5 \\
-	 RMC6 \\
-	 RMC6.1 \\
-	 RMC6.2 \\
-	 RMC6.3 \\
-	 RDC6.4 \\
-	 RMC7
+	 RMC1.1 \\
+	 RMC1.2 \\
+	 RMC1.3 \\
+	 RDC1.4
 	 \tabularnewline
 	 Interno & RMF1 \\
 	 RMF1.1 \\
@@ -645,25 +627,13 @@ I requisiti strutturati nel seguente modo:
 	\tabularnewline
 	RMC1 & Capitolato
 	\tabularnewline
-	RMC2 & Capitolato
+	RMC1.1 & Capitolato
 	\tabularnewline
-	RMC3 & Capitolato
+	RMC1.2 & Capitolato
 	\tabularnewline
-	RMC4 & Capitolato
+	RMC1.3 & Capitolato
 	\tabularnewline
-	RMC5 & Capitolato
-	\tabularnewline
-	RMC6 & Capitolato
-	\tabularnewline
-	RMC6.1 & Capitolato
-	\tabularnewline
-	RMC6.2 & Capitolato
-	\tabularnewline
-	RMC6.3 & Capitolato
-	\tabularnewline
-	RDC6.4 & Capitolato
-	\tabularnewline
-	RMC7 & Capitolato
+	RDC1.4 & Capitolato
 	\tabularnewline
 	
 \end{longtable}
