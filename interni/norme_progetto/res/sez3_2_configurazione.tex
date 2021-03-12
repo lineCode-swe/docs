@@ -9,78 +9,85 @@
         \item in che parte del documento la modifica agisce.
     \end{itemize}
     Si vuole, inoltre, fare in modo che la modifica venga apportata solo se prima verificata da un verificatore di cui dovrà essere tracciata l'attività di verifica dall'ambiente di lavoro. Si vuole, infine, fare in modo che il responsabile possa monitorare l'andamento del progetto tramite sistemi di reportistica.
-
-    \subsubsection{Documentazione come software}
+    \\\\
     Per favorire la tracciabilità delle modifiche alla documentazione, quest'ultima sarà costruita in linguaggio \glock{\LaTeX} e dunque le norme applicate a questo processo concernenti il software saranno applicate in egual modo alla documentazione tranne dove specificato diversamente in modo esplicito.
 
-    \subsubsection{Strumenti di supporto}
+    \subsubsection{Attività}
+        \paragraph{Implementazione del processo}
+            \subparagraph{Scopo}
+            Definire il \glock{workflow} da eseguire e da parte di quali ruoli. Si definiscono, inoltre, eventuali convenzioni nella configurazione dei \glock{repository}.
+
+            \subparagraph{\glock{Workflow}}
+            L'amministratore configura e mantiene un \glock{DVCS} che metta a disposizione una \glock{repository} remota in cui sarà presente il software. Al fine di aggiungere una nuova modifica, sulla repository verrà effettuata una procedura ciclica ispirata al workflow \glock{feature branch} tale per cui ad ogni iterazione corrisponda l'integrazione di una nuova modifica. Ogni iterazione si compone dei seguenti passi:
+            \begin{enumerate}
+                \item il programmatore apporta la modifica in un \glock{branch} separato dal \glock{branch} principale, in modo asincrono rispetto ai colleghi; ogni \glock{commit} traccia le modifiche in modo conforme agli obiettivi;
+                \item completata la modifica, il programmatore crea una \glock{pull-request} per richiedere l'integrazione della sua modifica;
+                \item il verificatore prende in carico la \glock{pull-request} assegnandosi la card corretta nella project-board ed eseguendo l'attività di verifica della modifica proposta; il programmatore non può aggiungere \glock{commit} al proprio \glock{branch} una volta che il verificatore comunica l'inizio della sua attività (a meno di un accordo fra di essi);
+                \item nel caso in cui la modifica proposta non venga accettata, il verificatore utilizzerà il sistema di \glock{code-review} messo a disposizione dal \glock{VCS} per informare il programmatore sui cambiamenti da effettuare al fine di rendere la modifica adatta all'integrazione; il programmatore risponderà apportando i cambiamenti richiesti in un nuovo \glock{commit} sullo stesso \glock{branch};
+                \item qualora la modifica proposta sia ritenuta accettabile dal verificatore, questo effettuerà la procedura di \glock{merge} nel \glock{branch} principale ed eliminerà il \glock{branch} creato dal programmatore (entrambe le operazioni vengono tracciate dal \glock{VCS});
+                \item un'automazione (parte del sistema di Continuous Integration o \glock{CI}) specifica per il prodotto contenuto nella \glock{repository}, verrà eseguita automaticamente sul \glock{branch} principale per verificare che l'integrazione tramite \glock{merge} sia andata a buon fine, il tutto producendo opportuni report.
+            \end{enumerate}
+
+            \subparagraph{Workflow per software}
+            Specificatamente per lo sviluppo software (e ad esclusione della Technology Baseline per semplicità nell'esplorazione tecnologica), la procedura sopra enunciata viene integrata in un workflow di tipo \glock{Gitflow}:
+            \begin{enumerate}
+                \item in prossimità di una \glock{milestone}, l'amministratore crea un \glock{branch} di \glock{release} a partire dal \glock{branch} principale;
+                \item il software sul \glock{branch} di release non riceve funzionalità ulteriori ma solo \glock{bugfix} che verranno integrati anche nel \glock{branch} principale;
+                \item quando il software viene valutato come sufficientemente stabile dal responsabile, si procede al rilascio effettivo in un \glock{branch} apposito.
+            \end{enumerate}
+
+            \subparagraph{\glock{Repository} e relativa struttura}
+            Ogni repository, sulla propria \glock{root}, contiene:
+            \begin{itemize}
+                \item \verb!.gitignore!: vi sono specificati tutti i file (o tipi di file) che non devono essere tracciati dal sistema di versionamento (es. file eseguibili);
+                \item \verb!.github!: contiene file di configurazione specifici per \glock{GitHub} come le configurazioni per \glock{GitHub Action}.
+            \end{itemize}
+            Specifiche repository possiedono una struttura specifica:
+            \begin{itemize}
+                \item \textbf{docs}: Contiene la documentazione del progetto e si compone delle seguenti cartelle:
+                \begin{itemize}
+                    \item \verb!commons/!: contiene configurazioni e risorse comuni a tutti i documenti;
+                    \item \verb!esterni/!: contiene tutta la documentazione esterna;
+                    \item \verb!interni/!: contiene tutta la documentazione interna.
+                \end{itemize}
+            \end{itemize}
+
+        \paragraph{Identificazione della configurazione}
+            \subparagraph{Scopo}
+            Definire uno schema di identificazione per per i prodotti e le loro versioni.
+
+            \subparagraph{Codice di versionamento}
+            Si utilizza il seguente codice:
+            \[
+            \text{v}[\alpha].[\beta].[\gamma]
+            \]
+            \begin{itemize}
+                \item \([\alpha]\): parte da 0 e non si resetta mai;
+                \item \([\beta]\): parte da 0 e si resetta solo ad incrementi di \([\alpha]\);
+                \item \([\gamma]\): parte da 0 e si resetta solo ad incrementi di \([\alpha]\) o \([\beta]\).
+            \end{itemize}
+            Il codice assume significato diverso in caso si tratti di documentazione o software:
+            \begin{itemize}
+                \item documentazione:
+                \begin{itemize}
+                    \item \([\alpha]\): numero identificativo del rilascio del documento; viene incrementato solo dal responsabile a seguito di una approvazione quando il documento è pronto per essere rilasciato;
+                    \item \([\beta]\): avanzamento rispetto alle sezioni; viene incrementato dal verificatore quando aggiunge una nuova sezione al documento;
+                    \item \([\gamma]\): avanzamento rispetto a piccole migliorie; viene incrementato dal programmatore quando svolge piccole correzioni ortografiche o di sintassi in \LaTeX.
+                \end{itemize}
+
+                \item software:
+                \begin{itemize}
+                    \item \([\alpha]\): numero identificativo della \glock{major release}; viene incrementato solo dopo aver implementato tutti i requisiti obbligatori;
+                    \item \([\beta]\): numero identificativo della \glock{minor release}; viene incrementato solo dopo l'implementazione di uno o più requisiti;
+                    \item \([\gamma]\): numero identificativo della \glock{patch}; viene incrementato in seguito a piccole modifiche (es. risoluzione di piccoli errori).
+                \end{itemize}
+            \end{itemize}
+
+    \subsubsection{Strumenti}
     Gli strumenti utilizzati per garantire il \glock{workflow} sono:
     \begin{itemize}
         \item \textbf{\glock{git}}: come \glock{DVCS};
         \item \textbf{\glock{GitHub}}: per \glock{repository} remota, \glock{pull-request}, \glock{code-review} e \glock{CI} tramite \glock{GitHub Action};
-        \item \textbf{\glock{GitKraken}}: come client git locale utilizzato da tutti i membri del gruppo;
-        \item \textbf{\glock{Discord}}: come sistema di messaggistica e videoconferenza fra i membri del gruppo;
-        \item \textbf{\glock{Zapier}}: per implementare automazioni fra \glock{GitHub} e \glock{Discord};
+        \item \textbf{\glock{GitKraken}}: come client git locale e project-board utilizzato da tutti i membri del gruppo;
         \item \textbf{\glock{act}}: \glock{GitHub Action} in ambiente locale.
     \end{itemize}
-
-    \subsubsection{\glock{Workflow}}
-    L'amministratore configura e mantiene un \glock{DVCS} che metta a disposizione una \glock{repository} remota in cui sarà presente il software. Al fine di aggiungere una nuova modifica, sulla repository verrà effettuata una procedura ciclica ispirata al workflow \glock{feature branch} tale per cui ad ogni iterazione corrisponda l'integrazione di una nuova modifica. Ogni iterazione si compone dei seguenti passi:
-    \begin{enumerate}
-    \item il programmatore apporta la modifica in un \glock{branch} separato dal \glock{branch} principale, in modo asincrono rispetto ai colleghi; ogni \glock{commit} traccia le modifiche in modo conforme agli obiettivi;
-    \item completata la modifica, il programmatore crea una \glock{pull-request} per richiedere l'integrazione della sua modifica;
-    \item un'automazione (impostata inizialmente dall'amministratore) invia un messaggio nel sistema di messaggistica utilizzato dal gruppo di lavoro per avvisare i verificatori dell'avvenuta \glock{pull-request};
-    \item il verificatore prende in carico la \glock{pull-request} rispondendo al messaggio inviato dall'automazione ed eseguendo l'attività di verifica della modifica proposta; il programmatore non può aggiungere \glock{commit} al proprio \glock{branch} una volta che il verificatore comunica l'inizio della sua attività rispondendo al messaggio automatico (a meno di un accordo fra di essi);
-    \item nel caso in cui la modifica proposta non venga accettata, il verificatore utilizzerà il sistema di \glock{code-review} messo a disposizione dal \glock{VCS} per informare il programmatore sui cambiamenti da effettuare al fine di rendere la modifica adatta all'integrazione; il programmatore risponderà apportando i cambiamenti richiesti in un nuovo \glock{commit} sullo stesso \glock{branch};
-    \item qualora la modifica proposta sia ritenuta accettabile dal verificatore, questo effettuerà la procedura di \glock{merge} nel \glock{branch} principale ed eliminerà il \glock{branch} creato dal programmatore (entrambe le operazioni vengono tracciate dal \glock{VCS});
-    \item un'automazione, parte del sistema di Continuous Integration (o \glock{CI}), specifica per il prodotto contenuto nella \glock{repository}, verrà eseguita automaticamente sul \glock{branch} principale per verificare che l'integrazione tramite \glock{merge} sia andata a buon fine con controlli automatici e report.
-    \end{enumerate}
-		\paragraph{Workflow per software}
-		Specificatamente per lo sviluppo software, la procedura sopra enunciata viene integrata in un workflow di tipo \glock{Gitflow}:
-		\begin{enumerate}
-			\item in prossimità di una \glock{milestone}, l'amministratore crea un \glock{branch} di \glock{release} a partire dal \glock{branch} principale;
-			\item il software sul \glock{branch} di release non riceve funzionalità ulteriori ma solo \glock{bugfix} che verranno integrati anche nel \glock{branch} principale;
-			\item quando il software viene valutato come sufficientemente stabile dal responsabile, si procede al rilascio effettivo in un \glock{branch} apposito.
-		\end{enumerate}
-
-    \subsubsection{Codice di versionamento}
-    Si utilizza il seguente codice:
-    \[
-        \text{v}[\alpha].[\beta].[\gamma]
-    \]
-    \begin{itemize}
-        \item \([\alpha]\): parte da 0 e non si resetta mai;
-        \item \([\beta]\): parte da 0 e si resetta solo ad incrementi di \([\alpha]\);
-        \item \([\gamma]\): parte da 0 e si resetta solo ad incrementi di \([\alpha]\) o \([\beta]\).
-    \end{itemize}
-    Il codice assume significato diverso in caso si tratti di documentazione o software:
-    \begin{itemize}
-        \item documentazione:
-        \begin{itemize}
-            \item \([\alpha]\): numero identificativo del rilascio del documento; viene incrementato solo dal responsabile a seguito di una approvazione quando il documento è pronto per essere rilasciato;
-            \item \([\beta]\): avanzamento rispetto alle sezioni; viene incrementato dal programmatore quando aggiunge una nuova sezione al documento;
-            \item \([\gamma]\): avanzamento rispetto a piccole migliorie; viene incrementato dal programmatore quando svolge piccole correzioni ortografiche o di sintassi in \LaTeX.
-        \end{itemize}
-
-        \item software:
-        \begin{itemize}
-            \item \([\alpha]\): numero identificativo della \glock{major release}; viene incrementato solo dopo aver implementato tutti i requisiti obbligatori;
-            \item \([\beta]\): numero identificativo della \glock{minor release}; viene incrementato solo dopo l'implementazione di uno o più requisiti;
-            \item \([\gamma]\): numero identificativo della \glock{patch}; viene incrementato in seguito a piccole modifiche (es. risoluzione di piccoli errori).
-            \end{itemize}
-    \end{itemize}
-
-    \subsubsection{\glock{Repository} e relativa struttura}
-    Ogni repository, sulla propria \glock{root}, contiene:
-    \begin{itemize}
-        \item \verb!.gitignore!: vi sono specificati tutti i file (o tipi di file) che non devono essere tracciati dal sistema di versionamento (es. file eseguibili);
-        \item \verb!.github!: contiene file di configurazione specifici per \glock{GitHub} come le configurazioni per \glock{GitHub Action}.
-    \end{itemize}
-    Specifiche repository possiedono una struttura specifica:
-        \paragraph{docs}
-        Contiene la documentazione del progetto e si compone delle seguenti cartelle:
-        \begin{itemize}
-            \item \verb!commons/!: contiene configurazioni e risorse comuni a tutti i documenti;
-            \item \verb!esterni/!: contiene tutta la documentazione esterna;
-            \item \verb!interni/!: contiene tutta la documentazione interna.
-        \end{itemize}
