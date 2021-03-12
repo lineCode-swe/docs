@@ -5,8 +5,10 @@ Data la vastità del mondo della logistica, il proponente richiede che venga pre
 
 \subsection{Contesto e funzioni del prodotto}
 Il contesto scelto per questo progetto è quello del ristorante dotato di camerieri robot (da qui in poi ``unità").
+	\subsubsection{Mappatura dell'ambiente}    
+    L'ambiente in cui si muovono le unità è rappresentato da una mappatura strutturata a griglia e tale griglia viene a sua volta divisa in celle per permettere di individuare il punto in cui l'unità si trova nel locale.
     \subsubsection{Unità}
-    Le unità si trovano all'interno del ristorante rappresentato da una griglia suddivisa in celle quadrate di dimensione predefinita. Ogni unità svolge ciclicamente determinate operazioni:
+    Le unità si muovono all'interno del ristorante rappresentato dalla struttura descritta nella sezione precedente. Ogni unità svolge ciclicamente determinate operazioni:
     \begin{enumerate}
         \item l'unità si trova ferma in una base di ricarica comunicante con la cucina dove riceve il cibo da consegnare;
         \item l'operatore si autentica al sistema e inserisce, nella coda degli ordini dell'unità, tutti i \glock{POI} su cui si dovrà effettuare la consegna;
