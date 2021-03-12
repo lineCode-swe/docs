@@ -8,6 +8,8 @@
 *.lot
 *.synctex(busy)
 *.toc
+*.bbl
+*.blg
 
 ## File e cartelle risultanti dalla CI
 *.fls
