@@ -1,5 +1,4 @@
-
-La classificazione dei test è riportata alla sezione Verifica delle \dext{Norme di progetto v1.0.0}. \\
+La classificazione dei test è riportata alla sezione Verifica delle \dext{Norme di progetto v2.0.0}. \\
 
 \subsection{Tipologie di test}
 I test saranno di quattro tipologie:
@@ -12,25 +11,25 @@ I test saranno di quattro tipologie:
 
 \subsubsection{Test di sistema}
 
-	\newcommand*{\thead}[1]{\multicolumn{1}{c}{\bfseries #1}}	
+	\newcommand*{\thead}[1]{\multicolumn{1}{c}{\bfseries #1}}
 	\rowcolors{2}{gray!6}{gray!25}
 	\setlength{\tabcolsep}{10pt}
 	\begin{longtable}[h!] { c  m{12cm} c}
 		\caption{Test di Sistema} \\
 		\rowcolor{lightgray}
 		\thead{Test}  & \thead{Descrizione} & \thead{Esito} \\ \endhead%
-	
+
 		TSMF1   & La mappa deve essere disponibile per l'utente generico in sola lettura	& NI \\
-		
+
 		TSMF1.1 & L'utente generico deve poter visualizzare la legenda dei simboli utilizzati all'interno della mappa & NI \\
-		
+
 		TSFM1.2 & La mappa deve aggiornarsi periodicamente, mostrando le informazioni sul movimento delle unità che fanno parte del sistema & NI\\
-		
+
 		TSDM1.3 & La mappa deve mostrare le informazioni sui pedoni che comunicano con il sistema & NI \\
-		
+
 		TSFM1.4 & La mappa deve essere visualizzabile per ogni tipo di utente & NI\\
-		
-		
+
+
 		TSFM2   & L'utente registrato deve poter effettuare il login. All'utente viene chiesto di:
 				\begin{itemize}
 					\item accedere all'area login;
@@ -38,25 +37,25 @@ I test saranno di quattro tipologie:
 					\item inserire la password.
 				\end{itemize}
 								& NI \\
-								
+
 		TSFM2.1 & L'utente deve visualizzare un messaggio di errore nel caso in cui:
 					\begin{itemize}
 						\item viene fornito un nome utente non esistente;
 						\item viene fornita una password errata.
 					\end{itemize}
-									& NI \\		
+									& NI \\
 		TSFM3   & L'utente autenticato deve poter effettuare il logout dal sistema. L'utente può verificare che la disconnessione sia avvenuta con successo & NI \\
-		
+
 		TSFM4   & La guida utente deve essere visualizzabile dai soli utenti registrati & NI \\
-									
+
 		TSFM4.1 & La guida utente deve contenere tutte le istruzioni che un utente può svolgere all'interno del sistema & NI \\
-		
+
 		TSFM5   & L'utente autenticato deve poter visualizzare la lista delle unità attive con il proprio ID & NI \\
-		
+
 		TSFM5.1 & Ogni elemento della lista di unità fornisce un ambiente grafico per la gestione delle proprietà dell'unità selezionata & NI \\
-		
+
 		TSFO5.2 & L'utente autenticato, dentro l'ambiente grafico, deve visualizzare l'ID dell'unità selezionata & NI \\
-		
+
 		TSFM5.3 & L'utente autenticato deve poter visualizzare le seguenti informazioni dell'unità:
 					\begin{itemize}
 						\item le coordinate della posizione attuale all'interno della mappa;
@@ -64,9 +63,9 @@ I test saranno di quattro tipologie:
 						\item la velocità attuale;
 						\item la direzione del prossimo passo suggerita dal sistema;
 						\item la coda degli ordini assegnati.
-					\end{itemize}	
+					\end{itemize}
 									&NI\\
-				
+
 		TSFM5.4  & L'utente autenticato deve poter impartire i seguenti comandi all'unità:
 					\begin{itemize}
 						\item \underline{Start};
@@ -75,15 +74,15 @@ I test saranno di quattro tipologie:
 						\item \underline{Shutdown}.
 					\end{itemize}
 									& NI \\
-									
+
 		TSFM5.5  & L'utente autenticato deve poter aggiungere un nuovo ordine alla coda degli ordini assegnati all'unità & NI\\
-		
+
 		TSFM5.6  & L'utente autenticato deve poter eliminare un ordine alla coda degli ordini assegnati all'unità & NI\\
-		
+
 		TSFM6 & L'amministratore deve poter visualizzare la lista degli utenti registrati, con le seguenti informazioni:
 					\begin{itemize}
 						\item nome utente;
-						\item password.	
+						\item password.
 					\end{itemize}
 									& NI \\
 		TSFM6.1 & L'amministratore deve poter creare un nuovo utente. Il sistema richiede in input le seguenti credenziali:
@@ -93,7 +92,7 @@ I test saranno di quattro tipologie:
 						\item status.
 					\end{itemize}
 										& NI \\
-										
+
 		TSFM6.2  & L'amministratore deve poter modificare un utente registrati. Il sistema richiede in input le seguenti credenziali:
 					\begin{itemize}
 						\item nome utente;
@@ -101,60 +100,60 @@ I test saranno di quattro tipologie:
 					\end{itemize}
 											& NI \\
 		TSFM6.3 & L'amministratore deve poter eliminare un utenti registrato & NI \\
-		
+
 		TSFM6.4 & L'amministratore deve visualizzare un messaggio di errore nel caso in cui:
 						\begin{itemize}
-						\item il nome utente inserito sia già esistente; 
+						\item il nome utente inserito sia già esistente;
 						\item la password non è formattata correttamente.
 					\end{itemize}
 										& NI \\
 		TSFM7   & L'amministratore per poter modificare la mappa, deve poter inserire un file da validare & NI\\
-		
+
 		TSFM7.1 & L'amministratore deve visualizzare un messaggio di errore nel caso in cui il file non sia formattato correttamente & NI \\
-		
+
 		TSFM8   & L'amministratore deve poter visualizzare la lista delle unità registrate, con il proprio ID & NI\\
-		
-		TSFM8.1 & L'amministratore deve poter aggiungere una nuova unità alla liste delle unità registrate. Il sistema richiede in input l'ID & NI\\	
-		
+
+		TSFM8.1 & L'amministratore deve poter aggiungere una nuova unità alla liste delle unità registrate. Il sistema richiede in input l'ID & NI\\
+
 		TSFM8.2 & 	L'amministratore deve poter modificare la lista delle unità registrate. Il sistema richiede in input il rispettivo ID & NI\\
-		
+
 		TSFM8.3 & L'amministratore deve poter eliminare una unità dalla lista & NI\\
-		
+
 		TSFM8.4  & L'amministratore deve visualizzare un messaggio d'errore nel caso venga fornito un ID già esistente & NI \\
-		
+
 		TSFM9   & L'unità, dotata di sensoristica, deve comunicare al sistema la posizione relativa degli ostacoli che riescono a rilevare & NI \\
-		
+
 		TSFM10 & Il sistema deve ricevere le coordinate dall'unità sulla sua posizione attuale & NI \\
-		
+
 		TSFM11 & L'unità deve avere un percorso fornito dal sistema per raggiungere il prossimo \glock{POI} & NI \\
-		
+
 		TSFM12 & L'unità deve avere una lista di \glock{POI} da raggiungere & NI \\
-		
+
 		TSFM13  & L'utente autenticato può modificare la lista deglli ordini solo quando l'unità si trova in una base di ricarica & NI \\
-		
+
 		TSFM14  & L'unità, con coda degli ordini vuota, deve ritornare nella base di ricarica & NI \\
-		
+
 		TSFM15  & L'unità non può superare un certo limite di velocità & NI \\
-		
+
 		TSFM16 & L'unità può assumere uno dei seguenti stati:
 				\begin{itemize}
 					\item \underline{Going to X};
 					\item \underline{Stop};
 					\item \underline{Base};
 					\item \underline{Error Y}.
-				\end{itemize}		
+				\end{itemize}
 										& NI \\
-										
+
 		TSFM17  & Il sistema dispone di un algoritmo che deve:
 				\begin{itemize}
 					\item calcolare il percorso che l'unità deve percorrere per raggiungere il \glock{POI};
 					\item evitare la collisione con altre unità;
 					\item evitare la collisione con gli ostacoli.
-				\end{itemize}		
+				\end{itemize}
 										& NI \\
-		
+
 		TSFO18  & Il percorso restituito dall'algoritmo, è un percorso ottimo & NI\\
-		
+
 		TSFD19 & Il sistema riceve dal pedone le informazioni sulla sua posizione & NI\\
 
 		TSFD20  & Il sistema riconosce il pedone come un ostacolo & NI \\
@@ -166,39 +165,35 @@ I test saranno di quattro tipologie:
 						\begin{itemize}
 							\item il motore di calcolo;
 							\item il visualizzatore \glock{Real-Time}.
-						\end{itemize} 
+						\end{itemize}
 											& NI \\
 											
 		TSMC2.1 & Deve essere fornito un \glock{Dockerfile} per la singola unità & NI \\
 		
 		TSD2.2 &  Deve essere fornito un \glock{Dockerfile} per il singolo pedone & NI \\
 		\hline
-		
+
 		TSMQ1 & Il prodotto va rilasciato con la licenza \glock{open-source} più aperta possibile in base alle librerie utilizzate & NI \\
-		
-		TSMQ2 & Il prodotto deve essere conforme con quanto dichiarato nel documento \dext{ Piano di Qualifica v1.0.0} & NI \\
-		
+
+		TSMQ2 & Il prodotto deve essere conforme con quanto dichiarato nel documento \dext{ Piano di Qualifica v2.0.0} & NI \\
+
 		TSMQ3  & Devono essere realizzati test di unità e di integrazione per vericare le singole componenti del prodotto & NI \\
-		
+
 		\hline
-		
+
 		TSMP1  &  Il tempo di aggiornamento della mappatura rispetto alla posizione delle unità nell'ambiente deve essere $\geq$ 5 secondi & NI \\
-	
+
 		TSDP1.1  & Il tempo di aggiornamento della mappatura rispetto alla posizione delle unità nell'ambiente deve essere $\geq$ 2.5 secondi & NI \\
-		
+
 		TSOP1.2  &  Il tempo di aggiornamento della mappatura rispetto alla posizione delle unità nell'ambiente deve essere $\geq$ 1 secondi & NI \\
-										
-		TSMP2	& Il servizio non deve mai essere interrotto secondo una logica di \glock{zero downtime}	& NI \\\\									
+
+		TSMP2	& Il servizio non deve mai essere interrotto secondo una logica di \glock{zero downtime}	& NI \\\\
 \end{longtable}
 
 \subsubsection{Test di accettazione}
-I test di Accettazione hanno lo scopo di dimostrare che il prodotto sviluppato soddisfi i requisiti presenti nel capitolato e concordati con il proponente e, con quest'ultimo, eseguito durante il collaudo finale del prodotto. 
+I test di Accettazione hanno lo scopo di dimostrare che il prodotto sviluppato soddisfi i requisiti presenti nel capitolato e concordati con il proponente e, con quest'ultimo, eseguito durante il collaudo finale del prodotto.
 
 \subsubsection{Test di integrazione}
 Le specifiche di questi test verranno scritte successivamente rispettando il \glock{Modello a V}.
 \subsubsection{Test di Unità}
 Le specifiche di questi test verranno scritte successivamente rispettando il \glock{Modello a V}.
-
-
-
-
