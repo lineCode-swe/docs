@@ -256,7 +256,28 @@ dove Lettera può assumere i seguenti valori:
  			\end{itemize}
  		\end{itemize}
 
- 		\paragraph{MP06 - Unbudgeted Risks - UR}
+ 		\paragraph{MP06 - Budget Variance - BV}
+ 		\begin{itemize}
+ 			\item \textbf{Descrizione}:
+ 			La Budget Variance è una metrica che indica se si è speso di più o di meno rispetto a quanto previsto, alla data corrente. Segue la formula:
+ 			\begin{displaymath}
+ 				BV = {BCWS – ACWP}
+ 			\end{displaymath}
+ 			dove:
+ 			\begin{itemize}
+ 				\item {\bfseries MP03 - Budgeted Cost of Work Scheduled - BCWS}: è il costo pianificato (in giorni o EURO) per realizzare le attività di progetto alla data corrente;
+ 				\item {\bfseries MP05 - Actual Cost of Work Performed - ACWP}: è il costo effettivamente sostenuto (in giorni o EURO) alla data corrente.
+ 			\end{itemize}
+ 			\item \textbf{Unità di misura}: numero;
+ 			\item \textbf{Risultato}:
+            \begin{itemize}
+     			\item positivo: indica che il progetto sta spendendo il proprio budget con minor velocità di quanto pianificato;
+     			\item negativo: il progetto sta spendendo il proprio budget con maggior velocità di quanto pianificato;
+     			\item uguale a zero: indica che il progetto sta spendendo il proprio budget con una velocità in linea rispetto a quanto preventivato.\\
+            \end{itemize}
+ 		\end{itemize}
+
+ 		\paragraph{MP07 - Unbudgeted Risks - UR}
  		\begin{itemize}
  			\item \textbf{Descrizione}:
  			L'Unbudgeted Risks, indica il numero di rischi non rilevati in fase di analisi, in modo incrementale. Per ogni rischio non preventivato che viene rilevato, si incrementa di una unità (partendo dallo zero) il numero di rischi rilevati dall'inizio del progetto fino a data corrente; secondo la formula:
@@ -271,7 +292,7 @@ dove Lettera può assumere i seguenti valori:
  			\end{itemize}
  		\end{itemize}
 
- 		\paragraph{MP07 - Defects Removal Efficiency - DRE}
+ 		\paragraph{MP08 - Defects Removal Efficiency - DRE}
  		\begin{itemize}
  			\item \textbf{Descrizione}:
  			La Defects Removal Efficiency è una metrica utile sia a livello di processo che di progetto. Indica la misura della capacità del team di rimuovere i difetti prima del rilascio, secondo la formula:
