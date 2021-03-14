@@ -36,7 +36,7 @@
             \end{itemize}
             \item \textbf{Scenario principale:} l'utente prende visione dello stato dell'unità;
             \item \textbf{Precondizione:} l'utente accede all'ambiente dedicato alle proprietà dell'unità;
-            \item \textbf{Postcondizione:} l'utente visualizza in tempo reale le proprietà dell'unità.
+            \item \textbf{Postcondizione:} l'utente visualizza in tempo reale le caratteristiche dell'unità.
         \end{itemize}
 
         \subsubsection{UC5.2 - Visualizzazione ordini assegnati}
@@ -45,7 +45,7 @@
             \item \textbf{Descrizione:} l'utente intende visualizzare la coda degli ordini assegnati;
             \item \textbf{Scenario principale:} l'utente visualizza la coda degli ordini assegnati ovvero la lista dei \glock{POI} a cui effettuare la consegna prima di tornare alla base;
             \item \textbf{Precondizione:} l'utente accede all'ambiente dedicato alle proprietà dell'unità;
-            \item \textbf{Postcondizione:} l'utente visualizza in tempo reale le proprietà dell'unità.
+            \item \textbf{Postcondizione:} l'utente visualizza in tempo reale gli ordini assegnati all'unità.
         \end{itemize}
 
 
@@ -76,7 +76,7 @@
             \item \textbf{Descrizione:} l'utente intende impostare lo stato dell'unità in modo che consegni tutti gli ordini assegnati per poi tornare alla base;
             \item \textbf{Scenario principale:} partendo da un'unità con stato \underline{Base} o \underline{Stop}, l'utente rende \underline{Going to X} il nuovo stato dell'unità;
             \item \textbf{Precondizione:} l'utente accede all'ambiente dedicato alla gestione dell'unità;
-            \item \textbf{Postcondizione:} l'utente modifica in tempo reale lo stato dell'unità.
+            \item \textbf{Postcondizione:} l'utente modifica in tempo reale lo stato dell'unità portandolo allo stato \underline{Going to X}.
         \end{itemize}
 
         \subsubsection{UC6.2 - Comando stop}
@@ -85,7 +85,7 @@
             \item \textbf{Descrizione:} l'utente intende impostare lo stato dell'unità in modo che, pur rimanendo accesa e connessa, rimanga nella posizione attuale;
             \item \textbf{Scenario principale:} l'utente rende \underline{Stop} il nuovo stato dell'unità;
             \item \textbf{Precondizione:} l'utente accede all'ambiente dedicato alla gestione dell'unità;
-            \item \textbf{Postcondizione:} l'utente modifica in tempo reale lo stato dell'unità.
+            \item \textbf{Postcondizione:} l'utente modifica in tempo reale lo stato dell'unità portandolo allo stato \underline{Stop}.
         \end{itemize}
 
         \subsubsection{UC6.3 - Comando go back}
@@ -94,7 +94,7 @@
             \item \textbf{Descrizione:} l'utente intende impostare lo stato dell'unità in modo che, indipendentemente dalla situazione attuale della coda degli ordini, ritorni alla base;
             \item \textbf{Scenario principale:} partendo da un'unità con stato \underline{Start} o \underline{Stop}, l'utente rende \underline{Going to B} il nuovo stato dell'unità, dove B è la base;
             \item \textbf{Precondizione:} l'utente accede all'ambiente dedicato alla gestione dell'unità;
-            \item \textbf{Postcondizione:} l'utente modifica in tempo reale lo stato dell'unità.
+            \item \textbf{Postcondizione:} l'utente modifica in tempo reale lo stato dell'unità portandolo allo stato \underline{Going to B}.
         \end{itemize}
 
         \subsubsection{UC6.4 - Comando shutdown}
@@ -103,7 +103,7 @@
             \item \textbf{Descrizione:} l'utente intende spegnere l'unità attualmente connessa, in modo immediato;
             \item \textbf{Scenario principale:} Ignorando stato attuale e qualsiasi ordine ancora assegnato, l'utente spegne l'unità in modo immediato portandola in stato \underline{Disconnected};
             \item \textbf{Precondizione:} l'utente accede all'ambiente dedicato alla gestione dell'unità;
-            \item \textbf{Postcondizione:} l'utente modifica in tempo reale lo stato dell'unità.
+            \item \textbf{Postcondizione:} l'utente modifica in tempo reale lo stato dell'unità portandolo allo stato \underline{Disconnected}.
         \end{itemize}
 
         \subsubsection{UC6.5 - Assegnazione nuovo ordine}
@@ -112,7 +112,7 @@
             \item \textbf{Descrizione:} l'utente intende accodare un nuovo ordine;
             \item \textbf{Scenario principale:} l'utente assegna il nuovo ordine all'unità, ed inserisce l'identificativo del \glock{POI} da visitare per effettuare la consegna;
             \item \textbf{Precondizione:} l'utente accede all'ambiente dedicato alla gestione dell'unità;
-            \item \textbf{Postcondizione:} l'utente modifica in tempo reale la coda degli ordini.
+            \item \textbf{Postcondizione:} l'utente modifica in tempo reale la coda degli ordini aggiungendo un nuovo ordine.
         \end{itemize}
 
         \subsubsection{UC6.6 - Eliminazione ordine assegnato}
@@ -121,5 +121,5 @@
             \item \textbf{Descrizione:} l'utente intende eliminare un ordine in coda ad un'unità che si trova alla base;
             \item \textbf{Scenario principale:} l'utente elimina l'ordine dalla coda indipendentemente dalla sua posizione all'interno di essa;
             \item \textbf{Precondizione:} l'utente accede all'ambiente dedicato alla gestione dell'unità;
-            \item \textbf{Postcondizione:} l'utente modifica in tempo reale la coda degli ordini.
+            \item \textbf{Postcondizione:} l'utente modifica in tempo reale la coda degli ordini eliminando un ordine.
         \end{itemize}

@@ -19,7 +19,7 @@
 		\item \textbf{Descrizione:} l'amministratore intende aggiungere un nuovo utente, alla lista degli utenti che hanno accesso al sistema;
 		\item \textbf{Scenario principale:} l'amministratore crea un nuovo utente, inserendo le rispettive credenziali;
 		\item \textbf{Precondizione:} l'amministratore ha accesso all'elenco degli utenti esistenti;
-		\item \textbf{Postcondizione:} l'amministratore ha modificato la lista degli utenti.
+		\item \textbf{Postcondizione:} l'amministratore ha modificato la lista degli utenti creando un utente.
 		\item \textbf{Inclusione:} 
 		\begin{itemize}
 			\item \textbf{UC11:} viene eseguito l'input dei dati dell'utente.
@@ -32,7 +32,7 @@
 		\item \textbf{Descrizione:} l'amministratore intende modificare le credenziali di un utente già esistente;
 		\item \textbf{Scenario principale:} l'amministratore modifica un utente esistente, inserendo le rispettive credenziali;
 		\item \textbf{Precondizione:} l'amministratore ha accesso all'elenco degli utenti esistenti;
-		\item \textbf{Postcondizione:} l'amministratore ha modificato la lista degli utenti.
+		\item \textbf{Postcondizione:} l'amministratore ha modificato la lista degli utenti modificando un utente.
 		\item \textbf{Inclusione:} 
 		\begin{itemize}
 			\item \textbf{UC11:} viene eseguito l'input dei dati dell'utente.
@@ -45,7 +45,7 @@
 		\item \textbf{Descrizione:} l'amministratore intende eliminare un utente dalla lista degli utenti che hanno accesso al sistema;
 		\item \textbf{Scenario principale:} l'amministratore cancella l'utente interessato dalla lista degli utenti;
 		\item \textbf{Precondizione:} l'amministratore ha accesso all'elenco degli utenti esistenti;
-		\item \textbf{Postcondizione:} l'amministratore ha modificato la lista degli utenti.
+		\item \textbf{Postcondizione:} l'amministratore ha modificato la lista degli utenti rimuovendo un utente.
 	\end{itemize}
 
 \subsubsection{UC11 - Input dati utente}
@@ -73,7 +73,7 @@
 		\item \textbf{Descrizione:} l'amministratore inserisce il nome utente da assegnare all'utente interessato;
 		\item \textbf{Scenario principale:} l'amministratore esegue l'input del nome utente;
 		\item \textbf{Precondizione:} l'amministratore ha accesso all'elenco degli utenti esistenti;
-		\item \textbf{Postcondizione:} l'amministratore ha inserito i dati dell'utente interessato.
+		\item \textbf{Postcondizione:} l'amministratore ha inserito il nome utente dell'utente interessato.
 		\item \textbf{Estensione:}
 		\begin{itemize}
 			\item \textbf{UC11.4:} se si tenta di usare un nome utente già esistente, viene visualizzato un apposito messaggio di errore.
@@ -86,7 +86,7 @@
 		\item \textbf{Descrizione:} l'amministratore inserisce la password da assegnare all'utente interessato;
 		\item \textbf{Scenario principale:} l'amministratore esegue l'input della password;
 		\item \textbf{Precondizione:} l'amministratore ha accesso all'elenco degli utenti esistenti;
-		\item \textbf{Postcondizione:} l'amministratore ha inserito i dati dell'utente interessato.
+		\item \textbf{Postcondizione:} l'amministratore ha inserito la password dell'utente interessato.
 		\item \textbf{Estensione:}
 		\begin{itemize}
 			\item \textbf{U11.5:} se si tenta di creare una password che non rispetta le regole di formattazione stabilite, viene visualizzato un apposito messaggio di errore.
@@ -99,7 +99,7 @@
 	\item \textbf{Descrizione:} l'amministratore sceglie lo status da assegnare all'utente interessato;
 	\item \textbf{Scenario principale:} l'amministratore specifica, tra le opzioni disponibili, lo status da assegnare all'utente;
 	\item \textbf{Precondizione:} l'amministratore ha accesso all'elenco degli utenti esistenti;
-	\item \textbf{Postcondizione:} l'amministratore ha inserito i dati dell'utente interessato.
+	\item \textbf{Postcondizione:} l'amministratore ha inserito lo status dell'utente interessato.
 \end{itemize}
 
 \subsubsection{UC11.4 - Visualizzazione errore causa nome utente già esistente}
@@ -169,7 +169,7 @@
 		\item \textbf{Descrizione:} l'amministratore intende aggiungere una nuova unità, alla lista di quelle gestite dal sistema;
 		\item \textbf{Scenario principale:} l'amministratore aggiunge l'unità interessata alla lista di quelle già esistenti fornendo i dati opportuni;
 		\item \textbf{Precondizione:} l'amministratore ha accesso all'elenco delle unità esistenti;
-		\item \textbf{Postcondizione:} l'amministratore ha modificato la lista delle unità.
+		\item \textbf{Postcondizione:} l'amministratore ha modificato la lista delle unità inserendo un'unità.
 		\item \textbf{Inclusione:} 
 		\begin{itemize}
 			\item \textbf{UC18:} viene eseguito l'input dell'ID dell'unità.
@@ -182,7 +182,7 @@
 		\item \textbf{Descrizione:} l'amministratore intende eliminare un'unità, dalla lista di quelle gestite dal sistema;
 		\item \textbf{Scenario principale:} l'amministratore rimuove l'unità interessata dalla lista di quelle esistenti;
 		\item \textbf{Precondizione:} l'amministratore ha accesso all'elenco delle unità esistenti;
-		\item \textbf{Postcondizione:} l'amministratore ha modificato la lista delle unità.
+		\item \textbf{Postcondizione:} l'amministratore ha modificato la lista delle unità rimuovendo un'unità.
 	\end{itemize}
 
 \subsubsection{UC18 - Input ID unità}
