@@ -2,12 +2,12 @@
 I requisiti strutturati nel seguente modo:
 
 \begin{itemize}
-	
+
 	\item \textbf{codice identificativo:} i codici identificativi sono univoci e conformi alla seguente codifica:
 	\begin{center}
 		\textbf{R[Priorità]-[Categoria]-[Codice]}
 	\end{center}
-	dove: 
+	dove:
 		\begin{itemize}
 			\item \textbf{R:} requisito;
 			\item \textbf{Priorità:}
@@ -28,171 +28,168 @@ I requisiti strutturati nel seguente modo:
 	\noindent In tabella:
 	\item \textbf{Requisito:} il codice identificativo del  requisito;
 	\item \textbf{Priorità:} priorità del requisito. Informazione ridondante che però semplifica la lettura;
-	
+
 	\item \textbf{Descrizione:} breve ma completa descrizione del requisito, il meno ambigua possibile;
-	
+
 	\item \textbf{Fonti:} ogni requisito è derivato da una o più delle seguenti opzioni:
 		\begin{itemize}
 			\item \glock{capitolato}: requisito individuato in seguito all'analisi del \glock{capitolato};
 			\item \textit{interno:} requisito individuato dagli analisti e che si è ritenuto opportuno da aggiungere;
 			\item \textit{caso d'uso:} requisito derivato da uno o più casi d'uso. Viene riportato il codice univoco del caso d'uso;
-			\item \textit{verbale:} requisiti individuati durante incontri con il proponente.			
-		\end{itemize}	
+			\item \textit{verbale:} requisiti individuati durante incontri con il proponente.
+		\end{itemize}
 \end{itemize}
 
 \vspace{0.5cm}
 
 \subsection{Requisiti funzionali}
 
-	\newcommand*{\thead}[1]{\multicolumn{1}{c}{\bfseries #1}}	
+	\newcommand*{\thead}[1]{\multicolumn{1}{c}{\bfseries #1}}
 	\rowcolors{2}{gray!6}{gray!25}
 	\setlength{\tabcolsep}{10pt}
 	\begin{longtable}[h!] { c c m{8cm} c}
 		\caption{Tabella dei requisiti funzionali} \\
 		\rowcolor{lightgray}
 		\thead{Requisito} & \thead{Priorità} & \thead{Descrizione} & \thead{Fonti} \\ \endhead%
-		
+
 		RMF1 & Obbligatorio & Deve essere disponibile per l'utente generico una mappatura dell'ambiente in cui le unità operano & Interno \& UC1 \\
-		
+
 		RMF1.1 & Obbligatorio & Deve essere disponibile per l'utente generico una legenda esplicativa della simbologia utilizzata all'interno della mappatura & Interno \& UC1 \\
-		
+
 		RMF1.2 & Obbligatorio & La mappatura deve essere aggiornata periodicamente, garantendo che i dati siano coerenti con l'ambiente descritto & Interno \& UC1 \\
-		
+
 		RMF1.3 & Obbligatorio & La mappatura deve fornire informazioni sul movimento di unità facenti parte del sistema & Interno \& UC1 \\
-		
+
 		RDF1.4 & Desiderabile & La mappatura deve fornire informazioni sul movimento di pedoni presenti nell'ambiente & Interno \& UC1 \\
-		
+
 		RMF1.5 & Obbligatorio & La sezione dedicata alla mappatura deve essere sempre disponibile all'utente & Interno \& UC1 \\
-		
+
 		RMF2 & Obbligatorio & Un utente può effettuare il login & VE02.5 \& UC2 \\
-		
+
 		RMF2.1 & Obbligatorio & Per effettuare login l'utente deve inserire il suo nome utente & VE02.5 \& UC2.1 \\
-		
+
 		RMF2.2 & Obbligatorio & Per effettuare login l'utente deve inserire la sua password & VE02.5 \& UC2.2 \\
-		
+
 		RMF2.3 & Obbligatorio & Viene visualizzato un errore se viene fornito un nome utente non esistente & VE02.5 \& UC2.3 \\
-		
+
 		RMF2.4 & Obbligatorio & Viene visualizzato un errore se se viene fornita una password errata & VE02.5 \& UC2.4 \\
-		
+
 		RMF3 & Obbligatorio & Un utente autenticato può effettuare logout & VE02.5 \& UC3 \\
-		
+
 		RMF4 & Obbligatorio & Deve essere disponibile una guida utente che contiene le istruzioni operative di utilizzo per un utente autenticato & Interno \& UC4 \\
-		
+
 		RMF4.1 & Obbligatorio & La guida utente deve contenere tutte le istruzioni relative alle operazioni elementari che un utente può svolgere all'interno dell'applicativo & Interno \& UC4 \\
-		
+
 		RMF4.2 & Obbligatorio & La guida utente deve essere accessibile a tutti e soli gli utenti registrati & Interno \& UC4 \\
-		
-		RMF5 & Obbligatorio & L'utente autenticato può visualizzare e gestire la lista di unità attive & Capitolato \& UC5 \\
-		
-		RMF5.1 & Obbligatorio & Ogni elemento della lista di unità fornisce l'ID dell'unità & Interno \& UC5 \\
-		
-		RMF5.2 & Obbligatorio & Ogni elemento della lista di unità mette a disposizione un ambiente grafico dedicato per visualizzazione e gestione delle proprietà dell'unità & Interno \& UC5 \\
-		
-		ROF5.2.1 & Opzionale & Dentro all'ambiente grafico dedicato, l'utente autenticato può visualizzare il l'identificativo dell'unità & Interno \& UC5.1.1 \\
-		
-		RMF5.2.2 & Obbligatorio & L'utente autenticato può visualizzare le coordinate della posizione attuale all'interno della mappa & Interno \& UC5.1.1 \\
-		
-		RMF5.2.3 & Obbligatorio & L'utente autenticato può visualizzare lo stato dell'unità & Interno \& UC5.1.1 \\
-		
-		RMF5.2.4 & Obbligatorio & L'utente autenticato può visualizzare la velocità attuale dell'unità & Interno \& UC5.1.1 \\
-		
-		RMF5.2.5 & Obbligatorio & L'utente autenticato può visualizzare la direzione del prossimo passo suggerita dal sistema & Interno \& UC5.1.1 \\
-		
-		RMF5.2.6 & Obbligatorio & L'utente autenticato può visualizzare la coda di ordini assegnati all'unità & Interno \& UC5.1.2 \\
-		
-		RMF5.2.7 & Obbligatorio & L'utente autenticato può impartire il comando \underline{Start} all'unità & Capitolato \& UC5.2.1 \\
-		
-		RMF5.2.8 & Obbligatorio & L'utente autenticato può impartire il comando \underline{Stop} all'unità & Capitolato \& UC5.2.2 \\
-		
-		RMF5.2.9 & Obbligatorio & L'utente autenticato può impartire il comando \underline{Go Back} all'unità & Interno \& UC5.2.3 \\
-		
-		RMF5.2.10 & Obbligatorio & L'utente autenticato può impartire il comando \underline{Shutdown} all'unità & Interno \& UC5.2.4 \\
-		
-		RMF5.2.11 & Obbligatorio & L'utente autenticato può accodare un nuovo ordine alla lista degli ordini di un'unità & Capitolato \& UC5.2.5 \\
-		
-		RMF5.2.12 & Obbligatorio & L'utente autenticato può eliminare un ordine dalla lista degli ordini di un'unità qualsiasi sia la sua posizione & Capitolato \& UC5.4.6 \\
-		
-		RMF6 & Obbligatorio & L'amministratore deve poter visualizzare la lista degli utenti esistenti, e modificarla & VE02.4 \& UC6.1 \\
-		
-		RMF6.1 & Obbligatorio & L'amministratore deve poter visualizzare il nome utente di ogni utente & Interno \& UC6.1.1 \\
-		
-		RMF6.2 & Obbligatorio & L'amministratore deve poter visualizzare la password di ogni utente & Interno \& UC6.1.1 \\
-		
-		RMF6.3 & Obbligatorio & L'amministratore deve poter creare nuovi utenti & VE02.4 \& UC6.1.3 \\
-		
-		RMF6.3.1 & Obbligatorio & La creazione di un nuovo utente richiede l'input delle credenziali per il nuovo utente & VE02.4 \& UC6.1.6 \\
-		
-		RMF6.4 & Obbligatorio & L'amministratore deve poter modificare utenti esistenti & VE02.4 \& UC6.1.4 \\
-		
-		RMF6.4.1 & Obbligatorio & La modifica di un utente esistente richiede l'input delle credenziali per l'utente & VE02.4 \& UC6.1.6 \\
-		
-		RMF6.5 & Obbligatorio & L'amministratore deve poter eliminare utenti esistenti & VE02.4 \& UC6.1.5 \\
-		
-		RMF6.6 & Obbligatorio & L'input delle credenziali utente richiede un nome utente & VE02.4 \& UC6.1.7 \\
-		
-		RMF6.7 & Obbligatorio & L'input delle credenziali utente richiede una password & VE02.4 \& UC6.1.8 \\
-		
-		RMF6.8 & Obbligatorio & L'input delle credenziali utente richiede lo status & VE02.4 \& UC6.1.9 \\
-		
-		RMF6.9 & Obbligatorio & Viene visualizzato un errore se è stato fornito un nome utente già assegnato ad un utente esistente & VE02.4 \& UC6.1.10 \\
-		
-		RMF6.10 & Obbligatorio & Viene visualizzato un errore se viene fornita una password non formattata correttamente & VE02.4 \& UC6.1.11 \\
-		
-		RMF7 & Obbligatorio & L'amministratore deve poter modificare la mappa formattandola opportunamente & Capitolato \& UC6.2.2 \\
-		
-		RMF7.1 & Obbligatorio & Viene visualizzato un errore se si tenta di formattare la mappa erratamente & Capitolato \& UC6.2.3 \\
-		
-		RMF8 & Obbligatorio & L'amministratore deve poter visualizzare la lista unità gestite dal sistema, e modificarla & VE02.4 \& UC6.3 \\
-		
-		RMF8.1 & Obbligatorio & L'amministratore deve poter visualizzare l'ID di ogni unità & Interno \& UC6.3.1 \\
-		
-		RMF8.2 & Obbligatorio & L'amministratore deve poter creare nuove unità & VE02.4 \& UC6.3.3 \\
-		
-		RMF8.2.1 & Obbligatorio & La creazione di una nuova unità, da parte dell'amministratore, richiede l'input del rispettivo ID & VE02.4 \& UC6.3.6 \\
-		
-		RMF8.3 & Obbligatorio & L'amministratore deve poter modificare unità esistenti & VE02.4 \& UC6.3.4 \\
-		
-		RMF8.3.1 & Obbligatorio & La modifica di un'unità esistente, da parte dell'amministratore, richiede l'input  del rispettivo ID & VE02.4 \& UC6.3.6 \\
-		
-		RMF8.4 & Obbligatorio & L'amministratore deve poter eliminare unità esistenti & VE02.4 \& UC6.3.5 \\
-		
-		RMF8.5 & Obbligatorio & Viene visualizzato un errore se viene fornito un ID già assegnato ad un'unità esistente & VE02.4 \& UC6.3.7 \\
-		
-		RMF9 & Obbligatorio & L'unità, dotata di sensoristica, deve comunicare al sistema la posizione relativa degli ostacoli che riescono a rilevare & VE02.6 \\
-		
-		RMF10 & Obbligatorio & L'unità comunica in \glock{real-time} al sistema le proprie coordinate & Capitolato \\
-		
-		RMF11 & Obbligatorio & All'unità viene assegnato dal sistema un percorso definito per poter raggiungere il prossimo \glock{POI} & Capitolato \\
-		
-		RMF12 & Obbligatorio & L'unità dispone di una coda degli ordini con i prossimi \glock{POI} da raggiungere & Capitolato \\
-		
-		RMF13 & Obbligatorio & L'unità riceve modifiche alla coda degli ordini solo quando si trova alla base di ricarica & Interno \& UC5 \\
-		
-		RMF14 & Obbligatorio & L'unità con coda degli ordini vuota ritorna alla base & Interno \& UC5 \\
-		
-		RMF15 & Obbligatorio & L'unità dispone di una velocità massima & Capitolato \\
-		
-		RMF16 & Obbligatorio & L'unità può assumere lo stato \underline{Going to X} & Interno \& UC5 \\
-		
-		RMF17 & Obbligatorio & L'unità può assumere lo stato \underline{Stop} & Interno \& UC5 \\
-		
-		RMF18 & Obbligatorio & L'unità può assumere lo stato \underline{Base} & Interno \& UC5 \\
-		
-		RMF19 & Obbligatorio & L'unità può assumere lo stato \underline{Error Y} & Interno \& UC5 \\
-		
-		RMF20 & Obbligatorio & Il sistema dispone di un algoritmo per il calcolo del percorso che l'unità deve effettuare per raggiungere il prossimo \glock{POI} & Capitolato \\
-		
-		RMF20.1 & Obbligatorio & L'algoritmo di calcolo del percorso deve evitare la collisione delle unità con ostacoli & Capitolato \\
-		
-		RMF20.2 & Obbligatorio & L'algoritmo di calcolo del percorso deve evitare la collisione delle unità con altre unità & Capitolato \\
-		
-		ROF20.3 & Opzionale & L'algoritmo di calcolo del percorso deve restituire il percorso ottimo & Capitolato \\
-		
-		RDF21 & Desiderabile & Nella mappa sono presenti dei pedoni & Capitolato \\
-		
-		RDF21.1 & Desiderabile & Il pedone comunica in \glock{real-time} al sistema la propria posizione & VE02.8 \\
-		
-		RDF21.2 & Desiderabile & Il pedone rappresenta un ostacolo mobile per l'unità & Capitolato \\
+
+		RMF5 & Obbligatorio & L'utente autenticato può visualizzare la lista di unità attive & Capitolato \& UC5 \\
+
+		RMF5.1 & Obbligatorio & Ogni elemento della lista di unità mette a disposizione un ambiente grafico dedicato per visualizzazione delle proprietà dell'unità & Interno \& UC5 \\
+
+		ROF5.1.1 & Opzionale & Dentro all'ambiente grafico dedicato, l'utente autenticato può visualizzare il l'identificativo dell'unità & Interno \& UC5.1 \\
+
+		RMF5.1.2 & Obbligatorio & Dentro all'ambiente grafico dedicato, l'utente autenticato può visualizzare le coordinate della posizione attuale all'interno della mappa & Interno \& UC5.1 \\
+
+		RMF5.1.3 & Obbligatorio &  Dentro all'ambiente grafico dedicato, l'utente autenticato può visualizzare lo stato dell'unità & Interno \& UC5.1 \\
+
+		RMF5.1.4 & Obbligatorio &  Dentro all'ambiente grafico dedicato, l'utente autenticato può visualizzare la velocità attuale dell'unità & Interno \& UC5.1 \\
+
+		RMF5.1.5 & Obbligatorio &  Dentro all'ambiente grafico dedicato, l'utente autenticato può visualizzare la direzione del prossimo passo suggerita dal sistema & Interno \& UC5.1 \\
+
+		RMF5.1.6 & Obbligatorio &  Dentro all'ambiente grafico dedicato, l'utente autenticato può visualizzare la coda di ordini assegnati all'unità & Interno \& UC5.2 \\
+
+		RMF6 & Obbligatorio & L'utente autenticato può gestire le unità attive & Capitolato \& UC6 \\
+
+		RMF6.1 & Obbligatorio & Per ogni unità attiva il sistema mette a disposizione un ambiente grafico dedicato per la gestione di essa & Interno \& UC6 \\
+
+		RMF6.1.1 & Obbligatorio & L'utente autenticato può impartire il comando \underline{Start} all'unità & Capitolato \& UC6.1 \\
+
+		RMF6.1.2 & Obbligatorio & L'utente autenticato può impartire il comando \underline{Stop} all'unità & Capitolato \& UC6.2 \\
+
+		RMF6.1.3 & Obbligatorio & L'utente autenticato può impartire il comando \underline{Go Back} all'unità & Interno \& UC6.3 \\
+
+		RMF6.1.4 & Obbligatorio & L'utente autenticato può impartire il comando \underline{Shutdown} all'unità & Interno \& UC6.4 \\
+
+		RMF6.1.5 & Obbligatorio & L'utente autenticato può accodare un nuovo ordine alla lista degli ordini di un'unità & Capitolato \& UC6.5 \\
+
+		RMF6.1.6 & Obbligatorio & L'utente autenticato può eliminare un ordine dalla lista degli ordini di un'unità qualsiasi sia la sua posizione & Capitolato \& UC6.6 \\
+
+		RMF7 & Obbligatorio & L'amministratore deve poter visualizzare la lista degli utenti esistenti & VE02.4 \& UC7 \\
+
+		RMF7.1 & Obbligatorio & L'amministratore deve poter visualizzare il nome utente di ogni utente & Interno \& UC7 \\
+
+		RMF7.2 & Obbligatorio & L'amministratore deve poter visualizzare la password di ogni utente & Interno \& UC7 \\
+
+		RMF8 & Obbligatorio & L'amministratore deve poter creare nuovi utenti & VE02.4 \& UC8 \\
+
+		RMF9 & Obbligatorio & L'amministratore deve poter modificare utenti esistenti & VE02.4 \& UC9 \\
+
+
+		RMF10 & Obbligatorio & L'amministratore deve poter eliminare utenti esistenti & VE02.4 \& UC10 \\
+
+		RMF11 & Obbligatorio & La modifica e la creazione di un utente esistente richiede l'input delle credenziali per l'utente & VE02.4 \& UC11 \\
+
+		RMF11.1 & Obbligatorio & L'input delle credenziali utente richiede un nome utente & VE02.4 \& UC11.1 \\
+
+		RMF11.2 & Obbligatorio & L'input delle credenziali utente richiede una password & VE02.4 \& UC11.2 \\
+
+		RMF11.3 & Obbligatorio & L'input delle credenziali utente richiede lo status & VE02.4 \& UC11.3 \\
+
+		RMF11.4 & Obbligatorio & Viene visualizzato un errore se è stato fornito un nome utente già assegnato ad un utente esistente & VE02.4 \& UC11.4 \\
+
+		RMF11.5 & Obbligatorio & Viene visualizzato un errore se viene fornita una password non formattata correttamente & VE02.4 \& U11.5 \\
+
+		RMF12 & Obbligatorio & L'amministratore deve poter visualizzare la mappa formattata oppurtanamente & Capitolato \& UC12 \\
+
+		RMF13 & Obbligatorio & L'amministratore deve poter modificare la mappa formattandola opportunamente & Capitolato \& UC13 \\
+
+		RMF14 & Obbligatorio & Viene visualizzato un errore se si tenta di formattare la mappa erratamente & Capitolato \& UC14 \\
+
+		RMF15 & Obbligatorio & L'amministratore deve poter visualizzare la lista unità gestite dal sistema & VE02.4 \& UC15 \\
+
+		RMF15.1 & Obbligatorio & L'amministratore deve poter visualizzare l'ID di ogni unità & Interno \& UC15 \\
+
+		RMF16 & Obbligatorio & L'amministratore deve poter inserire nuove unità tramite l'input del rispettivo ID & VE02.4 \& UC16 \\
+
+		RMF17& Obbligatorio & L'amministratore deve poter eliminare unità esistenti & VE02.4 \& UC17 \\
+
+		RMF18 & Obbligatorio & Viene visualizzato un errore se viene fornito un ID già assegnato ad un'unità esistente & VE02.4 \& UC18 \\
+
+		RMF19 & Obbligatorio & L'unità, dotata di sensoristica, deve comunicare al sistema la posizione relativa degli ostacoli che riescono a rilevare & VE02.6 \\
+
+		RMF20 & Obbligatorio & L'unità comunica in \glock{real-time} al sistema le proprie coordinate & Capitolato \\
+
+		RMF21 & Obbligatorio & All'unità viene assegnato dal sistema un percorso definito per poter raggiungere il prossimo \glock{POI} & Capitolato \\
+
+		RMF22 & Obbligatorio & L'unità dispone di una coda degli ordini con i prossimi \glock{POI} da raggiungere & Capitolato \\
+
+		RMF23 & Obbligatorio & L'unità riceve modifiche alla coda degli ordini solo quando si trova alla base di ricarica & Interno \& UC6.5 \& UC6.6 \\
+
+		RMF24 & Obbligatorio & L'unità con coda degli ordini vuota ritorna alla base & Interno \& UC6.3 \\
+
+		RMF25 & Obbligatorio & L'unità dispone di una velocità massima & Capitolato \\
+
+		RMF26 & Obbligatorio & L'unità può assumere lo stato \underline{Going to X} & Interno \& UC6.1 \\
+
+		RMF27 & Obbligatorio & L'unità può assumere lo stato \underline{Stop} & Interno \& UC6.2 \\
+
+		RMF28 & Obbligatorio & L'unità può assumere lo stato \underline{Base} & Interno \& UC6.3 \\
+
+		RMF29 & Obbligatorio & L'unità può assumere lo stato \underline{Error Y} & Interno \& UC6.4 \\
+
+		RMF30 & Obbligatorio & Il sistema dispone di un algoritmo per il calcolo del percorso che l'unità deve effettuare per raggiungere il prossimo \glock{POI} & Capitolato \\
+
+		RMF30.1 & Obbligatorio & L'algoritmo di calcolo del percorso deve evitare la collisione delle unità con ostacoli & Capitolato \\
+
+		RMF30.2 & Obbligatorio & L'algoritmo di calcolo del percorso deve evitare la collisione delle unità con altre unità & Capitolato \\
+
+		ROF30.3 & Opzionale & L'algoritmo di calcolo del percorso deve restituire il percorso ottimo & Capitolato \\
+
+		RDF31 & Desiderabile & Nella mappa sono presenti dei pedoni & Capitolato \\
+
+		RDF31.1 & Desiderabile & Il pedone comunica in \glock{real-time} al sistema la propria posizione & VE02.8 \\
+
+		RDF31 .2 & Desiderabile & Il pedone rappresenta un ostacolo mobile per l'unità & Capitolato \\
 
 	\end{longtable}
 
@@ -206,17 +203,17 @@ I requisiti strutturati nel seguente modo:
 	\caption{Tabella dei requisiti di vincolo} \\
 	\rowcolor{lightgray}
 	\thead{Requisito} & \thead{Priorità} & \thead{Descrizione} & \thead{Fonti} \\ \endhead%
-	
+
 	RMC1 & Obbligatorio & Ogni entità sviluppata facente parte del sistema dovrà essere contenuta in un container \glock{Docker} del quale andrà fornito il \glock{Dockerfile} & Capitolato \\
-	
+
 	RMC1.1 & Obbligatorio & Deve essere fornito un \glock{Dockerfile} con il motore di calcolo & Capitolato \\
-	
+
 	RMC1.2 & Obbligatorio & Deve essere fornito un \glock{Dockerfile} con il visualizzatore \glock{real-time} & Capitolato \\
-	
+
 	RMC1.3 & Obbligatorio & Deve essere fornito un \glock{Dockerfile} per la singola unità & Capitolato \\
-	
+
 	RDC1.4 & Desiderabile & Deve essere fornito un \glock{Dockerfile} per il singolo pedone & Capitolato \\
-	
+
 \end{longtable}
 
 \newpage
@@ -229,34 +226,34 @@ I requisiti strutturati nel seguente modo:
 	\caption{Tabella dei requisiti di qualità} \\
 	\rowcolor{lightgray}
 	\thead{Requisito} & \thead{Priorità} & \thead{Descrizione} & \thead{Fonti} \\ \endhead%
-	
+
 	RMQ1 & Obbligatorio & Il prodotto va rilasciato con la licenza \glock{open-source} più aperta possibile in base alle librerie utilizzate & VE01.4 \\
-	
+
 	RMQ2 & Obbligatorio & Il prodotto deve essere conforme con quanto dichiarato nel documento \dext{Piano di Qualifica v2.0.0} e successivi aggiornamenti del medesimo & Interno \\
-	
+
 	RMQ3 & Obbligatorio & Devono essere realizzati test di unità e di integrazione per verificare le singole componenti del prodotto & Interno \\
-	
+
 \end{longtable}
 
 \vspace{3cm}
 
 \subsection{Requisiti prestazionali}
-	
+
 \rowcolors{2}{gray!6}{gray!25}
 \setlength{\tabcolsep}{10pt}
 \begin{longtable}[h!] { c c m{8.5cm} c }
 	\caption{Tabella dei requisiti prestazionali} \\
 	\rowcolor{lightgray}
 	\thead{Requisito} & \thead{Priorità} & \thead{Descrizione} & \thead{Fonti} \\ \endhead%
-	
-	RMP1 & Obbligatorio & All'interno dell'ambiente di riferimento, il tempo di aggiornamento della mappatura rispetto alla posizione delle unità nell'ambiente deve essere $\leq$ 5 secondi & Interno \& VE01.2 \\ 
-	
+
+	RMP1 & Obbligatorio & All'interno dell'ambiente di riferimento, il tempo di aggiornamento della mappatura rispetto alla posizione delle unità nell'ambiente deve essere $\leq$ 5 secondi & Interno \& VE01.2 \\
+
 	RDP1.1 & Desiderabile & All'interno dell'ambiente di riferimento, il tempo di aggiornamento della mappatura rispetto alla posizione delle unità nell'ambiente deve essere $\leq$ 2.5 secondi & Interno \& VE01.2 \\
-	
+
 	ROP1.2 & Opzionale & All'interno dell'ambiente di riferimento, il tempo di aggiornamento della mappatura rispetto alla posizione delle unità nell'ambiente deve essere $\leq$ 1 secondi & Interno \& VE01.2 \\
-	
+
 	RMP2 & Obbligatorio & Il servizio non deve mai essere interrotto secondo una logica di \glock{zero downtime} & Capitolato \\
-	
+
 \end{longtable}
 
 \newpage
@@ -271,31 +268,8 @@ I requisiti strutturati nel seguente modo:
 	\caption{Tabella di tracciamento fonte-requisiti} \\
 	\rowcolor{lightgray}
 	\thead{Fonte} & \thead{Requisiti} \\ \endhead%
-	
-	Capitolato & RMF5 \\
-	 RMF5.2.7 \\
-	 RMF5.2.8 \\
-	 RMF5.2.11 \\
-	 RMF5.2.12 \\
-	 RMF7 \\
-	 RMF7.1 \\
-	 RMF10 \\
-	 RMF11 \\
-	 RMF12 \\
-	 RMF15 \\
-	 RMF20 \\
-	 RMF20.1 \\
-	 RMF20.2 \\
-	 ROF20.3 \\
-	 RDF21 \\
-	 RDF21.2 \\
-	 RMP2 \\
-	 RMC1 \\
-	 RMC1.1 \\
-	 RMC1.2 \\
-	 RMC1.3 \\
-	 RDC1.4
-	 \tabularnewline
+
+
 	 Interno & RMF1 \\
 	 RMF1.1 \\
 	 RMF1.2 \\
@@ -307,144 +281,167 @@ I requisiti strutturati nel seguente modo:
 	 RMF4.2 \\
 	 RMF5.1 \\
 	 RMF5.2 \\
-	 ROF5.2.1 \\
-	 RMF5.2.2 \\
-	 RMF5.2.3 \\
-	 RMF5.2.4 
-	 \tabularnewline
-	 %Qua bisogna fixare 
-	 Interno & RMF5.2.5 \\ 
-	 RMF5.2.6 \\
-	 RMF5.2.9 \\
-	 RMF5.2.10 \\
+	 ROF5.1.1 \\
+	 RMF5.1.2 \\
+	 RMF5.1.3 \\
+	 RMF5.1.4 \\
+	 RMF5.1.5 \\
+	 RMF5.1.6 \\
 	 RMF6.1 \\
-	 RMF6.2 \\
-	 RMF8.1 \\
-	 RMF13 \\
-	 RMF14 \\ 
-	 RMF16 \\
-	 RMF17 \\
-	 RMF18 \\
-	 RMF19 \\
+	 RMF6.1.3 \\
+	 RMF6.1.4 \\
+	 RMF7.1 \\
+	 RMF7.2 \\
+	 RMF15.1 \\
+	 RMF23 \\
+	 RMF24 \\
+	 RMF26 \\
+	 RMF27 \\
+	 RMF28 \\
+	 RMF29 \\
 	 RMP1 \\
 	 RDP1.1 \\
 	 ROP1.2 \\
 	 RMQ2 \\
-	 RMQ3 
+	 RMQ3
+	 \tabularnewline
+	 Capitolato & RMF5 \\
+	 RMF6 \\
+	 RMF6.1.1\\
+	 RMF6.1.2 \\
+	 RMF6.1.5 \\
+	 RMF6.1.6 \\
+	 RMF12 \\
+	 RMF13 \\
+	 RMF14 \\
+	 RMF20 \\
+	 RMF21 \\
+	 RMF22 \\
+	 RMF25 \\
+	 RMF30 \\
+	 RMF30.1 \\
+	 RMF30.2 \\
+	 ROF30.3 \\
+	 RDF31\\
+	 RDF31.2 \\
+	 RMP2 \\
+	 RMC1 \\
+	 RMC1.1 \\
+	 RMC1.2 \\
+	 RMC1.3 \\
+	 RDC1.4
 	 \tabularnewline
 	 UC1 & RMF1 \\
 	 RMF1.1 \\
 	 RMF1.2 \\
 	 RMF1.3 \\
 	 RDF1.4 \\
-	 RMF1.5 
+	 RMF1.5
 	 \tabularnewline
-	 UC2 & RMF2 
+	 UC2 & RMF2
 	 \tabularnewline
 	  UC2.1 & RMF2.1
 	 \tabularnewline
-	  UC2.2 & RMF2.1 
+	  UC2.2 & RMF2.2
 	 \tabularnewline
-	  UC2.3 & RMF2.3 
+	  UC2.3 & RMF2.3
 	 \tabularnewline
-	  UC2.4 & RMF2.4 
+	  UC2.4 & RMF2.4
 	 \tabularnewline
-	  UC3 & RMF3 
+	  UC3 & RMF3
 	 \tabularnewline
 	  UC4 & RMF4\\
 	  RMF4.1 \\
 	  RMF4.2
 	 \tabularnewline
 	 UC5 & RMF5 \\
-	 RMF5.1 \\
-	 RMF5.2 \\
-	 RMF13 \\
-	 RMF14 \\
-	 RMF16 \\
-	 RMF17 \\
-	 RMF18 \\
-	 RMF19 
+	 RMF5.1
 	 \tabularnewline
-	 UC5.1 & ROF5.2.1 \\
-	 RMF5.2.2 \\
-	 RMF5.2.3 \\
-	 RMF5.2.4 \\
-	 RMF5.2.5 
+	 UC5.1 & ROF5.1.1 \\
+	 RMF5.1.2 \\
+	 RMF5.1.3 \\
+	 RMF5.1.4 \\
+	 ROF5.1.5
 	 \tabularnewline
-	 UC5.1.2 & RMF5.2.6 
+	 UC5.2 & RMF5.1.6
 	 \tabularnewline
-	 UC5.2.1 & RMF5.2.7 
+	 UC6 & RMF6 \\
+	 RMF6.1
 	 \tabularnewline
-	 UC5.2.2 & RMF5.2.8 
+	 UC6.1 & RMF6.1.1 \\
+	 RMF26
 	 \tabularnewline
-	 UC5.2.3 & RMF5.2.9 
+	 UC6.2 & RMF6.1.2 \\
+	 RMF27
 	 \tabularnewline
-	 UC5.2.4 & RMF5.2.10 
+	 UC6.3 & RMF6.1.3 \\
+	 RMF28
 	 \tabularnewline
-	 UC5.2.5 & RMF5.2.11 
+	 UC6.4 & RMF6.1.4 \\
+	 RMF29
 	 \tabularnewline
-	 UC5.4.6 & RMF5.2.12 
+	 UC6.5 & RMF6.1.5 \\
+	 RMF23
 	 \tabularnewline
-	 UC6.1 & RMF6
+	 UC6.6 & RMF6.1.6 \\
+	 RMF23
 	 \tabularnewline
-	 UC6.1.1 & RMF6.1 \\ 
-	 RMF6.2
+	 UC7 & RMF7 \\
+	 RMF7.1 \\
+	 RMF7.2
 	 \tabularnewline
-	 UC6.1.3 & RMF6.3
+	 UC8 & RMF8 \\
 	 \tabularnewline
-	 UC6.1.4 & RMF6.4
+	 UC9 & RMF9
 	 \tabularnewline
-	 UC6.1.5 & RMF6.5
+	 UC10 & RMF10
 	 \tabularnewline
-	 UC6.1.6 & RMF6.3.1 \\ 
-	 RMF6.4.1
+	 UC11 & RMF11
 	 \tabularnewline
-	 UC6.1.7 & RMF6.6
+	 UC11.1 & RMF11.1 \\
 	 \tabularnewline
-	 UC6.1.8 & RMF6.7
+	 UC11.2 & RMF11.2
 	 \tabularnewline
-	 UC6.1.9 & RMF6.8
+	 UC11.3 & RMF11.3
 	 \tabularnewline
-	 UC6.1.10 & RMF6.9
+	 UC11.4 & RMF11.4
 	 \tabularnewline
-	 UC6.1.11 & RMF6.10
+	 UC11.5 & RMF11.5
 	 \tabularnewline
-	 UC6.2.2 & RMF7
+	 UC12 & RMF12
 	 \tabularnewline
-	 UC6.2.3 & RMF7.1
+	 UC13 & RMF13
 	 \tabularnewline
-	 UC6.3 & RMF8
+	 UC14 & RMF14
 	 \tabularnewline
-	 UC6.3.1 & RMF8.1
+	 UC15 & RMF15 \\
+	 RMF15.1
 	 \tabularnewline
-	 UC6.3.3 & RMF8.2
+	 UC16 & RMF16
 	 \tabularnewline
-	 UC6.3.4 & RMF8.3
+	 UC17 & RMF17
 	 \tabularnewline
-	 UC6.3.5 & RMF8.4
-	 \tabularnewline
-	 UC6.3.6 & RMF8.2.1 \\ 
-	 RMF8.3.1 
-	 \tabularnewline
-	 UC6.3.7 & RMF8.5
+	 UC18 & RMF18
 	 \tabularnewline
 	 VE01.2 & RMP1 \\
 	 RDP1.1 \\
-	 ROP1.2 
+	 ROP1.2
 	 \tabularnewline
 	 VE01.4 & RMQ1
 	 \tabularnewline
-	 VE02.4 & RMF6\\
-	 RMF6.3 \\
-	 RMF6.3.1 \\
-	 RMF6.4 \\
-	 RMF6.4.1 \\
-	 RMF6.5 \\
-	 RMF6.6 \\
-	 RMF6.7 \\
-	 RMF6.8 \\
-	 RMF6.9 \\
-	 RMF6.10 
+	 VE02.4 & RMF7\\
+	 RMF8 \\
+	 RMF9 \\
+	 RMF10 \\
+	 RMF11.1 \\
+	 RMF11.2 \\
+	 RMF11.3 \\
+	 RMF11.4 \\
+	 RMF11.5 \\
+	 RMF15 \\
+	 RMF16 \\
+	 RMF17 \\
+	 RMF18
 	 \tabularnewline
 	 VE02.5 & RMF2 \\
 	 RMF2.1 \\
@@ -453,9 +450,11 @@ I requisiti strutturati nel seguente modo:
 	 RMF2.4 \\
 	 RMF3
 	 \tabularnewline
-	 VE02.8 & RDF21.1
+	 VE02.6 & RMF19
 	 \tabularnewline
-	
+	 VE02.8 & RDF31.1
+	 \tabularnewline
+
 \end{longtable}
 
 \newpage
@@ -468,7 +467,7 @@ I requisiti strutturati nel seguente modo:
 	\caption{Tabella di tracciamento requisito-fonti} \\
 	\rowcolor{lightgray}
 	\thead{Requisito} & \thead{Fonti} \\ \endhead%
-	
+
 	RMF1    &  Interno\\UC1
 	\tabularnewline
 	RMF1.1  & Interno \\UC1
@@ -503,113 +502,109 @@ I requisiti strutturati nel seguente modo:
 	\tabularnewline
 	RMF5.1 & Interno\\UC5
 	\tabularnewline
-	RMF5.2 & Interno\\UC5
+	ROF5.1.1 & Interno\\UC5.1
 	\tabularnewline
-	ROF5.2.1 &  Interno\\UC5.1.1
+	ROF5.1.2 &  Interno\\UC5.1
 	\tabularnewline
-	RMF5.2.2 & Interno\\UC5.1.1
+	RMF5.1.3 & Interno\\UC5.1
 	\tabularnewline
-	RMF5.2.3 & Interno\\UC5.1.1
+	RMF5.1.4 & Interno\\UC5.1
 	\tabularnewline
-	RMF5.2.4 & Interno\\UC5.1.1
+	RMF5.1.5 & Interno\\UC5.1
 	\tabularnewline
-	RMF5.2.5 & Interno\\UC5.1.1
+	RMF5.1.6 & Interno\\UC5.2
 	\tabularnewline
-	RMF5.2.6 & Interno\\UC5.1.2
+	RMF6 &  Capitolato\\UC6
 	\tabularnewline
-	RMF5.2.7 &  Capitolato\\UC5.2.1
+	RMF6.1 & Interno\\UC6
 	\tabularnewline
-	RMF5.2.8 & Capitolato\\UC5.2.2
+	RMF6.1.1 & Capitolato\\UC6.1
 	\tabularnewline
-	RMF5.2.9 & Interno\\UC5.2.3
+	RMF6.1.2 & Capitolato\\U6.2
 	\tabularnewline
-	RMF5.2.10 & Interno\\UC5.2.4
+	RMF6.1.3 & Interno\\UC6.3
 	\tabularnewline
-	RMF5.2.11 & Capitolato\\UC5.2.5
+	RMF6.1.4 & Interno\\UC6.4
 	\tabularnewline
-	RMF5.2.12 & Capitolato\\UC5.4.6
+	RMF6.1.5 & Capitolato\\UC6.5
 	\tabularnewline
-	RMF6 & VE02.4\\UC6.1
+	RMF6.1.6 & Capitolato\\UC6.6
 	\tabularnewline
-	RMF6.1 & Interno\\UC6.1.1
+	RMF7 & VE02.4\\UC7
 	\tabularnewline
-	RMF6.2 & Interno\\UC6.1.1
+	RMF7.1 & Interno\\UC7
 	\tabularnewline
-	RMF6.3 & VE02.4\\UC6.1.3
+	RMF7.2 & Interno\\UC7
 	\tabularnewline
-	RMF6.3.1 & VE02.4\\UC6.1.6
+	RMF8 & VE02.4\\UC8
 	\tabularnewline
-	RMF6.4 & VE02.4\\UC6.1.4
+	RMF9 & VE02.4\\UC9
 	\tabularnewline
-	RMF6.4.1 & VE02.4\\UC6.1.6
+	RMF10 & VE02.4\\UC10
 	\tabularnewline
-	RMF6.5 & VE02.4\\UC6.1.5
+	RMF11 & VE02.4\\UC11
 	\tabularnewline
-	RMF6.6 & VE02.4\\UC6.1.7
+	RMF11.1 & VE02.4\\UC11.1
 	\tabularnewline
-	RMF6.7 & VE02.4\\UC6.1.8
+	RMF11.2 & VE02.4\\UC11.2
 	\tabularnewline
-	RMF6.8 & VE02.4\\UC6.1.9
+	RMF11.3 & VE02.4\\UC11.3
 	\tabularnewline
-	RMF6.9 & VE02.4\\UC6.1.10
+	RMF11.4 & VE02.4\\UC11.4
 	\tabularnewline
-	RMF6.10 & VE02.4\\UC6.1.11
+	RMF11.5 & VE02.4\\UC11.5
 	\tabularnewline
-	RMF7 & Capitolato\\UC6.2.2
+	RMF12 & Capitolato\\UC12
 	\tabularnewline
-	RMF7.1 & Capitolato\\UC6.2.3
+	RMF13 & Capitolato\\UC13
 	\tabularnewline
-	RMF8 & VE02.4\\UC6.3
+	RMF14 & Capitolato\\UC14
 	\tabularnewline
-	RMF8.1  & Interno\\UC6.3.1
+	RMF15  & VE02.4\\UC15
 	\tabularnewline
-	RMF8.2 & VE02.4\\UC6.3.3
+	RMF15.1 &Interno\\UC15
 	\tabularnewline
-	RMF8.2.1  & VE02.4\\UC6.3.6
+	RMF16 & VE02.4\\UC16
 	\tabularnewline
-	RMF8.3 & VE02.4\\UC6.3.4
+	RMF17 & VE02.4 \\ UC17
 	\tabularnewline
-	RMF8.3.1 & VE02.4\\UC6.3.6
+	RMF18 & VE02.4 \\ UC18
 	\tabularnewline
-	RMF8.4 & VE02.4\\UC6.3.5
-	\tabularnewline
-	RMF8.5 & VE02.4\\UC6.3.7
-	\tabularnewline
-	RMF9 & VE02.6
-	\tabularnewline
-	RMF10 & Capitolato
-	\tabularnewline
-	RMF11 & Capitolato
-	\tabularnewline
-	RMF12 & Capitolato
-	\tabularnewline
-	RMF13 & Interno\\UC5
-	\tabularnewline
-	RMF14 & Interno\\UC5
-	\tabularnewline
-	RMF15 & Capitolato
-	\tabularnewline
-	RMF16 & Interno\\UC5
-	\tabularnewline
-	RMF17 & Interno\\UC5
-	\tabularnewline
-	RMF18 & Interno\\UC5
-	\tabularnewline
-	RMF19 & Interno\\UC5
+	RMF19 & VE02.6
 	\tabularnewline
 	RMF20 & Capitolato
 	\tabularnewline
-	RMF20.1 & Capitolato
+	RMF21 & Capitolato
 	\tabularnewline
-	RMF20.2 & Capitolato
+	RMF22 & Capitolato
 	\tabularnewline
-	ROF20.3 & Capitolato
+	RMF23 & Interno \\ UC6.5 \\ UC6.6
 	\tabularnewline
-	RDF21 & Capitolato
+	RMF24 & Interno\\ UC6.3
 	\tabularnewline
-	RDF21.1 & VE02.8
+	RMF25 & Capitolato
 	\tabularnewline
-	RDF21.2 & Capitolato
+	RMF26 & Interno\\UC6.1
+	\tabularnewline
+	RMF27 & Interno\\UC6.2
+	\tabularnewline
+	RMF28 & Interno\\UC6.3
+	\tabularnewline
+	RMF29 & Interno\\UC6.4
+	\tabularnewline
+	RMF30 & Capitolato
+	\tabularnewline
+	RMF30.1 & Capitolato
+	\tabularnewline
+	RMF30.2 & Capitolato
+	\tabularnewline
+	ROF30.3 & Capitolato
+	\tabularnewline
+	RDF31 & Capitolato
+	\tabularnewline
+	RDF31.1 & VE02.8
+	\tabularnewline
+	RDF31.2 & Capitolato
 	\tabularnewline
 	RMP1 & Interno\\VE01.2
 	\tabularnewline
@@ -635,6 +630,6 @@ I requisiti strutturati nel seguente modo:
 	\tabularnewline
 	RDC1.4 & Capitolato
 	\tabularnewline
-	
+
 \end{longtable}
 
