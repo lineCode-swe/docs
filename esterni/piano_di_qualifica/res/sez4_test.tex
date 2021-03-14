@@ -54,9 +54,9 @@ I test saranno di quattro tipologie:
 
 		TSFM5.1 & Ogni elemento della lista di unità fornisce un ambiente grafico per la gestione delle proprietà dell'unità selezionata & NI \\
 
-		TSFO5.2 & L'utente autenticato, dentro l'ambiente grafico, deve visualizzare l'ID dell'unità selezionata & NI \\
+		TSFO5.1.1 & L'utente autenticato, dentro l'ambiente grafico, deve visualizzare l'ID dell'unità selezionata & NI \\
 
-		TSFM5.3 & L'utente autenticato deve poter visualizzare le seguenti informazioni dell'unità:
+		TSFM5.1.2 & L'utente autenticato deve poter visualizzare le seguenti informazioni dell'unità:
 					\begin{itemize}
 						\item le coordinate della posizione attuale all'interno della mappa;
 						\item lo stato in cui si trova;
@@ -66,7 +66,7 @@ I test saranno di quattro tipologie:
 					\end{itemize}
 									&NI\\
 
-		TSFM5.4  & L'utente autenticato deve poter impartire i seguenti comandi all'unità:
+		TSFM6  & L'utente autenticato deve poter impartire i seguenti comandi all'unità:
 					\begin{itemize}
 						\item \underline{Start};
 						\item \underline{Stop};
@@ -75,17 +75,17 @@ I test saranno di quattro tipologie:
 					\end{itemize}
 									& NI \\
 
-		TSFM5.5  & L'utente autenticato deve poter aggiungere un nuovo ordine alla coda degli ordini assegnati all'unità & NI\\
+		TSFM6.1  & L'utente autenticato deve poter aggiungere un nuovo ordine alla coda degli ordini assegnati all'unità & NI\\
 
-		TSFM5.6  & L'utente autenticato deve poter eliminare un ordine alla coda degli ordini assegnati all'unità & NI\\
+		TSFM6.2  & L'utente autenticato deve poter eliminare un ordine alla coda degli ordini assegnati all'unità & NI\\
 
-		TSFM6 & L'amministratore deve poter visualizzare la lista degli utenti registrati, con le seguenti informazioni:
+		TSFM7 & L'amministratore deve poter visualizzare la lista degli utenti registrati, con le seguenti informazioni:
 					\begin{itemize}
 						\item nome utente;
 						\item password.
 					\end{itemize}
 									& NI \\
-		TSFM6.1 & L'amministratore deve poter creare un nuovo utente. Il sistema richiede in input le seguenti credenziali:
+		TSFM8 & L'amministratore deve poter creare un nuovo utente. Il sistema richiede in input le seguenti credenziali:
 					\begin{itemize}
 						\item nome utente;
 						\item password;
@@ -93,58 +93,55 @@ I test saranno di quattro tipologie:
 					\end{itemize}
 										& NI \\
 
-		TSFM6.2  & L'amministratore deve poter modificare un utente registrati. Il sistema richiede in input le seguenti credenziali:
+		TSFM9  & L'amministratore deve poter modificare un utente registrato. Il sistema richiede in input le seguenti credenziali:
 					\begin{itemize}
 						\item nome utente;
 						\item password.
 					\end{itemize}
 											& NI \\
-		TSFM6.3 & L'amministratore deve poter eliminare un utenti registrato & NI \\
+		TSFM10 & L'amministratore deve poter eliminare un utente registrato & NI \\
 
-		TSFM6.4 & L'amministratore deve visualizzare un messaggio di errore nel caso in cui:
+		TSFM11 & L'amministratore deve visualizzare un messaggio di errore nel caso in cui:
 						\begin{itemize}
 						\item il nome utente inserito sia già esistente;
 						\item la password non è formattata correttamente.
 					\end{itemize}
 										& NI \\
-		TSFM7   & L'amministratore per poter modificare la mappa, deve poter inserire un file da validare & NI\\
+		TSFM12   & L'amministratore deve poter visualizzare la mappa opportunamente formattata & NI\\
+		
+		TSFM13   & L'amministratore per poter modificare la mappa, deve poter inserire un file da validare & NI\\
 
-		TSFM7.1 & L'amministratore deve visualizzare un messaggio di errore nel caso in cui il file non sia formattato correttamente & NI \\
+		TSFM14 & L'amministratore deve visualizzare un messaggio di errore nel caso in cui il file non sia formattato correttamente & NI \\
 
-		TSFM8   & L'amministratore deve poter visualizzare la lista delle unità registrate, con il proprio ID & NI\\
+		TSFM15   & L'amministratore deve poter visualizzare la lista delle unità registrate, con il proprio ID & NI\\
 
-		TSFM8.1 & L'amministratore deve poter aggiungere una nuova unità alla liste delle unità registrate. Il sistema richiede in input l'ID & NI\\
+		TSFM16 & L'amministratore deve poter aggiungere una nuova unità alla liste delle unità registrate registrandone tramite input l'ID & NI\\
 
-		TSFM8.2 & 	L'amministratore deve poter modificare la lista delle unità registrate. Il sistema richiede in input il rispettivo ID & NI\\
+		TSFM16.1 & 	L'amministratore deve poter modificare la lista delle unità registrate. Il sistema richiede in input il rispettivo ID & NI\\
 
-		TSFM8.3 & L'amministratore deve poter eliminare una unità dalla lista & NI\\
+		TSFM17 & L'amministratore deve poter eliminare una unità dalla lista & NI\\
 
-		TSFM8.4  & L'amministratore deve visualizzare un messaggio d'errore nel caso venga fornito un ID già esistente & NI \\
+		TSFM18  & L'amministratore deve visualizzare un messaggio d'errore nel caso venga fornito un ID già esistente & NI \\
 
-		TSFM9   & L'unità, dotata di sensoristica, deve comunicare al sistema la posizione relativa degli ostacoli che riescono a rilevare & NI \\
+		TSFM19   & L'unità, dotata di sensoristica, deve comunicare al sistema la posizione relativa degli ostacoli che riescono a rilevare & NI \\
 
-		TSFM10 & Il sistema deve ricevere le coordinate dall'unità sulla sua posizione attuale & NI \\
+		TSFM20 & Il sistema deve ricevere le coordinate dall'unità sulla sua posizione attuale & NI \\
 
-		TSFM11 & L'unità deve avere un percorso fornito dal sistema per raggiungere il prossimo \glock{POI} & NI \\
+		TSFM21 & L'unità deve avere un percorso fornito dal sistema per raggiungere il prossimo \glock{POI} & NI \\
 
-		TSFM12 & L'unità deve avere una lista di \glock{POI} da raggiungere & NI \\
+		TSFM22 & L'unità deve avere una lista di \glock{POI} da raggiungere & NI \\
 
-		TSFM13  & L'utente autenticato può modificare la lista deglli ordini solo quando l'unità si trova in una base di ricarica & NI \\
+		TSFM23  & L'utente autenticato può modificare la lista deglli ordini solo quando l'unità si trova in una base di ricarica & NI \\
 
-		TSFM14  & L'unità, con coda degli ordini vuota, deve ritornare nella base di ricarica & NI \\
+		TSFM24  & L'unità, con coda degli ordini vuota, deve ritornare nella base di ricarica & NI \\
 
-		TSFM15  & L'unità non può superare un certo limite di velocità & NI \\
+		TSFM25  & L'unità non può superare un certo limite di velocità & NI \\
 
-		TSFM16 & L'unità può assumere uno dei seguenti stati:
-				\begin{itemize}
-					\item \underline{Going to X};
-					\item \underline{Stop};
-					\item \underline{Base};
-					\item \underline{Error Y}.
-				\end{itemize}
-										& NI \\
-
-		TSFM17  & Il sistema dispone di un algoritmo che deve:
+		TSFM26 & L'unità può assumere lo stato \underline{Going to X} & NI \\
+		TSFM27 & L'unità può assumere lo stato \underline{Stop} & NI \\
+		TSFM28 & L'unità può assumere lo stato \underline{Base} & NI \\
+		TSFM29 & L'unità può assumere lo stato \underline{Error Y} & NI \\
+		TSFM30  & Il sistema dispone di un algoritmo che deve:
 				\begin{itemize}
 					\item calcolare il percorso che l'unità deve percorrere per raggiungere il \glock{POI};
 					\item evitare la collisione con altre unità;
@@ -152,11 +149,13 @@ I test saranno di quattro tipologie:
 				\end{itemize}
 										& NI \\
 
-		TSFO18  & Il percorso restituito dall'algoritmo, è un percorso ottimo & NI\\
+		TSF30.1  & Il percorso restituito dall'algoritmo, è un percorso ottimo & NI\\
+		
+		TSFD31 & Nella mappa sono visibili i pedoni & NI \\
 
-		TSFD19 & Il sistema riceve dal pedone le informazioni sulla sua posizione & NI\\
+		TSFD31.1 & Il sistema riceve dal pedone le informazioni sulla sua posizione & NI\\
 
-		TSFD20  & Il sistema riconosce il pedone come un ostacolo & NI \\
+		TSFD31.2  & Il sistema riconosce il pedone come un ostacolo & NI \\
 		\hline
 		
 		TSMC1   & Ogni entità sviluppata facente parte del sistema dovrà essere contenuta in un container \glock{Docker} & NI \\
