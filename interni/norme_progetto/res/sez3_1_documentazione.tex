@@ -10,15 +10,25 @@
 
 	\subsubsection{Attività}
 		\paragraph{Implementazione}
-		La documentazione ufficiale del progetto è composta da 6 documenti di seguito descritti:
-		\begin{itemize}
-			\item \textbf{Analisi dei requisiti}(analisi\_dei\_requisiti\_vX.Y.Z.pdf, uso esterno): analizza ed espone i requisiti del prodotto richiesto dalla Proponente, classificandoli in \textbf{obbligatori}, \textbf{desiderabili} ed \textbf{opzionali}.
-			\item \textbf{Glossario}(glossario\_vX.Y.Z.pdf, uso esterno): un'unica raccolta dei termini presenti in tutti i documenti che potrebbero essere di difficile comprensione. È un documento esterno in quanto semplifica la lettura della documentazione relativa al progetto;
-			\item \textbf{Norme di progetto}(norme\_di\_progetto\_vX.Y.Z.pdf, uso interno): specifica tutte le norme tenute dal gruppo di lavoro per l'intero sviluppo delle attività del progetto;
-			\item \textbf{Piano di progetto}(piano\_di\_progetto\_vX.Y.Z.pdf, uso esterno): descrive le modalità con cui vengono utilizzate le risorse umane e temporali nello svolgimento del progetto;
-			\item \textbf{Piano di qualifica}(piano\_di\_qualifica\_vX.Y.Z.pdf, uso esterno): illustra le modalità di lavoro del gruppo per il raggiungimento della qualità del progetto richiesta dalla Proponente;
-			\item \textbf{Studio di fattibilità}(studio\_di\_fattibilita\_vX.Y.Z.pdf, uso interno): mette in luce tutte le caratteristiche dei vari capitolati proposti, specificando il pensiero del gruppo su ognuno di questi e focalizzando le motivazioni della scelta finale. Non essendo utile alla Proponente, è un documento interno.
-		\end{itemize}
+            \subparagraph{Documentazione ufficiale}
+    		La documentazione ufficiale del progetto è composta da 6 documenti di seguito descritti:
+    		\begin{itemize}
+    			\item \textbf{Analisi dei requisiti} (analisi\_dei\_requisiti\_vX.Y.Z.pdf, uso esterno): analizza ed espone i requisiti del prodotto richiesto dalla Proponente, classificandoli in \textbf{obbligatori}, \textbf{desiderabili} ed \textbf{opzionali}.
+    			\item \textbf{Glossario} (glossario\_vX.Y.Z.pdf, uso esterno): un'unica raccolta dei termini presenti in tutti i documenti che potrebbero essere di difficile comprensione. È un documento esterno in quanto semplifica la lettura della documentazione relativa al progetto;
+    			\item \textbf{Norme di progetto} (norme\_di\_progetto\_vX.Y.Z.pdf, uso interno): specifica tutte le norme tenute dal gruppo di lavoro per l'intero sviluppo delle attività del progetto;
+    			\item \textbf{Piano di progetto} (piano\_di\_progetto\_vX.Y.Z.pdf, uso esterno): descrive le modalità con cui vengono utilizzate le risorse umane e temporali nello svolgimento del progetto;
+    			\item \textbf{Piano di qualifica} (piano\_di\_qualifica\_vX.Y.Z.pdf, uso esterno): illustra le modalità di lavoro del gruppo per il raggiungimento della qualità del progetto richiesta dalla Proponente;
+    			\item \textbf{Studio di fattibilità} (studio\_di\_fattibilita\_vX.Y.Z.pdf, uso interno): mette in luce tutte le caratteristiche dei vari capitolati proposti, specificando il pensiero del gruppo su ognuno di questi e focalizzando le motivazioni della scelta finale. Non essendo utile alla Proponente, è un documento interno.
+    		\end{itemize}
+
+            \subparagraph{Richieste esplicite di capitolato}
+            In sede di capitolato viene reso noto ai fornitori che al termine dell'attività progettuale dovranno essere consegnati dei documenti specifici relativi a:
+            \begin{itemize}
+                \item \textbf{Casi d'uso}: raccolta dei casi d'uso con diagrammi in formato \glock{UML};
+                \item \textbf{Schema database}: schema relativo al design della base di dati utilizzata (nell'eventualità in cui essa si riveli necessaria);
+                \item \textbf{Documentazione \glock{API}}: documentazione relativa alle \glock{API} realizzate;
+                \item \textbf{Lista bug}: elenco dei bug risolti durante lo sviluppo del software.
+            \end{itemize}
 
 		\paragraph{Sviluppo}
 		Tutti i documenti ufficiali dovranno attraversare le seguenti 4 fasi:
@@ -56,7 +66,7 @@
 			\item \textbf{titoli}: solo l'iniziale in maiuscolo, tranne se sono presenti sigle particolari come nei titoli dei casi d'uso (esempio: UC2 - Login);
 			\item \textbf{date}: scritte nel formato italiano, 2 cifre per il giorno, 2 cifre per il mese e 4 cifre per l'anno separati tra di loro dal carattere "-" (GG-MM-AAAA, esempio: 19-12-2020);
 			\item \textbf{elenchi puntati e numerati}: ogni elemento termina con il ";", tranne l'ultimo, che conclude l'elenco con il ".";
-			\item \textbf{termini nel Glossario}: tutti i termini presenti nel \dext{Glossario v1.0.0} sono scritti in \textsc{maiuscoletto} e hanno a pedice una G maiuscola \glock{};
+			\item \textbf{termini nel Glossario}: tutti i termini presenti nel \dext{Glossario v2.0.0} sono scritti in \textsc{maiuscoletto} e hanno a pedice una G maiuscola \glock{};
 			\item \textbf{riferimento a documenti}: tutti i riferimenti a documenti sono scritti in \textsc{maiuscoletto} e hanno a pedice una D maiuscola \dext{};
 			\item \textbf{link a pagine internet}: sono direttamente cliccabili nel documento.
 		\end{itemize}
