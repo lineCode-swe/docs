@@ -12,6 +12,11 @@
 	\item \textbf{Postcondizione:} l'amministratore ha visionato la lista degli utenti.
 \end{itemize}
 
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=13cm]{images/uc8.png}
+	\caption{Creazione e modifica utente}
+\end{figure}
 
 \subsubsection{UC8 - Creazione utente}
 	\begin{itemize}
@@ -51,8 +56,8 @@
 \subsubsection{UC11 - Input dati utente}
 	\begin{figure}[H]
 		\centering
-		\includegraphics[width=15cm]{images/UC6.1.6.png}
-		\caption{Diagramma UC6.1.6 - Input dati utente}
+		\includegraphics[width=15cm]{images/UC11.png}
+		\caption{Diagramma UC11 - Input dati utente}
 	\end{figure}
 	\begin{itemize}
 		\item \textbf{Attori primari:} utente amministratore;
@@ -131,6 +136,11 @@
 	\end{itemize}
 
 	\subsubsection{UC13 - Modifica mappatura}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=15cm]{images/UC13.png}
+		\caption{Diagramma UC13 - Modifica mappatura}
+	\end{figure}
 	\begin{itemize}
 		\item \textbf{Attori primari:} utente amministratore;
 		\item \textbf{Descrizione:} l'amministratore applica le modifiche volute alla mappa;
@@ -139,7 +149,7 @@
 		\item \textbf{Postcondizione:} l'amministratore ha modificato la mappatura dell'ambiente.
 		\item \textbf{Estensione:}
 		\begin{itemize}
-			\item \textbf{UC11:} se si tenta di formattare la mappa erratamente, viene visualizzato un apposito messaggio di errore.
+			\item \textbf{UC14:} se si tenta di formattare la mappa erratamente, viene visualizzato un apposito messaggio di errore.
 		\end{itemize}
 	\end{itemize}
 
@@ -162,14 +172,22 @@
 	\item \textbf{Postcondizione:} l'amministratore ha visionato la lista delle unità.
 \end{itemize}
 
-
 \subsubsection{UC16 - Inserimento unità}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=15cm]{images/UC16.png}
+		\caption{UC16 - Inserimento unità}
+	\end{figure}
 	\begin{itemize}
 		\item \textbf{Attori primari:} utente amministratore;
 		\item \textbf{Descrizione:} l'amministratore intende aggiungere una nuova unità, alla lista di quelle gestite dal sistema;
-		\item \textbf{Scenario principale:} l'amministratore aggiunge l'unità interessata alla lista di quelle già esistenti fornendo i dati opportuni;
+		\item \textbf{Scenario principale:} l'amministratore aggiunge l'unità interessata alla lista di quelle già esistenti fornendo il rispettivo ID unità;
 		\item \textbf{Precondizione:} l'amministratore ha accesso all'elenco delle unità esistenti;
 		\item \textbf{Postcondizione:} l'amministratore ha modificato la lista delle unità inserendo un'unità.
+		\item \textbf{Estensione:}
+		\begin{itemize}
+			\item \textbf{UC18:} se si tenta di usare l'ID di un'unità già esistente, viene visualizzato un apposito messaggio di errore.
+		\end{itemize}
 	\end{itemize}
 
 \subsubsection{UC17 - Rimozione unità}
@@ -180,7 +198,6 @@
 		\item \textbf{Precondizione:} l'amministratore ha accesso all'elenco delle unità esistenti;
 		\item \textbf{Postcondizione:} l'amministratore ha modificato la lista delle unità rimuovendo un'unità.
 	\end{itemize}
-
 
 \subsubsection{UC18 - Visualizzazione errore causa ID unità già esistente}
 	\begin{itemize}
