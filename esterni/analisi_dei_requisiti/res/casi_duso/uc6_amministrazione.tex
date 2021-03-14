@@ -170,10 +170,6 @@
 		\item \textbf{Scenario principale:} l'amministratore aggiunge l'unità interessata alla lista di quelle già esistenti fornendo i dati opportuni;
 		\item \textbf{Precondizione:} l'amministratore ha accesso all'elenco delle unità esistenti;
 		\item \textbf{Postcondizione:} l'amministratore ha modificato la lista delle unità inserendo un'unità.
-		\item \textbf{Inclusione:} 
-		\begin{itemize}
-			\item \textbf{UC18:} viene eseguito l'input dell'ID dell'unità.
-		\end{itemize}
 	\end{itemize}
 
 \subsubsection{UC17 - Rimozione unità}
@@ -185,20 +181,8 @@
 		\item \textbf{Postcondizione:} l'amministratore ha modificato la lista delle unità rimuovendo un'unità.
 	\end{itemize}
 
-\subsubsection{UC18 - Input ID unità}
-	\begin{itemize}
-		\item \textbf{Attori primari:} utente amministratore;
-		\item \textbf{Descrizione:} l'amministratore inserisce l'ID da assegnare all'unità interessata;
-		\item \textbf{Scenario principale:} l'amministratore esegue l'input dell'ID unità;
-		\item \textbf{Precondizione:} l'amministratore sta inserendo i dati dell'unità interessata;
-		\item \textbf{Postcondizione:} l'ID dell'unità risulta inserito;
-		\item \textbf{Estensione:}
-		\begin{itemize}
-			\item \textbf{UC19:} se si tenta di usare l'ID di un'unità già esistente, viene visualizzato un apposito messaggio di errore.
-		\end{itemize}
-	\end{itemize}
 
-\subsubsection{UC19 - Visualizzazione errore causa ID unità già esistente}
+\subsubsection{UC18 - Visualizzazione errore causa ID unità già esistente}
 	\begin{itemize}
 		\item \textbf{Attori primari:} utente amministratore;
 		\item \textbf{Descrizione:} l'amministratore visualizza un errore, relativo al fatto che l'ID che si è cercato di usare è già assegnato ad un'unità esistente;
