@@ -1,0 +1,120 @@
+\documentclass[]{article}
+
+\input{../../../commons/config}
+
+\appendToGraphicsPath{../../../commons/res/}
+
+%------------------------------
+%
+% COMANDI DI CONFIGURAZIONE
+%
+%------------------------------
+
+\setTitle{Verbale riunione \#32}
+
+\setVersione{0.1.0}
+
+\setDate{03-04-2021}
+
+\setResponsabile{Alessandro Dindinelli}
+
+\setRedattori{Alessandro Dindinelli}
+
+\setVerificatori{Lucia Fenu}
+
+\setUso{Interno}
+
+\setModifiche{
+	0.1.0 & Lucia Fenu & Verificatore & 03-04-2021 & Verifica della prima stesura\\
+	0.0.0 & Alessandro Dindinelli & Redattore & 02-04-2021 & Prima stesura}
+
+\begin{document}
+
+	\input{../../../commons/template}
+
+	\newpage
+
+	%--------------------------------
+	%
+	% IL CONTENUTO INIZIA DA QUI
+	%
+	%--------------------------------
+
+		\section{Introduzione}
+		\subsection{Luogo e data dell'incontro}
+		\begin{itemize}
+			\item \textbf{Modalità}: Telematica;
+			\item \textbf{Software utilizzato}: \glock{Google Meet};
+			\item \textbf{Data}: 02 Marzo 2021;
+			\item \textbf{Ora di inizio}: 16:00;
+			\item \textbf{Ora di fine}: 17:30.
+		\end{itemize}
+
+		\subsection{Presenze}
+		\begin{itemize}
+			\item \textbf{Presenti}:
+			\begin{itemize}
+				\item Matteo Alba
+				\item Giacomo Bulbarelli
+				\item Alessandro Chimetto
+				\item Alessandro Dindinelli
+				\item Lucia Fenu
+				\item Paolo Scanferlato
+				\item Valton Tahiraj
+			\end{itemize}
+			\item \textbf{Assenti}:
+			\begin{itemize}
+				\item Nessuno
+			\end{itemize}
+		\end{itemize}
+
+
+		\subsection{Ordine del giorno}
+		\begin{enumerate}
+			\item Sincronizzazione stato lavori;
+			\item pianificazione stesura architettura componenti.
+		\end{enumerate}
+
+	\newpage
+
+	\section{Svolgimento}
+		\subsection{Sincronizzazione stato lavori}
+		I due gruppi di lavoro precedentemente formati si sono sincronizzati sullo stato dei lavori.
+		\begin{itemize}
+			\item L'implementazione del \glock{WebSocket} nel server è completata;
+			\item la stesura dell'architettura dell'interfaccia grafica procede secondo i tempi previsti.
+		\end{itemize}
+
+		\subsection{Pianificazione stesura architettura componenti}
+		Si è deciso di suddividere i lavori per procedere alla stesura del resto dell'architettura, dividendosi in quattro gruppi: due che procederanno con l'implementazione di \glock{WebSocket} in interfaccia ed unità, e due che lavoreranno alla stesura di unità ed interfaccia.
+		\\
+
+	\subsection{Riunione successiva}
+	Riunione successiva fissata in:
+	\begin{itemize}
+		\item \textbf{Data}: 06-04-2021;
+		\item \textbf{Ora}: 16:00;
+		\item \textbf{Modalità}: Telematica: \glock{Discord}.
+	\end{itemize}
+	
+
+	\newpage
+
+	\section{Tabella delle decisioni}
+
+	\begin{table} [h!]
+		\rowcolors{2}{gray!25}{gray!6}
+		\begin{center}
+			\begin{tabular} { m{2cm} m{14cm} }
+				\rowcolor{lightgray}
+				\textbf{ID} & \textbf{Decisione}\\
+				V32.1 & Matteo Alba e Lucia Fenu lavoreranno al completamento dell'architettura dell'interfaccia.\\
+				V32.2 & Alessandro Dindinelli lavorerà all'implementazione di \glock{WebSocket} nell'interfaccia.\\
+				V32.3 & Alessandro Chimetto e Paolo Scanferlato lavoreranno all'inizio di stesura dell'architettura del server.\\
+				V32.4 & Giacomo Bulbarelli e Valton Tahiraj lavoreranno all'implementazione di \glock{WebSocket} nell'unità.\\
+			\end{tabular}
+		\end{center}
+	\end{table}
+
+\end{document}
+
