@@ -12,9 +12,9 @@
 
 \setTitle{Verbale esterno \#6}
 
-\setVersione{0.0.0}
+\setVersione{0.1.0}
 
-\setDate{04-04-2021}
+\setDate{05-04-2021}
 
 \setResponsabile{Alessandro Chimetto}
 
@@ -25,7 +25,8 @@
 \setUso{Esterno}
 
 \setModifiche{
-
+	
+	0.1.0 & Lucia Fenu & Verificatore & 05-04-2021 & Verifica della prima stesura\\
 	0.0.0 & Valton Tahiraj & Amministratore & 04-04-2021 & Stesura iniziale}
 
 \begin{document}
@@ -84,15 +85,21 @@
 	\section{Svolgimento}
 
 
-	\subsection{Discussione sulla architettura}
-	Si è discusso con il proponente di una prima bozza dell'architettura del sistema. Ci si è inoltre focalizzati sul requisito di \glock{zero downtime} e si è deciso di soddisfarlo in seguito al soddisfacimento del requisiti di capitolato. 
+	\subsection{Discussione sulla architettura}	
+	Abbiamo presentato una prima bozza dell'architettura del sistema per analizzare i relativi dubbi riscontrati. \\
+	Ci si è poi focalizzato sullo \glock{zero downtime} e su quanto questo debba essere efficiente sulla base del contesto da noi selezionato. Essendo un requisito non obbligatorio, il proponente, ha consigliato una implementazione futura e che, il suo soddisfacimento per quanto piccolo esse sia; verrà comunque considerato come un plus. 
+	 
 	\subsection{Discussione rilevazione pedoni}
-	Si è discusso su quale fosse il metodo migliore per rilevare pedoni ed ostacoli nella mappa. Si è deciso che, tramite una telecamera situata nel locale, il sistema centrale fosse al corrente della posizione dei pedoni, delle singole unità e dei loro dintorni. 
-	\subsection{Discussione aggiornamenti real-time}
-	Si è deciso di utilizzare due istanze del motore di calcolo essendo in un contesto non critico. Quando si aggiorna il sistema viene aggiornato lo \glock{slave}, se non vi sono problemi si aggiorna il \glock{master}, altrimenti viene ricollegato il \glock{master} senza aggiornarlo.
+	I pedoni essendo, anch'essi un requisito non obbligatorio, la sua implementazione si può valutare successivamente. Per questo motivo, si deve partire dal fatto che il sistema a priori conosca la posizione di tutto ciò che succede all'interno della mappa e dunque, anche di tutti i pedoni. 
+	Il rilevamento dei pedoni da parte delle unità deve avvenire grazie al sistema, che comunica insieme all'uso dei sensori dell'unità, solo i pedoni a loro più prossimi.
+	\\
+	\\
+	Un esempio utile che ci è stato fornito, è l'esempio di una fila:\\
+	la fila è composta da pedoni relativamente fermi, equidistanti 1 metro (per via della pandemia). Il sistema sa che è presenta una fila in cui vi è la possibilità di far passare in mezzo ai pedoni le unità. 
 	
-
-
+	\subsection{Discussione aggiornamenti real-time}
+ 	Si è deciso di utilizzare due istanze del motore di calcolo essendo in un contesto non critico.
+ 	l'aggiunta di una terza istanza può essere inserito come requisito migliorabile, qualora il sistema evolvesse e dunque ritenersi necessario.
 	\newpage
 
 	\section{Tabella delle decisioni}
