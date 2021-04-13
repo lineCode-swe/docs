@@ -12,9 +12,9 @@
 
 \setTitle{Verbale riunione \#33}
 
-\setVersione{0.0.0}
+\setVersione{0.1.0}
 
-\setDate{04-04-2021}
+\setDate{05-04-2021}
 
 \setResponsabile{}
 
@@ -25,7 +25,7 @@
 \setUso{Interno}
 
 \setModifiche{
-
+	0.1.0 & Lucia Fenu & Verificatore & 05-04-2021 & Verifica della prima stesura\\
 	0.0.0 & Valton Tahiraj & Amministratore & 04-04-2021 & Prima stesura}
 
 \begin{document}
@@ -78,21 +78,21 @@
 
 	\section{Svolgimento}
 		\subsection{Coordinamento lavori di documentazione}
-		Durante la transizione da \glock{REST API} a \glock{Websocket} sono nati dei dubbi di tipo comportamentale del server quali:
+		Durante la transizione da \glock{REST API} a \glock{Websocket} sono nati dei dubbi di tipo comportamentale del server, quali:
 		\begin{enumerate} 
 			\item gestione della velocità delle unità;
 			\item gestione delle celle della griglia;
 			\item cambiamenti delle informazioni salvate nel server;
 			\item gestione dell'autenticazione dell'unità;
-			\item passaggio sa \glock{ws} a \glock{wss}.
+			\item passaggio da \glock{WS} a \glock{WSS}.
 		\end{enumerate}
 		In merito ai dubbi riscontrati si è deciso di:
 		\begin{enumerate}
-			\item riportare nella UI la velocità di ogni unità presente nel sistema ed essa viene autoregolata dalle singole unità;
+			\item riportare nella UI la velocità di ogni unità presente nel sistema, autoregolata dalle singole unità;
 			\item dare una dimensione relativamente piccola ad ogni cella così da aumentare la precisione della mappa e non permettere a più unità di occupare in contemporanea la stessa cella;
 			\item il server dovrà salvare per ogni unità anche la sua velocità e, per ogni cella, il verso di percorrenza e l'esistenza di una possibile base di ricarica. 
 			\item autenticare l'unità tramite \glock{UUID};
-			\item passare da \glock{ws} a \glock{wss} in quanto più sicuro.
+			\item passare da \glock{WS} a \glock{WSS} in quanto più sicuro.
 		\end{enumerate} 
 
 
