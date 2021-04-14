@@ -1,11 +1,11 @@
 \subsection{Descrizione generale}
 Durante la fase di progettazione, il gruppo lineCode ha deciso di modellare l'architettura generale in tre moduli distinti:
 \begin{itemize}
-	\item server: motore di calcolo che coordina le unità e genera le informazioni per la UI. Viene modellato seguendo la Layered Architecture.
-	\item interfaccia grafica: mostra la mappa e permette di gestire le unità. Viene modellato seguendo la MVVM.
-	\item unità: Viene modellato seguendo hexagonal architecture. 
+	\item \textbf{server}: motore di calcolo che coordina le unità e genera le informazioni per la UI. Viene modellato seguendo la \textit{layered architecture}.
+	\item \textbf{interfaccia grafica}: mostra la mappa e permette di gestire le unità e gli utenti. Viene modellato seguendo la \textit{MVVM}.
+	\item \textbf{unità}: si occupa di simulare il comportamento di un'unità all'interno dell'ambiente. Viene modellato seguendo la \textit{hexagonal architecture}. 
 \end{itemize}
-La UI e l'unità comunicano con il server tramite l'uso di WebSocket e lo scambio di messaggi JSON.
+La UI e l'unità comunicano con il server tramite l'uso di \glock{WebSocket} e lo scambio di messaggi \glock{JSON}.
 Le motivazioni principale che hanno portato alle scelta di queste tipologie di architetture sono le seguenti:
 \begin{itemize}
 	\item
