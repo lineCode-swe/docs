@@ -1,0 +1,68 @@
+\documentclass[]{article}
+
+\input{../../commons/config}
+
+\appendToGraphicsPath{../../commons/res/}
+
+
+%------------------------------
+%
+% COMANDI DI CONFIGURAZIONE
+%
+%------------------------------
+
+\setTitle{Allegato Tecnico}
+
+\setVersione{0.0.0}
+
+\setDate{13-04-2021}
+
+\setResponsabile{Lucia Fenu}
+
+\setRedattori{
+	Alessandro Dindinelli \\&
+}
+
+\setVerificatori{
+}
+
+\setUso{Esterno}
+
+\setModifiche{
+	DA TOGLIERE IF POSSIBOL :) & DA TOGLIERE IF POSSIBOL :) & DA TOGLIERE IF POSSIBOL :) & DA TOGLIERE IF POSSIBOL :) & DA TOGLIERE IF POSSIBOL :) \\
+}
+
+\begin{document}
+
+	\input{../../commons/template}
+	\newpage
+	\tableofcontents
+	\newpage
+	\listoffigures
+	\listoftables
+	\newpage
+	%--------------------------------
+	%
+	% IL CONTENUTO INIZIA DA QUI
+	%
+	%--------------------------------
+
+	\section{Introduzione}
+	\input{res/sez1_intro.tex}
+	\newpage
+
+	\section{Architettura del prodotto}
+	
+	\subsection{Architettura delle unità}
+	\input{res/sez2_arch_unità.tex}
+	\newpage
+	
+	\subsection{Architettura dell'interfaccia}
+	\input{res/sez3_arch_ui.tex}
+	\newpage
+	
+	\subsection{Architettura del server}
+	\input{res/sez4_arch_server.tex}
+	\newpage
+
+\end{document}
