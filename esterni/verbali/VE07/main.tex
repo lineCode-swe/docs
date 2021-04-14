@@ -1,0 +1,103 @@
+\documentclass[]{article}
+
+\input{../../../commons/config}
+
+\appendToGraphicsPath{../../../commons/res/}
+
+%------------------------------
+%
+% COMANDI DI CONFIGURAZIONE
+%
+%------------------------------
+
+\setTitle{Verbale esterno \#7}
+
+\setVersione{1.0.0}
+
+\setDate{13-04-2021}
+
+\setResponsabile{Alessandro Chimetto}
+
+\setRedattori{Matteo Alba}
+
+\setVerificatori{Giacomo Bulbarelli}
+
+\setUso{Esterno}
+
+\setModifiche{
+	0.0.0 & Matteo Alba & Amministratore & 13-04-2021 & Stesura iniziale}
+
+\begin{document}
+
+	\input{../../../commons/template}
+
+	\newpage
+
+	%--------------------------------
+	%
+	% IL CONTENUTO INIZIA DA QUI
+	%
+	%--------------------------------
+
+	\section{Introduzione}
+	\subsection{Luogo e data dell'incontro}
+	\begin{itemize}
+		\item \textbf{Modalità}: Telematica;
+		\item \textbf{Software utilizzato}: Google Meet;
+		\item \textbf{Data}: 12 Aprile 2021;
+		\item \textbf{Ora di inizio}: 15:00;
+		\item \textbf{Ora di fine}: 16:00.
+	\end{itemize}
+
+	\subsection{Presenze}
+	\begin{itemize}
+		\item \textbf{Presenti}:
+		\begin{itemize}
+			\item Matteo Alba			
+			\item Alessandro Chimetto
+			\item Alessandro Dindinelli
+			\item Paolo Scanferlato
+
+		\end{itemize}
+		\item \textbf{Assenti}:
+		\begin{itemize}
+			\item Valton Tahiraj
+			\item Lucia Fenu
+			\item Giacomo Bulbarelli
+
+		\end{itemize}
+		\item \textbf{Partecipanti esterni}:
+		\begin{itemize}
+			\item Alex Beggiato (referente, Sanmarco Informatica)
+		\end{itemize}
+	\end{itemize}
+
+	\subsection{Ordine del giorno}
+	\begin{enumerate}
+		\item Discussione degli ultimi dubbi prima della revisione.
+	\end{enumerate}
+	\newpage
+	\section{Svolgimento}
+
+
+	\subsection{Discussione degli ultimi dubbi prima della revisione}
+	Durante l'incontro si è parlato brevemente della UI ma ci si è maggiormente dedicati alla parte relativa all'architettura del server. In particolare il punto focale della discussione è stata la suddivisione dei layer e il passaggio dei dati da uno all'altro, affrontando il problema della legge di Demetra.
+	Il consiglio del relatore è stato quello di incapsulare la parte di anagrafica in modo tale che il passaggio dei dati sia minimale.
+	L'ultima parte dell'incontro è stata relativa alla configurazione dell'app config.
+	In generale la realizzazione dell'architettura è stata apprezzata.
+
+	\newpage
+
+	\section{Tabella delle decisioni}
+
+	\begin{table} [h!]
+		\rowcolors{2}{gray!25}{gray!6}
+		\begin{center}
+			\begin{tabular} { m{2cm} m{14cm} }
+				\rowcolor{lightgray}
+				\textbf{ID} & \textbf{Decisione}\\
+			\end{tabular}
+		\end{center}
+	\end{table}
+\end{document}
+
