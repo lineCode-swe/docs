@@ -1,0 +1,44 @@
+% Direttive per la creazione del titolo tramite comando maketitle
+\title{\huge \textsc{\phTitle{}} \\
+	\vspace{11pt} \large \textsc{\phDate{}}}
+
+\author{} % Non toccare
+\date{} % Non toccare
+
+%--------------------
+% Frontespizio
+%--------------------
+
+% Logo del gruppo
+\begin{figure}[t!]
+	\centering
+	\includegraphics[width=20em]{lclong}
+\end{figure}
+
+% Titolo / Nome
+\maketitle
+\thispagestyle{empty}
+
+% Dati specifici sul doc in forma tabulare
+\begin{table}[ht]
+	\begin{center}
+		\label{tab:Dati sul documento}
+		\begin{tabular}{r|l}
+			\multicolumn{2}{c}{ \textsc{Dati sul documento} } \\
+			\hline
+			\textbf{Versione} & \versione{} \\
+			\textbf{Uso} & \uso{}  \\
+			\textbf{Redattori} & \redattori{} \\
+			\textbf{Verificatori} & \verificatori{} \\
+			\textbf{Responsabile} & \responsabile{} \\
+			\textbf{Destinatari} & lineCode \\
+								& prof.\ Vardanega Tullio \\		
+								& prof.\ Cardin Riccardo \\
+			\ifthenelse{\equal{\uso}{Esterno}}{
+								& Sanmarco Informatica
+			}{} \\
+		\end{tabular}
+	\end{center}
+\end{table}
+
+\newpage
