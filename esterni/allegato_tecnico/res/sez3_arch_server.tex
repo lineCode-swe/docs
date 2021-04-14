@@ -21,19 +21,29 @@ Per garantire l'indipendenza dal layer sovrastante, la comunicazione verrà impl
 Per immagazzinare i dati  in uso all'applicazione, vengono utilizzate tre interfacce, per mappa, utenti ed unità, che vengono poi implementate in SQLite.
 
 \paragraph{Messages}
-Per garantire i principi \textit{separation of concerns} e \textit{layer isolation}, sono state implementate delle interfacce allo scopo di essere gli oggetti di comunicazione tra i layer stessi. \\
+Per garantire i principi \textit{separation of concerns} e \textit{layer isolation}, sono state implementate delle interfacce allo scopo di essere gli oggetti di comunicazione tra i layer stessi.
 
-% QUI POI I DIAGRAMMI VARI DI CLASSE
+% QUI I DIAGRAMMI VARI DI CLASSE
+%\begin{landscape}
+%	\begin{figure}[h!]
+%		\includegraphics[width=24cm]{images/server_classi.png}
+%		\caption{Server - Diagramma delle classi}
+%	\end{figure}
+%\end{landscape}
+
+\paragraph{Database layer}
+I dati che verranno immagazzinati nel database avranno la seguente struttura:
+% QUI immagine del db layer
 %\begin{figure}[H!]
 %	\centering
-%	\includegraphics[width=10cm]{images/server_package.png}
-%	\caption{Server - Diagramma dei package}
+%	\includegraphics[width=10cm]{images/server_dblayer.png}
+%	\caption{Server - Database layer}
 %\end{figure}
 
 \subsubsection{Diagrammi di sequenza}
 Mini descrizione dello scenario del diagramma
 %\begin{figure}[H!]
 %	\centering
-%	\includegraphics[width=10cm]{images/server_package.png}
-%	\caption{Server - Diagramma dei package}
+%	\includegraphics[width=10cm]{images/server_sequenza.png}
+%	\caption{Server - Diagramma di sequenza}
 %\end{figure}
