@@ -1,12 +1,10 @@
 Il pattern architetturale applicato alla componente server è la \textit{Layered Architecture}. \\
-Si è scelto tale pattern, sia perché lo si è ritenuto il più adatto a strutturare questo componente sia perchè, se la progettazione architetturale è stata fatta correttamente, i componenti del gruppo potranno lavorare su diversi layer autonomamente. \\
-\newline
-Di seguito viene illustrato il diagramma dei package.
-%\begin{figure}[H!]
-%	\centering
-%	\includegraphics[width=10cm]{imag/server_package.png}
-%	\caption{Server - Diagramma dei package}
-%\end{figure}
+Si è scelto tale pattern, sia perché lo si è ritenuto il più adatto a strutturare questo componente sia perchè, se la progettazione architetturale è stata fatta correttamente, i componenti del gruppo potranno lavorare su diversi layer autonomamente. Di seguito viene illustrato il diagramma dei package.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=12cm]{img/server_package.png}
+	\caption{Server - Diagramma dei package}
+\end{figure}
 
 \subsubsection{Diagrammi delle classi}
 
@@ -24,7 +22,7 @@ Per immagazzinare i dati  in uso all'applicazione, vengono utilizzate tre interf
 I dati che verranno immagazzinati nel database avranno la seguente struttura:
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=10cm]{img/server_dblayer.png}
+	\includegraphics[width=8cm]{img/server_dblayer.png}
 	\caption{Server - Database layer}
 \end{figure}
 
