@@ -7,12 +7,3 @@ Durante la fase di progettazione, il gruppo \textit{lineCode} ha deciso di model
 	\item \textbf{sensori}: si occupa di simulare il comportamento dei sensori delle unità all'interno dell'ambiente. Non viene modellato secondo una architettura specifica poiché triviale.
 \end{itemize}
 La UI e l'unità comunicano con il server tramite l'uso di \glock{WebSocket} e lo scambio di messaggi \glock{JSON}. Il server, quindi, conoscendo la posizione di tutte le unità e ostacoli, genera il percorso migliore e lo comunica alle unità richiedenti e aggiorna la mappa informando l'interfaccia grafica.\\
-Di seguito rappresentiamo la struttura del prodotto in un diagramma con notazione non standard che ha il solo scopo di dare un'idea di tale struttura.
-
-\vspace{2cm}
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=18cm]{img/arch_generale.png}
-	\caption{Architettura generale}
-\end{figure}
