@@ -1,5 +1,6 @@
 Il pattern architetturale applicato alla componente server è la \textit{Layered Architecture}. \\
-Si è scelto tale pattern in quanto la componente server risulta troppo complessa per essere destrutturata dovendo gestire i servizi di: anagrafica unità, anagrafica utente, gestione mappa, calcolo percorsi unità e gestione delle interfacce grafiche. Garantendo, poi, il principio di \glock{Separation of Concerns} tipico di tale architettura, diverse squadre potranno lavorare su diversi layer autonomamente.\\
+Si è scelto tale pattern in quanto la componente server risulta troppo complessa per essere destrutturata dovendo gestire i servizi di: anagrafica unità, anagrafica utente, gestione mappa, calcolo percorsi unità e gestione delle interfacce grafiche.\\
+Inoltre, garantendo il principio di \glock{Separation of Concerns} tipico di tale architettura, diverse squadre potranno lavorare su diversi layer autonomamente.
 Di seguito viene illustrato il diagramma dei package. Si noti che le dipendenze procedono in un'unica direzione senza creare cicli. Si noti, inoltre, che il sistema dipende dalla classe \textbf{Position} in ogni suo punto in quanto, trattando problematiche legate al movimento di un'unità in una griglia, avere un tipo di dato che rappresenti due coordinate cartesiane risulta particolarmente utile.
 
 \begin{figure}[H]
@@ -21,15 +22,14 @@ Ogni messaggio viene riferito tramite la propria interfaccia in modo da slegare 
 \begin{landscape}
     \begin{figure}[H]
         \centering
-        \includegraphics[width=24cm]{img/server_from_to_ui.png}
+        \includegraphics[width=23cm]{img/server_from_to_ui.png}
         \caption{Server - Messaggi da e per l'interfaccia}
     \end{figure}
 \end{landscape}
-
 \begin{landscape}
     \begin{figure}[H]
         \centering
-        \includegraphics[width=24cm]{img/server_from_to_unit.png}
+        \includegraphics[width=22cm]{img/server_from_to_unit.png}
         \caption{Server - Messaggi da e per l'unità}
     \end{figure}
 \end{landscape}
@@ -94,7 +94,7 @@ Per garantire le migliori performance al sistema e vista la quantità non eccess
 \end{itemize}
 
 \subsubsection{Diagrammi di sequenza}
-Il seguente diagramma rappresenta il caso in cui l'interfaccia grafica invii al server una lista di \glock{POI}, che l'unità deve raggiungere.
+Il seguente diagramma rappresenta il caso in cui l'interfaccia grafica invii al server una lista di \glock{POI}, che l'unità deve raggiungere.\\
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=16cm]{img/server_seq1.png}
