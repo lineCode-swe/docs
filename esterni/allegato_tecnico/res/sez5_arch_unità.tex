@@ -1,8 +1,9 @@
-La componente relativa all'unita viene sviluppata utilizzando il run-time \glock{Node.js} ed i \glock{WebSocket} per la comunicazione con le componenti del server e dei sensori.
-La scelta architetturale per questa componente è ricaduta sulla \textit{Hexagonal Architecture}. \\
-I motivi riconducibili alla suddetta scelta sono da riscontrarsi nel tipo di sviluppo che si è deciso di seguire: in un primo momento si sono definite le logiche interne della componente, che risultano essere molto semplici e non richiedono l'utilizzo di librerie esterne. Successivamente si è passati a definire tutte le possibili informazioni che la componente può voler scambiare con le altre e, sulla base di questa modellazione si sono definite le interfacce \textit{UseCase} e le loro implementazioni \textit{Service}. In particolare, questo risultava coerente con il modello di sviluppo che sottende il pattern architetturale: definire la Business logic non curandosi di come le informazioni verranno scambiate tra le componenti, e poi utilizzare la stessa per gestire i flussi di informazioni modellandoli a partire dagli \textit{UseCase} proposti (nel nostro caso, gli \textit{UseCase} collimano con i messaggi che l'unità invia e riceve).
-È inoltre prevista, similmente a quanto accade per la parte relativa alla UI, una gerarchia di interfacce e classi che si occupano di modellare tutti i possibili messaggi che l'unità può voler scambiare con le altre componenti, in modo da controllare in maniera più pulita il messaggio di informazioni tra i layer interni. \\
-Per simulare la rilevazione di ostacoli da parte delle unità si utilizzerà il componente Sensors. Essendo di dimensioni minime, non è stato seguito un particolare design pattern.
+La componente relativa all'unità viene sviluppata utilizzando il run-time \glock{Node.JS} e i \glock{WebSocket} per la comunicazione con le componenti del server e dei sensori, mentre per lo strato di persistenza si é deciso di fare utilizzo del database \glock{MongoDB}.
+La scelta architetturale per questa componente é ricaduta sulla \textit{Hexagonal Architecture}.
+I motivi riconducibili alla suddetta scelta sono da riscontrarsi nella natura semplicistica del servizio che la componente mette a disposizione. Le logiche di business si occupano unicamente di controllare che i dati ricevuti (già validati nel formato) vengano esaminati e processati per poi essere salvati sul persistence layer.
+Il punto fondamentale é che, oltre ai controller, anche la classe \textit{UnitEngine} si occupa di scrivere e leggere dati dallo strato di persistenza, in modo da emulare l'evolvere degli stati mano a mano che l'unità avanza lungo il percorso e/o incontra ostacoli.
+É inoltre prevista, similmente a quanto accade per la parte relativa alla UI, una gerarchia di interfacce e classi che si occupano di modellare tutti i possibili messaggi che l'unità può voler scambiare con le altre componenti, in modo da controllare in maniera più pulita il passaggio di informazioni.
+Per quanto concerne i sensori, invece, essi non sono dotati di una reale architettura, data la trivialità del loro scopo e del modo in cui il componente opera per raggiungerlo.
 
 \begin{figure}[H]
 	\centering
@@ -14,10 +15,18 @@ Di seguito si illustrano i diagrammi delle classi dell'architettura dell'unità,
 
 \begin{landscape}
 	\begin{figure}[h!]
-		\includegraphics[width=25.5cm]{img/unit_architettura.png}
+		\includegraphics[width=25.5cm]{img/unit_architettura1.png}
 		\caption{Unità - Diagramma delle classi}
 	\end{figure}
 \end{landscape}
+
+\begin{landscape}
+	\begin{figure}[h!]
+		\includegraphics[width=25.5cm]{img/unit_architettura2.png}
+		\caption{Unità - Diagramma delle classi}
+	\end{figure}
+\end{landscape}
+
 
 \begin{landscape}
     \begin{figure}[H]
