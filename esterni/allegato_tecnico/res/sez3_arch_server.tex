@@ -15,7 +15,7 @@ Di seguito viene illustrato il diagramma dei package. Si noti che le dipendenze 
 \end{figure}
 
 \subsubsection{Messages}
-Per garantire il principio \glock{Separation of Concerns}, è stato stabilito un formato standard di messaggi da e per UI e unità. Tali messaggi sono rappresentati come classi \glock{Java} e verranno scambiati con le altre componenti del prodotto in seguito alla loro serializzazione e deserializzazione in formato \glock{JSON} e oltre che venire scambiati internamente fra i vari layer in modo da garantire totale indipendenza dall'implementazione dei layer adiacenti.\\
+È stato stabilito un formato standard di messaggi da e per UI e unità. Tali messaggi sono rappresentati come classi \glock{Java} e verranno scambiati con le altre componenti del prodotto in seguito alla loro serializzazione e deserializzazione in formato \glock{JSON}.\\
 Ogni messaggio viene riferito tramite la propria interfaccia in modo da slegare il sistema dall'implementazione di tali messaggi.
 
 \begin{landscape}
@@ -35,14 +35,13 @@ Ogni messaggio viene riferito tramite la propria interfaccia in modo da slegare 
 \end{landscape}
 
 \subsubsection{API layer}
-Qui troviamo i metodi che permettono la gestione della connessione alle altre componenti del sistema, e quindi anche l'invio e la ricezione di messaggi mediante opportune serializzazioni e deserializzazioni.
+Qui troviamo i metodi che permettono la gestione della connessione alle altre componenti del sistema, e quindi anche l'invio e la ricezione di messaggi mediante opportune serializzazioni e deserializzazioni. Il tutto viene gestito dallo standard JRS 356 per i \glock{WebSocket} e da \glock{Jackson} per la (de)serializzazione.
 
 \subsubsection{Business layer}
-Qui troviamo la logica per l'elaborazione dei dati in entrata ed uscita dal server.\\
-Le informazioni scendono in questo layer tramite chiamata a funzione da parte dell'API layer su opportune interfacce. I prodotti dell'elaborazione vengono riportati nel layer superiore tramite oggetto ritornato dai metodi oppure, quando l'oggetto chiamante non è lo stesso che deve ricevere quanto ritornato, tramite l'emessione di opportuni segnali che verranno intercettati dal layer sovrastante secondo una logica \glock{signal/slot} simile alla libreria grafica \glock{Qt}. Lo slot viene consegnato tramite chiamata a funzione dall'API layer alla costruzione di un oggetto Endpoint in modo che possa avvenire la connessione fra segnale e slot. In tal modo viene messo in atto un sistema di scambio dei messaggi dal basso verso l'alto mantenendo la direzione delle dipendenze in senso contrario.
+Qui troviamo la logica per l'elaborazione dei dati. Le informazioni scendono in questo layer tramite chiamata a funzione da parte dell'API layer su opportune interfacce. I prodotti dell'elaborazione vengono riportati nel layer superiore tramite oggetto ritornato dai metodi oppure, quando l'oggetto chiamante non è lo stesso che deve ricevere quanto ritornato, tramite l'emissione di opportuni segnali che verranno intercettati dal layer sovrastante secondo una logica \glock{signal/slot} simile alla libreria grafica \glock{Qt} fornita dalla libreria \glock{Sig4j}. Lo slot viene consegnato tramite chiamata a funzione dall'API layer alla costruzione dell'istanza Endpoint in modo che possa avvenire la connessione fra segnale e slot. In tal modo viene messo in atto un sistema di scambio dei messaggi "dal basso verso l'alto" mantenendo la direzione delle dipendenze in senso contrario.
 
 \subsubsection{Persistence layer}
-Per immagazzinare i dati in uso all'applicazione, vengono utilizzate tre interfacce: anagrafica utenti ed anagrafica unità vengono implementate in \glock{SQLite}, mentre la struttura della mappa viene salvata in un file testuale opportunamente formattato.
+Qui troviamo le classi che permettono al Business layer di relazionarsi con il database indipendentemente dall'implementazione dello stesso grazie all'uso di opportune interfacce.
 
 \begin{landscape}
     \begin{figure}[h!]
@@ -52,12 +51,47 @@ Per immagazzinare i dati in uso all'applicazione, vengono utilizzate tre interfa
 \end{landscape}
 
 \subsubsection{Database layer}
-I dati che vengono immagazzinati nei file \glock{SQLite} possiedono la seguente struttura:
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=10cm]{img/server_dblayer.png}
-	\caption{Server - Database layer}
-\end{figure}
+Per garantire le migliori performance al sistema e vista la quantità non eccessiva di dati, si è scelto \glock{Redis} come database essendo esso \glock{in-memory}. Non esistono diagrammi standard per rappresentarne la struttura dunque verranno di seguito elencate le strutture dati utilizzate:
+\begin{itemize}
+    \item SET con id delle unità (key = unit);
+    \item HASH con dati e anagrafica delle unità (key = unit:[id\_unit]); campi dati:
+    \begin{itemize}
+        \item name;
+        \item base\_x;
+        \item base\_y;
+        \item position\_x;
+        \item position\_y;
+        \item status;
+        \item error;
+        \item speed;
+    \end{itemize}
+    \item LIST con coordinata x poi da raggiungere per una specifica unità (key = poi\_x:[id\_unit]);
+    \item LIST con coordinata y poi da raggiungere per una specifica unità (key = poi\_y:[id\_unit]);
+    \item SET con username degli user (key = user);
+    \item HASH con anagrafica degli user (key = user:[username]); campi dati:
+    \begin{itemize}
+        \item password;
+        \item admin;
+    \end{itemize}
+    \item STRING con lunghezza tabella, asse x (key = length);
+    \item STRING con altezza tabella, asse y (key = height);
+    \item HASH con dati delle celle della mappa (key = cell:[coord\_x]:[coord\_y]); campi dati:
+    \begin{itemize}
+        \item position\_x;
+        \item position\_y;
+        \item locked;
+        \item poi;
+        \item base;
+        \item direction;
+    \end{itemize}
+    \item SET con id intero incrementale degli ostacoli (key = obs);
+    \item HASH con posizione dell’ostacolo e timestamp di rilevamento (key = obs:[obs\_id]); campi dati:
+    \begin{itemize}
+        \item position\_x;
+        \item position\_y;
+        \item timestamp.
+    \end{itemize}
+\end{itemize}
 
 \subsubsection{Diagrammi di sequenza}
 Il seguente diagramma rappresenta il caso in cui l'interfaccia grafica invii al server una lista di \glock{POI}, che l'unità deve raggiungere.

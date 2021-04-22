@@ -6,4 +6,4 @@ Durante la fase di progettazione, il gruppo \textit{lineCode} ha deciso di model
 	\item \textbf{unità}: si occupa di simulare il comportamento di un'unità all'interno dell'ambiente. Viene modellato seguendo la \textit{hexagonal architecture};
 	\item \textbf{sensori}: si occupa di simulare il comportamento dei sensori delle unità all'interno dell'ambiente. Non viene modellato secondo una architettura specifica poiché triviale.
 \end{itemize}
-La UI e l'unità comunicano con il server tramite l'uso di \glock{WebSocket} e lo scambio di messaggi \glock{JSON}. Il server, quindi, conoscendo la posizione di tutte le unità e ostacoli, genera il percorso migliore e lo comunica alle unità richiedenti e aggiorna la mappa informando l'interfaccia grafica.\\
+La UI e l'unità comunicano con il server tramite l'uso di \glock{WebSocket} e lo scambio di messaggi \glock{JSON}. Il server, quindi, conoscendo la posizione di tutte le unità e ostacoli, genera il percorso migliore, lo comunica alle unità richiedenti e aggiorna la mappa informando l'interfaccia grafica.\\
