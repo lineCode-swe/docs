@@ -70,74 +70,65 @@ I requisiti strutturati nel seguente modo:
 
 		RMF2.2 & Obbligatorio & Per effettuare login l'utente deve inserire la sua password & VE02.5 \& UC2.2 \\
 
-		RMF2.3 & Obbligatorio & Viene visualizzato un errore se viene fornito un nome utente non esistente & VE02.5 \& UC2.3 \\
+		RMF3 & Obbligatorio & Viene visualizzato un errore se vengono fornite credenziali errate & VE02.5 \& UC3 \\
 
-		RMF2.4 & Obbligatorio & Viene visualizzato un errore se se viene fornita una password errata & VE02.5 \& UC2.4 \\
+		RMF4 & Obbligatorio & Un utente autenticato può effettuare logout & VE02.5 \& UC4 \\
 
-		RMF3 & Obbligatorio & Un utente autenticato può effettuare logout & VE02.5 \& UC3 \\
+		RMF5 & Obbligatorio & Deve essere disponibile una guida utente che contiene le istruzioni operative di utilizzo per un utente autenticato & Interno \& UC5 \\
 
-		RMF4 & Obbligatorio & Deve essere disponibile una guida utente che contiene le istruzioni operative di utilizzo per un utente autenticato & Interno \& UC4 \\
+		RMF5.1 & Obbligatorio & La guida utente deve contenere tutte le istruzioni relative alle operazioni elementari che un utente può svolgere all'interno dell'applicativo & Interno \& UC5 \\
 
-		RMF4.1 & Obbligatorio & La guida utente deve contenere tutte le istruzioni relative alle operazioni elementari che un utente può svolgere all'interno dell'applicativo & Interno \& UC4 \\
+		RMF5.2 & Obbligatorio & La guida utente deve essere accessibile a tutti e soli gli utenti registrati & Interno \& UC5 \\
 
-		RMF4.2 & Obbligatorio & La guida utente deve essere accessibile a tutti e soli gli utenti registrati & Interno \& UC4 \\
+		RMF6 & Obbligatorio & L'utente autenticato può visualizzare la lista di unità attive & Capitolato \& UC6 \\
 
-		RMF5 & Obbligatorio & L'utente autenticato può visualizzare la lista di unità attive & Capitolato \& UC5 \\
+		RMF6.1 & Obbligatorio & Ogni elemento della lista di unità mette a disposizione un ambiente grafico dedicato per visualizzazione delle proprietà dell'unità & Interno \& UC6 \\
 
-		RMF5.1 & Obbligatorio & Ogni elemento della lista di unità mette a disposizione un ambiente grafico dedicato per visualizzazione delle proprietà dell'unità & Interno \& UC5 \\
+		ROF6.1.1 & Opzionale & Dentro all'ambiente grafico dedicato, l'utente autenticato può visualizzare il l'identificativo dell'unità & Interno \& UC6.1 \\
 
-		ROF5.1.1 & Opzionale & Dentro all'ambiente grafico dedicato, l'utente autenticato può visualizzare il l'identificativo dell'unità & Interno \& UC5.1 \\
+		RMF6.1.2 & Obbligatorio & Dentro all'ambiente grafico dedicato, l'utente autenticato può visualizzare le coordinate della posizione attuale all'interno della mappa & Interno \& UC6.1 \\
 
-		RMF5.1.2 & Obbligatorio & Dentro all'ambiente grafico dedicato, l'utente autenticato può visualizzare le coordinate della posizione attuale all'interno della mappa & Interno \& UC5.1 \\
+		RMF6.1.3 & Obbligatorio &  Dentro all'ambiente grafico dedicato, l'utente autenticato può visualizzare lo stato dell'unità & Interno \& UC6.1 \\
 
-		RMF5.1.3 & Obbligatorio &  Dentro all'ambiente grafico dedicato, l'utente autenticato può visualizzare lo stato dell'unità & Interno \& UC5.1 \\
+		RMF6.1.4 & Obbligatorio &  Dentro all'ambiente grafico dedicato, l'utente autenticato può visualizzare la velocità attuale dell'unità & Interno \& UC6.1 \\
 
-		RMF5.1.4 & Obbligatorio &  Dentro all'ambiente grafico dedicato, l'utente autenticato può visualizzare la velocità attuale dell'unità & Interno \& UC5.1 \\
+		RMF6.1.5 & Obbligatorio &  Dentro all'ambiente grafico dedicato, l'utente autenticato può visualizzare la direzione del prossimo passo suggerita dal sistema & Interno \& UC6.1 \\
 
-		RMF5.1.5 & Obbligatorio &  Dentro all'ambiente grafico dedicato, l'utente autenticato può visualizzare la direzione del prossimo passo suggerita dal sistema & Interno \& UC5.1 \\
+		RMF6.1.6 & Obbligatorio &  Dentro all'ambiente grafico dedicato, l'utente autenticato può visualizzare la coda di ordini assegnati all'unità & Interno \& UC6.2 \\
 
-		RMF5.1.6 & Obbligatorio &  Dentro all'ambiente grafico dedicato, l'utente autenticato può visualizzare la coda di ordini assegnati all'unità & Interno \& UC5.2 \\
+		RMF7 & Obbligatorio & L'utente autenticato può gestire le unità attive & Capitolato \& UC7 \\
 
-		RMF6 & Obbligatorio & L'utente autenticato può gestire le unità attive & Capitolato \& UC6 \\
+		RMF7.1 & Obbligatorio & Per ogni unità attiva il sistema mette a disposizione un ambiente grafico dedicato per la gestione di essa & Interno \& UC7 \\
 
-		RMF6.1 & Obbligatorio & Per ogni unità attiva il sistema mette a disposizione un ambiente grafico dedicato per la gestione di essa & Interno \& UC6 \\
+		RMF7.1.1 & Obbligatorio & L'utente autenticato può impartire il comando \underline{Start} all'unità & Capitolato \& UC7.1 \\
 
-		RMF6.1.1 & Obbligatorio & L'utente autenticato può impartire il comando \underline{Start} all'unità & Capitolato \& UC6.1 \\
+		RMF7.1.2 & Obbligatorio & L'utente autenticato può impartire il comando \underline{Stop} all'unità & Capitolato \& UC7.2 \\
 
-		RMF6.1.2 & Obbligatorio & L'utente autenticato può impartire il comando \underline{Stop} all'unità & Capitolato \& UC6.2 \\
+		RMF7.1.3 & Obbligatorio & L'utente autenticato può impartire il comando \underline{Go Back} all'unità & Interno \& UC7.3 \\
 
-		RMF6.1.3 & Obbligatorio & L'utente autenticato può impartire il comando \underline{Go Back} all'unità & Interno \& UC6.3 \\
+		RMF7.1.4 & Obbligatorio & L'utente autenticato può impartire il comando \underline{Shutdown} all'unità & Interno \& UC7.4 \\
 
-		RMF6.1.4 & Obbligatorio & L'utente autenticato può impartire il comando \underline{Shutdown} all'unità & Interno \& UC6.4 \\
+		RMF7.1.5 & Obbligatorio & L'utente autenticato può accodare un nuovo ordine alla lista degli ordini di un'unità & Capitolato \& UC7.5 \\
 
-		RMF6.1.5 & Obbligatorio & L'utente autenticato può accodare un nuovo ordine alla lista degli ordini di un'unità & Capitolato \& UC6.5 \\
+		RMF7.1.6 & Obbligatorio & L'utente autenticato può eliminare un ordine dalla lista degli ordini di un'unità qualsiasi sia la sua posizione & Capitolato \& UC7.6 \\
 
-		RMF6.1.6 & Obbligatorio & L'utente autenticato può eliminare un ordine dalla lista degli ordini di un'unità qualsiasi sia la sua posizione & Capitolato \& UC6.6 \\
+		RMF8 & Obbligatorio & L'amministratore deve poter visualizzare la lista degli utenti esistenti & VE02.4 \& UC8 \\
 
-		RMF7 & Obbligatorio & L'amministratore deve poter visualizzare la lista degli utenti esistenti & VE02.4 \& UC7 \\
+		RMF8.1 & Obbligatorio & L'amministratore deve poter visualizzare il nome utente di ogni utente & Interno \& UC8 \\
 
-		RMF7.1 & Obbligatorio & L'amministratore deve poter visualizzare il nome utente di ogni utente & Interno \& UC7 \\
+		RMF8.2 & Obbligatorio & L'amministratore deve poter visualizzare la password di ogni utente & Interno \& UC8 \\
 
-		RMF7.2 & Obbligatorio & L'amministratore deve poter visualizzare la password di ogni utente & Interno \& UC7 \\
-
-		RMF8 & Obbligatorio & L'amministratore deve poter creare nuovi utenti & VE02.4 \& UC8 \\
-
-		RMF9 & Obbligatorio & L'amministratore deve poter modificare utenti esistenti & VE02.4 \& UC9 \\
-
+		RMF9 & Obbligatorio & L'amministratore deve poter creare nuovi utenti & VE02.4 \& UC9 \\
 
 		RMF10 & Obbligatorio & L'amministratore deve poter eliminare utenti esistenti & VE02.4 \& UC10 \\
 
-		RMF11 & Obbligatorio & La modifica e la creazione di un utente esistente richiede l'input delle credenziali per l'utente & VE02.4 \& UC11 \\
+		RMF9.1 & Obbligatorio & L'input delle credenziali utente richiede un nome utente & VE02.4 \& UC11.1 \\
 
-		RMF11.1 & Obbligatorio & L'input delle credenziali utente richiede un nome utente & VE02.4 \& UC11.1 \\
+		RMF9.2 & Obbligatorio & L'input delle credenziali utente richiede una password & VE02.4 \& UC11.2 \\
 
-		RMF11.2 & Obbligatorio & L'input delle credenziali utente richiede una password & VE02.4 \& UC11.2 \\
+		RMF9.3 & Obbligatorio & L'input delle credenziali utente richiede lo status & VE02.4 \& UC11.3 \\
 
-		RMF11.3 & Obbligatorio & L'input delle credenziali utente richiede lo status & VE02.4 \& UC11.3 \\
-
-		RMF11.4 & Obbligatorio & Viene visualizzato un errore se è stato fornito un nome utente già assegnato ad un utente esistente & VE02.4 \& UC11.4 \\
-
-		RMF11.5 & Obbligatorio & Viene visualizzato un errore se viene fornita una password non formattata correttamente & VE02.4 \& U11.5 \\
+		RMF11 & Obbligatorio & Viene visualizzato un errore se sono state fornite credenziali già assegnate ad un utente esistente & VE02.4 \& UC11 \\
 
 		RMF12 & Obbligatorio & L'amministratore deve poter visualizzare la mappa formattata oppurtanamente & Capitolato \& UC12 \\
 
@@ -163,19 +154,19 @@ I requisiti strutturati nel seguente modo:
 
 		RMF22 & Obbligatorio & L'unità dispone di una coda degli ordini con i prossimi \glock{POI} da raggiungere & Capitolato \\
 
-		RMF23 & Obbligatorio & L'unità riceve modifiche alla coda degli ordini solo quando si trova alla base di ricarica & Interno \& UC6.5 \& UC6.6 \\
+		RMF23 & Obbligatorio & L'unità riceve modifiche alla coda degli ordini solo quando si trova alla base di ricarica & Interno \& UC7.5 \& UC7.6 \\
 
-		RMF24 & Obbligatorio & L'unità con coda degli ordini vuota ritorna alla base & Interno \& UC6.3 \\
+		RMF24 & Obbligatorio & L'unità con coda degli ordini vuota ritorna alla base & Interno \& UC7.3 \\
 
 		RMF25 & Obbligatorio & L'unità dispone di una velocità massima & Capitolato \\
 
-		RMF26 & Obbligatorio & L'unità può assumere lo stato \underline{Going to X} & Interno \& UC6.1 \\
+		RMF26 & Obbligatorio & L'unità può assumere lo stato \underline{Going to X} & Interno \& UC7.1 \\
 
-		RMF27 & Obbligatorio & L'unità può assumere lo stato \underline{Stop} & Interno \& UC6.2 \\
+		RMF27 & Obbligatorio & L'unità può assumere lo stato \underline{Stop} & Interno \& UC7.2 \\
 
-		RMF28 & Obbligatorio & L'unità può assumere lo stato \underline{Base} & Interno \& UC6.3 \\
+		RMF28 & Obbligatorio & L'unità può assumere lo stato \underline{Base} & Interno \& UC7.3 \\
 
-		RMF29 & Obbligatorio & L'unità può assumere lo stato \underline{Error Y} & Interno \& UC6.4 \\
+		RMF29 & Obbligatorio & L'unità può assumere lo stato \underline{Error Y} & Interno \& UC7.4 \\
 
 		RMF30 & Obbligatorio & Il sistema dispone di un algoritmo per il calcolo del percorso che l'unità deve effettuare per raggiungere il prossimo \glock{POI} & Capitolato \\
 
@@ -232,6 +223,10 @@ I requisiti strutturati nel seguente modo:
 	RMQ2 & Obbligatorio & Il prodotto deve essere conforme con quanto dichiarato nel documento \dext{Piano di Qualifica v2.0.0} e successivi aggiornamenti del medesimo & Interno \\
 
 	RMQ3 & Obbligatorio & Devono essere realizzati test di unità e di integrazione per verificare le singole componenti del prodotto & Interno \\
+	
+	RMQ4 & Obbligatorio & Il servizio non deve mai essere interrotto secondo una logica di \glock{zero downtime} & Capitolato \\
+	
+	RMQ5 & Obbligatorio & Al rilascio del prodotto dovranno essere disponibili gli appositi manuali per utenti e manutentori & Interno \\
 
 \end{longtable}
 
@@ -251,8 +246,6 @@ I requisiti strutturati nel seguente modo:
 	RDP1.1 & Desiderabile & All'interno dell'ambiente di riferimento, il tempo di aggiornamento della mappatura rispetto alla posizione delle unità nell'ambiente deve essere $\leq$ 2.5 secondi & Interno \& VE01.2 \\
 
 	ROP1.2 & Opzionale & All'interno dell'ambiente di riferimento, il tempo di aggiornamento della mappatura rispetto alla posizione delle unità nell'ambiente deve essere $\leq$ 1 secondi & Interno \& VE01.2 \\
-
-	RMP2 & Obbligatorio & Il servizio non deve mai essere interrotto secondo una logica di \glock{zero downtime} & Capitolato \\
 
 \end{longtable}
 
@@ -324,7 +317,7 @@ I requisiti strutturati nel seguente modo:
 	 ROF30.3 \\
 	 RDF31\\
 	 RDF31.2 \\
-	 RMP2 \\
+	 RMQ4 \\
 	 RMC1 \\
 	 RMC1.1 \\
 	 RMC1.2 \\
@@ -612,13 +605,13 @@ I requisiti strutturati nel seguente modo:
 	\tabularnewline
 	ROP1.2 & Interno\\VE01.2
 	\tabularnewline
-	RMP2 & Capitolato
-	\tabularnewline
 	RMQ1 & VE01.4
 	\tabularnewline
 	RMQ2 & Interno
 	\tabularnewline
 	RMQ3 & Interno
+	\tabularnewline
+	RMQ4 & Capitolato
 	\tabularnewline
 	RMC1 & Capitolato
 	\tabularnewline
