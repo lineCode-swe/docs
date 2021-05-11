@@ -120,13 +120,13 @@ I requisiti strutturati nel seguente modo:
 
 		RMF9 & Obbligatorio & L'amministratore deve poter creare nuovi utenti & VE02.4 \& UC9 \\
 
+		RMF9.1 & Obbligatorio & L'input delle credenziali utente richiede un nome utente & VE02.4 \& UC9.1 \\
+
+		RMF9.2 & Obbligatorio & L'input delle credenziali utente richiede una password & VE02.4 \& UC9.2 \\
+
+		RMF9.3 & Obbligatorio & L'input delle credenziali utente richiede lo status & VE02.4 \& UC9.3 \\
+		
 		RMF10 & Obbligatorio & L'amministratore deve poter eliminare utenti esistenti & VE02.4 \& UC10 \\
-
-		RMF9.1 & Obbligatorio & L'input delle credenziali utente richiede un nome utente & VE02.4 \& UC11.1 \\
-
-		RMF9.2 & Obbligatorio & L'input delle credenziali utente richiede una password & VE02.4 \& UC11.2 \\
-
-		RMF9.3 & Obbligatorio & L'input delle credenziali utente richiede lo status & VE02.4 \& UC11.3 \\
 
 		RMF11 & Obbligatorio & Viene visualizzato un errore se sono state fornite credenziali già assegnate ad un utente esistente & VE02.4 \& UC11 \\
 
@@ -269,22 +269,22 @@ I requisiti strutturati nel seguente modo:
 	 RMF1.3 \\
 	 RDF1.4 \\
 	 RMF1.5 \\
-	 RMF4 \\
-	 RMF4.1 \\
-	 RMF4.2 \\
+	 RMF5 \\
 	 RMF5.1 \\
 	 RMF5.2 \\
-	 ROF5.1.1 \\
-	 RMF5.1.2 \\
-	 RMF5.1.3 \\
-	 RMF5.1.4 \\
-	 RMF5.1.5 \\
-	 RMF5.1.6 \\
 	 RMF6.1 \\
+	 RMF6.2 \\
+	 ROF6.1.1 \\
+	 RMF6.1.2 \\
 	 RMF6.1.3 \\
 	 RMF6.1.4 \\
+	 RMF6.1.5 \\
+	 RMF6.1.6 \\
 	 RMF7.1 \\
-	 RMF7.2 \\
+	 RMF7.1.3 \\
+	 RMF7.1.4 \\
+	 RMF8.1 \\
+	 RMF8.2 \\
 	 RMF15.1 \\
 	 RMF23 \\
 	 RMF24 \\
@@ -296,14 +296,16 @@ I requisiti strutturati nel seguente modo:
 	 RDP1.1 \\
 	 ROP1.2 \\
 	 RMQ2 \\
-	 RMQ3
+	 RMQ3 \\
+	 RMQ5
 	 \tabularnewline
 	 Capitolato & RMF5 \\
 	 RMF6 \\
-	 RMF6.1.1\\
-	 RMF6.1.2 \\
-	 RMF6.1.5 \\
-	 RMF6.1.6 \\
+	 RMF7
+	 RMF7.1.1\\
+	 RMF7.1.2 \\
+	 RMF7.1.5 \\
+	 RMF7.1.6 \\
 	 RMF12 \\
 	 RMF13 \\
 	 RMF14 \\
@@ -337,69 +339,62 @@ I requisiti strutturati nel seguente modo:
 	 \tabularnewline
 	  UC2.2 & RMF2.2
 	 \tabularnewline
-	  UC2.3 & RMF2.3
-	 \tabularnewline
-	  UC2.4 & RMF2.4
-	 \tabularnewline
 	  UC3 & RMF3
 	 \tabularnewline
-	  UC4 & RMF4\\
-	  RMF4.1 \\
-	  RMF4.2
+	  UC4 & RMF4
 	 \tabularnewline
 	 UC5 & RMF5 \\
-	 RMF5.1
-	 \tabularnewline
-	 UC5.1 & ROF5.1.1 \\
-	 RMF5.1.2 \\
-	 RMF5.1.3 \\
-	 RMF5.1.4 \\
-	 ROF5.1.5
-	 \tabularnewline
-	 UC5.2 & RMF5.1.6
+	 RMF5.1 \\
+	 RMF5.2
 	 \tabularnewline
 	 UC6 & RMF6 \\
 	 RMF6.1
 	 \tabularnewline
-	 UC6.1 & RMF6.1.1 \\
-	 RMF26
+	 UC6.1 & ROF6.1.1 \\
+	 RMF6.1.2 \\
+	 RMF6.1.3 \\
+	 RMF6.1.4 \\
+	 ROF6.1.5
 	 \tabularnewline
-	 UC6.2 & RMF6.1.2 \\
-	 RMF27
-	 \tabularnewline
-	 UC6.3 & RMF6.1.3 \\
-	 RMF28
-	 \tabularnewline
-	 UC6.4 & RMF6.1.4 \\
-	 RMF29
-	 \tabularnewline
-	 UC6.5 & RMF6.1.5 \\
-	 RMF23
-	 \tabularnewline
-	 UC6.6 & RMF6.1.6 \\
-	 RMF23
+	 UC6.2 & RMF6.1.6
 	 \tabularnewline
 	 UC7 & RMF7 \\
-	 RMF7.1 \\
-	 RMF7.2
+	 RMF7.1
+	 \tabularnewline
+	 UC7.1 & RMF7.1.1 \\
+	 RMF26
+	 \tabularnewline
+	 UC7.2 & RMF7.1.2 \\
+	 RMF27
+	 \tabularnewline
+	 UC7.3 & RMF7.1.3 \\
+	 RMF24 \\
+	 RMF28
+	 \tabularnewline
+	 UC7.4 & RMF7.1.4 \\
+	 RMF29
+	 \tabularnewline
+	 UC7.5 & RMF7.1.5 \\
+	 RMF23
+	 \tabularnewline
+	 UC7.6 & RMF7.1.6 \\
+	 RMF23
 	 \tabularnewline
 	 UC8 & RMF8 \\
+	 RMF8.1 \\
+	 RMF8.2
 	 \tabularnewline
-	 UC9 & RMF9
+	 UC9 & RMF9 \\
+	 \tabularnewline
+	 UC9.1 & RMF9.1 \\
+	 \tabularnewline
+	 UC9.2 & RMF9.2
+	 \tabularnewline
+	 UC9.3 & RMF9.3
 	 \tabularnewline
 	 UC10 & RMF10
 	 \tabularnewline
 	 UC11 & RMF11
-	 \tabularnewline
-	 UC11.1 & RMF11.1 \\
-	 \tabularnewline
-	 UC11.2 & RMF11.2
-	 \tabularnewline
-	 UC11.3 & RMF11.3
-	 \tabularnewline
-	 UC11.4 & RMF11.4
-	 \tabularnewline
-	 UC11.5 & RMF11.5
 	 \tabularnewline
 	 UC12 & RMF12
 	 \tabularnewline
@@ -479,73 +474,65 @@ I requisiti strutturati nel seguente modo:
 	\tabularnewline
 	RMF2.2 & VE02.5\\UC2.2
 	\tabularnewline
-	RMF2.3 & VE02.5\\UC2.3
-	\tabularnewline
-	RMF2.4 & VE02.5\\UC2.4
-	\tabularnewline
 	RMF3 & VE02.5\\UC3
 	\tabularnewline
-	RMF4 & Interno\\UC4
+	RMF4 & VE02.5\\UC4
 	\tabularnewline
-	RMF4.1 & Interno\\UC4
-	\tabularnewline
-	RMF4.2 & Interno\\UC4
-	\tabularnewline
-	RMF5 & Capitolato\\UC5
+	RMF5 & Interno\\UC5
 	\tabularnewline
 	RMF5.1 & Interno\\UC5
 	\tabularnewline
-	ROF5.1.1 & Interno\\UC5.1
+	RMF5.2 & Interno\\UC5
 	\tabularnewline
-	ROF5.1.2 &  Interno\\UC5.1
-	\tabularnewline
-	RMF5.1.3 & Interno\\UC5.1
-	\tabularnewline
-	RMF5.1.4 & Interno\\UC5.1
-	\tabularnewline
-	RMF5.1.5 & Interno\\UC5.1
-	\tabularnewline
-	RMF5.1.6 & Interno\\UC5.2
-	\tabularnewline
-	RMF6 &  Capitolato\\UC6
+	RMF6 & Capitolato\\UC6
 	\tabularnewline
 	RMF6.1 & Interno\\UC6
 	\tabularnewline
-	RMF6.1.1 & Capitolato\\UC6.1
+	ROF6.1.1 & Interno\\UC6.1
 	\tabularnewline
-	RMF6.1.2 & Capitolato\\U6.2
+	ROF6.1.2 &  Interno\\UC6.1
 	\tabularnewline
-	RMF6.1.3 & Interno\\UC6.3
+	RMF6.1.3 & Interno\\UC6.1
 	\tabularnewline
-	RMF6.1.4 & Interno\\UC6.4
+	RMF6.1.4 & Interno\\UC6.1
 	\tabularnewline
-	RMF6.1.5 & Capitolato\\UC6.5
+	RMF6.1.5 & Interno\\UC6.1
 	\tabularnewline
-	RMF6.1.6 & Capitolato\\UC6.6
+	RMF6.1.6 & Interno\\UC6.2
 	\tabularnewline
-	RMF7 & VE02.4\\UC7
+	RMF7 &  Capitolato\\UC7
 	\tabularnewline
 	RMF7.1 & Interno\\UC7
 	\tabularnewline
-	RMF7.2 & Interno\\UC7
+	RMF7.1.1 & Capitolato\\UC7.1
+	\tabularnewline
+	RMF7.1.2 & Capitolato\\U7.2
+	\tabularnewline
+	RMF7.1.3 & Interno\\UC7.3
+	\tabularnewline
+	RMF7.1.4 & Interno\\UC7.4
+	\tabularnewline
+	RMF7.1.5 & Capitolato\\UC7.5
+	\tabularnewline
+	RMF7.1.6 & Capitolato\\UC7.6
 	\tabularnewline
 	RMF8 & VE02.4\\UC8
 	\tabularnewline
+	RMF8.1 & Interno\\UC8
+	\tabularnewline
+	RMF8.2 & Interno\\UC8
+	\tabularnewline
 	RMF9 & VE02.4\\UC9
+	\tabularnewline
+	RMF9.1 & VE02.4\\UC9.1
+	\tabularnewline
+	RMF9.2 & VE02.4\\UC9.2
+	\tabularnewline
+	RMF9.3 & VE02.4\\UC9.3
 	\tabularnewline
 	RMF10 & VE02.4\\UC10
 	\tabularnewline
 	RMF11 & VE02.4\\UC11
-	\tabularnewline
-	RMF11.1 & VE02.4\\UC11.1
-	\tabularnewline
-	RMF11.2 & VE02.4\\UC11.2
-	\tabularnewline
-	RMF11.3 & VE02.4\\UC11.3
-	\tabularnewline
-	RMF11.4 & VE02.4\\UC11.4
-	\tabularnewline
-	RMF11.5 & VE02.4\\UC11.5
 	\tabularnewline
 	RMF12 & Capitolato\\UC12
 	\tabularnewline
@@ -559,9 +546,9 @@ I requisiti strutturati nel seguente modo:
 	\tabularnewline
 	RMF16 & VE02.4\\UC16
 	\tabularnewline
-	RMF17 & VE02.4 \\ UC17
+	RMF17 & VE02.4\\UC17
 	\tabularnewline
-	RMF18 & VE02.4 \\ UC18
+	RMF18 & VE02.4\\UC18
 	\tabularnewline
 	RMF19 & VE02.6
 	\tabularnewline
@@ -612,6 +599,8 @@ I requisiti strutturati nel seguente modo:
 	RMQ3 & Interno
 	\tabularnewline
 	RMQ4 & Capitolato
+	\tabularnewline
+	RMQ5 & Interno
 	\tabularnewline
 	RMC1 & Capitolato
 	\tabularnewline
