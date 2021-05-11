@@ -1,22 +1,22 @@
-\subsubsection{UC5 - Visualizzazione unità}
+\subsubsection{UC6 - Visualizzazione unità}
     \begin{figure}[h!]
         \centering
-        \includegraphics[width=9cm]{images/uc5.png}  
-        \caption{Diagramma UC5 - Visualizzazione unità}
+        \includegraphics[width=9cm]{images/uc6.png}  
+        \caption{Diagramma UC6 - Visualizzazione unità}
     \end{figure}
     \begin{itemize}
         \item \textbf{Attori primari:} utente autenticato;
         \item \textbf{Descrizione:} l'utente intende visualizzare in dettaglio ed in tempo reale le proprietà di un'unità;
         \item \textbf{Scenario principale:} l'utente visualizza:
         \begin{itemize}
-            \item le caratteristiche dell'unità (UC5.1);
-            \item la coda degli ordini assegnati all'unità (UC5.2).
+            \item le caratteristiche dell'unità (UC6.1);
+            \item la coda degli ordini assegnati all'unità (UC6.2).
         \end{itemize}
         \item \textbf{Precondizione:} l'utente accede all'ambiente dedicato alle proprietà dell'unità;
         \item \textbf{Postcondizione:} l'utente visualizza in tempo reale le proprietà dell'unità.
     \end{itemize}
 
-        \subsubsection{UC5.1 - Visualizzazione caratteristiche unità}
+        \subsubsection{UC6.1 - Visualizzazione caratteristiche unità}
         \begin{itemize}
             \item \textbf{Attori primari:} utente autenticato;
             \item \textbf{Descrizione:} l'utente intende visualizzare le seguenti caratteristiche dell'unità:
@@ -39,7 +39,7 @@
             \item \textbf{Postcondizione:} l'utente visualizza in tempo reale le caratteristiche dell'unità.
         \end{itemize}
 
-        \subsubsection{UC5.2 - Visualizzazione ordini assegnati}
+        \subsubsection{UC6.2 - Visualizzazione ordini assegnati}
         \begin{itemize}
             \item \textbf{Attori primari:} utente autenticato;
             \item \textbf{Descrizione:} l'utente intende visualizzare la coda degli ordini assegnati;
@@ -49,28 +49,28 @@
         \end{itemize}
 
 
-    \subsubsection{UC6 - Gestione unità}
+    \subsubsection{UC7 - Gestione unità}
     \begin{figure}[h!]
         \centering
-        \includegraphics[width=10cm]{images/uc6.png}
-        \caption{Diagramma UC6 - Gestione unità}
+        \includegraphics[width=10cm]{images/uc7.png}
+        \caption{Diagramma UC7 - Gestione unità}
     \end{figure}
     \begin{itemize}
         \item \textbf{Attori primari:} utente autenticato;
         \item \textbf{Descrizione:} l'utente intende assegnare ordini all'unità o cambiarne lo stato;
         \item \textbf{Scenario principale:} l'utente impartisce determinati comandi per modificare lo stato dell'unità:
         \begin{itemize}
-            \item Start (UC6.1);
-            \item Stop (UC6.2);
-            \item Go Back (UC6.3);
-            \item Shutdown (UC6.4).
+            \item Start (UC7.1);
+            \item Stop (UC7.2);
+            \item Go Back (UC7.3);
+            \item Shutdown (UC7.4).
         \end{itemize}
-        l'utente, inoltre, assegna (UC6.5) o elimina (UC6.6) ordini dalla coda degli ordini dell'unità;
+        l'utente, inoltre, assegna (UC7.5) o elimina (UC7.6) ordini dalla coda degli ordini dell'unità;
         \item \textbf{Precondizione:} l'utente accede all'ambiente dedicato alla gestione dell'unità;
         \item \textbf{Postcondizione:} l'utente modifica in tempo reale lo stato dell'unità e la coda degli ordini.
     \end{itemize}
 
-        \subsubsection{UC6.1 - Comando start}
+        \subsubsection{UC7.1 - Comando start}
         \begin{itemize}
             \item \textbf{Attori primari:} utente autenticato;
             \item \textbf{Descrizione:} l'utente intende impostare lo stato dell'unità in modo che consegni tutti gli ordini assegnati per poi tornare alla base;
@@ -79,7 +79,7 @@
             \item \textbf{Postcondizione:} l'utente modifica in tempo reale lo stato dell'unità portandolo allo stato \underline{Going to X}.
         \end{itemize}
 
-        \subsubsection{UC6.2 - Comando stop}
+        \subsubsection{UC7.2 - Comando stop}
         \begin{itemize}
             \item \textbf{Attori primari:} utente autenticato;
             \item \textbf{Descrizione:} l'utente intende impostare lo stato dell'unità in modo che, pur rimanendo accesa e connessa, rimanga nella posizione attuale;
@@ -88,7 +88,7 @@
             \item \textbf{Postcondizione:} l'utente modifica in tempo reale lo stato dell'unità portandolo allo stato \underline{Stop}.
         \end{itemize}
 
-        \subsubsection{UC6.3 - Comando go back}
+        \subsubsection{UC7.3 - Comando go back}
         \begin{itemize}
             \item \textbf{Attori primari:} utente autenticato;
             \item \textbf{Descrizione:} l'utente intende impostare lo stato dell'unità in modo che, indipendentemente dalla situazione attuale della coda degli ordini, ritorni alla base;
@@ -97,7 +97,7 @@
             \item \textbf{Postcondizione:} l'utente modifica in tempo reale lo stato dell'unità portandolo allo stato \underline{Going to B}.
         \end{itemize}
 
-        \subsubsection{UC6.4 - Comando shutdown}
+        \subsubsection{UC7.4 - Comando shutdown}
         \begin{itemize}
             \item \textbf{Attori primari:} utente autenticato;
             \item \textbf{Descrizione:} l'utente intende spegnere l'unità attualmente connessa, in modo immediato;
@@ -106,7 +106,7 @@
             \item \textbf{Postcondizione:} l'utente modifica in tempo reale lo stato dell'unità portandolo allo stato \underline{Disconnected}.
         \end{itemize}
 
-        \subsubsection{UC6.5 - Assegnazione nuovo ordine}
+        \subsubsection{UC7.5 - Assegnazione nuovo ordine}
         \begin{itemize}
             \item \textbf{Attori primari:} utente autenticato;
             \item \textbf{Descrizione:} l'utente intende accodare un nuovo ordine;
@@ -115,7 +115,7 @@
             \item \textbf{Postcondizione:} l'utente modifica in tempo reale la coda degli ordini aggiungendo un nuovo ordine.
         \end{itemize}
 
-        \subsubsection{UC6.6 - Eliminazione ordine assegnato}
+        \subsubsection{UC7.6 - Eliminazione ordine assegnato}
         \begin{itemize}
             \item \textbf{Attori primari:} utente autenticato;
             \item \textbf{Descrizione:} l'utente intende eliminare un ordine in coda ad un'unità che si trova alla base;

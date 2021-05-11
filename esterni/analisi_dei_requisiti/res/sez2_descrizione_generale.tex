@@ -5,7 +5,7 @@ Data la vastità del mondo della logistica, il proponente richiede che venga pre
 
 \subsection{Contesto e funzioni del prodotto}
 Il contesto scelto per questo progetto è quello del ristorante dotato di camerieri robot (da qui in poi ``unità").
-	\subsubsection{Mappatura dell'ambiente}    
+	\subsubsection{Mappatura dell'ambiente}
     L'ambiente in cui si muovono le unità è rappresentato da una mappatura strutturata a griglia e tale griglia viene a sua volta divisa in celle per permettere di individuare il punto in cui l'unità si trova nel locale.
     \subsubsection{Unità}
     Le unità si muovono all'interno del ristorante rappresentato dalla struttura descritta nella sezione precedente. Ogni unità svolge ciclicamente determinate operazioni:
@@ -25,21 +25,5 @@ Il contesto scelto per questo progetto è quello del ristorante dotato di cameri
 
     \subsubsection{Amministratore}
     Gestisce la mappa del locale e l'associazione delle unità al sistema. Conosce approfonditamente il sistema.
-    
+
     \newpage
-    
-    \subsubsection{Ambiente di riferimento}
-    Scenario in cui il sistema verrà testato per verificarne i requisiti prestazionali, simulando la realtà applicativa.\\
-    Verrà implementato nel seguente modo:
-    \begin{itemize}
-    	\item il \glock{Docker} server in un computer;
-    	\item il simulatore di unità in un altro computer;
-    	\item collegare i due computer alla stessa rete Wi-Fi.	
-    \end{itemize}
-
-\subsection{Macro-architetture del prodotto}
-    \subsubsection{\glock{Back-end}}
-    Il \glock{back-end} è composto da più server che interagiscono fra loro per garantire ridondanza ed evitare interruzioni del servizio secondo una logica di \glock{zero downtime}.
-
-    \subsubsection{\glock{Front-end}}
-    Il \glock{front-end} mette a disposizione di tutti gli utenti una mappa con le unità che si muovono in essa e delle apposite interfacce di gestione per operatori ed amministratori.
