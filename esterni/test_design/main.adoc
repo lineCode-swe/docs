@@ -1,0 +1,51 @@
+= Specifica dei test
+gruppo lineCode <linecode.swe@gmail.com>
+v0.1.0, 26-05-2021
+:doctype: book
+:title-logo-image: ../../commons/res/lclong.png
+:toc:
+:toclevels: 5
+:sectnums:
+:sectnumlevels: 4
+:chapter-label:
+
+.Dati sul documento
+[cols=2]
+|===
+|Uso|Esterno
+|Redattori
+|Alessandro Chimetto +
+|Verificatori
+|
+|Responsabile|
+|Destinatari
+|lineCode +
+prof. Vardanega Tullio +
+prof. Cardin Riccardo +
+Sanmarco Informatica
+|===
+
+== Specifica dei test
+
+=== Test di sistema
+include::res/test_sistema.adoc[]
+
+=== Test d'integrazione
+==== UI
+include::res/test_integrazione_ui.adoc[]
+
+==== Server
+include::res/test_integrazione_server.adoc[]
+
+==== Unit
+include::res/test_integrazione_unit.adoc[]
+
+=== Test di unità
+==== UI
+include::res/test_unita_ui.adoc[]
+
+==== Server
+include::res/test_unita_server.adoc[]
+
+==== Unit
+include::res/test_unita_unit.adoc[]
