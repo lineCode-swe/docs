@@ -51,7 +51,7 @@ CALL service.onMessage(msg)
 
 EXPECT map.clear() TO HAVE BEEN CALLED 1 TIMES
 EXPECT map.set() TO HAVE BEEN CALLED n TIMES WITH listOfUsers[0..n]
-EXPECT subject.next() TO HAVE BEEN CALLED 1 TIMES WITH '*';
+EXPECT subject.next() TO HAVE BEEN CALLED 1 TIMES WITH listOfUsers;
 ----
 
 ====== TU5
@@ -64,7 +64,7 @@ CALL service.onMessage(msg)
 
 EXPECT map.clear() TO HAVE BEEN CALLED 1 TIMES
 EXPECT map.set() TO HAVE BEEN CALLED n TIMES WITH listOfUnits[0..n]
-EXPECT subject.next() TO HAVE BEEN CALLED 1 TIMES WITH '*';
+EXPECT subject.next() TO HAVE BEEN CALLED 1 TIMES WITH listOfUnits;
 ----
 
 ====== TU6
@@ -77,7 +77,7 @@ CALL service.onMessage(msg)
 
 EXPECT map.clear() TO HAVE BEEN CALLED 1 TIMES
 EXPECT map.set() TO HAVE BEEN CALLED n TIMES WITH listOfUnits[0..n]
-EXPECT subject.next() TO HAVE BEEN CALLED 1 TIMES WITH new Position(-1, -1);
+EXPECT subject.next() TO HAVE BEEN CALLED 1 TIMES WITH new listOfUnits;
 EXPECT service.getMapHeight() = msg.height;
 EXPECT service.getMapLength() = msg.length;
 ----
@@ -94,7 +94,7 @@ CALL service.onMessage(msg)
 EXPECT map.has() TO HAVE BEEN CALLED 1 TIMES
 EXPECT map.get() TO HAVE BEEN CALLED 1 TIMES WITH 'unit1'
 EXPECT unit.getStatus() = UnitStatus.ERROR
-EXPECT subject.next() TO HAVE BEEN CALLED 1 TIMES WITH 'unit1'
+EXPECT subject.next() TO HAVE BEEN CALLED 1 TIMES WITH unit
 EXPECT STDOUT TO BE EMPTY
 ----
 
@@ -105,13 +105,13 @@ It should receive a "UnitPoiFromServer" message with a known id, list of POI and
 SET unit TO new Unit(id = 'unit1')
 CALL map.set('unit1', unit)
 SET listOfPoi TO new Position[n]
-SET msg TO new UnitPoiFromServer(id = 'unit1', listOfPoi)
+SET msg TO new UnitPoiFromServer(id = 'unit1', poi = listOfPoi)
 CALL service.onMessage(msg)
 
 EXPECT map.has() TO HAVE BEEN CALLED 1 TIMES
 EXPECT map.get() TO HAVE BEEN CALLED 1 TIMES WITH 'unit1'
 EXPECT unit.getPoiList() = listOfPoi
-EXPECT subject.next() TO HAVE BEEN CALLED 1 TIMES WITH 'unit1'
+EXPECT subject.next() TO HAVE BEEN CALLED 1 TIMES WITH unit
 EXPECT STDOUT TO BE EMPTY
 ----
 
@@ -121,18 +121,18 @@ It should receive a "UnitSpeedFromServer" message with a known id, a new speed v
 ----
 SET unit TO new Unit(id = 'unit1')
 CALL map.set('unit1', unit)
-SET msg TO new UnitPoiFromServer(id = 'unit1', speed)
+SET msg TO new UnitPoiFromServer(id = 'unit1', speed = speed)
 CALL service.onMessage(msg)
 
 EXPECT map.has() TO HAVE BEEN CALLED 1 TIMES
 EXPECT map.get() TO HAVE BEEN CALLED 1 TIMES WITH 'unit1'
 EXPECT unit.getSpeed() = speed
-EXPECT subject.next() TO HAVE BEEN CALLED 1 TIMES WITH 'unit1'
+EXPECT subject.next() TO HAVE BEEN CALLED 1 TIMES WITH unit
 EXPECT STDOUT TO BE EMPTY
 ----
 
 ====== TU10
-It should receive a "UnitPosFromServer" message with a known id, a new current position and change internal data.
+It should receive a "UnitErrorFromServer" with a known id, a new error code and change internal data.
 [source]
 ----
 SET unit TO new Unit(id = 'unit1')
@@ -143,7 +143,7 @@ CALL service.onMessage(msg)
 EXPECT map.has() TO HAVE BEEN CALLED 1 TIMES
 EXPECT map.get() TO HAVE BEEN CALLED 1 TIMES WITH 'unit1'
 EXPECT unit.getPosition() = position
-EXPECT subject.next() TO HAVE BEEN CALLED 1 TIMES WITH 'unit1'
+EXPECT subject.next() TO HAVE BEEN CALLED 1 TIMES WITH unit
 EXPECT STDOUT TO BE EMPTY
 ----
 
@@ -151,15 +151,31 @@ EXPECT STDOUT TO BE EMPTY
 It should receive a "UnitPosFromServer" message with a known id, a new current position and change internal data.
 [source]
 ----
-SET unit TO new Unit(id = 'unit1')
+SET unit TO new Unit(id = 'unit1', position = oldPosition)
 CALL map.set('unit1', unit)
-SET msg TO new UnitPoiFromServer(id = 'unit1', position)
+
+SET fakeCellInOldPosition TO new Cell(
+position = unit.getPosition(), unit = unit.getId())
+CALL map.set(unit.getPosition(), fakeCellInOldPosition);
+
+SET fakeCellInNewPosition TO new Cell(
+position = newPosition, unit = '')
+CALL map.set(newPosition, fakeCellInNewPosition);
+
+SET msg TO new UnitPoiFromServer(id = 'unit1', position = newPosition)
 CALL service.onMessage(msg)
 
 EXPECT map.has() TO HAVE BEEN CALLED 1 TIMES
-EXPECT map.get() TO HAVE BEEN CALLED 1 TIMES WITH 'unit1'
-EXPECT unit.getPosition() = position
-EXPECT subject.next() TO HAVE BEEN CALLED 1 TIMES WITH 'unit1'
+EXPECT map.get() TO HAVE BEEN CALLED 3 TIMES
+EXPECT map.get() TO HAVE BEEN CALLED WITH 'unit1'
+EXPECT map.get() TO HAVE BEEN CALLED WITH oldPosition
+EXPECT map.get() TO HAVE BEEN CALLED WITH newPosition
+EXPECT unit.getPosition() = newPosition
+EXPECT fakeCellInOldPosition.getUnit() = ''
+EXPECT fakeCellInNewPosition.getUnit() = 'unit1'
+EXPECT subject.next() TO HAVE BEEN CALLED 2 TIMES
+EXPECT subject.next() TO HAVE BEEN CALLED WITH [fakeCellInOldPosition, fakeCellInNewPosition]
+EXPECT subject.next() TO HAVE BEEN CALLED unit
 EXPECT STDOUT TO BE EMPTY
 ----
 
