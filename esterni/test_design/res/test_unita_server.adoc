@@ -1,0 +1,297 @@
+===== Persistence - MapRepositoryRedis
+====== BEFORE-EACH
+[source]
+----
+SET db TO _mock_
+SET test TO new MapRepositoryRedis(db)
+SET db.length TO 5
+SET db.height TO 4
+SET cell TO new Cell((0,0),false,false,RIGHT,false)
+----
+
+====== TU
+testGetLength()
+[source]
+----
+CALL getLength()
+EXPECT length = '5'
+EXPECT db.get() TO HAVE BEEN CALLED 1 TIMES
+----
+
+====== TU
+testGetHeight()
+[source]
+----
+CALL getHeight()
+EXPECT height = '4'
+EXPECT db.get() TO HAVE BEEN CALLED 1 TIMES
+----
+
+====== TU
+testSetLength()
+[source]
+----
+CALL setLength('3')
+EXPECT length = '3'
+EXPECT db.set() TO HAVE BEEN CALLED 1 TIMES
+EXPECT db.bgsave() TO HAVE BEEN CALLED 1 TIMES
+----
+
+====== TU
+testSetHeight()
+[source]
+----
+CALL setHeight('3')
+EXPECT height = '3'
+EXPECT db.set() TO HAVE BEEN CALLED 1 TIMES
+EXPECT db.bgsave() TO HAVE BEEN CALLED 1 TIMES
+----
+
+====== TU
+testGetCell()
+[source]
+----
+CALL getCell(0,0)
+EXPECT position_x = '0' // da implementare nei test
+EXPECT position_y = '0' // da implementare nei test
+EXPECT cell.isLocked = 'false'
+EXPECT cell.isBase = 'false'
+EXPECT cell.isPoi = 'false'
+EXPECT cell.getDirection = 'RIGHT'
+EXPECT db.hget() TO HAVE BEEN CALLED 4 TIMES
+----
+
+====== TU
+testGetCells()
+[source]
+----
+// da fare
+----
+
+====== TU
+testSetCells()
+[source]
+----
+SET cellList TO new List<Cell> with 3 new Cells
+CALL setCells(cellList)
+EXPECT db.del() TO HAVE BEEN CALLED 1 TIMES
+EXPECT db.sadd() TO HAVE BEEN CALLED 3 TIMES
+EXPECT db.hmset() TO HAVE BEEN CALLED 3 TIMES
+EXPECT db.bgsave() TO HAVE BEEN CALLED 1 TIMES
+----
+
+===== Persistence - ObstacleRepositoryRedis
+====== BEFORE-EACH
+[source]
+----
+SET db TO _mock_
+SET test TO new ObstacleRepositoryRedis(db)
+SET id TO 'obs:1'
+SET position TO new Position(0,0)
+----
+
+====== TU
+testSetObstacle(position)
+[source]
+----
+CALL setObstacle(position)
+EXPECT db.rpush() TO HAVE BEEN CALLED 1 TIMES
+EXPECT db.bgsave() TO HAVE BEEN CALLED 1 TIMES
+----
+
+====== TU
+testDelObstacle(position)
+[source]
+----
+CALL delObstacle(position)
+EXPECT db.lrem() TO HAVE BEEN CALLED 1 TIMES
+EXPECT db.bgsave() TO HAVE BEEN CALLED 1 TIMES
+----
+
+====== TU
+testCheckObstacle(position)
+[source]
+----
+CALL checkObstacle(position)
+EXPECT test.checkObstacle() = 'true'
+CALL checkObstacle('(1,1)')
+EXPECT test.checkObstacle() = 'false'
+EXPECT db.lpos() TO HAVE BEEN CALLED 2 TIMES
+----
+
+====== TU
+testGetObstacleList()
+[source]
+----
+SET obs TO ['(0,1)','(2,3)','(4,5)']
+EXPECT getObstacleList() = ['(0,1)','(2,3)','(4,5)']
+EXPECT db.lindex() TO HAVE BEEN CALLED 3 TIMES
+----
+
+
+===== Persistence - UnitRepositoryRedis
+====== BEFORE-EACH
+[source]
+----
+SET db TO _mock_
+SET test TO new UnitRepositoryRedis(db)
+SET id TO 'Unit:1'
+SET name TO 'Unità'
+SET position TO new Position(0,0)
+----
+
+====== TU
+testNewUnit(id, name, position)
+[source]
+----
+EXPECT db.sadd() TO HAVE BEEN CALLED 1 TIMES
+EXPECT db.hmset() TO HAVE BEEN CALLED 1 TIMES
+EXPECT db.bgsave() TO HAVE BEEN CALLED 1 TIMES
+----
+
+====== TU
+testDelUnit(id)
+[source]
+----
+EXPECT db.srem() TO HAVE BEEN CALLED 1 TIMES
+EXPECT db.bgsave() TO HAVE BEEN CALLED 1 TIMES
+----
+
+====== TU
+testGetName(id)
+[source]
+----
+EXPECT test.getName() = 'Unità'
+EXPECT db.hget() TO HAVE BEEN CALLED 1 TIMES
+----
+
+====== TU
+testGetBase(id)
+[source]
+----
+SET base_x TO '5'
+SET base_y TO '5'
+EXPECT test.getBase() = '(5,5)'
+EXPECT db.hget() TO HAVE BEEN CALLED 2 TIMES
+----
+
+====== TU
+testGetPosition(id)
+[source]
+----
+SET position_x TO '5'
+SET position_y TO '5'
+EXPECT test.getPosition() = '(5,5)'
+EXPECT db.hget() TO HAVE BEEN CALLED 2 TIMES
+----
+
+====== TU
+testGetUnits()
+[source]
+----
+EXPECT db.smembers() TO HAVE BEEN CALLED 1 TIMES
+----
+
+====== TU
+testGetPoiList()
+[source]
+----
+SET poi:id TO ['(0,1)','(2,3)','(4,5)']
+EXPECT getPoiList(id) = ['(0,1)','(2,3)','(4,5)']
+EXPECT db.lindex() TO HAVE BEEN CALLED 3 TIMES
+----
+
+====== TU
+testSetPosition()
+[source]
+----
+EXPECT db.hmset() TO HAVE BEEN CALLED 1 TIMES
+EXPECT db.bgsave() TO HAVE BEEN CALLED 1 TIMES
+----
+
+====== TU
+testSetStatus()
+[source]
+----
+EXPECT db.hset() TO HAVE BEEN CALLED 1 TIMES
+EXPECT db.bgsave() TO HAVE BEEN CALLED 1 TIMES
+----
+
+====== TU
+testSetError()
+[source]
+----
+EXPECT db.hset() TO HAVE BEEN CALLED 1 TIMES
+EXPECT db.bgsave() TO HAVE BEEN CALLED 1 TIMES
+----
+
+====== TU
+testSetSpeed()
+[source]
+----
+EXPECT db.hset() TO HAVE BEEN CALLED 1 TIMES
+EXPECT db.bgsave() TO HAVE BEEN CALLED 1 TIMES
+----
+
+====== TU
+testSetPoiList()
+[source]
+----
+SET poiList TO ['(0,0)', '(1,1)']
+EXPECT db.rpush() TO HAVE BEEN CALLED 2 TIMES
+EXPECT db.bgsave() TO HAVE BEEN CALLED 1 TIMES
+----
+
+
+
+===== Persistence - UserRepositoryRedis
+====== BEFORE-EACH
+[source]
+----
+SET db TO _mock_
+SET test TO new UserRepositoryRedis(db)
+SET user TO 'userTest'
+SET password TO 'userPassword'
+SET admin TO true
+----
+
+====== TU
+testNewUser(user, password, admin)
+[source]
+----
+EXPECT db.sadd() TO HAVE BEEN CALLED 1 TIMES
+EXPECT db.hmset() TO HAVE BEEN CALLED 1 TIMES
+EXPECT db.bgsave() TO HAVE BEEN CALLED 1 TIMES
+----
+
+====== TU
+testDelUser(user)
+[source]
+----
+EXPECT db.srem() TO HAVE BEEN CALLED 1 TIMES
+EXPECT db.bgsave() TO HAVE BEEN CALLED 1 TIMES
+----
+
+====== TU
+testGetPassword(user)
+[source]
+----
+EXPECT test.getPassword() = 'userPassword'
+EXPECT db.hget() TO HAVE BEEN CALLED 1 TIMES
+----
+
+====== TU
+testIsAdmin(user)
+[source]
+----
+EXPECT test.isAdmin() = true
+EXPECT db.hget() TO HAVE BEEN CALLED 1 TIMES
+----
+
+====== TU
+testGetUsers()
+[source]
+----
+EXPECT db.smembers() TO HAVE BEEN CALLED 1 TIMES
+----
+

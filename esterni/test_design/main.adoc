@@ -15,6 +15,7 @@ v0.1.0, 26-05-2021
 |Uso|Esterno
 |Redattori
 |Alessandro Chimetto +
+Paolo Scanferlato
 |Verificatori
 |
 |Responsabile|
