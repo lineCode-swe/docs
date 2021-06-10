@@ -4,13 +4,11 @@
 ----
 SET db TO _mock_
 SET test TO new MapRepositoryRedis(db)
-SET db.length TO 5
-SET db.height TO 4
 SET cell TO new Cell((0,0),false,false,RIGHT,false)
 ----
 
 ====== TU
-testGetLength()
+getLength_requestToGetLength_LengthCorrectlyReturned()
 [source]
 ----
 CALL getLength()
@@ -19,41 +17,19 @@ EXPECT db.get() TO HAVE BEEN CALLED 1 TIMES
 ----
 
 ====== TU
-testGetHeight()
+getHeight_requestToGetHeight_HeightCorrectlyReturned()
 [source]
 ----
 CALL getHeight()
-EXPECT height = '4'
+EXPECT height = '5'
 EXPECT db.get() TO HAVE BEEN CALLED 1 TIMES
 ----
 
 ====== TU
-testSetLength()
-[source]
-----
-CALL setLength('3')
-EXPECT length = '3'
-EXPECT db.set() TO HAVE BEEN CALLED 1 TIMES
-EXPECT db.bgsave() TO HAVE BEEN CALLED 1 TIMES
-----
-
-====== TU
-testSetHeight()
-[source]
-----
-CALL setHeight('3')
-EXPECT height = '3'
-EXPECT db.set() TO HAVE BEEN CALLED 1 TIMES
-EXPECT db.bgsave() TO HAVE BEEN CALLED 1 TIMES
-----
-
-====== TU
-testGetCell()
+getCell_LengthHeight_CellCorrectlyReturned()
 [source]
 ----
 CALL getCell(0,0)
-EXPECT position_x = '0' // da implementare nei test
-EXPECT position_y = '0' // da implementare nei test
 EXPECT cell.isLocked = 'false'
 EXPECT cell.isBase = 'false'
 EXPECT cell.isPoi = 'false'
@@ -62,22 +38,25 @@ EXPECT db.hget() TO HAVE BEEN CALLED 4 TIMES
 ----
 
 ====== TU
-testGetCells()
+setCells_LengthHeightCellList_DeleteExistingCellsAndSetNewCellListToDB()
 [source]
 ----
-// da fare
+SET cellList TO new List<Cell> with 4 new Cells
+CALL setCells(cellList, 2, 2)
+EXPECT db.get() TO HAVE BEEN CALLED 36 TIMES
+EXPECT db.del() TO HAVE BEEN CALLED 25 TIMES
+EXPECT db.set() TO HAVE BEEN CALLED 2 TIMES
+EXPECT db.hmset() TO HAVE BEEN CALLED 4 TIMES
+EXPECT db.bgsave() TO HAVE BEEN CALLED 1 TIMES
 ----
 
 ====== TU
-testSetCells()
+getCells_requestToGetCellList_CellListCorrectlyReturned()
 [source]
 ----
-SET cellList TO new List<Cell> with 3 new Cells
-CALL setCells(cellList)
-EXPECT db.del() TO HAVE BEEN CALLED 1 TIMES
-EXPECT db.sadd() TO HAVE BEEN CALLED 3 TIMES
-EXPECT db.hmset() TO HAVE BEEN CALLED 3 TIMES
-EXPECT db.bgsave() TO HAVE BEEN CALLED 1 TIMES
+CALL getCells()
+EXPECT db.get() TO HAVE BEEN CALLED 36 TIMES
+EXPECT db.hget() TO HAVE BEEN CALLED 100 TIMES
 ----
 
 ===== Persistence - ObstacleRepositoryRedis
@@ -91,7 +70,19 @@ SET position TO new Position(0,0)
 ----
 
 ====== TU
-testSetObstacle(position)
+getObstaclesList_requestToGetObstaclesList_ObstaclesListCorrectlyReturned()
+[source]
+----
+SET obstacleList TO new List<Position> with 3 new Cells
+CALL getObstacleList()
+EXPECT obstacleList[0] = (0:1)
+EXPECT obstacleList[1] = (2:3)
+EXPECT obstacleList[2] = (4:5)
+EXPECT db.lindex() TO HAVE BEEN CALLED 3 TIMES
+----
+
+====== TU
+setObstacle_ObstaclePosition_ObstacleSuccessfullyAddedToDB()
 [source]
 ----
 CALL setObstacle(position)
@@ -100,7 +91,7 @@ EXPECT db.bgsave() TO HAVE BEEN CALLED 1 TIMES
 ----
 
 ====== TU
-testDelObstacle(position)
+delObstacle_ObstaclePosition_ObstacleSuccessfullyDeletedToDB()
 [source]
 ----
 CALL delObstacle(position)
@@ -109,7 +100,7 @@ EXPECT db.bgsave() TO HAVE BEEN CALLED 1 TIMES
 ----
 
 ====== TU
-testCheckObstacle(position)
+checkObstacle_ObstaclePosition_ReturnTrueOrFalse()
 [source]
 ----
 CALL checkObstacle(position)
@@ -118,16 +109,6 @@ CALL checkObstacle('(1,1)')
 EXPECT test.checkObstacle() = 'false'
 EXPECT db.lpos() TO HAVE BEEN CALLED 2 TIMES
 ----
-
-====== TU
-testGetObstacleList()
-[source]
-----
-SET obs TO ['(0,1)','(2,3)','(4,5)']
-EXPECT getObstacleList() = ['(0,1)','(2,3)','(4,5)']
-EXPECT db.lindex() TO HAVE BEEN CALLED 3 TIMES
-----
-
 
 ===== Persistence - UnitRepositoryRedis
 ====== BEFORE-EACH
@@ -141,32 +122,51 @@ SET position TO new Position(0,0)
 ----
 
 ====== TU
-testNewUnit(id, name, position)
+newUnit_NewUnitToRegister_UnitSuccessfullyAddedToDB()
 [source]
 ----
+CALL newUnit(id, name, position)
 EXPECT db.sadd() TO HAVE BEEN CALLED 1 TIMES
 EXPECT db.hmset() TO HAVE BEEN CALLED 1 TIMES
 EXPECT db.bgsave() TO HAVE BEEN CALLED 1 TIMES
 ----
 
 ====== TU
-testDelUnit(id)
+delUnit_UnitIdToDelete_UnitSuccessfullyDeletedToDB()
 [source]
 ----
+CALL delUnit(id)
+EXPECT db.del() TO HAVE BEEN CALLED 1 TIMES
 EXPECT db.srem() TO HAVE BEEN CALLED 1 TIMES
 EXPECT db.bgsave() TO HAVE BEEN CALLED 1 TIMES
 ----
 
 ====== TU
-testGetName(id)
+getUnits_requestToGetUnits_UnitsCorrectlyReturned()
 [source]
 ----
-EXPECT test.getName() = 'Unità'
+CALL getUnits()
+EXPECT db.smembers() TO HAVE BEEN CALLED 1 TIMES
+----
+
+====== TU
+getName_UnitIdToGetName_ReturnNameCorrectlyFromDB()
+[source]
+----
+EXPECT test.getName(id) = 'Unità'
 EXPECT db.hget() TO HAVE BEEN CALLED 1 TIMES
 ----
 
 ====== TU
-testGetBase(id)
+isUnit_UnitId_ReturnTrue()
+[source]
+----
+EXPECT test.isUnit(id) = true
+EXPECT db.hget() TO HAVE BEEN CALLED 1 TIMES
+----
+
+====== TU
+getBase_UnitIdToGetBase_ReturnBaseCorrectlyFromDB()
 [source]
 ----
 SET base_x TO '5'
@@ -176,59 +176,56 @@ EXPECT db.hget() TO HAVE BEEN CALLED 2 TIMES
 ----
 
 ====== TU
-testGetPosition(id)
+getPosition_UnitIdToGetPosition_ReturnPositionCorrectlyFromDB()
 [source]
 ----
 SET position_x TO '5'
 SET position_y TO '5'
-EXPECT test.getPosition() = '(5,5)'
+EXPECT test.getPosition(id) = '(5,5)'
 EXPECT db.hget() TO HAVE BEEN CALLED 2 TIMES
 ----
 
 ====== TU
-testGetUnits()
+getPoiList_UnitId_UnitPoiListCorrectlyReturned()
 [source]
 ----
-EXPECT db.smembers() TO HAVE BEEN CALLED 1 TIMES
-----
-
-====== TU
-testGetPoiList()
-[source]
-----
-SET poi:id TO ['(0,1)','(2,3)','(4,5)']
-EXPECT getPoiList(id) = ['(0,1)','(2,3)','(4,5)']
+SET poi:id TO ['(0,1)', '(2,3)', '(4,5)']
+EXPECT getPoiList(id) = ['(0,1)', '(2,3)', '(4,5)']
 EXPECT db.lindex() TO HAVE BEEN CALLED 3 TIMES
 ----
 
 ====== TU
-testSetPosition()
+setPosition_UnitIdAndNewPosition_UnitPositionSuccessfullyUpdateToDB()
 [source]
 ----
+CALL setPosition(id, position)
 EXPECT db.hmset() TO HAVE BEEN CALLED 1 TIMES
 EXPECT db.bgsave() TO HAVE BEEN CALLED 1 TIMES
 ----
 
 ====== TU
-testSetStatus()
+setStatus_UnitIdAndNewStatus_UnitStatusSuccessfullyUpdateToDB()
 [source]
 ----
+CALL setStatus(id, 0)
 EXPECT db.hset() TO HAVE BEEN CALLED 1 TIMES
 EXPECT db.bgsave() TO HAVE BEEN CALLED 1 TIMES
 ----
 
 ====== TU
-testSetError()
+setError_UnitIdAndNewError_UnitErrorSuccessfullyUpdateToDB()
 [source]
 ----
+CALL setError(id, 0)
 EXPECT db.hset() TO HAVE BEEN CALLED 1 TIMES
 EXPECT db.bgsave() TO HAVE BEEN CALLED 1 TIMES
 ----
 
 ====== TU
-testSetSpeed()
+setSpeed_UnitIdAndNewSpeed_UnitSpeedSuccessfullyUpdateToDB()
 [source]
 ----
+CALL setSpeed(id, 0)
 EXPECT db.hset() TO HAVE BEEN CALLED 1 TIMES
 EXPECT db.bgsave() TO HAVE BEEN CALLED 1 TIMES
 ----
@@ -238,11 +235,10 @@ testSetPoiList()
 [source]
 ----
 SET poiList TO ['(0,0)', '(1,1)']
+CALL setPoilist(id, poiList)
 EXPECT db.rpush() TO HAVE BEEN CALLED 2 TIMES
 EXPECT db.bgsave() TO HAVE BEEN CALLED 1 TIMES
 ----
-
-
 
 ===== Persistence - UserRepositoryRedis
 ====== BEFORE-EACH
@@ -256,24 +252,27 @@ SET admin TO true
 ----
 
 ====== TU
-testNewUser(user, password, admin)
+newUser_NewUserToRegister_UserSuccessfullyAddedToDB()
 [source]
 ----
+CALL newUser(user, password, admin)
 EXPECT db.sadd() TO HAVE BEEN CALLED 1 TIMES
 EXPECT db.hmset() TO HAVE BEEN CALLED 1 TIMES
 EXPECT db.bgsave() TO HAVE BEEN CALLED 1 TIMES
 ----
 
 ====== TU
-testDelUser(user)
+delUser_UserNameToDelete_UserSuccessfullyDeletedToDB()
 [source]
 ----
+CALL delUser(id)
 EXPECT db.srem() TO HAVE BEEN CALLED 1 TIMES
+EXPEXT db.del() TO HAVE BEEN CALLED 1 TIMES
 EXPECT db.bgsave() TO HAVE BEEN CALLED 1 TIMES
 ----
 
 ====== TU
-testGetPassword(user)
+getPassword_UserNameToGetPassword_ReturnPasswordCorrectlyFromDB()
 [source]
 ----
 EXPECT test.getPassword() = 'userPassword'
@@ -281,7 +280,7 @@ EXPECT db.hget() TO HAVE BEEN CALLED 1 TIMES
 ----
 
 ====== TU
-testIsAdmin(user)
+isAdmin_UserName_ReturnTrue()
 [source]
 ----
 EXPECT test.isAdmin() = true
@@ -289,9 +288,9 @@ EXPECT db.hget() TO HAVE BEEN CALLED 1 TIMES
 ----
 
 ====== TU
-testGetUsers()
+getUsers_requestToGetUsers_UsersCorrectlyReturned()
 [source]
 ----
+CALL getUsers()
 EXPECT db.smembers() TO HAVE BEEN CALLED 1 TIMES
 ----
-
