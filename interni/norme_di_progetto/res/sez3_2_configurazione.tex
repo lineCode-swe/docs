@@ -61,18 +61,15 @@
             \[
             \text{v}[\alpha].[\beta].[\gamma]
             \]
-            \begin{itemize}
-                \item \([\alpha]\): parte da 0 e non si resetta mai;
-                \item \([\beta]\): parte da 0 e si resetta solo ad incrementi di \([\alpha]\);
-                \item \([\gamma]\): parte da 0 e si resetta solo ad incrementi di \([\alpha]\) o \([\beta]\).
-            \end{itemize}
             Il codice assume significato diverso in caso si tratti di documentazione o software:
             \begin{itemize}
                 \item documentazione:
                 \begin{itemize}
-                    \item \([\alpha]\): numero identificativo del rilascio del documento; viene incrementato solo dal responsabile a seguito di una approvazione quando il documento è pronto per essere rilasciato;
-                    \item \([\beta]\): avanzamento rispetto alle sezioni; viene incrementato dal verificatore quando aggiunge una nuova sezione al documento;
-                    \item \([\gamma]\): avanzamento rispetto a piccole migliorie; viene incrementato dal programmatore quando svolge piccole correzioni ortografiche o di sintassi in \LaTeX.
+                	\item \([\alpha]\): indica il numero incrementale di revisione del responsabile
+                	di progetto;
+                	\item \([\beta]\): indica il numero incrementale di verifiche effettuate a partire dall'ultima revisione;
+                	\item \([\gamma]\): indica il numero di modifiche apportate al documento, che
+                	riparte da 0 dopo ogni verifica ed approvazione.
                 \end{itemize}
 
                 \item software:
