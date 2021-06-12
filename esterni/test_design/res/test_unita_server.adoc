@@ -1,3 +1,357 @@
+===== API - UiEndPoint
+====== BEFORE-EACH
+[source]
+----
+
+----
+
+====== TU
+()
+[source]
+----
+
+----
+
+===== API - UnitEndPoint
+====== BEFORE-EACH
+[source]
+----
+SET timer TO _mock_
+SET unitService TO _mock_
+SET mapService TO _mock_
+SET session TO _mock_
+SET remote TO _mock_
+SET endpoint TO new UnitEndpoint(timer, unitService, mapService)
+CALL endpoint.onOpen(session, '1')
+----
+
+====== TU
+onOpen_mockSessionAsParameter_resetTimerScheduleCalledCorrectly()
+[source]
+----
+EXPECT timer.schedule() TO HAVE BEEN CALLED 1 TIMES
+----
+
+====== TU
+onOpen_mockSessionAsParameter_connectionRefusedIdNotInDB()
+[source]
+----
+WHEN unitService.isUnit('1') = 'false'
+CALL endpoint.onOpen(session, '1')
+EXPECT session.close() TO HAVE BEEN CALLED 1 TIMES
+----
+
+====== TU
+onMessage_mockErrorFromUnit_unitServiceUpdatedWithNewError()
+[source]
+----
+SET message TO new ErrorFromUnit('1')
+CALL endpoint.onMessage(session, message)
+EXPECT unitService.newError() TO HAVE BEEN CALLED 1 TIMES
+----
+
+====== TU
+onMessage_mockObstacleListFromUnit_unitServiceUpdatedWithNewObstacleList()
+[source]
+----
+SET message TO new ObstacleListFromUnit(new ArrayList<Position>())
+CALL endpoint.onMessage(session, message)
+EXPECT mapService.newObstacleList() TO HAVE BEEN CALLED 1 TIMES
+----
+
+====== TU
+onMessage_mockPathRequestFromUnit_pathCalculated()
+[source]
+----
+SET message TO new PathRequestFromUnit()
+CALL endpoint.onMessage(session, message)
+EXPECT mapService.getNextPath() TO HAVE BEEN CALLED 1 TIMES
+----
+
+====== TU
+onMessage_mockPositionFromUnit_unitServiceUpdatedWithNewPosition()
+[source]
+----
+SET message TO new PositionFromUnit('(0,0)')
+CALL endpoint.onMessage(session, message)
+EXPECT unitService.newPosition() TO HAVE BEEN CALLED 1 TIMES
+----
+
+====== TU
+onMessage_mockSpeedFromUnit_unitServiceUpdatedWithNewSpeed()
+[source]
+----
+SET message TO new SpeedFromUnit('50')
+CALL endpoint.onMessage(session, message)
+EXPECT unitService.newSpeed() TO HAVE BEEN CALLED 1 TIMES
+----
+
+====== TU
+onMessage_mockStatusFromUnit_unitServiceUpdatedWithNewStatus()
+[source]
+----
+SET message TO new StatusFromUnit(UnitStatus.BASE)
+CALL endpoint.onMessage(session, message)
+EXPECT unitService.newStatus() TO HAVE BEEN CALLED 1 TIMES
+----
+
+====== TU
+sendStart_mockSession_StartSentToUnit()
+[source]
+----
+
+----
+
+====== TU
+sendStop_mockSession_StopSentToUnit()
+[source]
+----
+
+----
+
+====== TU
+sendShutdown_mockSession_ShutdownSentToUnit()
+[source]
+----
+
+----
+
+====== TU
+sendBase_mockSession_ShutdownSentToUnit()
+[source]
+----
+
+----
+
+====== TU
+closeConnection_mockSession_ConnectionClosed()
+[source]
+----
+
+----
+
+===== Business - MapServiceImpl
+====== BEFORE-EACH
+[source]
+----
+SET map TO _mock_
+SET unitRepo TO _mock_
+SET obsRepo TO _mock_
+SET mapRepo TO _mock_
+SET mapSignal TO _mock_
+SET obstacleSignal TO _mock_
+SET test TO new MapServiceImpl(unitRepo, obsRepo, mapRepo, mapSignal, obstaclesSignal)
+SET test.map TO map
+----
+
+====== TU
+newMap_StringWithAllTypeOfCells_Calculated()
+[source]
+----
+SET lista TO new List<Cell> with (6*2) new Cells
+SET mappa TO new String(">_^<BP\nxx>_^+")
+CALL test.newMap(mappa)
+EXPECT mapSignal.emit() TO HAVE BEEN CALLED 1 TIMES
+EXPECT new Grid(6*2) = test.getMap().getCells()
+----
+
+====== TU
+isValid_BetweenRangeXAndY_ReturnTrue()
+[source]
+----
+WHEN (map.getLength() = '5') AND (map.getHeight() = '5')
+EXPECT test.isValid('3', '3') = true
+----
+
+====== TU
+isValid_ValueOutsideRangeX_ReturnFalse()
+[source]
+----
+WHEN (map.getLength() = '5') AND (map.getHeight() = '5')
+EXPECT test.isValid('6', '4') = false
+----
+
+====== TU
+isValid_ValueOutsideRangeY_ReturnFalse()
+[source]
+----
+WHEN (map.getLength() = '5') AND (map.getHeight() = '5')
+EXPECT test.isValid('4', '6') = false
+----
+
+====== TU
+addNeighbors_CellDirectionAll_ReturnAll()
+[source]
+----
+SET expectedList TO ['(4,5)', '(6,5)', '(5,4)', '(5,6)']
+WHEN (map.getLength() = '10') AND (map.getHeight() = '10')
+WHEN (cellina.getPosition() = '(5,5)') AND (cellina.getDirection() = 'ALL')
+CALL addNeighbors(cellina, inputList)
+EXPECT inputList = expectedList
+----
+
+====== TU
+addNeighbors_CellDirectionRight_ReturnAllExceptLeft()
+[source]
+----
+SET expectedList TO ['(6,5)', '(5,4)', '(5,6)']
+WHEN (map.getLength() = '10') AND (map.getHeight() = '10')
+WHEN (cellina.getPosition() = '(5,5)') AND (cellina.getDirection() = 'RIGHT')
+CALL addNeighbors(cellina, inputList)
+EXPECT inputList = expectedList
+----
+
+====== TU
+addNeighbors_CellDirectionLeft_ReturnAllExceptRight()
+[source]
+----
+SET expectedList TO ['(4,5)', '(5,4)', '(5,6)']
+WHEN (map.getLength() = '10') AND (map.getHeight() = '10')
+WHEN (cellina.getPosition() = '(5,5)') AND (cellina.getDirection() = 'LEFT')
+CALL addNeighbors(cellina, inputList)
+EXPECT inputList = expectedList
+----
+
+====== TU
+addNeighbors_CellDirectionUP_ReturnAllExceptDown()
+[source]
+----
+SET expectedList TO ['(4,5)', '(6,5)', '(5,4)']
+WHEN (map.getLength() = '10') AND (map.getHeight() = '10')
+WHEN (cellina.getPosition() = '(5,5)') AND (cellina.getDirection() = 'UP')
+CALL addNeighbors(cellina, inputList)
+EXPECT inputList = expectedList
+----
+
+====== TU
+addNeighbors_CellDirectionDown_ReturnAllExceptUp()
+[source]
+----
+SET expectedList TO ['(4,5)', '(6,5)', '(5,6)']
+WHEN (map.getLength() = '10') AND (map.getHeight() = '10')
+WHEN (cellina.getPosition() = '(5,5)') AND (cellina.getDirection() = 'DOWN')
+CALL addNeighbors(cellina, inputList)
+EXPECT inputList = expectedList
+----
+
+====== TU
+addNeighbors_CellDirectionNone_ReturnNone()
+[source]
+----
+SET expectedList TO []
+WHEN (map.getLength() = '10') AND (map.getHeight() = '10')
+WHEN (cellina.getPosition() = '(5,5)') AND (cellina.getDirection() = 'NONE')
+CALL addNeighbors(cellina, inputList)
+EXPECT inputList = expectedList
+----
+
+====== TU
+getNeighbor_AllNeighbors_ReturnNeighbors()
+[source]
+----
+WHEN (map.getLength() = '10') AND (map.getHeight() = '10')
+SET cell TO '(2,2)'
+SET distance = '5'
+SET distances[][] = {{1,1,1,1},{1,1,5,1},{1,1,1,1},{1,1,1,1}}
+EXPECT test.getNeighbors(cell, distance, distances) = '(1,2)'
+----
+
+====== TU
+getNeighbor_NoNeighbor_ReturnNull()
+[source]
+----
+WHEN (map.getLength() = '10') AND (map.getHeight() = '10')
+SET cell TO '(2,2)'
+SET distance = '5'
+SET distances[][] = {{1,1,1,1},{1,1,1,1},{1,1,1,1},{1,1,1,1}}
+EXPECT test.getNeighbors(cell, distance, distances) = null
+----
+
+====== TU
+getPath_OnlyFreeCells_Calculated()
+[source]
+----
+SET test.newMap TO '+++++\n+++++\n+++++'
+SET cell TO '(0,0)'
+SET path TO new ArrayList()
+EXPECT test.getPath(cell, '(4,2)', path) = '6'
+----
+
+====== TU
+getPath_OnlyLockedAndFreeCells_Calculated()
+[source]
+----
+SET test.newMap TO '+xxxx\n+++xx\n+++++\nxxxx+'
+SET cell TO '(0,0)'
+SET path TO new ArrayList()
+EXPECT test.getPath(cell, '(4,3)', path) = '7'
+----
+
+====== TU
+getPath_MapWithAllTypesOfCells_Calculated()
+[source]
+----
+SET test.newMap TO '_xxxx\n+xxxx\n+xxxx\n^+xxx'
+SET cell TO '(0,0)'
+SET path TO new ArrayList()
+EXPECT test.getPath(cell, '(1,3)', path) = '4'
+----
+
+====== TU
+newObstacleList_ListOfObstacles_EmitSignal()
+[source]
+----
+SET mockObstacles TO _mock_
+CALL test.newObstacleList(mockObstacles)
+EXPECT obstacleSignal.emit() TO HAVE BEEN CALLED 1 TIMES
+----
+
+===== Business - UserServiceImplTest
+====== BEFORE-EACH
+[source]
+----
+SET test TO new UserServiceImpl(_mock_, _mock_)
+----
+
+====== TU
+login_Admin_ReturnAdminAUTH()
+[source]
+----
+WHEN (test.repo.getPassword('ciao') = 'password') AND (test.repo.isAdmin('ciao') = 'true')
+EXPECT test.login('ciao', 'password') = AuthStatus.ADMIN
+----
+
+====== TU
+login_NoAuth_ReturnNoAuth()
+[source]
+----
+WHEN (test.repo.getPassword('ciao') = 'password') AND (test.repo.isAdmin('ciao') = 'true')
+EXPECT test.login('ciao', 'passwor') = AuthStatus.NO_AUTH
+----
+
+====== TU
+login_Auth_ReturnAuth()
+[source]
+----
+WHEN (test.repo.getPassword('ciao') = 'password') AND (test.repo.isAdmin('ciao') = 'false')
+EXPECT test.login('ciao', 'password') = AuthStatus.AUTH
+----
+
+===== Business - UserTest
+====== BEFORE-EACH
+[source]
+----
+SET admin TO new User('Valton', 'true')
+SET notAdmin TO new User('Achimetto', 'false')
+----
+
+====== TU
+testGetUsername()
+[source]
+----
+EXPECT admin.getUsername() = 'Valton'
+----
+
 ===== Persistence - MapRepositoryRedis
 ====== BEFORE-EACH
 [source]
@@ -11,8 +365,8 @@ SET cell TO new Cell((0,0),false,false,RIGHT,false)
 getLength_requestToGetLength_LengthCorrectlyReturned()
 [source]
 ----
-CALL getLength()
-EXPECT length = '5'
+WHEN db.get('length') = '5'
+EXPECT getLength() = '5'
 EXPECT db.get() TO HAVE BEEN CALLED 1 TIMES
 ----
 
@@ -20,8 +374,8 @@ EXPECT db.get() TO HAVE BEEN CALLED 1 TIMES
 getHeight_requestToGetHeight_HeightCorrectlyReturned()
 [source]
 ----
-CALL getHeight()
-EXPECT height = '5'
+WHEN db.get('height') = '5'
+EXPECT getHeight() = '5'
 EXPECT db.get() TO HAVE BEEN CALLED 1 TIMES
 ----
 
@@ -41,6 +395,7 @@ EXPECT db.hget() TO HAVE BEEN CALLED 4 TIMES
 setCells_LengthHeightCellList_DeleteExistingCellsAndSetNewCellListToDB()
 [source]
 ----
+WHEN (db.get('length') = '5') AND (db.get('height') = '5')
 SET cellList TO new List<Cell> with 4 new Cells
 CALL setCells(cellList, 2, 2)
 EXPECT db.get() TO HAVE BEEN CALLED 36 TIMES
@@ -54,6 +409,7 @@ EXPECT db.bgsave() TO HAVE BEEN CALLED 1 TIMES
 getCells_requestToGetCellList_CellListCorrectlyReturned()
 [source]
 ----
+WHEN (db.get('length') = '5') AND (db.get('height') = '5')
 CALL getCells()
 EXPECT db.get() TO HAVE BEEN CALLED 36 TIMES
 EXPECT db.hget() TO HAVE BEEN CALLED 100 TIMES
@@ -74,10 +430,8 @@ getObstaclesList_requestToGetObstaclesList_ObstaclesListCorrectlyReturned()
 [source]
 ----
 SET obstacleList TO new List<Position> with 3 new Cells
-CALL getObstacleList()
-EXPECT obstacleList[0] = (0:1)
-EXPECT obstacleList[1] = (2:3)
-EXPECT obstacleList[2] = (4:5)
+WHEN obstacleList = ['(0:1)', '(2:3)', '(4:5)']
+EXPECT getObstacleList() = ['(0:1)', '(2:3)', '(4:5)']
 EXPECT db.lindex() TO HAVE BEEN CALLED 3 TIMES
 ----
 
@@ -105,7 +459,7 @@ checkObstacle_ObstaclePosition_ReturnTrueOrFalse()
 ----
 CALL checkObstacle(position)
 EXPECT test.checkObstacle() = 'true'
-CALL checkObstacle('(1,1)')
+CALL checkObstacle('(1:1)')
 EXPECT test.checkObstacle() = 'false'
 EXPECT db.lpos() TO HAVE BEEN CALLED 2 TIMES
 ----
@@ -169,8 +523,7 @@ EXPECT db.hget() TO HAVE BEEN CALLED 1 TIMES
 getBase_UnitIdToGetBase_ReturnBaseCorrectlyFromDB()
 [source]
 ----
-SET base_x TO '5'
-SET base_y TO '5'
+WHEN (db.hget(id, 'base_x') = '5') AND (db.hget(id, 'base_y') = '5')
 EXPECT test.getBase() = '(5,5)'
 EXPECT db.hget() TO HAVE BEEN CALLED 2 TIMES
 ----
@@ -179,8 +532,7 @@ EXPECT db.hget() TO HAVE BEEN CALLED 2 TIMES
 getPosition_UnitIdToGetPosition_ReturnPositionCorrectlyFromDB()
 [source]
 ----
-SET position_x TO '5'
-SET position_y TO '5'
+WHEN (db.hget(id, 'position_x') = '5') AND (db.hget(id, 'position_y') = '5')
 EXPECT test.getPosition(id) = '(5,5)'
 EXPECT db.hget() TO HAVE BEEN CALLED 2 TIMES
 ----
@@ -189,7 +541,7 @@ EXPECT db.hget() TO HAVE BEEN CALLED 2 TIMES
 getPoiList_UnitId_UnitPoiListCorrectlyReturned()
 [source]
 ----
-SET poi:id TO ['(0,1)', '(2,3)', '(4,5)']
+WHEN poi:id = ['(0,1)', '(2,3)', '(4,5)']
 EXPECT getPoiList(id) = ['(0,1)', '(2,3)', '(4,5)']
 EXPECT db.lindex() TO HAVE BEEN CALLED 3 TIMES
 ----
