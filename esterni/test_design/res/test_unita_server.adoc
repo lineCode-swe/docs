@@ -99,7 +99,13 @@ EXPECT unitService.newStatus() TO HAVE BEEN CALLED 1 TIMES
 sendStart_mockSession_StartSentToUnit()
 [source]
 ----
-
+WHEN unitService.isUnit('1') = true
+WHEN mapService.getNextPath('1') = new Position('1','1')
+CALL endpoint.onOpen(session, '1')
+CALL endpoint.sendStart('1')
+SET captor = forClass(StartToUnit.class)
+EXPECT remote.sendObject() TO HAVE BEEN CALLED 1 TIMES
+...
 ----
 
 ====== TU
@@ -127,7 +133,10 @@ sendBase_mockSession_ShutdownSentToUnit()
 closeConnection_mockSession_ConnectionClosed()
 [source]
 ----
-
+WHEN unitService.isUnit('1') = true
+CALL endpoint.onOpen(session, '1')
+CALL endpoint.closeConnection('1')
+EXPECT session.close() TO HAVE BEEN CALLED 1 TIMES
 ----
 
 ===== Business - MapServiceImpl
