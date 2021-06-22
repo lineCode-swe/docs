@@ -1,19 +1,12 @@
 
 Nelle varie sezioni di questo capitolo è riportato il preventivo per ogni fase di lavoro del progetto con un riepilogo finale.\\
-\\Le 5 fasi previste sono:
+\\Le 6 fasi previste sono:
 \begin{enumerate}
 	\item Analisi dei requisiti;
 	\item Analisi di dettaglio;
 	\item Codifica \glock{Technlogy Baseline};
-	\item Incrementi, suddivisi in:
-	\begin{itemize}
-		\item Incremento I - Incremento II;
-		\item Incremento III;
-		\item Incremento IV - Incremento V;
-		\item Incremento VI - Incremento VII;
-		\item Incremento VIII - Incremento IX;
-		
-	\end{itemize}
+	\item Progettazione architetturale;
+	\item Codifica e test, suddivisi in cinque incrementi:
 	\item Validazione.
 \end{enumerate}
 Ognuna di esse è specificata come segue:
@@ -104,13 +97,13 @@ In molte delle tabelle e figure proposte, i ruoli sono stati abbreviati in quest
 				\begin{tabular} { m{3.5cm} c c c c c c c }
 					\rowcolor{lightgray}
 					\textbf{Nome} & \textbf{Re} & \textbf{Am} & \textbf{An} & \textbf{Pg} & \textbf{Pr} & \textbf{Ve} & \textbf{Totale} \\
-					Matteo Alba & 2 & 0&0 & 0&0 & 4 & \textbf{6} \\
-					Giacomo Bulbarelli & 0& 2 & 4 &0 & 0&0 & \textbf{6} \\
-					Alessandro Chimetto &0& 5 & 1 &0 &0 &0 & \textbf{6} \\
-					Alessandro Dindinelli & 3 &0 & 1 &0 &0 & 2 & \textbf{6} \\
-					Lucia Fenu & 1 &0 & 3 &0 & 0& 2 & \textbf{6} \\
-					Paolo Scanferlato &0 & 0& 2 & 0&0 & 4 & \textbf{6} \\
-					Valton Tahiraj & 0& 0& 3 &0 & 0& 3 & \textbf{6} \\
+					Matteo Alba & 2 & 0 & 0 & 0 & 0 & 4 & 6 \\
+					Giacomo Bulbarelli & 0 & 2 & 4 & 0 & 0 & 0 & 6 \\
+					Alessandro Chimetto & 0 & 5 & 1 & 0 & 0 & 0 & 6 \\
+					Alessandro Dindinelli & 3 & 0 & 1 & 0 & 0 & 2 & 6 \\
+					Lucia Fenu & 1 & 0 & 3 & 0 & 0 & 2 & 6 \\
+					Paolo Scanferlato & 0 & 0 & 2 & 0 & 0 & 4 & 6 \\
+					Valton Tahiraj & 0 & 0 & 3 & 0 & 0 & 3 & 6 \\
 					\textbf{Ore totali Ruolo} & \textbf{6} & \textbf{7} & \textbf{14} & \textbf{0} & \textbf{0}& \textbf{15} & \textbf{42}
 				\end{tabular}
 				\caption{Preventivo - Analisi di dettaglio - ore per persona/ruolo}
@@ -163,13 +156,13 @@ In molte delle tabelle e figure proposte, i ruoli sono stati abbreviati in quest
 				\begin{tabular} { m{3.5cm} c c c c c c c }
 					\rowcolor{lightgray}
 					\textbf{Nome} & \textbf{Re} & \textbf{Am} & \textbf{An} & \textbf{Pg} & \textbf{Pr} & \textbf{Ve} & \textbf{Totale} \\
-					Matteo Alba & 8 &0 & 5 & 3 & 5 & 6 & \textbf{27} \\
-					Giacomo Bulbarelli & 3 & 0& 5 & 7 & 5 & 7 & \textbf{27} \\
-					Alessandro Chimetto & 0& 2 & 4 & 6 & 6 & 9 & \textbf{27} \\
-					Alessandro Dindinelli & 2 & 4 & 0& 7 & 7 & 7 & \textbf{27} \\
-					Lucia Fenu &0 & 2 & 2 & 7 & 7 & 9 & \textbf{27} \\
-					Paolo Scanferlato & 2 & 3 & 3 & 6 & 4 & 9 & \textbf{27} \\
-					Valton Tahiraj &0 & 3 & 4 & 3 & 6 & 11 & \textbf{27} \\
+					Matteo Alba & 8 &0 & 5 & 3 & 5 & 6 & 27 \\
+					Giacomo Bulbarelli & 3 & 0& 5 & 7 & 5 & 7 & 27 \\
+					Alessandro Chimetto & 0& 2 & 4 & 6 & 6 & 9 & 27 \\
+					Alessandro Dindinelli & 2 & 4 & 0& 7 & 7 & 7 & 27 \\
+					Lucia Fenu &0 & 2 & 2 & 7 & 7 & 9 & 27 \\
+					Paolo Scanferlato & 2 & 3 & 3 & 6 & 4 & 9 & 27 \\
+					Valton Tahiraj &0 & 3 & 4 & 3 & 6 & 11 & 27 \\
 					\textbf{Ore totali Ruolo} & \textbf{15} & \textbf{14} & \textbf{23} & \textbf{39} & \textbf{40}& \textbf{58} & \textbf{189}
 				\end{tabular}
 				\caption{Preventivo - Codifica \glock{Technlogy Baseline} - ore per persona/ruolo}
@@ -210,11 +203,68 @@ In molte delle tabelle e figure proposte, i ruoli sono stati abbreviati in quest
 			\caption{Preventivo - Codifica \glock{Technlogy Baseline} - costo per ruolo} 
 		\end{figure}
 	
+	
 \newpage
 
+\subsection{Progettazione architetturale}
+\subsubsection{Prospetto orario}
 
+\begin{table} [h!]
+	\rowcolors{2}{gray!25}{gray!6}
+	\begin{center}
+		\begin{tabular} { m{3.5cm} c c c c c c c }
+			\rowcolor{lightgray}
+			\textbf{Nome} & \textbf{Re} & \textbf{Am} & \textbf{An} & \textbf{Pg} & \textbf{Pr} & \textbf{Ve} & \textbf{Totale} \\
+			Matteo Alba & 0 & 2 & 2 & 13 & 0 & 3 & 20 \\
+			Giacomo Bulbarelli & 0 & 0 & 0 & 17 & 0 & 3 & 20 \\
+			Alessandro Chimetto & 0 & 0 & 2 & 16 & 0 & 2 & 20 \\
+			Alessandro Dindinelli & 0 & 2 & 2 & 16 & 0 & 0 & 20 \\
+			Lucia Fenu & 2 & 0 & 0 & 16 & 0 & 2 & 20 \\
+			Paolo Scanferlato & 2 & 0 & 0 & 16 & 0 & 2 & 20 \\
+			Valton Tahiraj & 0 & 0 & 0 & 17 & 0 & 3 & 20 \\
+			\textbf{Ore totali Ruolo} & \textbf{4} & \textbf{4} & \textbf{6} & \textbf{111} & \textbf{0}& \textbf{15} & \textbf{140}
+		\end{tabular}
+		\caption{Preventivo - Progettazione architetturale - ore per persona/ruolo}
+	\end{center}
+\end{table}
 
-\subsection{Incremento I - Incremento II}
+\begin{figure} [h!]
+	\centering
+	\includegraphics[width=0.8\textwidth]{res/img/grafici/consolidamento_dei_requisiti_ore_ruolo.jpg}
+	\caption{Preventivo - Progettazione architetturale -ore per persona/ruolo} 
+\end{figure}
+
+\newpage
+
+\subsubsection{Prospetto economico}
+
+\begin{table} [h!] % QUESTA RICHIEDE \usepackage{eurosym} IN config.tex
+	\rowcolors{2}{gray!25}{gray!6}
+	\begin{center}
+		\begin{tabular} { m{3cm} >{\centering}m{1.5cm} c }
+			\rowcolor{lightgray}
+			\textbf{Ruolo} & \textbf{Ore} & \textbf{Costo in \euro} \\
+			Responsabile & 4 & 120,00 \\
+			Amministratore & 4 & 80,00 \\
+			Analista & 6 & 150,00 \\
+			Progettista & 111 & 2442,00 \\
+			Programmatore & 0 & 0,00 \\
+			Verificatore & 15 & 225,00 \\
+			\textbf{Totale} & \textbf{140} & \textbf{3017,00} \\
+		\end{tabular}
+		\caption{Preventivo - Progettazione architetturale - costo per ruolo}
+	\end{center}
+\end{table}
+
+\begin{figure} [h!]
+	\centering
+	\includegraphics[width=0.8\textwidth]{res/img/grafici/consolidamento_dei_requisiti_costi.jpg}
+	\caption{Preventivo - Progettazione architetturale - costo per ruolo} 
+\end{figure}
+
+\newpage
+
+\subsection{Incremento I}
 \subsubsection{Prospetto orario}
 
 	\begin{table} [h!]
@@ -223,22 +273,22 @@ In molte delle tabelle e figure proposte, i ruoli sono stati abbreviati in quest
 		\begin{tabular} { m{3.5cm} c c c c c c c }
 			\rowcolor{lightgray}
 			\textbf{Nome} & \textbf{Re} & \textbf{Am} & \textbf{An} & \textbf{Pg} & \textbf{Pr} & \textbf{Ve} & \textbf{Totale} \\
-			Matteo Alba & 0&2 & 0& 0&4 & 4 & 10 \\
-			Giacomo Bulbarelli & 0& 0& 0& 4 & 3 & 3 & 10 \\
-			Alessandro Chimetto & 0& 0& 0& 5 & 3 & 3 & 10 \\
-			Alessandro Dindinelli & 0& 0& 0& 3 & 5 &2 & 10 \\
-			Lucia Fenu & 0& 0& 0& 4 & 3 & 3 & 10 \\
-			Paolo Scanferlato &2 & 0& 0& 3 & 3 & 2 & 10 \\
-			Valton Tahiraj & 2& 0&2 & 0& 4 & 2 & 10 \\
-			\textbf{Ore totali Ruolo} & \textbf{4} & \textbf{2} & \textbf{2} & \textbf{19} & \textbf{25}& \textbf{18} & \textbf{70}
+			Matteo Alba & 1 & 0 & 0 & 0 & 3 & 3 & 7 \\
+			Giacomo Bulbarelli & 1 & 0 & 0 & 0 & 4 & 2 & 7 \\
+			Alessandro Chimetto & 0 & 0 & 0 & 1 & 4 & 2 & 7 \\
+			Alessandro Dindinelli & 0 & 0 & 1 & 0 & 4 & 2 & 7 \\
+			Lucia Fenu & 0 & 2 & 0 & 1 & 4 & 0 & 7 \\
+			Paolo Scanferlato & 0 & 0 & 0 & 1 & 2 & 4 & 7 \\
+			Valton Tahiraj & 0 & 0 & 0 & 1 & 4 & 2 & 7 \\
+			\textbf{Ore totali Ruolo} & \textbf{2} & \textbf{2} & \textbf{1} & \textbf{4} & \textbf{25}& \textbf{15} & \textbf{49}
 		\end{tabular}
-		\caption{Preventivo - Incremento I - Incremento II - ore per persona/ruolo}
+		\caption{Preventivo - Incremento I - ore per persona/ruolo}
 	\end{center}
 \end{table}
 	\begin{figure} [h!]
 	\centering
 	\includegraphics[width=0.8\textwidth]{res/img/preventivi/1e2-barre.png}
-	\caption{Preventivo - Incremento I - Incremento II - ore per persona/ruolo} 
+	\caption{Preventivo - Incremento I - ore per persona/ruolo} 
 \end{figure}
 
 \newpage
@@ -250,27 +300,27 @@ In molte delle tabelle e figure proposte, i ruoli sono stati abbreviati in quest
 		\begin{tabular} { m{3cm} >{\centering}m{1.5cm} c }
 			\rowcolor{lightgray}
 			\textbf{Ruolo} & \textbf{Ore} & \textbf{Costo in \euro} \\
-			Responsabile &4 & 120,00 \\
+			Responsabile & 2 & 60,00 \\
 			Amministratore & 2 & 40,00 \\
-			Analista &2 &50,00 \\
-			Progettista & 19 & 418,00 \\
+			Analista & 1 & 25,00 \\
+			Progettista & 4 & 88,00 \\
 			Programmatore & 25 & 375,00 \\
-			Verificatore & 18 & 270,00 \\
-			\textbf{Totale} & \textbf{70} & \textbf{1273,00} \\
+			Verificatore & 15 & 225,00 \\
+			\textbf{Totale} & \textbf{49} & \textbf{813,00} \\
 		\end{tabular}
-		\caption{Preventivo - Incremento I - Incremento II - costo per ruolo}
+		\caption{Preventivo - Incremento I - costo per ruolo}
 	\end{center}
 \end{table}
 
 \begin{figure} [h!]
 	\centering
 	\includegraphics[width=0.8\textwidth]{res/img/preventivi/1e2-torta.png}
-	\caption{Preventivo - Incremento I - Incremento II - costo per ruolo} 
+	\caption{Preventivo - Incremento I - costo per ruolo} 
 \end{figure}
 
 
 \newpage
-\subsection{Incremento III}
+\subsection{Incremento II}
 \subsubsection{Prospetto orario}
 
 	\begin{table} [h!]
@@ -279,21 +329,75 @@ In molte delle tabelle e figure proposte, i ruoli sono stati abbreviati in quest
 		\begin{tabular} { m{3.5cm} c c c c c c c }
 			\rowcolor{lightgray}
 			\textbf{Nome} & \textbf{Re} & \textbf{Am} & \textbf{An} & \textbf{Pg} & \textbf{Pr} & \textbf{Ve} & \textbf{Totale} \\
-			Matteo Alba & 0& 0& 0& 4& 0& 5& 9 \\
-			Giacomo Bulbarelli & 0& 3& 0& 2& 4& 0& 9 \\
-			Alessandro Chimetto & 0& 0& 2& 0& 4& 3& 9 \\
-			Alessandro Dindinelli & 3& 0& 0& 0& 4&2 & 9 \\
-			Lucia Fenu & 0& 0& 0& 4 & 5 & 0 & 9 \\
-			Paolo Scanferlato &0 & 0& 0& 4 & 5 & 0 & 9 \\
-			Valton Tahiraj & 0& 0&0 &4 & 0 & 5 & 9 \\
-			\textbf{Ore totali Ruolo} & \textbf{3} & \textbf{3} & \textbf{2} & \textbf{18} & \textbf{22}& \textbf{15} & \textbf{63}
+			Matteo Alba & 0 & 2 & 1 & 0 & 3 & 1 & 7 \\
+			Giacomo Bulbarelli & 0 & 0 & 0 & 0 & 5 & 1 & 6 \\
+			Alessandro Chimetto & 1 & 0 & 0 & 0 & 4 & 2 & 7 \\
+			Alessandro Dindinelli & 0 & 0 & 0 & 1 & 4 & 2 & 7 \\
+			Lucia Fenu & 0 & 0 & 0 & 0 & 4 & 3 & 7 \\
+			Paolo Scanferlato & 0 & 1 & 0 & 0 & 5 & 1 & 7 \\
+			Valton Tahiraj & 0 & 0 & 0 & 1 & 2 & 4 & 7 \\
+			\textbf{Ore totali Ruolo} & \textbf{1} & \textbf{3} & \textbf{1} & \textbf{2} & \textbf{27}& \textbf{14} & \textbf{48}
+		\end{tabular}
+		\caption{Preventivo - Incremento II - ore per persona/ruolo}
+	\end{center}
+\end{table}
+\begin{figure} [h!]
+	\centering
+	\includegraphics[width=0.8\textwidth]{res/img/preventivi/3-barre.png}
+	\caption{Preventivo - Incremento II - ore per persona/ruolo} 
+\end{figure}
+
+\newpage
+
+\subsubsection{Prospetto economico}
+	\begin{table} [h!] % QUESTA RICHIEDE \usepackage{eurosym} IN config.tex
+	\rowcolors{2}{gray!25}{gray!6}
+	\begin{center}
+		\begin{tabular} { m{3cm} >{\centering}m{1.5cm} c }
+			\rowcolor{lightgray}
+			\textbf{Ruolo} & \textbf{Ore} & \textbf{Costo in \euro} \\
+			Responsabile &1 & 30,00 \\
+			Amministratore & 3 & 60,00 \\
+			Analista &1 & 25,00 \\
+			Progettista & 2 & 44,00 \\
+			Programmatore & 27 & 405,00 \\
+			Verificatore & 14 & 210,00 \\
+			\textbf{Totale} & \textbf{48} & \textbf{774,00} \\
+		\end{tabular}
+		\caption{Preventivo - Incremento II - costo per ruolo}
+	\end{center}
+\end{table}
+
+\begin{figure} [h!]
+	\centering
+	\includegraphics[width=0.8\textwidth]{res/img/preventivi/3-torta.png}
+	\caption{Preventivo - Incremento II - costo per ruolo} 
+\end{figure}
+\newpage
+\subsection{Incremento III}
+\subsubsection{Prospetto orario}
+
+\begin{table} [h!]
+	\rowcolors{2}{gray!25}{gray!6}
+	\begin{center}
+		\begin{tabular} { m{3.5cm} c c c c c c c }
+			\rowcolor{lightgray}
+			\textbf{Nome} & \textbf{Re} & \textbf{Am} & \textbf{An} & \textbf{Pg} & \textbf{Pr} & \textbf{Ve} & \textbf{Totale} \\
+			Matteo Alba & 0 & 1 & 1 & 0 & 4 & 2 & 8 \\
+			Giacomo Bulbarelli & 0 & 1 & 0 & 1 & 4 & 2 & 8 \\
+			Alessandro Chimetto & 0 & 0 & 0 & 0 & 4 & 3 & 7 \\
+			Alessandro Dindinelli & 0 & 0 & 0 & 0 & 4 & 3 & 7 \\
+			Lucia Fenu & 1 & 0 & 0 & 0 & 3 & 3 & 7 \\
+			Paolo Scanferlato & 0 & 0 & 0 & 0 & 4 & 3 & 7 \\
+			Valton Tahiraj & 0 & 0 & 0 & 1 & 5 & 1 & 7 \\
+			\textbf{Ore totali Ruolo} & \textbf{1} & \textbf{2} & \textbf{1} & \textbf{2} & \textbf{28}& \textbf{17} & \textbf{51}
 		\end{tabular}
 		\caption{Preventivo - Incremento III - ore per persona/ruolo}
 	\end{center}
 \end{table}
 \begin{figure} [h!]
 	\centering
-	\includegraphics[width=0.8\textwidth]{res/img/preventivi/3-barre.png}
+	\includegraphics[width=0.8\textwidth]{res/img/preventivi/4e5-barre.png}
 	\caption{Preventivo - Incremento III - ore per persona/ruolo} 
 \end{figure}
 
@@ -306,79 +410,25 @@ In molte delle tabelle e figure proposte, i ruoli sono stati abbreviati in quest
 		\begin{tabular} { m{3cm} >{\centering}m{1.5cm} c }
 			\rowcolor{lightgray}
 			\textbf{Ruolo} & \textbf{Ore} & \textbf{Costo in \euro} \\
-			Responsabile &3 & 90,00 \\
-			Amministratore & 3 & 60,00 \\
-			Analista &2 &50,00 \\
-			Progettista & 18 & 396,00 \\
-			Programmatore & 22 & 330,00 \\
-			Verificatore & 15 & 225,00 \\
-			\textbf{Totale} & \textbf{63} & \textbf{1151,00} \\
-		\end{tabular}
-		\caption{Preventivo - Incremento I - Incremento II - costo per ruolo}
-	\end{center}
-\end{table}
-
-\begin{figure} [h!]
-	\centering
-	\includegraphics[width=0.8\textwidth]{res/img/preventivi/3-torta.png}
-	\caption{Preventivo - Incremento III - costo per ruolo} 
-\end{figure}
-\newpage
-\subsection{Incremento IV - Incremento V}
-\subsubsection{Prospetto orario}
-
-\begin{table} [h!]
-	\rowcolors{2}{gray!25}{gray!6}
-	\begin{center}
-		\begin{tabular} { m{3.5cm} c c c c c c c }
-			\rowcolor{lightgray}
-			\textbf{Nome} & \textbf{Re} & \textbf{Am} & \textbf{An} & \textbf{Pg} & \textbf{Pr} & \textbf{Ve} & \textbf{Totale} \\
-			Matteo Alba &2 &0 & 0& 5 &5 & 0 & 12 \\
-			Giacomo Bulbarelli & 0 &0 & 0& 2 & 5 & 5 & 12 \\
-			Alessandro Chimetto & 0 & 2& 0& 5 & 5 & 0& 12 \\
-			Alessandro Dindinelli & 0& 0 & 2& 4 & 3 &3 & 12 \\
-			Lucia Fenu & 2 & 0 &0 & 3 & 3 & 4 & 12 \\
-			Paolo Scanferlato &0 & 0 &0 & 3 & 4 & 5 & 12\\
-			Valton Tahiraj & 0& 0 &0 & 4 & 5 & 3 & 12 \\
-			\textbf{Ore totali Ruolo} & \textbf{4} & \textbf{2} & \textbf{2} & \textbf{26} & \textbf{30}& \textbf{20} & \textbf{84}
-		\end{tabular}
-		\caption{Preventivo - Incremento IV - Incremento V - ore per persona/ruolo}
-	\end{center}
-\end{table}
-\begin{figure} [h!]
-	\centering
-	\includegraphics[width=0.8\textwidth]{res/img/preventivi/4e5-barre.png}
-	\caption{Preventivo - Incremento IV - Incremento V - ore per persona/ruolo} 
-\end{figure}
-
-\newpage
-
-\subsubsection{Prospetto economico}
-	\begin{table} [h!] % QUESTA RICHIEDE \usepackage{eurosym} IN config.tex
-	\rowcolors{2}{gray!25}{gray!6}
-	\begin{center}
-		\begin{tabular} { m{3cm} >{\centering}m{1.5cm} c }
-			\rowcolor{lightgray}
-			\textbf{Ruolo} & \textbf{Ore} & \textbf{Costo in \euro} \\
-			Responsabile &4 & 120,00 \\
+			Responsabile & 1 & 30,00 \\
 			Amministratore & 2 & 40,00 \\
-			Analista &2 &50,00 \\
-			Progettista & 26 & 572,00 \\
-			Programmatore & 30 & 450,00 \\
-			Verificatore & 20 & 300,00 \\
-			\textbf{Totale} & \textbf{63} & \textbf{1532,00} \\
+			Analista & 1 & 25,00 \\
+			Progettista & 2 & 44,00 \\
+			Programmatore & 28 & 420,00 \\
+			Verificatore & 17 & 255,00 \\
+			\textbf{Totale} & \textbf{51} & \textbf{814,00} \\
 		\end{tabular}
-		\caption{Preventivo - Incremento IV - Incremento V - costo per ruolo}
+		\caption{Preventivo - Incremento III - costo per ruolo}
 	\end{center}
 \end{table}
 
 \begin{figure} [h!]
 	\centering
 	\includegraphics[width=0.8\textwidth]{res/img/preventivi/4e5-torta.png}
-	\caption{Preventivo - Incremento IV - Incremento V - costo per ruolo} 
+	\caption{Preventivo - Incremento III - costo per ruolo} 
 \end{figure}
 \newpage
-\subsection{Incremento VI - Incremento VII}
+\subsection{Incremento IV}
 \subsubsection{Prospetto orario}
 
 \begin{table} [h!]
@@ -387,22 +437,22 @@ In molte delle tabelle e figure proposte, i ruoli sono stati abbreviati in quest
 		\begin{tabular} { m{3.5cm} c c c c c c c }
 			\rowcolor{lightgray}
 			\textbf{Nome} & \textbf{Re} & \textbf{Am} & \textbf{An} & \textbf{Pg} & \textbf{Pr} & \textbf{Ve} & \textbf{Totale} \\
-			Matteo Alba &0 &0 & 2& 0 &5 & 3 & 10 \\
-			Giacomo Bulbarelli & 2&0 & 0& 3 & 5 & 0 & 10 \\
-			Alessandro Chimetto & 2 & 0& 0& 3 & 0 & 5& 10 \\
-			Alessandro Dindinelli & 0& 0 & 0& 4 & 3 &3 & 10 \\
-			Lucia Fenu & 0 & 0 &0 & 5 & 5 & 0 & 10 \\
-			Paolo Scanferlato &0 & 0 &0 & 4 & 3 & 3 & 10\\
-			Valton Tahiraj & 0& 2 &0 & 0 & 4 & 4 & 10 \\
-			\textbf{Ore totali Ruolo} & \textbf{4} & \textbf{2} & \textbf{2} & \textbf{19} & \textbf{25}& \textbf{18} & \textbf{70}
+			Matteo Alba & 0 & 2 & 0 & 0 & 3 & 1 & 6 \\
+			Giacomo Bulbarelli & 1 & 0 & 1 & 1 & 1 & 3 & 7 \\
+			Alessandro Chimetto & 0 & 0 & 0 & 0 & 3 & 4 & 7 \\
+			Alessandro Dindinelli & 0 & 0 & 0 & 0 & 5 & 2 & 7 \\
+			Lucia Fenu & 0 & 0 & 0 & 1 & 4 & 2 & 7 \\
+			Paolo Scanferlato & 0 & 1 & 0 & 0 & 4 & 2 & 7 \\
+			Valton Tahiraj & 0 & 0 & 0 & 0 & 5 & 2 & 7 \\
+			\textbf{Ore totali Ruolo} & \textbf{1} & \textbf{3} & \textbf{1} & \textbf{2} & \textbf{25}& \textbf{16} & \textbf{48}
 		\end{tabular}
-		\caption{Preventivo - Incremento VI - Incremento VII - ore per persona/ruolo}
+		\caption{Preventivo - Incremento IV - ore per persona/ruolo}
 	\end{center}
 \end{table}
 \begin{figure} [h!]
 	\centering
 	\includegraphics[width=0.8\textwidth]{res/img/preventivi/6e7-barre.png}
-	\caption{Preventivo - Incremento VI - Incremento VII - ore per persona/ruolo} 
+	\caption{Preventivo - Incremento IV - ore per persona/ruolo} 
 \end{figure}
 
 \newpage
@@ -414,25 +464,25 @@ In molte delle tabelle e figure proposte, i ruoli sono stati abbreviati in quest
 		\begin{tabular} { m{3cm} >{\centering}m{1.5cm} c }
 			\rowcolor{lightgray}
 			\textbf{Ruolo} & \textbf{Ore} & \textbf{Costo in \euro} \\
-			Responsabile &4 & 120,00 \\
-			Amministratore & 2 & 40,00 \\
-			Analista &2 &50,00 \\
-			Progettista & 19 & 418,00 \\
+			Responsabile & 1 & 30,00 \\
+			Amministratore & 3 & 60,00 \\
+			Analista & 1 & 25,00 \\
+			Progettista & 2 & 44,00 \\
 			Programmatore & 25 & 375,00 \\
-			Verificatore &18 & 270,00 \\
-			\textbf{Totale} & \textbf{70} & \textbf{1273,00} \\
+			Verificatore & 16 & 240,00 \\
+			\textbf{Totale} & \textbf{70} & \textbf{774,00} \\
 		\end{tabular}
-		\caption{Preventivo - Incremento VI - Incremento VII - costo per ruolo}
+		\caption{Preventivo - Incremento IV - costo per ruolo}
 	\end{center}
 \end{table}
 
 \begin{figure} [h!]
 	\centering
 	\includegraphics[width=0.8\textwidth]{res/img/preventivi/6e7-torta.png}
-	\caption{Preventivo - Incremento VI - Incremento VII - costo per ruolo} 
+	\caption{Preventivo - Incremento IV - costo per ruolo} 
 \end{figure}
 \newpage
-\subsection{Incremento VIII - Incremento IX}
+\subsection{Incremento V}
 \subsubsection{Prospetto orario}
 
 \begin{table} [h!]
@@ -441,22 +491,22 @@ In molte delle tabelle e figure proposte, i ruoli sono stati abbreviati in quest
 		\begin{tabular} { m{3.5cm} c c c c c c c }
 			\rowcolor{lightgray}
 			\textbf{Nome} & \textbf{Re} & \textbf{Am} & \textbf{An} & \textbf{Pg} & \textbf{Pr} & \textbf{Ve} & \textbf{Totale} \\
-			Matteo Alba &0 &3 & 0& 3 &2 & 4 & 12 \\
-			Giacomo Bulbarelli & 0&3 & 0& 3 & 2 & 4 & 12 \\
-			Alessandro Chimetto & 2 & 2& 3& 0 & 0 & 5& 12 \\
-			Alessandro Dindinelli & 0& 4 & 0& 3 & 2 &3 & 12 \\
-			Lucia Fenu & 0& 4 & 0& 3 & 2 &3 & 12 \\
-			Paolo Scanferlato &3 & 4 &0 & 0 & 0 & 5 & 12\\
-			Valton Tahiraj & 3& 0 &2 & 2 & 0 & 5 & 12 \\
-			\textbf{Ore totali Ruolo} & \textbf{8} & \textbf{20} & \textbf{5} & \textbf{14} & \textbf{8}& \textbf{29} & \textbf{84}
+			Matteo Alba & 0 & 1 & 0 & 0 & 0 & 2 & 3 \\
+			Giacomo Bulbarelli & 0 & 3 & 0 & 0 & 0 & 0 & 3 \\
+			Alessandro Chimetto & 1 & 2 & 0 & 0 & 0 & 0 & 3 \\
+			Alessandro Dindinelli & 0 & 2 & 0 & 0 & 0 & 1 & 3 \\
+			Lucia Fenu & 1 & 2 & 0 & 0 & 0 & 0 & 3 \\
+			Paolo Scanferlato & 0 & 3 & 0 & 0 & 0 & 0 & 3 \\
+			Valton Tahiraj & 0 & 2 & 0 & 0 & 0 & 1 & 3 \\
+			\textbf{Ore totali Ruolo} & \textbf{2} & \textbf{15} & \textbf{0} & \textbf{0} & \textbf{0}& \textbf{4} & \textbf{21}
 		\end{tabular}
-		\caption{Preventivo - Incremento VIII - Incremento IX - ore per persona/ruolo}
+		\caption{Preventivo - Incremento V - ore per persona/ruolo}
 	\end{center}
 \end{table}
 \begin{figure} [h!]
 	\centering
 	\includegraphics[width=0.8\textwidth]{res/img/preventivi/8e9-barre.png}
-	\caption{Preventivo - Incremento VIII - Incremento IX - ore per persona/ruolo} 
+	\caption{Preventivo - Incremento V - ore per persona/ruolo} 
 \end{figure}
 
 \newpage
@@ -467,24 +517,25 @@ In molte delle tabelle e figure proposte, i ruoli sono stati abbreviati in quest
 		\begin{tabular} { m{3cm} >{\centering}m{1.5cm} c }
 			\rowcolor{lightgray}
 			\textbf{Ruolo} & \textbf{Ore} & \textbf{Costo in \euro} \\
-			Responsabile &8 & 240,00 \\
-			Amministratore & 20 & 400,00 \\
-			Analista &5 &125,00 \\
-			Progettista & 14 & 308,00 \\
-			Programmatore & 8 & 120,00 \\
-			Verificatore &29 & 435,00 \\
-			\textbf{Totale} & \textbf{84} & \textbf{1628,00} \\
+			Responsabile & 2 & 60,00 \\
+			Amministratore & 15 & 300,00 \\
+			Analista & 0 & 0,00 \\
+			Progettista & 0 & 0,00 \\
+			Programmatore & 0 & 0,00 \\
+			Verificatore & 4 & 60,00 \\
+			\textbf{Totale} & \textbf{21} & \textbf{420,00} \\
 		\end{tabular}
-		\caption{Preventivo - Incremento VIII - Incremento IX  - costo per ruolo}
+		\caption{Preventivo - Incremento V  - costo per ruolo}
 	\end{center}
 \end{table}
 
 \begin{figure} [h!]
 	\centering
 	\includegraphics[width=0.8\textwidth]{res/img/preventivi/8e9-torta.png}
-	\caption{Preventivo - Incremento VIII - Incremento IX  - costo per ruolo} 
+	\caption{Preventivo - Incremento V  - costo per ruolo} 
 \end{figure}
 \newpage
+
 \subsection{Validazione e collaudo}
 
 	\subsubsection{Prospetto orario}
@@ -495,14 +546,14 @@ In molte delle tabelle e figure proposte, i ruoli sono stati abbreviati in quest
 				\begin{tabular} { m{3.5cm} c c c c c c c }
 					\rowcolor{lightgray}
 					\textbf{Nome} & \textbf{Re} & \textbf{Am} & \textbf{An} & \textbf{Pg} & \textbf{Pr} & \textbf{Ve} & \textbf{Totale} \\
-					Matteo Alba & 0& 0&0 & 5 & 5 & 13 & \textbf{23} \\
-					Giacomo Bulbarelli & 4 & 0&0 & 3 & 8 & 8 & \textbf{23} \\
-					Alessandro Chimetto & 7 & 0& 0& 5 & 5 & 6 & \textbf{23} \\
-					Alessandro Dindinelli &0 & 4 &0 & 5 & 5 & 9 & \textbf{23} \\
-					Lucia Fenu & 4 & 6 & 0& 3 & 2 & 8 & \textbf{23} \\
-					Paolo Scanferlato &0 & 4 & 0& 5 & 6 & 8 & \textbf{23} \\
-					Valton Tahiraj &0 & 8 &0 & 5 & 6 & 4 & \textbf{23} \\
-					\textbf{Ore totali Ruolo} & \textbf{15} & \textbf{22} & \textbf{0} & \textbf{31} & \textbf{37}& \textbf{56} & \textbf{161}
+					Matteo Alba & 0 & 0 & 0 & 4 & 6 & 13 & 23 \\
+					Giacomo Bulbarelli & 3 & 0 & 0 & 3 & 8 & 9 & 23 \\
+					Alessandro Chimetto & 4 & 0 & 0 & 5 & 7 & 7 & 23 \\
+					Alessandro Dindinelli & 0 & 4 & 0 & 4 & 6 & 9 & 23 \\
+					Lucia Fenu & 2 & 6 & 0 & 3 & 2 & 10 & 23 \\
+					Paolo Scanferlato & 2 & 4 & 0 & 4 & 6 & 7 & \textbf{23} \\
+					Valton Tahiraj & 0 & 8 & 0 & 4 & 6 & 5 & \textbf{23} \\
+					\textbf{Ore totali Ruolo} & \textbf{11} & \textbf{22} & \textbf{0} & \textbf{27} & \textbf{41}& \textbf{60} & \textbf{161}
 				\end{tabular}
 				\caption{Preventivo - Validazione e collaudo - ore per persona/ruolo}
 			\end{center}
@@ -524,13 +575,13 @@ In molte delle tabelle e figure proposte, i ruoli sono stati abbreviati in quest
 				\begin{tabular} { m{3cm} >{\centering}m{1.5cm} c }
 					\rowcolor{lightgray}
 					\textbf{Ruolo} & \textbf{Ore} & \textbf{Costo in \euro} \\
-					Responsabile & 15 & 450,00 \\
+					Responsabile & 11 & 330,00 \\
 					Amministratore & 22 & 440,00 \\
-					Analista & 0&0 \\
-					Progettista & 31 & 682,00 \\
-					Programmatore & 37 & 555,00 \\
-					Verificatore & 56 & 840,00 \\
-					\textbf{Totale} & \textbf{161} & \textbf{2967,00} \\
+					Analista & 0 & 0 \\
+					Progettista & 27 & 594,00 \\
+					Programmatore & 41 & 615,00 \\
+					Verificatore & 60 & 900,00 \\
+					\textbf{Totale} & \textbf{161} & \textbf{2879,00} \\
 				\end{tabular}
 				\caption{Preventivo - Validazione e Collaudo - costo per ruolo}
 			\end{center}
@@ -554,14 +605,14 @@ In molte delle tabelle e figure proposte, i ruoli sono stati abbreviati in quest
 				\begin{tabular} { m{3.5cm} c c c c c c c }
 					\rowcolor{lightgray}
 					\textbf{Nome} & \textbf{Re} & \textbf{Am} & \textbf{An} & \textbf{Pg} & \textbf{Pr} & \textbf{Ve} & \textbf{Totale} \\
-					Matteo Alba & 12 & 13 & 15 & 20 & 26& 49 & 135 \\
-					Giacomo Bulbarelli & 16 & 14 & 17 & 24 & 32 & 32 & 135 \\
-					Alessandro Chimetto & 18 & 11 & 21 & 24 & 23 & 38 & 135 \\
-					Alessandro Dindinelli & 8 & 16 & 15 & 26 & 29 & 41 & 135 \\
-					Lucia Fenu & 7 & 18 & 15 & 29 & 27 & 39 & 135 \\
-					Paolo Scanferlato & 12 & 18 & 11 & 25 & 25 & 44 & 135 \\
-					Valton Tahiraj & 11 & 18 & 18 & 18 & 25 & 45 & 135 \\
-					\textbf{Ore totali Ruolo} & \textbf{84} & \textbf{108} & \textbf{112} & \textbf{166} & \textbf{187}& \textbf{288} & \textbf{945}
+					Matteo Alba & 11 & 16 & 17 & 20 & 24 & 45 & 133 \\
+					Giacomo Bulbarelli & 15 & 12 & 18 & 29 & 27 & 32 & 133 \\
+					Alessandro Chimetto & 13 & 9 & 18 & 28 & 28 & 37 & 133 \\
+					Alessandro Dindinelli & 5 & 16 & 16 & 28 & 30 & 38 & 133 \\
+					Lucia Fenu & 7 & 18 & 15 & 28 & 24 & 41 & 133 \\
+					Paolo Scanferlato & 11 & 19 & 11 & 27 & 25 & 40 & 133 \\
+					Valton Tahiraj & 6 & 18 & 14 & 27 & 28 & 40 & 133 \\
+					\textbf{Ore totali Ruolo} & \textbf{68} & \textbf{108} & \textbf{109} & \textbf{187} & \textbf{186}& \textbf{273} & \textbf{931}
 				\end{tabular}
 				\caption{Preventivo - Ore totali per persona/ruolo}
 			\end{center}
@@ -583,13 +634,13 @@ In molte delle tabelle e figure proposte, i ruoli sono stati abbreviati in quest
 				\begin{tabular} { m{3cm} >{\centering}m{1.5cm} c }
 					\rowcolor{lightgray}
 					\textbf{Ruolo} & \textbf{Ore} & \textbf{Costo in \euro} \\
-					Responsabile & 84 & 2520,00 \\
+					Responsabile & 68 & 2040,00 \\
 					Amministratore & 108 & 2160,00 \\
-					Analista & 112 & 2800,00 \\
-					Progettista & 166 & 3652,00 \\
-					Programmatore & 187 & 2805,00 \\
-					Verificatore & 288 & 4320,00 \\
-					\textbf{Totale} & \textbf{945} & \textbf{18257,00} \\
+					Analista & 109 & 2725,00 \\
+					Progettista & 187 & 4114,00 \\
+					Programmatore & 186 & 2790,00 \\
+					Verificatore & 273 & 4095,00 \\
+					\textbf{Totale} & \textbf{931} & \textbf{17924,00} \\
 				\end{tabular}
 				\caption{Preventivo - Costo totale per ruolo}
 			\end{center}
@@ -611,14 +662,14 @@ In molte delle tabelle e figure proposte, i ruoli sono stati abbreviati in quest
 				\begin{tabular} { m{3.5cm} c c c c c c c }
 					\rowcolor{lightgray}
 					\textbf{Nome} & \textbf{Re} & \textbf{Am} & \textbf{An} & \textbf{Pg} & \textbf{Pr} & \textbf{Ve} & \textbf{Totale} \\
-					Matteo Alba & 10 & 5 & 7 & 20 & 26 & 35 & 103 \\
-					Giacomo Bulbarelli & 9 & 6 & 5 & 24 & 32 & 27 & 103 \\
-					Alessandro Chimetto & 11 & 6 & 9 & 24 & 23 & 30 & 103 \\
-					Alessandro Dindinelli & 5 & 12 & 2 & 26 & 29 & 29 & 103 \\
-					Lucia Fenu & 6 & 12 & 2 & 29 & 27 & 27 & 103 \\
-					Paolo Scanferlato & 7 & 11 & 3 & 25 & 25 & 32 & 103 \\
-					Valton Tahiraj & 5 & 13 & 8 & 18 & 25 & 34 & 103 \\
-					\textbf{Ore totali Ruolo} & \textbf{53} & \textbf{65} & \textbf{36} & \textbf{166} & \textbf{187}& \textbf{214} & \textbf{721}
+					Matteo Alba & 9 & 8 & 9 & 20 & 24 & 31 & 101 \\
+					Giacomo Bulbarelli & 8 & 4 & 6 & 29 & 27 & 27 & 101 \\
+					Alessandro Chimetto & 6 & 4 & 6 & 28 & 28 & 29 & 101 \\
+					Alessandro Dindinelli & 2 & 12 & 3 & 28 & 30 & 26 & 101 \\
+					Lucia Fenu & 6 & 12 & 2 & 28 & 24 & 29 & 101 \\
+					Paolo Scanferlato & 6 & 12 & 3 & 27 & 25 & 28 & 101 \\
+					Valton Tahiraj & 0 & 13 & 4 & 27 & 28 & 29 & 101 \\
+					\textbf{Ore totali Ruolo} & \textbf{37} & \textbf{65} & \textbf{33} & \textbf{187} & \textbf{186}& \textbf{199} & \textbf{707}
 				\end{tabular}
 				\caption{Preventivo - Ore totali rendicontate per persona/ruolo}
 			\end{center}
@@ -640,13 +691,13 @@ In molte delle tabelle e figure proposte, i ruoli sono stati abbreviati in quest
 				\begin{tabular} { m{3cm} >{\centering}m{1.5cm} c }
 					\rowcolor{lightgray}
 					\textbf{Ruolo} & \textbf{Ore} & \textbf{Costo in \euro} \\
-					Responsabile & 53 & 1590,00 \\
+					Responsabile & 37 & 1110,00 \\
 					Amministratore & 65 & 1300,00 \\
-					Analista & 36 & 900,00 \\
-					Progettista & 166 & 3652,00 \\
-					Programmatore & 187 & 2805,00 \\
-					Verificatore & 214 & 3210,00 \\
-					\textbf{Totale} & \textbf{721} & \textbf{13457,00} \\
+					Analista & 33 & 825,00 \\
+					Progettista & 187 & 4114,00 \\
+					Programmatore & 186 & 2790,00 \\
+					Verificatore & 199 & 2985,00 \\
+					\textbf{Totale} & \textbf{707} & \textbf{13124,00} \\
 				\end{tabular}
 				\caption{Preventivo - Prospetto economico rendicontato per ruolo}
 			\end{center}
@@ -660,4 +711,4 @@ In molte delle tabelle e figure proposte, i ruoli sono stati abbreviati in quest
 	
 	\subsubsection{Conclusioni}
 	
-	Il costo totale a carico della Proponente è di \textbf{\euro \ 13457,00}.
+	Il costo totale a carico della Proponente è di \textbf{\euro \ 13124,00}.
