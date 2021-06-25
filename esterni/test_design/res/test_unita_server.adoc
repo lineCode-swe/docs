@@ -101,10 +101,11 @@ sendStart_mockSession_StartSentToUnit()
 ----
 WHEN unitService.isUnit('1') = true
 WHEN mapService.getNextPath('1') = new Position('1', '1')
+
 CALL endpoint.onOpen(session, '1')
 CALL endpoint.sendStart('1')
-SET captor = forClass(StartToUnit.class)
-EXPECT remote.sendObject() TO HAVE BEEN CALLED 1 TIMES
+
+EXPECT remote.sendObject() TO HAVE BEEN CALLED 1 TIMES WITH StartToUnit(path = Position('1', '1'))
 EXPECT Unit TO HAVE BEEN NOTIFIED
 ----
 
@@ -113,10 +114,11 @@ sendStop_mockSession_StopSentToUnit()
 [source]
 ----
 WHEN unitService.isUnit('1') = true
+
 CALL endpoint.onOpen(session, '1')
 CALL endpoint.sendStart('1')
-SET captor = forClass(StartToUnit.class)
-EXPECT remote.sendObject() TO HAVE BEEN CALLED 1 TIMES
+
+EXPECT remote.sendObject() TO HAVE BEEN CALLED 1 TIMES WITH CommandToUnit(command = STOP)
 EXPECT Unit TO HAVE BEEN NOTIFIED
 ----
 
@@ -125,22 +127,24 @@ sendShutdown_mockSession_ShutdownSentToUnit()
 [source]
 ----
 WHEN unitService.isUnit('1') = true
+
 CALL endpoint.onOpen(session, '1')
 CALL endpoint.sendStart('1')
-SET captor = forClass(StartToUnit.class)
-EXPECT remote.sendObject() TO HAVE BEEN CALLED 1 TIMES
+
+EXPECT remote.sendObject() TO HAVE BEEN CALLED 1 TIMES WITH CommandToUnit(command = SHUTDOWN)
 EXPECT Unit TO HAVE BEEN NOTIFIED
 ----
 
 ====== TU
-sendBase_mockSession_ShutdownSentToUnit()
+sendBase_mockSession_BaseSentToUnit()
 [source]
 ----
 WHEN unitService.isUnit('1') = true
+
 CALL endpoint.onOpen(session, '1')
 CALL endpoint.sendStart('1')
-SET captor = forClass(StartToUnit.class)
-EXPECT remote.sendObject() TO HAVE BEEN CALLED 1 TIMES
+
+EXPECT remote.sendObject() TO HAVE BEEN CALLED 1 TIMES WITH CommandToUnit(command = BASE)
 EXPECT Unit TO HAVE BEEN NOTIFIED
 ----
 
@@ -149,8 +153,10 @@ closeConnection_mockSession_ConnectionClosed()
 [source]
 ----
 WHEN unitService.isUnit('1') = true
+
 CALL endpoint.onOpen(session, '1')
 CALL endpoint.closeConnection('1')
+
 EXPECT session.close() TO HAVE BEEN CALLED 1 TIMES
 ----
 
