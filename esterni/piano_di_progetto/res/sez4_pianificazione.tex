@@ -266,127 +266,104 @@ L'unico ruolo che non verrà ricoperto durante l'intera attività, è il ruolo d
 \newpage
 
  \subsection{Incrementi}
- Di seguito la pianificazione si baserà sugli incrementi ognuno dei quali ha una data di fine e di inizio. Alcuni incrementi potranno essere eseguiti in parallelo ed assegnati ad un sottogruppo appositamente creato. \\
-  L'obiettivo di ogni incremento è creare nuove funzionalità e, di fatti; la loro realizzazione è affine ai requisti funzionali ed i relativi test descritti rispettivamente in \dext{Analisi dei requisiti v2.0.0} e \dext{Piano di qualifica v2.0.0}.\\
- Tale pianificazione apporta una nuova stesura dei preventivi.
+ Di seguito la pianificazione si baserà sugli incrementi ognuno dei quali ha una data di inizio e fine.\\
+  L'obiettivo di ogni incremento è creare nuove funzionalità e, la loro realizzazione, è affine alla progettazione realizzata e validata.
+  Il gruppo verrà suddiviso nei tre sottogruppi precedente descritti.
+  
+  \begin{table} [h!]
+  	\begin{center}
+  		\rowcolors{2}{gray!25}{gray!6}
+  		\begin{tabular} { m{4cm}  m{11cm}  }	
+  			\multicolumn{2}{c}{	\textbf{Incremento I: dal 10-05-2021 al 16-05-2021}} \\
+  			\rowcolor{lightgray}
+  			\textbf{Assegnatari} & \textbf{Funzionalità} \\
+  			Gruppo UI & Codifica Model\\
+  			Gruppo Server & Codifica Business layer\\
+  			Gruppo Unità & Codifica dello strato di persistenza\\	
+  		\end{tabular}
+  		\caption{Incremento I}
+  	\end{center}
+  \end{table}
 
- \subsubsection{Incremento I}
-  \begin{itemize}
-  	\item \textbf{Periodo}: dal 22-03-2021 al 29-03-2021;
-  	\item \textbf{Assegnatari}: Gruppo I;
-  	\item \textbf{Funzionalità}:
-  		\begin{itemize}
-  		\item creazione lista utenti;
-  		\item creazione lista unità.
-  	    \end{itemize}
-  \end{itemize}
+ \begin{table} [h!]
+ 	\begin{center}
+ 		\rowcolors{2}{gray!25}{gray!6}
+ 		\begin{tabular} { m{4cm}  m{11cm}  }	
+ 			\multicolumn{2}{c}{	\textbf{Incremento II: dal 17-05-2021 al 23-05-2021}} \\
+ 			\rowcolor{lightgray}
+ 			\textbf{Assegnatari} & \textbf{Funzionalità} \\
+ 			Gruppo UI & \begin{itemize}
+ 				\item Codifica \glock{WebSocket}
+ 				\item Creazione interfaccia login/logout
+ 				\item Realizzazione dei permessi per ogni utente
+ 			\end{itemize}\\		
+ 			Gruppo Server & \begin{itemize}
+ 				\item Codifica Persistance layer
+ 				\item Creazione Database
+ 			\end{itemize}\\		
+ 			Gruppo Unità & \begin{itemize}
+ 				\item Codifica Business logic
+ 				\item Codifica UnitEngine
+ 			\end{itemize}\\		
+ 		\end{tabular}
+ 		\caption{Incremento II}
+ 	\end{center}
+ \end{table}
 
- \subsubsection{Incremento II}
- \begin{itemize}
- 	\item \textbf{Periodo}: dal 22-03-2021 al 29-03-2021;
- 	\item \textbf{Assegnatari}: Gruppo II;
- 	\item \textbf{Funzionalità}:
- 	\begin{itemize}
- 		\item creazione interfaccia Login/Logout.
- 	\end{itemize}
- \end{itemize}
+ \begin{table} [h!]
+	\begin{center}
+		\rowcolors{2}{gray!25}{gray!6}
+		\begin{tabular} { m{4cm}  m{11cm}  }	
+			\multicolumn{2}{c}{	\textbf{Incremento III: dal 24-05-2021 al 30-05-2021}} \\
+			\rowcolor{lightgray}
+			\textbf{Assegnatari} & \textbf{Funzionalità} \\
+			Gruppo UI & \begin{itemize}
+				\item Creazione interfaccia delle tabelle per l'inserimento di unità e utenti
+				\item Codifica MapComponent	
+			\end{itemize}\\		
+			Gruppo Server & Codifica API\\
+			Gruppo Unità & Codifica Presentation layer per il server centrale
+		
+		\end{tabular}
+		\caption{Incremento III}
+	\end{center}
+\end{table}
 
-\subsubsection{Incremento III}
-\begin{itemize}
-	\item \textbf{Periodo}: dal 30-03-2021 al 06-04-2021;
-	\item \textbf{Assegnatari}: tutto il gruppo;
-	\item \textbf{Funzionalità}:
-	\begin{itemize}
-		\item definizione realizzazione dei permessi:
-		\begin{itemize}
-			\item tra diversi tipi di utenti;
-			\item rapporto utenti ed unità;
-			\item tra utenti e sistema.
-		\end{itemize}
-	\end{itemize}
-\end{itemize}
+\begin{table} [h!]
+	\begin{center}
+		\rowcolors{2}{gray!25}{gray!6}
+		\begin{tabular} { m{4cm}  m{11cm}  }	
+			\multicolumn{2}{c}{	\textbf{Incremento IV: dal 31-05-2021 al 06-06-2021}} \\
+			\rowcolor{lightgray}
+			\textbf{Assegnatari} & \textbf{Funzionalità} \\
+			Gruppo UI & Implementazione Messagge To/From Server\\	
+			Gruppo Server & \begin{itemize}
+				\item Implementazione Messagge To/From UI
+				\item Implementazione Messagge To/From Unit
+			\end{itemize}\\		
+			Gruppo Unità & Test sulle componenti\\
+			
+		\end{tabular}
+		\caption{Incremento IV}
+	\end{center}
+\end{table}
 
-
- \subsubsection{Incremento IV}
-\begin{itemize}
-	\item \textbf{Periodo}: dal 07-04-2021 al 17-04-2021;
-	\item \textbf{Assegnatari}: Gruppo I;
-	\item \textbf{Funzionalità}:
-	\begin{itemize}
-	\item coda ordini: ogni unità ha una coda che rappresenta i punti di interesse in cui stazionare per eseguire ogni ordine.
-	\end{itemize}
-\end{itemize}
-
- \subsubsection{Incremento V}
-\begin{itemize}
-	\item \textbf{Periodo}: dal 07-04-2021 al 17-04-2021;
-	\item \textbf{Assegnatari}: Gruppo II;
-	\item \textbf{Funzionalità}:
-	\begin{itemize}
-		\item ostacoli accidentali: l'unità è in grado di ricevere un nuovo percorso nel momento in cui è in grado di rilevare un ostacolo non previsto.
-	\end{itemize}
-\end{itemize}
-\subsubsection{Incremento VI}
-\begin{itemize}
-	\item \textbf{Periodo}: dal 20-04-2021 al 27-04-2021;
-	\item \textbf{Assegnatari}: Gruppo I;
-	\item \textbf{Funzionalità}:
-	\begin{itemize}
-		\item stato unità: l'unità possiede i seguenti stati:
-		\begin{itemize}
-			\item Going to X;
-			\item Stop;
-			\item Base;
-			\item Error Y.
-		\end{itemize}
-	\end{itemize}
-\end{itemize}
-
-\subsubsection{Incremento VII}
-\begin{itemize}
-	\item \textbf{Periodo}: dal 20-04-2021 al 27-04-2021;
-	\item \textbf{Assegnatari}: Gruppo II;
-	\item \textbf{Funzionalità}:
-	\begin{itemize}
-		\item aggiornamento mappa tramite inserimento file apposito.
-	\end{itemize}
-\end{itemize}
-
-\subsubsection{Incremento VIII}
-\begin{itemize}
-	\item \textbf{Periodo}: dal 01-05-2021 al 13-05-2021;
-	\item \textbf{Assegnatari}: Gruppo I;
-	\item \textbf{Funzionalità}:
-	\begin{itemize}
-		\item stesura Manuale utente.
-	\end{itemize}
-\end{itemize}
-
-\subsubsection{Incremento IX}
-\begin{itemize}
-	\item \textbf{Periodo}: dal 01-05-2021 al 13-05-2021;
-	\item \textbf{Assegnatari}: Gruppo II;
-	\item \textbf{Funzionalità}:
-	\begin{itemize}
-		\item stesura Guida utente.
-	\end{itemize}
-\end{itemize}
-
-\newpage
-
-\begin{landscape}
-	\begin{figure}[h!]
-		\includegraphics[width=24cm]{images/4_Incrementi_1.png}
-		\caption{Pianificazione per incrementi - Prima parte}
-	\end{figure}
-
-    \begin{figure}[h!]
-        \includegraphics[width=24cm]{images/4_Incrementi_2.png}
-        \caption{Pianificazione per incrementi - Seconda parte}
-    \end{figure}
-\end{landscape}
-
-\newpage
+\begin{table} [h!]
+	\begin{center}
+		\rowcolors{2}{gray!25}{gray!6}
+		\begin{tabular} { m{4cm}  m{11cm}  }	
+			\multicolumn{2}{c}{	\textbf{Incremento V: dal 21-06-2021 al 28-06-2021}} \\
+			\rowcolor{lightgray}
+			\textbf{Assegnatari} & \textbf{Funzionalità} \\
+				Ogni Gruppo & \begin{itemize}
+				\item Prima stesura Manuale Utente
+				\item Aggiornamento della documentazione
+			\end{itemize}\\		
+			
+		\end{tabular}
+		\caption{Incremento V}
+	\end{center}
+\end{table}
 
 \subsection{Validazione e collaudo}
 L'attività di validazione e collaudo ha inizio il giorno 17-05-2021, successivamente alla revisione di qualifica, formato da un unico periodo, con termine fissato per il giorno 23-05-2021.
