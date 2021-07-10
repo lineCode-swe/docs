@@ -1,0 +1,84 @@
+
+\documentclass[]{article}
+
+\input{../../commons/config}
+
+\appendToGraphicsPath{../../commons/res/}
+\usepackage[export]{adjustbox}
+
+
+%------------------------------
+%
+% COMANDI DI CONFIGURAZIONE
+%
+%------------------------------
+
+\setTitle{Manuale del manutentore}
+
+\setVersione{0.0.0}
+
+\setDate{10-07-2021}
+
+\setResponsabile{}
+
+\setRedattori{Paolo Scanferlato \\&
+}
+
+\setVerificatori{ \\&
+}
+
+\setUso{Esterno}
+
+\setModifiche{
+	0.0.0 & Paolo Scanferlato & Amministratore & 10-07-2021 & Prima stesura
+}
+
+\begin{document}
+
+	\input{../../commons/template}
+	\newpage
+	\tableofcontents
+	\newpage
+	\listoffigures
+	\listoftables
+	\newpage
+
+	%--------------------------------
+	%
+	% IL CONTENUTO INIZIA DA QUI
+	%
+	%--------------------------------
+
+	\section{Introduzione}
+	\input{res/sez1_intro.tex}
+	\newpage
+
+	\section{Tecnologie utilizzate}
+	\input{res/sez2_tecnologie_utilizzate.tex}
+	\newpage
+
+	\section{Setup}
+	\input{res/sez3_setup.tex}
+	\newpage
+
+	\section{Test}
+	\input{res/sez4_test.tex}
+	\newpage
+
+	\section{Architettura}
+	\input{res/sez5_architettura.tex}
+	\newpage
+
+	\section{Manutenzione}
+	\input{res/sez6_manutenzione.tex}
+	\newpage
+	
+	\section{Espansione}
+	\input{res/sez7_espansione.tex}
+	\newpage
+	
+	\section{Rilascio}
+	\input{res/sez8_rilascio.tex}
+	\newpage
+	
+\end{document}
