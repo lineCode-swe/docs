@@ -11,7 +11,6 @@
 \subsection{Architettura del server}
 	Il pattern architetturale applicato alla componente server è la \textit{Layered Architecture}. \\
 	Si è scelto tale pattern in quanto la componente server risulta troppo complessa per essere destrutturata dovendo gestire i servizi di: anagrafica unità, anagrafica utente, gestione mappa, calcolo percorsi unità e gestione delle interfacce grafiche.\\
-	Inoltre, garantendo il principio di \glock{Separation of Concerns} tipico di tale architettura, diverse squadre potranno lavorare su diversi layer autonomamente.
 	Di seguito viene illustrato il diagramma dei package. Si noti che le dipendenze procedono in un'unica direzione senza creare cicli. Si noti, inoltre, che il sistema dipende dalla classe \textbf{Position} in ogni suo punto in quanto, trattando problematiche legate al movimento di un'unità in una griglia, avere un tipo di dato che rappresenti due coordinate cartesiane risulta particolarmente utile.
 
 	\begin{figure}[H]
@@ -31,13 +30,14 @@
 		Ogni messaggio viene riferito tramite la propria interfaccia in modo da slegare il sistema dall'implementazione di tali messaggi.
 	
 		\begin{landscape}
-			\begin{figure}[H]
+			\begin{figure}[]
 				\centering
 				\includegraphics[width=23cm]{img/server_from_to_ui.png}
 				\caption{Server - Messaggi da e per l'interfaccia}
 			\end{figure}
 		\end{landscape}
 		\begin{landscape}
+
 			\begin{figure}[H]
 				\centering
 				\includegraphics[width=22cm]{img/server_from_to_unit.png}
@@ -90,17 +90,12 @@
 				\item position\_x;
 				\item position\_y;
 				\item locked;
-				\item poi;
 				\item base;
 				\item direction;
+				\item poi;
 			\end{itemize}
 			\item SET con id intero incrementale degli ostacoli (key = obs);
-			\item HASH con posizione dell’ostacolo e timestamp di rilevamento (key = obs:[obs\_id]); campi dati:
-			\begin{itemize}
-				\item position\_x;
-				\item position\_y;
-				\item timestamp.
-			\end{itemize}
+			\item LIST con posizione dell’ostacolo (key = obs, valori = [coord\_x]:[coord\_y]);
 		\end{itemize}
 		
 		\begin{landscape}
@@ -143,7 +138,7 @@
 	Ogni componente che fa parte del \textit{ViewModel} rappresenta una funzionalità principale che l'interfaccia mette a disposizione all'utente.\\
 	L'aggiornamento dei dati tra gli \glock{Angular Components} ed il \glock{WebSocket} avviene tramite l'uso dei \glock{Subject} (uno per tipo) al'interno di quest'ultimo; indirizzando tali dati  ai componenti che prevedono appositi campi dati per ricevere le informazioni.\\
 	\newline
-	Di seguito illustriamo due diagrammi delle classi: il primo per descrivere il legame tra \textit{Model} e \textit{Viewmodel}, con la struttura dei vari \glock{Angular Components}, mentre la parte di \textit{View}; che comprende i templates degli \glock{Angular Components}, non viene qui rappresentata perché la struttura del codice è \glock{HTML}.
+	Di seguito due diagrammi delle classi: il primo per descrivere il legame tra \textit{Model} e \textit{Viewmodel}, con la struttura dei vari \glock{Angular Components}, mentre la parte di \textit{View}; che comprende i templates degli \glock{Angular Components}, non viene qui rappresentata perché la struttura del codice è \glock{HTML}.
 	Il secondo, invece, rappresenta i messaggi che vengono inviati e ricevuti dal server.
 	\newpage
 	
