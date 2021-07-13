@@ -1,18 +1,200 @@
-===== API - UiEndPoint
+===== API - UiEndpoint - TU[1-17]
 ====== BEFORE-EACH
 [source]
 ----
-
+SET timer TO _mock_
+SET userService TO _mock_
+SET unitService TO _mock_
+SET mapService TO _mock_
+SET session TO _mock_
+SET remote TO _mock_
+SET endpoint TO new UiEndpoint(timer, userService, unitService, mapService)
+CALL endpoint.onOpen(session)
 ----
 
-====== TU
-()
+====== TU1
+onOpen_mockSessionAsParameter_resetTimerScheduleCalledCorrectly
 [source]
 ----
-
+EXPECT timer.schedule() TO HAVE BEEN CALLED 1 TIMES
 ----
 
-===== API - UnitEndPoint
+====== TU2
+onClose_mockSessionAsParameter_resetTimerCancelledCorrectly
+[source]
+----
+CALL endpoint.onOpen(session)
+
+EXPECT timer.cancel() TO HAVE BEEN CALLED 1 TIMES
+----
+
+====== TU3
+login_validLoginFromUiReceived_AuthToUiIsSent
+[source]
+----
+SET loginToUi TO new LoginFromUi(validUser, validPassword)
+WHEN userService.login() = AUTH
+CALL endpoint.login(loginToUi)
+
+EXPECT userService.login() TO HAVE BEEN CALLED 1 TIMES
+EXPECT remote.sendObject() TO HAVE BEEN CALLED 1 TIMES WITH AuthToUi(session = AUTH)
+----
+
+====== TU4
+newUser_loggedInAsAdmin_newUserCreated
+[source]
+----
+SET userFromUi TO new UserFromUi(username, password, admin)
+WHEN endpoint.logged = ADMIN
+CALL endpoint.logout()
+
+EXPECT userService.newUser() TO HAVE BEEN CALLED 1 TIME WITH username, password, admin
+----
+
+====== TU5
+newUser_loggedInAsUser_error
+[source]
+----
+SET userFromUi TO new UserFromUi(username, password, admin)
+WHEN endpoint.logged = AUTH
+CALL endpoint.logout()
+
+EXPECT endpoint.onError() TO HAVE BEEN CALLED 1 TIME
+----
+
+====== TU6
+deleteUser_loggedInAsAdmin_userDeleted
+[source]
+----
+SET deleteUserFromUi TO new DeleteUserFromUi(id)
+WHEN endpoint.logged = ADMIN
+CALL endpoint.deleteUser(deleteUserFromUi)
+
+EXPECT userService.deleteUser() TO HAVE BEEN CALLED 1 TIME WITH id
+----
+
+====== TU7
+deleteUser_loggedInAsUser_error
+[source]
+----
+SET deleteUserFromUi TO new DeleteUserFromUi(id)
+WHEN endpoint.logged = AUTH
+CALL endpoint.deleteUser(deleteUserFromUi)
+
+EXPECT endpoint.onError() TO HAVE BEEN CALLED 1 TIME
+----
+
+====== TU8
+newMap_loggedInAsAdmin_setUpNewMap
+[source]
+----
+SET mapFromUi TO new MapFromUi(mapConfig)
+WHEN endpoint.logged = ADMIN
+CALL endpoint.newMap(mapFromUi)
+
+EXPECT mapService.newMap() TO HAVE BEEN CALLED 1 TIME WITH mapConfig
+----
+
+====== TU9
+newMap_loggedInAsUser_error
+[source]
+----
+SET mapFromUi TO new MapFromUi(mapConfig)
+WHEN endpoint.logged = AUTH
+CALL endpoint.newMap(mapFromUi)
+
+EXPECT endpoint.onError() TO HAVE BEEN CALLED 1 TIME
+----
+
+====== TU10
+unitStop_loggedInAsAdminAndRequestStop_requestedUnitStop
+[source]
+----
+SET unitStopFromUi TO new UnitStopFromUi(id, command = STOP)
+WHEN endpoint.logged = ADMIN
+CALL endpoint.unitStop(unitStopFromUi)
+
+EXPECT unitService.stop() TO HAVE BEEN CALLED 1 TIME WITH id
+----
+
+====== TU11
+unitStop_loggedInAsAdminAndRequestBase_requestedUnitBase
+[source]
+----
+SET unitStopFromUi TO new UnitStopFromUi(id, command = BASE)
+WHEN endpoint.logged = ADMIN
+CALL endpoint.unitStop(unitStopFromUi)
+
+EXPECT unitService.base() TO HAVE BEEN CALLED 1 TIME WITH id
+----
+
+====== TU12
+unitStop_loggedInAsAdminAndRequestShutdown_requestedUnitShutdown
+[source]
+----
+SET unitStopFromUi TO new UnitStopFromUi(id, command = SHUTDOWN)
+WHEN endpoint.logged = ADMIN
+CALL endpoint.unitStop(unitStopFromUi)
+
+EXPECT unitService.shutdown() TO HAVE BEEN CALLED 1 TIME WITH id
+----
+
+====== TU13
+unitStop_loggedInAsUser_error
+[source]
+----
+SET unitStopFromUi TO new UnitStopFromUi(id, command)
+WHEN endpoint.logged = AUTH
+CALL endpoint.unitStop(unitStopFromUi)
+
+EXPECT endpoint.onError() TO HAVE BEEN CALLED 1 TIME
+----
+
+====== TU14
+newUnit_loggedInAsAdmin_newUnitInserted
+[source]
+----
+SET unitFromUi TO new UnitFromUi(id, name, base)
+WHEN endpoint.logged = ADMIN
+CALL endpoint.newUnit(unitFromUi)
+
+EXPECT unitService.newUnit() TO HAVE BEEN CALLED 1 TIME WITH id, name, base
+----
+
+====== TU15
+newUnit_loggedInAsUser_error
+[source]
+----
+SET unitFromUi TO new UnitFromUi(id, name, base)
+WHEN endpoint.logged = AUTH
+CALL endpoint.newUnit(unitFromUi)
+
+EXPECT endpoint.onError() TO HAVE BEEN CALLED 1 TIME
+----
+
+====== TU16
+deleteUnit_loggedInAsAdmin_unitDeleted
+[source]
+----
+SET deleteUnitFromUi TO new DeleteUnitFromUi(id)
+WHEN endpoint.logged = ADMIN
+CALL endpoint.deleteUnit(deleteUnitFromUi)
+
+EXPECT unitService.newUnit() TO HAVE BEEN CALLED 1 TIME WITH id
+----
+
+====== TU17
+deleteUnit_loggedInAsUser_error
+[source]
+----
+SET deleteUnitFromUi TO new DeleteUnitFromUi(id)
+WHEN endpoint.logged = ADMIN
+CALL endpoint.deleteUnit(deleteUnitFromUi)
+
+EXPECT endpoint.onError() TO HAVE BEEN CALLED 1 TIME
+----
+
+===== API - UnitEndpoint - TU[18-30]
 ====== BEFORE-EACH
 [source]
 ----
@@ -25,15 +207,15 @@ SET endpoint TO new UnitEndpoint(timer, unitService, mapService)
 CALL endpoint.onOpen(session, '1')
 ----
 
-====== TU
-onOpen_mockSessionAsParameter_resetTimerScheduleCalledCorrectly()
+====== TU18
+onOpen_mockSessionAsParameter_resetTimerScheduleCalledCorrectly
 [source]
 ----
 EXPECT timer.schedule() TO HAVE BEEN CALLED 1 TIMES
 ----
 
-====== TU
-onOpen_mockSessionAsParameter_connectionRefusedIdNotInDB()
+====== TU19
+onOpen_mockSessionAsParameter_connectionRefusedIdNotInDB
 [source]
 ----
 WHEN unitService.isUnit('1') = 'false'
@@ -41,8 +223,8 @@ CALL endpoint.onOpen(session, '1')
 EXPECT session.close() TO HAVE BEEN CALLED 1 TIMES
 ----
 
-====== TU
-onMessage_mockErrorFromUnit_unitServiceUpdatedWithNewError()
+====== TU20
+onMessage_mockErrorFromUnit_unitServiceUpdatedWithNewError
 [source]
 ----
 SET message TO new ErrorFromUnit('1')
@@ -50,8 +232,8 @@ CALL endpoint.onMessage(session, message)
 EXPECT unitService.newError() TO HAVE BEEN CALLED 1 TIMES
 ----
 
-====== TU
-onMessage_mockObstacleListFromUnit_unitServiceUpdatedWithNewObstacleList()
+====== TU21
+onMessage_mockObstacleListFromUnit_unitServiceUpdatedWithNewObstacleList
 [source]
 ----
 SET message TO new ObstacleListFromUnit(new ArrayList<Position>())
@@ -59,8 +241,8 @@ CALL endpoint.onMessage(session, message)
 EXPECT mapService.newObstacleList() TO HAVE BEEN CALLED 1 TIMES
 ----
 
-====== TU
-onMessage_mockPathRequestFromUnit_pathCalculated()
+====== TU22
+onMessage_mockPathRequestFromUnit_pathCalculated
 [source]
 ----
 SET message TO new PathRequestFromUnit()
@@ -68,8 +250,8 @@ CALL endpoint.onMessage(session, message)
 EXPECT mapService.getNextPath() TO HAVE BEEN CALLED 1 TIMES
 ----
 
-====== TU
-onMessage_mockPositionFromUnit_unitServiceUpdatedWithNewPosition()
+====== TU23
+onMessage_mockPositionFromUnit_unitServiceUpdatedWithNewPosition
 [source]
 ----
 SET message TO new PositionFromUnit('(0,0)')
@@ -77,8 +259,8 @@ CALL endpoint.onMessage(session, message)
 EXPECT unitService.newPosition() TO HAVE BEEN CALLED 1 TIMES
 ----
 
-====== TU
-onMessage_mockSpeedFromUnit_unitServiceUpdatedWithNewSpeed()
+====== TU24
+onMessage_mockSpeedFromUnit_unitServiceUpdatedWithNewSpeed
 [source]
 ----
 SET message TO new SpeedFromUnit('50')
@@ -86,8 +268,8 @@ CALL endpoint.onMessage(session, message)
 EXPECT unitService.newSpeed() TO HAVE BEEN CALLED 1 TIMES
 ----
 
-====== TU
-onMessage_mockStatusFromUnit_unitServiceUpdatedWithNewStatus()
+====== TU25
+onMessage_mockStatusFromUnit_unitServiceUpdatedWithNewStatus
 [source]
 ----
 SET message TO new StatusFromUnit(UnitStatus.BASE)
@@ -95,8 +277,8 @@ CALL endpoint.onMessage(session, message)
 EXPECT unitService.newStatus() TO HAVE BEEN CALLED 1 TIMES
 ----
 
-====== TU
-sendStart_mockSession_StartSentToUnit()
+====== TU26
+sendStart_mockSession_StartSentToUnit
 [source]
 ----
 WHEN unitService.isUnit('1') = true
@@ -109,8 +291,8 @@ EXPECT remote.sendObject() TO HAVE BEEN CALLED 1 TIMES WITH StartToUnit(path = P
 EXPECT Unit TO HAVE BEEN NOTIFIED
 ----
 
-====== TU
-sendStop_mockSession_StopSentToUnit()
+====== TU27
+sendStop_mockSession_StopSentToUnit
 [source]
 ----
 WHEN unitService.isUnit('1') = true
@@ -122,8 +304,8 @@ EXPECT remote.sendObject() TO HAVE BEEN CALLED 1 TIMES WITH CommandToUnit(comman
 EXPECT Unit TO HAVE BEEN NOTIFIED
 ----
 
-====== TU
-sendShutdown_mockSession_ShutdownSentToUnit()
+====== TU28
+sendShutdown_mockSession_ShutdownSentToUnit
 [source]
 ----
 WHEN unitService.isUnit('1') = true
@@ -135,8 +317,8 @@ EXPECT remote.sendObject() TO HAVE BEEN CALLED 1 TIMES WITH CommandToUnit(comman
 EXPECT Unit TO HAVE BEEN NOTIFIED
 ----
 
-====== TU
-sendBase_mockSession_BaseSentToUnit()
+====== TU29
+sendBase_mockSession_BaseSentToUnit
 [source]
 ----
 WHEN unitService.isUnit('1') = true
@@ -148,8 +330,8 @@ EXPECT remote.sendObject() TO HAVE BEEN CALLED 1 TIMES WITH CommandToUnit(comman
 EXPECT Unit TO HAVE BEEN NOTIFIED
 ----
 
-====== TU
-closeConnection_mockSession_ConnectionClosed()
+====== TU30
+closeConnection_mockSession_ConnectionClosed
 [source]
 ----
 WHEN unitService.isUnit('1') = true
@@ -160,7 +342,7 @@ CALL endpoint.closeConnection('1')
 EXPECT session.close() TO HAVE BEEN CALLED 1 TIMES
 ----
 
-===== Business - MapServiceImpl
+===== Business - MapServiceImpl - TU[31-46]
 ====== BEFORE-EACH
 [source]
 ----
@@ -174,8 +356,8 @@ SET test TO new MapServiceImpl(unitRepo, obsRepo, mapRepo, mapSignal, obstaclesS
 SET test.map TO map
 ----
 
-====== TU
-newMap_StringWithAllTypeOfCells_Calculated()
+====== TU31
+newMap_StringWithAllTypeOfCells_Calculated
 [source]
 ----
 SET lista TO new List<Cell> with (6*2) new Cells
@@ -185,32 +367,32 @@ EXPECT mapSignal.emit() TO HAVE BEEN CALLED 1 TIMES
 EXPECT new Grid(6*2) = test.getMap().getCells()
 ----
 
-====== TU
-isValid_BetweenRangeXAndY_ReturnTrue()
+====== TU32
+isValid_BetweenRangeXAndY_ReturnTrue
 [source]
 ----
 WHEN (map.getLength() = '5') AND (map.getHeight() = '5')
 EXPECT test.isValid('3', '3') = true
 ----
 
-====== TU
-isValid_ValueOutsideRangeX_ReturnFalse()
+====== TU33
+isValid_ValueOutsideRangeX_ReturnFalse
 [source]
 ----
 WHEN (map.getLength() = '5') AND (map.getHeight() = '5')
 EXPECT test.isValid('6', '4') = false
 ----
 
-====== TU
-isValid_ValueOutsideRangeY_ReturnFalse()
+====== TU34
+isValid_ValueOutsideRangeY_ReturnFalse
 [source]
 ----
 WHEN (map.getLength() = '5') AND (map.getHeight() = '5')
 EXPECT test.isValid('4', '6') = false
 ----
 
-====== TU
-addNeighbors_CellDirectionAll_ReturnAll()
+====== TU35
+addNeighbors_CellDirectionAll_ReturnAll
 [source]
 ----
 SET expectedList TO ['(4,5)', '(6,5)', '(5,4)', '(5,6)']
@@ -220,8 +402,8 @@ CALL addNeighbors(cellina, inputList)
 EXPECT inputList = expectedList
 ----
 
-====== TU
-addNeighbors_CellDirectionRight_ReturnAllExceptLeft()
+====== TU36
+addNeighbors_CellDirectionRight_ReturnAllExceptLeft
 [source]
 ----
 SET expectedList TO ['(6,5)', '(5,4)', '(5,6)']
@@ -231,8 +413,8 @@ CALL addNeighbors(cellina, inputList)
 EXPECT inputList = expectedList
 ----
 
-====== TU
-addNeighbors_CellDirectionLeft_ReturnAllExceptRight()
+====== TU37
+addNeighbors_CellDirectionLeft_ReturnAllExceptRight
 [source]
 ----
 SET expectedList TO ['(4,5)', '(5,4)', '(5,6)']
@@ -242,8 +424,8 @@ CALL addNeighbors(cellina, inputList)
 EXPECT inputList = expectedList
 ----
 
-====== TU
-addNeighbors_CellDirectionUP_ReturnAllExceptDown()
+====== TU38
+addNeighbors_CellDirectionUP_ReturnAllExceptDown
 [source]
 ----
 SET expectedList TO ['(4,5)', '(6,5)', '(5,4)']
@@ -253,8 +435,8 @@ CALL addNeighbors(cellina, inputList)
 EXPECT inputList = expectedList
 ----
 
-====== TU
-addNeighbors_CellDirectionDown_ReturnAllExceptUp()
+====== TU39
+addNeighbors_CellDirectionDown_ReturnAllExceptUp
 [source]
 ----
 SET expectedList TO ['(4,5)', '(6,5)', '(5,6)']
@@ -264,8 +446,8 @@ CALL addNeighbors(cellina, inputList)
 EXPECT inputList = expectedList
 ----
 
-====== TU
-addNeighbors_CellDirectionNone_ReturnNone()
+====== TU40
+addNeighbors_CellDirectionNone_ReturnNone
 [source]
 ----
 SET expectedList TO []
@@ -275,8 +457,8 @@ CALL addNeighbors(cellina, inputList)
 EXPECT inputList = expectedList
 ----
 
-====== TU
-getNeighbor_AllNeighbors_ReturnNeighbors()
+====== TU41
+getNeighbor_AllNeighbors_ReturnNeighbors
 [source]
 ----
 WHEN (map.getLength() = '10') AND (map.getHeight() = '10')
@@ -286,8 +468,8 @@ SET distances[][] = {{1,1,1,1},{1,1,5,1},{1,1,1,1},{1,1,1,1}}
 EXPECT test.getNeighbors(cell, distance, distances) = '(1,2)'
 ----
 
-====== TU
-getNeighbor_NoNeighbor_ReturnNull()
+====== TU42
+getNeighbor_NoNeighbor_ReturnNull
 [source]
 ----
 WHEN (map.getLength() = '10') AND (map.getHeight() = '10')
@@ -297,8 +479,8 @@ SET distances[][] = {{1,1,1,1},{1,1,1,1},{1,1,1,1},{1,1,1,1}}
 EXPECT test.getNeighbors(cell, distance, distances) = null
 ----
 
-====== TU
-getPath_OnlyFreeCells_Calculated()
+====== TU43
+getPath_OnlyFreeCells_Calculated
 [source]
 ----
 SET test.newMap TO '+++++\n+++++\n+++++'
@@ -307,8 +489,8 @@ SET path TO new ArrayList()
 EXPECT test.getPath(cell, '(4,2)', path) = '6'
 ----
 
-====== TU
-getPath_OnlyLockedAndFreeCells_Calculated()
+====== TU44
+getPath_OnlyLockedAndFreeCells_Calculated
 [source]
 ----
 SET test.newMap TO '+xxxx\n+++xx\n+++++\nxxxx+'
@@ -317,8 +499,8 @@ SET path TO new ArrayList()
 EXPECT test.getPath(cell, '(4,3)', path) = '7'
 ----
 
-====== TU
-getPath_MapWithAllTypesOfCells_Calculated()
+====== TU45
+getPath_MapWithAllTypesOfCells_Calculated
 [source]
 ----
 SET test.newMap TO '_xxxx\n+xxxx\n+xxxx\n^+xxx'
@@ -327,8 +509,8 @@ SET path TO new ArrayList()
 EXPECT test.getPath(cell, '(1,3)', path) = '4'
 ----
 
-====== TU
-newObstacleList_ListOfObstacles_EmitSignal()
+====== TU46
+newObstacleList_ListOfObstacles_EmitSignal
 [source]
 ----
 SET mockObstacles TO _mock_
@@ -336,53 +518,38 @@ CALL test.newObstacleList(mockObstacles)
 EXPECT obstacleSignal.emit() TO HAVE BEEN CALLED 1 TIMES
 ----
 
-===== Business - UserServiceImplTest
+===== Business - UserServiceImpl - TU[47-49]
 ====== BEFORE-EACH
 [source]
 ----
 SET test TO new UserServiceImpl(_mock_, _mock_)
 ----
 
-====== TU
-login_Admin_ReturnAdminAUTH()
+====== TU47
+login_Admin_ReturnAdminAUTH
 [source]
 ----
 WHEN (test.repo.getPassword('ciao') = 'password') AND (test.repo.isAdmin('ciao') = 'true')
 EXPECT test.login('ciao', 'password') = AuthStatus.ADMIN
 ----
 
-====== TU
-login_NoAuth_ReturnNoAuth()
+====== TU48
+login_NoAuth_ReturnNoAuth
 [source]
 ----
 WHEN (test.repo.getPassword('ciao') = 'password') AND (test.repo.isAdmin('ciao') = 'true')
 EXPECT test.login('ciao', 'passwor') = AuthStatus.NO_AUTH
 ----
 
-====== TU
-login_Auth_ReturnAuth()
+====== TU49
+login_Auth_ReturnAuth
 [source]
 ----
 WHEN (test.repo.getPassword('ciao') = 'password') AND (test.repo.isAdmin('ciao') = 'false')
 EXPECT test.login('ciao', 'password') = AuthStatus.AUTH
 ----
 
-===== Business - UserTest
-====== BEFORE-EACH
-[source]
-----
-SET admin TO new User('Valton', 'true')
-SET notAdmin TO new User('Achimetto', 'false')
-----
-
-====== TU
-testGetUsername()
-[source]
-----
-EXPECT admin.getUsername() = 'Valton'
-----
-
-===== Persistence - MapRepositoryRedis
+===== Persistence - MapRepositoryRedis - TU[50-54]
 ====== BEFORE-EACH
 [source]
 ----
@@ -391,8 +558,8 @@ SET test TO new MapRepositoryRedis(db)
 SET cell TO new Cell((0,0),false,false,RIGHT,false)
 ----
 
-====== TU
-getLength_requestToGetLength_LengthCorrectlyReturned()
+====== TU50
+getLength_requestToGetLength_LengthCorrectlyReturned
 [source]
 ----
 WHEN db.get('length') = '5'
@@ -400,8 +567,8 @@ EXPECT getLength() = '5'
 EXPECT db.get() TO HAVE BEEN CALLED 1 TIMES
 ----
 
-====== TU
-getHeight_requestToGetHeight_HeightCorrectlyReturned()
+====== TU51
+getHeight_requestToGetHeight_HeightCorrectlyReturned
 [source]
 ----
 WHEN db.get('height') = '5'
@@ -409,8 +576,8 @@ EXPECT getHeight() = '5'
 EXPECT db.get() TO HAVE BEEN CALLED 1 TIMES
 ----
 
-====== TU
-getCell_LengthHeight_CellCorrectlyReturned()
+====== TU52
+getCell_LengthHeight_CellCorrectlyReturned
 [source]
 ----
 CALL getCell(0,0)
@@ -421,8 +588,8 @@ EXPECT cell.getDirection = 'RIGHT'
 EXPECT db.hget() TO HAVE BEEN CALLED 4 TIMES
 ----
 
-====== TU
-setCells_LengthHeightCellList_DeleteExistingCellsAndSetNewCellListToDB()
+====== TU53
+setCells_LengthHeightCellList_DeleteExistingCellsAndSetNewCellListToDB
 [source]
 ----
 WHEN (db.get('length') = '5') AND (db.get('height') = '5')
@@ -435,8 +602,8 @@ EXPECT db.hmset() TO HAVE BEEN CALLED 4 TIMES
 EXPECT db.bgsave() TO HAVE BEEN CALLED 1 TIMES
 ----
 
-====== TU
-getCells_requestToGetCellList_CellListCorrectlyReturned()
+====== TU54
+getCells_requestToGetCellList_CellListCorrectlyReturned
 [source]
 ----
 WHEN (db.get('length') = '5') AND (db.get('height') = '5')
@@ -445,7 +612,7 @@ EXPECT db.get() TO HAVE BEEN CALLED 36 TIMES
 EXPECT db.hget() TO HAVE BEEN CALLED 100 TIMES
 ----
 
-===== Persistence - ObstacleRepositoryRedis
+===== Persistence - ObstacleRepositoryRedis - TU[55-58]
 ====== BEFORE-EACH
 [source]
 ----
@@ -455,8 +622,8 @@ SET id TO 'obs:1'
 SET position TO new Position(0,0)
 ----
 
-====== TU
-getObstaclesList_requestToGetObstaclesList_ObstaclesListCorrectlyReturned()
+====== TU55
+getObstaclesList_requestToGetObstaclesList_ObstaclesListCorrectlyReturned
 [source]
 ----
 SET obstacleList TO new List<Position> with 3 new Cells
@@ -465,8 +632,8 @@ EXPECT getObstacleList() = ['(0:1)', '(2:3)', '(4:5)']
 EXPECT db.lindex() TO HAVE BEEN CALLED 3 TIMES
 ----
 
-====== TU
-setObstacle_ObstaclePosition_ObstacleSuccessfullyAddedToDB()
+====== TU56
+setObstacle_ObstaclePosition_ObstacleSuccessfullyAddedToDB
 [source]
 ----
 CALL setObstacle(position)
@@ -474,8 +641,8 @@ EXPECT db.rpush() TO HAVE BEEN CALLED 1 TIMES
 EXPECT db.bgsave() TO HAVE BEEN CALLED 1 TIMES
 ----
 
-====== TU
-delObstacle_ObstaclePosition_ObstacleSuccessfullyDeletedToDB()
+====== TU57
+delObstacle_ObstaclePosition_ObstacleSuccessfullyDeletedToDB
 [source]
 ----
 CALL delObstacle(position)
@@ -483,8 +650,8 @@ EXPECT db.lrem() TO HAVE BEEN CALLED 1 TIMES
 EXPECT db.bgsave() TO HAVE BEEN CALLED 1 TIMES
 ----
 
-====== TU
-checkObstacle_ObstaclePosition_ReturnTrueOrFalse()
+====== TU58
+checkObstacle_ObstaclePosition_ReturnTrueOrFalse
 [source]
 ----
 CALL checkObstacle(position)
@@ -494,7 +661,7 @@ EXPECT test.checkObstacle() = 'false'
 EXPECT db.lpos() TO HAVE BEEN CALLED 2 TIMES
 ----
 
-===== Persistence - UnitRepositoryRedis
+===== Persistence - UnitRepositoryRedis - TU[59-70]
 ====== BEFORE-EACH
 [source]
 ----
@@ -505,8 +672,8 @@ SET name TO 'Unità'
 SET position TO new Position(0,0)
 ----
 
-====== TU
-newUnit_NewUnitToRegister_UnitSuccessfullyAddedToDB()
+====== TU59
+newUnit_NewUnitToRegister_UnitSuccessfullyAddedToDB
 [source]
 ----
 CALL newUnit(id, name, position)
@@ -515,8 +682,8 @@ EXPECT db.hmset() TO HAVE BEEN CALLED 1 TIMES
 EXPECT db.bgsave() TO HAVE BEEN CALLED 1 TIMES
 ----
 
-====== TU
-delUnit_UnitIdToDelete_UnitSuccessfullyDeletedToDB()
+====== TU60
+delUnit_UnitIdToDelete_UnitSuccessfullyDeletedToDB
 [source]
 ----
 CALL delUnit(id)
@@ -525,32 +692,32 @@ EXPECT db.srem() TO HAVE BEEN CALLED 1 TIMES
 EXPECT db.bgsave() TO HAVE BEEN CALLED 1 TIMES
 ----
 
-====== TU
-getUnits_requestToGetUnits_UnitsCorrectlyReturned()
+====== TU61
+getUnits_requestToGetUnits_UnitsCorrectlyReturned
 [source]
 ----
 CALL getUnits()
 EXPECT db.smembers() TO HAVE BEEN CALLED 1 TIMES
 ----
 
-====== TU
-getName_UnitIdToGetName_ReturnNameCorrectlyFromDB()
+====== TU62
+getName_UnitIdToGetName_ReturnNameCorrectlyFromDB
 [source]
 ----
 EXPECT test.getName(id) = 'Unità'
 EXPECT db.hget() TO HAVE BEEN CALLED 1 TIMES
 ----
 
-====== TU
-isUnit_UnitId_ReturnTrue()
+====== TU63
+isUnit_UnitId_ReturnTrue
 [source]
 ----
 EXPECT test.isUnit(id) = true
 EXPECT db.hget() TO HAVE BEEN CALLED 1 TIMES
 ----
 
-====== TU
-getBase_UnitIdToGetBase_ReturnBaseCorrectlyFromDB()
+====== TU64
+getBase_UnitIdToGetBase_ReturnBaseCorrectlyFromDB
 [source]
 ----
 WHEN (db.hget(id, 'base_x') = '5') AND (db.hget(id, 'base_y') = '5')
@@ -558,8 +725,8 @@ EXPECT test.getBase() = '(5,5)'
 EXPECT db.hget() TO HAVE BEEN CALLED 2 TIMES
 ----
 
-====== TU
-getPosition_UnitIdToGetPosition_ReturnPositionCorrectlyFromDB()
+====== TU65
+getPosition_UnitIdToGetPosition_ReturnPositionCorrectlyFromDB
 [source]
 ----
 WHEN (db.hget(id, 'position_x') = '5') AND (db.hget(id, 'position_y') = '5')
@@ -567,8 +734,8 @@ EXPECT test.getPosition(id) = '(5,5)'
 EXPECT db.hget() TO HAVE BEEN CALLED 2 TIMES
 ----
 
-====== TU
-getPoiList_UnitId_UnitPoiListCorrectlyReturned()
+====== TU66
+getPoiList_UnitId_UnitPoiListCorrectlyReturned
 [source]
 ----
 WHEN poi:id = ['(0,1)', '(2,3)', '(4,5)']
@@ -576,8 +743,8 @@ EXPECT getPoiList(id) = ['(0,1)', '(2,3)', '(4,5)']
 EXPECT db.lindex() TO HAVE BEEN CALLED 3 TIMES
 ----
 
-====== TU
-setPosition_UnitIdAndNewPosition_UnitPositionSuccessfullyUpdateToDB()
+====== TU67
+setPosition_UnitIdAndNewPosition_UnitPositionSuccessfullyUpdateToDB
 [source]
 ----
 CALL setPosition(id, position)
@@ -585,8 +752,8 @@ EXPECT db.hmset() TO HAVE BEEN CALLED 1 TIMES
 EXPECT db.bgsave() TO HAVE BEEN CALLED 1 TIMES
 ----
 
-====== TU
-setStatus_UnitIdAndNewStatus_UnitStatusSuccessfullyUpdateToDB()
+====== TU68
+setStatus_UnitIdAndNewStatus_UnitStatusSuccessfullyUpdateToDB
 [source]
 ----
 CALL setStatus(id, 0)
@@ -594,8 +761,8 @@ EXPECT db.hset() TO HAVE BEEN CALLED 1 TIMES
 EXPECT db.bgsave() TO HAVE BEEN CALLED 1 TIMES
 ----
 
-====== TU
-setError_UnitIdAndNewError_UnitErrorSuccessfullyUpdateToDB()
+====== TU69
+setError_UnitIdAndNewError_UnitErrorSuccessfullyUpdateToDB
 [source]
 ----
 CALL setError(id, 0)
@@ -603,8 +770,8 @@ EXPECT db.hset() TO HAVE BEEN CALLED 1 TIMES
 EXPECT db.bgsave() TO HAVE BEEN CALLED 1 TIMES
 ----
 
-====== TU
-setSpeed_UnitIdAndNewSpeed_UnitSpeedSuccessfullyUpdateToDB()
+====== TU70
+setSpeed_UnitIdAndNewSpeed_UnitSpeedSuccessfullyUpdateToDB
 [source]
 ----
 CALL setSpeed(id, 0)
@@ -612,17 +779,7 @@ EXPECT db.hset() TO HAVE BEEN CALLED 1 TIMES
 EXPECT db.bgsave() TO HAVE BEEN CALLED 1 TIMES
 ----
 
-====== TU
-testSetPoiList()
-[source]
-----
-SET poiList TO ['(0,0)', '(1,1)']
-CALL setPoilist(id, poiList)
-EXPECT db.rpush() TO HAVE BEEN CALLED 2 TIMES
-EXPECT db.bgsave() TO HAVE BEEN CALLED 1 TIMES
-----
-
-===== Persistence - UserRepositoryRedis
+===== Persistence - UserRepositoryRedis - TU[71-75]
 ====== BEFORE-EACH
 [source]
 ----
@@ -633,8 +790,8 @@ SET password TO 'userPassword'
 SET admin TO true
 ----
 
-====== TU
-newUser_NewUserToRegister_UserSuccessfullyAddedToDB()
+====== TU71
+newUser_NewUserToRegister_UserSuccessfullyAddedToDB
 [source]
 ----
 CALL newUser(user, password, admin)
@@ -643,8 +800,8 @@ EXPECT db.hmset() TO HAVE BEEN CALLED 1 TIMES
 EXPECT db.bgsave() TO HAVE BEEN CALLED 1 TIMES
 ----
 
-====== TU
-delUser_UserNameToDelete_UserSuccessfullyDeletedToDB()
+====== TU72
+delUser_UserNameToDelete_UserSuccessfullyDeletedToDB
 [source]
 ----
 CALL delUser(id)
@@ -653,24 +810,24 @@ EXPEXT db.del() TO HAVE BEEN CALLED 1 TIMES
 EXPECT db.bgsave() TO HAVE BEEN CALLED 1 TIMES
 ----
 
-====== TU
-getPassword_UserNameToGetPassword_ReturnPasswordCorrectlyFromDB()
+====== TU73
+getPassword_UserNameToGetPassword_ReturnPasswordCorrectlyFromDB
 [source]
 ----
 EXPECT test.getPassword() = 'userPassword'
 EXPECT db.hget() TO HAVE BEEN CALLED 1 TIMES
 ----
 
-====== TU
-isAdmin_UserName_ReturnTrue()
+====== TU74
+isAdmin_UserName_ReturnTrue
 [source]
 ----
 EXPECT test.isAdmin() = true
 EXPECT db.hget() TO HAVE BEEN CALLED 1 TIMES
 ----
 
-====== TU
-getUsers_requestToGetUsers_UsersCorrectlyReturned()
+====== TU75
+getUsers_requestToGetUsers_UsersCorrectlyReturned
 [source]
 ----
 CALL getUsers()
