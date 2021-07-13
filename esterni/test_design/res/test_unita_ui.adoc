@@ -1,4 +1,4 @@
-===== WebSocketService
+===== WebSocketService - TU[76-98]
 ====== BEFORE-EACH
 [source]
 ----
@@ -8,7 +8,7 @@ SET socket TO _stub_
 SET service TO new WebSocketService(map, map, map, subject, subject, subject, socket)
 ----
 
-====== TU1
+====== TU76
 It should be created.
 [source]
 ----
@@ -16,7 +16,7 @@ EXPECT service TO EXIST
 EXPECT socket.subscribe() TO HAVE BEEN CALLED 1 TIMES
 ----
 
-====== TU2
+====== TU77
 It should receive a "KeepAliveFromServer" message and do nothing.
 [source]
 ----
@@ -30,7 +30,7 @@ EXPECT socket.next() TO HAVE BEEN CALLED 0 TIMES
 EXPECT subject.next() TO HAVE BEEN CALLED 0 TIMES
 ----
 
-====== TU3
+====== TU78
 It should receive a "AuthFromServer" message and change authStatus to "ADMIN".
 [source]
 ----
@@ -41,7 +41,7 @@ EXPECT service TO EXIST
 EXPECT service.getAuthStatus() = AuthStatus.ADMIN
 ----
 
-====== TU4
+====== TU79
 It should receive a "UsersFromServer" message and update internal User data structure.
 [source]
 ----
@@ -54,7 +54,7 @@ EXPECT map.set() TO HAVE BEEN CALLED n TIMES WITH listOfUsers[0..n]
 EXPECT subject.next() TO HAVE BEEN CALLED 1 TIMES WITH listOfUsers;
 ----
 
-====== TU5
+====== TU80
 It should receive a "UnitsFromServer" message and update internal Unit data structure.
 [source]
 ----
@@ -67,7 +67,7 @@ EXPECT map.set() TO HAVE BEEN CALLED n TIMES WITH listOfUnits[0..n]
 EXPECT subject.next() TO HAVE BEEN CALLED 1 TIMES WITH listOfUnits;
 ----
 
-====== TU6
+====== TU81
 It should receive a "MapFromServer" message and update internal Cell data structure.
 [source]
 ----
@@ -82,7 +82,7 @@ EXPECT service.getMapHeight() = msg.height;
 EXPECT service.getMapLength() = msg.length;
 ----
 
-====== TU7
+====== TU82
 It should receive a "UnitStatusFromServer" message with a known id, status "ERROR" and change internal data.
 [source]
 ----
@@ -98,7 +98,7 @@ EXPECT subject.next() TO HAVE BEEN CALLED 1 TIMES WITH unit
 EXPECT STDOUT TO BE EMPTY
 ----
 
-====== TU8
+====== TU83
 It should receive a "UnitPoiFromServer" message with a known id, list of POI and change internal data.
 [source]
 ----
@@ -115,7 +115,7 @@ EXPECT subject.next() TO HAVE BEEN CALLED 1 TIMES WITH unit
 EXPECT STDOUT TO BE EMPTY
 ----
 
-====== TU9
+====== TU84
 It should receive a "UnitSpeedFromServer" message with a known id, a new speed value and change internal data.
 [source]
 ----
@@ -131,7 +131,7 @@ EXPECT subject.next() TO HAVE BEEN CALLED 1 TIMES WITH unit
 EXPECT STDOUT TO BE EMPTY
 ----
 
-====== TU10
+====== TU85
 It should receive a "UnitErrorFromServer" with a known id, a new error code and change internal data.
 [source]
 ----
@@ -147,7 +147,7 @@ EXPECT subject.next() TO HAVE BEEN CALLED 1 TIMES WITH unit
 EXPECT STDOUT TO BE EMPTY
 ----
 
-====== TU11
+====== TU86
 It should receive a "UnitPosFromServer" message with a known id, a new current position and change internal data.
 [source]
 ----
@@ -179,7 +179,7 @@ EXPECT subject.next() TO HAVE BEEN CALLED unit
 EXPECT STDOUT TO BE EMPTY
 ----
 
-====== TU12
+====== TU87
 It should receive a "Unit*FromServer" with unknown id, not change internal data and print error message.
 [source]
 ----
@@ -199,7 +199,7 @@ FOREACH MsgType IN [
     EXPECT STDOUT TO DISPLAY ERROR
 ----
 
-====== TU13
+====== TU88
 It should send a login request through socket by giving an obj with username and password.
 [source]
 ----
@@ -208,7 +208,7 @@ CALL service.login(username, password)
 EXPECT socket.next() TO HAVE BEEN CALLED 1 TIMES WITH (JSON) new LoginToServer(username, password)
 ----
 
-====== TU14
+====== TU89
 It should send a logout request through socket by giving an obj with username.
 [source]
 ----
@@ -217,7 +217,7 @@ CALL service.logout(username)
 EXPECT socket.next() TO HAVE BEEN CALLED 1 TIMES WITH (JSON) new LogoutToServer(username)
 ----
 
-====== TU15
+====== TU90
 It should send two new user request through socket by giving each time an obj with user data
 [source]
 ----
@@ -235,7 +235,7 @@ EXPECT socket.next() TO HAVE BEEN CALLED WITH (JSON) new UserToServer(username1,
 EXPECT socket.next() TO HAVE BEEN CALLED WITH (JSON) new UserToServer(username2, password2, true)
 ----
 
-====== TU16
+====== TU91
 It should send a delete user request through socket by giving an obj with username.
 [source]
 ----
@@ -244,7 +244,7 @@ CALL service.deleteUser(username)
 EXPECT socket.next() TO HAVE BEEN CALLED 1 TIMES WITH (JSON) new DeleteUserToServer(username)
 ----
 
-====== TU17
+====== TU92
 It should send an add unit request through socket by giving an obj with unit data.
 [source]
 ----
@@ -253,7 +253,7 @@ CALL service.addUnit(id, name, position)
 EXPECT socket.next() TO HAVE BEEN CALLED 1 TIMES WITH (JSON) new UnitToServer(id, name, position)
 ----
 
-====== TU18
+====== TU93
 It should send a delete unit request through socket by giving an obj with unit data.
 [source]
 ----
@@ -262,7 +262,7 @@ CALL service.deleteUnit(id)
 EXPECT socket.next() TO HAVE BEEN CALLED 1 TIMES WITH (JSON) new DeleteUnitToServer(id)
 ----
 
-====== TU19
+====== TU94
 It should send a start unit request through socket by giving an obj with id and poi list.
 [source]
 ----
@@ -272,7 +272,7 @@ CALL service.start(id, listOfPoi)
 EXPECT socket.next() TO HAVE BEEN CALLED 1 TIMES WITH (JSON) new UnitStartToServer(id, listOfPoi)
 ----
 
-====== TU20
+====== TU95
 It should send a stop unit request through socket by giving an obj with unit id and stop command.
 [source]
 ----
@@ -281,7 +281,7 @@ CALL service.stop(id)
 EXPECT socket.next() TO HAVE BEEN CALLED 1 TIMES WITH (JSON) new UnitStopToServer(id, UnitStopCommand.STOP)
 ----
 
-====== TU21
+====== TU96
 It should send a shutdown unit request through socket by giving an obj with unit id and shutdown command.
 [source]
 ----
@@ -290,7 +290,7 @@ CALL service.shutdown(id)
 EXPECT socket.next() TO HAVE BEEN CALLED 1 TIMES WITH (JSON) new UnitStopToServer(id, UnitStopCommand.SHUTDOWN)
 ----
 
-====== TU22
+====== TU97
 It should send a goback unit request through socket by giving an obj with unit id and goback command.
 [source]
 ----
@@ -299,7 +299,7 @@ CALL service.goback(id)
 EXPECT socket.next() TO HAVE BEEN CALLED 1 TIMES WITH (JSON) new UnitStopToServer(id, UnitStopCommand.BASE)
 ----
 
-====== TU23
+====== TU98
 It should send a new map request through socket by giving an obj with map string extracted from file.
 [source]
 ----
