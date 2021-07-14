@@ -1,0 +1,47 @@
+==== BEFORE-ALL
+Server e database sono attivi e collegati. Per tutti i test tranne *TI1* è necessario login da amministratore. È inoltre necessaria una connessione WebSocket con UiEndpoint e una con UnitEndpoint.
+[source]
+----
+CALL server.start()
+SET uiE TO WebSocket(UiEndpoint)
+SET unitE TO WebSocket(UnitEndpoint)
+----
+
+==== TI1
+login_NoAuthAndAdminCorrectCredentials_getAdminAuth
+[source]
+----
+SEND LoginFromUi(adminUserName, adminPassword) TO uiE
+EXPECT AuthToUi(ADMIN) FROM uiE
+----
+
+==== TI2
+newUser_sendingUserData_getNewUserInUserList
+[source]
+----
+SEND UserFromUi(username, password, admin) TO uiE
+EXPECT UsersToUi FROM uiE CONTAINS User(username, admin)
+----
+
+==== TI3
+newUnit_sendingUnitData_getNewUnitInUnitList
+[source]
+----
+SEND UnitFromUi(id, name, base) TO uiE
+
+IF (id IS UUID) AND (base IS VALID) THEN
+    EXPECT UnitsToUi FROM uiE CONTAINS Unit(id, name, base)
+----
+
+==== TI4
+deleteUnit_unitIsConnected_unitDisconnectedAndDeleted
+[source]
+----
+SEND DeleteUnitFromUi(id) TO uiE
+
+IF id IS VALID THEN
+    EXPECT UnitEndpoint.session.close() TO HAVE BEEN CALLED 1 TIME
+    EXPECT UnitsToUi FROM uiE NOT CONTAINS Unit(id)
+----
+
+
