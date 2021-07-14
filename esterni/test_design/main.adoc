@@ -27,21 +27,34 @@ Sanmarco Informatica
 |===
 
 == Specifica dei test
+Il progetto PORTACS realizzato dal gruppo _lineCode_ prevede lo sviluppo di quattro componenti in comunicazione fra loro:
+
+. Server;
+. UI;
+. Unità;
+. Generatore di ostacoli.
+
+Di queste quattro, solo le prime tre saranno soggette a test in quanto il Generatore di ostacoli è una componente molto architetturalmente molto banale e usa-e-getta, creata al solo scopo di simulare la ricezione di dati dai sensori delle Unità.
+
+Ulteriori scelte specifiche riguardo alla stesura dei test, saranno indicate nelle sezioni seguenti ove opportuno.
 
 === Test di sistema
+I test di sistema coinvolgono tutte le componenti che devono essere accese e collegate fra di loro. Vengono scritti all'interno della UI in quanto unico punto d'ingresso al sistema da parte dell'utente.
+
 include::res/test_sistema.adoc[]
 
 === Test d'integrazione
-==== Server
+Tutti i test d'integrazione vengono condotti all'interno della sola componente Server in quanto:
+
+* la componente UI non prevede computazioni che comprendano varie unità ma semplici passaggi di segnali;
+* la componente Unità è codice usa-e-getta necessario per simulare il movimento di un'unità mobile reale; dunque, si ritiene che i test d'unità previsti su questa componente siano più che sufficienti;
+* la componente Server merita di ricevere test d'integrazione in quanto componente complessa composta da molte unità e progettata secondo i canoni della Layered Architecture.
+
 include::res/test_integrazione_server.adoc[]
 
-==== UI
-include::res/test_integrazione_ui.adoc[]
-
-==== Unit
-include::res/test_integrazione_unit.adoc[]
-
 === Test di unità
+Le componenti Server, UI e Unità sono soggette a test di unità.
+
 ==== Server
 include::res/test_unita_server.adoc[]
 
