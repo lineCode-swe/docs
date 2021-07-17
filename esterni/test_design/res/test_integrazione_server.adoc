@@ -1,31 +1,31 @@
+[discrete]
 ==== BEFORE-ALL
 Server e database sono attivi e collegati. Per tutti i test tranne *TI1* è necessario login da amministratore. È inoltre necessaria una connessione WebSocket con UiEndpoint e una con UnitEndpoint.
-[source]
 ----
 CALL server.start()
 SET uiE TO WebSocket(UiEndpoint)
 SET unitE TO WebSocket(UnitEndpoint)
 ----
 
+[discrete]
 ==== TI1
 login_NoAuthAndAdminCorrectCredentials_getAdminAuth
-[source]
 ----
 SEND LoginFromUi(adminUserName, adminPassword) TO uiE
 EXPECT AuthToUi(ADMIN) FROM uiE
 ----
 
+[discrete]
 ==== TI2
 newUser_sendingUserData_getNewUserInUserList
-[source]
 ----
 SEND UserFromUi(username, password, admin) TO uiE
 EXPECT UsersToUi FROM uiE CONTAINS User(username, admin)
 ----
 
+[discrete]
 ==== TI3
 newUnit_sendingUnitData_getNewUnitInUnitList
-[source]
 ----
 SEND UnitFromUi(id, name, base) TO uiE
 
@@ -33,9 +33,9 @@ IF (id IS UUID) AND (base IS VALID) THEN
     EXPECT UnitsToUi FROM uiE CONTAINS Unit(id, name, base)
 ----
 
+[discrete]
 ==== TI4
 deleteUnit_unitIsConnected_unitDisconnectedAndDeleted
-[source]
 ----
 SEND DeleteUnitFromUi(id) TO uiE
 
@@ -44,4 +44,74 @@ IF id IS VALID THEN
     EXPECT UnitsToUi FROM uiE NOT CONTAINS Unit(id)
 ----
 
+[discrete]
+==== TI5
+startUnit_unitIsConnected_unitReceivesPathData
+----
+SEND UnitStartFromUi(id, poiList) TO uiE
+EXPECT StartToUnit FROM unitE
+----
 
+[discrete]
+==== TI6
+stopUnit_unitIsConnected_unitReceivesCorrectStopSignal
+----
+SEND UnitStopFromUi(id, command) TO uiE
+EXPECT CommandToUnit(command) FROM unitE
+----
+
+[discrete]
+==== TI7
+newMap_correctMapAsInput_newMapSentToUi
+----
+SEND MapFromUi(mapConfig) TO uiE
+EXPECT MapToUi(mapConfig) FROM unitE
+----
+
+[discrete]
+==== TI8
+pathRequest_unitIsConnected_unitReceivesPathData
+----
+SEND PathRequest TO unitE
+EXPECT StartToUnit FROM unitE
+----
+
+[discrete]
+==== TI9
+speedFromUnit_unitIsConnected_uiReceivesSpeedData
+----
+SEND SpeedFromUnit(speed) TO unitE
+EXPECT UnitSpeedToUi(speed) FROM uiE
+----
+
+[discrete]
+==== TI10
+obstaclesFromUnit_unitIsConnected_uiReceivesObstacleList
+----
+SEND ObstacleListFromUint(obstacleList) TO unitE
+EXPECT ObstaclesToUi(obstacleList) FROM uiE
+----
+
+[discrete]
+==== TI11
+errorFromUnit_unitIsConnected_uiReceivesUnitError
+----
+SEND ErrorFromUnit(error) TO unitE
+EXPECT UnitErrorToUi(error) FROM uiE
+----
+
+[discrete]
+==== TI12
+statusFromUnit_unitIsConnected_uiReceivesUnitStatus
+----
+SEND StatusFromUi(status) TO unitE
+EXPECT UnitStatusToUi(status) FROM uiE
+----
+
+[discrete]
+==== TI13
+positionFromUnit_unitIsConnected_uiReceivesUnitPosition
+----
+SEND PositionFromUi(position) TO unitE
+EXPECT UnitPositionToUi(position) FROM uiE
+----

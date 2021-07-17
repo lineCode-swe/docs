@@ -1,0 +1,91 @@
+[cols="12h, ~"]
+|===
+| TSMF1     | La mappa deve essere disponibile per l'utente generico in sola lettura.
+| TSMF1.1   | L'utente generico deve poter visualizzare la legenda dei simboli utilizzati all'interno della mappa.
+| TSFM1.2   | La mappa deve aggiornarsi periodicamente, mostrando le informazioni sul movimento delle unità che fanno parte del sistema.
+| TSDM1.3   | La mappa deve mostrare le informazioni sui pedoni che comunicano con il sistema.
+| TSFM1.4   | La mappa deve essere visualizzabile per ogni tipo di utente.
+| TSFM2     a| L'utente registrato deve poter effettuare il login. All'utente viene chiesto di:
+
+    * accedere all'area login;
+    * inserire il nome utente;
+    * inserire la password.
+
+| TSFM2.1   | L'utente deve visualizzare un messaggio di errore nel caso in cui le credenziali inserite siano errate.
+| TSFM3     | L'utente autenticato deve poter effettuare il logout dal sistema. L'utente può verificare che la disconnessione sia avvenuta con successo.
+| TSFM4     | La guida utente deve essere visualizzabile dai soli utenti registrati.
+| TSFM4.1   | La guida utente deve contenere tutte le istruzioni che un utente può svolgere all'interno del sistema.
+| TSFM5     | L'utente autenticato deve poter visualizzare la lista delle unità attive con il proprio ID.
+| TSFM5.1   | Ogni elemento della lista di unità fornisce un ambiente grafico per la gestione delle proprietà dell'unità selezionata.
+| TSFO5.1.1 | L'utente autenticato, dentro l'ambiente grafico, deve visualizzare l'ID dell'unità selezionata.
+| TSFM5.1.2 a| L'utente autenticato deve poter visualizzare le seguenti informazioni dell'unità:
+
+	* le coordinate della posizione attuale all'interno della mappa;
+	* lo stato in cui si trova;
+	* la velocità attuale;
+	* la direzione del prossimo passo suggerita dal sistema;
+	* la coda degli ordini assegnati.
+
+| TSFM6		a| L'utente autenticato deve poter impartire i seguenti comandi all'unità:
+
+	. [.underline]#Start#;
+	. [.underline]#Stop#;
+	. [.underline]#Go Back#;
+	. [.underline]#Shutdown#.
+
+| TSFM6.1	| L'utente autenticato deve poter aggiungere un nuovo ordine alla coda degli ordini assegnati all'unità.
+| TSFM6.2	| L'utente autenticato deve poter eliminare un ordine alla coda degli ordini assegnati all'unità.
+| TSFM7		a| L'amministratore deve poter visualizzare la lista degli utenti registrati, con le seguenti informazioni:
+
+	* nome utente;
+	* password;
+	* status.
+
+| TSFM8		a| L'amministratore deve poter creare un nuovo utente. Il sistema richiede in input le seguenti credenziali:
+
+	* nome utente;
+	* password;
+	* status.
+
+| TSFM10	| L'amministratore deve poter eliminare un utente registrato.
+| TSFM11	| L'amministratore deve visualizzare un messaggio di errore nel caso in cui le credenziali inserite siano già esistenti.
+| TSFM12	| L'amministratore deve poter visualizzare la mappa opportunamente formattata.
+| TSFM13	| L'amministratore per poter modificare la mappa, deve poter inserire un file da validare.
+| TSFM14	| L'amministratore deve visualizzare un messaggio di errore nel caso in cui il file non sia formattato correttamente.
+| TSFM15	| L'amministratore deve poter visualizzare la lista delle unità registrate, con il proprio ID.
+| TSFM16	| L'amministratore deve poter aggiungere una nuova unità alla liste delle unità registrate registrandone tramite input l'ID.
+| TSFM17	| L'amministratore deve poter eliminare una unità dalla lista.
+| TSFM18	| L'amministratore deve visualizzare un messaggio d'errore nel caso venga fornito un ID già esistente.
+| TSFM19	| L'unità, dotata di sensoristica, deve comunicare al sistema la posizione relativa degli ostacoli che riescono a rilevare.
+| TSFM20	| Il sistema deve ricevere le coordinate dall'unità sulla sua posizione attuale.
+| TSFM21	| L'unità deve avere un percorso fornito dal sistema per raggiungere il prossimo POI~G~.
+| TSFM22	| L'unità deve avere una lista di POI~G~ da raggiungere.
+| TSFM23	| L'utente autenticato può modificare la lista degli ordini solo quando l'unità si trova in una base di ricarica.
+| TSFM24	| L'unità, con coda degli ordini vuota, deve ritornare nella base di ricarica.
+| TSFM25	| L'unità non può superare un certo limite di velocità.
+| TSFM26	| L'unità può assumere lo stato [.underline]#Going to X#.
+| TSFM27	| L'unità può assumere lo stato [.underline]#Stop#.
+| TSFM28	| L'unità può assumere lo stato [.underline]#Base#.
+| TSFM29	| L'unità può assumere lo stato [.underline]#Error Y#.
+| TSFM30	a| Il sistema dispone di un algoritmo che deve:
+
+	* calcolare il percorso che l'unità deve percorrere per raggiungere il POI~G~;
+	* evitare la collisione con altre unità;
+	* evitare la collisione con gli ostacoli.
+
+| TSF30.1	| Il percorso restituito dall'algoritmo, è un percorso ottimo.
+| TSFD31	| Nella mappa sono visibili i pedoni.
+| TSFD31.1	| Il sistema riceve dal pedone le informazioni sulla sua posizione.
+| TSFD31.2	| Il sistema riconosce il pedone come un ostacolo.
+| TSMC1		| Ogni entità sviluppata facente parte del sistema dovrà essere contenuta in un container [.underline]#Docker#.
+| TSMC2 	a| Deve essere fornito un Dockerfile~G~ contenente:
+
+	* il motore di calcolo;
+	* il visualizzatore Real-Time~G~.
+
+| TSMC2.1	| Deve essere fornito un Dockerfile~G~ per la singola unità.
+| TSD2.2	| Deve essere fornito un Dockerfile~G~ per il singolo pedone.
+| TSMQ1		| Il prodotto va rilasciato con la licenza open-source~G~ più aperta possibile in base alle librerie utilizzate.
+| TSMQ2		| Il prodotto deve essere conforme con quanto dichiarato nel documento Piano di Qualifica v2.0.0~D~.
+| TSMQ3		| Devono essere realizzati test di unità e di integrazione per verificare le singole componenti del prodotto.
+|===
