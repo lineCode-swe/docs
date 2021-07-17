@@ -90,7 +90,7 @@ image::../img/user_coordination.png[]
 
 La tabella contiente tutte le informazioni utili per ogni unità presente nel sistema:
 
-* Nome: il nome dell'unità visualizzabile all'interno della mappa;
+* Name: il nome dell'unità visualizzabile all'interno della mappa;
 * Base: la posizione della base per la specifica unità;
 * Position: la posizione corrente dell'unità;
 * Status: lo status corrente dell'unità;
@@ -140,7 +140,7 @@ image::../img/admin_coordination.png[]
 
 
 ==== Gestione utenti
-L'inserimento di nuovi utenti è gestito dall'amministatore, tramite apposito form:
+L'inserimento di nuovi utenti,accessibile tramite il pulsante "Users" situato nel menù in alto a sinistra,è gestito dall'amministatore, tramite apposito form:
 
 * Username: creazione di un username per l'utente;
 * Password: creazione di una password per l'utente.
@@ -161,7 +161,7 @@ image::../img/admin_user.png[]
 
 
 ==== Gestione unità
-L'inserimento di nuove unità è gestito dall'amministatore, tramite apposito form:
+L'inserimento di nuove unità,accessibile tramite il pulsante "Units" situato nel menù in alto a sinistra, è gestito dall'amministatore, tramite apposito form:
 
 * ID: identificativo di fabbrica dell'unità;
 * Name: nome dell'unità che verrà visualizzato durante la coordinazione.
