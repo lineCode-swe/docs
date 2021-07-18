@@ -7,7 +7,6 @@
 | TSFM1.4   | La mappa deve essere visualizzabile per ogni tipo di utente.
 | TSFM2     a| L'utente registrato deve poter effettuare il login. All'utente viene chiesto di:
 
-    * accedere all'area login;
     * inserire il nome utente;
     * inserire la password.
 
@@ -15,9 +14,9 @@
 | TSFM3     | L'utente autenticato deve poter effettuare il logout dal sistema. L'utente può verificare che la disconnessione sia avvenuta con successo.
 | TSFM4     | La guida utente deve essere visualizzabile dai soli utenti registrati.
 | TSFM4.1   | La guida utente deve contenere tutte le istruzioni che un utente può svolgere all'interno del sistema.
-| TSFM5     | L'utente autenticato deve poter visualizzare la lista delle unità attive con il proprio ID.
+| TSFM5     | L'utente autenticato deve poter visualizzare la lista delle unità attive con il proprio nome.
 | TSFM5.1   | Ogni elemento della lista di unità fornisce un ambiente grafico per la gestione delle proprietà dell'unità selezionata.
-| TSFO5.1.1 | L'utente autenticato, dentro l'ambiente grafico, deve visualizzare l'ID dell'unità selezionata.
+| TSFO5.1.1 | L'utente autenticato, dentro l'ambiente grafico, deve visualizzare il nome dell'unità selezionata.
 | TSFM5.1.2 a| L'utente autenticato deve poter visualizzare le seguenti informazioni dell'unità:
 
 	* le coordinate della posizione attuale all'interno della mappa;
@@ -86,6 +85,6 @@
 | TSMC2.1	| Deve essere fornito un Dockerfile~G~ per la singola unità.
 | TSD2.2	| Deve essere fornito un Dockerfile~G~ per il singolo pedone.
 | TSMQ1		| Il prodotto va rilasciato con la licenza open-source~G~ più aperta possibile in base alle librerie utilizzate.
-| TSMQ2		| Il prodotto deve essere conforme con quanto dichiarato nel documento Piano di Qualifica v2.0.0~D~.
+| TSMQ2		| Il prodotto deve essere conforme con quanto dichiarato nel documento Piano di Qualifica v3.0.0~D~.
 | TSMQ3		| Devono essere realizzati test di unità e di integrazione per verificare le singole componenti del prodotto.
 |===
