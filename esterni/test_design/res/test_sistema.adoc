@@ -43,39 +43,37 @@
 | TSFM8		a| L'amministratore deve poter creare un nuovo utente. Il sistema richiede in input le seguenti credenziali:
 
 	* nome utente;
-	* password;
 	* status.
 
 | TSFM10	| L'amministratore deve poter eliminare un utente registrato.
-| TSFM11	| L'amministratore deve visualizzare un messaggio di errore nel caso in cui le credenziali inserite siano già esistenti.
-| TSFM12	| L'amministratore deve poter visualizzare la mappa opportunamente formattata.
-| TSFM13	| L'amministratore per poter modificare la mappa, deve poter inserire un file da validare.
-| TSFM14	| L'amministratore deve visualizzare un messaggio di errore nel caso in cui il file non sia formattato correttamente.
-| TSFM15	| L'amministratore deve poter visualizzare la lista delle unità registrate, con il proprio ID.
-| TSFM16	| L'amministratore deve poter aggiungere una nuova unità alla liste delle unità registrate registrandone tramite input l'ID.
-| TSFM17	| L'amministratore deve poter eliminare una unità dalla lista.
-| TSFM18	| L'amministratore deve visualizzare un messaggio d'errore nel caso venga fornito un ID già esistente.
-| TSFM19	| L'unità, dotata di sensoristica, deve comunicare al sistema la posizione relativa degli ostacoli che riescono a rilevare.
-| TSFM20	| Il sistema deve ricevere le coordinate dall'unità sulla sua posizione attuale.
-| TSFM21	| L'unità deve avere un percorso fornito dal sistema per raggiungere il prossimo POI~G~.
-| TSFM22	| L'unità deve avere una lista di POI~G~ da raggiungere.
-| TSFM23	| L'utente autenticato può modificare la lista degli ordini solo quando l'unità si trova in una base di ricarica.
-| TSFM24	| L'unità, con coda degli ordini vuota, deve ritornare nella base di ricarica.
-| TSFM25	| L'unità non può superare un certo limite di velocità.
-| TSFM26	| L'unità può assumere lo stato [.underline]#Going to X#.
-| TSFM27	| L'unità può assumere lo stato [.underline]#Stop#.
-| TSFM28	| L'unità può assumere lo stato [.underline]#Base#.
-| TSFM29	| L'unità può assumere lo stato [.underline]#Error Y#.
-| TSFM30	a| Il sistema dispone di un algoritmo che deve:
+| TSFM11	| L'amministratore deve poter visualizzare la mappa opportunamente formattata.
+| TSFM12	| L'amministratore per poter modificare la mappa, deve poter inserire un file da validare.
+| TSFM13	| L'amministratore deve visualizzare un messaggio di errore nel caso in cui il file non sia formattato correttamente.
+| TSFM14	| L'amministratore deve poter visualizzare la lista delle unità registrate, con il proprio ID.
+| TSFM15	| L'amministratore deve poter aggiungere una nuova unità alla liste delle unità registrate registrandone tramite input l'ID.
+| TSFM16	| L'amministratore deve poter eliminare una unità dalla lista.
+| TSFM17	| L'amministratore deve visualizzare un messaggio d'errore nel caso venga fornito un ID già esistente.
+| TSFM18	| L'unità, dotata di sensoristica, deve comunicare al sistema la posizione relativa degli ostacoli che riescono a rilevare.
+| TSFM19	| Il sistema deve ricevere le coordinate dall'unità sulla sua posizione attuale.
+| TSFM20	| L'unità deve avere un percorso fornito dal sistema per raggiungere il prossimo POI~G~.
+| TSFM21	| L'unità deve avere una lista di POI~G~ da raggiungere.
+| TSFM22	| L'utente autenticato può modificare la lista degli ordini solo quando l'unità si trova in una base di ricarica.
+| TSFM23	| L'unità, con coda degli ordini vuota, deve ritornare nella base di ricarica.
+| TSFM24	| L'unità non può superare un certo limite di velocità.
+| TSFM25	| L'unità può assumere lo stato [.underline]#Going to X#.
+| TSFM26	| L'unità può assumere lo stato [.underline]#Stop#.
+| TSFM27	| L'unità può assumere lo stato [.underline]#Base#.
+| TSFM28	| L'unità può assumere lo stato [.underline]#Error Y#.
+| TSFM29	a| Il sistema dispone di un algoritmo che deve:
 
 	* calcolare il percorso che l'unità deve percorrere per raggiungere il POI~G~;
 	* evitare la collisione con altre unità;
 	* evitare la collisione con gli ostacoli.
 
-| TSF30.1	| Il percorso restituito dall'algoritmo, è un percorso ottimo.
-| TSFD31	| Nella mappa sono visibili i pedoni.
-| TSFD31.1	| Il sistema riceve dal pedone le informazioni sulla sua posizione.
-| TSFD31.2	| Il sistema riconosce il pedone come un ostacolo.
+| TSF29.1	| Il percorso restituito dall'algoritmo, è un percorso ottimo.
+| TSFD30	| Nella mappa sono visibili i pedoni.
+| TSFD30.1	| Il sistema riceve dal pedone le informazioni sulla sua posizione.
+| TSFD30.2	| Il sistema riconosce il pedone come un ostacolo.
 | TSMC1		| Ogni entità sviluppata facente parte del sistema dovrà essere contenuta in un container [.underline]#Docker#.
 | TSMC2 	a| Deve essere fornito un Dockerfile~G~ contenente:
 

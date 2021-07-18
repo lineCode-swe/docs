@@ -16,6 +16,7 @@ v1.0.0, 18-07-2021
 
 |Redattori
 |Alessandro Chimetto +
+Alessandro Dindinelli +
 Paolo Scanferlato
 |Verificatori
 |Valton Tahiraj
