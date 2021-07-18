@@ -33,20 +33,116 @@
 	\caption{Errori ortografici per revisione}
 \end{figure}
 
-\subsection{MP06 - Budget variance}
+\subsection{Qualità di processo}
+
+\subsubsection{MP01 - Schedule Variance}
+A causa dei rischi incontrati, il gruppo risulta in ritardo rispetto alla schedulazione delle attività di progetto pianificate.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=11cm]{images/schedule_variance.png}
+	\caption{Andamento metrica Schedule Variance}
+\end{figure}
+
+\subsubsection{MP02 - Cost Variance}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=11cm]{images/cost_variance.png}
+	\caption{Andamento metrica Cost Variance}
+\end{figure}
+
+\subsubsection{MP03 - Budget Variance}
 La seguente metrica verrà tracciata per verificare se alla data corrente si è speso di più o di meno rispetto a quanto previsto.
 Se è $>$ 0 significa che il progetto sta spendendo il proprio budget con minor velocità di quanto pianificato, viceversa se negativo.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=11cm]{images/budget_variance.png}
-	\caption{Andamento metrica budget variance}
+	\caption{Andamento metrica Budget Variance}
 \end{figure}
 
-\subsection{MP07 - Unbudgeted risks}
+\subsubsection{MP04 - Unbudgeted Risks}
 Data la possibilità di incontrare rischi, non preventivati in fase di analisi, di seguito verranno illustrate tali evenienze per ogni revisione del progetto:
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=11cm]{images/unbudgeted_risks.png}
-	\caption{Andamento metrica unbudgeted risks}
+	\caption{Andamento metrica Unbudgeted risks}
 \end{figure}
 
+\subsection{Qualità di prodotto}
+
+\subsubsection{MS01 - Numero Bug Rilevati}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=10cm]{images/metricheServer/bug_rilevati.png}
+	\caption{Andamento metrica Numero Bug Rilevati componente server}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=10cm]{images/metricheUI/bug_rilevati.png}
+	\caption{Andamento metrica Numero Bug Rilevati componente UI}
+\end{figure}
+
+\subsubsection{MS02 - Vulnerabilità}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=10cm]{images/metricheServer/vulnerabilità.png}
+	\caption{Andamento metrica Vulnerabilità componente server}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=10cm]{images/metricheUI/vulnerabilità.png}
+	\caption{Andamento metrica Vulnerabilità componente UI}
+\end{figure}
+
+\subsubsection{MS03 - Code Smells}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=10cm]{images/metricheServer/code_smells.png}
+	\caption{Andamento metrica Code Smells componente server}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=10cm]{images/metricheUI/code_smells.png}
+	\caption{Andamento metrica Code Smells componente UI}
+\end{figure}
+
+\subsubsection{MS04 - Debito Tecnico}
+Tempo in ore (h) necessario per risolvere tutti i Code Smells.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=10cm]{images/metricheServer/debito_tecnico.png}
+	\caption{Andamento metrica Debito Tecnico componente server}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=10cm]{images/metricheUI/debito_tecnico.png}
+	\caption{Andamento metrica Debito Tecnico componente UI}
+\end{figure}
+
+\subsubsection{MS05 - Code Coverage}
+Valore in percentuale della copertura dei test.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=10cm]{images/metricheServer/code_coverage.png}
+	\caption{Andamento metrica Code Coverage componente server}
+\end{figure}
+
+\subsubsection{MS06 - Complessità Ciclomatica}
+Somma delle complessità di tutti i metodi.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=10cm]{images/metricheServer/complessità_ciclomatica.png}
+	\caption{Andamento metrica Debito Tecnico componente server}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=10cm]{images/metricheUI/complessità_ciclomatica.png}
+	\caption{Andamento metrica Debito Tecnico componente UI}
+\end{figure}
+
+\subsubsection{MS07/MS08/MS09 - Requisiti Soddisfatti}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=11cm]{images/requisiti_soddisfatti.png}
+	\caption{Andamento metrica Requisiti Soddisfatti}
+\end{figure}
