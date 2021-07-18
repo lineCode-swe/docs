@@ -1,12 +1,24 @@
 = Manuale utente
-:sectnums:
+:counter: image-counter: 0
 :toc:
 
+<<<
 
+== List of Figures
 
+<<Figure-1, Figure 1 : >><<Figure-1>> +
+<<Figure-2, Figure 2 : >><<Figure-2>> +
+<<Figure-3, Figure 3 : >><<Figure-3>> +
+<<Figure-4, Figure 4 : >><<Figure-4>> +
+<<Figure-5, Figure 5 : >><<Figure-5>> +
+<<Figure-6, Figure 6 : >><<Figure-6>> +
+<<Figure-7, Figure 7 : >><<Figure-7>> +
+<<Figure-8, Figure 8 : >><<Figure-8>> +
+<<Figure-9, Figure 9 : >><<Figure-9>> +
 
+<<<
 
-
+:sectnums:
 == Introduzione
 
 === Scopo del documento
@@ -22,6 +34,8 @@ Saranno adottati quindi questi due simboli a pedice:
 * D: indica un documento specifico;
 * G: indica un termine incluso nel Glossario v3.0.0.
 
+<<<
+
 == Requisiti minimi di sistema
 
 === Requisiti hardware
@@ -34,8 +48,11 @@ Il software è stato testato in tutti e tre gli ambienti più utilizzati:
 * macOS 14.1;
 * Windows 10.21H1.
 
+<<<
+
 == Installazione
 
+<<<
 
 == Istruzioni per l'utilizzo
 
@@ -53,7 +70,7 @@ Da questa schermata è possibile:
 
 [#img-sunset]
 .Schermata iniziale
-image::../img/non_auth.png[]
+image::../img/non_auth.png[id="Figure-{counter:image-number}"]
 
 ==== Login
 Inserendo Username e Password è possibile accedere al portale.
@@ -64,7 +81,7 @@ amministratore.
 
 [#img-sunset]
 .Schermata Login
-image::../img/login.png[]
+image::../img/login.png[id="Figure-{counter:image-number}"]
 
 ==== Logout
 
@@ -73,7 +90,7 @@ Effettuato correttamente l'accesso al portale, è possibile uscire da esso trami
 
 [#img-sunset]
 .Bottone Logout
-image::../img/logout.PNG[align="center"]
+image::../img/logout.PNG[align="center", id="Figure-{counter:image-number}"]
 
 
 === Schermata coordinatore
@@ -84,7 +101,7 @@ Anche da questa schermata è possibile visualizzare il Manuale utente, dal menù
 
 [#img-sunset]
 .Schermata coordinatore
-image::../img/user_coordination.png[]
+image::../img/user_coordination.png[id="Figure-{counter:image-number}"]
 
 ==== Visualizzazione unità attive
 
@@ -102,7 +119,7 @@ Una volta cliccato apparità la tabella per la gestione dell'unità selezionata.
 
 [#img-sunset]
 .Unità attive
-image::../img/GestioneUnità.PNG[]
+image::../img/GestioneUnità.PNG[id="Figure-{counter:image-number}"]
 
 
 ==== Gestione ordini e unità
@@ -122,7 +139,7 @@ Le unità possono essere parzialmente guidate tramite i bottoni:
 
 [#img-sunset]
 .Genstione ordini e unità
-image::../img/gestione_ordini.PNG[]
+image::../img/gestione_ordini.PNG[id="Figure-{counter:image-number}"]
 
 
 
@@ -136,7 +153,7 @@ L'amministratore, come il coordinatore, può gestire le unità all'interno della
 
 [#img-sunset]
 .Schermata non not auth
-image::../img/admin_coordination.png[]
+image::../img/admin_coordination.png[id="Figure-{counter:image-number}"]
 
 
 ==== Gestione utenti
@@ -157,7 +174,7 @@ Premendo il bottone "Delete", l'utente viene eliminato dal sistema.
 
 [#img-sunset]
 .Gestione utenti
-image::../img/admin_user.png[]
+image::../img/admin_user.png[id="Figure-{counter:image-number}"]
 
 
 ==== Gestione unità
@@ -178,7 +195,7 @@ Premendo il bottone "Delete", l'unità viene eliminata dal sistema.
 
 [#img-sunset]
 .Gestione unità
-image::../img/admin_unit.png[]
+image::../img/admin_unit.png[id="Figure-{counter:image-number}"]
 
 
 
