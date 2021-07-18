@@ -116,7 +116,7 @@ I requisiti strutturati nel seguente modo:
 
 		RMF8.1 & Obbligatorio & L'amministratore deve poter visualizzare il nome utente di ogni utente & Interno \& UC8 \\
 
-		RMF8.2 & Obbligatorio & L'amministratore deve poter visualizzare la password di ogni utente & Interno \& UC8 \\
+		RMF8.2 & Obbligatorio & L'amministratore deve poter visualizzare lo status di ogni utente & Interno \& UC8 \\
 
 		RMF9 & Obbligatorio & L'amministratore deve poter creare nuovi utenti & VE\_2020-12-29\_2.4 \& UC9 \\
 
@@ -128,57 +128,55 @@ I requisiti strutturati nel seguente modo:
 
 		RMF10 & Obbligatorio & L'amministratore deve poter eliminare utenti esistenti & VE\_2020-12-29\_2.4 \& UC10 \\
 
-		RMF11 & Obbligatorio & Viene visualizzato un errore se sono state fornite credenziali già assegnate ad un utente esistente & VE\_2020-12-29\_2.4 \& UC11 \\
+		RMF11 & Obbligatorio & L'amministratore deve poter visualizzare la mappa formattata oppurtanamente & Capitolato \& UC11 \\
 
-		RMF12 & Obbligatorio & L'amministratore deve poter visualizzare la mappa formattata oppurtanamente & Capitolato \& UC12 \\
+		RMF12 & Obbligatorio & L'amministratore deve poter modificare la mappa formattandola opportunamente & Capitolato \& UC12 \\
 
-		RMF13 & Obbligatorio & L'amministratore deve poter modificare la mappa formattandola opportunamente & Capitolato \& UC13 \\
+		RMF13 & Obbligatorio & Viene visualizzato un errore se si tenta di formattare la mappa erratamente & Capitolato \& UC13 \\
 
-		RMF14 & Obbligatorio & Viene visualizzato un errore se si tenta di formattare la mappa erratamente & Capitolato \& UC14 \\
+		RMF14 & Obbligatorio & L'amministratore deve poter visualizzare la lista unità gestite dal sistema & VE\_2020-12-29\_2.4 \& UC14 \\
 
-		RMF15 & Obbligatorio & L'amministratore deve poter visualizzare la lista unità gestite dal sistema & VE\_2020-12-29\_2.4 \& UC15 \\
+		RMF14.1 & Obbligatorio & L'amministratore deve poter visualizzare l'ID di ogni unità & Interno \& UC14 \\
 
-		RMF15.1 & Obbligatorio & L'amministratore deve poter visualizzare l'ID di ogni unità & Interno \& UC15 \\
+		RMF15 & Obbligatorio & L'amministratore deve poter inserire nuove unità tramite l'input del rispettivo ID & VE\_2020-12-29\_2.4 \& UC15 \\
 
-		RMF16 & Obbligatorio & L'amministratore deve poter inserire nuove unità tramite l'input del rispettivo ID & VE\_2020-12-29\_2.4 \& UC16 \\
+		RMF16& Obbligatorio & L'amministratore deve poter eliminare unità esistenti & VE\_2020-12-29\_2.4 \& UC16 \\
 
-		RMF17& Obbligatorio & L'amministratore deve poter eliminare unità esistenti & VE\_2020-12-29\_2.4 \& UC17 \\
+		RMF17 & Obbligatorio & Viene visualizzato un errore se viene fornito un ID già assegnato ad un'unità esistente & VE\_2020-12-29\_2.4 \& UC17 \\
 
-		RMF18 & Obbligatorio & Viene visualizzato un errore se viene fornito un ID già assegnato ad un'unità esistente & VE\_2020-12-29\_2.4 \& UC18 \\
+		RMF18 & Obbligatorio & L'unità, dotata di sensoristica, deve comunicare al sistema la posizione relativa degli ostacoli che riescono a rilevare & VE\_2020-12-29\_2.6 \\
 
-		RMF19 & Obbligatorio & L'unità, dotata di sensoristica, deve comunicare al sistema la posizione relativa degli ostacoli che riescono a rilevare & VE\_2020-12-29\_2.6 \\
+		RMF19 & Obbligatorio & All'unità viene assegnato dal sistema un percorso definito per poter raggiungere il prossimo \glock{POI} & Capitolato \\
 
-		RMF20 & Obbligatorio & All'unità viene assegnato dal sistema un percorso definito per poter raggiungere il prossimo \glock{POI} & Capitolato \\
+		RMF20 & Obbligatorio & L'unità dispone di una coda degli ordini con i prossimi \glock{POI} da raggiungere & Capitolato \\
 
-		RMF21 & Obbligatorio & L'unità dispone di una coda degli ordini con i prossimi \glock{POI} da raggiungere & Capitolato \\
+		RMF21 & Obbligatorio & L'unità riceve modifiche alla coda degli ordini solo quando si trova alla base di ricarica & Interno \& UC7.5 \& UC7.6 \\
 
-		RMF22 & Obbligatorio & L'unità riceve modifiche alla coda degli ordini solo quando si trova alla base di ricarica & Interno \& UC7.5 \& UC7.6 \\
+		RMF22 & Obbligatorio & L'unità con coda degli ordini vuota ritorna alla base & Interno \& UC7.3 \\
 
-		RMF23 & Obbligatorio & L'unità con coda degli ordini vuota ritorna alla base & Interno \& UC7.3 \\
+		RMF23 & Obbligatorio & L'unità dispone di una velocità massima & Capitolato \\
 
-		RMF24 & Obbligatorio & L'unità dispone di una velocità massima & Capitolato \\
+		RMF24 & Obbligatorio & L'unità può assumere lo stato \underline{Going to X} & Interno \& UC7.1 \\
 
-		RMF25 & Obbligatorio & L'unità può assumere lo stato \underline{Going to X} & Interno \& UC7.1 \\
+		RMF25 & Obbligatorio & L'unità può assumere lo stato \underline{Stop} & Interno \& UC7.2 \\
 
-		RMF26 & Obbligatorio & L'unità può assumere lo stato \underline{Stop} & Interno \& UC7.2 \\
+		RMF26 & Obbligatorio & L'unità può assumere lo stato \underline{Base} & Interno \& UC7.3 \\
 
-		RMF27 & Obbligatorio & L'unità può assumere lo stato \underline{Base} & Interno \& UC7.3 \\
+		RMF27 & Obbligatorio & L'unità può assumere lo stato \underline{Error Y} & Interno \& UC7.4 \\
 
-		RMF28 & Obbligatorio & L'unità può assumere lo stato \underline{Error Y} & Interno \& UC7.4 \\
+		RMF28 & Obbligatorio & Il sistema dispone di un algoritmo per il calcolo del percorso che l'unità deve effettuare per raggiungere il prossimo \glock{POI} & Capitolato \\
 
-		RMF29 & Obbligatorio & Il sistema dispone di un algoritmo per il calcolo del percorso che l'unità deve effettuare per raggiungere il prossimo \glock{POI} & Capitolato \\
+		RMF28.1 & Obbligatorio & L'algoritmo di calcolo del percorso deve evitare la collisione delle unità con ostacoli & Capitolato \\
 
-		RMF29.1 & Obbligatorio & L'algoritmo di calcolo del percorso deve evitare la collisione delle unità con ostacoli & Capitolato \\
+		RMF28.2 & Obbligatorio & L'algoritmo di calcolo del percorso deve evitare la collisione delle unità con altre unità & Capitolato \\
 
-		RMF29.2 & Obbligatorio & L'algoritmo di calcolo del percorso deve evitare la collisione delle unità con altre unità & Capitolato \\
+		RMF28.3 & Opzionale & L'algoritmo di calcolo del percorso deve restituire il percorso ottimo & Capitolato \\
 
-		RMF29.3 & Opzionale & L'algoritmo di calcolo del percorso deve restituire il percorso ottimo & Capitolato \\
+		RDF29 & Desiderabile & Nella mappa sono presenti dei pedoni & Capitolato \\
 
-		RDF30 & Desiderabile & Nella mappa sono presenti dei pedoni & Capitolato \\
+		RDF29.1 & Desiderabile & Il pedone comunica in \glock{real-time} al sistema la propria posizione & VE02.8 \\
 
-		RDF30.1 & Desiderabile & Il pedone comunica in \glock{real-time} al sistema la propria posizione & VE02.8 \\
-
-		RDF30 .2 & Desiderabile & Il pedone rappresenta un ostacolo mobile per l'unità & Capitolato \\
+		RDF29 .2 & Desiderabile & Il pedone rappresenta un ostacolo mobile per l'unità & Capitolato \\
 
 	\end{longtable}
 
@@ -264,13 +262,13 @@ I requisiti strutturati nel seguente modo:
 	 RMF7.1.4 \\
 	 RMF8.1 \\
 	 RMF8.2 \\
-	 RMF15.1 \\
+	 RMF14.1 \\
+	 RMF21 \\
 	 RMF22 \\
 	 RMF23 \\
-	 RMF25 \\
+	 RMF24 \\
 	 RMF26 \\
 	 RMF27 \\
-	 RMF28 \\
 	 RMQ2 \\
 	 RMQ3 \\
 	 RMQ4 \\
@@ -283,19 +281,19 @@ I requisiti strutturati nel seguente modo:
 	 RMF7.1.2 \\
 	 RMF7.1.5 \\
 	 RMF7.1.6 \\
+	 RMF11 \\
 	 RMF12 \\
 	 RMF13 \\
-	 RMF14 \\
+	 RMF18 \\
 	 RMF19 \\
 	 RMF20 \\
-	 RMF21 \\
-	 RMF24 \\
-	 RMF29 \\
-	 RMF29.1 \\
-	 RMF29.2 \\
-	 RMF29.3 \\
-	 RDF30\\
-	 RDF30.2 \\
+	 RMF23 \\
+	 RMF28 \\
+	 RMF28.1 \\
+	 RMF28.2 \\
+	 RMF28.3 \\
+	 RDF29\\
+	 RDF29.2 \\
 	 RMC1 \\
 	 RMC1.1 \\
 	 RMC1.2 \\
@@ -338,23 +336,23 @@ I requisiti strutturati nel seguente modo:
 	 RMF7.1
 	 \tabularnewline
 	 UC7.1 & RMF7.1.1 \\
-	 RMF25
+	 RMF24
 	 \tabularnewline
 	 UC7.2 & RMF7.1.2 \\
-	 RMF26
+	 RMF25
 	 \tabularnewline
 	 UC7.3 & RMF7.1.3 \\
-	 RMF23 \\
-	 RMF27
+	 RMF22 \\
+	 RMF26
 	 \tabularnewline
 	 UC7.4 & RMF7.1.4 \\
-	 RMF28
+	 RMF27
 	 \tabularnewline
 	 UC7.5 & RMF7.1.5 \\
-	 RMF22
+	 RMF21
 	 \tabularnewline
 	 UC7.6 & RMF7.1.6 \\
-	 RMF23
+	 RMF22
 	 \tabularnewline
 	 UC8 & RMF8 \\
 	 RMF8.1 \\
@@ -376,16 +374,14 @@ I requisiti strutturati nel seguente modo:
 	 \tabularnewline
 	 UC13 & RMF13
 	 \tabularnewline
-	 UC14 & RMF14
+	 UC14 & RMF14 \\
+	 RMF14.1
 	 \tabularnewline
-	 UC15 & RMF15 \\
-	 RMF15.1
+	 UC15 & RMF15
 	 \tabularnewline
 	 UC16 & RMF16
 	 \tabularnewline
 	 UC17 & RMF17
-	 \tabularnewline
-	 UC18 & RMF18
 	 \tabularnewline
 	 VE\_2020-12-14\_1.2 & RMP1 \\
 	 RDP1.1 \\
@@ -507,59 +503,57 @@ I requisiti strutturati nel seguente modo:
 	\tabularnewline
 	RMF10 & VE\_2020-12-29\_2.4\\UC10
 	\tabularnewline
-	RMF11 & VE\_2020-12-29\_2.4\\UC11
+	RMF11 & Capitolato\\UC11
 	\tabularnewline
 	RMF12 & Capitolato\\UC12
 	\tabularnewline
 	RMF13 & Capitolato\\UC13
 	\tabularnewline
-	RMF14 & Capitolato\\UC14
+	RMF14  & VE\_2020-12-29\_2.4\\UC14
 	\tabularnewline
-	RMF15  & VE\_2020-12-29\_2.4\\UC15
+	RMF14.1 &Interno\\UC14
 	\tabularnewline
-	RMF15.1 &Interno\\UC15
+	RMF15 & VE\_2020-12-29\_2.4\\UC15
 	\tabularnewline
 	RMF16 & VE\_2020-12-29\_2.4\\UC16
 	\tabularnewline
 	RMF17 & VE\_2020-12-29\_2.4\\UC17
 	\tabularnewline
-	RMF18 & VE\_2020-12-29\_2.4\\UC18
+	RMF18 & VE\_2020-12-29\_2.6
 	\tabularnewline
-	RMF19 & VE\_2020-12-29\_2.6
+	RMF19 & Capitolato
 	\tabularnewline
 	RMF20 & Capitolato
 	\tabularnewline
-	RMF21 & Capitolato
+	RMF21 & Interno \\ UC6.5 \\ UC6.6
 	\tabularnewline
-	RMF22 & Interno \\ UC6.5 \\ UC6.6
+	RMF22 & Interno\\ UC6.3
 	\tabularnewline
-	RMF23 & Interno\\ UC6.3
+	RMF23 & Capitolato
 	\tabularnewline
-	RMF24 & Capitolato
+	RMF24 & Interno\\UC6.1
 	\tabularnewline
-	RMF25 & Interno\\UC6.1
+	RMF25 & Interno\\UC6.2
 	\tabularnewline
-	RMF26 & Interno\\UC6.2
+	RMF26 & Interno\\UC6.3
 	\tabularnewline
-	RMF27 & Interno\\UC6.3
+	RMF27 & Interno\\UC6.4
 	\tabularnewline
-	RMF28 & Interno\\UC6.4
+	RMF28 & Capitolato
 	\tabularnewline
-	RMF29 & Capitolato
+	RMF28.1 & Capitolato
 	\tabularnewline
-	RMF29.1 & Capitolato
+	RMF28.2 & Capitolato
 	\tabularnewline
-	RMF29.2 & Capitolato
+	RMF28.3 & Capitolato
 	\tabularnewline
-	RMF29.3 & Capitolato
+	RDF29 & Capitolato
 	\tabularnewline
-	RDF30 & Capitolato
+	RDF29.1 & VE02.8
 	\tabularnewline
-	RDF30.1 & VE02.8
+	RDF30.1 & VE\_2020-12-29\_2.8
 	\tabularnewline
-	RDF31.1 & VE\_2020-12-29\_2.8
-	\tabularnewline
-	RDF31.2 & Capitolato
+	RDF30.2 & Capitolato
 	\tabularnewline
 	RMQ1 & VE\_2020-12-14\_1.4
 	\tabularnewline
