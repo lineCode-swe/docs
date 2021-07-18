@@ -12,16 +12,18 @@
 
 \setTitle{Glossario}
 
-\setVersione{2.0.0}
+\setVersione{3.0.0}
 
-\setDate{14-03-2021}
+\setDate{18-07-2021}
 
-\setResponsabile{Alessandro Dindinelli}
+\setResponsabile{Alessandro Chimetto}
 
 \setRedattori{
 	Alessandro Chimetto\\&
 	Alessandro Dindinelli\\&
-	Paolo Scanferlato}
+	Paolo Scanferlato\\&
+	Valton Tahiraj
+}
 
 \setVerificatori{
 	Matteo Alba\\&
@@ -31,21 +33,18 @@
 \setUso{Esterno}
 
 \setModifiche{
+	3.0.0 & Alessandro Chimetto & Responsabile & 18-07-2021 & Approvazione documento v3.0.0\\
+	2.1.0 & Paolo Scanferlato, Valton Tahiraj & Amministratore, Verificatore & 16-07-2021 & Verifica e aggiunta voci del manuale manutentore \\
     2.0.0 & Alessandro Dindinelli & Responsabile & 14-03-2021 & Approvazione documento v2.0.0 \\
-    1.2.0 & Alessandro Chimetto & Verificatore & 14-03-2021 & Verifica correzione sezione \\
-    1.0.3 & Alessandro Chimetto & Verificatore & 13-03-2021 & Verifica nuovi termini\\
-	1.0.2 & Paolo Scanferlato & Amministratore & 13-03-2021 & Aggiunti tutti i termini segnalati\\
-	1.0.2 & Alessandro Chimetto & Verificatore & 13-03-2021 & Verifica nuovi termini\\
-	1.0.1 & Alessandro Dindinelli & Amministratore & 13-03-2021 & Aggiunti nuovi termini\\
-	1.0.1 & Valton Tahiraj      & Verificatore   & 11-03-2021 & Verifica aggiunti nuovi termini \\
-    1.0.0 & Alessandro Chimetto & Amministratore & 11-03-2021 & Aggiunti nuovi termini\\
+    1.2.0 & Valton Tahiraj, Alessandro Chimetto & Amministratore, Verificatore & 14-03-2021 & Stesura e verifica nuovi termini \\
+    1.0.3 & Paolo Scanferlato, Alessandro Chimetto & Amministratore, Verificatore & 13-03-2021 & Stesura e verifica nuovi termini\\
+	1.0.2 & Alessandro Dindinelli, Alessandro Chimetto & Amministratore, Verificatore & 13-03-2021 & Stesura e verifica nuovi termini\\
+	1.0.1 & Alessandro Chimetto, Valton Tahiraj    &Amministratore, Verificatore   & 11-03-2021 & Stesura e verifica aggiunta nuovi termini \\
 	1.0.0 & Alessandro Chimetto & Responsabile & 10-01-2021 & Revisione e approvazione\\
-	0.2.0 & Matteo Alba       & Verificatore   & 10-01-2021 & Verifica completa\\
-	0.1.0 & Paolo Scanferlato & Amministratore & 09-01-2021 & Aggiunti termini norme di progetto e verbali\\
-	0.1.0 & Valton Tahiraj    & Verificatore   & 06-01-2021 & Verifica termini studio di fattibilità \\
-	0.0.1 & Paolo Scanferlato & Amministratore & 06-01-2021 & Aggiunti termini studio di fattibilità\\
-	0.0.1 & Valton Tahiraj    & Verificatore   & 04-01-2021 & Verifica prima stesura\\
-	0.0.0 & Paolo Scanferlato & Amministratore & 04-01-2021 & Prima stesura}
+	0.2.0 & Paolo Scanferlato, Matteo Alba & Amministratore, Verificatore  & 10-01-2021 & Stesura e verifica termini norme di progetto e verbali\\
+	0.1.0 & Paolo Scanferlato, Valton Tahiraj    & Amministratore, Verificatore   & 06-01-2021& Stesura e verifica termini studio di fattibilità\\
+	0.0.1 & Paolo Scanferlato, Valton Tahiraj    & Amministratore, Verificatore   & 04-01-2021 & Prima stesura e verifica\\
+	}
 \begin{document}
 
 	\input{../../commons/template}
@@ -88,6 +87,9 @@
 
 	\paragraph*{Android}
 	Sistema operativo per dispositivi mobili sviluppato da Google Inc., basato su kernel Linux in cui la quasi totalità delle utilità sono costituite da software Java.
+	
+	\paragraph*{AsciiDoc}
+	è un formato per documenti di testo che usa convenzioni di testo semplice come marcatori.
 
 	\paragraph*{Atmosphere}
 	È un framework per lo sviluppo di applicazioni web in Java asincrone e real time che implementa vari meccanismi di push technology.
@@ -148,6 +150,9 @@
 
 	\paragraph*{Capitolato}
 	Documento tecnico redatto dal cliente in cui vengono specificati i vincoli contrattuali	(prezzo e scadenze) per lo sviluppo di un determinato prodotto software. Viene presentato in un bando d'appalto per trovare qualcuno che possa svolgere il lavoro richiesto.
+	
+	\paragraph*{Chai}
+	Libreria di testing per Node.js e browser.
 
 	\paragraph*{Checkstyle}
 	Strumento di sviluppo per automatizzare il processo di controllo del codice Java. Aiuta a scrivere codice conforme a delle code conventions ben definite.
@@ -226,9 +231,12 @@
 
 	\paragraph*{E-commerce}
 	Pratica commerciale che mette in contatto commercianti e acquirenti tramite Internet. Le transazioni di beni e/o servizi vengono effettuate da un negozio online, da un'applicazione mobile e da altri canali di vendita come social network, marketplace, piattaforme di affiliazione, siti di compravendita, ecc.
+	
+	\paragraph*{ESlint}
+	Strumento di analisi del codice statico per identificare i modelli problematici trovati nel codice JavaScript.
 
 	\paragraph*{Ethereum}
-	Ethereum è una piattaforma decentralizzata per la creazione e pubblicazione peer-to-peer di contratti intelligenti (smart contracts).
+	Piattaforma decentralizzata per la creazione e pubblicazione peer-to-peer di contratti intelligenti (smart contracts).
 
 	\paragraph*{Exploratory Data Analysis}
 	Spesso abbreviato in EDA, è una tecnica usata nel campo della Data Science per approfondire la conoscenza del dataset su cui si intende lavorare, operazione cruciale per svolgere su di esso qualsiasi tipo di attività.
@@ -361,6 +369,9 @@
 
 	\paragraph*{JaCoCo}
 	Libreria di Code Coverage gratuita per Java. Fornisce una libreria leggera, flessibile e ben documentata per l'integrazione con vari strumenti di compilazione e sviluppo.
+	
+	\paragraph*{Jasmine}
+	Framework di test open source per JavaScript.
 
 	\paragraph*{Java}
 	Linguaggio di programmazione ad alto livello, orientato agli oggetti e a tipizzazione statica, che si appoggia sull'omonima piattaforma software di esecuzione, specificamente progettato per essere il più possibile indipendente dalla piattaforma hardware di esecuzione tramite l'utilizzo di macchina virtuale.
@@ -445,6 +456,8 @@
 
 	\paragraph*{Modello a V}
 	Modello di sviluppo del software, estensione del modello a cascata. Il modello invece di discendere lungo una linea retta, dopo la fase di programmazione risale con una tipica forma a V.
+	
+	\paragraph*{Mocha}
 
     \paragraph*{Mock}
     Oggetto fittizio che ritorna risultati preimpostati, utilizzato nei test per isolare un'unità dal resto del sistema.
@@ -642,7 +655,7 @@
 	Strumento che permette di fare analisi statica del codice verificandone il rispetto di un determinato stile di scrittura.
 
 	\paragraph*{Typescript}
-	Liguaggio di programmazione open-source sviluppato da Microsoft che estende il linguaggio Javascript aggiungendo alcuni costrutti sintattici.
+	Linguaggio di programmazione open-source sviluppato da Microsoft che estende il linguaggio Javascript aggiungendo alcuni costrutti sintattici.
 
 	\newpage
 	\phantomsection

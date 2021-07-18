@@ -27,15 +27,7 @@
                 \item qualora la modifica proposta sia ritenuta accettabile dal verificatore, questo effettuerà la procedura di \glock{merge} nel \glock{branch} principale ed eliminerà il \glock{branch} creato dal programmatore (entrambe le operazioni vengono tracciate dal \glock{VCS});
                 \item un'automazione (parte del sistema di Continuous Integration o \glock{CI}) specifica per il prodotto contenuto nella \glock{repository}, verrà eseguita automaticamente sul \glock{branch} principale per verificare che l'integrazione tramite \glock{merge} sia andata a buon fine, il tutto producendo opportuni report.
             \end{enumerate}
-
-            \subparagraph{Workflow per software}
-            Specificatamente per lo sviluppo software (e ad esclusione della Technology Baseline per semplicità nell'esplorazione tecnologica), la procedura sopra enunciata viene integrata in un workflow di tipo \glock{Gitflow}:
-            \begin{enumerate}
-                \item in prossimità di una \glock{milestone}, l'amministratore crea un \glock{branch} di \glock{release} a partire dal \glock{branch} principale;
-                \item il software sul \glock{branch} di release non riceve funzionalità ulteriori ma solo \glock{bugfix} che verranno integrati anche nel \glock{branch} principale;
-                \item quando il software viene valutato come sufficientemente stabile dal responsabile, si procede al rilascio effettivo in un \glock{branch} apposito.
-            \end{enumerate}
-
+        
             \subparagraph{\glock{Repository} e relativa struttura}
             Ogni repository, sulla propria \glock{root}, contiene:
             \begin{itemize}
@@ -61,18 +53,15 @@
             \[
             \text{v}[\alpha].[\beta].[\gamma]
             \]
-            \begin{itemize}
-                \item \([\alpha]\): parte da 0 e non si resetta mai;
-                \item \([\beta]\): parte da 0 e si resetta solo ad incrementi di \([\alpha]\);
-                \item \([\gamma]\): parte da 0 e si resetta solo ad incrementi di \([\alpha]\) o \([\beta]\).
-            \end{itemize}
             Il codice assume significato diverso in caso si tratti di documentazione o software:
             \begin{itemize}
                 \item documentazione:
                 \begin{itemize}
-                    \item \([\alpha]\): numero identificativo del rilascio del documento; viene incrementato solo dal responsabile a seguito di una approvazione quando il documento è pronto per essere rilasciato;
-                    \item \([\beta]\): avanzamento rispetto alle sezioni; viene incrementato dal verificatore quando aggiunge una nuova sezione al documento;
-                    \item \([\gamma]\): avanzamento rispetto a piccole migliorie; viene incrementato dal programmatore quando svolge piccole correzioni ortografiche o di sintassi in \LaTeX.
+                	\item \([\alpha]\): indica il numero incrementale di revisione del responsabile
+                	di progetto;
+                	\item \([\beta]\): indica il numero incrementale di verifiche effettuate a partire dall'ultima revisione;
+                	\item \([\gamma]\): indica il numero di modifiche apportate al documento, che
+                	riparte da 0 dopo ogni verifica ed approvazione.
                 \end{itemize}
 
                 \item software:

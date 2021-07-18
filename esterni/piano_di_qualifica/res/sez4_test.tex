@@ -106,27 +106,25 @@ I test saranno di quattro tipologie:
 
 		TSFM17 & L'amministratore deve poter eliminare una unità dalla lista & NI\\
 
-		TSFM18  & L'amministratore deve visualizzare un messaggio d'errore nel caso venga fornito un ID già esistente & NI \\
+		TSFM18   & L'unità, dotata di sensoristica, deve comunicare al sistema la posizione relativa degli ostacoli che riescono a rilevare & NI \\
 
-		TSFM19   & L'unità, dotata di sensoristica, deve comunicare al sistema la posizione relativa degli ostacoli che riescono a rilevare & NI \\
+		TSFM19 & Il sistema deve ricevere le coordinate dall'unità sulla sua posizione attuale & NI \\
 
-		TSFM20 & Il sistema deve ricevere le coordinate dall'unità sulla sua posizione attuale & NI \\
+		TSFM20 & L'unità deve avere un percorso fornito dal sistema per raggiungere il prossimo \glock{POI} & NI \\
 
-		TSFM21 & L'unità deve avere un percorso fornito dal sistema per raggiungere il prossimo \glock{POI} & NI \\
+		TSFM21 & L'unità deve avere una lista di \glock{POI} da raggiungere & NI \\
 
-		TSFM22 & L'unità deve avere una lista di \glock{POI} da raggiungere & NI \\
+		TSFM22  & L'utente autenticato può modificare la lista deglli ordini solo quando l'unità si trova in una base di ricarica & NI \\
 
-		TSFM23  & L'utente autenticato può modificare la lista deglli ordini solo quando l'unità si trova in una base di ricarica & NI \\
+		TSFM23  & L'unità, con coda degli ordini vuota, deve ritornare nella base di ricarica & NI \\
 
-		TSFM24  & L'unità, con coda degli ordini vuota, deve ritornare nella base di ricarica & NI \\
+		TSFM24  & L'unità non può superare un certo limite di velocità & NI \\
 
-		TSFM25  & L'unità non può superare un certo limite di velocità & NI \\
-
-		TSFM26 & L'unità può assumere lo stato \underline{Going to X} & NI \\
-		TSFM27 & L'unità può assumere lo stato \underline{Stop} & NI \\
-		TSFM28 & L'unità può assumere lo stato \underline{Base} & NI \\
-		TSFM29 & L'unità può assumere lo stato \underline{Error Y} & NI \\
-		TSFM30  & Il sistema dispone di un algoritmo che deve:
+		TSFM25 & L'unità può assumere lo stato \underline{Going to X} & NI \\
+		TSFM26 & L'unità può assumere lo stato \underline{Stop} & NI \\
+		TSFM27 & L'unità può assumere lo stato \underline{Base} & NI \\
+		TSFM28 & L'unità può assumere lo stato \underline{Error Y} & NI \\
+		TSFM29  & Il sistema dispone di un algoritmo che deve:
 				\begin{itemize}
 					\item calcolare il percorso che l'unità deve percorrere per raggiungere il \glock{POI};
 					\item evitare la collisione con altre unità;
@@ -134,14 +132,13 @@ I test saranno di quattro tipologie:
 				\end{itemize}
 										& NI \\
 
-		TSF30.1  & Il percorso restituito dall'algoritmo, è un percorso ottimo & NI\\
+		TSFD29.1  & Il percorso restituito dall'algoritmo, è un percorso ottimo & NI\\
 
-		TSFD31 & Nella mappa sono visibili i pedoni & NI \\
+		TSFD30 & Nella mappa sono visibili i pedoni & NI \\
 
-		TSFD31.1 & Il sistema riceve dal pedone le informazioni sulla sua posizione & NI\\
+		TSFD30.1 & Il sistema riceve dal pedone le informazioni sulla sua posizione & NI\\
 
-		TSFD31.2  & Il sistema riconosce il pedone come un ostacolo & NI \\
-		\hline
+		TSFD30.2  & Il sistema riconosce il pedone come un ostacolo & NI \\
 
 		TSMC1   & Ogni entità sviluppata facente parte del sistema dovrà essere contenuta in un container \glock{Docker} & NI \\
 

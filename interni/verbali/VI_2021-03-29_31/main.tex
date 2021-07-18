@@ -1,0 +1,134 @@
+\documentclass[]{article}
+
+\input{../../../commons/config}
+
+\appendToGraphicsPath{../../../commons/res/}
+
+%------------------------------
+%
+% COMANDI DI CONFIGURAZIONE
+%
+%------------------------------
+
+\setTitle{Verbale riunione \#30}
+
+\setVersione{0.1.0}
+
+\setDate{01-04-2021}
+
+\setResponsabile{Paolo Scanferlato}
+
+\setRedattori{Alessandro Dindinelli}
+
+\setVerificatori{Lucia Fenu}
+
+\setUso{Interno}
+
+\setModifiche{
+	0.1.0 & Lucia Fenu & Verificatore & 01-04-2021 & Verifica della prima stesura\\
+	0.0.1 & Alessandro Dindinelli & Amministratore & 29-03-2021 & Prima stesura}
+
+\begin{document}
+
+	\input{../../../commons/template}
+
+	\newpage
+
+	%--------------------------------
+	%
+	% IL CONTENUTO INIZIA DA QUI
+	%
+	%--------------------------------
+
+		\section{Introduzione}
+		\subsection{Luogo e data dell'incontro}
+		\begin{itemize}
+			\item \textbf{Modalità}: Telematica;
+			\item \textbf{Software utilizzato}: \glock{Discord};
+			\item \textbf{Data}: 29 Marzo 2021;
+			\item \textbf{Ora di inizio}: 16:00;
+			\item \textbf{Ora di fine}: 19:30.
+		\end{itemize}
+
+		\subsection{Presenze}
+		\begin{itemize}
+			\item \textbf{Presenti}:
+			\begin{itemize}
+				\item Matteo Alba
+				\item Giacomo Bulbarelli
+				\item Alessandro Chimetto
+				\item Alessandro Dindinelli
+				\item Lucia Fenu
+				\item Paolo Scanferlato
+				\item Valton Tahiraj
+			\end{itemize}
+			\item \textbf{Assenti}:
+			\begin{itemize}
+				\item Nessuno
+			\end{itemize}
+		\end{itemize}
+
+
+		\subsection{Ordine del giorno}
+		\begin{enumerate}
+			\item Coordinamento lavori sistema di comunicazione;
+			\item revisione correzione documenti RP;
+			\item suddivisione lavori.
+		\end{enumerate}
+
+	\newpage
+
+	\section{Svolgimento}
+		\subsection{Coordinamento lavori sistema di comunicazione}
+		Ci si è sincronizzati sullo stato dei lavori riguardo il cambio tecnologico tra \glock{API Rest} ed \glock{Atmosphere}, per il miglioramento del sistema di comunicazione tra le sue componenti. \\
+		I lavori proseguono bene ma non sono completati, e richiederanno ancora del lavoro.
+		\\
+		
+		\subsection{Revisione correzione documenti RP}
+		Si è letto insieme la correzione dei documenti consegnati in RP, pubblicata dal Prof. Vardanega. Sono stati discussi tutti i punti riscontrati, ragionando sulle motivazioni per le quali tali errori si siano verificati e decidendo quali siano le giuste correzioni da apportare. \\
+		Essendo sorti dei dubbi riguardo delle particolari correzioni, si è deciso di scrivere una mail ai rispettivi professori per richiedere dei chiarimenti a riguardo.
+		Si è provveduto a fissare un incontro con il referente di Sanmarco Informatica, per discutere delle metodologie per verificare i requisiti prestazionali ed altre eventuali problematiche riscontrate.
+		\\
+		
+		\subsection{Suddivisione lavori}
+		Ci si organizzati per il proseguimento dei lavori, decidendo di dividersi in due gruppi: uno che prosegua i lavori di miglioramento al sistema di comunicazione, e l'altro che inizi la produzione degli schemi dell'architettura del sistema, fino alla successiva riunione del gruppo.
+		\\
+
+
+	\subsection{Riunione successiva}
+	Riunione successiva fissata in:
+	\begin{itemize}
+		\item \textbf{Data}: 31-03-2021;
+		\item \textbf{Ora}: 10:00;
+		\item \textbf{Modalità}: Telematica: \glock{Google Meet}.
+	\end{itemize}
+
+	\newpage
+
+	\section{Tabella delle decisioni}
+
+	\begin{table} [h!]
+		\rowcolors{2}{gray!25}{gray!6}
+		\begin{center}
+			\begin{tabular} { m{2cm} m{14cm} }
+				\rowcolor{lightgray}
+				\textbf{ID} & \textbf{Decisione}\\
+				V31.1 & I due gruppi di lavoro sono stati così divisi:
+				 \begin{itemize}
+					\item implementazione \glock{WebSocket}: Giacomo Bulbarelli, Alessandro Chimetto, Valton Tahiraj;
+					\item architettura UI: Matteo Alba, Alessandro Dindinelli, Lucia Fenu, Paolo Scanferlato.
+				\end{itemize}\\
+				V31.2 & Migliorare l'attualizzazione dei rischi e popolarla maggiormente, ragionando su cosa è successo, perché è successo, e come ciò è stato affrontato. \\
+				V31.3 & Migliorare la pianificazione, valorizzando gli incrementi, in base alle previsioni fatte in RR. \\
+				V31.4 & Ricalcolo del consuntivo di periodo, e correzione, mantenendolo inferiore a quanto approvato in RR. \\
+				V31.5 & Correggere il metodo di versionamento dei documenti in base a quanto verrà comunicato dal Prof. Vardanega. \\
+				V31.6 & Correggere i casi d'uso in base alle correzioni espresse dal Prof. Cardin. \\
+				V31.7 & Aggiungere requisito di qualità per la redazione del manuale utente. \\
+				V31.8 & Spostare il requisito RMP2 nei requisiti di qualità. \\
+				V31.9 & Verificare che nel PdQ i titoli delle sezioni rispettino le norme prefissate. \\
+			\end{tabular}
+		\end{center}
+	\end{table}
+
+\end{document}
+

@@ -1,0 +1,167 @@
+\documentclass[]{article}
+
+\input{../../../commons/config}
+
+\appendToGraphicsPath{../../../commons/res/}
+
+%------------------------------
+%
+% COMANDI DI CONFIGURAZIONE
+%
+%------------------------------
+
+\setTitle{Verbale esterno \#1}
+
+\setVersione{1.0.0}
+
+\setDate{14-12-2020}
+
+\setResponsabile{Valton Tahiraj}
+
+\setRedattori{Lucia Fenu}
+
+\setVerificatori{Alessandro Chimetto}
+
+\setUso{Esterno}
+
+\setModifiche{
+	1.0.0 & Valton Tahiraj & Responsabile & 9-01-2020 & Approvazione documento\\
+    0.1.0 & Alessandro Chimetto & Verificatore & 16-12-2020 & Verifica stesura iniziale\\
+	0.0.1 & Lucia Fenu & Redattore & 15-12-2020 & Stesura iniziale}
+
+\begin{document}
+
+	\input{../../../commons/template}
+	\newpage
+
+	%--------------------------------
+	%
+	% IL CONTENUTO INIZIA DA QUI
+	%
+	%--------------------------------
+
+	\section{Introduzione}
+		\subsection{Luogo e data dell'incontro}
+		\begin{itemize}
+			\item \textbf{Modalità}: Telematica;
+			\item \textbf{Software utilizzato}: Google Meet;
+			\item \textbf{Data}: 14 Dicembre 2020;
+			\item \textbf{Ora di inizio}: 16:00;
+			\item \textbf{Ora di fine}: 16:45;
+		\end{itemize}
+
+		\subsection{Presenze}
+		\begin{itemize}
+			\item \textbf{Presenti}:
+			\begin{itemize}
+				\item Matteo Alba
+				\item Giacomo Bulbarelli
+				\item Alessandro Chimetto
+				\item Alessandro Dindinelli
+				\item Lucia Fenu
+				\item Paolo Scanferlato
+				\item Valton Tahiraj
+			\end{itemize}
+			\item \textbf{Assenti}:
+			\begin{itemize}
+				\item Nessuno
+			\end{itemize}
+			\item \textbf{Partecipanti esterni}:
+			\begin{itemize}
+			\item Alex Beggiato (referente, SanMarco Informatica)
+		\end{itemize}
+		\end{itemize}
+
+
+		\subsection{Ordine del giorno}
+		\begin{enumerate}
+			\item Tecnologie consigliate;
+			\item entità esterne al sistema;
+			\item emplementazione guida semi-automatica;
+			\item le collisioni;
+			\item applicazioni \glock{real-time};
+			\item disponibiltà nell'approffondire lo studio.
+		\end{enumerate}
+
+	\newpage
+
+	\section{Svolgimento}
+		\subsection{Tecnologie consigliate}
+	Il committente lascia libera scelta sulle tecnologie da utilizzare a patto che sia motivata. Alcuni esempi e consigli:
+	\begin{itemize}
+		\item per il motore di calcolo, sviluppabile con la gestione a più \glock{thread} è possibile utilizzare:
+		\begin{itemize}
+			\item \glock{Java};
+		\end{itemize}
+		\item dal punto di vista del  monitor real time, un applicativo puramente web che eventualmente dialoghi tramite web service con il motore scelto o che rielabori i dati; ad esempio:
+		\begin{itemize}
+			\item \glock{AngularJS}:
+			\item \glock{Angular 2+};
+			\item \glock{React};
+			\item \glock{PHP};
+		\end{itemize}
+		\item 	per i simulatori di entità che girano e inviano segnali, essendo mono \glock{thread}, si può scendere su linguaggi come:
+		\begin{itemize}
+			\item \glock{Node.js};
+			\item \glock{Java};
+		\end{itemize}
+		\item 	un uso di linguaggi compilati come \glock{C} e \glock{C++}, meglio se effettuato all'interno del motore di calcolo per motivi di performance.
+	\end{itemize}
+
+		\subsection{Entità esterne al sistema}
+		Tutto ciò che è esterno al sistema e che si muove in modo casuale, non prevedibile, è riconducibile al caso dei pedoni.
+
+		\subsection{Implementazione guida semi-automatica}
+		La guida semi-automatica, come quella autonoma, prevede l'uso (base) di quattro frecce direzionali ed un pulsante start-and-stop.
+		Nel primo caso, in particolare, è prevista una doppia interfaccia:
+		\begin{itemize}
+			\item del sistema: il consiglio che il sistema offre al guidatore in riferimento ai calcoli di percorso con ostacoli;
+			\item del guidatore: la direzione che deciderà di intraprendere sulla base del consiglio di sistema e che verrà eseguita.
+		\end{itemize}
+
+
+		\subsection{Collisioni}
+		Nel caso di una guida semi-automatica, Il sistema non avrà mai il totale controllo del veicolo.\\
+		Nel caso di una possibile collisione, il sistema consiglierà sempre il guidatore senza interferire con la reale decisione di quest'ultimo. \\
+		Al contrario, in un sistema autonomo come i robot, questo avrà totale controllo sulla strada da percorrere poiché sprovvisto di un guidatore.
+
+		\subsection{Tempi di risposta del sistema}
+		I tempi di risposta e di aggiornamento del Sistema devono essere commisurati al contensto preso in esame dal gruppo. Nello specifico, nel caso di contesti
+		in cui la velocità media delle singole unità risulta elevato (come ad esempio nel caso di autovetture) i tempi di risposta dovranno essere nell'ordine del secondo.
+		Nel caso invece le unità che interagiscono col sistema si muovano a velocità inferiori (come ad esempio nel caso di robot a guida autonoma nel
+		contesto della ristorazione) i tempi di risposta dovranno essere non superiori a 5 secondi.
+
+		\subsection{\glock{Applicazioni real-time}}
+		Prima di tutto è importante definire il contesto in cui verrà applicato il sistema.\\
+		Infatti i tempi di risposta variano in base all'ambiente considerato, ad esempio: in un magazzino i tempi di risposta saranno più lunghi
+		rispetto a quelli richiesti su strada, in cui i veicoli hanno velocità maggiore e dunque un tempo di risposta quasi immediato.
+
+		\subsection{Licenza da utilizzare}
+		Il proponente ha reso noto al gruppo che la licenza \glock{open-source} da utilizzare per il prodotto dovrà essere la più aperta possibile, dipendentemente dalle licenze che vengono applicate alle componenti software che saranno utilizzate per la realizzazione del prodotto finale.
+
+		\subsection{Disponibiltà nell'approffondire lo studio.}
+		Il committente dà disponibilità per:
+		\begin{itemize}
+			\item \glock{JavaScript};
+			\item \glock{Canva};
+			\item \glock{Angular}.
+		\end{itemize}
+
+		\section{Tabella delle decisioni}
+
+		\begin{table} [h!]
+			\rowcolors{2}{gray!25}{gray!6}
+			\begin{center}
+				\begin{tabular} { m{2cm} m{14cm} }
+					\rowcolor{lightgray}
+					\textbf{ID} & \textbf{Decisione}\\
+					VE\_2020-12-14\_1.1 & I tempi di risposta non dovranno essere superiori a 1 secondi nel caso di guida autonoma di autovetture su strada \\
+					VE\_2020-12-14\_1.2 & I tempi di risposta non dovranno essere superiori a 5 secondi nel caso di guida autonoma per unità robotiche nel contesto della gestione merci nei magazzini o della ristorazione \\
+					VE\_2020-12-14\_1.3 & Le unità a guida totalmente autonoma vengono guidate unicamente dal sistema per quanto concerne il percorso da seguire \\
+					VE\_2020-12-14\_1.4 & La licenza da dare al prodotto dovrà essere open-source e la più aperta possibile, in accordo alla licenza più stringente delle componenti software che vengono utilizzate.
+				\end{tabular}
+			\end{center}
+		\end{table}
+
+\end{document}
+

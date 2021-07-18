@@ -1,0 +1,122 @@
+\documentclass[]{article}
+
+\input{../../../commons/config}
+
+\appendToGraphicsPath{../../../commons/res/}
+
+%------------------------------
+%
+% COMANDI DI CONFIGURAZIONE
+%
+%------------------------------
+
+\setTitle{Verbale riunione \#33}
+
+\setVersione{0.1.0}
+
+\setDate{05-04-2021}
+
+\setResponsabile{}
+
+\setRedattori{Valton Tahiraj}
+
+\setVerificatori{}
+
+\setUso{Interno}
+
+\setModifiche{
+	0.1.0 & Lucia Fenu & Verificatore & 05-04-2021 & Verifica della prima stesura\\
+	0.0.1 & Valton Tahiraj & Amministratore & 04-04-2021 & Prima stesura}
+
+\begin{document}
+
+	\input{../../../commons/template}
+
+	\newpage
+
+	%--------------------------------
+	%
+	% IL CONTENUTO INIZIA DA QUI
+	%
+	%--------------------------------
+
+		\section{Introduzione}
+		\subsection{Luogo e data dell'incontro}
+		\begin{itemize}
+			\item \textbf{Modalità}: Telematica;
+			\item \textbf{Software utilizzato}: \glock{Discord};
+			\item \textbf{Data}: 03 Aprile 2021;
+			\item \textbf{Ora di inizio}: 15:00;
+			\item \textbf{Ora di fine}: 15:30.
+		\end{itemize}
+
+		\subsection{Presenze}
+		\begin{itemize}
+			\item \textbf{Presenti}:
+			\begin{itemize}
+				\item Matteo Alba
+				\item Giacomo Bulbarelli
+				\item Alessandro Chimetto
+				\item Alessandro Dindinelli
+				\item Lucia Fenu
+				\item Paolo Scanferlato
+				\item Valton Tahiraj
+			\end{itemize}
+			\item \textbf{Assenti}:
+			\begin{itemize}
+				\item Nessuno
+			\end{itemize}
+		\end{itemize}
+
+
+		\subsection{Ordine del giorno}
+		\begin{enumerate}
+			\item Coordinamento lavori lato server;
+		\end{enumerate}
+
+	\newpage
+
+	\section{Svolgimento}
+		\subsection{Coordinamento lavori di documentazione}
+		Durante la transizione da \glock{REST API} a \glock{Websocket} sono nati dei dubbi di tipo comportamentale del server, quali:
+		\begin{enumerate} 
+			\item gestione della velocità delle unità;
+			\item gestione delle celle della griglia;
+			\item cambiamenti delle informazioni salvate nel server;
+			\item gestione dell'autenticazione dell'unità;
+			\item passaggio da \glock{WS} a \glock{WSS}.
+		\end{enumerate}
+		In merito ai dubbi riscontrati si è deciso di:
+		\begin{enumerate}
+			\item riportare nella UI la velocità di ogni unità presente nel sistema, autoregolata dalle singole unità;
+			\item dare una dimensione relativamente piccola ad ogni cella così da aumentare la precisione della mappa e non permettere a più unità di occupare in contemporanea la stessa cella;
+			\item il server dovrà salvare per ogni unità anche la sua velocità e, per ogni cella, il verso di percorrenza e l'esistenza di una possibile base di ricarica. 
+			\item autenticare l'unità tramite \glock{UUID};
+			\item passare da \glock{WS} a \glock{WSS} in quanto più sicuro.
+		\end{enumerate} 
+
+
+
+	\newpage
+
+	\section{Tabella delle decisioni}
+
+	\begin{table} [h!]
+		\rowcolors{2}{gray!25}{gray!6}
+		\begin{center}
+			\begin{tabular} { m{2cm} m{14cm} }
+				\rowcolor{lightgray}
+				\textbf{ID} & \textbf{Decisione}\\
+				V33.1 & La UI deve mostrare la velocità delle unità presenti in mappa \\
+				V33.2 & Le unità autoregolano la propria velocità \\
+				V33.3 & Le celle sono di grandezza tale da non permettere a due unità di occuparle contemporaneamente \\
+				V33.4 & Le celle hanno un senso di percorrenza che deve essere definito e riconosciuto dal sistema \\
+				V33.5 & Le celle possono contenere una base di ricarica \\
+				V33.6 & Le unità vengono autenticate dal sistema tramite \glock{UUID} \\
+				V33.7 & Il sistema utilizza \glock{wss}\\
+			\end{tabular}
+		\end{center}
+	\end{table}
+
+\end{document}
+

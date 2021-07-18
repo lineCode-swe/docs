@@ -1,0 +1,136 @@
+\documentclass[]{article}
+
+\input{../../../commons/config}
+
+\appendToGraphicsPath{../../../commons/res/}
+
+%------------------------------
+%
+% COMANDI DI CONFIGURAZIONE
+%
+%------------------------------
+
+\setTitle{Verbale esterno \#2}
+
+\setVersione{1.0.0}
+
+\setDate{29-12-2020}
+
+\setResponsabile{Valton Tahiraj}
+
+\setRedattori{Lucia Fenu}
+
+\setVerificatori{Paolo Scanferlato}
+
+\setUso{Esterno}
+
+\setModifiche{
+	1.0.0 & Valton Tahiraj & Responsabile & 9-01-2020 & Approvazione documento\\
+	0.1.0 & Paolo Scanferlato & Verificatore & 06-01-2021 & Verifica Documento\\
+	0.0.1 & Lucia Fenu & Redattore & 05-01-2021 & Stesura iniziale}
+
+\begin{document}
+
+	\input{../../../commons/template}
+
+	\newpage
+
+	%--------------------------------
+	%
+	% IL CONTENUTO INIZIA DA QUI
+	%
+	%--------------------------------
+
+	\section{Introduzione}
+		\subsection{Luogo e data dell'incontro}
+		\begin{itemize}
+			\item \textbf{Modalità}: Telematica;
+			\item \textbf{Software utilizzato}: Google Meet;
+			\item \textbf{Data}: 29 Dicembre 2020;
+			\item \textbf{Ora di inizio}: 16:45;
+			\item \textbf{Ora di fine}: 17:15.
+		\end{itemize}
+
+		\subsection{Presenze}
+		\begin{itemize}
+			\item \textbf{Presenti}:
+			\begin{itemize}
+				\item Matteo Alba
+				\item Giacomo Bulbarelli
+				\item Alessandro Chimetto
+				\item Lucia Fenu
+				\item Paolo Scanferlato
+				\item Valton Tahiraj
+			\end{itemize}
+			\item \textbf{Assenti}:
+			\begin{itemize}
+				\item Alessandro Dindinelli
+			\end{itemize}
+			\item \textbf{Partecipanti esterni}:
+			\begin{itemize}
+				\item Alex Beggiato (referente, SanMarco Informatica)
+			\end{itemize}
+		\end{itemize}
+
+		\subsection{Ordine del giorno}
+		\begin{enumerate}
+			\item Analisi attori;
+			\item autenticazione;
+			\item ostacoli;
+			\item mappa modificabile.
+		\end{enumerate}
+\newpage
+	\section{Svolgimento}
+		\subsection{Analisi attori}
+		Alcuni suggerimenti da parte del proponente:
+		\begin{itemize}
+			\item l'amministratore del sistema, ha la possibilità di aggiungere operatori ed unità e di modificare la mappa;
+			\item l'operatore, è l'utente nella quotidianità che usufruisce del sistema;
+			\item l'ospite, utente non registrato che accede in sola lettura;
+			\item l'unità, invece, fanno parte del sistema ma solo a livello comunicativo coi server; dunque non considerabili come attori;
+			\item i pedoni sono un elemento facoltativo e possono essere considerati come attori.
+		\end{itemize}
+
+
+		\subsection{Autenticazione}
+		L'autenticazione per gli utenti ed amministratori è necessaria. \\
+		Ogni utente ed ogni entità deve essere registrata.
+
+		\subsection{Ostacoli}
+		L'unità ha dei sensori e di base se questo trova uno ostacolo deve avere la capacità di fermarsi o di poterlo aggirare. \\
+		Il raggio del sensore è importante poiché determina la tempistica su come l'entità deve gestire l'ostacolo.\\
+		Oltre al sensore, l'unità comunica costantemente con il sistema sulla sua posizione. \\
+		Un ostacolo imprevisto come i pedoni, è facoltativo, in quanto i pedoni lo sono.
+		Il pedone può comunicare col sistema sulla loro posizione, ad esempio tramite tecnologia \glock{Bluetooth}.
+
+		\subsection{Mappa modificabile}
+		La mappa può essere modificata in diversi modi, ad esempio:
+		\begin{itemize}
+			\item tramite inserimento di un file che dovrà essere validato dal sistema per verificare se la mappa inserita è effettivamente utilizzabile;
+			\item tramite interfaccia grafica.
+		\end{itemize}
+
+	\newpage
+
+	\section{Tabella delle decisioni}
+
+\begin{table} [h!]
+	\rowcolors{2}{gray!25}{gray!6}
+	\begin{center}
+		\begin{tabular} { m{2cm} m{14cm} }
+			\rowcolor{lightgray}
+			\textbf{ID} & \textbf{Decisione}\\
+			VE\_2020-12-29\_2.1 & Attore: amministratore di sistema, necessario.\\
+			VE\_2020-12-29\_2.2 & Attore: operatore, necessario. \\
+			VE\_2020-12-29\_2.3 & Attore: ospite, utente non registrato, necessario. \\
+			VE\_2020-12-29\_2.4 & Registrazione di ogni unità ed utente. \\
+			VE\_2020-12-29\_2.5 & Autenticazione degli utenti, necessario. \\
+			VE\_2020-12-29\_2.6 & L'unità ha dei sensori propri con raggio decisionale. \\
+			VE\_2020-12-29\_2.7 & L'unità comunica costantemente con il sistema.\\
+			VE\_2020-12-29\_2.8 & Il pedone può comunicare con il sistema tramite \glock{Bluetooth}.\\
+			VE\_2020-12-29\_2.9 & La mappa è modificabile tramite inserimento di file da validare.
+		\end{tabular}
+	\end{center}
+\end{table}
+\end{document}
+

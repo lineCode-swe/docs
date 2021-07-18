@@ -33,7 +33,7 @@
 		\paragraph{Sviluppo}
 		Tutti i documenti ufficiali dovranno attraversare le seguenti 4 fasi:
 		\begin{enumerate}
-			\item \textbf{creazione}: il documento viene creato utilizzando il template \textbf{template.tex} presente nella cartella dedicata della \glock{repository} remota;
+			\item \textbf{Creazione}: il documento viene creato utilizzando il template \textbf{template.tex} presente nella cartella dedicata della \glock{repository} remota;
 			\item \textbf{sviluppo}: i Redattori del documento, utilizzando il software \glock{TeXstudio}, aggiungono i contenuti assegnati in maniera incrementale, ed aggiornano la tabella delle modifiche senza modificare l'indice di versione del documento;
 			\item \textbf{verifica}: i Verificatori controllano la correttezza dei contenuti e, se necessario, richiedono modifiche e/o integrazioni ai Redattori. L'approvazione delle modifiche da parte del verificatore, porta ad un apposito incremento dell'indice di versione del documento. Una volta terminata la fase di verifica, il documento, viene sottoposto al Responsabile di Progetto;
 			\item \textbf{approvazione}: il Responsabile di Progetto ratifica il completamento del documento aggiornando la versione alla \glock{major release} successiva rendendolo pronto al rilascio.
@@ -66,7 +66,7 @@
 			\item \textbf{titoli}: solo l'iniziale in maiuscolo, tranne se sono presenti sigle particolari come nei titoli dei casi d'uso (esempio: UC2 - Login);
 			\item \textbf{date}: scritte nel formato italiano, 2 cifre per il giorno, 2 cifre per il mese e 4 cifre per l'anno separati tra di loro dal carattere "-" (GG-MM-AAAA, esempio: 19-12-2020);
 			\item \textbf{elenchi puntati e numerati}: ogni elemento termina con il ";", tranne l'ultimo, che conclude l'elenco con il ".";
-			\item \textbf{termini nel Glossario}: tutti i termini presenti nel \dext{Glossario v2.0.0} sono scritti in \textsc{maiuscoletto} e hanno a pedice una G maiuscola \glock{};
+			\item \textbf{termini nel Glossario}: tutti i termini presenti nel \dext{Glossario v3.0.0} sono scritti in \textsc{maiuscoletto} e hanno a pedice una G maiuscola \glock{};
 			\item \textbf{riferimento a documenti}: tutti i riferimenti a documenti sono scritti in \textsc{maiuscoletto} e hanno a pedice una D maiuscola \dext{};
 			\item \textbf{link a pagine internet}: sono direttamente cliccabili nel documento.
 		\end{itemize}
@@ -121,14 +121,133 @@
     		\item \textbf{svolgimento}: specifica suddividendo in punti numerati gli argomenti discussi;
     		\item \textbf{decisioni prese}: una tabella che riassume le decisioni prese dal gruppo assegnando ad ognuna di esse un identificativo univoco aggiungendo al nome del verbale un "." e un numero progressivo a partire da 1 (per ogni verbale).
     	\end{enumerate}
-    	Riguardo alla loro nomenclatura, saranno semplicemente nominati con una V maiuscola seguita da un numero progressivo di due cifre che partirà da 01 (esempi: V07 sarà il nome del settimo verbale, V07.2 sarà la seconda decisione presa durante la settima riunione svolta).\\
+    	Riguardo alla loro nomenclatura, saranno nominati con una V maiuscola seguita dalle lettere I oppure E maiuscole per i verbali interni ed esterni rispettivamente, seguite da un underscore "\_", la data in cui è avvenuta la riunione nel formato "AAAA-MM-GG", un underscore "\_" ed il numero progressivo del verbale. Quindi ad esempio il terzo verbale interno, riguardo la riunione del 01-04-2021 sarà nominato: \textit{VI\_2021-04-01\_3}.\\
     	\\Questi particolari documenti saranno classificati come interni e una volta verificati ed approvati non potranno più essere aggiornati a nuove versioni trattando, nello specifico, eventi accaduti in un determinato momento e che non possono quindi cambiare.
     	\\In caso di riunioni in cui saranno presenti ospiti prenderanno il nome di \dext{Verbale Esterno} e saranno nominati con VE, mentre le altre regole (numero progressivo a partire da 1 e classificazione decisioni prese) rimarranno invariate.
-
+	
+	\subparagraph{Test}
+	Per tenere traccia e dare scontro dei test effettuati sul prodotto verrà fornito un documento apposito in aggiunta a quelli già dichiarati in precedenza. Tale documento verrà redatto in \glock{AsciiDoc}, avrà una struttura meno rigida di quelli fino ad ora discussi e conterrà unicamente la dichiarazione dei test che verranno effettuati sul prodotto.
+	Tali test saranno riportati sotto forma di pseudo-codice, normato di seguito al fine di garantire coerenza e uniformità durante la stesura.
+	
+	\subsubsection{Norme di Pseudo-codice per i test}
+	Le norme di pseudo-codice per la scrittura dei test sono pesantemente ispirate allo standard reperibile a questo indirizzo \url{https://users.csc.calpoly.edu/~jdalbey/SWE/pdl_std.html} cui sono stati aggiunti alcuni costrutti specifici per rendere lo standard più espressivo e meglio adattabile alle nostre specifiche esigenze. \\
+	I 6 costrutti fondamentali sono: \\
+	\begin{table}[h]
+		\begin{tabular}{|p{4,0cm} | p{10,0cm}|}
+		\hline
+		Costrutto & Definizione \\
+		\hline
+		SEQUENCE & Indica una sequenza di azioni svolte in successione in maniera lineare \\
+		\hline
+		WHILE & Indica un ciclo cui viene associato un test condizionale che avviene prima di ogni esecuzione \\ 
+		\hline
+		IF-THEN-ELSE & Indica una scelta tra due diversi flussi di esecuzione, che vengono scelti in base a un espressione condizionale \\
+		\hline
+		REPEAT-UNTIL & Indica un ciclo in cui il test condizionale viene eseguito a posteriori rispetto all'esecuzione del corpo del ciclo stesso \\
+		\hline
+		CASE & Indica una scelta fra diverse opzioni mutualmente esclusive (in numero maggiore o uguale a due) che avviene in base al valore di una specifica istruzione \\
+		\hline
+		FOR & Indica un ciclo con contatore, che quindi eseguirà un numero specifico e noto di volte \\
+		\hline
+		\end{tabular}
+	\end{table}		
+	
+	
+	\subsubsection{Sintassi per lo pseudo-codice dei test}
+	Viene di seguito riportata la sintassi per i costrutti di pseudo-codice esposti in precedenza.
+	
+	\begin{itemize}
+	\item \textbf{SEQUENCE}: viene indicato scrivendo le azioni una in successione all'altra, ciascuna su una propria riga e verticalmente allineate. Le azioni vengono svolte dal basso verso l'alto nel modo in cui sono scritte. 
+	
+		\begin{verbatim}
+			READ data
+			COMPUTE new data
+			PRINT new data
+		\end{verbatim}	 
+		Le azioni che è possibile indicare sono:
+		\begin{itemize}
+			\item Input: READ, OBTAIN, GET
+			\item Output: PRINT, DISPLAY, SHOW
+			\item Compute: COMPUTE, CALCULATE, DETERMINE
+			\item Initialize: SET, INIT
+			\item Add one: INCREMENT, BUMP
+			\item Call a function: CALL
+			\item Assertions: EXPECT ... TO ...
+		\end{itemize}
+		
+	\item \textbf{IF-THEN-ELSE}: viene indicato attraverso l'utilizzo di 4 parole chiave: IF, THEN, ELSE e ENDIF.
+		\begin{verbatim}
+			IF condition THEN
+				sequence 1
+			ELSE
+				sequence 2
+			ENDIF
+		\end{verbatim}
+	\item \textbf{WHILE}: viene indicato con due parole chiave, WHILE ed ENDWHILE, e il costrutto condizionale viene posto a fianco della parola chiave WHILE.
+		\begin{verbatim}
+			WHILE condition
+				sequence
+			ENDWHILE			
+		\end{verbatim}
+	\item \textbf{CASE}: viene indicato utilizzando 4 parole chiave: CASE, OF, OTHERS e ENDCASE. La clausola OTHERS è opzionale, e indica il comportamento da seguirsi nel caso in cui nessuno degli altri casi sia stato selezionato.
+		\begin{verbatim}
+			CASE expressione OF
+				condition 1: sequence 1
+				condition 2: sequence 2
+				...
+				contition n: sequence n
+				OTHERS:
+				default sequence
+			ENDCASE
+		\end{verbatim}		 	
+	\item \textbf{REPEAT-UNTIL}: viene indicato utilizzando 2 parole chiave, REPEAT e UNTIL, e il costrutto condizionale viene posto a fianco della parola chiave UNTIL.
+		\begin{verbatim}
+			REPEAT
+				sequence
+			UNTIL condition
+		\end{verbatim}
+	\item \textbf{FOR}: viene indicato utilizzando 2 parole chiave, FOR e ENDFOR, e il numero di volte che il ciclo deve essere eseguito viene specificato a fianco della parola chiave FOR. É possibile specificare il numero di esecuzioni anche utilizzando del codice di dominio.
+		\begin{verbatim}
+			FOR iteration bounds
+				sequence
+			ENDFOR
+		\end{verbatim}
+		
+	\item \textbf{COSTRUTTI INNESTATI}: è possibile innestare costrutti tra loro, esprimendo tale casistica attraverso l'utilizzo dell'indentazione qualora un costrutto sia innestato all'interno di un altro.
+		\begin{verbatim}
+			SET total to zero
+			REPEAT
+				READ number
+				IF number > 0 THEN
+					total = number
+				ENDIF
+			UNTIL total > 0
+			PRINT total					
+		\end{verbatim}
+		
+	\item \textbf{CHIAMATA A FUNZIONI}: Nel caso si desideri chiamare una funzione specifica di dominio, tale chiamata verrà espressa attraverso l'utilizzo della parola chiave CALL, con inclusi i paramentri che vengono passati alla suddetta funzione riportati tra parentesi tonde.
+		\begin{verbatim}
+			CALL my_function()
+			CALL my_other_function(parameter1)
+			CALL one_more_function(parameter1, parameter2)
+		\end{verbatim}
+		
+	\item \textbf{EXCEPTION HANDLING}: laddove sia necessario specificare le modalità con cui vengono gestite delle eccezioni, ciò dovrà avvenire per mezzo delle parole chiave EXCEPTION e WHEN.
+		\begin{verbatim}
+			statements
+			EXCPETION
+				WHEN exception type
+					statements to handle exception
+				WHEN another exception type
+					statements to handle exception
+			statements
+		\end{verbatim}
+	\end{itemize}
+		
 	\subsubsection{Strumenti}
 	La documentazione prodotta sarà in formato \LaTeX\ v2e (\url{https://www.latex-project.org/}) e per la stesura saranno utilizzati i seguenti software:
 	\begin{itemize}
-		\item \textbf{\glock{TeXstudio} v3.0.1} (\url{https://texstudio.org/}): per l'editing dei documenti \LaTeX\ v2e, compatibile con tutte i sistemi operativi utilizzati dal gruppo (\glock{Mac OS}, \glock{Windows}, \glock{Linux}). Sarà, inoltre, obbligatorio attivare il correttore ortografico in italiano del software per ridurre al minimo gli eventuali errori di digitazione;
+		\item \textbf{\glock{TeXstudio} v3.0.1} (\url{https://texstudio.org/}): per l'editing dei documenti \LaTeX\ v2e, compatibile con tutti i sistemi operativi utilizzati dal gruppo (\glock{Mac OS}, \glock{Windows}, \glock{Linux}). Sarà, inoltre, obbligatorio attivare il correttore ortografico in italiano del software per ridurre al minimo gli eventuali errori di digitazione;
 		\item \textbf{\glock{Texmaker} v5.0.4}: altro editor \LaTeX come \glock{TeXstudio};
 		\item \textbf{\glock{GanttProject} v2.8.11} (\url{https://www.ganttproject.biz/}): per la creazione dei diagrammi di \glock{Gantt};
 		\item \textbf{\glock{Diagrams}} (\url{https://www.diagrams.net/}): per la creazione dei diagrammi \glock{UML};

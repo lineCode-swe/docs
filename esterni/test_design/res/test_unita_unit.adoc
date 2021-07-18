@@ -1,0 +1,242 @@
+===== UnitDataAdapter - TU[99-105]
+====== BEFORE
+[source]
+----
+SET array TO Posiion[] = [ (0, 0) ]
+SET pos TO Position(0, 0)
+SET curr_path TO UnitDataAdapter.loadPath()
+SET curr_obs TO UnitDataAdapter.loadObstacles()
+SET curr_pos TO UnitDataAdapter.loadPosition()
+SET curr_status TO UnitDataAdapter.loadStatus()
+SET curr_error TO UnitDataAdapter.loadError()
+SET curr_speed TO UnitDataAdapter.loadSpeed()
+SET curr_path_request TO UnitDataAdapter.loadPathRequest()
+----
+
+====== TU99
+curr_path should be equal to array
+[source]
+----
+EXPECT curr_path TO EQUAL array
+----
+
+====== TU100
+curr_obs should be equal to array
+[source]
+----
+EXPECT curr_obs TO EQUAL array
+----
+
+====== TU101
+curr_pos should be equal to pos
+[source]
+----
+EXPECT curr_pos TO EQUAL pos
+----
+
+====== TU102
+curr_status should be equal to UnitStatus.SHUTDOWN
+[source]
+----
+EXPECT curr_status TO EQUAL UnitStatus.SHUTDOWN
+----
+
+====== TU103
+curr_error should be equal to 0
+[source]
+----
+EXPECT curr_error TO EQUAL 0
+----
+
+====== TU104
+curr_speed should be equal to 0
+[source]
+----
+EXPECT curr_speed TO EQUAL 0
+----
+
+====== TU105
+curr_path_request should be equal to true
+[source]
+----
+EXPECT curr_path_request TO EQUAL true
+----
+
+===== ServicesTests - TU[106-119]
+====== BEFORE
+[source]
+----
+SET unitDataAdapterMock TO _stub_
+SET array TO Posiion[] = [ (0, 0) ]
+SET pos TO Position(0, 0)
+SET curr_path TO loadPathService.loadPath()
+SET curr_obs TO checkObstaclesService.loadObstacles()
+SET curr_pos TO checkUnitHasMovedService.loadPosition()
+SET curr_status TO checkUnitChangedStatus.loadStatus()
+SET curr_error TO checkErrorService.loadError()
+SET curr_speed TO checkUnitChangedSpeedService.loadSpeed()
+SET curr_path_request TO checkUnitRequestPathService.loadPathRequest()
+----
+
+====== TU106
+curr_path should be equal to array
+[source]
+----
+EXPECT curr_path TO EQUAL array
+----
+
+====== TU107
+curr_obs should be equal to array
+[source]
+----
+EXPECT curr_obs TO EQUAL array
+----
+
+====== TU108
+curr_pos should be equal to pos
+[source]
+----
+EXPECT curr_pos TO EQUAL pos
+----
+
+====== TU109
+curr_status should be equal to UnitStatus.SHUTDOWN
+[source]
+----
+EXPECT curr_status TO EQUAL UnitStatus.SHUTDOWN
+----
+
+====== TU110
+curr_error should be equal to 0
+[source]
+----
+EXPECT curr_error TO EQUAL 0
+----
+
+====== TU111
+curr_speed should be equal to 0
+[source]
+----
+EXPECT curr_speed TO EQUAL 0
+----
+
+====== TU112
+curr_path_request should be equal to true
+[source]
+----
+EXPECT curr_path_request TO EQUAL true
+----
+
+====== TU113
+modifyPathService.receivedNewPath(array) should call unitDataAdapterMock.pathToMongo(array)
+[source]
+----
+CALL modifyPathService.receivedNewPath(array)
+EXPECT unitDataAdapterMock.pathToMongo(array) TO HAVE BEEN CALLED 1 TIME
+----
+
+====== TU114
+inputSensorsService.receiveObstacle(array) should call unitDataAdapterMock.obstaclesToMongo(array)
+[source]
+----
+CALL inputSensorsService.receiveObstacle(array)
+EXPECT unitDataAdapterMock.obstaclesToMongo(array) TO HAVE BEEN CALLED 1 TIME
+----
+
+====== TU115
+modifyPositionService.modifyPosition(pos) should call unitDataAdapterMock.positionToMongo(pos)
+[source]
+----
+CALL modifyPositionService.modifyPosition(pos)
+EXPECT unitDataAdapterMock.positionToMongo(pos) TO HAVE BEEN CALLED 1 TIME
+----
+
+====== TU116
+modifyStatusService.modifyStatus(UnitStatus.SHUTDOWN) should call unitDataAdapterMock.statusToMongo(UnitStatus.SHUTDOWN)
+[source]
+----
+CALL modifyStatusService.modifyStatus(UnitStatus.SHUTDOWN)
+EXPECT unitDataAdapterMock.statusToMongo(UnitStatus.SHUTDOWN) TO HAVE BEEN CALLED 1 TIME
+----
+
+====== TU117
+modifyErrorService.modifyError(0) should call unitDataAdapterMock.errorToMongo(0)
+[source]
+----
+CALL modifyErrorService.modifyError(0)
+EXPECT unitDataAdapterMock.errorToMongo(0) TO HAVE BEEN CALLED 1 TIME
+----
+
+====== TU118
+modifySpeedService.modifySpeed(0) should call unitDataAdapterMock.speedToMongo(0)
+[source]
+----
+CALL modifySpeedService.modifySpeed(0)
+EXPECT unitDataAdapterMock.speedToMongo(0) TO HAVE BEEN CALLED 1 TIME
+----
+
+====== TU119
+modifyPathRequestService.receivedNewPathRequest(false) should call unitDataAdapterMock.pathRequestToMongo(false)
+[source]
+----
+CALL modifyPathRequestService.receivedNewPathRequest(false)
+EXPECT unitDataAdapterMock.pathRequestToMongo(false) TO HAVE BEEN CALLED 1 TIME
+----
+
+===== UnitEngineTests - TU[120-125]
+====== BEFORE
+[source]
+----
+SET modifySpeedServiceMock TO _stub_
+SET modifyErrorServiceMock TO _stub_
+SET modifyPositionServiceMock TO _stub_
+SET modifyStatusServiceMock TO _stub_
+SET modifyPathRequestServiceMock TO _stub_
+SET leadPathServiceMock TO _stub_
+SET unitEngine to UnitEngine
+CALL unitEngine.begin()
+WAIT 5s
+CALL unitEngine.stop()
+----
+
+====== TU120
+modifySpeedServiceMock.modifySpeed(0) should not have been called
+[source]
+----
+EXPECT modifySpeedServiceMock.modifySpeed(0) TO HAVE BEEN CALLED 0 TIMES
+----
+
+====== TU121
+modifyErrorServiceMock.modifyError(0) should not have been called
+[source]
+----
+EXPECT modifyErrorServiceMock.modifyError(0) TO HAVE BEEN CALLED 0 TIMES
+----
+
+====== TU122
+modifyPositionServiceMock.modifyPosition(pos) should not have been called
+[source]
+----
+EXPECT modifyPositionServiceMock.modifyPosition(pos) TO HAVE BEEN CALLED 0 TIMES
+----
+
+====== TU123
+modifyStatusServiceMock.modifyStatus(UnitStatus.SHUTDOWN) should not have been called
+[source]
+----
+EXPECT modifyStatusServiceMock.modifyStatus(UnitStatus.SHUTDOWN) TO HAVE BEEN CALLED 0 TIMES
+----
+
+====== TU124
+modifyPathRequestServiceMock.receivedNewPathRequest(false) should have been called
+[source]
+----
+EXPECT modifyPathRequestServiceMock.receivedNewPathRequest(false) TO HAVE BEEN CALLED 1 TIME
+----
+
+====== TU125
+loadPathServiceMock.loadPath() should have been called
+[source]
+----
+EXPECT loadPathServiceMock.loadPath() TO HAVE BEEN CALLED 1 TIME
+----
