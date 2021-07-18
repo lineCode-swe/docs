@@ -1,4 +1,4 @@
-## File risultanti dalla compilazione LaTeX
+## File risultanti dalla compilazione LaTeX/Asciidoc
 *.aux
 *.log
 *.out
@@ -10,6 +10,7 @@
 *.toc
 *.bbl
 *.blg
+*.html
 
 ## File e cartelle risultanti dalla CI
 *.fls
@@ -18,3 +19,6 @@ Documents*
 
 ## File nascosti di macOS
 .DS_Store
+
+## File configurazione dell'IDE
+.idea
