@@ -8,17 +8,17 @@
 	\end{figure}
 
 	\begin{itemize}
-		\item{.github}: contiene le configurazioni per la CI in ambiente github;
-		\item{.idea}: contiene le configurazioni generali per l'IDE IntellijIDEA;
+		\item{.github}: contiene le configurazioni per la \glock{CI} in ambiente \glock{github};
+		\item{.idea}: contiene le configurazioni generali per l'\glock{IDE} \glock{IntelliJ IDEA};
 		\item{.run}: contiene le configurazioni per l'esecuzione del codice all'interno	dell'IDE IntellijIDEA;
 		\item{config}: contiene gli script di inizializzazione del database;
 		\item{src}: contiene i sorgenti dell'applicativo, suddivisi di default dal framework in 2 sotto	directory:
 		\begin{enumerate}
-			\item{main}: contiene una folder per ciascun layer:
+			\item{main}: contiene una cartella per ciascun layer:
 				\begin{itemize}
-					\item{api}: strato per la connessione e la comunicazione con l'interfaccia e l'unità;
-					\item{business}: strato della logica dell'elaborazione dati;
-					\item{persistence}: strato di comunicazione tra il server e il database;
+					\item{api layer}: strato per la connessione e la comunicazione con l'interfaccia e l'unità;
+					\item{business layer}: strato della logica dell'elaborazione dati;
+					\item{persistence layer}: strato di comunicazione tra il server e il database;
 				\end{itemize}
 			\item{test}: contiene i test di unità;
 		\end{enumerate}
@@ -27,9 +27,9 @@
 
 	Troviamo inoltre nella root della directory i seguenti file:
 	\begin{itemize}
-		\item{Dockerfile}: per la generazione della DockerImage da eseguire in ambiente Docker;
-		\item{pom.xml}: il file di progetto di Maven;
-		\item{checkstyle.xml}: file di configurazione di Checkstyle;
+		\item{Dockerfile}: per la generazione della DockerImage da eseguire in ambiente \glock{Docker};
+		\item{pom.xml}: il file di progetto di \glock{Maven};
+		\item{checkstyle.xml}: file di configurazione di \glock{Checkstyle};
 	\end{itemize}
 
 \newpage
@@ -47,10 +47,10 @@
 		\item{.idea}: contiene le configurazioni generali per l'IDE IntellijIDEA;
 		\item{.run}: contiene le configurazioni per l'esecuzione del codice all'interno	dell'IDE IntellijIDEA;
 		\item{e2e}: contiene le configurazioni di base per i test end-to-end (e2e) del sito, utilizzati per tracciare i comportamenti dell'utente sul sito durante il testing;
-		\item{node\_modules}: contiene i moduli di NodeJS installati tramite NPM e necessari all'esecuzione del codice. Per installarli eseguire il comando npm install dopo aver scaricato la repo;
+		\item{node\_modules}: contiene i moduli di \glock{NodeJS} installati tramite \glock{NPM} e necessari all'esecuzione del codice. Per installarli eseguire il comando npm install dopo aver scaricato la repo;
 		\item{src}: contiene i sorgenti dell'applicativo, suddivisi di default dal framework in 3 sotto	directory:
 		\begin{enumerate}
-			\item{app}: contiene una folder per ciascun componente sviluppato (es. componente unit-table ha una folder unit table) all'interno della quale si trovano 3 file, che contengono html css e logiche del component (file scritto in .ts). Oltre a questi	contiene singoli file .ts (typescript) che formano il model della ui applicativo;
+			\item{app}: contiene una cartella per ciascun componente sviluppato (es. componente unit-table ha una folder unit table) all'interno della quale si trovano 3 file, che contengono \glock{html} \glock{css} e logiche del component (file scritto in .ts). Oltre a questi	contiene singoli file .ts (\glock{typescript}) che formano il model della ui applicativo;
 			\item{assets}: contiene i file multimediali (se usati) impiegati nella realizzazione della UI;
 			\item{environments}: contiene le specifiche di configurazione per gli ambienti di sviluppo e rilascio della UI.
 		\end{enumerate}
