@@ -1,6 +1,6 @@
-= Manuale utente
+= PORTACS - Manuale Utente
 gruppo lineCode <linecode.swe@gmail.com>
-v1.0.0, 18-07-2021
+v0.1.0, 18-07-2021
 :doctype: book
 :title-logo-image: ../../commons/res/lclong.png
 :toc:
@@ -15,11 +15,12 @@ v1.0.0, 18-07-2021
 |Uso|Esterno
 
 |Redattori
-|Lucia Fenu + Valon Tahiraj
+|Lucia Fenu +
+Valton Tahiraj
 |Verificatori
-|
+|Giacomo Bulbarelli
 |Responsabile
-|
+|Alessandro Chimetto
 |Destinatari
 |lineCode +
 prof. Vardanega Tullio +
@@ -48,41 +49,39 @@ Il capitolato~G~ C5 ha come obbiettivo la realizzazione di un applicativo Real-T
 === Schermata iniziale
 ==== Login
 
-La schermata inizale corrisponde alla pagine di Login, in cui l'utente registrato dovrà inserire le credenziali corrette
-affinchè l'accesso vada a buon fine.
+La schermata iniziale corrisponde alle pagine di Login, in cui l'utente registrato dovrà inserire le credenziali corrette affinché l'accesso vada a buon fine.
 
 
 [#img-sunset]
 .Login
-image::../img/login.png[id="Figure-{counter:image-number}"]
+image::img/login.png[id="Figure-{counter:image-number}"]
 
 ==== Utente non registrato
 Tramite il bottone seguente, si passa alla visualizzazione della mappa in sola lettura, disponibile per gli utenti non registrati nel sistema.
 
 [#img-sunset]
-.Bottone visualizzaione mappa da utente non registrato
-image::../img/login_bottone.png[align="center", id="Figure-{counter:image-number}"]
+.Bottone visualizzazione mappa da utente non registrato
+image::img/login_bottone.png[align="center", id="Figure-{counter:image-number}"]
 
 La visualizzazione della mappa da utente non registrato è la seguente:
 
 [#img-sunset]
-.Visulizzazione mappa da utente non registrato
-image::../img/home_non_auth.png[id="Figure-{counter:image-number}"]
+.Visualizzazione mappa da utente non registrato
+image::img/home_non_auth.png[id="Figure-{counter:image-number}"]
 
 Dal bottone "Login", in alto a destra, si ritorna alla pagina di autenticazione.
 [#img-sunset]
 .Bottone Login
-image::../img/login_login.png[align="center", id="Figure-{counter:image-number}"]
+image::img/login_login.png[align="center", id="Figure-{counter:image-number}"]
 
 
 ==== Logout
 
-Effettuato correttamente l'accesso al portale, è possibile uscire da esso tramite il relativo bottone di
-"Logout", in alto a destra, del menù.
+Effettuato correttamente l'accesso al portale, è possibile uscire da esso tramite il relativo bottone di "Logout", in alto a destra, del menù.
 
 [#img-sunset]
 .Bottone Logout
-image::../img/logout.PNG[align="center", id="Figure-{counter:image-number}"]
+image::img/logout.PNG[align="center", id="Figure-{counter:image-number}"]
 
 
 === Schermata coordinatore
@@ -93,24 +92,24 @@ La mappa rileva la posizione corrente delle unità registrate all'interno del si
 
 [#img-sunset]
 .Schermata coordinatore
-image::../img/user_coordination.png[id="Figure-{counter:image-number}"]
+image::img/user_coordination.png[id="Figure-{counter:image-number}"]
 
-Dal menù è possibile:
+Dal menù è possibile raggiungere:
 
 * Manuale: si accede al Manuale utente;
 * Logout: permette di effettuare il logout.
 
 [#img-sunset]
 .Menù coordinatore
-image::../img/user_coordination_menu.png[id="Figure-{counter:image-number}"]
+image::img/user_coordination_menu.png[id="Figure-{counter:image-number}"]
 
 ==== Visualizzazione unità attive
 
 [#img-sunset]
 .Unità registrate
-image::../img/GestioneUnità.PNG[id="Figure-{counter:image-number}"]
+image::img/GestioneUnità.PNG[id="Figure-{counter:image-number}"]
 
-La tabella contiente tutte le informazioni utili per ogni unità presente nel sistema:
+La tabella contiene tutte le informazioni utili per ogni unità presente nel sistema:
 
 * Name: il nome dell'unità visualizzabile all'interno della mappa;
 * Base: la posizione della base per la specifica unità;
@@ -119,39 +118,37 @@ La tabella contiente tutte le informazioni utili per ogni unità presente nel si
         - Going to: l'unità è in movimento verso il punto di interesse;
         - Stop: l'unità è ferma;
         - Base: l'unità è alla sua postazione di base;
-        - Error: l'unità ha rilevato un errore.
-* Speed: la velocità corrente dell'unità
+        - Error: l'unità ha rilevato un errore;
+* Speed: la velocità corrente dell'unità;
 * Error: segnalazione errori.
 
-Le unità possono essere attivite e/o controllate tramite il botton "@" .
-Una volta cliccato apparità la tabella per la gestione dell'unità selezionata.
+Le unità possono essere attivate e/o controllate tramite il bottone "@".
+Una volta cliccato apparirà la tabella per la gestione dell'unità selezionata.
 
 ==== Gestione ordini e unità
 
 [#img-sunset]
-.Genstione ordini e unità
-image::../img/gestione_ordini.PNG[id="Figure-{counter:image-number}"]
+.Gestione ordini e unità
+image::img/gestione_ordini.PNG[id="Figure-{counter:image-number}"]
 
-Tramite la seguente tabella gestionale è possibile aggiungere dei Punti di interesse all' unità selazionata dalla precedente tabella e
-visionarne i realtivi ordini nella colonna adiacente "Orders".
+Tramite la seguente tabella gestionale è possibile aggiungere dei Punti di interesse all'unità selezionata dalla precedente tabella e visionarne i relativi ordini nella colonna adiacente "Orders".
 
-Dopo aver inserito le coordinate (x,y) nell'apposito form, premere il bottone "Add" per confermare il Punto
-di interesse.
+Dopo aver inserito le coordinate (x, y) nell'apposito form, premere il bottone "Add" per confermare il Punto di interesse.
 
 Le unità possono essere parzialmente guidate tramite i bottoni:
 
 * Start: l'unità inizia o riprende il percorso;
-* Go back: l'unità ritorna alla base,
-* Stop: l'unità si ferma,
-* Shutdown : l'unità si spegne.
+* Go back: l'unità ritorna alla base;
+* Stop: l'unità si ferma;
+* Shutdown: l'unità si spegne.
 
 === Schermata admin
 
-L'amministratore, come il coordinatore, può gestire le unità all'interno della mappa (vedere paragrafo 2.2).
+L'amministratore, come il coordinatore, può gestire le unità all'interno della mappa (§ 2.2).
 
 [#img-sunset]
 .Schermata amministratore
-image::../img/admin_coordination.png[id="Figure-{counter:image-number}"]
+image::img/admin_coordination.png[id="Figure-{counter:image-number}"]
 
 Da menù:
 
@@ -166,20 +163,20 @@ Da menù:
 
 [#img-sunset]
 .Menù amministratore
-image::../img/home_non_auth-vistaDaAdmin_menu.png[id="Figure-{counter:image-number}"]
+image::img/home_non_auth-vistaDaAdmin_menu.png[id="Figure-{counter:image-number}"]
 
 ==== Gestione utenti
 
 [#img-sunset]
 .Gestione utenti
-image::../img/admin_user.png[id="Figure-{counter:image-number}"]
+image::img/admin_user.png[id="Figure-{counter:image-number}"]
 
-L'inserimento di nuovi utenti,accessibile tramite il pulsante "Users" situato nel menù in alto a sinistra,è gestito dall'amministatore, tramite apposito form:
+L'inserimento di nuovi utenti, accessibile tramite il pulsante "Users" situato nel menù in alto a sinistra, è gestito dall'amministatore, tramite apposito form:
 
 * Username: creazione di un username per l'utente;
-* Password: creazione di una password per l'utente.
+* Password: creazione di una password per l'utente;
 * Status utente:
-        - Admin: l'utente creato avrà lo stato di amministratore,
+        - Admin: l'utente creato avrà lo stato di amministratore;
         - User: l'utente creato avrà lo stato di coordinatore.
 
 
@@ -192,15 +189,15 @@ Premendo il bottone "Delete", l'utente viene eliminato dal sistema.
 
 [#img-sunset]
 .Gestione unità
-image::../img/admin_unit.png[id="Figure-{counter:image-number}"]
+image::img/admin_unit.png[id="Figure-{counter:image-number}"]
 
-L'inserimento di nuove unità,accessibile tramite il pulsante "Units" situato nel menù in alto a sinistra, è gestito dall'amministatore, tramite apposito form:
+L'inserimento di nuove unità, accessibile tramite il pulsante "Units" situato nel menù in alto a sinistra, è gestito dall'amministatore, tramite apposito form:
 
 * ID: identificativo di fabbrica dell'unità;
-* Name: nome dell'unità che verrà visualizzato durante la coordinazione.
+* Name: nome dell'unità che verrà visualizzato durante la coordinazione;
 * Base:
-- X: coordinata X per il posizionamento in base dell'unità
-- Y: coordinata y per il posizionamento in base dell'unità
+- X: coordinata X per il posizionamento in base dell'unità;
+- Y: coordinata y per il posizionamento in base dell'unità.
 
 
 Completati i campi nel form, premere il bottone "Send" per confermare.
@@ -212,17 +209,7 @@ Premendo il bottone "Delete", l'unità viene eliminata dal sistema.
 
 [#img-sunset]
 .Gestione mappa
-image::../img/admin_map.png[id="Figure-{counter:image-number}"]
+image::img/admin_map.png[id="Figure-{counter:image-number}"]
 
-L'importanzione della nuova mappa se avvenuta correttamente, permette di mmostrare una anteprima della
+L'importazione della nuova mappa se avvenuta correttamente, permette di mostrare una anteprima della
 mappa che verrà utilizzata all'interno del sistema.
-
-
-
-
-
-
-
-
-
-
