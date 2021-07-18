@@ -1,4 +1,31 @@
 = Manuale utente
+gruppo lineCode <linecode.swe@gmail.com>
+v1.0.0, 18-07-2021
+:doctype: book
+:title-logo-image: ../../commons/res/lclong.png
+:toc:
+:toclevels: 4
+:sectnums:
+:sectnumlevels: 4
+:chapter-label:
+
+.Dati sul documento
+[cols=2]
+|===
+|Uso|Esterno
+
+|Redattori
+|Lucia Fenu + Valon Tahiraj
+|Verificatori
+|
+|Responsabile
+|
+|Destinatari
+|lineCode +
+prof. Vardanega Tullio +
+prof. Cardin Riccardo +
+Sanmarco Informatica
+|===
 :counter: image-counter: 0
 :toc:
 
