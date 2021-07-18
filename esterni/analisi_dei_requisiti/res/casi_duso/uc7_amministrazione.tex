@@ -127,21 +127,12 @@
 \end{itemize}
 
 \subsubsection{UC16 - Inserimento unità}
-	\begin{figure}[H]
-		\centering
-		\includegraphics[width=15cm]{images/uc16.png}
-		\caption{Diagramma UC16 - Inserimento unità}
-	\end{figure}
 	\begin{itemize}
 		\item \textbf{Attori primari:} utente amministratore;
 		\item \textbf{Descrizione:} l'amministratore intende aggiungere una nuova unità, alla lista di quelle gestite dal sistema;
 		\item \textbf{Scenario principale:} l'amministratore aggiunge l'unità interessata alla lista di quelle già esistenti fornendo il rispettivo ID unità;
 		\item \textbf{Precondizione:} l'amministratore ha accesso all'elenco delle unità esistenti;
 		\item \textbf{Postcondizione:} l'amministratore ha modificato la lista delle unità inserendo un'unità.
-		\item \textbf{Estensione:}
-		\begin{itemize}
-			\item \textbf{UC18:} se si tenta di usare l'ID di un'unità già esistente, viene visualizzato un apposito messaggio di errore.
-		\end{itemize}
 	\end{itemize}
 
 \subsubsection{UC17 - Rimozione unità}
@@ -151,13 +142,4 @@
 		\item \textbf{Scenario principale:} l'amministratore rimuove l'unità interessata dalla lista di quelle esistenti;
 		\item \textbf{Precondizione:} l'amministratore ha accesso all'elenco delle unità esistenti;
 		\item \textbf{Postcondizione:} l'amministratore ha modificato la lista delle unità rimuovendo un'unità.
-	\end{itemize}
-
-\subsubsection{UC18 - Visualizzazione errore causa ID unità già esistente}
-	\begin{itemize}
-		\item \textbf{Attori primari:} utente amministratore;
-		\item \textbf{Descrizione:} l'amministratore visualizza un errore, relativo al fatto che l'ID che si è cercato di usare è già assegnato ad un'unità esistente;
-		\item \textbf{Scenario principale:} l'amministratore tenta di inserire un ID non valido in quanto assegnato ad un'altra unità, ed il sistema risponde con un apposito errore;
-		\item \textbf{Precondizione:} l'amministratore sta inserendo i dati dell'unità interessata;
-		\item \textbf{Postcondizione:} viene visualizzato un errore per informare l'utente che è necessario scegliere un altro ID per l'unità.
 	\end{itemize}
