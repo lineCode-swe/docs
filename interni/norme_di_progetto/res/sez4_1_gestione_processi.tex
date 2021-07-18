@@ -196,7 +196,7 @@ dove Lettera può assumere i seguenti valori:
 	 			\end{displaymath}
 	 			Dove:
 	 			\begin{itemize}
-	 				\item {\bfseries MP02 - Budgeted Cost of Work Performed - BCWP}
+	 				\item {\bfseries Budgeted Cost of Work Performed - BCWP}
 	 				\begin{itemize}
 	 					\item \textbf{Descrizione}:
 	 					è  il valore (in giorni o EURO) delle attività realizzate alla data corrente.\\
@@ -217,7 +217,7 @@ dove Lettera può assumere i seguenti valori:
 	 					\end{itemize}
 	 					\item \textbf{Unità di misura}: numero;
 	 				\end{itemize}
-	 				\item {\bfseries MP03 - Budgeted Cost of Work Scheduled - BCWS}
+	 				\item {\bfseries Budgeted Cost of Work Scheduled - BCWS}
 	 				\begin{itemize}
 	 					\item \textbf{Descrizione}: è il costo pianificato (in giorni o EURO) per realizzare le attività di progetto alla data corrente;
 	 					\item \textbf{Unità di misura}: numero;
@@ -232,7 +232,7 @@ dove Lettera può assumere i seguenti valori:
 	 			\end{itemize}
 	 	\end{itemize}
 
- 		\paragraph{MP04 - Cost Variance - CV}
+ 		\paragraph{MP02 - Cost Variance - CV}
  		\begin{itemize}
  			\item \textbf{Descrizione}:
  			La Cost variance, indica se il valore del costo realmente maturato è maggiore, uguale o minore rispetto al costo effettivo; ovvero quanto sia il livello di efficienza del gruppo rispetto a quanto pianificato. \\
@@ -243,8 +243,8 @@ dove Lettera può assumere i seguenti valori:
  			\end{displaymath}
  			dove:
  			\begin{itemize}
- 				\item {\bfseries MP02 - Budgeted Cost of Work Performed - BCWP}: è il valore (in giorni o EURO) delle attività realizzate alla data corrente;
- 				\item {\bfseries MP05 - Actual Cost of Work Performed - ACWP}: è il costo effettivamente sostenuto (in giorni o EURO) alla data corrente.
+ 				\item {\bfseries Budgeted Cost of Work Performed - BCWP}: è il valore (in giorni o EURO) delle attività realizzate alla data corrente;
+ 				\item {\bfseries Actual Cost of Work Performed - ACWP}: è il costo effettivamente sostenuto (in giorni o EURO) alla data corrente.
  			\end{itemize}
  			La differenza tra BCWP e ACWP è che se l'attuale costo (ACWP) alla data corrente è più alto rispetto al guadagno (BCWP) alla data corrente, allora sappiamo che l'appaltatore sta attualmente superando i costi previsti nella stima al completamento, sforando il budget.
  			\item \textbf{Unità di misura}: numero;
@@ -256,7 +256,7 @@ dove Lettera può assumere i seguenti valori:
  			\end{itemize}
  		\end{itemize}
 
- 		\paragraph{MP06 - Budget Variance - BV}
+ 		\paragraph{MP03 - Budget Variance - BV}
  		\begin{itemize}
  			\item \textbf{Descrizione}:
  			La Budget Variance è una metrica che indica se si è speso di più o di meno rispetto a quanto previsto, alla data corrente. Segue la formula:
@@ -265,8 +265,8 @@ dove Lettera può assumere i seguenti valori:
  			\end{displaymath}
  			dove:
  			\begin{itemize}
- 				\item {\bfseries MP03 - Budgeted Cost of Work Scheduled - BCWS}: è il costo pianificato (in giorni o EURO) per realizzare le attività di progetto alla data corrente;
- 				\item {\bfseries MP05 - Actual Cost of Work Performed - ACWP}: è il costo effettivamente sostenuto (in giorni o EURO) alla data corrente.
+ 				\item {\bfseries Budgeted Cost of Work Scheduled - BCWS}: è il costo pianificato (in giorni o EURO) per realizzare le attività di progetto alla data corrente;
+ 				\item {\bfseries Actual Cost of Work Performed - ACWP}: è il costo effettivamente sostenuto (in giorni o EURO) alla data corrente.
  			\end{itemize}
  			\item \textbf{Unità di misura}: numero;
  			\item \textbf{Risultato}:
@@ -277,7 +277,7 @@ dove Lettera può assumere i seguenti valori:
             \end{itemize}
  		\end{itemize}
 
- 		\paragraph{MP07 - Unbudgeted Risks - UR}
+ 		\paragraph{MP04 - Unbudgeted Risks - UR}
  		\begin{itemize}
  			\item \textbf{Descrizione}:
  			L'Unbudgeted Risks, indica il numero di rischi non rilevati in fase di analisi, in modo incrementale. Per ogni rischio non preventivato che viene rilevato, si incrementa di una unità (partendo dallo zero) il numero di rischi rilevati dall'inizio del progetto fino a data corrente; secondo la formula:
@@ -292,20 +292,7 @@ dove Lettera può assumere i seguenti valori:
  			\end{itemize}
  		\end{itemize}
 
- 		\paragraph{MP08 - Defects Removal Efficiency - DRE}
- 		\begin{itemize}
- 			\item \textbf{Descrizione}:
- 			La Defects Removal Efficiency è una metrica utile sia a livello di processo che di progetto. Indica la misura della capacità del team di rimuovere i difetti prima del rilascio, secondo la formula:
- 			\begin{displaymath}
- 				DRE = \frac{DI}{DI+DE}\times100
- 			\end{displaymath}
- 			dove:
- 			\begin{itemize}
- 				\item {\bfseries DI}: numero dei difetti interni, rilevati dai test in fase di sviluppo;
- 				\item {\bfseries DE}: numero di difetti esterni, rilevati dal consumatore.
- 			\end{itemize}
- 			\item \textbf{Unità di misura}: numero intero maggiore o uguale a 0; \\
- 		\end{itemize}
+ 	
 
  	\subsubsection{Strumenti}
  	Per permettere l'attuazione delle procedure sopra citate, sono utilizzati i seguenti strumenti:
