@@ -25,7 +25,7 @@
 \setUso{Esterno}
 
 \setModifiche{
-	
+
 	0.1.0 & Lucia Fenu & Verificatore & 05-04-2021 & Verifica della prima stesura\\
 	0.0.0 & Valton Tahiraj & Amministratore & 04-04-2021 & Stesura iniziale}
 
@@ -56,7 +56,7 @@
 		\item \textbf{Presenti}:
 		\begin{itemize}
 			\item Alessandro Chimetto
-			\item Alessandro Dindinelli	
+			\item Alessandro Dindinelli
 			\item Giacomo Bulbarelli
 			\item Matteo Alba
 			\item Paolo Scanferlato
@@ -85,18 +85,18 @@
 	\section{Svolgimento}
 
 
-	\subsection{Discussione sulla architettura}	
+	\subsection{Discussione sulla architettura}
 	Abbiamo presentato una prima bozza dell'architettura del sistema per analizzare i relativi dubbi riscontrati. \\
-	Ci si è poi focalizzato sullo \glock{zero downtime} e su quanto questo debba essere efficiente sulla base del contesto da noi selezionato. Essendo un requisito non obbligatorio, il proponente, ha consigliato una implementazione futura e che, il suo soddisfacimento per quanto piccolo esse sia; verrà comunque considerato come un plus. 
-	 
+	Ci si è poi focalizzato sullo \glock{zero downtime} e su quanto questo debba essere efficiente sulla base del contesto da noi selezionato. Essendo un requisito non obbligatorio, il proponente, ha consigliato una implementazione futura e che, il suo soddisfacimento per quanto piccolo esse sia; verrà comunque considerato come un plus.
+
 	\subsection{Discussione rilevazione pedoni}
-	I pedoni essendo, anch'essi un requisito non obbligatorio, la sua implementazione si può valutare successivamente. Per questo motivo, si deve partire dal fatto che il sistema a priori conosca la posizione di tutto ciò che succede all'interno della mappa e dunque, anche di tutti i pedoni. 
+	I pedoni essendo, anch'essi un requisito non obbligatorio, la sua implementazione si può valutare successivamente. Per questo motivo, si deve partire dal fatto che il sistema a priori conosca la posizione di tutto ciò che succede all'interno della mappa e dunque, anche di tutti i pedoni.
 	Il rilevamento dei pedoni da parte delle unità deve avvenire grazie al sistema, che comunica insieme all'uso dei sensori dell'unità, solo i pedoni a loro più prossimi.
 	\\
 	\\
 	Un esempio utile che ci è stato fornito, è l'esempio di una fila:\\
-	la fila è composta da pedoni relativamente fermi, equidistanti 1 metro (per via della pandemia). Il sistema sa che è presenta una fila in cui vi è la possibilità di far passare in mezzo ai pedoni le unità. 
-	
+	la fila è composta da pedoni relativamente fermi, equidistanti 1 metro (per via della pandemia). Il sistema sa che è presenta una fila in cui vi è la possibilità di far passare in mezzo ai pedoni le unità.
+
 	\subsection{Discussione aggiornamenti real-time}
  	Si è deciso di utilizzare due istanze del motore di calcolo essendo in un contesto non critico.
  	l'aggiunta di una terza istanza può essere inserito come requisito migliorabile, qualora il sistema evolvesse e dunque ritenersi necessario.
@@ -110,8 +110,8 @@
 			\begin{tabular} { m{2cm} m{14cm} }
 				\rowcolor{lightgray}
 				\textbf{ID} & \textbf{Decisione}\\
-				VE_2021-03-31_6.1 & Il sistema centrale deve conoscere la posizione di pedoni e ostacoli.\\
-				VE_2021-03-31_6.2 & Vi devono essere due istanze del motore di calcolo per favorire l'aggiornamento.\\
+				VE\_2021-03-31\_6.1 & Il sistema centrale deve conoscere la posizione di pedoni e ostacoli.\\
+				VE\_2021-03-31\_6.2 & Vi devono essere due istanze del motore di calcolo per favorire l'aggiornamento.\\
 
 			\end{tabular}
 		\end{center}
