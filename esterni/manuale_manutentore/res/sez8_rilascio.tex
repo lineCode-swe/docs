@@ -1,5 +1,11 @@
-\subsection{Windows}
+La repository Git PORTACS contiene le repo delle tre componenti fondamentali (Server, UI e unità) come submodule e due script Bash, chiamati \textit{prepare} e \textit{reset}, per la preparazione delle immagini Docker.
 
-\subsection{macOS}
+\subsection{Preparazione}
+Lo script \textit{prepare}, una volta lanciato, crea gli artefatti nei submodule e sulla base di questi inizializza le relative immagini Docker.
+\\A questo punto il sistema di esecuzione dello script contiene le immagini Docker delle tre componenti che possono essere rilasciate su una repository Docker remota e successivamente caricate in produzione.
 
-\subsection{Linux}
+\subsection{Esecuzione}
+L'immagine del server espone la porta TCP:8080 per la comunicazione tramite WebSocket con le unità e le UI, mentre l'immagine della UI espone la porta TCP:8081 per la comunicazione HTTP con il browser web al fine di visualizzare l'interfaccia grafica.
+
+\subsection{Reset}
+Lo script \textit{reset} cancella gli artefatti nei submodule e le immagini Docker create.
