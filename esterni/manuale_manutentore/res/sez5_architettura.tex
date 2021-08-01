@@ -1,5 +1,5 @@
 \subsection{Descrizione generale}
-	Durante la fase di progettazione, il gruppo \textit{lineCode} ha deciso di modellare la struttura del prodotto in quattro componenti distinte:
+	Durante la fase di progettazione la struttura del prodotto è stata modellata in quattro componenti distinte:
 	\begin{itemize}
 		\item \textbf{server}: motore di calcolo che coordina le unità e genera le informazioni per la UI; viene modellato seguendo la \textit{layered architecture};
 		\item \textbf{interfaccia grafica}: mostra la mappa e permette di gestire le unità e gli utenti; viene modellata seguendo il \textit{MVVM};
@@ -25,9 +25,9 @@
 		\caption{Server - Classe Position}
 	\end{figure}
 
-	\subsubsection{Messages}
+	\subsubsection{Messaggi}
 		È stato stabilito un formato standard di messaggi da e per UI e unità. Tali messaggi sono rappresentati come classi \glock{Java} e verranno scambiati con le altre componenti del prodotto in seguito alla loro serializzazione e deserializzazione in formato \glock{JSON}.\\
-		Ogni messaggio viene riferito tramite la propria interfaccia in modo da slegare il sistema dall'implementazione di tali messaggi.
+		Tutte le classi (vedi figure 3 e 4) estendono la classe astratta Message.
 	
 		\begin{landscape}
 			\begin{figure}[]
