@@ -1,0 +1,125 @@
+\documentclass[]{article}
+
+\input{../../../commons/config}
+
+\appendToGraphicsPath{../../../commons/res/}
+
+%------------------------------
+%
+% COMANDI DI CONFIGURAZIONE
+%
+%------------------------------
+
+\setTitle{Verbale esterno \#9}
+
+\setVersione{1.0.0}
+
+\setDate{02-08-2021}
+
+\setResponsabile{Giacomo Bulbarelli}
+
+\setRedattori{Alessandro Chimetto}
+
+\setVerificatori{Alessandro Dindinelli}
+
+\setUso{Esterno}
+
+\setModifiche{
+	1.0.0 & Giacomo Bulbarelli & Responsabile & 04-08-2021 & Approvazione documento \\
+	0.1.0 & Alessandro Chimetto, Alessandro Dindinelli & Amministratore, Verificatore & 03-08-2021 & Stesura documento \\
+}
+
+\begin{document}
+
+	\input{../../../commons/template}
+
+	\newpage
+
+	%--------------------------------
+	%
+	% IL CONTENUTO INIZIA DA QUI
+	%
+	%--------------------------------
+
+	\section{Introduzione}
+	\subsection{Luogo e data dell'incontro}
+	\begin{itemize}
+		\item \textbf{Modalità}: Telematica;
+		\item \textbf{Software utilizzato}: Zoom;
+		\item \textbf{Data}: 2 Agosto 2021;
+		\item \textbf{Ora di inizio}: 17:00;
+		\item \textbf{Ora di fine}: 18:00.
+	\end{itemize}
+
+	\subsection{Presenze}
+	\begin{itemize}
+		\item \textbf{Presenti}:
+		\begin{itemize}
+			\item Giacomo Bulbarelli
+			\item Alessandro Chimetto
+			\item Alessandro Dindinelli
+			\item Paolo Scanferlato
+            \item Valton Tahiraj
+
+		\end{itemize}
+		\item \textbf{Assenti}:
+		\begin{itemize}
+			\item Matteo Alba
+			\item Lucia Fenu
+
+		\end{itemize}
+		\item \textbf{Partecipanti esterni}:
+		\begin{itemize}
+			\item Prof. Tullio Vardanega
+		\end{itemize}
+	\end{itemize}
+
+	\subsection{Ordine del giorno}
+	\begin{enumerate}
+		\item Chiarimento sulla frequenza delle misurazioni;
+        \item chiarimento sulla struttura delle \dext{Norme di Progetto};
+        \item chiarimento sulla corretta stesura del \dext{Manuale Utente};
+        \item chiarimento sul corretto rapporto fra preventivo e consuntivo;
+        \item chiarimento sul corretto significato del \dext{Piano di Progetto}.
+	\end{enumerate}
+	\newpage
+	\section{Svolgimento}
+    Si è discusso con il Prof. Vardanega riguardo al significato delle correzioni da lui presentate in sede di RQ.
+
+	   \subsection{Chiarimento sulla frequenza delle misurazioni}
+       La modalità attuale di misurazione prevede che i nuovi dati riguardanti le nostre metriche (di prodotto e di progetto) vengano rilevati alla fine di ogni incremento. Questa modalità è inadeguata in quanto il periodo individuato fra due misurazioni è troppo lungo per permettere un miglioramento tempestivo del nostro Way of Working.
+
+       \subsection{Chiarimento sulla struttura delle \dext{Norme di Progetto}}
+       Errore comune fra gli studenti è quello di considerare i documenti da produrre come fine dei processi primari. Per evitare questa confusione è bene pensare ai processi primari come la funzione \textit{main()} dei programmi e ai processi secondari come delle subroutine: all'interno di un progetto, il processo primario ha come fine quello di mandare avanti il ciclo di vita del software in un qualche modo specifico (come lo sviluppo del prodotto o la relazione con il committente/proponente) e per farlo usa prodotti "ritornati" dai processi secondari (come i documenti dal processo di documentazione) durante la sua esecuzione.
+
+       \subsection{Chiarimento sulla corretta stesura del \dext{Manuale Utente}}
+       Un Manuale Utente basato su un modello enciclopedico, ovvero che indichi ogni singola funzionalità del software, è inutile e tedioso per redattori e utenti. Un buon Manuale Utente deve guidare l'utente nelle funzioni principali del programma basandosi sui casi d'uso rilevati e tralasciando funzionalità banali e/o ovvie (es. login).
+
+       \subsection{Chiarimento sul corretto rapporto fra preventivo e consuntivo}
+       In un mondo ideale, il prezzo del consuntivo finale non dovrebbe mai superare quello del primo preventivo e dovrebbe essere onere del fornitore proporre un preventivo che abbia un margine sufficiente in caso di consuntivi di periodo "in negativo" rispetto a quanto preventivato.
+       \\\\
+       Si è notato, inoltre, come l'economia del progetto di IS vada a favore dello studente: essendo i soldi "del Monopoli" direttamente proporzionali alle ore impegnate nel progetto, allora una serie di consuntivi in cui risulti evidente la discrepanza con i relativi preventivi dovrebbero far cambiare rotta al gruppo applicando opportune strategie (es. non perseguire la soddisfazione di requisiti desiderabili e opzionali).
+
+       \subsection{Chiarimento sul corretto significato del \dext{Piano di Progetto}}
+       Il \dext{Piano di Progetto 3.0.0} non rappresenta più in modo significativo i passi fatti e da fare per il gruppo. Ciò lo rende un costo che non porta ad alcun beneficio e che va consegnato per obbligo nei confronti del committente. Arrivati a questo punto, l'unica cosa che conviene fare è tentare di riportare una pianificazione che sia la più sincera e rappresentativa possibile per il solo periodo mancante.
+
+	\newpage
+
+	\section{Tabella delle decisioni}
+
+	\begin{table} [h!]
+		\rowcolors{2}{gray!25}{gray!6}
+		\begin{center}
+			\begin{tabular} { m{3cm} m{13cm} }
+				\rowcolor{lightgray}
+				\textbf{ID} & \textbf{Decisione}\\
+				VE\_2021-08-02\_9.1 & Nuovi dati per le metriche di prodotto e di progetto ad ogni periodo (invece che ad ogni incremento).\\
+                VE\_2021-08-02\_9.2 & Rivisitazione struttura \dext{Norme di Progetto 3.0.0} con consapevolezza del rapporto fra processi primari e secondari.\\
+                VE\_2021-08-02\_9.3 & Rivisitazione \dext{Manuale Utente 1.0.0} con una struttura di tipo guida/tutorial su funzionalità non ovvie.\\
+                VE\_2021-08-02\_9.4 & Ore rendicontate sono al più pari a quelle preventivate in RR.\\
+                VE\_2021-08-02\_9.5 & Riportare una rappresentazione il più possibile significativa della pianificazione dell'ultimo periodo nel \dext{Piano di Progetto 4.0.0}.\\
+			\end{tabular}
+		\end{center}
+	\end{table}
+\end{document}
+
