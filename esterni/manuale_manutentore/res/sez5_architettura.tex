@@ -100,6 +100,7 @@
 						\end{itemize}\\
 					id degli ostacoli (intero incrementale) con posizione & obs:[id\_obs] & LIST & [coord\_x]:[coord\_y]\\
 				\end{tabular}
+				\caption{Struttura del database \glock{Redis}}
 			\end{center}
 		\end{table}
 	
@@ -145,7 +146,7 @@
 	Ogni componente che fa parte del \textit{ViewModel} rappresenta una funzionalità principale che l'interfaccia mette a disposizione all'utente.\\
 	L'aggiornamento dei dati tra gli \glock{Angular Components} ed il \glock{WebSocket} avviene tramite l'uso dei \glock{Subject} (uno per tipo) al'interno di quest'ultimo; indirizzando tali dati  ai componenti che prevedono appositi campi dati per ricevere le informazioni.\\
 	\newline
-	Di seguito due diagrammi delle classi: il primo per descrivere il legame tra \textit{Model} e \textit{Viewmodel}, con la struttura dei vari \glock{Angular Components}, mentre la parte di \textit{View}; che comprende i templates degli \glock{Angular Components}, non viene qui rappresentata perché la struttura del codice è \glock{HTML}.
+	Di seguito due diagrammi delle classi: il primo per descrivere il legame tra \textit{Model} e \textit{Viewmodel}, con la struttura dei vari \glock{Angular} Components, mentre la parte di \textit{View}; che comprende i templates degli \glock{Angular} Components, non viene qui rappresentata perché la struttura del codice è \glock{HTML}.
 	Il secondo, invece, rappresenta i messaggi che vengono inviati e ricevuti dal server.
 	\newpage
 	

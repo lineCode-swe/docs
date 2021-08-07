@@ -10,7 +10,7 @@
 	\end{itemize}
 
 \subsection{UI}
-	La UI si basa su Angular e supporta l'aggiunta di nuovi component come previsto dal framework. L'architettura della UI è Model-View-ViewModel e l'isolamento del Model rispetto ai ViewModel è garantito dall'interfaccia ServerService che viene implementata dal Model concreto. In caso di cambiamenti nell'API o nel protocollo di comunicazione il Model concreto può venire esteso o sostituito per intero mantenendo l'interfaccia ServerService invariata.
+	La UI si basa su \glock{Angular} e supporta l'aggiunta di nuovi component come previsto dal \glock{framework}. L'architettura della UI è Model-View-ViewModel e l'isolamento del Model rispetto ai ViewModel è garantito dall'interfaccia ServerService che viene implementata dal Model concreto. In caso di cambiamenti nell'API o nel protocollo di comunicazione il Model concreto può venire esteso o sostituito per intero mantenendo l'interfaccia ServerService invariata.
 	
 \subsection{Unità}
-	L'unità è stata progettata secondo l'Hexagonal Architecture quindi ogni cambiamento nella relazione con componenti esterne (MongoDB, WebSocket) è dato dalla modifica o sostituzione degli Inbound Adapter e Outbound Adapter mantenendo invariate le Inbound Port e le Outbound Port.
+	L'unità è stata progettata secondo l'Hexagonal Architecture quindi ogni cambiamento nella relazione con componenti esterne (\glock{MongoDB}, \glock{WebSocket}) è dato dalla modifica o sostituzione degli Inbound Adapter e Outbound Adapter mantenendo invariate le Inbound Port e le Outbound Port.
