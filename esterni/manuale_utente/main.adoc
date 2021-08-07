@@ -15,7 +15,8 @@ v0.1.0, 18-07-2021
 |Uso|Esterno
 
 |Redattori
-|Lucia Fenu +
+|Alessandro Dindinelli +
+Lucia Fenu +
 Valton Tahiraj
 |Verificatori
 |Giacomo Bulbarelli
@@ -36,78 +37,68 @@ Sanmarco Informatica
 == Introduzione
 
 === Scopo del documento
-Il documento vuole essere una guida per illustrare tutte le funzionalità del progetto PORTACS~G~. In questo modo l'utente finale potrà effettuare un corretto uso del software~G~.
+
+Il documento vuole essere una guida per illustrare tutte le funzionalità del progetto PORTACS~G~.
+In questo modo l'utente finale potrà effettuare un corretto uso del software~G~.
 
 === Scopo del prodotto
-Il capitolato~G~ C5 ha come obbiettivo la realizzazione di un applicativo Real-Time~G~ in grado di guidare delle unità dotate di mobilità autonoma in ambienti specifici, partendo dal presupposto che queste si muovano in ambienti in cui sono presenti altre unità (autonome o meno).
+
+Il capitolato~G~ C5 ha come obbiettivo la realizzazione di un applicativo Real-Time~G~
+in grado di guidare delle unità dotate di mobilità autonoma in ambienti specifici,
+partendo dal presupposto che queste si muovano in ambienti in cui sono presenti altre unità (autonome o meno).
 
 <<<
-
 
 == Istruzioni per l'utilizzo
 
 === Schermata iniziale
+
 ==== Login
 
-La schermata iniziale corrisponde alle pagine di Login, in cui l'utente registrato dovrà inserire le credenziali corrette affinché l'accesso vada a buon fine.
+La schermata iniziale corrisponde alle pagine di Login,
+in cui l'utente registrato dovrà inserire le credenziali corrette affinché l'accesso vada a buon fine.
+In caso contrario verrà visualizzato un apposito messaggio di errore.
 
 
 [#img-sunset]
 .Login
 image::img/login.png[id="Figure-{counter:image-number}"]
 
-==== Utente non registrato
-Tramite il bottone seguente, si passa alla visualizzazione della mappa in sola lettura, disponibile per gli utenti non registrati nel sistema.
+==== Mappa in sola lettura
+
+In qualsiasi momento è disponibile la visualizzazione in sola lettura della mappa e delle unità in movimento,
+anche per utente non registrati.
+Tali utenti possono accedere alla mappa tramite l'apposito pulsante presente nella pagina di login.
+
+La stessa visualizzazione è disponibile anche per gli utenti registrati
+cliccando sulla scritta Portacs presente nella barra di navigazione di ogni pagina.
 
 [#img-sunset]
 .Bottone visualizzazione mappa da utente non registrato
 image::img/login_bottone.png[align="center", id="Figure-{counter:image-number}"]
 
-La visualizzazione della mappa da utente non registrato è la seguente:
-
 [#img-sunset]
-.Visualizzazione mappa da utente non registrato
+.Visualizzazione mappa in sola lettura
 image::img/home_non_auth.png[id="Figure-{counter:image-number}"]
 
-Dal bottone "Login", in alto a destra, si ritorna alla pagina di autenticazione.
-[#img-sunset]
-.Bottone Login
-image::img/login_login.png[align="center", id="Figure-{counter:image-number}"]
+=== Guida Utente
 
-
-==== Logout
-
-Effettuato correttamente l'accesso al portale, è possibile uscire da esso tramite il relativo bottone di "Logout", in alto a destra, del menù.
-
-[#img-sunset]
-.Bottone Logout
-image::img/logout.PNG[align="center", id="Figure-{counter:image-number}"]
-
+Il presente manuale è reso disponibile online per tutti gli utenti autenticati,
+tramite un apposito link nella rispettiva barra di navigazione.
 
 === Schermata coordinatore
 
-Il coordinatore può gestire le unità all'interno della mappa tramite le tabelle di gestione.
-La mappa rileva la posizione corrente delle unità registrate all'interno del sistema.
+Il coordinatore ha a disposizione una schermata completa che permette eseguire tutte le azioni previste,
+senza bisogno di navigare altre pagine. In ogni momento vengono visualizzati:
 
+* la mappa, aggiornata in tempo reale con la posizione delle unità attive, e degli ostacoli da esse rilevate;
+* la tabella con l'elenco delle unità attive, con i rispettivi dettagli.
 
 [#img-sunset]
 .Schermata coordinatore
 image::img/user_coordination.png[id="Figure-{counter:image-number}"]
 
-Dal menù è possibile raggiungere:
-
-* Manuale: si accede al Manuale utente;
-* Logout: permette di effettuare il logout.
-
-[#img-sunset]
-.Menù coordinatore
-image::img/user_coordination_menu.png[id="Figure-{counter:image-number}"]
-
 ==== Visualizzazione unità attive
-
-[#img-sunset]
-.Unità registrate
-image::img/GestioneUnità.PNG[id="Figure-{counter:image-number}"]
 
 La tabella contiene tutte le informazioni utili per ogni unità presente nel sistema:
 
@@ -122,8 +113,8 @@ La tabella contiene tutte le informazioni utili per ogni unità presente nel sis
 * Speed: la velocità corrente dell'unità;
 * Error: segnalazione errori.
 
-Le unità possono essere attivate e/o controllate tramite il bottone "@".
-Una volta cliccato apparirà la tabella per la gestione dell'unità selezionata.
+Le unità possono essere selezionate tramite il bottone "@", che una volta cliccato
+mostrerà la tabella per la gestione della specifica unità.
 
 ==== Gestione ordini e unità
 
@@ -131,11 +122,14 @@ Una volta cliccato apparirà la tabella per la gestione dell'unità selezionata.
 .Gestione ordini e unità
 image::img/gestione_ordini.PNG[id="Figure-{counter:image-number}"]
 
-Tramite la seguente tabella gestionale è possibile aggiungere dei Punti di interesse all'unità selezionata dalla precedente tabella e visionarne i relativi ordini nella colonna adiacente "Orders".
+Tramite la seguente tabella gestionale è possibile comandare l'unità selezionata.
 
-Dopo aver inserito le coordinate (x, y) nell'apposito form, premere il bottone "Add" per confermare il Punto di interesse.
+Se l'unità si trova nella propria cella base, è possibile fornire o rimuovere ordini dalla coda
+dell'unità. Un'ordine è rappresentato da un Point of Interest, e pertanto devono essere fornite delle
+coordinate valide, altrimenti verrà visualizzato un apposito messaggio d'errore.
 
-Le unità possono essere parzialmente guidate tramite i bottoni:
+Le unità possono essere parzialmente guidate tramite i seguenti bottoni, che vengono attivati o disabilitati
+in base allo stato corrente dell'unità stessa:
 
 * Start: l'unità inizia o riprende il percorso;
 * Go back: l'unità ritorna alla base;
@@ -144,21 +138,15 @@ Le unità possono essere parzialmente guidate tramite i bottoni:
 
 === Schermata admin
 
-L'amministratore, come il coordinatore, può gestire le unità all'interno della mappa (§ 2.2).
-
-[#img-sunset]
-.Schermata amministratore
-image::img/admin_coordination.png[id="Figure-{counter:image-number}"]
-
-Da menù:
+L'amministratore ha a disposizione la maggior quantità di pagine navigabili, in base alle azioni che deve svolgere.
+É previsto che un amministratore possa anche compiere le azioni di un coordinatore.
 
 * Portacs: si accede alla pagina di visualizzazione della mappa in sola lettura;
 * Users: si accede alla pagina di gestione utenti;
 * Units:si accede alla pagina di gestione unità;
 * Map: si accede alla pagina di gestione mappa;
-* Coordination: si accede alla pagina di gestione ordini ed unità;
-* Manual: si accede al Manuale utente;
-* Logout: permette di effettuare il logout.
+* Coordination: si accede alla pagina di gestione, usata dai Coordinatori;
+* Manual: si accede al Manuale utente.
 
 
 [#img-sunset]
@@ -171,19 +159,19 @@ image::img/home_non_auth-vistaDaAdmin_menu.png[id="Figure-{counter:image-number}
 .Gestione utenti
 image::img/admin_user.png[id="Figure-{counter:image-number}"]
 
-L'inserimento di nuovi utenti, accessibile tramite il pulsante "Users" situato nel menù in alto a sinistra, è gestito dall'amministatore, tramite apposito form:
+Per la gestione degli utenti, è previsto che l'amministratore possa visualizzare tutti gli utenti registrati
+al sistema tramite la tabella centrale. Da qui li può eliminare con l'apposito pulsante,
+oppure tramite il form in alto andare a crearne di nuovi.
 
-* Username: creazione di un username per l'utente;
-* Password: creazione di una password per l'utente;
+Le informazioni richieste per la creazione di un utente sono:
+
+* Username;
+* Password;
 * Status utente:
         - Admin: l'utente creato avrà lo stato di amministratore;
         - User: l'utente creato avrà lo stato di coordinatore.
 
-
-Completati i campi nel form, premere il bottone "Send" per confermare.
-Il nuovo utente verrà visualizzato nell'ultima riga della tabella sottostante.
-
-Premendo il bottone "Delete", l'utente viene eliminato dal sistema.
+In caso di errori nell'input dei dati utente, verranno visualizzati degli appositi messaggi di errore.
 
 ==== Gestione unità
 
@@ -191,19 +179,19 @@ Premendo il bottone "Delete", l'utente viene eliminato dal sistema.
 .Gestione unità
 image::img/admin_unit.png[id="Figure-{counter:image-number}"]
 
-L'inserimento di nuove unità, accessibile tramite il pulsante "Units" situato nel menù in alto a sinistra, è gestito dall'amministatore, tramite apposito form:
+Per la gestione delle unità, l'amministratore può visualizzare tutte le unità registrate
+nel sistema nella tabella centrale. Da qui le può eliminare con l'apposito pulsante,
+oppure usare il form presente per inserire i dettagli della nuova unità che si vuole registrare.
+
+Le informazioni richieste per la creazione di un'unità sono:
 
 * ID: identificativo di fabbrica dell'unità;
-* Name: nome dell'unità che verrà visualizzato durante la coordinazione;
+* Name: nome dell'unità che verrà visualizzato nella mappa;
 * Base:
-- X: coordinata X per il posizionamento in base dell'unità;
-- Y: coordinata y per il posizionamento in base dell'unità.
+- X: coordinata X della cella base nella mappa;
+- Y: coordinata y della cella base nella mappa.
 
-
-Completati i campi nel form, premere il bottone "Send" per confermare.
-La nuova verrà visualizzata nell'ultima riga della tabella sottostante.
-
-Premendo il bottone "Delete", l'unità viene eliminata dal sistema.
+In caso di errori nell'input dei campi dati, verranno visualizzati degli appositi messaggi di errore.
 
 ==== Gestione Mappa
 
@@ -211,5 +199,7 @@ Premendo il bottone "Delete", l'unità viene eliminata dal sistema.
 .Gestione mappa
 image::img/admin_map.png[id="Figure-{counter:image-number}"]
 
-L'importazione della nuova mappa se avvenuta correttamente, permette di mostrare una anteprima della
-mappa che verrà utilizzata all'interno del sistema.
+Per modificare lo stato della mappa, l'amministratore ha la possibilità di importare dei file
+in formato .txt appositamente formattati.
+
+Nel caso ci siano degli errori nel file di importazione, verranno visualizzati degli appositi messaggi di errore.
