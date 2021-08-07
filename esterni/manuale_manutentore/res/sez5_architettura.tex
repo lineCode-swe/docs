@@ -60,44 +60,51 @@
 				\caption{Server - Diagramma delle classi}
 			\end{figure}
 		\end{landscape}
-
+	
 	\subsubsection{Database layer}
-		Per garantire le migliori performance al sistema e vista la quantità non eccessiva di dati, si è scelto \glock{Redis} come database essendo esso \glock{in-memory}. Non esistono diagrammi standard per rappresentarne la struttura dunque verranno di seguito elencate le strutture dati utilizzate:
-		\begin{itemize}
-			\item SET con id delle unità (key = unit);
-			\item HASH con dati e anagrafica delle unità (key = unit:[id\_unit]); campi dati:
-			\begin{itemize}
-				\item name;
-				\item base\_x;
-				\item base\_y;
-				\item position\_x;
-				\item position\_y;
-				\item status;
-				\item error;
-				\item speed;
-			\end{itemize}
-			\item LIST con coordinate \glock{POI} da raggiungere per una specifica unità (key = poi:[id\_unit], valori = [coord\_x]:[coord\_y]);
-			\item SET con username degli user (key = user);
-			\item HASH con anagrafica degli user (key = user:[username]); campi dati:
-			\begin{itemize}
-				\item password;
-				\item admin;
-			\end{itemize}
-			\item STRING con lunghezza tabella, asse x (key = length);
-			\item STRING con altezza tabella, asse y (key = height);
-			\item HASH con dati delle celle della mappa (key = cell:[coord\_x]:[coord\_y]); campi dati:
-			\begin{itemize}
-				\item position\_x;
-				\item position\_y;
-				\item locked;
-				\item base;
-				\item direction;
-				\item poi;
-			\end{itemize}
-			\item SET con id intero incrementale degli ostacoli (key = obs);
-			\item LIST con posizione dell’ostacolo (key = obs, valori = [coord\_x]:[coord\_y]);
-		\end{itemize}
+		Per garantire le migliori performance al sistema e vista la quantità non eccessiva di dati, si è scelto \glock{Redis} come database essendo esso \glock{in-memory}. Non esistono diagrammi standard per rappresentarne la struttura dunque verranno elencate le strutture dati nella tabella seguente:
 		
+		\begin{table} [h!]
+			\rowcolors{2}{gray!25}{gray!6}
+			\begin{center}
+				\begin{tabular} { m{6cm} m{4cm} m{2cm} m{4cm}}
+					\rowcolor{lightgray}
+					\textbf{Descrizione} & \textbf{Key} & \textbf{Tipo} & \textbf{Valori / Campi Dati}\\
+					id delle unità & unit & SET & \\
+					dati e anagrafica delle unità & unit:[id\_unit] & HASH & 
+						\begin{itemize}
+							\item name
+							\item base\_x
+							\item base\_y
+							\item position\_x
+							\item position\_y
+							\item status
+							\item error
+							\item speed
+						\end{itemize}\\
+					coordinate \glock{POI} da raggiungere per una specifica unità & poi:[id\_unit] & LIST & [coord\_x]:[coord\_y]\\
+					username degli user & user & SET & \\
+					anagrafica degli user & user:[username] & HASH & 
+						\begin{itemize}
+							\item password
+							\item admin
+						\end{itemize}\\
+					lunghezza tabella (asse x) & length & STRING & \\
+					altezza tabella (asse y) & height & STRING & \\
+					dati delle celle della mappa & cell:[coord\_x]:[coord\_y] & HASH & 
+						\begin{itemize}
+							\item locked
+							\item base
+							\item direction
+							\item poi
+						\end{itemize}\\
+					id degli ostacoli (intero incrementale) con posizione & obs:[id\_obs] & LIST & [coord\_x]:[coord\_y]\\
+				\end{tabular}
+			\end{center}
+		\end{table}
+	
+		\newpage
+	
 		\begin{landscape}
 			\subsubsection{Diagrammi di sequenza}
 			Il seguente diagramma rappresenta il caso in cui l'interfaccia grafica invii al server una lista di \glock{POI}, che l'unità deve raggiungere.\\
