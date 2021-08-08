@@ -199,7 +199,17 @@ In caso di errori nell'input dei campi dati, verranno visualizzati degli apposit
 .Gestione mappa
 image::img/admin_map.png[id="Figure-{counter:image-number}"]
 
-Per modificare lo stato della mappa, l'amministratore ha la possibilità di importare dei file
+Per modificare la mappa, l'amministratore ha la possibilità di importare dei file
 in formato .txt appositamente formattati.
+La mappa deve essere rettangolare, ei caratteri permessi sono i seguenti: "xXbBpP^_<>+".
+É possibile distanziare i caratteri con una spaziatura.
 
 Nel caso ci siano degli errori nel file di importazione, verranno visualizzati degli appositi messaggi di errore.
+
+Un esempio di file per la mappa è il seguente:
+
+[source,text]
+x + > +
+P ^ b B
+_ + _ +
++ + < +
