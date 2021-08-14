@@ -23,7 +23,7 @@ EXPECT timer.schedule() TO HAVE BEEN CALLED 1 TIMES
 onClose_mockSessionAsParameter_resetTimerCancelledCorrectly
 [source]
 ----
-CALL endpoint.onOpen(session)
+CALL endpoint.onClose(session)
 
 EXPECT timer.cancel() TO HAVE BEEN CALLED 1 TIMES
 ----
@@ -37,7 +37,7 @@ WHEN userService.login() = AUTH
 CALL endpoint.login(loginToUi)
 
 EXPECT userService.login() TO HAVE BEEN CALLED 1 TIMES
-EXPECT remote.sendObject() TO HAVE BEEN CALLED 1 TIMES WITH AuthToUi(session = AUTH)
+EXPECT remote.sendObject() TO HAVE BEEN CALLED 5 TIMES WITH AuthToUi(session = AUTH)
 ----
 
 ====== TU4
@@ -46,7 +46,7 @@ newUser_loggedInAsAdmin_newUserCreated
 ----
 SET userFromUi TO new UserFromUi(username, password, admin)
 WHEN endpoint.logged = ADMIN
-CALL endpoint.logout()
+CALL endpoint.newUser(userFromUi)
 
 EXPECT userService.newUser() TO HAVE BEEN CALLED 1 TIME WITH username, password, admin
 ----
@@ -59,7 +59,7 @@ SET userFromUi TO new UserFromUi(username, password, admin)
 WHEN endpoint.logged = AUTH
 CALL endpoint.logout()
 
-EXPECT endpoint.onError() TO HAVE BEEN CALLED 1 TIME
+EXPECT userService.newUser() TO HAVE BEEN CALLED 0 TIME
 ----
 
 ====== TU6
@@ -81,7 +81,7 @@ SET deleteUserFromUi TO new DeleteUserFromUi(id)
 WHEN endpoint.logged = AUTH
 CALL endpoint.deleteUser(deleteUserFromUi)
 
-EXPECT endpoint.onError() TO HAVE BEEN CALLED 1 TIME
+EXPECT euserService.deleteUser() TO HAVE BEEN CALLED 0 TIME
 ----
 
 ====== TU8
@@ -103,7 +103,7 @@ SET mapFromUi TO new MapFromUi(mapConfig)
 WHEN endpoint.logged = AUTH
 CALL endpoint.newMap(mapFromUi)
 
-EXPECT endpoint.onError() TO HAVE BEEN CALLED 1 TIME
+EXPECT mapService.newMap() TO HAVE BEEN CALLED 0 TIME
 ----
 
 ====== TU10
@@ -147,7 +147,7 @@ SET unitStopFromUi TO new UnitStopFromUi(id, command)
 WHEN endpoint.logged = AUTH
 CALL endpoint.unitStop(unitStopFromUi)
 
-EXPECT endpoint.onError() TO HAVE BEEN CALLED 1 TIME
+EXPECT unitServe.stop() TO HAVE BEEN CALLED 0 TIME
 ----
 
 ====== TU14
@@ -169,7 +169,7 @@ SET unitFromUi TO new UnitFromUi(id, name, base)
 WHEN endpoint.logged = AUTH
 CALL endpoint.newUnit(unitFromUi)
 
-EXPECT endpoint.onError() TO HAVE BEEN CALLED 1 TIME
+EXPECT unitService.newUnit() TO HAVE BEEN CALLED 0 TIME
 ----
 
 ====== TU16
@@ -180,7 +180,7 @@ SET deleteUnitFromUi TO new DeleteUnitFromUi(id)
 WHEN endpoint.logged = ADMIN
 CALL endpoint.deleteUnit(deleteUnitFromUi)
 
-EXPECT unitService.newUnit() TO HAVE BEEN CALLED 1 TIME WITH id
+EXPECT unitService.deleteUnit() TO HAVE BEEN CALLED 1 TIME WITH id
 ----
 
 ====== TU17
@@ -191,7 +191,7 @@ SET deleteUnitFromUi TO new DeleteUnitFromUi(id)
 WHEN endpoint.logged = ADMIN
 CALL endpoint.deleteUnit(deleteUnitFromUi)
 
-EXPECT endpoint.onError() TO HAVE BEEN CALLED 1 TIME
+EXPECT deleteUnit TO HAVE BEEN CALLED 0 TIME
 ----
 
 ===== API - UnitEndpoint - TU[18-30]
