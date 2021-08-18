@@ -5,7 +5,7 @@ Di seguito saranno elencati i punti nei quali si sono riscontrati i principali b
 \begin{table} [!ht]
 	\rowcolors{2}{gray!25}{gray!6}
 	\begin{center}
-		\begin{tabular} { m{3cm} m{3cm} m{6cm}  }
+		\begin{tabular} { m{2.5cm} m{2.5cm} m{11cm}  }
 			\rowcolor{lightgray}
 			\textbf{Periodo} & \textbf{Componente} & \textbf{Descrizione}\\
 			
@@ -22,12 +22,13 @@ Di seguito saranno elencati i punti nei quali si sono riscontrati i principali b
 \begin{table} [!ht]
 	\rowcolors{2}{gray!25}{gray!6}
 	\begin{center}
-		\begin{tabular} { m{3cm} m{3cm} m{6cm}  }
+		\begin{tabular} { m{2.5cm} m{2.5cm} m{11cm}  }
 			\rowcolor{lightgray}
 			\textbf{Periodo} & \textbf{Componente} & \textbf{Descrizione}\\
 			
-			Incremento 1 & Database & Problema 1 \\
-			Incremento 2 & Messaggi & Problema 2 \\
+			Incremento 6 & Unit-Engine & Sono state riscontrate difficoltà nella gestione degli stati di errore, in relativi alle situazioni in cui l'unità doveva rimanere bloccata dopo aver incontrato un ostacolo o un'altra unità, per poter ricevere un nuovo percorso. In particolare il problema era la gestione del nuovo percorso ed il comportamento alla sua ricezione. \\
+			
+			Funzionalità Sensori & Server-Message-Controller & Essendo in questo componente racchiusa la logica per verificare i dati salvati nell'unità e comportarsi di conseguenza, i problemi riscontrati sono stati relativi ai momenti e modalità delle richieste  \\
 			
 		\end{tabular}
 	\end{center}
@@ -39,12 +40,11 @@ Di seguito saranno elencati i punti nei quali si sono riscontrati i principali b
 \begin{table} [!ht]
 	\rowcolors{2}{gray!25}{gray!6}
 	\begin{center}
-		\begin{tabular} { m{3cm} m{3cm} m{6cm}  }
+		\begin{tabular} { m{2.5cm} m{2.5cm} m{11cm}  }
 			\rowcolor{lightgray}
 			\textbf{Periodo} & \textbf{Componente} & \textbf{Descrizione}\\
 			
-			Incremento 1 & Database & Problema 1 \\
-			Incremento 2 & Messaggi & Problema 2 \\
+			Incremento 5 & Mappa & Le difficoltà incontrate sono state relative alla lettura e controllo del testo contenuto nel file di importazione della mappa. Principalmente dato che la gestione delle stringhe in \glock{Javascript} non è ottimale, e ciò a portato a comportamenti erronei ed inattesi da parte del componente. \\
 			
 		\end{tabular}
 	\end{center}
