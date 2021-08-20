@@ -9,8 +9,12 @@ Di seguito saranno elencati i punti nei quali si sono riscontrati i principali b
 			\rowcolor{lightgray}
 			\textbf{Periodo} & \textbf{Componente} & \textbf{Descrizione}\\
 			
-			Incremento 1 & Database & Problema 1 \\
-			Incremento 2 & Messaggi & Problema 2 \\
+			Incremento 5 & Calcolo del percorso & L'algoritmo di calcolo del percorso ignorava i sensi unici delle celle \\
+			Incremento 6 & Calcolo del percorso & L'algoritmo di calcolo del percorso in alcuni casi speciali permetteva a due unità di scontrarsi tra di loro \\
+			Incremento 6 & Database & Riscontrato problema di ottimizzazione del database Redis: un numero eccessivo
+			di chiamate contemporanee porta il database a inquinare i parametri di ritorno aspettati e quindi porta 
+			al \textit{crash} del server. \\
+			
 								
 		\end{tabular}
 	\end{center}
