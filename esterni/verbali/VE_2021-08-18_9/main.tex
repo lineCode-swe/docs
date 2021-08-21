@@ -1,0 +1,130 @@
+\documentclass[]{article}
+
+\input{../../../commons/config}
+
+\appendToGraphicsPath{../../../commons/res/}
+
+%------------------------------
+%
+% COMANDI DI CONFIGURAZIONE
+%
+%------------------------------
+
+\setTitle{Verbale esterno \#9}
+
+\setVersione{1.0.0}
+
+\setDate{19-08-2021}
+
+\setResponsabile{Valton Tahiraj}
+
+\setRedattori{Lucia Fenu}
+
+\setVerificatori{}
+
+\setUso{Esterno}
+
+\setModifiche{
+	1.0.0 & Valton Tahiraj & Responsabile & 19-08-2021 &Approvazione documento\\
+	0.1.0 &Lucia Fenu,     Alessandro Chimetto & Amministratore, Verificatore & 19-08-2021 & Stesura iniziale e verificato}
+
+\begin{document}
+
+	\input{../../../commons/template}
+
+	\newpage
+
+	%--------------------------------
+	%
+	% IL CONTENUTO INIZIA DA QUI
+	%
+	%--------------------------------
+
+	\section{Introduzione}
+	\subsection{Luogo e data dell'incontro}
+	\begin{itemize}
+		\item \textbf{Modalità}: Telematica;
+		\item \textbf{Software utilizzato}: Google Meet;
+		\item \textbf{Data}: 18 Agosto 2021;
+		\item \textbf{Ora di inizio}: 10:00;
+		\item \textbf{Ora di fine}: 10:30.
+	\end{itemize}
+
+	\subsection{Presenze}
+	\begin{itemize}
+		\item \textbf{Presenti}:
+		\begin{itemize}
+			\item Matteo Alba
+			\item Alessandro Chimetto
+			\item Alessandro Dindinelli
+			\item Lucia Fenu
+			\item Paolo Scanferlato
+			\item Valton Tahiraj
+			
+
+		\end{itemize}
+		\item \textbf{Assenti}:
+		\begin{itemize}
+			
+			\item Giacomo Bulbarelli
+
+		\end{itemize}
+		\item \textbf{Partecipanti esterni}:
+		\begin{itemize}
+			\item Alex Beggiato (referente, Sanmarco Informatica)
+		\end{itemize}
+	\end{itemize}
+
+	\subsection{Ordine del giorno}
+	\begin{enumerate}
+		\item Presentazione dello stato dei lavori;
+		\item test di integrazione;
+		\item documenti specifici per il proponente.
+	\end{enumerate}
+	\newpage
+	\section{Svolgimento}
+
+
+	\subsection{Presentazione dello stato dei lavori}
+	Durante la riunione abbiamo mostrato le richieste essenziali che sono state evidenziate alla riunione precedente in data 29-07-2021; tra cui: una mappa più complessa che simulasse il contesto di un ristorante; la presenza di ostacoli temporanei e unità che non collidono tra loro durante il percorso. \\\\
+	La demo del prodotto è stata introdotta prima con due unità attive priva di ostacoli temporanei all'interno della mappa.\\
+	Successivamente, una prova di come i sensori riescono a rilevare gli ostacoli temporanei e come le unità non si scontrano tra loro.\\\\
+	Mostrato dunque che il sistema funziona secondo le specifiche, è stato sollevato al proponente il problema dell'ottimizzazione: un sistema con un numero di unità attive maggiore di due e un numero di ostacoli temporanei abbastanza grande, il sistema inizia a presentare dei difetti di ottimizzazione. \\\\
+	Il proponente dunque, ha dichiarato che, sorvolando il problema dell'ottimizzazione, i requisiti sono soddisfatti e propone per la presentazione finale:
+	\begin{itemize}
+		\item due unità attive;
+		\item un numero ragionevole di ostacoli temporanei;
+		\item una mappa di dimensioni ridotte per via delle tempistiche richieste dalla presentazione.
+	\end{itemize}
+
+	\subsection{Test di integrazione}
+	Il proponente ritiene che i test di integrazione possono essere considerate attività da introdurre in futuro. I test di unità svolti e superati sono sufficienti e devono essere inseriti all'interno di un documento. Tale, sarà il documento \dext{Specifica dei test v1.0.0}.
+	
+	\subsection{Materiale da consegnare al proponente}
+	Il proponente richiede:
+	\begin{itemize}
+		\item Diagrammi UML relativi ai casi d'uso di progetto: si consegna l' \dext{Analisi dei requisiti v4.0.0};
+		\item architettura del prodotto: si consegna il \dext{Manuale manutentore v1.0.0};
+		\item lista delle implementazioni future: si consegna il \dext{Manuale manutentore v1.0.0};
+		\item lista dei bug risolti durante la fase di sviluppo: da definire, il grado di dettaglio è libero.
+	\end{itemize}
+	
+	
+	
+	\newpage
+
+	\section{Tabella delle decisioni}
+
+	\begin{table} [h!]
+		\rowcolors{2}{gray!25}{gray!6}
+		\begin{center}
+			\begin{tabular} { m{4cm} m{14cm} }
+				\rowcolor{lightgray}
+				\textbf{ID} & \textbf{Decisione}\\
+				VE\_2021-08-18\_9.1 & Creazione di una mappa più piccola\\
+					VE\_2021-08-18\_9.2 & Definizione di un documento o inclusione in uno esistente per la lista dei bug risolti \\
+			\end{tabular}
+		\end{center}
+	\end{table}
+\end{document}
+
