@@ -1,0 +1,114 @@
+\documentclass[]{article}
+
+\input{../../../commons/config}
+
+\appendToGraphicsPath{../../../commons/res/}
+
+%------------------------------
+%
+% COMANDI DI CONFIGURAZIONE
+%
+%------------------------------
+
+\setTitle{Verbale riunione \#49}
+
+\setVersione{1.0.0}
+
+\setDate{19-08-2021}
+
+\setResponsabile{ Valton Tahiraj}
+
+\setRedattori{Lucia Fenu}
+
+\setVerificatori{Giacomo Bulbarelli}
+
+\setUso{Interno}
+
+\setModifiche{
+	1.0.0 & Valton Tahiraj & Responsabile & 19-08-2021 & Approvato documento \\
+    0.1.0 & Lucia Fenu,    Giacomo Bulbarelli & Amministratore, Verificatore & 19-08-2021 & Stesura documento e verificato}
+
+\begin{document}
+
+	\input{../../../commons/template}
+
+	\newpage
+
+	%--------------------------------
+	%
+	% IL CONTENUTO INIZIA DA QUI
+	%
+	%--------------------------------
+
+		\section{Introduzione}
+		\subsection{Luogo e data dell'incontro}
+		\begin{itemize}
+			\item \textbf{Modalità}: Telematica;
+			\item \textbf{Software utilizzato}: \glock{Discord};
+			\item \textbf{Data}: 18 Agosto 2021;
+			\item \textbf{Ora di inizio}: 20:30;
+			\item \textbf{Ora di fine}: 21:00.
+		\end{itemize}
+
+		\subsection{Presenze}
+		\begin{itemize}
+			\item \textbf{Presenti}:
+			\begin{itemize}
+				\item Matteo Alba
+				\item Alessandro Chimetto
+				\item Alessandro Dindinelli
+				\item Lucia Fenu
+				\item Paolo Scanferlato
+				
+			\end{itemize}
+			\item \textbf{Assenti}:
+			\begin{itemize}
+					\item Giacomo Bulbarelli
+					\item Valton Tahiraj
+			\end{itemize}
+		\end{itemize}
+
+
+		\subsection{Ordine del giorno}
+		\begin{enumerate}
+			\item Commenti sull'incontro con il proponente;
+			\item lista dei bug risolti.
+           
+		\end{enumerate}
+
+	\newpage
+
+	\section{Svolgimento}
+		\subsection{Commenti sull'incontro con il proponente}
+		Si è discusso dell'incontro avvenuto con il proponente la mattina del giorno stesso, per capire il punto della situazione.\\
+		Il prodotto, è ormai terminato e verranno solo sistemate le richieste che sono state sollevate in riunione, inserite nella tabella delle decisioni del \dext{VE-2021-08-18--9 v1.0.0}.\\\\
+		Si discute dunque di una data per una possibile consegna cercando di incontrare gli impegni di tutti.\\ 
+		La consegna è prevista per il giorno 23-08-2021 con notifica al Professore T. Vardanega entro il giorno 20-08-2021.
+
+
+        \subsection{Lista dei bug risolti }
+        Il proponente come materiale da consegnare ha richiesto una lista dei bug risolti con livello di dettaglio a nostra scelta.\\\\
+       Si è deciso di inserire tale lista all'interno del \dext{Manuale manutentore v1.0.0}. \\\\
+       La lista sarà schematizzata con una tabella con le seguenti colonne:
+       \begin{itemize}
+       	\item Periodo: periodo secondo pianificazione in cui è stato risolto il bug;
+       	\item Descrizione: una breve descrizione del problema rilevato;
+       	\item Dove: la sezione in cui il codice è stato ripreso;
+       	\item Server, UI, unità: colonne di selezione tramite "x" per rendere più scorrevole la ricerca del bug in una determinata sezione del prodotto.
+       \end{itemize}
+
+
+	\section{Tabella delle decisioni}
+	\begin{table} [h!]
+		\rowcolors{2}{gray!25}{gray!6}
+		\begin{center}
+			\begin{tabular} { m{4cm} m{14cm} }
+				\rowcolor{lightgray}
+				\textbf{ID} & \textbf{Decisione}\\
+				V\_2021-08-18\_49.1 & La lista dei bug è all'interno del \dext{Manuale manutentore v1.0.0} \\
+			\end{tabular}
+		\end{center}
+	\end{table}
+
+\end{document}
+
