@@ -14,22 +14,33 @@
 
 \setTitle{Manuale del manutentore}
 
-\setVersione{0.1.0}
+\setVersione{1.0.0}
 
-\setDate{12-07-2021}
+\setDate{22-08-2021}
 
-\setResponsabile{Lucia Fenu}
+\setResponsabile{Valton Tahiraj}
 
-\setRedattori{Paolo Scanferlato \\&
+\setRedattori{
+	Alessandro Chimetto \\&
+	Alessandro Dindinelli \\&
+	Paolo Scanferlato
 }
 
-\setVerificatori{Valton Tahiraj\\&
+\setVerificatori{
+	Alessandro Dindinelli \\&
+    Lucia Fenu \\&
+	Paolo Scanferlato \\&
+	Valton Tahiraj
 }
 
 \setUso{Esterno}
 
 \setModifiche{
-	0.1.0 & Paolo Scanferlato, Valton Tahiraj & Amministratore, Verificatore & 10-07-2021 & Prima stesura del documento e verifica 
+    1.0.0 & Valton Tahiraj & Responsabile & 22-08-2021 & Approvazione documento\\
+	0.4.0 & Alessandro Dindinelli,   Lucia Fenu & Amministratore, Verificatore & 08-08-2021 & Aggiornamento e verifica architettura UI \\
+	0.3.0 & Paolo Scanferlato, Alessandro Dindinelli & Amministratore, Verificatore & 08-08-2021 & Aggiunte tabelle tecnologie e database, aggiunto Glossario \\
+	0.2.0 & Alessandro Chimetto, Paolo Scanferlato & Amministratore, Verificatore & 24-07-2021 & Aggiunte sezioni Requisiti, Espansione e Rilascio \\
+	0.1.0 & Paolo Scanferlato, Valton Tahiraj & Amministratore, Verificatore & 10-07-2021 & Prima stesura del documento e verifica
 }
 
 \begin{document}
@@ -56,7 +67,7 @@
 	\input{res/sez2_tecnologie.tex}
 	\newpage
 
-	\section{Setup}
+	\section{Requisiti di sistema}
 	\input{res/sez3_setup.tex}
 	\newpage
 
@@ -71,13 +82,18 @@
 	\section{Manutenzione}
 	\input{res/sez6_manutenzione.tex}
 	\newpage
-	
-	%\section{Espansione}
-	%\input{res/sez7_espansione.tex}
-	%\newpage
-	
-	%\section{Rilascio}
-	%\input{res/sez8_rilascio.tex}
-	%\newpage
-	
+
+	\section{Espansione}
+	\input{res/sez7_espansione.tex}
+	\newpage
+
+	\section{Rilascio}
+	\input{res/sez8_rilascio.tex}
+	\newpage
+
+	\appendix
+	\section{Glossario}
+	\input{res/app_glossario.tex}
+	\newpage
+
 \end{document}
