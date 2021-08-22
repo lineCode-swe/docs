@@ -121,7 +121,7 @@ Il coordinatore può eseguire i suoi compiti in un'unica schermata (Figura 4) tr
 
 [#img-sunset]
 .Schermata coordinatore
-image::img/user_coordination.png[id="Figure-{counter:image-number}"]
+image::img/admin_coordination.png[id="Figure-{counter:image-number}"]
 
 ==== Visualizzazione unità attive
 [#img-sunset]
