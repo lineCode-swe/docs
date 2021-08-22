@@ -1,65 +1,48 @@
 \subsection{Verifica}
-		\subsubsection{Descrizione}
-		Il processo, mira a garantire la correttezza del prodotto stabilendo dei criteri precisi con cui giudicarlo. \\ Esso verrà garantito:
-		\begin{itemize}
-			\item definendo criteri di accettazione;
-			\item prescrivendo attività di verifica (accompagnate dalla relativa documentazione);
-			\item eseguendo dei test di verifica;
-			\item correggendo potenziali difetti riscontrati.
-		\end{itemize}
-		La verifica ha lo scopo di individuare e correggere potenziali difetti nel prodotto, e precede l'attuazione del processo di validazione.
-		
-					
-		\paragraph{Test di sistema}
-		I test di sistema vengono classificati nella maniera seguente:
-		\begin{center}
-			\textbf{TS[Priorità]-[Categoria]-[Codice]}
-		\end{center}		 
-		dove:\\
-		\begin{itemize}
-			\item \textbf{Priorità}: indica la priorità del requisito associato al test, e può assumere valori quali:
-			\begin{itemize}
-				\item \textbf{M}: mandatory/obbligatorio;
-				\item \textbf{D}: desirable/desiderabile;
-				\item \textbf{O}: optional/ opzionale, relativamente utile ed eventualmente trascurabile.
-			\end{itemize}
-			\item \textbf{Categoria}: indica la tipologia di requisito associato al test, e può assumere valori quali:
-			\begin{itemize}
-				\item \textbf{F}: functional/funzionale;
-				\item \textbf{P}: performance/prestazionale;
-				\item \textbf{Q}: qualitative/qualitativo;
-				\item \textbf{C}: constraint/vincolo.
-			\end{itemize}
-			\item \textbf{Codice}: intero positivo che identifica il singolo componente da testare. Ha valore di default 1.
-		\end{itemize}
-		 
-		\paragraph{Test di integrazione}
-		I test di integrazione vengono classificati nella maniera seguente:
-		\begin{center}
-			\textbf{TI[Codice]}
-		\end{center}	
-		dove:\\
-		\begin{itemize}
-			\item \textbf{Codice}: intero positivo che identifica il singolo componente da testare. Ha valore di default 1.
-		\end{itemize}		 
-		
-		\paragraph{Test di unità}
-		I Test di unità vengono classificati nella maniera seguente:
-		\begin{center}
-			\textbf{TU[Codice]}
-		\end{center}		
-		dove:\\
-		\begin{itemize}
-			\item \textbf{Codice}: intero positivo che identifica il singolo componente da testare. Ha valore di default 1.
-		\end{itemize}
-		
-		\paragraph{Test di regressione}
-		I Test di regressione consistono nell'esecuzione di tutti i test già effettuati in precedenza sulle unità in relazione con quella che ha subito una modifica. Non risulta dunque necessaria una nomenclatura specifica per essi.
-		
-		\subsubsection{Strumenti}
-		Si utilizzano le funzionalità di correzione automatica e di controllo ortografico degli \glock{IDE} utilizzati dal gruppo, che sono:
-		\begin{itemize}
-			\item \glock{IntelliJ IDEA};
-			\item \glock{TeXStudio};
-			\item \glock{Texmaker}.
-		\end{itemize}
+	\subsubsection{Descrizione}
+	Il processo, mira a garantire la correttezza del prodotto stabilendo dei criteri precisi con cui giudicarlo.\\
+	La verifica ha lo scopo di individuare e correggere potenziali difetti nel prodotto e precede l'attuazione del processo di validazione.
+
+    \subsubsection{Attività}
+        \paragraph{Implementazione del processo}
+        Su richiesta del committente, è necessario che vi sia un'adeguato sforzo nella verifica per garantire una qualità adeguata.\\
+        Il Progettista si impegna progettare test che siano ritenuti adeguati a tale sforzo e riportare il risultato di questa progettazione nel documento di \dext{Specifica dei test 2.0.0} per poi lasciare al Programmatore l'effettiva implementazione.
+
+	\subsubsection{Strumenti}
+	Si utilizzano le funzionalità di correzione automatica e di controllo ortografico degli \glock{IDE} utilizzati dal gruppo, che sono:
+	\begin{itemize}
+		\item \glock{IntelliJ IDEA};
+		\item \glock{TeXStudio};
+		\item \glock{Texmaker}.
+	\end{itemize}
+    Le suite di test automatizzato sono:
+    \begin{itemize}
+        \item \glock{JUnit}: per la componente Server in linguaggio \glock{Java};
+        \item \glock{Jasmine}: per la componente Ui in linguaggio \glock{TypeScript};
+        \item \glock{Mocha}: per la componente Unità in linguaggio \glock{TypeScript}.
+    \end{itemize}
+
+    \subsection{Metriche}
+        \paragraph{MT01 - Code Coverage}
+        \begin{itemize}
+            \item \textbf{Descrizione}: indica quante linee di codice del prodotto software sono coperte da test;
+            \item \textbf{Unità di misura}: percentuale.
+        \end{itemize}
+
+        \paragraph{MT02 - Test di sistema implementati e superati}
+        \begin{itemize}
+            \item \textbf{Descrizione}: indica il numero di test di sistema superati sul numero di test di sistema implementati;
+            \item \textbf{Unità di misura}: rapporto.
+        \end{itemize}
+
+        \paragraph{MT03 - Test d'integrazione implementati e superati}
+        \begin{itemize}
+            \item \textbf{Descrizione}: indica il numero di test d'integrazione superati sul numero di test d'integrazione implementati;
+            \item \textbf{Unità di misura}: rapporto.
+        \end{itemize}
+
+        \paragraph{MT04 - Test di unità implementati e superati}
+        \begin{itemize}
+            \item \textbf{Descrizione}: indica il numero di test di unità superati sul numero di test di unità implementati;
+            \item \textbf{Unità di misura}: rapporto.
+        \end{itemize}
