@@ -1,6 +1,6 @@
 \subsection{Struttura del progetto}
 	\subsubsection{Server}
-	
+
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=10cm]{img/struttura_server.png}
@@ -35,7 +35,7 @@
 \newpage
 
 	\subsubsection{Interfaccia}
-	
+
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=10cm]{img/struttura_ui.png}
@@ -46,8 +46,7 @@
 		\item{.github}: contiene le configurazioni per la CI in ambiente github;
 		\item{.idea}: contiene le configurazioni generali per l'\glock{IDE} \glock{IntellijIDEA};
 		\item{.run}: contiene le configurazioni per l'esecuzione del codice all'interno	dell'\glock{IDE} \glock{IntellijIDEA};
-		\item{e2e}: contiene le configurazioni di base per i test end-to-end (e2e) del sito, utilizzati per tracciare i comportamenti dell'utente sul sito durante il testing;
-		\item{node\_modules}: contiene i moduli di \glock{NodeJS} installati tramite \glock{NPM} e necessari all'esecuzione del codice. Per installarli eseguire il comando npm install dopo aver scaricato la repo;
+		\item{node\_modules}: contiene i moduli di \glock{NodeJS} installati tramite \glock{NPM} e necessari all'esecuzione del codice; per installarli eseguire il comando npm install dopo aver scaricato la repo;
 		\item{src}: contiene i sorgenti dell'applicativo, suddivisi di default dal framework in 3 sotto	directory:
 		\begin{enumerate}
 			\item{app}: contiene una cartella per ciascun componente sviluppato (es. componente unit-table ha una folder unit table) all'interno della quale si trovano 3 file, che contengono \glock{html} \glock{css} e logiche del component (file scritto in .ts). Oltre a questi	contiene singoli file .ts (\glock{typescript}) che formano il model della ui applicativo;
@@ -74,7 +73,7 @@
 \newpage
 
 	\subsubsection{Unità}
-	
+
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=10cm]{img/struttura_unita.png}
@@ -93,13 +92,13 @@
 			\item{test}: codice di test, suddiviso nelle cartelle Domain (test su logiche interne),	UnitEngine (sempre test su logiche interne) e Persistence (test sulla persistenza dei dati).
 		\end{itemize}
 	\end{itemize}
-	
+
 	Troviamo inoltre nella root della directory i seguenti file:
 	\begin{itemize}
 		\item{Dockerfile}: per la generazione della DockerImage da eseguire in ambiente \glock{Docker};
 		\item{package.json}: specifica i moduli e la configurazione dell'ambiente \glock{NodeJS} per l'esecuzione dell'applicativo.
 	\end{itemize}
-	
+
 \subsection{Librerie}
 	Per l'aggiornamento delle librerie si faccia riferimento alle tecnologie utilizzate:
 	\begin{itemize}
