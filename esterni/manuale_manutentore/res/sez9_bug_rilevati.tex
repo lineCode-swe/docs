@@ -1,0 +1,56 @@
+Di seguito saranno elencati i punti nei quali si sono riscontrati i principali bug che sono successivamente stati risolti.
+
+\subsection{Server}
+
+\begin{table} [!ht]
+	\rowcolors{2}{gray!25}{gray!6}
+	\begin{center}
+		\begin{tabular} { m{2.5cm} m{2.5cm} m{11cm}  }
+			\rowcolor{lightgray}
+			\textbf{Periodo} & \textbf{Componente} & \textbf{Descrizione}\\
+
+			Incremento 5 & Calcolo del percorso & L'algoritmo di calcolo del percorso ignorava i sensi unici delle celle.\\
+			Incremento 6 & Calcolo del percorso & L'algoritmo di calcolo del percorso in alcuni casi speciali permetteva a due unità di scontrarsi tra di loro.\\
+			Incremento 6 & Database & Riscontrato problema di ottimizzazione del database \glock{Redis}: un numero eccessivo
+			di chiamate contemporanee porta il database a inquinare i parametri di ritorno aspettati e quindi porta
+			al \textit{crash} del server.\\
+
+
+		\end{tabular}
+	\end{center}
+	\caption{Tabella dei principali bug riscontrati nel server}
+\end{table}
+
+\subsection{Unità}
+
+\begin{table} [!ht]
+	\rowcolors{2}{gray!25}{gray!6}
+	\begin{center}
+		\begin{tabular} { m{2.5cm} m{2.5cm} m{11cm}  }
+			\rowcolor{lightgray}
+			\textbf{Periodo} & \textbf{Componente} & \textbf{Descrizione}\\
+
+			Incremento 6 & Unit-Engine & Sono state riscontrate difficoltà nella gestione degli stati di errore, relativi alle situazioni in cui l'unità doveva rimanere bloccata dopo aver incontrato un ostacolo o un'altra unità per poter ricevere un nuovo percorso. In particolare il problema era la gestione del nuovo percorso ed il comportamento alla sua ricezione. \\
+
+			Funzionalità Sensori & Server-Message-Controller & In questo componente è racchiusa la logica per verificare i dati salvati nell'unità e comportarsi di conseguenza. I problemi riscontrati sono stati relativi alle modalità delle richieste da fare al server e gestire la logica delle condizioni per le quali effettuare tali richieste. \\
+
+		\end{tabular}
+	\end{center}
+	\caption{Tabella dei principali bug riscontrati nell'unità}
+\end{table}
+
+\subsection{Interfaccia}
+
+\begin{table} [!ht]
+	\rowcolors{2}{gray!25}{gray!6}
+	\begin{center}
+		\begin{tabular} { m{2.5cm} m{2.5cm} m{11cm}  }
+			\rowcolor{lightgray}
+			\textbf{Periodo} & \textbf{Componente} & \textbf{Descrizione}\\
+
+			Incremento 5 & Mappa & Le difficoltà incontrate sono state relative alla lettura e controllo del testo contenuto nel file di importazione della mappa. Principalmente dato che la gestione delle stringhe in \glock{Javascript} non è ottimale, ciò a portato a comportamenti erronei ed inattesi da parte del componente. \\
+
+		\end{tabular}
+	\end{center}
+	\caption{Tabella dei principali bug riscontrati nell'interfaccia}
+\end{table}
