@@ -1,6 +1,6 @@
 = PORTACS - Manuale Utente
 gruppo lineCode <linecode.swe@gmail.com>
-v0.1.0, 18-07-2021
+v1.0.0, 22-08-2021
 :doctype: book
 :title-logo-image: ../../commons/res/lclong.png
 :toc:
