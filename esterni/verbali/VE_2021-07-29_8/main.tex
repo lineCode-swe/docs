@@ -1,0 +1,118 @@
+\documentclass[]{article}
+
+\input{../../../commons/config}
+
+\appendToGraphicsPath{../../../commons/res/}
+
+%------------------------------
+%
+% COMANDI DI CONFIGURAZIONE
+%
+%------------------------------
+
+\setTitle{Verbale esterno \#8}
+
+\setVersione{1.0.0}
+
+\setDate{05-08-2021}
+
+\setResponsabile{Alessandro Dindinelli}
+
+\setRedattori{Lucia Fenu}
+
+\setVerificatori{Paolo Scanferlato}
+
+\setUso{Esterno}
+
+\setModifiche{
+	1.0.0 & Alessandro Dindinelli  & Responsabile & 05-08-2021  & Approvazione \\
+	0.1.0 & Lucia Fenu,          Paolo Scanferlato & Amministratore, Verificatore & 04-08-2021 & Stesura iniziale e Verifica}
+
+\begin{document}
+
+	\input{../../../commons/template}
+
+	\newpage
+
+	%--------------------------------
+	%
+	% IL CONTENUTO INIZIA DA QUI
+	%
+	%--------------------------------
+
+	\section{Introduzione}
+	\subsection{Luogo e data dell'incontro}
+	\begin{itemize}
+		\item \textbf{Modalità}: Telematica;
+		\item \textbf{Software utilizzato}: Google Meet;
+		\item \textbf{Data}: 29 Luglio 2021;
+		\item \textbf{Ora di inizio}: 10:00;
+		\item \textbf{Ora di fine}: 10:20.
+	\end{itemize}
+
+	\subsection{Presenze}
+	\begin{itemize}
+		\item \textbf{Presenti}:
+		\begin{itemize}
+			\item Matteo Alba
+			\item Giacomo Bulbarelli
+			\item Alessandro Chimetto
+			\item Alessandro Dindinelli
+			\item Lucia Fenu
+			\item Paolo Scanferlato
+			\item Valton Tahiraj
+
+		\end{itemize}
+		\item \textbf{Assenti}:
+		\begin{itemize}
+			\item Nessuno
+
+		\end{itemize}
+		\item \textbf{Partecipanti esterni}:
+		\begin{itemize}
+			\item Alex Beggiato (referente, Sanmarco Informatica)
+		\end{itemize}
+	\end{itemize}
+
+	\subsection{Ordine del giorno}
+	\begin{enumerate}
+		\item Presentazione del lavoro svolto;
+		\item Varie ed eventuali
+	\end{enumerate}
+	\newpage
+	\section{Svolgimento}
+
+
+	\subsection{Presentazione del lavoro svolto}
+	Dopo un breve excursus di come il gruppo si è organizzato nel periodo postumo l'accettazione dell'architettura, è stata mostrata al committente una demo del lavoro fino ad ora svolto.\\
+	Durante la demo è stato messo in evidenza quali ancora fossero i requisiti mancanti da implementare come:
+	\begin{itemize}
+		\item Gestione degli ostacoli e dunque la gestione delle collisioni tra più unità presenti;
+		\item Inserimento della mappa da file in fase di sviluppo.
+	\end{itemize} 
+	
+	\subsection{Varie ed eventuali}
+	Il committente è soddisfatto del lavoro presentato ed ha proposto:
+	\begin{itemize}
+		\item Nella sezione amministratore in cui si inserisce un nuovo utente, nascondere la password;
+		\item durante la presentazione finale del progetto, mostrare una mappa più complessa ad esempio una mappa rettangolare e/o realistica al contesto del ristorante.
+	\end{itemize}
+	
+
+	\newpage
+
+	\section{Tabella delle decisioni}
+
+	\begin{table} [h!]
+		\rowcolors{2}{gray!25}{gray!6}
+		\begin{center}
+			\begin{tabular} { m{2cm} m{14cm} }
+				\rowcolor{lightgray}
+				\textbf{ID} & \textbf{Decisione}\\
+				VE\_2021-07-29\_8.1 & Nella sezione "inserimento utenti" dell'amministratore, nascondere la password; \\
+				VE\_2021-07-29\_8.1& Creare una mappa realistica al contesto\\
+			\end{tabular}
+		\end{center}
+	\end{table}
+\end{document}
+

@@ -1,14 +1,7 @@
 \subsection{Sviluppo}
 
 	\subsubsection{Descrizione}
-	Questa sezione raccoglie le linee guida per i compiti e le attività da svolgere al fine di ottenere il prodotto finale richiesto dal proponente.
-    \\\\
-	Il prodotto finale deve:
-	\begin{itemize}
-		\item rispettare i requisiti;
-		\item superare i test definiti;
-		\item rispettare i vincoli imposti dal proponente.
-	\end{itemize}
+	Questa sezione raccoglie le linee guida per i compiti e le attività da svolgere al fine di ottenere il prodotto finale richiesto dal proponente.\\
 	Istanziando lo standard ISO/IEC 12207:1995 per renderlo conforme alle nostre esigenze, il processo di sviluppo si divide in:
 	\begin{itemize}
 		\item Analisi dei Requisiti;
@@ -18,7 +11,6 @@
 
 	\subsubsection{Attività}
         \paragraph{Analisi dei requisiti}
-			\subparagraph{Scopo}
 			Il compito degli analisti è quello di redigere il documento \dext{Analisi dei Requisiti v3.0.0}, che andrà ad elencare e definire i requisiti del \glock{capitolato}. Lo scopo dei requisiti è quello di:
 			\begin{itemize}
 				\item descrivere il prodotto da realizzare;
@@ -28,51 +20,7 @@
 				\item ragionare sul lavoro richiesto per produrre una stima dei costi.
 			\end{itemize}
 
-			\subparagraph{Classificazione dei requisiti}
-			Ogni requisito sarà associato ad un identificativo che rispetterà il seguente formato:
-			\begin{center}
-				\textbf{R[Priorità]-[Categoria]-[Codice]}
-			\end{center}
-			\begin{itemize}
-				\item \textbf{R:} requisito;
-				\item \textbf{Priorità:}
-				\begin{itemize}
-					\item \textbf{M}: mandatory/obbligatorio, quindi necessario a garantire le funzioni base del prodotto;
-					\item \textbf{D}: desirable/desiderabile, cioè non strettamente necessario, ma che porta alla completezza del prodotto;
-					\item \textbf{O}: optional/opzionale, quindi che non pregiudica la funzionalità del prodotto finale.
-				\end{itemize}
-				\item \textbf{Categoria:}
-				\begin{itemize}
-					\item \textbf{F}: functional/funzionale;
-					\item \textbf{P}: performance/prestazionale;
-					\item \textbf{Q}: qualitative/qualitativo;
-					\item \textbf{C}: constraint/vincolo.
-				\end{itemize}
-				\item \textbf{Codice:} numero progressivo per riconoscere univocamente il requisito.
-			\end{itemize}
-
-			\subparagraph{Classificazione dei casi d'uso}
-			Come per i requisiti, si prevede di identificare univocamente i casi d'uso con il seguente formato:
-			\begin{center}
-				\textbf{UC[Codice]}
-			\end{center}
-			\begin{itemize}
-				\item \textbf{UC}: use case/caso d'uso;
-				\item \textbf{Codice}: serie di cifre separate da ’.’ così da poter dividere in modo gerarchico i casi e sotto casi.
-			\end{itemize}
-			Oltre all'identificativo, ogni caso d'uso verrà approfondito dai seguenti campi:
-			\begin{itemize}
-				\item \textbf{Descrizione}: breve spiegazione della situazione modellata;
-				\item \textbf{Grafici \glock{UML}}: diagrammi realizzati usando la versione 2.0 del linguaggio;
-				\item \textbf{Attori}: gli attori primari e secondari coinvolti;
-				\item \textbf{Scenario Principale}: elenco numerato degli eventi descritti dal caso d'uso;
-				\item \textbf{Precondizione}: condizioni che si assumono vere prima che si verifichino gli eventi descritti dal caso d'uso;
-				\item \textbf{Postcondizione}: condizioni che si assumono vere dopo che si sono verificati gli eventi descritti dal caso d'uso;
-				\item eventuali estensioni ed inclusioni coinvolte.
-			\end{itemize}
-
 		\paragraph{Progettazione}
-   			\subparagraph{Scopo}
    			Mentre l'\dext{Analisi dei Requisiti v3.0.0} divide il problema in parti per capirne completamente il dominio applicativo, la Progettazione rimette insieme tali parti specificandone le funzionalità in modo da realizzare l'architettura che il prodotto finale dovrà seguire. Questa dovrà seguire i seguenti principi:
    			\begin{itemize}
    				\item rispetto di tutti i requisiti;
@@ -96,35 +44,29 @@
    			\begin{enumerate}
                 \item tutta la nomenclatura (es. variabili, classi, ecc.) deve essere in lingua inglese;
                 \item ogni file sorgente deve cominciare con un commento multi-riga dove sono indicati i diritti d'autore e un riferimento al file di licenza;
-                \item il codice \glock{Java} dovrà seguire tutte le convenzioni stilistiche indicate nelle \dext{Java Code Conventions} tranne quelle in contrasto con quanto indicato in questo documento;
-                \item il codice \glock{TypeScript} dovrà seguire le convenzioni stilistiche indicate nella \dext{Angular coding style guide} tranne quelle in contrasto con quanto indicato in questo documento.
+                \item il codice \glock{Java} dovrà seguire tutte le convenzioni stilistiche indicate nelle \dext{Java Code Conventions};
+                \item il codice \glock{TypeScript} dovrà seguire le convenzioni stilistiche indicate nella \dext{Angular coding style guide}.
             \end{enumerate}
 
     \subsubsection{Strumenti}
     \begin{itemize}
         \item \textbf{\glock{Java}}: linguaggio utilizzato per la realizzazione del motore di calcolo;
-        \item \textbf{\glock{JavaScrypt}}: linguaggio utilizzato per la realizzazione di applicativi al di fuori del motore di calcolo;
-        \item \textbf{\glock{TypeScript}}: versione \glock{super-set} di \glock{JavaScript};
+        \item \textbf{\glock{TypeScrypt}}: linguaggio utilizzato per la realizzazione di applicativi al di fuori del motore di calcolo;
         \item \textbf{\glock{Maven}}: strumento utilizzato per la \glock{build automation};
-        \item \textbf{\glock{JaCoCo}}: libreria utilizzata per la \glock{code coverage};
-        \item \textbf{\glock{Jersey}}: \glock{framework} utilizzato per l'implementazione di \glock{API REST} in \glock{Java};
+        \item \textbf{\glock{JaCoCo}}: libreria utilizzata per il \glock{code coverage};
+        \item \textbf{\glock{Tyrus}}: \glock{framework} utilizzato per l'implementazione di \glock{WebSocket} in \glock{Java};
         \item \textbf{\glock{Grizzly}}: server \glock{http} e servlet container;
         \item \textbf{\glock{Checkstyle}}: strumento utilizzato per analisi statica del codice \glock{Java};
         \item \textbf{\glock{sonarcloud}}: utilizzato per rilevare le metriche di qualità;
         \item \textbf{\glock{Angular}}: libreria grafica utilizzata per lo sviluppo dell'interfaccia utente;
-        \item \textbf{\glock{Node.js}}: programma applicativo utilizzato per la creazioni di applicazioni che comunicano con \glock{http};
+        \item \textbf{\glock{Node.js}}: programma applicativo utilizzato per la creazioni di applicazioni \glock{TypeScrypt} che comunicano con \glock{http};
         \item \textbf{\glock{Intellij IDEA}}: \glock{IDE} utilizzato per la scrittura del codice;
-        \item \textbf{\glock{TSLint}}: strumento utilizzato per analisi statica del codice \glock{Javascript};
-        \item \textbf{\glock{karma}}: \glock{framework} utilizzato per lo \glock{unit testing} di \glock{Angular};
-        \item \textbf{\glock{Protractor}}: \glock{framework} utilizzato per end-to-end testing di \glock{Angular};
-        \item \textbf{\glock{JUnit}}: \glock{framework} utilizzato per lo \glock{unit testing} di \glock{Java};
-        \item \textbf{\glock{Mockito}}: \glock{framework} utilizzato per la creazione di \glock{mock};
+        \item \textbf{\glock{ESLint}}: strumento utilizzato per analisi statica del codice \glock{TypeScript};
         \item \textbf{\glock{Docker}}: utilizzato sotto richiesta del proponente per la containerizzazione delle applicazioni;
         \item \textbf{\glock{Docker Compose}}: utilizzato per la gestione dei \glock{container};
         \item \textbf{\glock{Github Action}}: strumento utilizzato per la \glock{continuous integration};
         \item \textbf{\glock{NPM (Node Package Manager)}}: \glock{gestore di pachetti} per l'ambiente di runtime Node.js.
     \end{itemize}
-
 
 	\subsubsection{Metriche}
 		\paragraph{MS01 - Numero Bug Rilevati}
@@ -151,39 +93,33 @@
             \item \textbf{Unità di misura}: ore.
         \end{itemize}
 
-        \paragraph{MS05 - Code Coverage}
+        \paragraph{MS05 - Complessità Ciclomatica}
         \begin{itemize}
-            \item \textbf{Descrizione}: indica quante linee di codice del prodotto software sono coperte da test;
-            \item \textbf{Unità di misura}: percentuale.
-        \end{itemize}
-
-        \paragraph{MS06 - Complessità Ciclomatica}
-        \begin{itemize}
-            \item \textbf{Descrizione}: metrica di complicatezza del software; misura il numero di cammini linearmente indipendenti attraverso il grafo di controllo di flusso del programma; minore è il suo valore, minore è il rischio di bug in caso di modifiche e maggiore è la leggibilità; in termini più pragmatici, indica il numero minimo di test per ottenere Code Coverage completa;
+            \item \textbf{Descrizione}: metrica di complicatezza del software; misura il numero di cammini linearmente indipendenti attraverso il grafo di controllo di flusso del programma: minore è il suo valore, minore è il rischio di bug in caso di modifiche e maggiore è la leggibilità. In termini più pragmatici, indica il numero minimo di test per ottenere Code Coverage completa;
             \item \textbf{Unità di misura}: numero intero maggiore o uguale a 1.
         \end{itemize}
 
-		\paragraph{MS07 - Requisiti Obbligatori Soddisfatti}
+		\paragraph{MS06 - Requisiti Obbligatori Soddisfatti}
 		\begin{itemize}
-			\item \textbf{Descrizione}: la metrica indica il quantitativo di requisiti obbligatori soddisfatti (progettati, sviluppati e verificati) fino alla data corrente; ciò permette, sia al gruppo che al committente, di comprendere la percentuale di completezza base del prodotto; la formula usata per il calcolo della metrica è la seguente:
+			\item \textbf{Descrizione}: la metrica indica il quantitativo di requisiti obbligatori soddisfatti (progettati, sviluppati e verificati) fino alla data corrente; ciò permette, sia al gruppo che al committente, di comprendere la percentuale di completezza base del prodotto. La formula usata per il calcolo della metrica è la seguente:
             \[
             MS07 = \frac{requisiti\ obbligatori\ soddisfatti}{requisiti\ obbligatori\ totali} \times 100
             \]
 			\item \textbf{Unità di misura}: percentuale.
 		\end{itemize}
 
-		\paragraph{MS08 - Requisiti Desiderabili Soddisfatti}
+		\paragraph{MS07 - Requisiti Desiderabili Soddisfatti}
 		\begin{itemize}
-			\item \textbf{Descrizione}: la metrica indica il quantitativo di requisiti desiderabili soddisfatti (progettati, sviluppati e verificati) fino alla data corrente; ciò permette, sia al gruppo che al committente, di comprendere la percentuale di valore aggiunto del prodotto; la formula usata per il calcolo della metrica è la seguente:
+			\item \textbf{Descrizione}: la metrica indica il quantitativo di requisiti desiderabili soddisfatti (progettati, sviluppati e verificati) fino alla data corrente; ciò permette, sia al gruppo che al committente, di comprendere la percentuale di valore aggiunto del prodotto. La formula usata per il calcolo della metrica è la seguente:
             \[
             MS08 = \frac{requisiti\ desiderabili\ soddisfatti}{requisiti\ desiderabili\ totali} \times 100
             \]
 			\item \textbf{Unità di misura}: percentuale.
 		\end{itemize}
 
-		\paragraph{MS09 - Requisiti Opzionali Soddisfatti}
+		\paragraph{MS08 - Requisiti Opzionali Soddisfatti}
 		\begin{itemize}
-			\item \textbf{Descrizione}: la metrica indica il quantitativo di requisiti opzionali soddisfatti (progettati, sviluppati e verificati) fino alla data corrente; la formula usata per il calcolo della metrica è la seguente:
+			\item \textbf{Descrizione}: la metrica indica il quantitativo di requisiti opzionali soddisfatti (progettati, sviluppati e verificati) fino alla data corrente. La formula usata per il calcolo della metrica è la seguente:
             \[
             MS09 = \frac{requisiti\ opzionali\ soddisfatti}{requisiti\ opzionali\ totali} \times 100
             \]

@@ -1,1 +1,16 @@
-\subsection{...}
+\subsection{Server}
+	La Layered Architecture prevede la netta separazione tra strati che facilita la sostituzione di un layer per intero oppure l'aggiunta di nuove funzionalità grazie alla creazione di nuove interfacce in uno specifico layer.
+	\subsubsection{Supporto ad un nuovo database}
+	Si potrebbe voler sostituire completamente il Persistence layer per passare da quello attuale con supporto a \glock{Redis} verso uno nuovo con supporto a database relazionale \glock{MariaDB}. L'interfaccia con il Business layer rimarrebbe immutata mentre cambierebbero solo le classi concrete incaricate di comunicare con il database.
+	\subsubsection{Supporto ad un nuovo messaggio nell'API}
+	Per aggiungere supporto a nuovi messaggi si dovrà lavorare sull'API layer aggiungendo una classe concreta che estenda la classe Message. A questo punto:
+	\begin{itemize}
+		\item se il messaggio è in uscita dal server si dovrà creare un Encoder che implementi l'interfaccia \textit{Encoder.Text\textless nome\_messaggio\textgreater};
+		\item se invece è in ingresso allora bisognerà implementare il supporto a quel messaggio nei metodi \textit{decode} e \textit{willDecode} del Decoder specifico per l'Endpoint che riceverà il messaggio (UiMessageDecoder o UnitMessageDecoder).
+	\end{itemize}
+
+\subsection{UI}
+	La UI si basa su \glock{Angular} e supporta l'aggiunta di nuovi component come previsto dal \glock{framework}. L'architettura della UI è Model-View-ViewModel e l'isolamento del Model rispetto ai ViewModel è garantito dall'interfaccia ServerService che viene implementata dal Model concreto. In caso di cambiamenti nell'API o nel protocollo di comunicazione il Model concreto può venire esteso o sostituito per intero mantenendo l'interfaccia ServerService invariata.
+
+\subsection{Unità}
+	L'unità è stata progettata secondo l'Hexagonal Architecture quindi ogni cambiamento nella relazione con componenti esterne (\glock{MongoDB}, \glock{WebSocket}) è dato dalla modifica o sostituzione degli Inbound Adapter e Outbound Adapter mantenendo invariate le Inbound Port e le Outbound Port.
