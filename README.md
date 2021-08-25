@@ -34,7 +34,7 @@ Dipendenze:
  git clone https://github.com/lineCode-swe/docs.git
  ```
  Spostarsi nella cartella del documento che si desidera compilare, e eseguire la compilazione del file main.tex.
- Un esempio di compilazione da terminale in un sistema UNIX-like su cui é installata una distribuzione LaTeX quale (MiKTeX)[https://miktex.org/] 
+ Un esempio di compilazione da terminale in un sistema UNIX-like su cui é installata una distribuzione LaTeX quale [MiKTeX](https://miktex.org/)
  prevede che, nella cartella sopra citata, venga lanciato il comando:
  ```shell
  pdflatex main.tex
